@@ -84,7 +84,7 @@ section div {
 }
 
 .spinner {
-    font-size: 50px;
+    font-size: 70px;
     text-align: center;
     animation: 2s spin linear infinite;
     /* display: none; */
