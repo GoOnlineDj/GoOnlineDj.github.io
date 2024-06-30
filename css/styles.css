@@ -87,7 +87,7 @@ section div {
     font-size: 50px;
     text-align: center;
     animation: 2s spin linear infinite;
-    display: none;
+    /* display: none; */
 }
 
 .show {
