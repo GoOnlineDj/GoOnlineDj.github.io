@@ -11,8 +11,9 @@
 <body>
 
     <h1 class="spinner">🏧</h1>
-
-    <section class="apple-music-container hide">
+    <br>
+    <br>
+    <section class="apple-music-container">
 
         <section>
             <div>
@@ -2002,7 +2003,13 @@
             </div>
         </section>
     </section>
-    <script src="./js/GoOnlineDj.js"> </script>
+    <script>
+        const appleMusic = document.querySelector('.apple-music-container');
+
+        appleMusic.addEventListener('click', function () {
+            alert('Apple Music is loaded');
+        });
+    </script>
 </body>
 
 </html>
