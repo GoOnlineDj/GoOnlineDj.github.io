@@ -75,3 +75,26 @@ section div {
     margin: 0;
     padding: 5px;
 }
+
+
+@keyframes spin {
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.spinner {
+    font-size: 50px;
+    text-align: center;
+    animation: 2s spin linear infinite;
+    display: none;
+}
+
+.show {
+    display: grid;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
