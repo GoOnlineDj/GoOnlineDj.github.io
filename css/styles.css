@@ -71,10 +71,12 @@ footer {
 
 section div {
     display: flex;
+    /*display: none;*/
     justify-content: space-around;
     margin: 0;
     padding: 5px;
 }
+
 
 
 @keyframes spin {
