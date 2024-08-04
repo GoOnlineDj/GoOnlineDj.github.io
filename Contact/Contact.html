@@ -163,7 +163,7 @@
     <script>
         const ChangeWebsite = document.querySelector('.ChangeWebsite');
         ChangeWebsite.addEventListener('change', function (event) {
-            let url = event.innertext;
+            let url = event.target.value;
             window.open(url, '_blank');
         });
     </script>
