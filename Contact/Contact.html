@@ -162,8 +162,8 @@
     </section>
     <script>
         const ChangeWebsite = document.querySelector('.ChangeWebsite');
-        ChangeWebsite.addEventListener('change', function (event) {
-            let url = ChangeWebsite.event.innerText;
+        ChangeWebsite.addEventListener('change', function () {
+            let url = ChangeWebsite.value;
             window.open(url, '_blank');
         });
     </script>
