@@ -164,7 +164,8 @@
     <script>
         const ChangeWebsite = document.querySelector('.ChangeWebsite')
             .addEventListener('change', function (event) {
-                window.open(event.target.value.includes('http') ? event.target.value : `https://${event.target.value}`, "_self");
+                window.open(event.target.value.includes('https') ? event.target.value : `https://${event.target.value}`, "_self");
+                window.open(event.target.value.includes('http') ? event.target.value : `http://${event.target.value}`, "_self");
             });
 
 
