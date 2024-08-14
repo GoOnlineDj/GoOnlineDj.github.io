@@ -55,17 +55,12 @@ nav div {
     padding: 0;
 }
 
-/*
 iframe {
     width: 100%;
     height: 680;
 
-} */
-iframe {
-    width: 950px;
-    height: 500px;
-
 }
+
 
 
 footer {
@@ -107,7 +102,7 @@ section div {
 }
 
 .button {
-    display: inline-block;
+    display: inline-flexbox;
     padding: 10px 7px;
     font-size: 17px;
     cursor: pointer;
