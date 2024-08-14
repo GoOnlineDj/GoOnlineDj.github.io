@@ -253,9 +253,10 @@ a.bridgeport:hover {
     font-size: 2rem;
 }
 
+
 iframe {
-    width: 950px;
-    height: 500px;
+    width: 100%;
+    height: 680;
     margin: 0.2rem 0.2rem;
     padding: 0.2rem 0.2rem;
 }
