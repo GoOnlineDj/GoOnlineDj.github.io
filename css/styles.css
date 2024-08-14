@@ -48,9 +48,14 @@ p {
     padding: 0;
 }
 
+nav {
+    margin: 0;
+}
+
 nav div {
-    display: block;
-    text-align: center;
+    display: flex;
+    flex-wrap: row nowrap;
+    justify-content: center;
     margin: 0;
     padding: 0;
 }
@@ -102,8 +107,9 @@ section div {
 }
 
 .button {
-    display: inline-flexbox;
+    display: inline-block;
     padding: 10px 7px;
+    margin: 0px;
     font-size: 17px;
     cursor: pointer;
     text-align: center;
@@ -112,9 +118,8 @@ section div {
     outline: none;
     color: #ffffff;
     background-color: #04AA6D;
-    box-shadow: 0 9px #4f4;
     max-width: 100%;
-    border: 3px solid red;
+
 
 
 }

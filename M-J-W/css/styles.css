@@ -212,7 +212,9 @@ em {
 }
 
 .button {
+    display: inline-block;
     padding: 10px 7px;
+    margin: 0px;
     font-size: 17px;
     cursor: pointer;
     text-align: center;
@@ -221,9 +223,8 @@ em {
     outline: none;
     color: #ffffff;
     background-color: #04AA6D;
-    box-shadow: 0 9px #4f4;
     max-width: 100%;
-    border: 3px solid red;
+
 
 
 }
@@ -237,6 +238,26 @@ em {
     box-shadow: 0 10px #1F51FF;
     transform: translateY(10px);
 
+}
+
+section div {
+    display: flex;
+    flex-wrap: row nowrap;
+    /*display: none;*/
+    justify-content: space-around;
+    padding: 1px 0 0 0;
+}
+
+nav {
+    margin: 0;
+}
+
+nav div {
+    display: flex;
+    flex-wrap: row nowrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 div a {
