@@ -87,6 +87,12 @@ div {
     padding: 0;
 }
 
+div a {
+    display: inline-block;
+    text-align: center;
+    text-wrap: nowrap;
+}
+
 pre {
     width: 100%;
     text-align: center;
