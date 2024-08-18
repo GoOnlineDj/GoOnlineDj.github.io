@@ -1,51 +1,22 @@
-* {
+html {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
-body {
-
-
-    white-space: nowrap;
-    background-color: white;
-
-    padding: 0%;
-    margin: 0%;
-
-
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
-section {
-    justify-content: space-between;
-
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-
-
-
-
+.shop1983body {
+    background-color: turquoise;
 }
 
-img {
-    width: 10.9%;
-    margin: 0;
-    padding: 0;
-}
-
-a button {
-    font-size: 5px;
-    text-align: center;
-}
-
-
-p {
-
-    text-decoration: none;
-    text-justify: auto;
-    margin: 0;
-    padding: 0;
+.shop1983indexwrapper {
+    width: auto;
+    margin: 0 auto;
+    /* border: 3px dotted green; */
+    background-color: #53f105;
 }
 
 nav {
@@ -60,29 +31,64 @@ nav div {
     padding: 0;
 }
 
-iframe {
-    width: 100%;
-    height: 680;
-
-}
-
-
-
-footer {
-    text-align: center;
-
-}
-
-
 section div {
     display: flex;
-    /*display: none;*/
     justify-content: space-around;
     margin: 0;
     padding: 5px;
 }
 
+section {
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
 
+fieldset {
+
+    border: 3px solid green;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+legend {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px dotted red;
+}
+
+
+div a {
+    text-align: center;
+}
+
+img {
+    width: 10.9%;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+
+    text-decoration: none;
+    text-justify: auto;
+    margin: 0;
+    padding: 0;
+}
+
+a button {
+    font-size: 5px;
+    text-align: center;
+}
+
+
+
+iframe {
+    width: 100%;
+    height: 680;
+
+}
 
 @keyframes spin {
     to {
@@ -119,9 +125,6 @@ section div {
     color: #ffffff;
     background-color: #04AA6D;
     max-width: 100%;
-
-
-
 }
 
 .button:hover {
@@ -135,6 +138,9 @@ section div {
 
 }
 
-div a {
+
+
+footer {
     text-align: center;
+
 }

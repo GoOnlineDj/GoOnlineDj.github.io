@@ -8,17 +8,56 @@ html {
     box-sizing: inherit;
 }
 
-body {
-    background-color: black;
+.indexbody {
+    background-color: turquoise;
 }
 
-.Contactindexwrapper,
+.indexwrapper {
+    width: auto;
+    margin: 0 auto;
+    /* border: 3px dotted green; */
+    background-color: #53f105;
+}
+
+.swiper-wrapper img {
+    width: 10.9%;
+    margin: 0;
+    padding: 0;
+}
+
+.M-J-Wbody {
+    background-color: turquoise;
+}
+
 .M-J-Windexwrapper {
     width: auto;
     margin: 0 auto;
     /* border: 3px dotted green; */
-    background-color: white;
+    background-color: #53f105;
 }
+
+.Contactbody {
+    background-color: turquoise;
+}
+
+.Contactindexwrapper {
+    width: auto;
+    margin: 0 auto;
+    /* border: 3px dotted green; */
+    background-color: #53f105;
+}
+
+.AppleMusicbody {
+    background-color: turquoise;
+}
+
+.AppleMusicindexwrapper {
+    width: auto;
+    margin: 0 auto;
+    /* border: 3px dotted green; */
+    background-color: #53f105;
+}
+
 
 nav {
     margin: 0;
