@@ -64,17 +64,7 @@ body {
     padding: 0;
 }
 
-.main-nav {
-    background-color: yellow;
-    color: white;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 15px;
-    position: relative;
-    z-index: 100;
 
-
-}
 
 .brand {
     font-size: 50px;
