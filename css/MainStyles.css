@@ -8,6 +8,10 @@ html {
     box-sizing: inherit;
 }
 
+body {
+    background-color: black;
+}
+
 .Contactindexwrapper,
 .M-J-Windexwrapper {
     width: auto;
