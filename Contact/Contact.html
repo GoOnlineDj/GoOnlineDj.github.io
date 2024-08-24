@@ -12,11 +12,14 @@
     <meta name="application-name" content="Unsigned Music Hub">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact + GoOnlineDj</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@700&display=swap" rel="stylesheet">
     <link href="../css/MainStyles.css" rel="stylesheet">
 </head>
 
-<body class="Contactbody">
-    <div class="Contactindexwrapper">
+<body class="contact-body">
+    <div class="contact-index-wrapper">
         <nav>
             <div style="text-align: center; padding: 0.7%;margin-bottom: 0.2%;">
                 <a href="../index.html" target="_self"><button class="button"> +ALIVE</button></a>
@@ -26,6 +29,89 @@
                 <a href="../Swiper/Swiper+Gallery.html" target="_self"><button class="button"> +Swiper</button></a>
             </div>
         </nav>
+
+        <section>
+            <form class="contact-form-label" method="POST"
+                action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES">
+                <fieldset>
+                    <legend>Your Information</legend> <br>
+                    <label for="name">Your Name </label> <br>
+                    <input type="text" id="name" name="name" autofocus> <br> <br>
+                    <label for="phone">Phone Number</label> <br>
+                    <input type="tel" id="phone" name="phone" placeholder="Don't forget the area code!"> <br> <br>
+                    <label for="email">Email</label> <br>
+                    <input type="email" id="email" name="email"> <br>
+                </fieldset>
+                <fieldset>
+                    <legend>GoOnlineDj + Refrigerator Magnet + Online Buyer Form</legend> <br>
+                    <label for="date">Requested Delivery Date?</label> <br>
+                    <input type="date" id="date" name="date"> <br> <br>
+                    <label for="qty">How many Refrigerator Magnets would you like to buy?</label> <br>
+                    <input type="number" id="qty" name="qty" min="1" max="500"> <br> <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Select Your Fav Type Of Music</legend> <br>
+                    <label>
+                        <input type="radio" name="musictype" value="hip-hop"> Hip-Hip
+                    </label> <br>
+                    <label>
+                        <input type="radio" name="musictype" value="Rap"> Rap
+                    </label> <br>
+                    <label>
+                        <input type="radio" name="musictype" value="R&B"> R&B
+                    </label> <br>
+                    <label>
+                        <input type="radio" name="musictype" value="Country" checked> Country
+                    </label> <br>
+                    <label>
+                        <input type="radio" name="musictype" value="Jazz"> Jazz
+                    </label> <br> <br>
+
+                    <fieldset>
+                        <legend for="comments">Write ME</legend> <br>
+                        <textarea id="comments" name="comments"
+                            placeholder="Feel Free To Express Free Will ++LOVE++"></textarea>
+                        <br> <br>
+                    </fieldset>
+                    <fieldset>
+                        <label name="subscribe">
+                            <input name="subscribe" type="checkbox" value="subscribe" checked>Add me to your
+                            email list
+                        </label> <br> <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="hidden" name="send_to" value="UnsignedGold@gmail.com"> <br>
+                        <button class="contact-form-button" type="submit">Send Info Now</button> <br> <br>
+                    </fieldset>
+            </form>
+            <!--
+        
+    <input type="button">
+    <input type="checkbox">
+    <input type="color">
+    <input type="date">
+    <input type="datetime-local">
+    <input type="email">
+    <input type="file">
+    <input type="hidden">
+    <input type="image">
+    <input type="month">
+    <input type="number">
+    <input type="password">
+    <input type="radio">
+    <input type="range">
+    <input type="reset">
+    <input type="search">
+    <input type="submit">
+    <input type="tel">
+    <input type="text">
+    <input type="time">
+    <input type="url">
+    <input type="week">
+
+        -->
+        </section>
+
 
         <section>
             <div style="text-align: center;">

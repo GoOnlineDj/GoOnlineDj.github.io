@@ -17,8 +17,8 @@
 <!-- I LOVE +GOD -->
 
 
-<body class="M-J-Wbody">
-    <div class="M-J-Windexwrapper">
+<body class="m-j-w-body">
+    <div class="m-j-w-index-wrapper">
 
         <nav>
             <div style="text-align: center; padding: 0.7%;margin-bottom: 0.2%;">
@@ -45,7 +45,7 @@
             </div>
         </section>
 
-        <section class="ChangeWebsite" ;>
+        <section class="change-website" ;>
             <select style="text-align: center;">
                 <option value="www.MileyMarryMe.com"> www.MileyMarryMe.com </option>
                 <option value="www.CoupleCheckin.com"> www.CoupleCheckin.com </option>
@@ -694,11 +694,10 @@ And may God continue to bless you
         </section>
 
         <script>
-            const ChangeWebsite = document.querySelector('.ChangeWebsite')
+            const ChangeWebsite = document.querySelector('.change-website')
                 .addEventListener('change', function (event) {
                     window.open(event.target.value.includes('http') ? event.target.value : `http://${event.target.value}`, "_self");
                 });
-
 
         </script>
 

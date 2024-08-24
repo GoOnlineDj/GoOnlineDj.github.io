@@ -8,50 +8,50 @@ html {
     box-sizing: inherit;
 }
 
-.indexbody {
+.index-body {
     background-color: turquoise;
 }
 
-.indexwrapper {
+.index-wrapper {
     width: auto;
     margin: 0 auto;
     /* border: 3px dotted green; */
     background-color: #53f105;
 }
 
-.swiper-wrapper img {
+.swiper-index-wrapper img {
     width: 10.9%;
     margin: 0;
     padding: 0;
 }
 
-.M-J-Wbody {
+.m-j-w-body {
     background-color: turquoise;
 }
 
-.M-J-Windexwrapper {
+.m-j-w-index-wrapper {
     width: auto;
     margin: 0 auto;
     /* border: 3px dotted green; */
     background-color: #53f105;
 }
 
-.Contactbody {
+.contact-body {
     background-color: turquoise;
 }
 
-.Contactindexwrapper {
+.contact-index-wrapper {
     width: auto;
     margin: 0 auto;
     /* border: 3px dotted green; */
     background-color: #53f105;
 }
 
-.AppleMusicbody {
+.apple-music-body {
     background-color: turquoise;
 }
 
-.AppleMusicindexwrapper {
+.apple-music-index-wrapper {
     width: auto;
     margin: 0 auto;
     /* border: 3px dotted green; */
@@ -102,14 +102,14 @@ pre {
     /* border: 4px solid pink; */
 }
 
-.Contactformlabel fieldset {
+.contact-form-label fieldset {
     border: 3px solid green;
     border-radius: 10px;
     margin-bottom: 0.4rem;
 
 }
 
-.Contactformlabel legend {
+.contact-form-label legend {
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
     font-weight: bold;
@@ -122,24 +122,36 @@ pre {
     border-bottom: 3px solid green;
 }
 
-.Contactformlabel label {
+.contact-form-label label {
     display: block;
 }
 
-.Contactformlabel input {
+.contact-form-label input:not([type="radio"]):not([type="checkbox"]),
+textarea {
     margin-bottom: 0.2rem;
     margin-top: 0.2rem;
     padding: 0.2rem;
     border-radius: 5px;
-    border: 1px solid black;
+    border: none;
+    width: 20rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-.Contactformlabel textarea {
+.contact-form-label textarea,
+[for="comments"] {
     height: 10rem;
-    padding: 1rem;
 }
 
 
+
+.contact-form-label legend {
+    font-family: "Kalnia Glaze", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
 
 /*
 div a {
@@ -198,7 +210,7 @@ iframe {
     display: none;
 }
 
-.indexbody .button {
+.index-body .button {
     display: inline-block;
     padding: 10px 7px;
     margin: 0px;
@@ -213,7 +225,7 @@ iframe {
     max-width: 100%;
 }
 
-.M-J-Wbody .button {
+.m-j-w-body .button {
     display: inline-block;
     padding: 10px 7px;
     margin: 0px;
@@ -228,7 +240,7 @@ iframe {
     max-width: 100%;
 }
 
-.Contactbody .button {
+.contact-body .button {
     display: inline-block;
     padding: 10px 7px;
     margin: 0px;
@@ -243,7 +255,7 @@ iframe {
     max-width: 100%;
 }
 
-.AppleMusicbody .button {
+.apple-music-index-body .button {
     display: inline-block;
     padding: 10px 7px;
     margin: 0px;
@@ -258,52 +270,80 @@ iframe {
     max-width: 100%;
 }
 
-
-.indexbody .button:hover {
+.index-body .button:hover {
     background-color: gold;
 }
 
-.M-J-Wbody .button:hover {
+.m-j-w-body .button:hover {
     background-color: gold;
 }
 
-.Contactbody .button:hover {
+.contact-body .button:hover {
     background-color: gold;
 }
 
-.AppleMusicbody .button:hover {
+.apple-music-index-body .button:hover {
     background-color: gold;
 }
 
 
 
-.indexbody .button:active {
+.index-body .button:active {
     background-color: #FF10F0;
     box-shadow: 0 10px #1F51FF;
     transform: translateY(10px);
 
 }
 
-.M-J-Wbody .button:active {
+.m-j-w-body .button:active {
     background-color: #FF10F0;
     box-shadow: 0 10px #1F51FF;
     transform: translateY(10px);
 
 }
 
-.Contactbody .button:active {
+.contact-body .button:active {
     background-color: #FF10F0;
     box-shadow: 0 10px #1F51FF;
     transform: translateY(10px);
 
 }
 
-.AppleMusicbody .button:active {
+.apple-music-index-body .button:active {
     background-color: #FF10F0;
     box-shadow: 0 10px #1F51FF;
     transform: translateY(10px);
 
 }
+
+
+.contact-body .Contactformbutton {
+    margin: 0;
+    background-color: #0909e9;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.contact-body .Contactformbutton:hover {
+    margin: 0;
+    background-color: #df25b7;
+    color: rgb(108, 202, 37);
+    border: none;
+    font-size: 4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
 
 
 
