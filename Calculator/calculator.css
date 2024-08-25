@@ -38,15 +38,20 @@ body {
     border: none;
     border-radius: 0;
     font-size: 40px;
-    cursor: pointer;
+    cursor: grab;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+
 }
 
 .calc-button:hover {
-    background-color: #ebebeb;
+    background-color: #e612d8;
 }
 
 .calc-button:active {
-    background-color: #bbbcbe;
+    background-color: #53f105;
 }
 
 .double {
