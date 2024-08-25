@@ -26,6 +26,8 @@ body {
     font-family: "Courier New", Courier, monospace;
     text-align: right;
     padding: 20px 5px;
+    max-characters: 16;
+
 }
 
 .calc-button {
