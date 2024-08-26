@@ -1,13 +1,14 @@
 let runningTotal = 0;
 let buffer = "0";
-let previousOperator;
+let symbolPressValue = 0;
+let previousOperator = null;
 
 const screen = document.querySelector(".calculator-index-wrapper .screen");
 
 
 
 function buttonClick(value) {
-    debugger;
+    //  debugger;
     if (isNaN(value)) {
         // this is not a number
         handleSymbol(value);
@@ -20,21 +21,31 @@ function buttonClick(value) {
 
     }
 
-    screen.innerText = buffer;
+    if (runningTotal === 0) {
+        screen.innerText = buffer;
+    }
+
+    else if (runningTotal !== 0 && buffer === "0") {
+        screen.innerText = runningTotal;
+    }
+
 }
 
 function handleNumber(numberString) {
     if (buffer === "0") {
         buffer = numberString;
+        screen.innerText = buffer;
     }
     else {
         buffer += numberString;
+
     }
 
 }
 
 function handleSymbol(symbol) {
-    console.log("symbol", symbol);
+    console.log(symbol, "buffer", buffer, "runningTotal", runningTotal, previousOperator);
+
     switch (symbol) {
 
         case "C": // clear
@@ -51,6 +62,7 @@ function handleSymbol(symbol) {
             flushOperation(+buffer);
             previousOperator = null;
             buffer = runningTotal;
+            console.log("runningTotal", runningTotal);
             runningTotal = 0;
             break;
 
@@ -76,7 +88,7 @@ function handleSymbol(symbol) {
 function handleMath(symbol) {
 
     if (buffer === "0") {
-        // do nothing //also conditional statement // check a condition at the beginning of a function
+        // do nothing //also conditional statement // check a condition at the beginning of a function //Thank You Frontend Masters
         return;
     }
 
@@ -91,9 +103,9 @@ function handleMath(symbol) {
     }
 
     previousOperator = symbol;
-
+    screen.innerText = buffer;
     buffer = "0";
-
+    console.log("runningTotal", runningTotal);
 }
 
 function flushOperation(intBuffer) {
@@ -110,86 +122,7 @@ function flushOperation(intBuffer) {
         runningTotal /= intBuffer;
     }
 
-    console.log("stats", runningTotal, buffer, previousOperator);
-
 }
-
-// }
-// 
-
-//     
-
-//         case "C":
-//             buffer = "0";
-//             runningTotal = 0;
-//             previousOperator = null;
-//             break;
-
-//         case "+":
-//         case "-":
-//         case "×":
-//         case "÷":
-//             handleMath(symbol);
-
-//             break;
-
-//         case "=":
-//             if (previousOperator === null) {
-//                 //need two numbers to do math
-//                 return;
-//             }
-//             flushOperation(+buffer);
-//             previousOperator = null;
-//             buffer = runningTotal;
-//             break;
-
-
-
-//     }
-
-//     function handleMath(symbol) {
-
-//         if (buffer === "0") {
-//             //do nothing and return // Thank You Frontend Masters
-//             return;
-//         }
-
-//         // const intBuffer = parseInt(buffer);
-//         const intBuffer = +buffer;
-
-//         if (runningTotal === 0) {
-//             runningTotal = intBuffer;
-//         }
-//         else {
-//             flushOperation(intBuffer);
-//         }
-
-//         previousOperator = symbol;
-//         buffer = "0";
-
-//     }
-// }
-
-
-// function flushOperation(intBuffer) {
-//     if (previousOperator === "+") {
-//         runningTotal += intBuffer;
-//     }
-//     else if (previousOperator === "-") {
-//         runningTotal -= intBuffer;
-//     }
-//     else if (previousOperator === "×") {
-//         runningTotal *= intBuffer;
-//     }
-//     else {
-//         runningTotal /= intBuffer;
-//     }
-
-//     buffer = "0";
-//     console.log(runningTotal, buffer, previousOperator);
-//     screen.innerText = runningTotal;
-
-// }
 
 
 function valueInit() {
