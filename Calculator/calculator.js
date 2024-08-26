@@ -34,12 +34,13 @@ function buttonClick(value) {
 function handleNumber(numberString) {
     if (buffer === "0") {
         buffer = numberString;
-        screen.innerText = buffer;
     }
     else {
         buffer += numberString;
 
     }
+
+    screen.innerText = buffer;
 
 }
 
@@ -48,7 +49,7 @@ function handleSymbol(symbol) {
 
     switch (symbol) {
 
-        case "C": // clear
+        case "Clear": // clear
             buffer = "0";
             runningTotal = 0;
             previousOperator = null;
