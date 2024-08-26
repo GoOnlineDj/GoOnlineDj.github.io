@@ -38,11 +38,11 @@ body {
     border: none;
     border-radius: 0;
     font-size: 40px;
-    cursor: grab;
-    cursor: -webkit-grab;
-    cursor: -moz-grab;
     cursor: -o-grab;
     cursor: -ms-grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    cursor: grab;
 
 }
 
