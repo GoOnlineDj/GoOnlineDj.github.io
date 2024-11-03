@@ -202,8 +202,13 @@ iframe {
     font-size: 70px;
     text-align: center;
 
+
 }
 
+#spinnerSTOP {
+    background-color: #53f105;
+    border: 13px solid black;
+}
 
 .show {
     display: grid;
