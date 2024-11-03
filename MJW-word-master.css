@@ -16,10 +16,9 @@ h1 {
 .main-grid {
     display: grid;
     grid-template-columns: 4% 4% 4% 4% 4%;
-    grid-template-rows: 10fr;
     row-gap: 3px;
     column-gap: 1px;
-    /* border: 5px solid green; */
+    border: 5px solid green;
     justify-items: center;
     align-items: center;
     justify-content: center;
