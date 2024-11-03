@@ -28,12 +28,12 @@
                 currentIndex += batchSize;
             }
 
-            // Load iframes every 2 seconds
+            // Load iframes every ? seconds
             setInterval(() => {
                 if (currentIndex < iframes.length) {
                     loadIframes();
                 }
-            }, 1000);
+            }, 500);
 
             // Initial load
             loadIframes();

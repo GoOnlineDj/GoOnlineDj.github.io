@@ -43,10 +43,12 @@
 
                 ];
 
+                const defaultUrl = 'https://www.youtube.com/embed/videoseries?si=gV_w2OBPeYHWNH2C&amp;list=PLPdWITRXm_YeJI_pEeEh_YUSyyAgf2DHs';
                 const randomSelectedUrl = getRandomUrl(urls);
                 const iframe = document.createElement("iframe");
                 iframe.className = "random-iframe";
                 iframe.src = randomSelectedUrl;
+                iframe.src = defaultUrl || randomSelectedUrl; // Use default URL if available, otherwise use random URL
                 iframe.width = "100%";
                 iframe.height = 680;
                 iframe.frameborder = 0;
