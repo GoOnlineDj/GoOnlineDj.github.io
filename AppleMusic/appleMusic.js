@@ -29,5 +29,11 @@ document.querySelector(".SpinnerSTOP").addEventListener("click", function () {
 
     document.querySelector(".spinner").classList.remove("spinner")
 
+    document.querySelector(".SpinnerSTART").addEventListener("click", function () {
+        location.reload();
+    });
+
 });
+
+
 
