@@ -1,7 +1,7 @@
 
 
 document.querySelector(".SpinnerSTOP").addEventListener("click", function () {
-    alert('Stopping all internet activity');
+    alert('Internet Activity On This Apple Music Page Has STOP');
 
     // Clear intervals and timeouts
     let id = window.setTimeout(function () { }, 0);
