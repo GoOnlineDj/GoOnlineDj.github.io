@@ -19,7 +19,7 @@
     <div class="index-wrapper">
         <nav>
             <div style="text-align: center; padding: 0.7%;margin-bottom: 0.2%;">
-                <a href="index.html" target="_self"><button class="button"> +ALIVE</button></a>
+                <a><button class="button ALIVE"> +ALIVE</button></a>
                 <a href="M-J-W/M-J-W+index.html" target="_self"><button class="button"> +M-J-W+</button></a>
                 <a href="AppleMusic/appleMusic.html" target="_self"><button class="button"> +Apple</button></a>
                 <a href="shop1983/shop1983.html" target="_self"><button class="button"> +shop</button></a>
@@ -43,11 +43,10 @@
 
                 ];
 
-                const defaultUrl = 'https://www.youtube.com/embed/videoseries?si=gV_w2OBPeYHWNH2C&amp;list=PLPdWITRXm_YeJI_pEeEh_YUSyyAgf2DHs';
-                const randomSelectedUrl = getRandomUrl(urls);
-                const iframe = document.createElement("iframe");
+                let defaultUrl = 'https://www.youtube.com/embed/videoseries?si=gV_w2OBPeYHWNH2C&amp;list=PLPdWITRXm_YeJI_pEeEh_YUSyyAgf2DHs';
+                let randomSelectedUrl = getRandomUrl(urls);
+                let iframe = document.createElement("iframe");
                 iframe.className = "random-iframe";
-                iframe.src = randomSelectedUrl;
                 iframe.src = defaultUrl || randomSelectedUrl; // Use default URL if available, otherwise use random URL
                 iframe.width = "100%";
                 iframe.height = 680;
@@ -56,6 +55,19 @@
                 iframe.seamless = "seamless";
 
                 document.getElementById("hereComesTheIframeInto").appendChild(iframe);
+            </script>
+            <script>
+
+                document.querySelector(".ALIVE").addEventListener("click", function (event) {
+
+                    randomSelectedUrl = getRandomUrl(urls)
+
+                    iframe.src = randomSelectedUrl;
+
+
+                }
+                )
+
             </script>
 
         </section>
