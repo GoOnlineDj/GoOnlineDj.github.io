@@ -13,22 +13,27 @@ h1 {
 
 }
 
+
 .main-grid {
     display: grid;
-    grid-template-columns: 4% 4% 4% 4% 4%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     row-gap: 3px;
     column-gap: 1px;
+    max-width: 283px;
+    width: 100%;
+    margin: 5px auto;
     border: 5px solid green;
     justify-items: center;
     align-items: center;
     justify-content: center;
-    margin: 0;
+
     padding: 0;
 
 
 
 
 }
+
 
 .div-grid {
     display: grid;
