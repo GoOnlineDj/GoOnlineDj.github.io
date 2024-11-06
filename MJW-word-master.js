@@ -6,17 +6,26 @@ let word = "";
 let currentRow = 0;
 const MAX_LETTERS = 5;
 const maxRows = 6;
+let show = false;
+let done = false;
+let isLoading = false;
+
 
 
 async function valueINIT() {
 
     const boxes = document.querySelectorAll(".div-grid")
     console.log(boxes);
-
+    const logo = document.querySelector(".logo")
+    console.log(logo);
+    isLoading = true;
+    loading(isLoading);
     const promise = await fetch("https://words.dev-apis.com/word-of-the-day?random=1");
     const promiseReady = await promise.json();
     const answer = promiseReady.word.toUpperCase();
     const answerParts = answer.split("");
+    isLoading = false;
+    loading(isLoading);
 
     function makeMap(array) {
         console.log("makeMap being called")
@@ -38,6 +47,12 @@ async function valueINIT() {
 
 
 
+    function loading(isLoading) {
+        console.log(isLoading)
+        logo.classList.toggle("hide", isLoading)
+        console.log("isLoading event", isLoading);
+    }
+
 
 
     console.log("answerParts from promise", typeof (answerParts), answerParts)
@@ -46,26 +61,33 @@ async function valueINIT() {
     console.log("answer", answer, typeof (answer));
 
 
+
+
+
     document.addEventListener("keydown", function (event) {
 
-        let letter = event.key;
+        isLoading = false;
+        loading(isLoading);
 
-        if (isLetter(letter)) {
+
+
+        letterData = event.key;
+
+        if (isLetter(letterData)) {
 
             if (word.length < MAX_LETTERS) {
-                word += letter.toLocaleUpperCase();
+                word += letterData.toLocaleUpperCase();
             }
             else {
-                word = word.substring(0, word.length - 1) + letter.toLocaleUpperCase();
-                console.log("mjw", "letter", letter, "word0", word[0], "word1", word[1], "word2", word[2], "word3", word[3], "word4", word[4], "word5", word[5], "word6", word[z]);
+                word = word.substring(0, word.length - 1) + letterData.toLocaleUpperCase();
             }
 
-            boxes[(MAX_LETTERS * currentRow) + word.length - 1].innerHTML = letter.toLocaleUpperCase();
+            boxes[(MAX_LETTERS * currentRow) + word.length - 1].innerHTML = letterData.toLocaleUpperCase();
 
         }
 
-        function isLetter(letter) {
-            return /^[a-zA-Z]$/.test(letter);
+        function isLetter(letterData) {
+            return /^[a-zA-Z]$/.test(letterData);
         }
 
 
@@ -100,8 +122,12 @@ async function valueINIT() {
                         console.log("green");
                         console.log(map);
 
+                        isLoading = true;
+                        loading(isLoading);
+
                     }
-                    else if (map[word[c]] > 0) {
+
+                    else if (answerParts.includes(word[c]) && (map[word[c]] > 0)) {
                         boxes[currentRow * MAX_LETTERS + c].classList.add("yellow");
                         map[word[c]]--;
                         console.log("yellow");
@@ -109,11 +135,13 @@ async function valueINIT() {
                     }
                     else {
                         boxes[currentRow * MAX_LETTERS + c].classList.add("grey");
+                        console.log("grey");
+                        console.log(map);
                     }
                 }
 
 
-                const wordParts = word.split("");
+                let wordParts = word.split("");
 
                 console.log("wordParts", wordParts);
 
@@ -152,10 +180,10 @@ async function valueINIT() {
 
         //to mark as correct
 
-        // to do win or loose 
+        // to do win or loose
+
 
     });
-
 
 }
 valueINIT();
