@@ -14,21 +14,21 @@ let isLoading = false;
 
 async function valueINIT() {
 
-    const boxes = document.querySelectorAll(".div-grid")
+    const boxes = document.querySelectorAll(".div-grid");
     console.log(boxes);
-    const logo = document.querySelector(".logo")
-    console.log(logo);
+    const logoDiv = document.querySelector("h2.logo");
+    console.log(logoDiv);
     isLoading = true;
     loading(isLoading);
     const promise = await fetch("https://words.dev-apis.com/word-of-the-day?random=1");
-    const promiseReady = await promise.json();
-    const answer = promiseReady.word.toUpperCase();
+    const promiseProcessing = await promise.json();
+    const answer = promiseProcessing.word.toUpperCase();
     const answerParts = answer.split("");
     isLoading = false;
     loading(isLoading);
 
     function makeMap(array) {
-        console.log("makeMap being called")
+        console.log("makeMap being called");
         let obj = {};
 
         for (i = 0; i < array.length; i++) {
@@ -39,7 +39,7 @@ async function valueINIT() {
             else {
                 obj[letter] = 1;
             }
-            console.log("object", obj);
+            console.log("map object for keeping letter count", obj);
 
         }
         return obj;
@@ -48,23 +48,25 @@ async function valueINIT() {
 
 
     function loading(isLoading) {
-        console.log(isLoading)
-        logo.classList.toggle("hide", isLoading)
-        console.log("isLoading event", isLoading);
+
+        logoDiv.classList.toggle("hide", isLoading)
+
     }
 
 
 
     console.log("answerParts from promise", typeof (answerParts), answerParts)
 
-    console.log("promise", promiseReady);
-    console.log("answer", answer, typeof (answer));
-
+    console.log("secret word from server is =", answer, "typeof for secret word =", typeof (answer));
 
 
 
 
     document.addEventListener("keydown", function (event) {
+
+        if (done) {
+            return;
+        }
 
         isLoading = false;
         loading(isLoading);
@@ -92,98 +94,120 @@ async function valueINIT() {
 
 
         if (event.key === "Enter") {
-            console.log("enter enter")
+            console.log("user pressed Enter")
             commit();
         }
 
 
 
-
-
         async function commit() {
+
+            const promise = await fetch("https://words.dev-apis.com/validate-word", {
+                method: "POST", body: JSON.stringify({ word: word }),
+            });
+            const promiseProcessing = await promise.json();
+            const wordStatus = await promiseProcessing.validWord;
+
+            console.log("!validWord or validWord", wordStatus);
+
 
 
             const map = makeMap(answerParts);
             console.log("map object from makeMap function 1983", map)
 
 
+
             if (word.length !== MAX_LETTERS) {
-                console.log("not 5 char")
+                alert("5 letters please + thank you");
                 //do nothing
                 return;
             }
-            else {
-                isCorrect();
+
+            isCorrect();
+
+            for (c = 0; c < 5; c++) {
+                if (word[c] === answer[c]) {
+                    boxes[currentRow * MAX_LETTERS + c].classList.add("green");
+                    map[word[c]]--;
+                    console.log("green");
+
+
+                }
+
+                else if (answerParts.includes(word[c]) && (map[word[c]] > 0)) {
+                    boxes[currentRow * MAX_LETTERS + c].classList.add("yellow");
+                    map[word[c]]--;
+                    console.log("yellow");
+
+                }
+                else {
+                    boxes[currentRow * MAX_LETTERS + c].classList.add("grey");
+                    console.log("grey");
+
+                }
+            }
+
+
+            let wordParts = word.split("");
+
+            console.log("wordParts", wordParts);
+
+            if (wordStatus === false) {
+                (alert("sorry it seems that's not a word in our software at this moment"));
+                word = "";
+                for (i = 0; i < 5; i++) {
+                    boxes[currentRow * MAX_LETTERS + i].innerHTML = "";
+
+                }
+                currentRow = currentRow;
+                return;
+
+            }
+            currentRow++;
+            word = "";
+
+            if (currentRow === maxRows) {
+
+                alert(`THANKS FOR PLAYING THE GAME + the word was = ${answer}`);
+                done = true;
+                return;
+            }
+
+            console.log("!validWord or validWord", wordStatus);
+        }
+
+        function isCorrect() {
+            if (word === answer) {
+                alert(`WOW YOU WON THE GAME + THE WINNING "WORD" WAS = ${answer} + Thanks For Playing`);
+                for (i = 0; i < 30; i++) {
+                    boxes[currentRow * MAX_LETTERS + i].innerHTML = "💎";
+
+                }
+                logoDiv.classList.remove('show');
+
+                logoDiv.classList.add("green");
+                logoDiv.classList.add('show');
+
 
                 for (c = 0; c < 5; c++) {
-                    if (word[c] === answer[c]) {
-                        boxes[currentRow * MAX_LETTERS + c].classList.add("green");
-                        map[word[c]]--;
-                        console.log("green");
-                        console.log(map);
+                    boxes[currentRow * MAX_LETTERS + c].classList.add("green");
 
-                        isLoading = true;
-                        loading(isLoading);
-
-                    }
-
-                    else if (answerParts.includes(word[c]) && (map[word[c]] > 0)) {
-                        boxes[currentRow * MAX_LETTERS + c].classList.add("yellow");
-                        map[word[c]]--;
-                        console.log("yellow");
-                        console.log(map);
-                    }
-                    else {
-                        boxes[currentRow * MAX_LETTERS + c].classList.add("grey");
-                        console.log("grey");
-                        console.log(map);
-                    }
-                }
+                    console.log("win win win win win")
+                    console.log(logoDiv.classList)
 
 
-                let wordParts = word.split("");
+                    done = true;
 
-                console.log("wordParts", wordParts);
-
-                if (currentRow === maxRows) {
-
-                    alert("DONE DONE DONE");
                     return;
+
                 }
-                currentRow++;
-                word = "";
-
-
             }
-
-            function isCorrect() {
-                if (word === answer) {
-                    alert("you wow the game");
-                    for (c = 0; c < 5; c++) {
-                        boxes[currentRow * MAX_LETTERS + c].classList.add("green");
-
-                    }
-                }
-
-            }
-
-
-
-
 
         }
 
 
-        // to validate the word
-
-
-
-        //to mark as correct
-
-        // to do win or loose
-
-
     });
 
-}
+};
+
 valueINIT();
