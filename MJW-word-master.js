@@ -27,6 +27,16 @@ async function valueINIT() {
     isLoading = false;
     loading(isLoading);
 
+    function backSpaceDelete() {
+        if (word.length < 1) {
+            return;
+        }
+        else {
+            word = word.substring(0, word.length - 1);
+            boxes[currentRow * MAX_LETTERS + word.length].innerHTML = "💎";
+        }
+    }
+
     function makeMap(array) {
         console.log("makeMap being called");
         let obj = {};
@@ -72,7 +82,7 @@ async function valueINIT() {
         loading(isLoading);
 
 
-
+        console.log("event.key", event.key)
         letterData = event.key;
 
         if (isLetter(letterData)) {
@@ -93,34 +103,39 @@ async function valueINIT() {
         }
 
 
-        if (event.key === "Enter") {
+        if (letterData === "Enter") {
             console.log("user pressed Enter")
             commit();
+        }
+
+
+        if (event.key === "Backspace") {
+            backSpaceDelete();
         }
 
 
 
         async function commit() {
 
-            const promise = await fetch("https://words.dev-apis.com/validate-word", {
-                method: "POST", body: JSON.stringify({ word: word }),
-            });
-            const promiseProcessing = await promise.json();
-            const wordStatus = await promiseProcessing.validWord;
-
-            console.log("!validWord or validWord", wordStatus);
-
-
-
-            const map = makeMap(answerParts);
-            console.log("map object from makeMap function 1983", map)
 
 
 
             if (word.length !== MAX_LETTERS) {
                 alert("5 letters please + thank you");
-                //do nothing
                 return;
+            }
+
+            else {
+                const promise = await fetch("https://words.dev-apis.com/validate-word", {
+                    method: "POST", body: JSON.stringify({ word: word }),
+                });
+                const promiseProcessing = await promise.json();
+                const wordStatus = await promiseProcessing.validWord;
+
+                console.log("!validWord or validWord", wordStatus);
+
+                const map = makeMap(answerParts);
+                console.log("map object from makeMap function 1983", map)
             }
 
             isCorrect();
@@ -175,6 +190,9 @@ async function valueINIT() {
 
             console.log("!validWord or validWord", wordStatus);
         }
+
+
+
 
         function isCorrect() {
             if (word === answer) {
