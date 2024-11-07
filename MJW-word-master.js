@@ -37,23 +37,7 @@ async function valueINIT() {
         }
     }
 
-    function makeMap(array) {
-        console.log("makeMap being called");
-        let obj = {};
 
-        for (i = 0; i < array.length; i++) {
-            let letter = array[i];
-            if (obj[letter]) {
-                obj[letter]++;
-            }
-            else {
-                obj[letter] = 1;
-            }
-            console.log("map object for keeping letter count", obj);
-
-        }
-        return obj;
-    }
 
 
 
@@ -125,18 +109,36 @@ async function valueINIT() {
                 return;
             }
 
-            else {
-                const promise = await fetch("https://words.dev-apis.com/validate-word", {
-                    method: "POST", body: JSON.stringify({ word: word }),
-                });
-                const promiseProcessing = await promise.json();
-                const wordStatus = await promiseProcessing.validWord;
 
-                console.log("!validWord or validWord", wordStatus);
+            const promise = await fetch("https://words.dev-apis.com/validate-word", {
+                method: "POST", body: JSON.stringify({ word: word }),
+            });
+            const promiseProcessing = await promise.json();
+            const wordStatus = await promiseProcessing.validWord;
 
-                const map = makeMap(answerParts);
-                console.log("map object from makeMap function 1983", map)
+            console.log("!validWord or validWord", wordStatus);
+
+            async function makeMap(array) {
+                console.log("makeMap being called");
+                let obj = {};
+
+                for (i = 0; i < array.length; i++) {
+                    let letter = array[i];
+                    if (obj[letter]) {
+                        obj[letter]++;
+                    }
+                    else {
+                        obj[letter] = 1;
+                    }
+                    console.log("map object for keeping letter count", obj);
+
+                }
+                return obj;
             }
+
+            const map = makeMap(answerParts);
+            console.log("map object from makeMap function 1983", map)
+
 
             isCorrect();
 
@@ -198,6 +200,7 @@ async function valueINIT() {
             if (word === answer) {
                 alert(`WOW YOU WON THE GAME + THE WINNING "WORD" WAS = ${answer} + Thanks For Playing`);
                 for (i = 0; i < 30; i++) {
+                    boxes[currentRow * MAX_LETTERS + i].classList.add("green");
                     boxes[currentRow * MAX_LETTERS + i].innerHTML = "💎";
 
                 }
