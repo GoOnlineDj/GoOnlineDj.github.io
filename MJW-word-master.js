@@ -1,7 +1,7 @@
 let i = 0;
 let z = 0;
 
-let word = "";
+let guess = "";
 
 let currentRow = 0;
 const MAX_LETTERS = 5;
@@ -28,16 +28,14 @@ async function valueINIT() {
     loading(isLoading);
 
     function backSpaceDelete() {
-        if (word.length < 1) {
+        if (guess.length < 1) {
             return;
         }
         else {
-            word = word.substring(0, word.length - 1);
-            boxes[currentRow * MAX_LETTERS + word.length].innerHTML = "💎";
+            guess = guess.substring(0, guess.length - 1);
+            boxes[currentRow * MAX_LETTERS + guess.length].innerHTML = "💎";
         }
     }
-
-
 
 
 
@@ -50,7 +48,6 @@ async function valueINIT() {
 
 
     console.log("answerParts from promise", typeof (answerParts), answerParts)
-
     console.log("secret word from server is =", answer, "typeof for secret word =", typeof (answer));
 
 
@@ -71,14 +68,14 @@ async function valueINIT() {
 
         if (isLetter(letterData)) {
 
-            if (word.length < MAX_LETTERS) {
-                word += letterData.toLocaleUpperCase();
+            if (guess.length < MAX_LETTERS) {
+                guess += letterData.toLocaleUpperCase();
             }
             else {
-                word = word.substring(0, word.length - 1) + letterData.toLocaleUpperCase();
+                guess = guess.substring(0, guess.length - 1) + letterData.toLocaleUpperCase();
             }
 
-            boxes[(MAX_LETTERS * currentRow) + word.length - 1].innerHTML = letterData.toLocaleUpperCase();
+            boxes[(MAX_LETTERS * currentRow) + guess.length - 1].innerHTML = letterData.toLocaleUpperCase();
 
         }
 
@@ -98,27 +95,24 @@ async function valueINIT() {
         }
 
 
-
         async function commit() {
 
 
-
-
-            if (word.length !== MAX_LETTERS) {
+            if (guess.length !== MAX_LETTERS) {
                 alert("5 letters please + thank you");
                 return;
             }
 
 
             const promise = await fetch("https://words.dev-apis.com/validate-word", {
-                method: "POST", body: JSON.stringify({ word: word }),
+                method: "POST", body: JSON.stringify({ word: guess }),
             });
             const promiseProcessing = await promise.json();
             const wordStatus = await promiseProcessing.validWord;
 
             console.log("!validWord or validWord", wordStatus);
 
-            async function makeMap(array) {
+            function makeMap(array) {
                 console.log("makeMap being called");
                 let obj = {};
 
@@ -142,46 +136,43 @@ async function valueINIT() {
 
             isCorrect();
 
-            for (c = 0; c < 5; c++) {
-                if (word[c] === answer[c]) {
-                    boxes[currentRow * MAX_LETTERS + c].classList.add("green");
-                    map[word[c]]--;
-                    console.log("green");
 
-
-                }
-
-                else if (answerParts.includes(word[c]) && (map[word[c]] > 0)) {
-                    boxes[currentRow * MAX_LETTERS + c].classList.add("yellow");
-                    map[word[c]]--;
-                    console.log("yellow");
-
-                }
-                else {
-                    boxes[currentRow * MAX_LETTERS + c].classList.add("grey");
-                    console.log("grey");
-
-                }
-            }
-
-
-            let wordParts = word.split("");
-
-            console.log("wordParts", wordParts);
+            const guessParts = guess.split("");
+            console.log("guessParts", guessParts);
 
             if (wordStatus === false) {
                 (alert("sorry it seems that's not a word in our software at this moment"));
-                word = "";
+                guess = "";
                 for (i = 0; i < 5; i++) {
                     boxes[currentRow * MAX_LETTERS + i].innerHTML = "";
-
                 }
                 currentRow = currentRow;
                 return;
+            }
+
+            for (c = 0; c < 5; c++) {
+                if (guess[c] === answer[c]) {
+                    boxes[currentRow * MAX_LETTERS + c].classList.add("green");
+                    map[guess[c]]--;
+                    console.log("green");
+                }
+
+                else if (answerParts.includes(guessParts[c]) && map[guessParts[c]] > 0) {
+                    boxes[currentRow * MAX_LETTERS + c].classList.add("yellow");
+                    map[guess[c]]--;
+                    console.log("yellow");
+                }
+
+                else {
+                    boxes[currentRow * MAX_LETTERS + c].classList.add("grey");
+                    console.log("grey");
+                }
 
             }
+
+
             currentRow++;
-            word = "";
+            guess = "";
 
             if (currentRow === maxRows) {
 
@@ -194,19 +185,17 @@ async function valueINIT() {
         }
 
 
-
-
         function isCorrect() {
-            if (word === answer) {
+            if (guess === answer) {
                 alert(`WOW YOU WON THE GAME + THE WINNING "WORD" WAS = ${answer} + Thanks For Playing`);
                 for (i = 0; i < 30; i++) {
+                    currentRow = 0;
+                    boxes[currentRow * MAX_LETTERS + i].innerHTML = "";
                     boxes[currentRow * MAX_LETTERS + i].classList.add("green");
                     boxes[currentRow * MAX_LETTERS + i].innerHTML = "💎";
-
                 }
 
                 logoDiv.classList.add('show');
-
 
                 for (c = 0; c < 5; c++) {
                     boxes[currentRow * MAX_LETTERS + c].classList.add("green");
