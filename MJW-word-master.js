@@ -183,18 +183,14 @@ async function valueINIT() {
                     boxes[currentRow * MAX_LETTERS + i].innerHTML = "💎";
 
                 }
-                logoDiv.classList.remove('show');
 
-                logoDiv.classList.add("green");
                 logoDiv.classList.add('show');
 
 
                 for (c = 0; c < 5; c++) {
                     boxes[currentRow * MAX_LETTERS + c].classList.add("green");
 
-                    console.log("win win win win win")
-                    console.log(logoDiv.classList)
-
+                    console.log("you won the game")
 
                     done = true;
 
