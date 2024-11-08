@@ -207,10 +207,10 @@ async function valueINIT() {
             if (guess === answer) {
                 alert(`WOW YOU WON THE GAME + THE WINNING "WORD" WAS = ${answer} + Thanks For Playing`);
                 for (i = 0; i < 30; i++) {
-                    currentRow = 0;
-                    boxes[currentRow * MAX_LETTERS + i].innerHTML = "";
-                    boxes[currentRow * MAX_LETTERS + i].classList.add("green");
-                    boxes[currentRow * MAX_LETTERS + i].innerHTML = "💎";
+                    if (Math.floor(i / MAX_LETTERS) !== currentRow) {
+                        boxes[i].classList.add("green");
+                        boxes[i].innerHTML = "💎";
+                    }
                 }
 
                 logoDiv.classList.add('show');
