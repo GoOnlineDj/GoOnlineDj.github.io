@@ -144,7 +144,7 @@ async function valueINIT() {
                 (alert("sorry it seems that's not a word in our software at this moment"));
                 guess = "";
                 for (i = 0; i < 5; i++) {
-                    boxes[currentRow * MAX_LETTERS + i].innerHTML = "";
+                    boxes[currentRow * MAX_LETTERS + i].innerHTML = "🧬";
                 }
                 currentRow = currentRow;
                 return;
