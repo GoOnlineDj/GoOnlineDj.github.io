@@ -4,6 +4,7 @@ let z = 0;
 let guess = "";
 
 let currentRow = 0;
+let decor = 0;
 const MAX_LETTERS = 5;
 const maxRows = 6;
 let show = false;
@@ -144,7 +145,7 @@ async function valueINIT() {
                 (alert("sorry it seems that's not a word in our software at this moment"));
                 guess = "";
                 for (i = 0; i < 5; i++) {
-                    boxes[currentRow * MAX_LETTERS + i].innerHTML = "🧬";
+                    boxes[currentRow * MAX_LETTERS + i].innerHTML = "$";
                 }
                 currentRow = currentRow;
                 return;
@@ -155,17 +156,34 @@ async function valueINIT() {
                     boxes[currentRow * MAX_LETTERS + c].classList.add("green");
                     map[guess[c]]--;
                     console.log("green");
+
+
+                    decor = currentRow;
+                    while (decor < 5) {
+                        boxes[(decor + 1) * MAX_LETTERS + c].innerHTML = "💎";
+                        decor++
+                    }
+
+
+
                 }
 
                 else if (answerParts.includes(guessParts[c]) && map[guessParts[c]] > 0) {
                     boxes[currentRow * MAX_LETTERS + c].classList.add("yellow");
                     map[guess[c]]--;
                     console.log("yellow");
+
+                    decor = currentRow;
+                    while (decor < 5) {
+                        boxes[(decor + 1) * MAX_LETTERS + c].innerHTML = "🧬";
+                        decor++
+                    }
+
                 }
 
                 else {
-                    boxes[currentRow * MAX_LETTERS + c].classList.add("grey");
-                    console.log("grey");
+                    boxes[currentRow * MAX_LETTERS + c].classList.add("gray");
+                    console.log("gray");
                 }
 
             }
