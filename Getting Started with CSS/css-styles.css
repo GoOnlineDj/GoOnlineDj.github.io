@@ -1,0 +1,226 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, Kalnia Glaze, sans-serif;
+}
+
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--sans);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+    border: 3px solid blue;
+}
+
+/* section {
+ background-color: blue;
+} */
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+a {
+    color: var(--magenta);
+}
+
+a:hover {
+    color: var(--mag);
+    text-decoration: none;
+}
+
+#intro {
+    margin-bottom: 2rem;
+}
+
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#intro .name {
+    font-family: var(--mono);
+    color: green;
+}
+
+.name span {
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--aqua);
+    /* display: block; */
+}
+
+#intro h2 {
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+#contact {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--plum);
+}
+
+#contact p:last-child {
+    margin-bottom: 2rem;
+
+}
+
+nav {
+    background-color: purple;
+    font-family: var(--mono);
+    border: 1px dotted green;
+    /*   text-align: center; */
+    padding: 1rem;
+    font-size: 80%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px dotted red;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav h1 {
+    font-family: Kalnia Glaze;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    border: 1px dotted green;
+    display: block;
+}
+
+
+nav [class*="fa-"] {
+    font-size: 500%;
+    color: yellow;
+}
+
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: green;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+footer li:last-child,
+li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+footer [class*="fa-"] {
+    font-size: 500%;
+    color: yellow;
+    padding: 2 rem;
+}
+
+
+footer .button {
+    font-size: 77%;
+    padding: .2rem;
+    background-color: skyblue;
+    border-radius: 20px;
+    color: green;
+    text-decoration: none;
+}
+
+footer .button:hover {
+    color: red;
+    cursor: grab;
+}
+
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: lime;
+}
+
+nav .button {
+    font-size: 200%;
+    padding: .2rem;
+    background-color: yellow;
+    border-radius: 15px;
+    color: green;
+}
+
+nav .button:hover {
+    background-color: skyblue;
+    color: red;
+    cursor: grab;
+}
+
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover {
+    color: green;
+}
+
+@media (min-width: 850px) {
+
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /*  nav {
+   max-width: 1200px;
+   margin: 0 auto;
+  }
+  
+  #intro {
+    width: 1200px;
+   margin: 0 auto;
+  } */
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+
+}
