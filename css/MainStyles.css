@@ -261,6 +261,10 @@ iframe {
     max-width: 100%;
 }
 
+/* .apple-music-index-body {
+    box-sizing: inherit;
+} */
+
 .apple-music-index-body .button {
     display: inline-block;
     padding: 10px 7px;
