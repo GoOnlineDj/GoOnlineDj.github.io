@@ -18,7 +18,7 @@ html {
 }
 
 html .web-dev {
-    background-color: red;
+    background-color: var(--hotmag);
 }
 
 *,
@@ -31,10 +31,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--sans);
-    background-color: var(--black);
-    color: var(--white);
+    background-image: url(./img/Eq+03.png);
+    background-position: center;
+    color: var(--black);
     font-size: var(--font-size);
-    border: 10px double blue;
 }
 
 
@@ -240,7 +240,6 @@ footer .button:hover {
     }
 
     article {
-        background-color: var(--black);
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         gap: 1rem;
