@@ -17,9 +17,9 @@ html {
     box-sizing: border-box;
 }
 
-html .web-dev {
-    background-color: var(--hotmag);
-}
+/* html .web-dev {
+   I Love web development.
+} */
 
 *,
 *::before,
