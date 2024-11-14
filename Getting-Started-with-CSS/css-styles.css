@@ -60,6 +60,11 @@ a {
     color: var(--magenta);
 }
 
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
 a:hover {
     color: var(--mag);
     text-decoration: none;
