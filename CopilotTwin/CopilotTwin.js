@@ -96,6 +96,8 @@ const CopilotTwin = {
 
   graduationYear: 2009,
 
+  status: "Single",
+
   webDevelopment: ["HTML", "CSS", "JavaScript"],
 
   automobiles: [
