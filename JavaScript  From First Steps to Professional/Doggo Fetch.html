@@ -148,16 +148,20 @@
         // return the breed name string as formatted in the breed list, e.g. "standard poodle"
         async function getBreedFromURL(randomDog) {
 
-            // let BreedIndex = randomDog.indexOf("breeds");
-            // console.log(BreedIndex);
-            let correctAnswer = String(randomDog.slice(30, 40));
-            let indexOfAnswer = BREEDS.filter((BREEDS) => BREEDS.includes(correctAnswer))
-            console.log(BREEDS)
-            console.log(indexOfAnswer);
+            let splitAnswer = randomDog.split("/");
+            let [, , , , splitAnswerChecker] = splitAnswer;
+            let correctAnswer = "true";
+            console.log(splitAnswerChecker)
 
-            if (randomDog.includes(correctAnswer)) {
-                console.log("ok ok ok ok ", () => indexOf(randomDog.includes(correctAnswer)));
+            if (splitAnswerChecker.includes("-")) {
+                let splitAnswer = splitAnswerChecker.split("-")
+                correctAnswer = splitAnswer[1] + " " + splitAnswer[0];
             }
+            else {
+                correctAnswer = splitAnswerChecker;
+            }
+
+            console.log(BREEDS)
 
             console.log("correctAnswer", correctAnswer);
             setTimeout(() => { console.log("hi michael") }, 5000)
