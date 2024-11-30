@@ -148,17 +148,17 @@
         // return the breed name string as formatted in the breed list, e.g. "standard poodle"
         async function getBreedFromURL(randomDog) {
 
-            let splitAnswer = randomDog.split("/");
-            let [, , , , splitAnswerChecker] = splitAnswer;
+            let splitAnswer = await randomDog.split("/")[4];
+            // let [, , , , splitAnswerChecker] = splitAnswer;
             let correctAnswer = "true";
-            console.log(splitAnswerChecker)
+            console.log(splitAnswer)
 
-            if (splitAnswerChecker.includes("-")) {
-                let splitAnswer = splitAnswerChecker.split("-")
+            if (splitAnswer.includes("-")) {
+                splitAnswer = splitAnswer.split("-")
                 correctAnswer = splitAnswer[1] + " " + splitAnswer[0];
             }
             else {
-                correctAnswer = splitAnswerChecker;
+                correctAnswer = splitAnswer;
             }
 
             console.log(BREEDS)
@@ -184,12 +184,13 @@
             console.log("+=-=+promise+=-=+", randomDog);
             await getBreedFromURL(String(randomDog));
 
+            return randomDog;
 
         }
 
 
         // Function to add the multiple-choice buttons to the page
-        function renderButtons(choicesArray, correctAnswer) {
+        function renderButtons(choicesForAnswer, correctAnswer) {
 
             // Event handler function to compare the clicked button's value to correctAnswer
             // and add "correct"/"incorrect" classes to the buttons as appropriate
@@ -203,7 +204,9 @@
             }
 
             const options = document.getElementById("options"); // Container for the multiple-choice buttons
-
+            for (let button of choicesForAnswer) {
+                options.appendChild(".button");
+            }
             // TODO 4
             // For each of the choices in choicesArray,
             // Create a button element whose name, value, and textContent properties are the value of that choice,
