@@ -146,16 +146,17 @@
         // TODO 2
         // Given a URL such as "https://images.dog.ceo/breeds/poodle-standard/n02113799_2280.jpg"
         // return the breed name string as formatted in the breed list, e.g. "standard poodle"
-        async function getBreedFromURL(randomDog) {
+        async function getBreedFromURL(message) {
 
-            let splitAnswer = await randomDog.split("/")[4];
+            let splitAnswer = message.split("/")[4];
             // let [, , , , splitAnswerChecker] = splitAnswer;
             let correctAnswer = "true";
             console.log(splitAnswer)
 
             if (splitAnswer.includes("-")) {
                 splitAnswer = splitAnswer.split("-")
-                correctAnswer = splitAnswer[1] + " " + splitAnswer[0];
+                // correctAnswer = splitAnswer[1] + " " + splitAnswer[0];
+                correctAnswer = splitAnswer.reverse().join(" ").trim(); //.reverse()
             }
             else {
                 correctAnswer = splitAnswer;
@@ -178,14 +179,14 @@
         // then parse the response as a JSON object,
         // finally return the "message" property of its body
         async function fetchMessage(url) {
-            const response = await fetch(RANDOM_IMG_ENDPOINT);
-            const data = await response.json();
-            const randomDog = data.message;
-            console.log("+=-=+promise+=-=+", randomDog);
-            await getBreedFromURL(String(randomDog));
+            const response = await fetch(url);
+            const body = await response.json();
+            const { message } = body;
 
-            return randomDog;
+            console.log("+=-=+message+=-=+", message);
+            await getBreedFromURL(String(message));  //await to call function
 
+            return message;
         }
 
 
