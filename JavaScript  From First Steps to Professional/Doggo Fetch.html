@@ -114,7 +114,7 @@
             const duplicateAnswer = [];
 
             setTimeout(() => {
-                console.log(choicesForAnswer.sort());
+                console.log("+=-=+choicesForAnswerArray+=-=+", choicesForAnswer.sort());
             }, 2000)
 
             choicesForAnswer.push(correctAnswer);
@@ -132,7 +132,7 @@
             }
 
             setTimeout(() => {
-                console.log("duplicateAnswer", duplicateAnswer.sort());
+                console.log("+=-=+duplicateAnswerArray+=-=+", duplicateAnswer.sort());
 
             }, 3000)
 
@@ -151,7 +151,7 @@
             let splitAnswer = message.split("/")[4];
             // let [, , , , splitAnswerChecker] = splitAnswer;
             let correctAnswer = "true";
-            console.log(splitAnswer)
+            console.log("+=-=+splitAnswer+=-=+", splitAnswer)
 
             if (splitAnswer.includes("-")) {
                 splitAnswer = splitAnswer.split("-")
@@ -164,8 +164,8 @@
 
             console.log(BREEDS)
 
-            console.log("correctAnswer", correctAnswer);
-            setTimeout(() => { console.log("hi michael") }, 5000)
+            console.log("+=-=+correctAnswer+=-=+", correctAnswer);
+            setTimeout(() => { console.log("+=-=+hi michael+=-=+") }, 5000)
 
             // The string method .split(char) may come in handy
             // Try to use destructuring as much as you can
