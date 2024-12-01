@@ -8,8 +8,9 @@ const CopilotTwin = {
   },
 
   DOB: "12+17+1983",
-  currentLocation: "Union NJ 07083 USA",
-  mailBoxLocation: "3183 Wilshire Blvd #196D54 Los Angeles 90010 CA",
+  currentLocation: "Union + NJ + 07083 + USA",
+  mailBoxLocation: "3183 Wilshire Blvd + #196D54 + Los Angeles + 90010 + CA",
+  homeAddress: "1878 Albany Ave + Brooklyn + NY + 11210",
   Nationality: "UNITED STATES OF AMERICA",
   phoneNumber: "203+583+2111",
   PlaceOfBirth: "GUYANA",
