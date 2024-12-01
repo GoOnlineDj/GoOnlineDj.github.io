@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screen Readers</title>
+  <link rel="stylesheet" href="Screen%20Readers-Exercise%204_files/style.css">
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body cz-shortcut-listen="true">
+  <header>
+
+    <a id="showself" href="#skip" class="hidden">hey check out the main content <b>click here</b> </a>
+    <ul>
+      <li><a href="https://learn-a11y.netlify.app/">Home</a></li>
+      <li>
+        <a href="https://learn-a11y.netlify.app/screen-readers/">Screen Readers</a>
+      </li>
+      <li>
+        <a href="https://learn-a11y.netlify.app/accessible-html/">Accessible HTML</a>
+      </li>
+      <li>
+        <a href="https://learn-a11y.netlify.app/aria/">ARIA</a>
+      </li>
+      <li>
+        <a href="https://learn-a11y.netlify.app/focus-management/">Focus Management</a>
+      </li>
+      <li>
+        <a href="https://learn-a11y.netlify.app/visual-considerations/">Visual Considerations</a>
+      </li>
+      <li>
+        <a href="https://learn-a11y.netlify.app/tooling/">Tooling</a>
+      </li>
+      <li>
+        <a href="https://learn-a11y.netlify.app/resources/">Resources</a>
+      </li>
+    </ul>
+  </header>
+  <div id="container">
+    <h1>Exercise 4</h1>
+    <p>
+      Let's make a skip link so that user's tabbing through can skip right
+      over the navigation and get to this main content!
+    </p>
+    <button id="skip">Skip to here!</button>
+  </div>
+
+  <script>
+    const show = document.getElementById("showself");
+    console.log(show);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Tab" || event.keyCode === 9) {
+        console.log("hi")
+        show.classList.remove("hidden");
+      }
+
+    })
+  </script>
+</body>
+
+</html>

@@ -23,7 +23,7 @@
     <ol>
       <li>
         Download the code for
-        <a href="https://github.com/jkup/learn-a11y">this repo</a>.
+        <a aria-label="Link to Github website" href="https://github.com/jkup/learn-a11y">this repo</a>.
       </li>
       <li>Open exercises/2.html</li>
       <li>
@@ -36,8 +36,9 @@
       <input id="firstName" type="text">
       <label for="lastName">Last Name:</label>
       <input id="lastName" type="text">
-      <div aria-label="Submit button" tabindex="0" onkeyup="alert('hi there')" onclick="() => alert('Submit button')"
-        role="button" value="Submit">Submit</div>
+      <!-- <div aria-label="Submit button" tabindex="0" onkeyup="alert('hi there')" onclick="() => alert('Submit button')"
+        role="button" value="Submit">Submit</div> -->
+      <button class="myCustomButton" type="submit" value="submit">Submit</button>
     </form>
     <img src="Screen%20Readers_files/kitten.jpeg" alt="cute kitten">
   </div>
