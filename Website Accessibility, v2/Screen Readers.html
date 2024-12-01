@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screen Readers</title>
+  <link rel="stylesheet" href="Screen%20Readers_files/style.css">
+</head>
+
+<body cz-shortcut-listen="true">
+  <header>
+    <ul>
+      <li>
+        <a href="https://learn-a11y.netlify.app/accessible-html/">← Back</a>
+      </li>
+    </ul>
+  </header>
+  <div id="container">
+    <h1>Exercise 2</h1>
+    <ol>
+      <li>
+        Download the code for
+        <a href="https://github.com/jkup/learn-a11y">this repo</a>.
+      </li>
+      <li>Open exercises/2.html</li>
+      <li>
+        Find and fix as many accessibility problems as you can in the code
+        below!
+      </li>
+    </ol>
+    <form>
+      <label for="firstName">First Name:</label>
+      <input id="firstName" type="text">
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" type="text">
+      <div aria-label="Submit button" tabindex="0" onkeyup="alert('hi there')" onclick="() => alert('Submit button')"
+        role="button" value="Submit">Submit</div>
+    </form>
+    <img src="Screen%20Readers_files/kitten.jpeg" alt="cute kitten">
+  </div>
+
+
+</body>
+
+</html>

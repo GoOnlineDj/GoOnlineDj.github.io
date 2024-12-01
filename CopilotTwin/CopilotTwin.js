@@ -7,7 +7,23 @@ const CopilotTwin = {
     last: "Williams",
   },
 
+  DOB: "12+17+1983",
+  currentLocation: "Union NJ 07083 USA",
+  mailBoxLocation: "3183 Wilshire Blvd #196D54 Los Angeles 90010 CA",
+  Nationality: "UNITED STATES OF AMERICA",
+  phoneNumber: "203+583+2111",
+  PlaceOfBirth: "GUYANA",
+  favColor: "Blue",
+  website: "https://www.GoOnlineDj.com",
+  Facebook: "https://facebook.com/MichaelJWilliams83",
+  Instagram: "https://www.instagram.com/exoticamerican",
+  TikTok: "https://www.tiktok.com/@girlmeetguy",
+  Linkedin: "https://www.linkedin.com/in/michael-williams-0140a089",
+  GitHub: "https://github.com/GoOnlineDj",
+
   college: "University Of Bridgeport",
+  collegeGrad: true,
+  graduationYear: 2009,
 
   collegeGrades: [
     { Course: "ENGL100", Title: "Basic Composition", Grade: "A-" },
@@ -91,16 +107,36 @@ const CopilotTwin = {
   ],
 
   filterGrades: function (GRADE) {
-    return this.collegeGrades.filter((Grade) => Grade === GRADE);
+    return this.collegeGrades.filter((grade) => grade.Grade === GRADE);
   },
-
-  graduationYear: 2009,
 
   status: "Single",
 
   webDevelopment: ["HTML", "CSS", "JavaScript"],
 
-  automobiles: [
+  hobbies: [
+    "Driving",
+    "Bowling",
+    "Swimming",
+    "Going to Bars",
+    "Playing Chess",
+    "Using TikTok App",
+    "Building Websites",
+    "Playing Basketball",
+    "Meeting New People",
+    "Going to the Beach",
+    "Exploring Computers",
+    "Watching Reality TV",
+    "Using Instagram App",
+    "Going to Dance Clubs",
+    "Browsing the Internet",
+    "Watching Music Videos",
+    "Traveling to New Places",
+    "Learning Web Development",
+    "DJ+ing with Music Videos for myself and others",
+  ],
+
+  automobilesOwned: [
     "GEO Tracker",
     "Chrysler Sebring Convertible",
     "Cadillac Seville",
