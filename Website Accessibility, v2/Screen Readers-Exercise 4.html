@@ -9,9 +9,21 @@
   <title>Screen Readers</title>
   <link rel="stylesheet" href="Screen%20Readers-Exercise%204_files/style.css">
   <style>
-    .hidden {
+    /* .hidden {
       display: none;
+    } */
+
+    #showself {
+      position: absolute;
+      transform: translateY(-100%);
     }
+
+    #showself:focus {
+      position: static;
+      transform: translateY(0%);
+    }
+
+    /* //cool */
   </style>
 
 </head>
@@ -54,17 +66,25 @@
     <button id="skip">Skip to here!</button>
   </div>
 
+  <!-- /* //cool mjw*/ -->
   <script>
     const show = document.getElementById("showself");
     console.log(show);
+
     document.addEventListener("keydown", (event) => {
       if (event.key === "Tab" || event.keyCode === 9) {
         console.log("hi")
-        show.classList.remove("hidden");
+        // show.classList.remove("hidden");
+
+
+        // show.style.position = "static";
+        // show.style.transform = "translateY(0%)";
+
       }
 
     })
   </script>
+  <!-- /* //cool mjw*/ -->
 </body>
 
 </html>
