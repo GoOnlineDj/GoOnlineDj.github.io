@@ -114,3 +114,16 @@ describe("Backstage passes to a TAFKAL80ETC concert", () => {
     expect(items[0].quality).toBe(0);
   });
 });
+
+describe("Conjured Items", () => {
+  it("should have a quality that decreases twice as fast than the normal rate", () => {
+    const gildedRose = new Shop([
+      new Item("conjured cat", 5, 10),
+      new Item("Conjured cat", 10, 15),
+      new Item("CONJURED cat", 15, 20),
+    ]);
+
+    const items = gildedRose.updateQuality();
+    expect(items[0].sellIn).toBe(4);
+  });
+});
