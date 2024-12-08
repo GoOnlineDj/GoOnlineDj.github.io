@@ -125,5 +125,19 @@ describe("Conjured Items", () => {
 
     const items = gildedRose.updateQuality();
     expect(items[0].sellIn).toBe(4);
+    expect(items[0].quality).toBe(8);
+    expect(items[1].quality).toBe(13);
+    expect(items[2].quality).toBe(18);
+  });
+  it("should have a twice lower quality value once the sellIn date has passed", () => {
+    const gildedRose = new Shop([new Item("conjured cat", 0, 10)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toBe(6);
+  });
+
+  it("should have quality value thats never negative", () => {
+    const gildedRose = new Shop([new Item("conjured cat", 0, 1)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toBe(0);
   });
 });
