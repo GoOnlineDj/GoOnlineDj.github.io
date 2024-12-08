@@ -1,4 +1,12 @@
 @layer base {
+  /* //COOL// */
+  .youtube {
+    /* //add spaces// */
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    /* //add spaces// */
+  }
+
   :root {
     /* colors */
     --black: #000501;
@@ -10,7 +18,7 @@
 
     /* font families */
     --main: "Lato", sans-serif;
-    --heading: "Josefin Sans";
+    --heading: "Josefin Sans", sans-serif;
     --mono: "Fira Mono", monospace;
 
     /* type scale */
@@ -177,10 +185,11 @@
 
 @layer intro {
   ._c_intro {
-    background-image: url(./portfolio_Images/fem-comet.jpg);
-    background-repeat: no-repeat;
-    background-position: 83% 25%;
-    padding: 4rem 0;
+    background-image: url(./portfolio_Images/fem-featured-top.png),
+      url(./portfolio_Images/fem-comet.jpg);
+    background-repeat: repeat-x, no-repeat;
+    background-position: bottom center, 83% 25%;
+    padding: 4rem 0 10rem 0;
     color: var(--white);
   }
 
@@ -408,6 +417,155 @@
   } */
 }
 
+@layer featured {
+  ._c_featured {
+    background-image: url(./portfolio_Images/fem-feature-bottom.png),
+      url(https://assets.codepen.io/296057/fem-feature-bkgd.png);
+    background-repeat: repeat-x, repeat;
+    background-position: bottom center, center center;
+    padding: 6rem 0;
+    background-color: var(--white);
+    text-align: center;
+    border: 1px solid red;
+  }
+
+  ._c_featured h2 {
+    font-size: var(--h3);
+    padding-top: 4rem;
+    margin: 6rem 0 3rem 0;
+  }
+
+  ._c_featured h3 {
+    margin: 2rem 0 0 0;
+    padding: 1rem 1rem 0 1rem;
+    font-size: var(--h4);
+    color: var(--white);
+
+    background-color: var(--black);
+  }
+
+  ._c_featured article {
+    display: grid;
+    grid-template-rows: auto;
+  }
+
+  ._c_featured ._c_featured-grid ._c_featured-grid-img {
+    grid-row: 1/2;
+    /* grid-row: revert; /////coooooool//// */
+    /*        ? with or without seems to work fine */
+    grid-column: 1/2;
+    /* grid-column: revert; /////coooooool//// */
+    /*       ? with or without seems to work fine */
+    display: block;
+    margin-top: 1rem;
+  }
+
+  ._c_featured ._c_featured-grid ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: var(--small);
+    margin: 0;
+    padding: 0;
+    /*     text-transform: uppercase; */
+    grid-row: 2/3;
+    /*      ? with or without seems to work fine */
+    grid-column: 1/2;
+    /*      ? with or without seems to work fine */
+
+    /*     //COOL//COOL//COOL// */
+    margin-top: -1.75rem;
+    /*     //COOL//COOL//COOL// */
+  }
+
+  ._c_featured ._c_featured-grid li {
+    background-color: var(--white);
+    border: 3px solid var(--red);
+    padding: 1rem;
+  }
+
+  ._c_featured ._c_featured-info {
+    background-color: var(--black);
+    padding: 0rem 1rem 1rem 1rem;
+    color: var(--white);
+    border-radius: 0;
+  }
+
+  ._c_featured ._c_featured-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  ._c_featured ._c_featured-info p {
+    width: auto;
+    margin: 0 auto;
+    padding: 2rem;
+    /* //put text in two columns//
+    columns: 2;
+    //put text in two columns// */
+  }
+
+  ._c_featured-info button {
+    font-size: 30px;
+    background-color: var(--green);
+  }
+  ._c_featured-info button a {
+    color: var(--black);
+    text-decoration: none;
+  }
+  ._c_featured-info button a:hover {
+    color: var(--yellow);
+    font-size: 50px;
+    text-decoration: underline;
+  }
+
+  ._c_featured-info {
+    padding: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  /*   
+  ._c_featured-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    margin-bottom: 4rem;
+  }
+   */
+}
+/* //
+//LAST ITEM//
+// */
+@media (min-width: 1440px) {
+  ._c_featured h2 {
+    border: 3px solid purple;
+  }
+}
+@media (max-width: 1040px) {
+  ._c_featured ._c_featured-grid ul {
+    background-color: var(--white);
+    border: 3px solid var(--red);
+  }
+  ._c_featured ._c_featured-grid li {
+    /* //COOL// */
+    background-color: transparent;
+    /* //COOL// */
+    margin-top: 1.75rem;
+    border: none;
+    padding: 1rem;
+    font-weight: bolder;
+  }
+}
+@media (min-width: 1000px) {
+  ._c_featured ._c_featured-info p {
+    width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}
 @media (max-width: 992px) {
   ._c_projects ._c_projects-top-grids {
     display: block;
@@ -436,6 +594,15 @@
   /*     //cool// > * //cool// */
 
   /*     //cool// > * //cool// */
+}
+@media (max-width: 860px) {
+  ._c_featured ._c_featured-grid li {
+    padding: 1rem;
+    font-weight: bolder;
+  }
+}
+
+@media (max-width: 773px) {
 }
 
 @media (max-width: 683px) {
