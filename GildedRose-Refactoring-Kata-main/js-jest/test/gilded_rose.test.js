@@ -14,7 +14,7 @@ describe("Gilded Rose", function () {
       expect(items[0].sellIn).toBe(9);
     });
 
-    it("should have a lower sellIn value at the end of the day", () => {
+    it("should have a lower quality value at the end of the day", () => {
       const gildedRose = new Shop([new Item("foo", 10, 20)]);
       const items = gildedRose.updateQuality();
       expect(items[0].quality).toBe(19);
@@ -76,7 +76,7 @@ describe("Backstage passes to a TAFKAL80ETC concert", () => {
     const items = gildedRose.updateQuality();
     expect(items[0].quality).toBe(21);
   });
-  it("should increase in quality by 2 when there is 10 days or less", () => {
+  it("should increase in quality by 2 when the sellIn has a value of 10 to 6", () => {
     const gildedRose = new Shop([
       new Item("Backstage passes to a TAFKAL80ETC concert", 10, 20),
     ]);
