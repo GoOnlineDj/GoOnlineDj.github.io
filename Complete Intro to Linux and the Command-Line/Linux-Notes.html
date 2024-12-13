@@ -167,9 +167,61 @@
     mkdir MJW = create a new director or folder
     -p = make multiple nested folders
     mkdir -p hi/my/name/is/michael
+    mkdir --help
     =============================
+    ======touch======= CREATE+++CREATE======
+    touch you-are-so-cool.txt = create a new text File
+    touch a.txt b.txt c.txt d.txt e.txt f.txt
+    touch you-are-so-cool.txt = update the modifyTIME
+    touch goodyear{2003,2007,2009,2013,2015,2017,2020,2024}.txt
+
+    =============================
+    =====+++++++++++======
+    <!-- ITEMS ARE GONE FOREVER after rm command  -->
+    rm = remove
+    rm you-are-so-cool.txt = delete file
+    -r = recursive delete
+    rm -r my-folder = delete folder
+    <!-- -f = force  -->
+    rm -rf my-folder = delete folder
+
+    <!-- NO * NO NO  -->
+
+    <!-- package call trash to save delete files up to 30 days  -->
+    ===========================
+
+    ====================
+    cp = copy
+    cp williams.txt williams1983.txt
+    =================
+
+    <!-- mv = move + rename the file or folder by moving it to a new file or folder with that new name -->
+    mv MJW MJW2024 = rename the files
 
 
+    ==========================
+
+    tar = compressing files and folders for speed and memory
+    tar -cf computer.tar folder1983 junior.txt = archive
+    tar -zcf computer.tar.gz folder1983 junior.txt = GZIP
+    mkdir extracted
+    mv computer.tar.gz extracted
+    cd extracted
+    <!-- tar -xzf computer.tar.gz folder1983 = extract items into extracted folder from computer.tar.gz zip folder -->
+    touch goodyear{2003,2007,2009,2013,2015,2017,2020,2024}.txt = EXPANSION
+
+    <!-- ====NOTE , CAN BE ADDED TO LEAVE BLANK====== -->
+
+    ===================================
+    ls goodyear-* = wild card search
+    ls file*.txt = only ONE SHOWED UP file.txt
+    ls file* = all files that start with file
+    ls file? = with one character after file
+    ls file?? = with two character after file
+    <!-- mkdir folder41
+    cd folder41
+    touch gyear{1983..2024} = wow this is beautiful -->
+    =======================================
 
 
 
