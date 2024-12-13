@@ -222,45 +222,82 @@
     cd folder41
     touch gyear{1983..2024} = wow this is beautiful -->
     =======================================
+    touch gchar{a..z}
+    rm gchar{a..z}
+    touch gchar={a..z}
+    <!-- touch Michael\*Williams.txt = ADD * to file name -->
+    ============================
+    <!-- echo {a..z}
+    a b c d e f g h i j k l m n o p q r s t u v w x y z
+    echo {1983..2024}
+    1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005
+    2006
+    2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 -->
+    ==================================
+    <!-- echo {a..z..2}
+    a c e g i k m o q s u w y
+    echo {0..20..2}
+    0 2 4 6 8 10 12 14 16 18 20
+    echo {0..20..5}
+    0 5 10 15 20 -->
+    echo {A..Z}{1..2}
+    ==================================
+    <!-- echo {A..Z..10}
+    A K U
+    echo {a..Z..10}
+    a
+    echo {A..z..10}
+    A K U _ i s -->
+    echo {A..Z}{01..02}{1..2}
+    ========================================
+    +++++++++++++++++++++++++++++++++++++++++
+    ==========output streams========
+    <!-- stdout = 1> 
+    stderr = 2> -->
+    ++++++++++++++++++++++++++++++++++
+    mkdir streams
+    cd streams/
+    <!-- echo 'this is my text for output' 1> new-file.txt = replace files with new text -->
+    cat new-file.txt
+    cat new-file.txt 1> another-file.txt = replace text
+    <!-- cat new-file.txt 1>> another-file.txt = add more text to file. -->
+    ls -lash 1> savedfile.txt
+    cat savedfile.txt
+    ls 1> ls.txt
+    cat ls.txt
+    -----------------------------------
+    ==========output streams========
+    ====================================
+    cat no-such-file.txt 2> error.txt
+    cat error.txt
+    ls -lash 1> ls01.txt 2> lserr.txt
+    ls -lash > ls100.txt = both output and error to same place
+    cat ls100.txt
+    ls -lash >> ls100.txt = append text
+    ls -lash 2> /dev/null = output to null
+    ls -lash 1> /dev/null = error to null
+    <!-- cat some-file.txt 1> /dev/null = show output error
+    cat some-file.txt 2> /dev/null = error gone forever -->
+    ==========output streams========
+    ============================================
 
+    ====================================
+    ====================================
 
+    ==========input streams========
+    ====================================
+    grep = find or search for an item in list
+    <!-- cat < williams1983.txt=files input into cat 
+    cat williams1983.txt=cat reading text file  -->
+    grep 'cool' < williams1983.txt=to find cool in doc grep 'error.txt' < ls01.txt 1> grep.txt 2> /dev/null
+        cat grep.txt
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        ps aux = output all the current running processes
+        <!-- ps aux | grep 'ps aux' = find  -->
+        & = keep running in background.
+        yes > /dev/null & = keep running yes in background.
+        ps aux | grep 'yes'
+        ill -9 #### to kill yes
 
 
 
