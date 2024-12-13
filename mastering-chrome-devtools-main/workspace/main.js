@@ -2,7 +2,7 @@
 const form = document.getElementById("form");
 const list = document.getElementById("list");
 
-// Create the list
+// Create the list 2024
 const items = [
   "Center the page title",
   "Change the background color to #333",
@@ -21,7 +21,9 @@ function render() {
 
 form.addEventListener("keyup", (evt) => {
   if (evt.key === "Enter") {
+    
     console.log(form.value);
+    items.push(form.value);
     // Now add the item to the list!
     render();
   }

@@ -35,7 +35,7 @@ fastify.get("/lesson/:lessonId", async (request, reply) => {
     path.join(__dirname, "..", `/markdown/lessons/${id}.md`)
   );
 
-  // let num = foobar();
+  let num = foobar();
 
   let script, link;
 
@@ -58,14 +58,14 @@ fastify.get("/lesson/:lessonId", async (request, reply) => {
   });
 });
 
-// function foobar() {
-//   let num = 0;
-//   for (let i = 0; i < 1000000000; i++) {
-//     num = i;
-//   }
+function foobar() {
+  let num = 0;
+  for (let i = 0; i < 1000000000; i++) {
+    num = i;
+  }
 
-//   return num;
-// }
+  return num;
+}
 
 // Exercises
 fastify.get("/exercises", async (request, reply) => {

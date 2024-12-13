@@ -1,9 +1,17 @@
+/* 2024 */
 #wrapper {
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 25px 50px 0 rgb(0 0 0 / 10%);
   margin: 150px auto;
   width: 550px;
 }
-
+body {
+  background-color: black;
+  color: blue;
+  color: white;
+}
+h1 {
+  text-align: center;
+}
 ul {
   padding-left: 0;
   list-style: none;
