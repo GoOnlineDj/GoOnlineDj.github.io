@@ -130,6 +130,10 @@
     :q! = quit
     <!-- :qa! = quitNOW -->
     ================
+    =====vi=======
+    :wq! = quit NOW
+    =================
+
     Ubuntu
 
     -zsh
@@ -411,13 +415,43 @@ All other users can read and execute (access) the directory, but cannot write to
         ls = working fine at this point = oooookkkkk
         ================================
         <!-- 00 vm lover.txt as value = readonly ====ggggrrrrrr -->
+        ============================================
+        ||||||||||||||||||||||||||||||||||||||||||||
+        ls -lash /bin/ = to show all the programs in bin directory
+        ||||||||||||||||||||||||||||||||||||||||||||
+        ============================================
+        touch lover.txt = as value = permission defined
+        ========================
+        sudo touch lover.txt = 0 -rw-r--r-- 1 root root
+        <!-- exit = exit out of a profile -->
+        ++++++++++++++++++++++
+        <!-- sudo chmod u=rw,g=rw,o=rw hello40.txt 
+        //to chage the PERMISSION on a file// -->
+        ++++++++++++++++++++++++++++++++++++++++
 
-
-
-
-
-
-
+        whoami
+        value
+        touch value.txt = Permission denied
+        <!-- //unable to touch a file but able to vi file into exsistance // -->
+        vi hello40.txt
+        :qw! from vi = to exit program
+        ls
+        exit
+        user = ubuntu
+        <!-- cat hello40.txt
+        Hello this was written by Michael Junior Williams = value notes from vi that he was able to save -->
+        ====================================
+        sudo chmod u=rwx,g=rwx,o=rwx /hello40
+        //to change permission on a folder//
+        ======================================
+        ls -lash
+        su value
+        password : value password = ok
+        cd hello40
+        touch wowIloveThis.txt = works fine = file exist in hello40 folder
+        =====================================
+        +++++++++++++++++++++++++++++++++++
+        ===============Permissions shortcuts============
 
 
 
