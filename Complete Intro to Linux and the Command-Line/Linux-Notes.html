@@ -509,6 +509,71 @@ Hello the user im currently logged in as is ubuntu -->
         echo $Test_Linux
         wow this is so cool learing cool stuff' = WORKS
         <!-- //VARIABLE CREATED AND SAVED////// -->
+        su value
+        echo $Test_Linux
+        wow this is so cool learing cool stuff' = works on another profile as well because the environment is shared by
+        all users.
+        ===============================
+        +++++++++++++++++++++++++++++++++++++++++++
+        +++++++++++++++SYSTEM UPGRADE+++++++++++++++++++
+        <!-- Update Package List: = sudo apt update
+List Upgradable Packages: = apt list --upgradable
+Upgrade Packages: = sudo apt upgrade
+Full Upgrade: = sudo apt full-upgrade
+Clean Up: = sudo apt autoremove = sudo apt clean
+Install ubuntu-advantage-tools: = sudo apt install ubuntu-advantage-tools
+Attach to Ubuntu Advantage: sudo ua attach <your-token>
+    Enable ESM for Applications: sudo ua enable esm-apps
+    By following these steps, you can upgrade your system and enable Expanded Security Maintenance for applications -->
+        ++++++++++++++++++++++++++++++++++++++++++++++++
+        ++++++++++++++++++++++++++++++++++++++++++++++
+        ========Variables===============
+        export = export to general environment
+        +++++++++++++++++++++++++++++++++++++++++++
+        export Test_Linux="BLANK FOR NOW"
+        echo $Test_Linux = BLANK FOR NOW
+        su value
+        echo $Test_Linux = wow this is so cool learing cool stuff' = //from last inputed value
+        ===============================
+        whoami
+        ubuntu
+        <!-- vi ~/.bashrc -->
+        export Test_Linux2='wow this is cool 2' = added in .bashrc = save and quit
+        echo $Test_Linux2 = BLANK FOR NOW
+        ++++++++++++++++++++++++++++++++++++
+        ==================================
+        source = rerun script = rerun without exit
+        exit
+        echo $Test_Linux2
+        wow this is cool 2
+        =========================
+        <!-- .bashrc = is where u can change prompts ,setup colors, input scrips to use + and variables just for your user + ect  -->
+        =================================
+        ++++++++++++++++++++++++++++
+        .bash_profile runs once once when u open the shell interactively
+        <!-- vi .bash_profile
+        if [ -f ~/.bashrc ]; then
+        source ~/.bashrc
+        fi
+        save and quit vi;
+        ==================================
+        //this will ensure .bashrc runs everytime in every session /// -->
+        //every user has their own .bashrc
+        ==================================
+        la -lash = 4.0K -rw-r--r-- 1 ubuntu ubuntu 3.9K Dec 14 17:00 .bashrc
+        ===================================================
+        sudo vi /etc/bashrc = BASH RC FOR EVERYBODY
+        ////////////////////////////////////////////////
+        =========================================
+        ++++++++++++++++++++++++++++++++++++++++
+        =================Processes================
+        ps aux = ALL RUNNING PROCESSES ON THE COMPUTER
+        ===============================================
+
+
+
+
+
 
 
 
