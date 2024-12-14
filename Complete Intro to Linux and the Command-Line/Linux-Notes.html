@@ -442,6 +442,7 @@ All other users can read and execute (access) the directory, but cannot write to
         Hello this was written by Michael Junior Williams = value notes from vi that he was able to save -->
         ====================================
         sudo chmod u=rwx,g=rwx,o=rwx /hello40
+        sudo chmod 777 file.txt
         //to change permission on a folder//
         ======================================
         ls -lash
@@ -452,16 +453,62 @@ All other users can read and execute (access) the directory, but cannot write to
         =====================================
         +++++++++++++++++++++++++++++++++++
         ===============Permissions shortcuts============
-
-
-
-
-
-
-
-
-
-
+        <!-- sudo chmod 777 file.txt
+                r=4,w=2,x=1 -->
+        ls -lash
+        whoami
+        value
+        touch file.txt
+        ls -lash
+        sudo chmod 777 file.txt = -rwxrwxrwx
+        sudo chmod 700 file.txt = -rwx------
+        chmod 600 file.txt = -rw-------
+        sudo chmod 640 file.txt = -rw-r-----
+        sudo chmod 664 michael.txt = -rw-rw-r--
+        =====================================
+        touch mjw-new-program = -rw-rw-r--
+        <!-- sudo chmod +x mjw-new-program = -rwxrwxr-x -->
+        sudo chmod -x mjw-new-program = -rw-rw-r-- 1 ubuntu ubuntu
+        <!-- sudo chmod +w mjw-new-program = -rw-rw-r-- -->
+        ==========================================
+        cat /etc/passwd
+        ++++++++++++++++++++++++++++++++++++++
+        ========================================
+        =============Environments=============
+        <!-- printenv --> = //$//
+        echo $USER = ubuntu
+        echo $HOME = /home/ubuntu
+        <!-- echo Hello the user im currently logged in as is $USER =
+Hello the user im currently logged in as is ubuntu -->
+        cho Hello this user lives at $HOME =
+        Hello this user lives at /home/ubuntu
+        //$USER = bash is doing the work with the command is run not echo//
+        <!-- USER=Michael  -->
+        echo Hello the user im currently logged in as is $USER = Hello the user im currently logged in as is Michael
+        USER=Ubuntu
+        echo Hello the user im currently logged in as is $USER
+        Hello the user im currently logged in as is Ubuntu
+        echo $GREETING $USER , how are you?
+        Ubuntu , how are you?
+        GREETING='Hello'
+        echo $GREETING $USER , how are you?
+        Hello Ubuntu , how are you?
+        GREETING='Greetings'
+        echo $GREETING $USER , how are you?
+        Greetings Ubuntu , how are you?
+        ========================================
+        <!-- ////// making a permanet VARIABLE /////// -->
+        sudo vi /etc/environment
+        <!-- Test_Linux='wow this is so cool learing cool stuff' //made variable and saved it in VI -->
+        echo $Test_Linux = BLANK FOR NOW
+        ===================
+        exit = logout Ubuntu out of current session in shell
+        <!-- logout
+        girlmeetguy@Michaels-MacBook-Air-2 ~ % -->
+        =====open Shell again ===log in as Ubuntu======
+        echo $Test_Linux
+        wow this is so cool learing cool stuff' = WORKS
+        <!-- //VARIABLE CREATED AND SAVED////// -->
 
 
 
