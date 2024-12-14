@@ -297,7 +297,140 @@
         & = keep running in background.
         yes > /dev/null & = keep running yes in background.
         ps aux | grep 'yes'
-        ill -9 #### to kill yes
+        kill -9 #### to kill yes
+        ============================
+        ======pipe==============
+        =========================
+        no | rm -i file*
+        yes n | rm -i hi*
+        yes n | rm -i hi*
+        ==============================
+        whoami = what program am i currently in
+        <!-- cat /etc/passwd = all the users on the computer at t particular time. -->
+        superuser = root user
+        whoami = ubuntu
+        sudo whoami = root = from root dir
+        <!-- su = switch user
+        sudo su = will make u root user  -->
+        exit = exit from root user account
+        sudo = usually ask for password
+        ubuntu is a password less environment
+        ++++++++++++++++++++++++++
+        sudo useradd Michael
+        sudo passwd Michael
+        sudo su
+        -aG = --append --groups
+        sudo usermod -aG sudo Michael
+        su Michael
+        sudo whoami
+
+
+        ===============
+        -rw-rw-r-- = normal files
+        drwxr-x--- = directory files
+        ======================
+        <!-- rwx = read + write + excecute
+        first rwx = user
+        second rwx = grounp
+        thrid rwx = all others -->
+        ============================
+        . = current directory
+        ================
+
+        sudo mkdir hello
+        touch hello.txt
+        ls -lash
+        <!-- ubuntu@primary:/hello$ sudo chown ubuntu:ubuntu /hello -->
+        =======================
+        ++++ADD++NEW++USER++++++
+        sudo echo hi
+        sudo useradd value
+        sudo passwd value
+        su value
+        whoami = value
+        ls
+        pwd = /
+        +++++++++++++++++++++++
+        cat /etc/issue = Ubuntu 24.04.1 LTS \n \l
+        ==============================================
+        <!-- $ sudo echo hi
+[sudo] password for value: 100
+reply from computer = value is not in the sudoers file.
+$ -->
+        ================================
+        exit = exit current session
+        ====================================
+        ==========GROUPS================
+        //from admin account:
+        <!-- sudo usermod --append --groups sudo value  -->
+        //to give regualar user admin rights
+        su value
+        enter value Password: 100
+        $ whoami
+        value
+        sudo whoami
+        [sudo] password for value: 100
+        <!-- output from system : root     -->
+
+        ===========================
+
+        exit
+        su value
+        value Password: 100
+        whoami
+        computer output = value
+        ls = ok ====signed in as user value
+        =====================
+        sudo ls -ld /home/ubuntu = to check if a folder exist
+        =============================
+        Understanding 755 Permissions:
+        The 755 permission setting is broken down as follows:
+
+        <!-- Owner (User): Read, write, and execute permissions (7).
+Group: Read and execute permissions (5).
+Others: Read and execute permissions (5).
+Detailed Breakdown:
+Owner (User): 7 (Read r, Write w, Execute x)
+The owner of the directory can read, write, and execute (access) the directory.
+Group: 5 (Read r, Execute x)
+Members of the group can read and execute (access) the directory, but cannot write to it.
+Others: 5 (Read r, Execute x)
+All other users can read and execute (access) the directory, but cannot write to it. -->
+        =======================
+
+        //after becoming an admin still was unable to get into ubuntu folder + copilot helped me out
+
+        =============================
+
+        sudo chmod 755 /home/ubuntu
+
+        cd /home/ubuntu
+
+        ===============================
+
+        ls = working fine at this point = oooookkkkk
+        ================================
+        <!-- 00 vm lover.txt as value = readonly ====ggggrrrrrr -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
