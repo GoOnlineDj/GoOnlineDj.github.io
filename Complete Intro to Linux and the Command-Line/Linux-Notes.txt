@@ -1,0 +1,1333 @@
+======+++++Everything is a file in Linux+++++=========
+<!-- & = run in the background -->
+<!-- find *.txt = FIND ALL TXT FILES = COOL  -->
+================================
+<!-- 
+    Emulator runs the shells inside of it e.g terminal -->
+the shell is bash Bourne Again Shell + GNU Foundation
+
+<!-- command line + CLI -->
+TRY NOT TO COPY AND PASTE INTO THE COMMAND LINE DIRECTLY
+IS NOT SAFE TO COPY AND PASTE INTO THE COMMAND LINE.
+
+pwd = present working directory
+{clear} or ctrl+L to clear
+tab = tab+key = very powerful
+!! = to rerun last command = !bang !bang
+<!-- !! can be inserted into another command -->
+example = sudo !!
+
+
+<!-- ctrl + r = reverse search bash history <> -->
+/ = root directory
+==================
+ls = {list} it list items inside a directory
+ls is a command or program that has allot of flags
+=================
+
+<!-- +++ORDER MATTERS PUT COMMAND FIRST THEN FLAGS+++ -->
+
+====flags===
+--help = one long flag
+-l = might be more flgs
+-a = might be more flgs
+-la
+-s = size
+-h = human readable
+-lash
+ls -I = ignore
+ls --ignore
+-f = keep watching a file in real time
+====flags===
+cd = to change directory
+.. = relative path
+cd .. to up one directory
+cd ../.. up two directory
+cd home relative to where you are
+cd folder i know there is a folder with this name
+cd tab auto complete tab auto complete
+cd ../ubuntu/../ubuntu/
+cd ~ = home directory
+cd ~/home
+
+<!-- ls home {home} here is a perameter or argument = an argument is like textual info that you are providing to a
+    program. -->
+ls {-l} = wil provide more info the long form output.
+ls -a, --all will list all the items including hidden items
+ls -l -a
+ls -lash
+
+echo = like console.log
+echo "hi my name is Michael"
+echo "hi computer speak to me"
+which ls
+which = what the path is to the program that you'r running
+bin = binary = this is where ALL the PROGRAMS are kept
+
+touch .hidden = to create a hidden file {needs the .}
+
+touch Michael.txt = to create a regular text file.
+
+ls --ignore=michael or --ignore michael
+ls --ignore=michael --ignore=michael2
+
+yes = yes program = ANSWERS YES FOREVER until it is stopped
+
+=========Shortcuts==========
+CTRL + A = takes you to the beginning of the line
+CTRL + E = takes you to the end of the line
+CTRL + K = "yank" everything after the cursor
+CTRL + U = "yank" everything before the cursor
+CTRL + Y = "paste" (paste in quotes because it doesn't actually go into your system clipboard) everything you
+yanked
+CTRL + L = clear the screen
+CTRL + R = reverse search through history
+
+========Signals ==========
+CTRL + C = SIGINT
+CTRL + D = SIGQUIT
+SIGTERM = computer sends this to end all programs
+kill -9 or kill -SIGKILL
+kill -l will show all the signals your computer supports.
+=============
+head = first 10 lines
+head -n 3 ~/.bash_history = only first 3 lines
+tail ~/.bash_history
+tail -n 3 ~/.bash_history = only last 3 lines
+tail -f ~/.bash_history
+tail = last 10 lines
+tail -f ~/.bash_history = keep watching a file in real time as things get added to it
+>> = pins new text to the end of a file
+<!-- +++++++++===========+++++++++++
+    connect two shells to watch update in real time 
+    +++++++++===========+++++++++++
+    multipass shell primary
+    echo hi michael >> williams.txt 
+    +++++++++===========+++++++++++ -->
+<!-- CTRL+C = QUIT -->
+
+=====nana===========
+nano Michael.txt
+ctrl + o = save
+ctrl + x = exit
+===============
+
+=====vim==========
+ed ed.txt
+ex mix.txt
+vim mmm.txt = to create a txt file in vim
+i = write
+esc = command mode
+:w = save
+:help tutor = vim tutor ======
+:wq = save and quit
+<!-- :q = quit -->
+:q! = quit
+<!-- :qa! = quitNOW -->
+================
+=====vi=======
+:wq! = quit NOW
+=================
+
+Ubuntu
+
+-zsh
+
+yes > /dev/null &
+ps aux | grep yes
+kill -9 ####
+kill -SIGKILL ####
+
+kill -l = for list of flags for kill
+
+==========================
+
+Interacting with Files
+
+++++++++++++++++++++++++++
+=========less==========
+less Michael.txt = allows you to read a File
+<!-- /Mic = to search  -->
+q = quit
+===============================
+
+
+======man=============
+man = manual for a program
+man echo
+man less
+q = quit
+==============================
+cat = concatanate files to standard out
+cat michael.txt = prints raw text quick like less
+
+===============
+
+mkdir MJW = create a new director or folder
+-p = make multiple nested folders
+mkdir -p hi/my/name/is/michael
+mkdir --help
+=============================
+======touch======= CREATE+++CREATE======
+touch you-are-so-cool.txt = create a new text File
+touch a.txt b.txt c.txt d.txt e.txt f.txt
+touch you-are-so-cool.txt = update the modifyTIME
+touch goodyear{2003,2007,2009,2013,2015,2017,2020,2024}.txt
+
+=============================
+=====+++++++++++======
+<!-- ITEMS ARE GONE FOREVER after rm command  -->
+rm = remove
+rm you-are-so-cool.txt = delete file
+-r = recursive delete
+rm -r my-folder = delete folder
+<!-- -f = force  -->
+rm -rf my-folder = delete folder
+
+<!-- NO * NO NO  -->
+
+<!-- package call trash to save delete files up to 30 days  -->
+===========================
+
+====================
+cp = copy
+cp williams.txt williams1983.txt
+=================
+
+<!-- mv = move + rename the file or folder by moving it to a new file or folder with that new name -->
+mv MJW MJW2024 = rename the files
+
+
+==========================
+
+tar = compressing files and folders for speed and memory
+tar -cf computer.tar folder1983 junior.txt = archive
+tar -zcf computer.tar.gz folder1983 junior.txt = GZIP
+mkdir extracted
+mv computer.tar.gz extracted
+cd extracted
+<!-- tar -xzf computer.tar.gz folder1983 = extract items into extracted folder from computer.tar.gz zip folder -->
+touch goodyear{2003,2007,2009,2013,2015,2017,2020,2024}.txt = EXPANSION
+
+<!-- ====NOTE , CAN BE ADDED TO LEAVE BLANK====== -->
+
+===================================
+ls goodyear-* = wild card search
+ls file*.txt = only ONE SHOWED UP file.txt
+ls file* = all files that start with file
+ls file? = with one character after file
+ls file?? = with two character after file
+<!-- mkdir folder41
+    cd folder41
+    touch gyear{1983..2024} = wow this is beautiful -->
+=======================================
+touch gchar{a..z}
+rm gchar{a..z}
+touch gchar={a..z}
+<!-- touch Michael\*Williams.txt = ADD * to file name -->
+============================
+<!-- echo {a..z}
+    a b c d e f g h i j k l m n o p q r s t u v w x y z
+    echo {1983..2024}
+    1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005
+    2006
+    2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 -->
+==================================
+<!-- echo {a..z..2}
+    a c e g i k m o q s u w y
+    echo {0..20..2}
+    0 2 4 6 8 10 12 14 16 18 20
+    echo {0..20..5}
+    0 5 10 15 20 -->
+echo {A..Z}{1..2}
+==================================
+<!-- echo {A..Z..10}
+    A K U
+    echo {a..Z..10}
+    a
+    echo {A..z..10}
+    A K U _ i s -->
+echo {A..Z}{01..02}{1..2}
+========================================
++++++++++++++++++++++++++++++++++++++++++
+==========output streams========
+<!-- stdout = 1> 
+    stderr = 2> -->
+++++++++++++++++++++++++++++++++++
+mkdir streams
+cd streams/
+<!-- echo 'this is my text for output' 1> new-file.txt = replace files with new text -->
+cat new-file.txt
+cat new-file.txt 1> another-file.txt = replace text
+<!-- cat new-file.txt 1>> another-file.txt = add more text to file. -->
+ls -lash 1> savedfile.txt
+cat savedfile.txt
+ls 1> ls.txt
+cat ls.txt
+-----------------------------------
+==========output streams========
+====================================
+cat no-such-file.txt 2> error.txt
+cat error.txt
+ls -lash 1> ls01.txt 2> lserr.txt
+ls -lash > ls100.txt = both output and error to same place
+cat ls100.txt
+ls -lash >> ls100.txt = append text
+ls -lash 2> /dev/null = output to null
+ls -lash 1> /dev/null = error to null
+<!-- cat some-file.txt 1> /dev/null = show output error
+    cat some-file.txt 2> /dev/null = error gone forever -->
+==========output streams========
+============================================
+
+====================================
+====================================
+
+==========input streams========
+====================================
+grep = find or search for an item in list
+<!-- cat < williams1983.txt=files input into cat 
+    cat williams1983.txt=cat reading text file  -->
+grep 'cool' < williams1983.txt=to find cool in doc grep 'error.txt' < ls01.txt 1> grep.txt 2> /dev/null
+    cat grep.txt
+
+    ps aux = output all the current running processes
+    <!-- ps aux | grep 'ps aux' = find  -->
+    & = keep running in background.
+    yes > /dev/null & = keep running yes in background.
+    ps aux | grep 'yes'
+    kill -9 #### to kill yes
+    ============================
+    ======pipe==============
+    =========================
+    no | rm -i file*
+    yes n | rm -i hi*
+    yes n | rm -i hi*
+    ==============================
+    whoami = what program am i currently in
+    <!-- cat /etc/passwd = all the users on the computer at t particular time. -->
+    superuser = root user
+    whoami = ubuntu
+    sudo whoami = root = from root dir
+    <!-- su = switch user
+        sudo su = will make u root user  -->
+    exit = exit from root user account
+    sudo = usually ask for password
+    ubuntu is a password less environment
+    ++++++++++++++++++++++++++
+    sudo useradd Michael
+    sudo passwd Michael
+    sudo su
+    -aG = --append --groups
+    sudo usermod -aG sudo Michael
+    su Michael
+    sudo whoami
+
+
+    ===============
+    -rw-rw-r-- = normal files
+    drwxr-x--- = directory files
+    ======================
+    <!-- rwx = read + write + excecute
+        first rwx = user
+        second rwx = grounp
+        thrid rwx = all others -->
+    ============================
+    . = current directory
+    ================
+
+    sudo mkdir hello
+    touch hello.txt
+    ls -lash
+    <!-- ubuntu@primary:/hello$ sudo chown ubuntu:ubuntu /hello -->
+    =======================
+    ++++ADD++NEW++USER++++++
+    sudo echo hi
+    sudo useradd value
+    sudo passwd value
+    su value
+    whoami = value
+    ls
+    pwd = /
+    +++++++++++++++++++++++
+    cat /etc/issue = Ubuntu 24.04.1 LTS \n \l
+    ==============================================
+    <!-- $ sudo echo hi
+[sudo] password for value: 100
+reply from computer = value is not in the sudoers file.
+$ -->
+    ================================
+    exit = exit current session
+    ====================================
+    ==========GROUPS================
+    //from admin account:
+    <!-- sudo usermod --append --groups sudo value  -->
+    //to give regualar user admin rights
+    su value
+    enter value Password: 100
+    $ whoami
+    value
+    sudo whoami
+    [sudo] password for value: 100
+    <!-- output from system : root     -->
+
+    ===========================
+
+    exit
+    su value
+    value Password: 100
+    whoami
+    computer output = value
+    ls = ok ====signed in as user value
+    =====================
+    sudo ls -ld /home/ubuntu = to check if a folder exist
+    =============================
+    Understanding 755 Permissions:
+    The 755 permission setting is broken down as follows:
+
+    <!-- Owner (User): Read, write, and execute permissions (7).
+Group: Read and execute permissions (5).
+Others: Read and execute permissions (5).
+Detailed Breakdown:
+Owner (User): 7 (Read r, Write w, Execute x)
+The owner of the directory can read, write, and execute (access) the directory.
+Group: 5 (Read r, Execute x)
+Members of the group can read and execute (access) the directory, but cannot write to it.
+Others: 5 (Read r, Execute x)
+All other users can read and execute (access) the directory, but cannot write to it. -->
+    =======================
+
+    //after becoming an admin still was unable to get into ubuntu folder + copilot helped me out
+
+    =============================
+
+    sudo chmod 755 /home/ubuntu
+
+    cd /home/ubuntu
+
+    ===============================
+
+    ls = working fine at this point = oooookkkkk
+    ================================
+    <!-- 00 vm lover.txt as value = readonly ====ggggrrrrrr -->
+    ============================================
+    ||||||||||||||||||||||||||||||||||||||||||||
+    ls -lash /bin/ = to show all the programs in bin directory
+    ||||||||||||||||||||||||||||||||||||||||||||
+    ============================================
+    touch lover.txt = as value = permission defined
+    ========================
+    sudo touch lover.txt = 0 -rw-r--r-- 1 root root
+    <!-- exit = exit out of a profile -->
+    ++++++++++++++++++++++
+    <!-- sudo chmod u=rw,g=rw,o=rw hello40.txt 
+        //to chage the PERMISSION on a file// -->
+    ++++++++++++++++++++++++++++++++++++++++
+
+    whoami
+    value
+    touch value.txt = Permission denied
+    <!-- //unable to touch a file but able to vi file into exsistance // -->
+    vi hello40.txt
+    :qw! from vi = to exit program
+    ls
+    exit
+    user = ubuntu
+    <!-- cat hello40.txt
+        Hello this was written by Michael Junior Williams = value notes from vi that he was able to save -->
+    ====================================
+    sudo chmod u=rwx,g=rwx,o=rwx /hello40
+    sudo chmod 777 file.txt
+    //to change permission on a folder//
+    ======================================
+    ls -lash
+    su value
+    password : value password = ok
+    cd hello40
+    touch wowIloveThis.txt = works fine = file exist in hello40 folder
+    =====================================
+    +++++++++++++++++++++++++++++++++++
+    ===============Permissions shortcuts============
+    <!-- sudo chmod 777 file.txt
+                r=4,w=2,x=1 -->
+    ls -lash
+    whoami
+    value
+    touch file.txt
+    ls -lash
+    sudo chmod 777 file.txt = -rwxrwxrwx
+    sudo chmod 700 file.txt = -rwx------
+    chmod 600 file.txt = -rw-------
+    sudo chmod 640 file.txt = -rw-r-----
+    sudo chmod 664 michael.txt = -rw-rw-r--
+    =====================================
+    touch mjw-new-program = -rw-rw-r--
+    <!-- sudo chmod +x mjw-new-program = -rwxrwxr-x -->
+    sudo chmod -x mjw-new-program = -rw-rw-r-- 1 ubuntu ubuntu
+    <!-- sudo chmod +w mjw-new-program = -rw-rw-r-- -->
+    ==========================================
+    cat /etc/passwd
+    ++++++++++++++++++++++++++++++++++++++
+    ========================================
+    =============Environments=============
+    <!-- printenv --> = //$//
+    echo $USER = ubuntu
+    echo $HOME = /home/ubuntu
+    <!-- echo Hello the user im currently logged in as is $USER =
+Hello the user im currently logged in as is ubuntu -->
+    cho Hello this user lives at $HOME =
+    Hello this user lives at /home/ubuntu
+    //$USER = bash is doing the work with the command is run not echo//
+    <!-- USER=Michael  -->
+    echo Hello the user im currently logged in as is $USER = Hello the user im currently logged in as is
+    Michael
+    USER=Ubuntu
+    echo Hello the user im currently logged in as is $USER
+    Hello the user im currently logged in as is Ubuntu
+    echo $GREETING $USER , how are you?
+    Ubuntu , how are you?
+    GREETING='Hello'
+    echo $GREETING $USER , how are you?
+    Hello Ubuntu , how are you?
+    GREETING='Greetings'
+    echo $GREETING $USER , how are you?
+    Greetings Ubuntu , how are you?
+    ========================================
+    <!-- ////// making a permanet VARIABLE /////// -->
+    sudo vi /etc/environment
+    <!-- Test_Linux='wow this is so cool learing cool stuff' //made variable and saved it in VI -->
+    echo $Test_Linux = BLANK FOR NOW
+    ===================
+    exit = logout Ubuntu out of current session in shell
+    <!-- logout
+        girlmeetguy@Michaels-MacBook-Air-2 ~ % -->
+    =====open Shell again ===log in as Ubuntu======
+    echo $Test_Linux
+    wow this is so cool learing cool stuff' = WORKS
+    <!-- //VARIABLE CREATED AND SAVED////// -->
+    su value
+    echo $Test_Linux
+    wow this is so cool learing cool stuff' = works on another profile as well because the environment is
+    shared by
+    all users.
+    ===============================
+    +++++++++++++++++++++++++++++++++++++++++++
+    +++++++++++++++SYSTEM UPGRADE+++++++++++++++++++
+    <!-- Update Package List: = sudo apt update
+List Upgradable Packages: = apt list --upgradable
+Upgrade Packages: = sudo apt upgrade
+Full Upgrade: = sudo apt full-upgrade
+Clean Up: = sudo apt autoremove = sudo apt clean
+Install ubuntu-advantage-tools: = sudo apt install ubuntu-advantage-tools
+Attach to Ubuntu Advantage: sudo ua attach <your-token>
+    Enable ESM for Applications: sudo ua enable esm-apps
+    By following these steps, you can upgrade your system and enable Expanded Security Maintenance for applications -->
+    ++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++
+    ========Variables===============
+    export = export to general environment
+    +++++++++++++++++++++++++++++++++++++++++++
+    export Test_Linux="BLANK FOR NOW"
+    echo $Test_Linux = BLANK FOR NOW
+    su value
+    echo $Test_Linux = wow this is so cool learing cool stuff' = //from last inputed value
+    ===============================
+    whoami
+    ubuntu
+    <!-- vi ~/.bashrc -->
+    export Test_Linux2='wow this is cool 2' = added in .bashrc = save and quit
+    echo $Test_Linux2 = BLANK FOR NOW
+    ++++++++++++++++++++++++++++++++++++
+    ==================================
+    source = rerun script = rerun without exit
+    exit
+    echo $Test_Linux2
+    wow this is cool 2
+    =========================
+    <!-- .bashrc = is where u can change prompts ,setup colors, input scrips to use + and variables just for your user + ect  -->
+    =================================
+    ++++++++++++++++++++++++++++
+    .bash_profile //runs once a day or once when u open the shell interactively//
+    <!-- vi .bash_profile
+        if [ -f ~/.bashrc ]; then
+        source ~/.bashrc
+        fi
+        save and quit vi;
+        ==================================
+        //this will ensure .bashrc runs everytime in every session /// -->
+    //every user has their own .bashrc
+    ==================================
+    la -lash = 4.0K -rw-r--r-- 1 ubuntu ubuntu 3.9K Dec 14 17:00 .bashrc
+    ===================================================
+    sudo vi /etc/bashrc = BASH RC FOR EVERYBODY
+    ////////////////////////////////////////////////
+    =========================================
+    ++++++++++++++++++++++++++++++++++++++++
+    =================Processes================
+    ps aux = ALL RUNNING PROCESSES ON THE COMPUTER
+    ===============================================
+    ps = will show you only what the user is running
+    <!-- ps = PID TTY TIME CMD
+24209 pts/0 00:00:00 bash
+24277 pts/0 00:00:00 ps -->
+    ===================================
+    =====Commands====
+    sleep = wait for a certin time then return
+    sleep 1 = wait =ONE SEC= then return
+    sleep 5 = wait =FIVE SEC= then return
+    =============================
+    <!-- & = run in the background -->
+    ===============================
+    <!-- PID = Process ID -->
+    =========================
+    sleep 17 & = PID TTY TIME CMD
+    24209 pts/0 00:00:00 bash
+    24287 pts/0 00:00:00 sleep
+    24288 pts/0 00:00:00 ps
+    =====================================
+    ps = PID TTY TIME CMD
+    24209 pts/0 00:00:00 bash
+    24289 pts/0 00:00:00 ps
+    [1]+ Done sleep 17
+    ==========================
+    sleep 100 & = [1] 24290
+    ps = PID TTY TIME CMD
+    24209 pts/0 00:00:00 bash
+    24290 pts/0 00:00:00 sleep
+    24291 pts/0 00:00:00 ps
+    ==========================
+    kill -SIGKILL 24290
+    ps = PID TTY TIME CMD
+    24209 pts/0 00:00:00 bash
+    24295 pts/0 00:00:00 ps
+    [1]+ Killed sleep 100
+    =============================
+    aux = what everyone is running
+    ps aux
+    <!-- ps aux | less = piped into less = nice scool table  -->
+    ps aux | grep "ps" = to find just what you are looking for
+    =======================================
+
+    ++++++++++++++++++++++++++++++++++++++++++++
+    ======BACKGROUND & FOREGROUND============
+    sleep 1000 = started sleep 1000 SECONDS PROGRAM
+    ^Z = [1]+ Stopped
+    jobs = [1]+ Stopped
+    bg 1 = [1]+ sleep 1000 &
+    jobs = [1]+ Running sleep 1000 &
+    =================================
+    ls // ok system running fine
+    ===============================
+    fg 1 = sleep 1000
+    ^Z = [1]+ Stopped sleep 1000
+    jobs 1 = [1]+ Stopped sleep 1000
+    bg 1 = [1]+ sleep 1000 & ///sleep running the the background.
+    jobs = [1]+ Running sleep 1000 &
+    ===================================
+    jobs -l = [1]+ 24313 Running sleep 1000 &
+    kill -9 24313
+    jobs = [1]+ Killed sleep 1000
+    =====================================
+    <!-- sleep 1000 > sleep1000.txt & = send output to a file instead of displaying it on the screen. -->
+    jobs = [1]+ Running sleep 1000 > sleep1000.txt &
+    ===========================================
+    +++++++++++++++++++++++++++++++++++++++++++++++
+    <!-- =======Exit Codes & Process Operators & sub Commands ========== -->
+    ===================================
+    //when program finishes it returns and exit code on how the process finised//
+    =================================
+    date = current date
+    date = Sat Dec 14 18:30:43 EST 2024
+    ========================
+    0 = SUCCESSFUL
+    1 = "there was an error"
+    2 = bash internal error not program
+    anything that returns with 0 was successful
+    126 = no permission or not executable file
+    127 = command not found
+    128 = bad exit command by user e.g non-int code
+    130 = ended with ^C
+    137 = program ended with -SIGKILL
+    255 = OUT OF BOUNDS CODE LARGER THAN 255
+    =========================
+    <!-- echo $? = 0 -->
+    yes = yes program starts running forever
+    ^C = killed the current running process
+    echo $? = 148 = for yes = not zero = unsuccessful
+    ====================
+    +++++++++++++++++++
+    ======OPERATORS===========
+    <!-- >> = append into  -->
+    $$ = ALL MUST BE TRUE
+    <!-- ====&& everything has to be true for all programs to run successfully====== -->
+    || = RUN ONLY IF THE PROGRAM THAT JUST FINISHED WAS UNSUCCESSFUL
+    ===============================
+
+    touch status.txt && date >> status.txt && uptime >> status.txt
+    ls -lash = status.txt exsist
+    cat status.txt = Sat Dec 14 18:45:59 EST 2024
+    18:45:59 up 1 day, 4:53, 4 users, load average: 0.00, 0.00, 0.00
+    ==========================
+    uptime = 18:47:40 up 1 day, 4:54, 4 users, load average: 0.02, 0.01, 0.00
+    ====================================
+    <!-- false = false program = returns 0
+false
+echo $? = 1 -->
+    ///////cat $? = cat: 0: No such file or directory/////
+    ++++++++++++++++++++++++++++++++++++
+    true = true program = returns 1
+    true
+    echo $? = 0
+    ====================================
+    false && echo hi = nothing = only return 1 in bg
+    <!-- true && echo hi = hi -->
+    ++++++++++++++++++++++++++++++++++
+    false || echo hey your suppose to be false = hey your suppose to be false
+    true || echo hey i wanted to say something = echo = BLANK
+    ==============================
+    true ; false ; echo hey i wanted to run this dont matter what = hey i wanted to run this dont matter
+    what
+    =====================================
+    ===========Subcommands=========
+    $() = will run return output info to higher running process that called it
+    <!-- echo hey im on this computer logged in as user $(whoami) and this user is wonderful = hey im on this computer logged in as user ubuntu and this user is wonderful -->
+    echo the current date and time and year is $(date) = the current date and time and year is Sat Dec 14
+    19:05:29
+    EST 2024
+    ===================================
+    echo $(date +%x) - $(uptime) >> mjwlog.txt
+    cat mjwlog.txt = 12/14/24 - 19:09:05 up 1 day, 5:16, 4 users, load average: 0.00, 0.00, 0.00
+    =============================
+    echo hi this data is from the mjwlog file here is the data $(cat mjwlog.txt) this data is good because
+    we have
+    the time
+    the work was done = hi this data is from the mjwlog file here is the data 12/14/24 - 19:09:05 up 1 day,
+    5:16, 4
+    users, load average: 0.00,
+    0.00, 0.00 this data is good because we have the time the work was done
+    ===========================================
+    <!-- echo hi `whoami` how are you today? = hi ubuntu how are you today? -->
+    $() = much better and you can nest them as well
+    ===================================
+    +++++++++++++++++++++++++++++++++
+    <!-- =========SSH & Secondary Machine========== -->
+    SSH = Secure Shell and allows you to connect
+    from one computer to another computer. also allows you to remotely execute commands on a different
+    computer.
+    ===========================================
+    +++++++++++++++++++++++++++++++++++++++
+    =======starting a second VM using multipass=========
+    <!-- multipass launch --name secondary = Launched: secondary -->
+    multipass shell secondary
+    ==============================
+    ubuntu@secondary:~$ = Secondary Ubuntu VM
+    ==================================
+    ++++++CREATE A USER++++++
+    sudo useradd -s /bin/bash -m -g ubuntu value2
+    -s = default shell when creating a user
+    -m = auto create the user a home folder
+    -g - give user group so they have the same permissions as other members in the group.
+    ===========================================
+    cat /etc/passwd = value2:x:1001:1000::/home/value2:/bin/bash
+    sudo passwd value2 = New password: = 200
+    passwd: password updated successfully
+    ================================
+    whoami
+    ubuntu
+    su value2
+    Password: = 200
+    value2@secondary:/home/ubuntu$
+    =================================
+    cd .. = value2@secondary:/home$
+    ls = ubuntu value2
+    ======================
+    SSH key = is like cryptographic key that basically creates a private version and a public version of
+    itself =
+    the PRIVATE VERSION YOU NEVER REVEAL TO ANYONE and the public version you share with others.
+    ++Public and private version of the key allows services to do a handshake with eachother but they never
+    have to
+    reveal their private keys BUT THEY CAN VERIFY THAT THE OTHER PARTY HAS THE PRIVATE KEY THAT THEY SAY
+    THEY HAVE.
+    ===================================
+    =========Generating an SSH KEY==============
+    <!-- ssh-keygen -t rsa = Generating public/private rsa key pair. -->
+    Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa): = Enter or change directory
+    Enter passphrase (empty for no passphrase): = enter password to use key everytime key is accessed =
+    leaving
+    blank for now
+    Enter same passphrase again: = BLANK FOR NOW
+
+    The key fingerprint is:
+    SHA256:63QObTraBKmhvBrmOBNemdab3VomBoCE046ZvMhFp8E ubuntu@primary
+    The key's randomart image is:
+    +---[RSA 3072]----+
+    |.o. |
+    |+ oE . |
+    |.B..+ |
+    |+..o. . |
+    |o o =.o S |
+    |o+ * +.. o |
+    |oo= . +o*o+ |
+    |*o . o.*=B |
+    |o=. .o=.. |
+    +----[SHA256]-----+
+
+
+    ============================================
+    cd .ssh
+    ls = authorized_keys id_rsa id_rsa.pub
+    id_rsa = private key = secret
+    id_rsa.pub = public key
+    ==================================
+    value2@secondary:/home$ cd value2 = change to value2 home directry
+    mkdir ~/.ssh
+    ls -lash = 4.0K drwxr-xr-x 2 value2 ubuntu 4.0K Dec 14 20:24 .ssh
+    ===========================
+    cd .ssh
+    ================
+    ls -lash = total 8.0K
+    4.0K drwxr-xr-x 2 value2 ubuntu 4.0K Dec 14 20:24 .
+    4.0K drwxr-x--- 3 value2 ubuntu 4.0K Dec 14 20:24 ..
+    =======================================
+    ====As value2 from /.ssh folder===
+    vi authorized_keys = "authorized_keys" [New] 0,0-1 All
+    ======READY TO EDIT INTO VI=====
+    +++++switched to primary shell to get pub key info+++++
+    from value2 /.ssh folder
+    cat id_rsa.pub =
+    <!-- ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAABgQDOLqrza9GtaU7oDn/mf94mZjOCHUJF01As+4q209f1PbzVNW+T1o9Ra5Gbz0IlaEdWnFMqI13XUcYV/Of5shxUsj0iKXe0XP+326BKmKi8dN+serBvKrbJ4uq0qoR9GLcNnjJybEpFzkSKA4T9/CUrrpy4MBk73kqaz7cg161Xd6uPkHGH5UwMg7i8pVns0JnnfygtMZNsU0ctnuEJ0vHkZPf9qp1fr4qtns3knIVw+6mEEMOpOKXZWJxzflWssCUP0dEjo7/nzenmd/s0MDAERX44ICfkBP8isQ3oTVp+VFy3oO4Fo7p7D3DShGQll19Z29RvIK+blJ4ZWA7x6RedO3SZAOE0Fn+n4tybCzxwTiK1/4cFPqsyHOmXKkqa6B26iZ+kkXFAXM27bebfNsycAV4sAH+IDZOp7Kwh3NxlN2ZMtcJjYQLLQgTmtcw1w2r+6jimLay0odJ3k8C4Ojohqc0ue7BuohPk+J27bqKi0lOA89j7Oi7ELBRuxGaVMj8=
+ubuntu@primary -->
+    ===========================================
+    ==Here is a public SSK KEY that if someone can verify that this is their key tht they have with they own
+    private
+    key allow them to log into this computer so its basically like a user name and password for a user.
+    ==================================
+    +++PASTE the public ssh KEY info INTO VI on secondary computer then :wq
+    =======================================
+    ls -lash = 4.0K -rw-r--r-- 1 value2 ubuntu 568 Dec 14 20:44 authorized_keys
+    ==================================
+    value2@secondary:~/.ssh$ chmod 700 ~/.ssh
+    <!-- cd .. -->
+    ls -lash = 4.0K drwx------ 2 value2 ubuntu 4.0K Dec 14 20:44 .ssh
+    ===================================
+    value2@secondary:~/.ssh$ ls -lash = 4.0K -rw-r--r-- 1 value2 ubuntu 568 Dec 14 20:44 authorized_keys
+    =================================
+    <!-- cd .. -->
+    value2@secondary:~$ chmod 600 ~/.ssh/authorized_keys
+    ===========================
+    <!-- cd .ssh -->
+    ls -lash = 4.0K -rw------- 1 value2 ubuntu 568 Dec 14 20:44 authorized_keys
+    ========================================
+    +++++++++++++++++++++++++
+    ==we now need to get an ip address from the secondary computer so the primary computer can connect to it
+    ++++++++++++++++++
+    ================
+    groups = list the sudo privileges for the current user. //USER
+    sudo -l = list the sudo privileges for the current user. //USER
+    ======================================
+    <!-- ==seems value2 didnt have sudo right to install the net-tools which is needed to run ifconfig program.
+==will have to make value2 a sudo member using Ubuntu on secondary computer. -->
+    ==================================================
+    ubuntu@secondary:~$ cat /etc/passwd =
+    ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
+    value2:x:1001:1000::/home/value2:/bin/bash
+    =============================
+    ubuntu@secondary:~$ sudo usermod -aG sudo value2
+    su value2 = Password:
+    To run a command as administrator (user "root"), use "sudo <command>".
+        See "man sudo_root" for details.
+        ==========================================
+        value2@secondary:~$ ifconfig = Command 'ifconfig' not found, but can be installed with:
+        sudo apt install net-tools
+        value2@secondary:~$
+
+        ===========================
+        ++++++++++++++++++++++++++++++++
+        <!-- value2@secondary:~$ sudo apt update =
+            value2@secondary:~$ sudo apt update
+            [sudo] password for value2:
+            Hit:1 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+            Get:2 http://ports.ubuntu.com/ubuntu-ports noble-updates InRelease [126 kB]
+            Hit:3 http://ports.ubuntu.com/ubuntu-ports noble-backports InRelease
+            Get:4 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease [126 kB]
+            Get:5 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 Packages [715 kB]
+            Get:6 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 Packages [905 kB]
+            Fetched 1872 kB in 2s (1113 kB/s)
+            Reading package lists... Done
+            Building dependency tree... Done
+            Reading state information... Done
+            37 packages can be upgraded. Run 'apt list --upgradable' to see them.
+            ===================================
+value2@secondary:~$ sudo apt install net-tools
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+net-tools
+0 upgraded, 1 newly installed, 0 to remove and 37 not upgraded.
+Need to get 207 kB of archives.
+After this operation, 1229 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 net-tools arm64 2.10-0.1ubuntu4 [207 kB]
+Fetched 207 kB in 1s (296 kB/s)
+Selecting previously unselected package net-tools.
+(Reading database ... 77391 files and directories currently installed.)
+Preparing to unpack .../net-tools_2.10-0.1ubuntu4_arm64.deb ...
+Unpacking net-tools (2.10-0.1ubuntu4) ...
+Setting up net-tools (2.10-0.1ubuntu4) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+value2@secondary:~$
+=============================================== -->
+        value2@secondary:~$ ifconfig
+        enp0s1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST> mtu 1500
+            inet 192.168.64.14 netmask 255.255.255.0 broadcast 192.168.64.255
+            inet6 fe80::5054:ff:fe6a:9c28 prefixlen 64 scopeid 0x20
+            <link>
+            inet6 fd64:958e:edfe:5eeb:5054:ff:fe6a:9c28 prefixlen 64 scopeid 0x0<global>
+                ether 52:54:00:6a:9c:28 txqueuelen 1000 (Ethernet)
+                RX packets 30636 bytes 37330846 (37.3 MB)
+                RX errors 0 dropped 0 overruns 0 frame 0
+                TX packets 9443 bytes 908825 (908.8 KB)
+                TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+
+                lo: flags=73<UP,LOOPBACK,RUNNING> mtu 65536
+                    inet 127.0.0.1 netmask 255.0.0.0
+                    inet6 ::1 prefixlen 128 scopeid 0x10<host>
+                        loop txqueuelen 1000 (Local Loopback)
+                        RX packets 156 bytes 14258 (14.2 KB)
+                        RX errors 0 dropped 0 overruns 0 frame 0
+                        TX packets 156 bytes 14258 (14.2 KB)
+                        TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+                        ============================
+                        <!-- # Switch to a user with sudo privileges
+                            su value2
+
+                            # Update the package list
+                            sudo apt update
+
+                            # Install net-tools
+                            sudo apt install net-tools
+
+                            # Run ifconfig
+                            ifconfig -->
+                        =================================
+                        ifconfig
+                        inet 192.168.64.14 = secondary computer ip-address on current
+                        network
+                        ==========
+                        netmask 255.255.255.0 = means 192.168.64 of the ip address is
+                        loced in and shouldnt change.
+                        ============
+                        broadcast 192.168.64.255 = 192.168.64 locked in for this
+                        computer on this network.
+                        ===================
+                        +++++++++++++++++++++++++++
+                        ====CONNECTING TO SECONDARY COMPUTER=====
+                        ===USING SSH AGENT=========
+                        ++++Linking two Machines with SSH++++
+                        <!-- ==FROM primary computer  -->
+                        ubuntu@primary:~/.ssh$ cd ~
+                        <!-- ssh value2@192.168.64.14 --> = Are you sure you want to
+                        continue connecting
+                        (yes/no/[fingerprint])? yes
+
+                        =================
+                        Warning: Permanently added '192.168.64.14' (ED25519) to the list
+                        of known hosts.
+                        Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 6.8.0-49-generic
+                        aarch64)
+
+                        * Documentation: https://help.ubuntu.com
+                        * Management: https://landscape.canonical.com
+                        * Support: https://ubuntu.com/pro
+
+                        System information as of Sat Dec 14 21:45:19 EST 2024
+
+                        System load: 0.0
+                        Usage of /: 49.4% of 3.80GB
+                        Memory usage: 20%
+                        Swap usage: 0%
+                        Processes: 101
+                        Users logged in: 1
+                        IPv4 address for enp0s1: 192.168.64.14
+                        IPv6 address for enp0s1: fd64:958e:edfe:5eeb:5054:ff:fe6a:9c28
+
+
+                        Expanded Security Maintenance for Applications is not enabled.
+
+                        42 updates can be applied immediately.
+                        25 of these updates are standard security updates.
+                        To see these additional updates run: apt list --upgradable
+
+                        Enable ESM Apps to receive additional future security updates.
+                        See https://ubuntu.com/esm or run: sudo pro status
+
+
+
+                        The programs included with the Ubuntu system are free software;
+                        the exact distribution terms for each program are described in
+                        the
+                        individual files in /usr/share/doc/*/copyright.
+
+                        Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent
+                        permitted by
+                        applicable law.
+                        ===============================
+                        +++++++++++++++++++++
+                        ===========================
+                        value2@secondary:~$ exit
+                        logout
+                        Connection to 192.168.64.14 closed.
+                        =========================
+                        ubuntu@primary:~$ ssh value2@192.168.64.14 = OK WAS ABLE TO LOG
+                        IN AGAIN = INFO FROM LOGIN =
+                        Last
+                        login: Sat Dec 14 21:45:19 2024 from
+                        192.168.64.10
+                        ========================
+                        ubuntu@secondary:~$ ls -lash = 4.0K drwx------ 2 ubuntu ubuntu
+                        4.0K Dec 14 19:49 .ssh
+                        cd .ssh
+                        ls -lash = 4.0K -rw------- 1 ubuntu ubuntu 398 Dec 14 19:49
+                        authorized_keys
+                        ubuntu@secondary:~/.ssh$ vi authorized_keys = :q
+                        ===========================
+                        ===================================
+                        ====SFTP========Secure File Transfer Protocol====
+                        <!-- ubuntu@primary:~$ sftp value2@192.168.64.14 = Connected to 192.168.64.14.
+                                                        sftp> -->
+                        sftp> pwd = Remote working directory: /home/value2
+                        sftp> lpwd = Local working directory: /home/ubuntu
+                        sftp> lls = local list of files on the primary users computer
+                        =================================
+                        <!-- sftp> put lover.txt = Uploading lover.txt to /home/value2/lover.txt
+                                                        lover.txt 100% 0 0.0KB/s 00:00 -->
+
+                        ! = ALLOWS YOU TO RUN COMMANDS ON THE SECONDARY COMPUTER.
+                        <!-- sftp> !echo "Hello this is michael two days before his birthday he is very happy" >> file-to-put.txt -->
+                        sftp> !cat file-to-put.txt = Hello this is michael two days
+                        before his birthday he is very happy
+                        ==============================================
+                        <!-- ===RENAME A FILE ON SECONDARY COMPUTER==== -->
+                        sftp> put file-to-put.txt new-put-file.txt = Uploading
+                        file-to-put.txt to /home/value2/new-put-file.txt
+                        file-to-put.txt 100% 68 47.9KB/s 00:00
+                        ==================================================
+                        ===From seconday=====
+                        value2@secondary:~$ ls -lash = 4.0K -rw-r--r-- 1 value2 ubuntu
+                        68 Dec 15 06:43 new-put-file.txt
+                        =============================
+                        <!-- help = help with everything you can do  -->
+                        ================
+                        sftp> pwd = Remote working directory: /home/value2
+                        sftp> lpwd = Local working directory: /home/ubuntu
+                        sftp> cd ..
+                        sftp> pwd = Remote working directory: /home
+                        sftp> lcd ..
+                        sftp> lpwd = Local working directory: /home
+                        sftp> lcd ~
+                        sftp> lpwd = Local working directory: /home/ubuntu
+                        sftp> cd value2
+                        sftp> pwd = Remote working directory: /home/value2
+                        =======================================
+                        <!-- ===getting files from the secondary computer==== -->
+                        get hiiwashere.txt hihiiwashere.txt = Fetching
+                        /home/value2/hiiwashere.txt to hihiiwashere.txt
+                        ============================
+                        <!-- sftp> bye = to exit sftp  -->
+                        =====================================
+                        +++++++++++++++++++++++++++
+                        <!-- ========Wget===and cURL========
+                                                
+                                                        +are two ways of getting a remote file. -->
+                        =====================================
+                        Wget = downloading a file from the internet or it could also be
+                        from a network.
+                        =====================
+                        <!-- wget https://raw.githubusercontent.com/btholt/bash2048/master/bash2048.sh = to download GAME FILE  -->
+                        = --2024-12-15 07:11:24--
+                        https://raw.githubusercontent.com/btholt/bash2048/master/bash2048.sh
+                        Resolving raw.githubusercontent.com
+                        (raw.githubusercontent.com)... 185.199.111.133, 185.199.110.133,
+                        185.199.108.133,
+                        ...
+                        Connecting to raw.githubusercontent.com
+                        (raw.githubusercontent.com)|185.199.111.133|:443... connected.
+                        HTTP request sent, awaiting response... 200 OK
+                        Length: 9514 (9.3K) [text/plain]
+                        Saving to: ‘bash2048.sh’
+
+                        bash2048.sh 100%[===================>] 9.29K --.-KB/s in 0.001s
+
+                        2024-12-15 07:11:24 (10.5 MB/s) - ‘bash2048.sh’ saved
+                        [9514/9514]
+                        ===========================
+                        <!-- ubuntu@primary:~$ ls -lash = 12K -rw-rw-r-- 1 ubuntu ubuntu 9.3K Dec 15 07:11 bash2048.sh  -->
+                        ==========================
+                        the file is not excecutable we could just pipe in into bash e.g
+                        = bash bash2048.sh = or we can change the permissions to add
+                        excecutable to the file.
+                        ==========================
+
+                        chmod +x bash2048.sh = ADD EXCECUTABLE OPTION TO FILE
+                        ubuntu@primary:~$ ls -lash = 12K -rwxrwxr-x 1 ubuntu ubuntu 9.3K
+                        Dec 15 07:11 bash2048.sh
+                        ====================================
+                        ====EXCECUTE OR RUN A FILE LIKE THIS===
+                        <!-- . bash2048.sh = TO RUN FILE  -->
+                        ^C = save game info
+                        =========================
+                        Wget = is like copy or like cp = only thing is you cant pipe =
+                        however Wget can do RECURSIVE DOWNLOADS and cURL CANNOT DO
+                        RECURSIVE DOWNLOAD. Wget can be used to download an entire
+                        website because it can download all the SUB URLs as well .
+                        info using Wget .
+
+                        ==============
+                        cURL = has standard in and standard out so it can pipe info or
+                        file into programs.
+                        ==============================
+
+                        <!-- wget --help = GNU Wget 1.21.4, a non-interactive network retriever.
+                      Usage: wget [OPTION]... [URL]... -->
+                        =========================
+                        cURL = has the ability to plug into the greater Unix, Linux
+                        ecosystem.
+                        ==========================
+                        ======cURL==========
+                        <!-- curl https://raw.githubusercontent.com/btholt/bash2048/master/bash2048.sh > game.sh --> = %
+                        Total % Received % Xferd Average Speed Time Time Time Current
+                        Dload Upload Total Spent Left Speed
+                        100 9514 100 9514 0 0 32743 0 --:--:-- --:--:-- --:--:-- 32806
+                        =========================
+                        <!-- ls -lash = 12K -rw-rw-r-- 1 ubuntu ubuntu 9.3K Dec 15 09:21 game.sh -->
+                        ============================
+                        cat game.sh = the contents of file. = #!/usr/bin/env bash
+                        ============================
+                        ++++++++++++++++++++++++
+                        ====Starting a server or creating a server to test API endpoints using python3=======
+                        <!-- +++started a new primary shell+++//FOR SERVER/// -->
+                        ==from second primary shell//
+                        =====================
+                        ubuntu@primary:~$ python3 -m http.server 8000 --bind 0.0.0.0 = Serving HTTP on 0.0.0.0 port 8000
+                        (http://0.0.0.0:8000/) ...
+                        ====================
+                        <!-- //this is a running python3 static web server// -->
+                        ==============
+                        ==SWITCH BACK TO primary #1==
+                        =======================
+                        ubuntu@primary:~$ ifconfig = inet 192.168.64.10
+                        ==============
+                        <!-- ++++++++++++++++
+                        ++OPEN WEB BROWSER======
+                        192.168.64.10:8000 = http://192.168.64.10:8000/ = SHOWS A SERVER WITH A LIST OF FILES
+                        ========================== -->
+                        =====================
+                        FROM Primary # 2 =server log
+                        192.168.64.1 - - [15/Dec/2024 09:41:01] "GET / HTTP/1.1" 200 -
+                        192.168.64.1 - - [15/Dec/2024 09:42:31] "GET /.bash_logout HTTP/1.1" 200 -
+                        192.168.64.1 - - [15/Dec/2024 09:42:38] "GET /MJW2024/ HTTP/1.1" 200 -
+                        192.168.64.1 - - [15/Dec/2024 09:42:43] "GET /sleep1000.txt HTTP/1.1" 200 -
+                        192.168.64.1 - - [15/Dec/2024 09:42:47] "GET /newlover.txt HTTP/1.1" 200 -
+                        192.168.64.1 - - [15/Dec/2024 09:42:51] "GET /mmm.txt HTTP/1.1" 200 -
+                        ==========================
+                        +++python is installed on every Ubuntu box++++
+                        ========================
+                        <!-- curl http://192.168.64.10:8000/ = <!DOCTYPE HTML> = contents of webpage -->
+                        ============
+                        ==from primary server===
+                        192.168.64.10 - - [15/Dec/2024 09:50:48] "GET / HTTP/1.1" 200 - ======/////log from
+                        connection///
+                        ===========================
+                        ///piping to a new file///
+                        <!-- curl http://192.168.64.10:8000/ > res.txt = % Total % Received % Xferd Average Speed Time Time Time Current
+                        Dload Upload Total Spent Left Speed
+                        100 2639 100 2639 0 0 376k 0 --:--:-- --:--:-- --:--:-- 429k -->
+                        ======================
+                        ls -lash = 4.0K -rw-rw-r-- 1 ubuntu ubuntu 2.6K Dec 15 09:55 res.txt
+                        =====================
+                        ++Primary server = 192.168.64.10 - - [15/Dec/2024 09:55:32] "GET / HTTP/1.1" 200 -
+                        ==========================
+                        //dont have to pipe it file is created automatically///
+                        <!-- curl -o res2.txt http://192.168.64.10:8000/ = % Total % Received % Xferd Average Speed Time Time Time Current
+                        Dload Upload Total Spent Left Speed
+                        100 2639 100 2639 0 0 328k 0 --:--:-- --:--:-- --:--:-- 368k -->
+                        //dont have to pipe it file is created automatically///
+                        =======================
+                        ========================
+                        ls -lash = 4.0K -rw-rw-r-- 1 ubuntu ubuntu 335 Dec 15 10:02 output.txt
+                        =====================
+                        ///KEEP THE SAME FILE NAME////
+                        curl -O http://192.168.64.10:8000/mmm.txt = % Total % Received % Xferd Average Speed Time Time
+                        Time Current
+                        Dload Upload Total Spent Left Speed
+                        100 237 100 237 0 0 71471 0 --:--:-- --:--:-- --:--:-- 79000
+
+                        ////KEEP THE SAME FILE NAME////
+                        =====================
+                        <!-- from server = 192.168.64.10 - - [15/Dec/2024 10:05:02] "GET /mmm.txt HTTP/1.1" 200 - -->
+                        ===================
+                        //TESTING API POSTING REQUEST///
+                        ++FROM Primary #1
+                        ubuntu@primary:~$ curl -X POST http://192.168.64.10:8000/ =
+                        <!DOCTYPE HTML>
+                        <html lang="en">
+
+                        <head>
+                            <meta charset="utf-8">
+                            <title>Error response</title>
+                        </head>
+
+                        <body>
+                            <h1>Error response</h1>
+                            <p>Error code: 501</p>
+                            <p>Message: Unsupported method ('POST').</p>
+                            <p>Error code explanation: 501 - Server does not support this operation.</p>
+                        </body>
+
+                        </html>
+
+                        =======================
+                        //from server
+                        192.168.64.10 - - [15/Dec/2024 10:15:50] code 501, message Unsupported method ('POST')
+                        =====
+                        192.168.64.10 - - [15/Dec/2024 10:15:50] "POST / HTTP/1.1" 501 -
+                        ===========================
+                        ubuntu@primary:~$ curl -d "this is the post body" http://192.168.64.10:8000/ =
+                        <!DOCTYPE HTML>
+                        <html lang="en">
+
+                        <head>
+                            <meta charset="utf-8">
+                            <title>Error response</title>
+                        </head>
+
+                        <body>
+                            <h1>Error response</h1>
+                            <p>Error code: 501</p>
+                            <p>Message: Unsupported method ('POST').</p>
+                            <p>Error code explanation: 501 - Server does not support this operation.</p>
+                        </body>
+
+                        </html>
+                        =====================
+                        //from server ==
+                        192.168.64.10 - - [15/Dec/2024 10:19:09] code 501, message Unsupported method ('POST')
+                        ====
+                        192.168.64.10 - - [15/Dec/2024 10:19:09] "POST / HTTP/1.1" 501 -
+                        ======================
+                        <!-- ubuntu@primary:~$ curl -X PUT -d "this is the post body" http://192.168.64.10:8000/ = <!DOCTYPE HTML>
+                        <html lang="en">
+                        
+                        <head>
+                            <meta charset="utf-8">
+                            <title>Error response</title>
+                        </head>
+                        
+                        <body>
+                            <h1>Error response</h1>
+                            <p>Error code: 501</p>
+                            <p>Message: Unsupported method ('PUT').</p>
+                            <p>Error code explanation: 501 - Server does not support this operation.</p>
+                        </body>
+                        
+                        </html> -->
+                        =================
+                        //server //
+                        192.168.64.10 - - [15/Dec/2024 10:21:20] code 501, message Unsupported method ('PUT')
+                        ====
+                        192.168.64.10 - - [15/Dec/2024 10:21:20] "PUT / HTTP/1.1" 501 -
+                        ===================
+                        ubuntu@primary:~$ curl -X DELETE http://192.168.64.10:8000/ =
+                        <!DOCTYPE HTML>
+                        <html lang="en">
+
+                        <head>
+                            <meta charset="utf-8">
+                            <title>Error response</title>
+                        </head>
+
+                        <body>
+                            <h1>Error response</h1>
+                            <p>Error code: 501</p>
+                            <p>Message: Unsupported method ('DELETE').</p>
+                            <p>Error code explanation: 501 - Server does not support this operation.</p>
+                        </body>
+
+                        </html>
+                        ====================
+                        //from server ==
+                        192.168.64.10 - - [15/Dec/2024 10:23:55] code 501, message Unsupported method ('DELETE')
+                        ==
+                        192.168.64.10 - - [15/Dec/2024 10:23:55] "DELETE / HTTP/1.1" 501 -
+                        ====================
+                        +++++++To send a cookie using cURL ++++++
+                        ubuntu@primary:~$ curl -b "name:Michael" -X PATCH http://192.168.64.10:8000/ =
+                        <!DOCTYPE HTML>
+                        <html lang="en">
+
+                        <head>
+                            <meta charset="utf-8">
+                            <title>Error response</title>
+                        </head>
+
+                        <body>
+                            <h1>Error response</h1>
+                            <p>Error code: 501</p>
+                            <p>Message: Unsupported method ('PATCH').</p>
+                            <p>Error code explanation: 501 - Server does not support this operation.</p>
+                        </body>
+
+                        </html>
+                        ================
+                        ///from server ///
+                        192.168.64.10 - - [15/Dec/2024 10:26:31] code 501, message Unsupported method ('PATCH')
+                        =====
+                        192.168.64.10 - - [15/Dec/2024 10:26:31] "PATCH / HTTP/1.1" 501 -
+                        ==========================
+                        ++++++CHECK OUT -c to save to the cookie.jar file====save all your site cookies==to the
+                        cookie.jar========
+                        ===================
+                        ////Following redirects////
+                        =============================
+                        <!-- ubuntu@primary:~$ curl http://bit.ly/linux-cli = <html>
+                        
+                        <body><a href="https://btholt.github.io/complete-intro-to-linux-and-the-cli/">moved here</a></body> -->
+                        ======================
+                        //////cURL = EVERYTHING ON WEBSITE////
+
+                        </html>ubuntu@primary:~$ curl -L http://bit.ly/linux-cli = YOU WILL GET EVERYTHING ON THE
+                        WEBSITE =====
+                        ========================
+                        ==== -L will make cURL follow redirects=====
+                        <!-- ubuntu@primary:~$ curl -L https://goonlinedj.github.io/M-J-W/M-J-W+index.html -->
+                        ==========================
+                        -H to send headers
+                        curl -H "accept-language: en-US" -H "Authorization: bearer 1983" http://192.168.64.10:8000
+                        ===================
+                        +++++++++++++++++++++++
+                        <!-- |bash ====DONT RUN THIS COMMAND  -->//be careful when curling and piping into bash
+                        directly, check the file first then run the file.
+                        +++++++++++++++++++++
+                        //instead pipe data into file to check data///
+
+                        <!-- curl curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh > my-file.sh
+                        =====
+                        cat my-file.sh = to check file. -->
+
+                        ==================
+                        ===Package Management & APT Basics====
+                        +++++++++++++++++++
+                        ====================
