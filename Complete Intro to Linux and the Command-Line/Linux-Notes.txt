@@ -1451,3 +1451,271 @@ value2@secondary:~$
                             =========================
                             +++++++++++++++++++++++
                             =========SNAPS========
+                            //snaps is able to sandbox the data so it wont break out////totally enclosed package.
+                            =================
+                            <!-- snaps are how Ubuntu install GUI apps, graphical user interface apps.
+                            =====================
+                            snap can install Visual Studio code,Spotify,Firefox,Chrome, and other kinds of different
+                            tools. -->
+                            ========================
+                            NOTE: Debs can do whatever they want.
+                            =======================
+                            ==SNAPS ==the way they are packaged can be updated by the developer without going through
+                            review.
+                            =====================
+                            SNAP WORKS FINE FOR INSTALLING THAT COMES WITH AUTO UPDATE BUT MIGHT HAVE MORE SECURITY.
+                            ==================
+                            <!-- ubuntu@primary:~$ sudo apt install snap daemon -->
+                            daemon = the tool that executes the snap commands in the background that runs in the
+                            background for snap.
+                            =========================
+                            ubuntu@primary:~$ cat williams.txt | lolcat
+                            ================
+                            ubuntu@primary:~$ snap info node
+                            ======================
+                            ubuntu@primary:~$ sudo snap install --channel=14/stable --classic node = node (14/stable)
+                            14.20.1 from OpenJS Foundation (iojs✓) installed
+                            =======================
+                            --classic = classic flag allows it to break out of its box = means you can trust the
+                            publisher.
+                            --channel = lolcat had a channel by default but for node we use a --channel to say what
+                            version of node we need.
+                            =======================
+                            ++++++++++++++++++++
+                            <!-- SHELL SCRIPTS + WRITING YOUR OWN SCRIPTS -->
+                            =====================
+                            ====BASH SCRIPTS=====
+                            ===================
+                            ubuntu@primary:~$ vi gen_files.sh
+                            ==========================
+                            =writing bash script in vi
+                            -p means if the file already exist dont error out.
+                            text from vi =
+                            <!-- mkdir -p ~/temp
+                            cd ~/temp
+                            touch file{1..10}.txt
+                            echo done -->
+                            ===================
+                            esc + :wq to get out of vi
+                            ==============
+                            ubuntu@primary:~/temp$ . gen_files.sh
+                            ===============
+                            . gen_files.sh = to run script
+                            ================
+                            ubuntu@primary:~$ source gen_files.sh
+                            ======================
+                            source gen_files.sh = also can run the file. = RUN IN THE SAME PROCESS SO IT CHANGES THE
+                            DIRECTORY.
+                            ======================
+                            <!-- ubuntu@primary:~$ bash gen_files.sh
+                            =================
+                            bash gen_files.sh = SEEMS TO BE BETTER BECAUSE IT DOESNT CHANGE THE DIRECTORY.
+                            =======================
+                            bash gen_files.sh = STAY IN SAME DIRECTORY = IT RUNS ANOTHER PROCESS IN THE BACKGROUND.
+                            ===================
+                            sh = script file. -->
+                            ================
+                            +++++++++++++++++++
+                            =====Hashbang========
+                            <!-- #! /bin/bash -->
+                            ///this line that should be placed at the top of the vi window tell bash use bash to
+                            interpret the file. or we could have said use python to interpret the file.
+                            ====================
+                            +++++example+++++++
+                            ================
+                            mv gen_files.sh gen_files
+                            ls -lash =4.0K -rw-rw-r-- 1 ubuntu ubuntu 72 Dec 15 16:10 gen_files
+                            ==
+                            ubuntu@primary:~$ chmod +x gen_files
+                            ls -lash = 4.0K -rwxrwxr-x 1 ubuntu ubuntu 72 Dec 15 16:10 gen_files
+                            =========================
+                            NOW ITS AN EXECUTABLE FILE.
+                            ===================
+                            ubuntu@primary:~$ ./gen_files = done
+                            =====================
+                            because of the hashband it knew how to run the script.
+                            =======================
+
+                            ////node example///
+                            ubuntu@primary:~$ which node = /usr/bin/node
+                            ==================
+                            <!-- ubuntu@primary:~$ vi node_test = #! /usr/bin/node
+                            
+                            console.log('this is running from node.js'); -->
+                            =======================
+                            chmod +x node_test
+                            ==================
+                            <!-- ubuntu@primary:~$ ./node_test = this is running from node.js  -->
+                            ==========================
+                            +++++++++++++++++++++++
+                            =====Path & Variables=====
+                            ========================
+                            ====$PATH ===
+                            echo $PATH =
+                            /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+                            =========================
+                            ubuntu@primary:~$ ls /snap/bin = multipass-sshfs.env node.npm node.yarn npm yarn
+                            node node.npx node.yarnpkg npx yarnpkg
+                            =====================
+                            <!-- ./ = i want you to run something that is in this directory. -->
+                            ===================
+                            mkdir my_bin
+                            mv node_test my_bin
+                            mv gen_files my_bin
+                            cd my_bin
+                            ubuntu@primary:~/my_bin$ ls -lash = total 16K
+                            4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 16:29 .
+                            4.0K drwxr-xr-x 22 ubuntu ubuntu 4.0K Dec 15 16:29 ..
+                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 72 Dec 15 16:10 gen_files
+                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test
+                            ====================
+                            <!-- //NOW WE HAVE TO PUT THIS FOLDER ON OUR PATH// -->
+                            ================
+                            ubuntu@primary:~/my_bin$ cd ..
+                            ===================
+                            vi .bashrc
+                            =================
+                            export PATH=~/my_bin:$PATH
+                            ==========
+                            ~/ = add to this Path
+                            $PATH = keep current path and add to it.
+                            =====================
+                            <!-- :wq ==be careful not to include in file...when exiting..  -->
+                            =================
+                            ubuntu@primary:~$ echo $PATH =
+                            /home/ubuntu/my_bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+                            =============
+                            my_ bin IS NOW INCLUDED IN THE $PATH
+                            ====================
+                            ++so now we should be able to run the script without . or source or bash = i should be able
+                            to run the program using only the program name.
+                            ===================
+                            ubuntu@primary:~$ ls my_bin = gen_files node_test
+                            =============
+                            gen_files = done
+                            node_test = this is running from node.js
+                            =====================
+                            # = this is how you comment in a bash script.
+                            =================
+                            vi my_bin/gen_files = to add comments for Others
+                            ===============
+                            #this is a comment. = to be placed in the script
+                            ===============
+                            ++++++++++++++++++
+                            ===CREATING VARIABLE IN BASH=====
+                            <!-- DESTINATION="~/temp"
+                            mkdir -p $DESTINATION
+                            cd $DESTINATION -->
+
+                            ====================
+                            #! /bin/bash
+
+
+                            DESTINATION="~/temp"
+                            FILE_PREFIX=file
+
+                            mkdir -p $DESTINATION
+                            cd $DESTINATION
+
+
+                            #this is a comment.
+
+
+                            touch ${FILE_PREFIX}{1..10}.txt
+                            echo done #this is a comment.
+                            ======================
+                            gen_files = done
+                            ===================
+                            <!-- +++++++++++++++++++++++
+                            ${} = accessing a variable 
+                            $() = run a sub command and return.
+                            +++++++++++++++++++++++++ -->
+                            =========================
+                            =========================
+                            =======Arguments=========
+                            $0 = invoked by gen_files
+                            $1 = first arugument being provided from user.
+                            ====================
+                            giving Argument to the bash script =
+                            DESTINATION=$1 in vi editor
+                            ====================
+
+                            <!-- ++++++++++++++
+                            +++TO RECEIEVE USER INPUT INTERACTIVELY+++++ -->
+                            ==================
+                            read = for user input
+                            -p = prompt
+                            ===================
+                            ubuntu@primary:~$ vi my_bin/gen_files
+                            =================
+
+                            read -p "Enter a file prefix: " FILE_PREFIX
+                            ============
+                            :wq
+                            ==================
+                            ubuntu@primary:~$ gen_files another_gen_files_folder
+                            =======
+                            Enter a file prefix: value = done
+                            ===================
+                            ubuntu@primary:~$ ls another_gen_files_folder/ = value1.txt value2.txt value4.txt value6.txt
+                            value8.txt
+                            value10.txt value3.txt value5.txt value7.txt value9.txt
+                            ==========================
+
+                            <!-- 
+                        In shell scripting (like Bash), the case statement is concluded with esac, which is "case" spelled
+                            backward.
+                            #!/bin/bash
+                            
+                            echo "Enter a number between 1 and 3: "
+                            read num
+                            
+                            case $num in
+                            1) echo "You entered One" ;;
+                            2) echo "You entered Two" ;;
+                            3) echo "You entered Three" ;;
+                            *) echo "Invalid number" ;;
+                            esac
+                            =================
+                            In this script, based on the input number, the corresponding message is printed, and the case statement is neatly
+                            finished with esac
+                            ================ -->
+                            ===================
+                            <!-- ++++++++++++++++++++++++
+                                                        ====Conditionals: if statement & tests ======
+                                                        ++++++++++++++++++++++++++ -->
+                            =========================
+                            //inside the if statement//
+                            -z = empty string
+                            if [] = for if statement
+                            [] = rearange the arugument in the bracket to a test statement.
+                            =======================
+                            ubuntu@primary:~$ vi my_bin/gen_files
+                            =====================
+                            if [ -z $DESTINATION ]; then
+                            echo "no path provided, defaulting to ~/temp"
+                            DESTINATION=temp
+                            fi
+                            =======================
+                            :wq
+                            =============
+                            <!-- ubuntu@primary:~$ test -z "" -->
+                            ============
+                            $? = last program return value
+                            ========================
+                            //NOTE//ubuntu@primary:~$ echo $0 = bash //
+                            =======================
+                            <!-- ubuntu@primary:~$ echo $? = 0 -->
+                            ======================
+                            ++++++++++++++++++++++
+                            +++++++++++++++
+                            man test = manual for test
+                            ++++++++++++++++
+                            ++++++++++++++++++
+                            ===============
+                            ubuntu@primary:~$ gen_files = Enter a file prefix: lol = no path provided, defaulting to
+                            ~/temp
+                            done
+                            ==================
+                            ubuntu@primary:~$ ls ~/temp = ok = files are There
+                            =======================
