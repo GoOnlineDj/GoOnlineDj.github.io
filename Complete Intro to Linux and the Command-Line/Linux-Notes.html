@@ -8,6 +8,9 @@
 </head>
 
 <body>
+    ======+++++Everything is a file in Linux+++++=========
+    <!-- & = run in the background -->
+    ================================
     <!-- 
     Emulator runs the shells inside of it e.g terminal -->
     the shell is bash Bourne Again Shell + GNU Foundation
@@ -569,6 +572,160 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
         =================Processes================
         ps aux = ALL RUNNING PROCESSES ON THE COMPUTER
         ===============================================
+        ps = will show you only what the user is running
+        <!-- ps = PID TTY TIME CMD
+24209 pts/0 00:00:00 bash
+24277 pts/0 00:00:00 ps -->
+        ===================================
+        =====Commands====
+        sleep = wait for a certin time then return
+        sleep 1 = wait =ONE SEC= then return
+        sleep 5 = wait =FIVE SEC= then return
+        =============================
+        <!-- & = run in the background -->
+        ===============================
+        <!-- PID = Process ID -->
+        =========================
+        sleep 17 & = PID TTY TIME CMD
+        24209 pts/0 00:00:00 bash
+        24287 pts/0 00:00:00 sleep
+        24288 pts/0 00:00:00 ps
+        =====================================
+        ps = PID TTY TIME CMD
+        24209 pts/0 00:00:00 bash
+        24289 pts/0 00:00:00 ps
+        [1]+ Done sleep 17
+        ==========================
+        sleep 100 & = [1] 24290
+        ps = PID TTY TIME CMD
+        24209 pts/0 00:00:00 bash
+        24290 pts/0 00:00:00 sleep
+        24291 pts/0 00:00:00 ps
+        ==========================
+        kill -SIGKILL 24290
+        ps = PID TTY TIME CMD
+        24209 pts/0 00:00:00 bash
+        24295 pts/0 00:00:00 ps
+        [1]+ Killed sleep 100
+        =============================
+        aux = what everyone is running
+        ps aux
+        <!-- ps aux | less = piped into less = nice scool table  -->
+        ps aux | grep "ps" = to find just what you are looking for
+        =======================================
+
+        ++++++++++++++++++++++++++++++++++++++++++++
+        ======BACKGROUND & FOREGROUND============
+        sleep 1000 = started sleep 1000 SECONDS PROGRAM
+        ^Z = [1]+ Stopped
+        jobs = [1]+ Stopped
+        bg 1 = [1]+ sleep 1000 &
+        jobs = [1]+ Running sleep 1000 &
+        =================================
+        ls // ok system running fine
+        ===============================
+        fg 1 = sleep 1000
+        ^Z = [1]+ Stopped sleep 1000
+        jobs 1 = [1]+ Stopped sleep 1000
+        bg 1 = [1]+ sleep 1000 & ///sleep running the the background.
+        jobs = [1]+ Running sleep 1000 &
+        ===================================
+        jobs -l = [1]+ 24313 Running sleep 1000 &
+        kill -9 24313
+        jobs = [1]+ Killed sleep 1000
+        =====================================
+        <!-- sleep 1000 > sleep1000.txt & = send output to a file instead of displaying it on the screen. -->
+        jobs = [1]+ Running sleep 1000 > sleep1000.txt &
+        ===========================================
+        +++++++++++++++++++++++++++++++++++++++++++++++
+        <!-- =======Exit Codes & Process Operators & sub Commands ========== -->
+        ===================================
+        //when program finishes it returns and exit code on how the process finised//
+        =================================
+        date = current date
+        date = Sat Dec 14 18:30:43 EST 2024
+        ========================
+        0 = SUCCESSFUL
+        1 = "there was an error"
+        2 = bash internal error not program
+        anything that returns with 0 was successful
+        126 = no permission or not executable file
+        127 = command not found
+        128 = bad exit command by user e.g non-int code
+        130 = ended with ^C
+        137 = program ended with -SIGKILL
+        255 = OUT OF BOUNDS CODE LARGER THAN 255
+        =========================
+        <!-- echo $? = 0 -->
+        yes = yes program starts running forever
+        ^C = killed the current running process
+        echo $? = 148 = for yes = not zero = unsuccessful
+        ====================
+        +++++++++++++++++++
+        ======OPERATORS===========
+        <!-- >> = append into  -->
+        $$ = ALL MUST BE TRUE
+        <!-- ====&& everything has to be true for all programs to run successfully====== -->
+        || = RUN ONLY IF THE PROGRAM THAT JUST FINISHED WAS UNSUCCESSFUL
+        ===============================
+
+        touch status.txt && date >> status.txt && uptime >> status.txt
+        ls -lash = status.txt exsist
+        cat status.txt = Sat Dec 14 18:45:59 EST 2024
+        18:45:59 up 1 day, 4:53, 4 users, load average: 0.00, 0.00, 0.00
+        ==========================
+        uptime = 18:47:40 up 1 day, 4:54, 4 users, load average: 0.02, 0.01, 0.00
+        ====================================
+        <!-- false = false program = returns 0
+false
+echo $? = 1 -->
+        ///////cat $? = cat: 0: No such file or directory/////
+        ++++++++++++++++++++++++++++++++++++
+        true = true program = returns 1
+        true
+        echo $? = 0
+        ====================================
+        false && echo hi = nothing = only return 1 in bg
+        <!-- true && echo hi = hi -->
+        ++++++++++++++++++++++++++++++++++
+        false || echo hey your suppose to be false = hey your suppose to be false
+        true || echo hey i wanted to say something = echo = BLANK
+        ==============================
+        true ; false ; echo hey i wanted to run this dont matter what = hey i wanted to run this dont matter what
+        =====================================
+        ===========Subcommands=========
+        $() = will run return output info to higher running process that called it
+        <!-- echo hey im on this computer logged in as user $(whoami) and this user is wonderful = hey im on this computer logged in as user ubuntu and this user is wonderful -->
+        echo the current date and time and year is $(date) = the current date and time and year is Sat Dec 14 19:05:29
+        EST 2024
+        ===================================
+        echo $(date +%x) - $(uptime) >> mjwlog.txt
+        cat mjwlog.txt = 12/14/24 - 19:09:05 up 1 day, 5:16, 4 users, load average: 0.00, 0.00, 0.00
+        =============================
+        echo hi this data is from the mjwlog file here is the data $(cat mjwlog.txt) this data is good because we have
+        the time
+        the work was done = hi this data is from the mjwlog file here is the data 12/14/24 - 19:09:05 up 1 day, 5:16, 4
+        users, load average: 0.00,
+        0.00, 0.00 this data is good because we have the time the work was done
+        ===========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
