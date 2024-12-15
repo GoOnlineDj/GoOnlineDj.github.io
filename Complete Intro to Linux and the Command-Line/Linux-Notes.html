@@ -815,8 +815,110 @@ ubuntu@primary -->
         <!-- cd .ssh -->
         ls -lash = 4.0K -rw------- 1 value2 ubuntu 568 Dec 14 20:44 authorized_keys
         ========================================
+        +++++++++++++++++++++++++
+        ==we now need to get an ip address from the secondary computer so the primary computer can connect to it
+        ++++++++++++++++++
+        ================
+        groups = list the sudo privileges for the current user. //USER
+        sudo -l = list the sudo privileges for the current user. //USER
+        ======================================
+        <!-- ==seems value2 didnt have sudo right to install the net-tools which is needed to run ifconfig program.
+==will have to make value2 a sudo member using Ubuntu on secondary computer. -->
+        ==================================================
+        ubuntu@secondary:~$ cat /etc/passwd =
+        ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
+        value2:x:1001:1000::/home/value2:/bin/bash
+        =============================
+        ubuntu@secondary:~$ sudo usermod -aG sudo value2
+        su value2 = Password:
+        To run a command as administrator (user "root"), use "sudo <command>".
+            See "man sudo_root" for details.
+            ==========================================
+            value2@secondary:~$ ifconfig = Command 'ifconfig' not found, but can be installed with:
+            sudo apt install net-tools
+            value2@secondary:~$
 
+            ===========================
+            ++++++++++++++++++++++++++++++++
+            <!-- value2@secondary:~$ sudo apt update =
+            value2@secondary:~$ sudo apt update
+            [sudo] password for value2:
+            Hit:1 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+            Get:2 http://ports.ubuntu.com/ubuntu-ports noble-updates InRelease [126 kB]
+            Hit:3 http://ports.ubuntu.com/ubuntu-ports noble-backports InRelease
+            Get:4 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease [126 kB]
+            Get:5 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 Packages [715 kB]
+            Get:6 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 Packages [905 kB]
+            Fetched 1872 kB in 2s (1113 kB/s)
+            Reading package lists... Done
+            Building dependency tree... Done
+            Reading state information... Done
+            37 packages can be upgraded. Run 'apt list --upgradable' to see them.
+            ===================================
+value2@secondary:~$ sudo apt install net-tools
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+net-tools
+0 upgraded, 1 newly installed, 0 to remove and 37 not upgraded.
+Need to get 207 kB of archives.
+After this operation, 1229 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 net-tools arm64 2.10-0.1ubuntu4 [207 kB]
+Fetched 207 kB in 1s (296 kB/s)
+Selecting previously unselected package net-tools.
+(Reading database ... 77391 files and directories currently installed.)
+Preparing to unpack .../net-tools_2.10-0.1ubuntu4_arm64.deb ...
+Unpacking net-tools (2.10-0.1ubuntu4) ...
+Setting up net-tools (2.10-0.1ubuntu4) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Scanning processes...
+Scanning linux images...
 
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+value2@secondary:~$
+=============================================== -->
+            value2@secondary:~$ ifconfig
+            enp0s1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST> mtu 1500
+                inet 192.168.64.14 netmask 255.255.255.0 broadcast 192.168.64.255
+                inet6 fe80::5054:ff:fe6a:9c28 prefixlen 64 scopeid 0x20
+                <link>
+                inet6 fd64:958e:edfe:5eeb:5054:ff:fe6a:9c28 prefixlen 64 scopeid 0x0<global>
+                    ether 52:54:00:6a:9c:28 txqueuelen 1000 (Ethernet)
+                    RX packets 30636 bytes 37330846 (37.3 MB)
+                    RX errors 0 dropped 0 overruns 0 frame 0
+                    TX packets 9443 bytes 908825 (908.8 KB)
+                    TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+
+                    lo: flags=73<UP,LOOPBACK,RUNNING> mtu 65536
+                        inet 127.0.0.1 netmask 255.0.0.0
+                        inet6 ::1 prefixlen 128 scopeid 0x10<host>
+                            loop txqueuelen 1000 (Local Loopback)
+                            RX packets 156 bytes 14258 (14.2 KB)
+                            RX errors 0 dropped 0 overruns 0 frame 0
+                            TX packets 156 bytes 14258 (14.2 KB)
+                            TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+                            ============================
+                            <!-- # Switch to a user with sudo privileges
+                            su value2
+
+                            # Update the package list
+                            sudo apt update
+
+                            # Install net-tools
+                            sudo apt install net-tools
+
+                            # Run ifconfig
+                            ifconfig -->
+                            =================================
 
 
 
