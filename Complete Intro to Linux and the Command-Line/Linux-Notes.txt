@@ -1331,3 +1331,123 @@ value2@secondary:~$
                         ===Package Management & APT Basics====
                         +++++++++++++++++++
                         ====================
+                        <!-- ==Ubuntu has APT = Advanced packageing tool
+                        NOTE : Ubuntu can also use dpkg which is from Debian //since Ubuntu came from Debian its able to
+                        use that packaging tool as well. -->
+                        =====================
+                        dpkg --help = Usage: dpkg [<option>...] <command></command>
+                            Use 'apt' or 'aptitude' for user-friendly package management.
+                            ============
+                            ++++++++++++++
+                            //installing aptitute///
+                            ++TOOL for manageing apt =
+                            <!-- ubuntu@primary:~$ sudo apt install aptitude -->
+                            ================
+                            ubuntu@primary:~$ aptitude
+                            ================
+                            ^c to exit out of aptitude
+                            ===========================
+                            //NOTE: apt-get install = old ways = might be more advance than APT.
+                            //NOPE: APT install = new way
+                            ===================
+                            ubuntu@primary:~$ apt install lolcat = E: Could not open lock file
+                            /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+                            E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+                            ========================
+                            <!-- ubuntu@primary:~$ sudo !! --> =
+                            sudo apt install lolcat
+                            //Finish installing lolcat
+                            <!-- lolcat --help -->
+                            //some randome user made lolcat for us and put it on the apt registry so we can use it ///
+                            cat williams.txt =
+                            hi michael
+                            hi michael isnt this so cool?
+                            ============
+                            <!-- ubuntu@primary:~$ lolcat williams.txt = hi michael
+                            hi michael isnt this so cool? -->
+                            ====================
+                            ubuntu@primary:~$ ls -lash | lolcat
+                            ++++++++++++++++++++++
+                            =====================
+                            //installing node.js //
+                            ubuntu@primary:~$ node = Command 'node' not found, but can be installed with:
+                            sudo apt install nodejs
+                            ====================
+                            <!-- ubuntu@primary:~$ sudo apt install nodejs -->
+                            ===================
+                            ubuntu@primary:~$ node = Node REPL = Welcome to Node.js v18.19.1.
+                            Type ".help" for more information.
+                            ==================
+                            ===NODE JS===
+                            .exit to exit
+                            .help for help
+                            =================
+                            node -e "console.log('hello from node js')" = hello from node js
+                            ================
+                            //search for apt for node js///
+                            <!-- ubuntu@primary:~$ apt search nodejs -->
+                            =================
+                            ubuntu@primary:~$ apt show nodejs = Package: nodejs
+                            Version: 18.19.1+dfsg-6ubuntu5
+                            Priority: extra
+                            Section: universe/web
+                            Origin: Ubuntu
+                            =====================
+                            ubuntu@primary:~$ apt show lolcat = Package: lolcat
+                            Version: 100.0.1-3
+                            Priority: extra
+                            Section: universe/games
+                            Origin: Ubuntu
+                            ========================
+                            <!-- //to clean up files that you dont use on the computer//
+                            ubuntu@primary:~$ sudo apt autoremove = Reading package lists... Done
+                            Building dependency tree... Done
+                            Reading state information... Done
+                            0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded. -->
+                            =======================
+
+                            ++++++++++++++++
+                            //////APT/////
+                            the way that apt works is that is downloads a list of all the available packages to your
+                            computer.
+                            so if you do this update, it will actually go get the new copy of that.
+                            ===================
+                            ///to update packages///
+                            <!-- ubuntu@primary:~$ sudo apt update -->
+                            ======================
+                            ubuntu@primary:~$ apt list --upgradable = Listing... Done
+                            flash-kernel/noble-updates 3.107ubuntu13~24.04.1 arm64 [upgradable from:
+                            3.107ubuntu9~24.04.3]
+                            N: There are 2 additional versions. Please use the '-a' switch to see them.
+                            =================
+                            <!-- ///TO SEE A LIST OF ALL APT OR PACKAGES INSTALLED//
+                            ubuntu@primary:~$ apt list
+                            +++++++++++
+                            COMMAND + F to search  -->
+                            =====================
+                            ///upgrading apt ///
+                            ubuntu@primary:~$ sudo apt upgrade
+                            ======================
+                            ++++++++++++++++++
+                            <!-- ubuntu@primary:~$ sudo apt full-upgrade = DOES THE FULL UPGRADE AND ALSO CLEAN UP AFTER ANY FILES THAT IS NOT BEING USED. -->
+                            ==========================
+                            ++++++++++++++++++++
+                            //NOTE : APT is actually several tools combined together for example apt get , apt remove,
+                            apt update , apt search, apt cache = APT is a higher level tool that is above the other
+                            tools . so APT is using all of these tools under the hood.
+                            ===================
+                            <!-- ubuntu@primary:~$ sudo apt upgrade nodejs = will upgrade the node js package. -->
+                            ======================
+                            node -v = for node version
+                            =======================
+                            ubuntu@primary:~$ sudo apt update = it get a new list of all the packages that needs to be
+                            updated.
+                            =========================
+                            ++++++++++++++++++++++
+                            <!-- run update before upgrade  -->
+                            ++++++++++++++++++++
+                            ==========================
+                            //NOTE: package manager for Mac is Homebrew
+                            =========================
+                            +++++++++++++++++++++++
+                            =========SNAPS========
