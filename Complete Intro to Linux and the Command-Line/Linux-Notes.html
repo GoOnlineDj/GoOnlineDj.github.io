@@ -553,7 +553,7 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
         <!-- .bashrc = is where u can change prompts ,setup colors, input scrips to use + and variables just for your user + ect  -->
         =================================
         ++++++++++++++++++++++++++++
-        .bash_profile runs once once when u open the shell interactively
+        .bash_profile //runs once a day or once when u open the shell interactively//
         <!-- vi .bash_profile
         if [ -f ~/.bashrc ]; then
         source ~/.bashrc
@@ -708,6 +708,126 @@ echo $? = 1 -->
         users, load average: 0.00,
         0.00, 0.00 this data is good because we have the time the work was done
         ===========================================
+        <!-- echo hi `whoami` how are you today? = hi ubuntu how are you today? -->
+        $() = much better and you can nest them as well
+        ===================================
+        +++++++++++++++++++++++++++++++++
+        <!-- =========SSH & Secondary Machine========== -->
+        SSH = Secure Shell and allows you to connect
+        from one computer to another computer. also allows you to remotely execute commands on a different computer.
+        ===========================================
+        +++++++++++++++++++++++++++++++++++++++
+        =======starting a second VM using multipass=========
+        <!-- multipass launch --name secondary = Launched: secondary -->
+        multipass shell secondary
+        ==============================
+        ubuntu@secondary:~$ = Secondary Ubuntu VM
+        ==================================
+        ++++++CREATE A USER++++++
+        sudo useradd -s /bin/bash -m -g ubuntu value2
+        -s = default shell when creating a user
+        -m = auto create the user a home folder
+        -g - give user group so they have the same permissions as other members in the group.
+        ===========================================
+        cat /etc/passwd = value2:x:1001:1000::/home/value2:/bin/bash
+        sudo passwd value2 = New password: = 200
+        passwd: password updated successfully
+        ================================
+        whoami
+        ubuntu
+        su value2
+        Password: = 200
+        value2@secondary:/home/ubuntu$
+        =================================
+        cd .. = value2@secondary:/home$
+        ls = ubuntu value2
+        ======================
+        SSH key = is like cryptographic key that basically creates a private version and a public version of itself =
+        the PRIVATE VERSION YOU NEVER REVEAL TO ANYONE and the public version you share with others.
+        ++Public and private version of the key allows services to do a handshake with eachother but they never have to
+        reveal their private keys BUT THEY CAN VERIFY THAT THE OTHER PARTY HAS THE PRIVATE KEY THAT THEY SAY THEY HAVE.
+        ===================================
+        =========Generating an SSH KEY==============
+        <!-- ssh-keygen -t rsa = Generating public/private rsa key pair. -->
+        Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa): = Enter or change directory
+        Enter passphrase (empty for no passphrase): = enter password to use key everytime key is accessed = leaving
+        blank for now
+        Enter same passphrase again: = BLANK FOR NOW
+
+        The key fingerprint is:
+        SHA256:63QObTraBKmhvBrmOBNemdab3VomBoCE046ZvMhFp8E ubuntu@primary
+        The key's randomart image is:
+        +---[RSA 3072]----+
+        |.o. |
+        |+ oE . |
+        |.B..+ |
+        |+..o. . |
+        |o o =.o S |
+        |o+ * +.. o |
+        |oo= . +o*o+ |
+        |*o . o.*=B |
+        |o=. .o=.. |
+        +----[SHA256]-----+
+
+
+        ============================================
+        cd .ssh
+        ls = authorized_keys id_rsa id_rsa.pub
+        id_rsa = private key = secret
+        id_rsa.pub = public key
+        ==================================
+        value2@secondary:/home$ cd value2 = change to value2 home directry
+        mkdir ~/.ssh
+        ls -lash = 4.0K drwxr-xr-x 2 value2 ubuntu 4.0K Dec 14 20:24 .ssh
+        ===========================
+        cd .ssh
+        ================
+        ls -lash = total 8.0K
+        4.0K drwxr-xr-x 2 value2 ubuntu 4.0K Dec 14 20:24 .
+        4.0K drwxr-x--- 3 value2 ubuntu 4.0K Dec 14 20:24 ..
+        =======================================
+        ====As value2 from /.ssh folder===
+        vi authorized_keys = "authorized_keys" [New] 0,0-1 All
+        ======READY TO EDIT INTO VI=====
+        +++++switched to primary shell to get pub key info+++++
+        from value2 /.ssh folder
+        cat id_rsa.pub =
+        <!-- ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAABgQDOLqrza9GtaU7oDn/mf94mZjOCHUJF01As+4q209f1PbzVNW+T1o9Ra5Gbz0IlaEdWnFMqI13XUcYV/Of5shxUsj0iKXe0XP+326BKmKi8dN+serBvKrbJ4uq0qoR9GLcNnjJybEpFzkSKA4T9/CUrrpy4MBk73kqaz7cg161Xd6uPkHGH5UwMg7i8pVns0JnnfygtMZNsU0ctnuEJ0vHkZPf9qp1fr4qtns3knIVw+6mEEMOpOKXZWJxzflWssCUP0dEjo7/nzenmd/s0MDAERX44ICfkBP8isQ3oTVp+VFy3oO4Fo7p7D3DShGQll19Z29RvIK+blJ4ZWA7x6RedO3SZAOE0Fn+n4tybCzxwTiK1/4cFPqsyHOmXKkqa6B26iZ+kkXFAXM27bebfNsycAV4sAH+IDZOp7Kwh3NxlN2ZMtcJjYQLLQgTmtcw1w2r+6jimLay0odJ3k8C4Ojohqc0ue7BuohPk+J27bqKi0lOA89j7Oi7ELBRuxGaVMj8=
+ubuntu@primary -->
+        ===========================================
+        ==Here is a public SSK KEY that if someone can verify that this is their key tht they have with they own private
+        key allow them to log into this computer so its basically like a user name and password for a user.
+        ==================================
+        +++PASTE the public ssh KEY info INTO VI on secondary computer then :wq
+        =======================================
+        ls -lash = 4.0K -rw-r--r-- 1 value2 ubuntu 568 Dec 14 20:44 authorized_keys
+        ==================================
+        value2@secondary:~/.ssh$ chmod 700 ~/.ssh
+        <!-- cd .. -->
+        ls -lash = 4.0K drwx------ 2 value2 ubuntu 4.0K Dec 14 20:44 .ssh
+        ===================================
+        value2@secondary:~/.ssh$ ls -lash = 4.0K -rw-r--r-- 1 value2 ubuntu 568 Dec 14 20:44 authorized_keys
+        =================================
+        <!-- cd .. -->
+        value2@secondary:~$ chmod 600 ~/.ssh/authorized_keys
+        ===========================
+        <!-- cd .ssh -->
+        ls -lash = 4.0K -rw------- 1 value2 ubuntu 568 Dec 14 20:44 authorized_keys
+        ========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
