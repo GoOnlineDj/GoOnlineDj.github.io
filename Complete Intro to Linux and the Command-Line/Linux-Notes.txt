@@ -1,3 +1,6 @@
+
+======================================================
+Unix is an operating system that was built on the idea of modular design, which means that each tool or command is designed to do one thing well. This philosophy is known as the Unix philosophy
 ======+++++Everything is a file in Linux+++++=========
 <!-- & = run in the background -->
 <!-- find *.txt = FIND ALL TXT FILES = COOL  -->
@@ -1860,3 +1863,250 @@ value2@secondary:~$
                             ======Loops & Arrays=======
                             ++++++++++++++++++++++++++
                             ========================
+                            friends=() = array 
+                             [*] = all items in array
+                             ${#friends[*]} = array Length
+                             ${friends[1]} = friend at index 1
+                             ==================
+                             ubuntu@primary:~$ cd my_bin/ 
+                             ubuntu@primary:~/my_bin$ touch friends
+                             ubuntu@primary:~/my_bin$ ls = check_number  friends  gen_files  node_test  smiley
+                             ubuntu@primary:~/my_bin$ chmod +x friends
+                             ubuntu@primary:~/my_bin$ vi friends
+
+                             ================
+                             #! /bin/bash
+
+
+
+friends=(Angel Value CEO "Michael J Williams" Money)
+
+echo my second friend is ${friends[1]}
+
+
+for friend in ${friends[*]}
+do      
+        echo friend: $friend
+        
+done    
+
+echo "i have ${#friends[*]} friends"
+
+
+=============================
+:wq
+======================
+ubuntu@primary:~/my_bin$ friends = 
+my second friend is Value
+friend: Angel
+friend: Value
+friend: CEO
+friend: Michael
+friend: J
+friend: Williams
+friend: Money
+i have 5 friends
+=================================
+++++++++++++++++++++++++
+====WHILE LOOP======
+$(()) = converts to a basic program = let = which does math = let does modular work and return the value.
+======================
+Unix is an operating system that was built on the idea of modular design, which means that each tool or command is designed to do one thing well. This philosophy is known as the Unix philosophy
+====================================
+
+ubuntu@primary:~/my_bin$ touch guess
+ubuntu@primary:~/my_bin$ chmod +x guess
+ubuntu@primary:~/my_bin$ vi guess
+======================
+#! /bin/bash
+
+NUM_TO_GUESS=$(( $RANDOM % 10 + 1 ))
+GUESSED_NUM=0
+
+echo "guess a number between 1 and 10"
+
+while [ $NUM_TO_GUESS -ne $GUESSED_NUM ] 
+do
+        read -p "your guess: " GUESSED_NUM
+        
+done    
+
+echo "you got it!"
+
+
+===========================
+
+:wq
+===============
+ubuntu@primary:~/my_bin$ guess 
+
+guess a number between 1 and 10
+your guess: 2
+your guess: 5
+your guess: 7
+you got it!
+======================
+=================++++++++++++========
+read -p "your guess: " GUESSED_NUM 
+/// there is no dollar sign because we are giving the value of GUESSED_NUM to read if it had the dollar sign the value to GUESSED_NUM would be 0
+====================
+++++++++++++++++++++++++++++++++++++++++
+=========cron================
+==============================
+cron = you have some task and you want it to run at a set interval
+====================================
+
+ubuntu@primary:~$ cd /etc/
+===============
+ubuntu@primary:~$ cd /etc/cron. = cron.d/       cron.hourly/  cron.weekly/  
+cron.daily/   cron.monthly/ cron.yearly/
+==================
+ubuntu@primary:/etc$ cd cron.daily/
+ubuntu@primary:/etc/cron.daily$ ls = apport  apt-compat  aptitude  dpkg  logrotate  man-db  sysstat
+=========================
+//ANYTHING THAT IS PUT IN THE cron FOLDER NEEDS TO BE AN EXECUTALE FILE.
+==========================
+ubuntu@primary:~/my_bin$ vi make_new_file_now = TO CREATE A NEW FILE. = using vi = didnt use touch to create file.
+=====================
+ubuntu@primary:~/my_bin$ ls = 
+check_number  friends  gen_files  guess  make_new_file_now  node_test  smiley
+============
+ubuntu@primary:~/my_bin$ chmod +x make_new_file_now 
+===================
++++++++++++++++++++++++++++++
+ubuntu@primary:~/my_bin$ vi make_new_file_now
+===================
+#! /bin/bash
+
+
+
+mkdir -p ~/temp-files
+cd ~/temp-files
+touch file-$(date +%s).txt
+==================
+:wq
+=================
+ubuntu@primary:~/my_bin$ date = Mon Dec 16 10:58:46 EST 2024
+==============
+ubuntu@primary:~/my_bin$ date +%s = 1734364763
+===================
+ubuntu@primary:~/my_bin$ make_new_file_now = ubuntu@primary:~$ ls temp-files = 
+file-1734364665.txt  file-1734364719.txt
+=========================
+|||||||||||||||||||||||||
+=========================
+///TO SET cron for every hour////
+================
+ubuntu@primary:~$ crontab -e = 
+no crontab for ubuntu - using an empty one
+
+Select an editor.  To change later, run 'select-editor'.
+  1. /bin/nano        <---- easiest
+  2. /usr/bin/vim.basic
+  3. /usr/bin/vim.tiny
+  4. /bin/ed
+
+Choose 1-4 [2]: 
+=============================
+//in VIM////
+* * * * * /home/ubuntu/my_bin/make_new_file_now
+the first * = minutes = 2 every 2 mins everyhour, 2,25 = every 2 min and 25 min of every hour.
+the second * = hours
+the third * = day of the month 
+the forth * = which month to run
+the fifth * =  day of the week to run 
+/30 = every 30 minutes 
+@daily
+@reboot
+=============================
+///from vim///
+=====================
+*/2 * * * * /home/ubuntu/my_bin/make_new_file_now = run every 2 minutes.
+=========================
+:wq
+==================
+crontab -e = auto restart the cron tab once exit 
+======================
+crontab -u ubuntu -e = to run as another user other than root
+======================
+////to RUN AS ROOT///
+sudo crontab -u root -e 
+=========================
+//in general you want to run crontab as another user other than root.
+========================
++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++
+====HOW TO CUSTOMIZE YOUR SHELL==========
+++++++++++++++++++++++++++++++++++
+//THIS PROMPT = ubuntu@primary:~$ = IS CUSTOMIZABLE
+////its connected to a VARIABLE called PS1 
+=======================
+ubuntu@primary:~$ echo $PS1 = \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$
+==========================
+ubuntu@primary:~$ PS1="MJW+Linux: "  = MJW+Linux: 
+========================
+///code to change PROMPT 
++++++++++++++++
+MJW+Linux: curl https://raw.githubusercontent.com/riobard/bash-powerline/master/bash-powerline.sh > ~/.bash-powerline.sh
+++++++++++++++
+MJW+Linux: cat .bash-powerline.sh = #!/usr/bin/env bash
+
+## Uncomment to disable git info
+#POWERLINE_GIT=0
+======================
+
+MJW+Linux: vi .bashrc
+++++++++++
+//in .bashrc ////
+=================
+source ~/.bash-powerline.sh
+=================
+:wq
+=================
+MJW+Linux: source .bash-powerline.sh = ~ $ 
+=======
+///WORKS FINE/////
+=======================
+~ $ mkdir my-git-project
+~ $ cd my-git-project/
+===========
+~/my-git-project $ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/ubuntu/my-git-project/.git/
+==============
+~/my-git-project ⑂master $ git checkout -b another-git-project = Switched to a new branch 'another-git-project' 
+======
+~/my-git-project ⑂another-git-project $ 
+=======
+\e[32m = green = IN BASH
+=============
+~ $ echo -e "this is how you change the color of a text \e[32mGreen " = this is how you change the color of a text Green 
+==========================
+/////////////////////////
+============================
+THANK YOU + Brian Holt & Frontend Maters 
+==========================
+/////////////////////////
+============================
+
+
+
+
+
+
+
+
+
+
+
+
+
