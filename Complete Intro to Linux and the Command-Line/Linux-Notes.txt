@@ -4,6 +4,13 @@
 ================================
 <!-- 
     Emulator runs the shells inside of it e.g terminal -->
+0 = TRUE
+1 = false
++++++++++++++++++++++
+++++++++++++++++
+||||||||||||||||||||||
+++++++++++++++++++++++++++
+===============================
 the shell is bash Bourne Again Shell + GNU Foundation
 
 <!-- command line + CLI -->
@@ -1719,3 +1726,137 @@ value2@secondary:~$
                             ==================
                             ubuntu@primary:~$ ls ~/temp = ok = files are There
                             =======================
+                            ++++++++++++++++++
+                            ====test=======
+                            <!-- test 15 -eq 15 
+                            echo $? = 0 -->
+                            ==============
+                            test 15 -eq 14
+                            echo $? = 1
+                            ==============
+                            +++++++++++++
+                            <!-- 0 = true 
+                            1 = false  -->
+                            +++++++++++++++
+                            =================
+                            test 15 -eq 14 && echo "is true"
+                            echo $? = 1
+                            ============
+                            test 15 -eq 15 && echo "is true" = is true
+                            echo $? = 0
+                            =================
+                            test Michael = Michael && echo "this is true" = this is true
+                            echo $? = 0
+                            ================
+                            test Michael = michael && echo "this is true"
+                            echo $? = 1
+                            ==================
+                            test 15 -gt 10 && echo "yes" = yes
+                            test 15 -lt 10 && echo "yes" = NO RESPOND FROM echo
+                            =====================
+                            test 15 -ge 10 && echo "yes" = yes
+                            test 10 -ge 15 && echo "yes" = NO RESPOND FROM echo
+                            =====================
+                            test 15 -le 10 && echo "yes" = NO RESPOND FROM echo
+                            test 10 -le 15 && echo "yes" = yes
+                            ======================
+                            +++++++++++++
+                            +++++++++++
+                            -e = does file exist?
+                            ++++++++++++
+                            test -e ~/williams.txt && echo "yes" = yes
+                            =====================
+                            +++++++++++++
+                            +++++++++++
+                            -w = does file exist & can i write to it as this current user.
+                            ++++++++++++
+                            =================
+                            test -w ~/lover.txt && echo "yes" = 0 -rw-r--r-- 1 root root 0 Dec 13 21:32 lover.txt = NO
+                            RESPOND FROM echo
+                            ===============
+                            <!-- test -w ~/status.txt && echo "yes" = 4.0K -rw-rw-r-- 1 ubuntu ubuntu 98 Dec 14 18:45
+                            status.txt = yes -->
+                            =====================
+                            ubuntu@primary:~$ cd my_bin/
+                            ubuntu@primary:~/my_bin$ ls -lash = total 16K
+                            4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 18:32 .
+                            4.0K drwxr-xr-x 26 ubuntu ubuntu 4.0K Dec 15 18:32 ..
+                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 gen_files
+                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test
+                            ====================
+                            <!-- ubuntu@primary:~/my_bin$ touch check_number -->
+                            ubuntu@primary:~/my_bin$ ls -lash = total 16K
+                            4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 19:32 .
+                            4.0K drwxr-xr-x 26 ubuntu ubuntu 4.0K Dec 15 18:32 ..
+                            0 -rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 19:32 check_number
+                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 gen_files
+                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test
+                            =====================
+                            <!-- ubuntu@primary:~/my_bin$ chmod +x check_number
+                            ubuntu@primary:~/my_bin$ ls -lash = total 16K
+                            4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 19:32 .
+                            4.0K drwxr-xr-x 26 ubuntu ubuntu 4.0K Dec 15 18:32 ..
+                            0 -rwxrwxr-x 1 ubuntu ubuntu 0 Dec 15 19:32 check_number
+                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 gen_files
+                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test = check_number = color = green = ok -->
+                            =======================
+
+                            ubuntu@primary:~/my_bin$ vi check_number
+
+                            =================
+                            #! /bin/bash
+
+
+                            if [ $1 -gt 10 ]; then
+                            echo "greater than ten"
+                            elif [ $1 -lt 10 ]; then
+                            echo "less than ten"
+                            else
+                            echo "equals 10"
+                            fi
+
+                            =================
+                            :wq
+                            ================================
+                            <!-- ubuntu@primary:~/my_bin$ check_number 10 = equals 10
+                            ===========
+                            ubuntu@primary:~/my_bin$ check_number 17 = greater than ten 
+                            ====================
+                            ubuntu@primary:~/my_bin$ check_number 7 = less than ten
+                            ======================= -->
+                            //NOTE: in vi #! /bin/bash :wq and reopen the file = to get bash color codes in vi.///
+                            =============
+                            ubuntu@primary:~/my_bin$ vi smiley
+
+                            ========================================
+                            #! /bin/bash
+
+
+
+
+                            <!-- case $1 in
+                            "smile")
+                            echo ":)"
+                            ;;
+                            "sad")
+                            echo ":("
+                            ;;
+                            "laugh")
+                            echo ":D"
+                            ;;
+                            *)
+                            echo "I DONT KNOW THAT ONE YET!"
+                            ;;
+                            esac
+
+                            ==================
+                            :wq
+                            ==============
+                            ubuntu@primary:~/my_bin$ smiley smile = :)
+                            ubuntu@primary:~/my_bin$ smiley laugh = :D
+                            ubuntu@primary:~/my_bin$ smiley im learing cool Linux stuff = I DONT KNOW THAT ONE YET! -->
+                            ======================
+                            +++++++++++++++++++++++
+                            ======Loops & Arrays=======
+                            ++++++++++++++++++++++++++
+                            ========================
