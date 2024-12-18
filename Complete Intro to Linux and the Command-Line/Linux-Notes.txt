@@ -2097,10 +2097,37 @@ THANK YOU + Brian Holt & Frontend Maters
 ==========================
 /////////////////////////
 ============================
+reset setting to redownload package.
+ sudo dpkg --configure -a
+ =================
+ ////show which programs are using the most space on disk
+ sudo du -sh /*
+ ===============
+Identify the Flash Drive:
+ lsblk
+ ==========
+ 
 
 
 
 
+
+ ====
+/usr/bin $ sudo tcpdump --help
+
+====
+///to delete folder 
+~ $ sudo rm -rf /usr/bin/vim.basic = GONE
+
+///list all installed programs
+dpkg --get-selections
+
+//list all installed packages
+dpkg --get-selections | grep -v deinstall
+
+
+//check install programs 
+apt list --installed
 
 
 
