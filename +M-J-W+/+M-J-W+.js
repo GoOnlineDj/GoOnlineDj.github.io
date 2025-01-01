@@ -10,17 +10,13 @@ loadframe.innerHTML = `
             <h4> + Contact + </h4>
         </a>
 
-
         <hr>
-
 
         <img src="images/UnsignedGoldLLC-Gold-Equation.jpg" alt="UnsignedGoldLLC-Gold-Equation"
             title="UnsignedGoldLLC-Gold-Equation">
 
-        <hr>
-
         <div class="change-website">
-            <label for="_id_GoOnlineDj-Websites">+valueINIT</label>
+            <label for="_id_GoOnlineDj-Websites"></label>
             <hr>
 
             <select name="websites" id="_id_GoOnlineDj-Websites">
@@ -555,6 +551,7 @@ And may God continue to bless you
 
         <div class="change-website">
             <label for="_id_GoOnlineDj-Money-Plan">+valueINIT</label>
+            <br>
 
             <select name="Money+Plan" id="_id_GoOnlineDj-Money-Plan">
                 <option>Money+Plan</option>
