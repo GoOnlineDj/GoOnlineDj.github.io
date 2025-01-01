@@ -638,7 +638,7 @@ And may God continue to bless you
             <hr>
 
             <div>
-                <a href="https://respecttheceo.wixsite.com/soulsexisting" target="_blank" rel="noopener">
+                <a href="https://www.G-o-O-n-l-i-n-e-D-j.com" target="_blank" rel="noopener">
                     <img src="./images/1.jpg" alt="soulsexisting" title="soulsexisting">
                 </a>
             </div>
@@ -646,7 +646,7 @@ And may God continue to bless you
             <hr>
 
             <div>
-                <a href="https://respecttheceo.wixsite.com/soulsexisting" target="_blank" rel="noopener">
+                <a href="https://www.G-o-O-n-l-i-n-e-D-j.com" target="_blank" rel="noopener">
                     <img src="./images/2.jpg" alt="soulsexisting" title="soulsexisting">
                 </a>
             </div>
@@ -654,7 +654,7 @@ And may God continue to bless you
             <hr>
 
             <div>
-                <a href="https://respecttheceo.wixsite.com/soulsexisting" target="_blank" rel="noopener">
+                <a href="https://www.G-o-O-n-l-i-n-e-D-j.com" target="_blank" rel="noopener">
                     <img src="./images/3.jpg" alt="soulsexisting" title="soulsexisting">
                 </a>
             </div>
@@ -662,7 +662,7 @@ And may God continue to bless you
             <hr>
 
             <div>
-                <a href="https://respecttheceo.wixsite.com/soulsexisting" target="_blank" rel="noopener">
+                <a href="https://www.G-o-O-n-l-i-n-e-D-j.com" target="_blank" rel="noopener">
                     <img src="./images/4.jpg" alt="soulsexisting" title="soulsexisting">
                 </a>
             </div>
@@ -670,7 +670,7 @@ And may God continue to bless you
             <hr>
 
             <div>
-                <a href="https://respecttheceo.wixsite.com/soulsexisting" target="_blank" rel="noopener">
+                <a href="https://www.G-o-O-n-l-i-n-e-D-j.com" target="_blank" rel="noopener">
                     <img src="./images/5.jpg" alt="soulsexisting" title="soulsexisting">
                 </a>
             </div>
@@ -678,7 +678,7 @@ And may God continue to bless you
             <hr>
 
             <div>
-                <a href="https://respecttheceo.wixsite.com/soulsexisting" target="_blank" rel="noopener">
+                <a hhref="https://www.G-o-O-n-l-i-n-e-D-j.com" target="_blank" rel="noopener">
                     <img src="./images/6.jpg" alt="soulsexisting" title="soulsexisting">
                 </a>
             </div>
