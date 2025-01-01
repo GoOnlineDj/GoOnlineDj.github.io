@@ -1,0 +1,70 @@
+@import url(../valueINITbase.css);
+@import url(../+M-J-W+/+M-J-W+.css);
+
+/* ._c_gallery-img {
+    display: none;
+    max-height: 600px;
+} */
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 7rem;
+}
+
+._c_active {
+    display: block;
+}
+
+._c_swiper-wrapper  {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    /* width: 100%; */
+}
+
+._c_btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+}
+
+._c_btn {
+    background-color: #0a0ee7;
+    border-radius: 5px;
+    border-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+._c_prev {
+    margin-right: 20px;
+}
+
+._c_btn:disabled {
+    background-color: #09e957;
+    cursor: not-allowed;
+}
+
+._c_swiper-slide {
+    text-align: center;
+}
+
+._c_img {
+    max-width: 600px;
+     max-height: 600px;
+ }
+._c_brand {
+    font-size: 50px;
+    margin: 0;
+    cursor: grab;
+    cursor: -webkit-grab;
+    z-index: 100;
+}

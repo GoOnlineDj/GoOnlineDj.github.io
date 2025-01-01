@@ -1,0 +1,287 @@
+@layer base {
+  /* .youtube {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  } */
+
+  :root {
+    /* colors */
+    --black: #000000;
+    --white: #ffffff;
+    --tan: #b6b57b;
+    --green: #31b28a;
+    --lightgreen: #8cdfc5;
+    --red: #ff4404;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+
+    /* font families */
+    --main: "Lato", sans-serif;
+    --heading: "Josefin Sans", sans-serif;
+    --mono: "Fira Mono", monospace;
+
+    /* type scale */
+    --base-size: 1rem;
+    --scale: 1.2;
+    --h1: calc(var(--h2) * var(--scale));
+    --h2: calc(var(--h3) * var(--scale));
+    --h3: calc(var(--h4) * var(--scale));
+    --h4: calc(var(--h5) * var(--scale));
+    --h5: calc(var(--h6) * var(--scale));
+    --h6: var(--base-size);
+    --small: calc(var(--base-size) / var(--scale));
+  }
+
+  /* border box model: https://css-tricks.com/box-sizing/ */
+  html {
+    box-sizing: border-box;
+
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+#_id_iframe iframe {
+  width: 100%;
+  height: 750px; 
+}
+
+#_id_Good-News {
+  /* height:7rem; */
+  background-color: var(--black);
+  color: var(--green);
+  font-size: var(--h3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 147px;
+}
+
+/* 
+@keyframes spin {
+    to {
+      transform: rotateZ(360deg);
+    }
+  }
+  
+  ._c_CROWN {
+    animation: 1s spin linear infinite;
+  } */
+
+  ._c_CROWN {
+    display: block;
+   }
+
+button {
+  width: 60px;
+  height: 60px;
+  font-size: xx-large;
+  border-radius: 10px 10px;
+  background-color: var(--white);
+
+}
+
+button:hover {
+  color: var(--red);
+}
+
+  .white {
+    background-color: var(--white);
+  }
+
+  .black {
+    background-color: var(--black);
+  }
+
+  .tan {
+    background-color: var(--tan);
+  }
+
+  .green {
+    background-color: var(--green);
+  }
+
+  .lightgreen {
+    background-color: var(--lightgreen);
+  }
+
+  .red {
+    background-color: var(--red);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--heading);
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: var(--h1);
+  }
+
+  h2 {
+    font-size: var(--h2);
+  }
+
+  h3 {
+    font-size: var(--h3);
+  }
+
+  h4 {
+    font-size: var(--h4);
+  }
+
+  h5 {
+    font-size: var(--h5);
+  }
+
+  h6 {
+    font-size: var(--h6);
+  }
+
+  .mono {
+    font-family: var(--mono);
+  }
+
+  a {
+    color: var(--green);
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+img {
+    max-width: 100%;
+    text-align: center;
+    align-self: center;
+  }
+
+  div {
+    display: inline;
+    padding: 0;
+    margin: 0;
+  
+}
+  hr {
+    color: yellow;
+  }
+
+  /* ++++++++++++++++++++++++++++++++++++ */
+
+
+ h1 {
+    background-color: yellow;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer header {
+  #_id_GoOnlineDj-body {
+    background-color: var(--black);
+    background-image: url(./Swiper/images/GoOnlineDj.png);
+    background-repeat:round; 
+    text-align: center;
+  }
+
+  #_id_GoOnlineDj-container {
+    background: transparent;
+  }
+
+
+  ._c_header {
+    display: inline;
+    flex-flow: row wrap;
+    align-items: baseline;
+    justify-content: space-evenly;
+    color: var(--green);
+  }
+
+  ._c_header nav {
+    font-family: var(--heading);
+    font-size: var(--h3);
+    margin: 0;
+    padding: 0;
+    /* border: 3px solid pink; */
+  }
+
+  ._c_header ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: var(--plum);
+    border: 3px solid greenyellow;
+    border-radius: 20px 20px;
+  }
+
+  ._c_header a {
+    text-decoration: none;
+    /* border: 3px solid rgb(21, 205, 104); */
+    margin: 0;
+    padding: 0;
+    color: var(--green);
+  }
+
+  ._c_header a:hover {
+    color: yellow;
+  
+  }
+
+  ._c_header a:hover svg {
+    fill: yellow;
+  }
+  ._c_header svg {
+    width: 30px;
+    /* ? */
+    fill: var(--green);
+    align-self: baseline;
+    display: block;
+  }
+  ._c_header img {
+    width: 30px;
+    align-self: center;
+  }
+}
+
+@layer footer {
+  ._c_footer {
+    text-align: center;
+    background-size: cover;
+    /* max-width: 1200px;
+    height: 2rem;
+    margin: auto; */
+    padding: 0;
+    margin: 0;
+  }
+
+  ._c_footer ul {
+    list-style-type: none;
+    color: purple;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1rem;
+  }
+
+  ._c_footer svg {
+    width: 200px;
+    fill: green;
+  }
+  ._c_footer svg:hover {
+    width: 300px;
+    fill: yellow;
+  }
+}

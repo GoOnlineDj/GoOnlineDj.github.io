@@ -1,0 +1,88 @@
+@import url(../valueINITbase.css);
+
+
+#_id_iframe {
+    grid-area: iframe;
+    padding: 0;
+    margin: 0;
+}
+
+._c_Apple-Music-Video-back-button {
+    grid-area: center-lt;
+}
+
+._c_Apple-Music-Video-refresh-button {
+    grid-area: center;
+    padding: 0;
+    margin: 0;
+}
+
+._c_Apple-Music-Video-forward-button {
+    grid-area: center-rt;
+    padding: 0;
+    margin: 0;
+}
+
+._c_Apple-Music-Video-alphabet-buttons-left {
+    grid-area: left;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+    }
+
+
+
+._c_Apple-Music-Video-alphabet-buttons-right {
+    grid-area: right;
+    display: inline-flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+#_id_Good-News {
+    grid-area: GoodNews;
+    padding: 0;
+    margin: 0;
+    color: yellow;
+}
+
+._c_Apple-Music-grid-buttons {
+    grid-area: _c_Apple-buttons ;
+}
+
+._c_Apple-Music-grid {
+    display: grid;
+    justify-content: flex-start;
+    align-items: end;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    grid-template-areas: 
+     'left _c_header _c_header _c_header _c_header _c_header _c_header right' 
+        'left iframe iframe iframe iframe iframe iframe right'
+        'left iframe iframe iframe iframe iframe iframe right'
+        'left iframe iframe iframe iframe iframe iframe right'
+        'left GoodNews GoodNews GoodNews GoodNews GoodNews GoodNews right'
+        '_c_Apple-buttons _c_Apple-buttons _c_Apple-buttons _c_Apple-buttons _c_Apple-buttons _c_Apple-buttons _c_Apple-buttons _c_Apple-buttons' ;
+}
+
+
+button {
+    border: 3px solid green;
+    /* padding: 0;
+    margin: 0;
+    height: auto; */
+}
+
+._c_header {
+    grid-area: _c_header;
+}

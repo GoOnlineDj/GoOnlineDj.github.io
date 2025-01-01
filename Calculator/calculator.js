@@ -3,7 +3,7 @@ let buffer = "0";
 let symbolPressValue = 0;
 let previousOperator = null;
 
-const screen = document.querySelector(".calculator-index-wrapper .screen");
+const screen = document.querySelector("._c_screen");
 
 
 
@@ -127,7 +127,7 @@ function flushOperation(intBuffer) {
 
 
 function valueInit() {
-    document.querySelector(".calculator-index-wrapper .calc-buttons").addEventListener("click", function (event) {
+    document.querySelector("._c_calc-buttons").addEventListener("click", function (event) {
         buttonClick(event.target.innerText);
     });
 }
