@@ -91,3 +91,14 @@ button {
 ._c_header {
     grid-area: _c_header;
 }
+
+#_id_GoOnlineDj-Websites {
+ text-align: center;
+    padding: 0.1rem;
+    margin: 0;
+}
+
+._c_MJW-contact {
+    padding: 0.1rem;
+    margin: 0 auto;
+}

@@ -7,7 +7,7 @@ loadframe.innerHTML = `
             <hr>
 
         <a href="../Contact/Contact.html">
-            <h4> + Contact + </h4>
+            <h4 class="_c_MJW-contact"> + Contact + </h4>
         </a>
 
         <hr>
