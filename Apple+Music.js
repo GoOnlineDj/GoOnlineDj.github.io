@@ -8432,6 +8432,8 @@ function createDateFromBirthday(birthday) {
 
 function sortArtistsByUpcomingBirthday(artists) {
     const today = new Date();
+    today.setHours(0, 0, 0, 0); // Set time to the start of the day
+
     return artists.slice().sort((a, b) => {
         if (!a.birthday || !a.birthday[0]) return 1;
         if (!b.birthday || !b.birthday[0]) return -1;
