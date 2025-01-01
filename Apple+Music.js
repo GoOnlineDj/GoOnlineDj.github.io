@@ -8258,6 +8258,13 @@ Appleiframe.appendChild(iframe);
 
 
 
+let currentUrl = defaultUrl;
+let a = 0;
+let s = 0;
+let autoLoadInterval;
+
+
+
 async function AppleMusicForward() {
     if (appleMusic[a].songs.length > s + 1) {
         s++;
@@ -8285,10 +8292,7 @@ async function AppleMusicBack() {
     }
 } 
 
-let currentUrl = defaultUrl;
-let a = 0;
-let s = 0;
-let autoLoadInterval;
+
 
 document.getElementById("_id_iframe").addEventListener("click", () => {
     clearInterval(autoLoadInterval);
@@ -8327,95 +8331,6 @@ alphabet_number.forEach(letter => {
 
 
 
-
-
-
-
-
-
-
-
-function logAllBirthdays(appleMusic) {
-    const today = new Date();
-
-    // Function to create a Date object from the birthday object
-    const createDateFromBirthday = (birthday) => {
-        if (!birthday || !birthday.month || !birthday.day || !birthday.year) return null;
-        return new Date(birthday.year, new Date(`${birthday.month} 1`).getMonth(), birthday.day);
-    };
-
-    // Sort artists by upcoming birthday
-    const sortedArtists = appleMusic.filter(artist => artist.birthday).sort((a, b) => {
-        const aBirthday = createDateFromBirthday(a.birthday[0]);
-        const bBirthday = createDateFromBirthday(b.birthday[0]);
-
-        if (!aBirthday) return 1;
-        if (!bBirthday) return -1;
-
-        const aNextBirthday = new Date(today.getFullYear(), aBirthday.getMonth(), aBirthday.getDate());
-        const bNextBirthday = new Date(today.getFullYear(), bBirthday.getMonth(), bBirthday.getDate());
-
-        if (aNextBirthday < today) aNextBirthday.setFullYear(today.getFullYear() + 1);
-        if (bNextBirthday < today) bNextBirthday.setFullYear(today.getFullYear() + 1);
-
-        return aNextBirthday - bNextBirthday;
-    });
-}
-
-    /////////////////////////////////////////////////////////////////
-
-    // Log all birthdays
-//     sortedArtists.forEach(artist => {
-//         artist.birthday.forEach(birthday => {
-//             console.log(`Artist: ${artist.artist}, Birthday: ${birthday.month} ${birthday.day}, ${birthday.year}`);
-//         });
-//     });
-// }
-
-function logAllBirthdays(appleMusic) {
-    const today = new Date();
-
-    // Function to create a Date object from the birthday object
-    const createDateFromBirthday = (birthday) => {
-        if (!birthday || !birthday.month || !birthday.day || !birthday.year) return null;
-        return new Date(birthday.year, new Date(`${birthday.month} 1`).getMonth(), birthday.day);
-    };
-
-    // Sort artists by upcoming birthday
-    const sortedArtists = appleMusic.slice().sort((a, b) => {
-        if (!a.birthday || !a.birthday[0]) return 1;
-        if (!b.birthday || !b.birthday[0]) return -1;
-
-        const aBirthday = createDateFromBirthday(a.birthday[0]);
-        const bBirthday = createDateFromBirthday(b.birthday[0]);
-
-        if (!aBirthday) return 1;
-        if (!bBirthday) return -1;
-
-        const aNextBirthday = new Date(today.getFullYear(), aBirthday.getMonth(), aBirthday.getDate());
-        const bNextBirthday = new Date(today.getFullYear(), bBirthday.getMonth(), bBirthday.getDate());
-
-        if (aNextBirthday < today) aNextBirthday.setFullYear(today.getFullYear() + 1);
-        if (bNextBirthday < today) bNextBirthday.setFullYear(today.getFullYear() + 1);
-
-        return aNextBirthday - bNextBirthday;
-    });
-
-    // Log all birthdays, including artists without birthdays
-    sortedArtists.forEach(artist => {
-        if (artist.birthday && artist.birthday.length > 0) {
-            artist.birthday.forEach(birthday => {
-                console.log(`Artist: ${artist.artist}, Birthday: ${birthday.month} ${birthday.day}, ${birthday.year}`);
-            });
-        } else {
-            console.log(`Artist: ${artist.artist}, Birthday: Not available`);
-        }
-    });
-}
-
-
-// Call the function to log all birthdays
-logAllBirthdays(appleMusic);
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -8458,11 +8373,18 @@ function sortArtistsByUpcomingBirthday(artists) {
 
 const sortedAppleMusic = sortArtistsByUpcomingBirthday(appleMusic);
 
+
+///////////////////////////////////////
+
 function updateIframeSrc() {
     const artist = sortedAppleMusic[currentArtistIndex];
     const song = artist.songs[currentSongIndex];
     iframe.src = song.src;
 }
+
+
+// Start cycling through artists and songs
+autoLoadInterval = setInterval(cycleThroughArtists, 3000);
 
 function cycleThroughArtists() {
     currentSongIndex = (currentSongIndex + 1) % sortedAppleMusic[currentArtistIndex].songs.length;
@@ -8472,10 +8394,29 @@ function cycleThroughArtists() {
     updateIframeSrc();
 }
 
+//////////////////////////////////////////////////
+
+
+
 // Initial update to include the first item in the list
 updateIframeSrc();
 
-// Start cycling through artists and songs
-autoLoadInterval = setInterval(cycleThroughArtists, 3000);
+//////////////////////////////////////////////
+
+    // Log all birthdays, including artists without birthdays
+    sortedAppleMusic.forEach(artist => {
+        if (artist.birthday && artist.birthday.length > 0) {
+            artist.birthday.forEach(birthday => {
+                console.log(`Artist: ${artist.artist}, Birthday: ${birthday.month} ${birthday.day}, ${birthday.year}`);
+            });
+        } else {
+            console.log(`Artist: ${artist.artist}, Birthday: Not available`);
+        }
+    });
 
 
+//SPECIAL THANKS TO MICROSOFT COPILOT FOR HELPING ME WITH THIS CODE
+//SPECIAL THANKS TO MICROSOFT COPILOT FOR HELPING ME WITH THIS CODE
+//SPECIAL THANKS TO MICROSOFT COPILOT FOR HELPING ME WITH THIS CODE
+//SPECIAL THANKS TO MICROSOFT COPILOT FOR HELPING ME WITH THIS CODE
+//SPECIAL THANKS TO MICROSOFT COPILOT FOR HELPING ME WITH THIS CODE
