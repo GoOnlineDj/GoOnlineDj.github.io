@@ -3,6 +3,9 @@
   background-color: black;
   color: white;
   text-align: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 ._c_screen {
