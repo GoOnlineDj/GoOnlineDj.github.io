@@ -9,7 +9,9 @@
     height: 750px; 
     background-color: black; 
     color: white; 
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 ._c_Apple-Music-Video-back-button {
