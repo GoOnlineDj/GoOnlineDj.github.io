@@ -61,6 +61,7 @@
   padding: 0;
   margin: 0;
   color: yellow;
+  border-radius: 20px;
 }
 
 /* 
@@ -226,7 +227,8 @@ img {
     list-style-type: none;
     background-color: var(--plum);
     border: 3px solid greenyellow;
-    border-radius: 20px 20px;
+    border-radius: 20px;
+  
   }
 
   ._c_header a {
