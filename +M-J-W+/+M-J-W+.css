@@ -18,7 +18,11 @@ pre {
     white-space: pre-wrap;
     word-wrap: break-word;
 }
-    
+  
+._c_poems {
+    word-break: break-word;
+}
+
 ._c_Apple-Music-Video-back-button {
     grid-area: center-lt;
 }

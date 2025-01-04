@@ -331,7 +331,7 @@ And may God continue to bless you
 
         <hr>
 
-        <h3>
+        <h3 class="_c_poems">
             +I+Kiss+My+Girls+Real+Good +BY+ +GirlMeetGuy+
         </h3>
 
