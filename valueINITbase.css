@@ -232,6 +232,7 @@ img {
     margin: 0;
     padding: 0;
     color: var(--green);
+    text-align: center;
   }
 
   ._c_header a:hover {
