@@ -6,11 +6,18 @@ document.getElementById("_id_frame").innerHTML = `<div class="contact-body">
     <div class="contact-index-wrapper">
      
         <section>
+        <hr>
             <div style="text-align: center;">
                 <a href="https://www.cnn.com/profiles" target="_blank">
-                    <h1> + Contact + </h1>
+                    <h4 class="_c_Contact"> + Contact + </h4>
                 </a>
             </div>
+
+        <hr>
+
+        <img src="./Images/UnsignedGoldLLC-Gold-Equation.jpg.webp" alt="UnsignedGoldLLC-Gold-Equation"
+            title="UnsignedGoldLLC-Gold-Equation">
+
         </section>
         <hr>
          <section>
