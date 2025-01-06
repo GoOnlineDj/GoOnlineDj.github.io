@@ -10,7 +10,6 @@
     background-color: black; 
     color: white; 
     overflow: scroll;
-    border: 10px solid green;
 }
 
 iframe {
