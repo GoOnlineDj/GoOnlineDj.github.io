@@ -1066,7 +1066,7 @@ value2@secondary:~$
                         Wget = downloading a file from the internet or it could also be
                         from a network.
                         =====================
-                        <!-- wget https://raw.githubusercontent.com/btholt/bash2048/master/bash2048.sh = to download GAME FILE  -->
+                        <!-- wget https://raw.githubusercontent.com/btholt/bash2048/master/bash2048.sh = to cl GAME FILE  -->
                         = --2024-12-15 07:11:24--
                         https://raw.githubusercontent.com/btholt/bash2048/master/bash2048.sh
                         Resolving raw.githubusercontent.com
