@@ -271,24 +271,51 @@ else return;
       else backSpaceDelete();
     });
   });
-  
-////////////////////////////////////////////////////////////////////////////////////////////
-
-  const alphabetButtons = document.querySelectorAll("._c_Apple-Music-Video-alphabet-buttons");
-  alphabetButtons.forEach(button => {
-  button.addEventListener("click", (event) => {
-    if (done) {
-    return;
-    }
-      const value = event.target.innerText;
-      console.log("event 007", value);
-      userInputData(value);
-    });
- });
 
 /////////////////////////////////////////////////////////////////////////////////////////////
+const alphabetButtons = document.querySelectorAll("._c_Apple-Music-Video-alphabet-buttons");
+
+function handleButtonClick(event) {
+  if (done) {
+    return;
+  }
+  const value = event.target.innerText;
+  console.log("event 007", value);
+  userInputData(value);
+  window.location.href = "./+M-J-W+.html#word-game";
+}
+
+// Add click event listeners to all alphabet buttons
+alphabetButtons.forEach(button => {
+  button.addEventListener("click", handleButtonClick);
+});
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+const numberButtons = document.querySelectorAll("._c_Apple-Music-Video-numbers");
+
+function handleNumberButtonClick(event) {
+  if (done) {
+    return;
+  }
+  window.location.href = "./+M-J-W+.html#_id_web-development";
+}
+
+// Add click event listeners to all number buttons
+numberButtons.forEach(button => {
+  button.addEventListener("click", handleNumberButtonClick);
+});
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
 
 }
 
 
 valueINIT();
+
+
+
+
