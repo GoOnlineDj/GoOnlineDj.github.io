@@ -296,9 +296,6 @@ alphabetButtons.forEach(button => {
 const numberButtons = document.querySelectorAll("._c_Apple-Music-Video-numbers");
 
 function handleNumberButtonClick(event) {
-  if (done) {
-    return;
-  }
   window.location.href = "./+M-J-W+.html#_id_web-development";
 }
 
