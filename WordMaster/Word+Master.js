@@ -241,6 +241,7 @@ else return;
   const submitWord = document.querySelectorAll("._c_Apple-Music-Video-submit");
   submitWord.forEach(button => {
     button.addEventListener("click", () => {
+      window.location.href = "./+M-J-W+.html#word-game";
       if (done) {
         return;
       }
@@ -260,6 +261,7 @@ else return;
   const deleteWord = document.querySelectorAll("._c_Apple-Music-Video-delete");
   deleteWord.forEach(button => {
     button.addEventListener("click", () => {
+      window.location.href = "./+M-J-W+.html#word-game";
       if (done) {
         return;
       }
