@@ -17,23 +17,7 @@ loadframe.innerHTML = `
     <div class="swiper-wrapper">
         
         <div class="swiper-slide"> <img src="./images/17.jpg" alt="Michael Junior Williams" /> </div>
-        <div class="swiper-slide"><img src="./images/Copilot=Twin=AI.jpg" alt="CopilotTwin" /></div>
-        <div class="swiper-slide"><img src="./images/Copilot=Twin.JPG" alt="CopilotTwin" /></div> 
-         <div class="swiper-slide"> <img src="./images/17.jpg" alt="Michael Junior Williams" /> </div>
-        <div class="swiper-slide"><img src="./images/Copilot=Twin=AI.jpg" alt="CopilotTwin" /></div>
-        <div class="swiper-slide"><img src="./images/Copilot=Twin.JPG" alt="CopilotTwin" /></div> 
-         <div class="swiper-slide"> <img src="./images/17.jpg" alt="Michael Junior Williams" /> </div>
-        <div class="swiper-slide"><img src="./images/Copilot=Twin=AI.jpg" alt="CopilotTwin" /></div>
-        <div class="swiper-slide"><img src="./images/Copilot=Twin.JPG" alt="CopilotTwin" /></div> 
-         <div class="swiper-slide"> <img src="./images/17.jpg" alt="Michael Junior Williams" /> </div>
-        <div class="swiper-slide"><img src="./images/Copilot=Twin=AI.jpg" alt="CopilotTwin" /></div>
-        <div class="swiper-slide"><img src="./images/Copilot=Twin.JPG" alt="CopilotTwin" /></div> 
-         <div class="swiper-slide"> <img src="./images/17.jpg" alt="Michael Junior Williams" /> </div>
-        <div class="swiper-slide"><img src="./images/Copilot=Twin=AI.jpg" alt="CopilotTwin" /></div>
-        <div class="swiper-slide"><img src="./images/Copilot=Twin.JPG" alt="CopilotTwin" /></div> 
-         <div class="swiper-slide"> <img src="./images/17.jpg" alt="Michael Junior Williams" /> </div>
-        <div class="swiper-slide"><img src="./images/Copilot=Twin=AI.jpg" alt="CopilotTwin" /></div>
-        <div class="swiper-slide"><img src="./images/Copilot=Twin.JPG" alt="CopilotTwin" /></div> 
+
         
         <div class="btns">
         <div class="swiper-button-prev"></div>
