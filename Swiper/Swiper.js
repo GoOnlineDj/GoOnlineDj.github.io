@@ -8,7 +8,7 @@ document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
     // Swiper
     new Swiper(".swiper", {
         speed: 500,
-        effect: "flip",
+        effect: "fade",
         loop: true,
         spaceBetween: 100,
         navigation: {
