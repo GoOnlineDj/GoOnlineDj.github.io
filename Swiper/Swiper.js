@@ -16,7 +16,7 @@ document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
             prevEl: ".swiper-button-prev",
         },
         autoplay: {
-            delay: 5000, // Auto flip every 5 seconds
+            delay: 7000, // Auto flip every 7 seconds
             disableOnInteraction: false,
         },
     });
