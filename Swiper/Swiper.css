@@ -12,15 +12,36 @@ img {
 }
 
 
-._c_brand {
+._c_swiper-wrapper  {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    /* width: 100%; */
+}
+
+
+
+
+._c_swiper-slide {
+    text-align: center;
+}
+
+
+
+._c_space-ship {
     position: relative;
     display: block;
     font-size: 100px;
     background-color: transparent;
     margin: 0;
+    padding: 0;
     cursor: grab;
     cursor: -webkit-grab;
     z-index: 100;
+    object-fit: contain;
 }
 
 

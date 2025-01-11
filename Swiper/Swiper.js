@@ -4,37 +4,10 @@ document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
   }, 1000);
 
 
-const loadframe = document.getElementById("_id_frame");
-loadframe.innerHTML = `
-
-    <div class="_c_brand" style="text-align: center;">
-                                🛸
-        </div>
-
-   
-    <div class="swiper-container">
-    
-    <div class="swiper-wrapper">
-        
-        <div class="swiper-slide"> <img src="./images/17.jpg" alt="Michael Junior Williams" /> </div>
-
-        
-        <div class="btns">
-        <div class="swiper-button-prev"></div>
-        
-        <div class="swiper-button-next"></div>
-    </div>    
-      
-    </div>
-   
   
+    // Swiper
 
-    `;    
-
-
-
-
-    new Swiper(".swiper-container", {
+    new Swiper("._c_swiper-container", {
 
         speed: 400,
         effect: "flip",
@@ -51,7 +24,7 @@ loadframe.innerHTML = `
     
     const { styler, spring, listen, pointer, value } = window.popmotion;
     
-    const ball = document.querySelector('._c_brand');
+    const ball = document.querySelector('._c_space-ship');
     const divStyler = styler(ball);
     const ballXY = value({ x: 0, y: 0 }, divStyler.set);
     
