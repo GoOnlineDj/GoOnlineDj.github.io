@@ -6,7 +6,7 @@ document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
 
   
     // Swiper
-    new Swiper("._c_swiper-container", {
+    new Swiper(".swiper", {
         speed: 400,
         effect: "flip",
         loop: true,

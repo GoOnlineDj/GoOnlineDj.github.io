@@ -1,32 +1,11 @@
 @import url(../valueINITbase.css);
 @import url(../+M-J-W+/+M-J-W+.css);
 
-/* ._c_gallery-img {
-    display: none;
-    max-height: 600px;
-} */
+
 
 img {
     max-width: 100%;
     max-height: 80%;
-}
-
-
-._c_swiper-wrapper  {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    align-self: center;
-    /* width: 100%; */
-}
-
-
-
-
-._c_swiper-slide {
-    text-align: center;
 }
 
 
@@ -58,8 +37,3 @@ img {
     scroll-behavior: smooth;
 }
 
-
-span {
-    margin: 0;
-    padding: 0;
-}
