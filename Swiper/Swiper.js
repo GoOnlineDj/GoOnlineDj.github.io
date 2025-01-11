@@ -7,7 +7,7 @@ document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
   
     // Swiper
     new Swiper(".swiper", {
-        speed: 400,
+        speed: 1000,
         effect: "flip",
         loop: true,
         spaceBetween: 100,
@@ -16,7 +16,7 @@ document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
             prevEl: ".swiper-button-prev",
         },
         autoplay: {
-            delay: 3000, // Auto flip every 3 seconds
+            delay: 5000, // Auto flip every 5 seconds
             disableOnInteraction: false,
         },
     });
