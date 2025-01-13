@@ -865,6 +865,8 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
     =============================
     ||||||||||||||||||||||||||||||||||||||||||
     echo hi $(cat < mjwlog.txt) user
+    echo $(whoami) $(whoami) $(whoami)
+    = ubuntu ubuntu ubuntu
     ||||||||||||||||||||||||||||||||||||||||||
     ===========================================
     echo hi `whoami` how are you today? 
@@ -874,56 +876,113 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
     $() 
     = much better and you can nest them as well
     ===================================
+    ===================================
+    ===================================
     |||||||||||||||||||||||||||||||||||||||||||||||||
     =================================================
     +++++++++++++++++++++++++++++++++
-    <!-- =========SSH & Secondary Machine========== -->
+    //////=========SSH & Secondary Machine==========////
     SSH = Secure Shell and allows you to connect
-    from one computer to another computer. also allows you to remotely execute commands on a different
+    from one computer to another computer. also allows 
+    you to remotely execute commands on a different
     computer.
     ===========================================
     +++++++++++++++++++++++++++++++++++++++
     =======starting a second VM using multipass=========
-    <!-- multipass launch --name secondary = Launched: secondary -->
+    +++++++++++++++++++++++++++++++++++++++
+      ===========================================
+    +++++++++++++++++++++++++++++++++++++++
+    =======starting a second VM using multipass=========
+    +++++++++++++++++++++++++++++++++++++++
+    ======OPEN A NEW SHELL TO RUN COMMANDS========
+     ======OPEN A NEW SHELL TO RUN COMMANDS========
+    multipass launch --name secondary 
+    = Launched: secondary -->
+    ==========
     multipass shell secondary
-    ==============================
-    ubuntu@secondary:~$ = Secondary Ubuntu VM
-    ==================================
+    //to enter the shell of the secondary VM//
+    ubuntu@secondary:~$ 
+    = ///Secondary Ubuntu VM//
+    ////==============================////////
+    ////==================================/////////
+    /////==============================///////////
+    //////==================================///////
+    =========SSH & Secondary Machine==========
     ++++++CREATE A USER++++++
-    sudo useradd -s /bin/bash -m -g ubuntu value2
+    ++++++CREATE A USER++++++
+    ++++++CREATE A USER++++++
+    sudo useradd -s /bin/bash -m -g ubuntu GirlMeetGuy
+    ===========================================
+    /bin/bash = default shell to use
     -s = default shell when creating a user
     -m = auto create the user a home folder
-    -g - give user group so they have the same permissions as other members in the group.
+    -g - give user group so they have the same permissions
+     as other members in the group.
     ===========================================
-    cat /etc/passwd = value2:x:1001:1000::/home/value2:/bin/bash
-    sudo passwd value2 = New password: = 200
+    /////CHECK IF USER WAS CREATED/////
+    cat /etc/passwd 
+    = GirlMeetGuy:x:1001:1000::/home/GirlMeetGuy:/bin/bash
+    ===============
+    /////SET PASSWORD FOR USER/////
+    sudo passwd GirlMeetGuy
+    = New password: = 200
     passwd: password updated successfully
     ================================
     whoami
     ubuntu
-    su value2
+    su GirlMeetGuy
     Password: = 200
-    value2@secondary:/home/ubuntu$
+    GirlMeetGuy@secondary:/home/ubuntu$
     =================================
-    cd .. = value2@secondary:/home$
-    ls = ubuntu value2
+    cd .. 
+    = GirlMeetGuy@secondary:/home$
+    ========
+    ls 
+    = ubuntu GirlMeetGuy
     ======================
-    SSH key = is like cryptographic key that basically creates a private version and a public version of
+    SSH key = is like cryptographic key that basically 
+    creates a private version and a public version of
     itself =
-    the PRIVATE VERSION YOU NEVER REVEAL TO ANYONE and the public version you share with others.
-    ++Public and private version of the key allows services to do a handshake with eachother but they never
-    have to
-    reveal their private keys BUT THEY CAN VERIFY THAT THE OTHER PARTY HAS THE PRIVATE KEY THAT THEY SAY
-    THEY HAVE.
+    the PRIVATE VERSION YOU NEVER REVEAL TO ANYONE 
+    and 
+    the public version you share with others.
+    ==========
+    +++++++++++++++++++++++++++++++++++++++++++++
+    +++++++++++++++++++++++++++++++++++++++++++++
+    ++Public and private version of the key allows 
+    services to do a handshake with eachother but 
+    they never have to reveal their private keys 
+    BUT THEY CAN VERIFY THAT THE OTHER PARTY HAS THE 
+    PRIVATE KEY THAT + THEY SAY THEY HAVE.
+    +++++++++++++++++++++++++++++++++++++++++++++
+    +++++++++++++++++++++++++++++++++++++++++++++
     ===================================
     =========Generating an SSH KEY==============
-    <!-- ssh-keygen -t rsa = Generating public/private rsa key pair. -->
-    Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa): = Enter or change directory
-    Enter passphrase (empty for no passphrase): = enter password to use key everytime key is accessed =
-    leaving
-    blank for now
+    =========Generating an SSH KEY==============
+    =========Generating an SSH KEY==============
+    ++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++
+    ////will be connecting to the secondary computer////
+    ///////from the primary computer/////
+    /////generating an SSH KEY/////on primary computer///
+    ||||||||||||||||||||||||||||||||||||||||||||||
+    ////From the primary computer////
+    ssh-keygen -t rsa 
+    = Generating public/private rsa key pair. 
+    =============================================
+    |||||Private key is stored in id_rsa and ||||||||||
+    we will keep that secret. on the primary computer//
+    |||||||||||||||||||||||||||||||||||||||||||||||
+    Enter file in which to save the key 
+    (/home/ubuntu/.ssh/id_rsa): 
+    = Enter or change directory
+    = leaving blank for now
+    ===================================
+    Enter passphrase (empty for no passphrase): 
+    = enter password to use key everytime key is 
+    accessed = leaving password blank for now
     Enter same passphrase again: = BLANK FOR NOW
-
+    |||||||||||||||||||||||||||||||||||||||||||||||
     The key fingerprint is:
     SHA256:63QObTraBKmhvBrmOBNemdab3VomBoCE046ZvMhFp8E ubuntu@primary
     The key's randomart image is:
@@ -939,52 +998,118 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
     |o=. .o=.. |
     +----[SHA256]-----+
 
-
+    ===================================
+   +++++++++++++++++++++++++++++++++++++++++++++
     ============================================
     cd .ssh
-    ls = authorized_keys id_rsa id_rsa.pub
+    =====
+    ls 
+    = authorized_keys id_rsa id_rsa.pub
+    =============
     id_rsa = private key = secret
     id_rsa.pub = public key
     ==================================
-    value2@secondary:/home$ cd value2 = change to value2 home directry
+    ||||||||||||||||||||||||||||||||||||||||
+    +++++++++++++++++++++++++++++++++++++++++++++
+    +++++++++++++++++++++++++++++++++++++++++++++
+    +++++++++++++++++++++++++++++++++++++++++++++
+    ||||||||||||||||||||||||||||||||||||||||
+    \\\\\\ON SECONDARY COMPUTER\\\\\\\\
+    \\\\\\ ON SECONDARY COMPUTER\\\\\\\\
+    ==GirlMeetGuy@secondary:/home$ ==FROM HOME==
+    cd GirlMeetGuy 
+    GirlMeetGuy@secondary:~$ 
+    cd GirlMeetGuy = change to GirlMeetGuy home directry
+    ===============
     mkdir ~/.ssh
-    ls -lash = 4.0K drwxr-xr-x 2 value2 ubuntu 4.0K Dec 14 20:24 .ssh
+    ======
+    ls -lash 
+    = 4.0K drwxr-xr-x 2 GirlMeetGuy ubuntu 4.0K 
+    Dec 14 20:24 .ssh
     ===========================
     cd .ssh
     ================
-    ls -lash = total 8.0K
-    4.0K drwxr-xr-x 2 value2 ubuntu 4.0K Dec 14 20:24 .
-    4.0K drwxr-x--- 3 value2 ubuntu 4.0K Dec 14 20:24 ..
+    ///from within new .ssh folder that was created///
+    ls -lash 
+    = total 8.0K
+    4.0K drwxr-xr-x 2 GirlMeetGuy ubuntu 4.0K Dec 14 20:24 .
+    4.0K drwxr-x--- 3 GirlMeetGuy ubuntu 4.0K Dec 14 20:24 ..
     =======================================
-    ====As value2 from /.ssh folder===
-    vi authorized_keys = "authorized_keys" [New] 0,0-1 All
-    ======READY TO EDIT INTO VI=====
-    +++++switched to primary shell to get pub key info+++++
-    from value2 /.ssh folder
-    cat id_rsa.pub =
-    <!-- ssh-rsa
-    AAAAB3NzaC1yc2EAAAADAQABAAABgQDOLqrza9GtaU7oDn/mf94mZjOCHUJF01As+4q209f1PbzVNW+T1o9Ra5Gbz0IlaEdWnFMqI13XUcYV/Of5shxUsj0iKXe0XP+326BKmKi8dN+serBvKrbJ4uq0qoR9GLcNnjJybEpFzkSKA4T9/CUrrpy4MBk73kqaz7cg161Xd6uPkHGH5UwMg7i8pVns0JnnfygtMZNsU0ctnuEJ0vHkZPf9qp1fr4qtns3knIVw+6mEEMOpOKXZWJxzflWssCUP0dEjo7/nzenmd/s0MDAERX44ICfkBP8isQ3oTVp+VFy3oO4Fo7p7D3DShGQll19Z29RvIK+blJ4ZWA7x6RedO3SZAOE0Fn+n4tybCzxwTiK1/4cFPqsyHOmXKkqa6B26iZ+kkXFAXM27bebfNsycAV4sAH+IDZOp7Kwh3NxlN2ZMtcJjYQLLQgTmtcw1w2r+6jimLay0odJ3k8C4Ojohqc0ue7BuohPk+J27bqKi0lOA89j7Oi7ELBRuxGaVMj8=
-    ubuntu@primary -->
+    ====As GirlMeetGuy from /.ssh folder===
+    ////enter in vi editor to enter key info////
+    ======READY TO ADD KEY INFO INTO VI=====
+    ======READY TO ADD KEY INFO INTO VI=====
+    =================================
+    vi authorized_keys 
+    = "authorized_keys" [New] 0,0-1 All
+    ======READY TO ADD KEY INFO INTO VI=====
+    ======READY TO ADD KEY INFO INTO VI=====
+    +++switched to primary shell to get pub key info++++
+    +++switched to primary shell to get pub key info++++
+    +++switched to primary shell to get pub key info++++
+    +++switched to primary shell to get pub key info++++
+    ===switched to primary shell to get pub key info===
+    ================================
+    from Ubuntu /.ssh folder
+    =======
+    cat id_rsa.pub 
+    =
+  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCdf20N/Kw5qYimx2oCjJ6m7zZV8zV4YYcu7S0ssVAiC7lUp3AlG+R+ux8YC88RkfGT0wuTZFcjEyjA1aVpXdSrj0ROGKs9Du76JD+zZZ6MQgU4JxwxqJNkW9gff6XquFfQaaC7ZEfg8ErEhw/VHKFwDft6zj6PfefRKuwqWKrPEirSzojWkq7QorKd0FsA4lLOxhwKU1LUAie8H+RHttwiGqI4Mox0rbAWG46g5Vvnboc3z9HmJREKK5txUV8eVA9Q9yoL48e3ZneJd/rZs1bIwNWGGekWALa6f19kWu2dJbmlCk+nyjBUenbTxnuqsR3lkvKoOfq/fndPr835Fp2A0HTDSd1qDbhMKIA735dcQKs0roNGmm1IdPAQPLHdO2d0TdNk8385rAo6dNDvgGn5Cx2KI35eomXnmThaxTKZVFFFhJtFwoktm+kHxLQdThVR5s/maSwPRXhAGuFvb3pFCyfYHeeK3PdB/oVSN9/9GZG55eZoPdWrEDIbG3wNpxM= ubuntu@primary
     ===========================================
-    ==Here is a public SSK KEY that if someone can verify that this is their key tht they have with they own
-    private
-    key allow them to log into this computer so its basically like a user name and password for a user.
+    |||||||||||||||||||||||||||||||||||||||||||||||
+    ++++++++++++++++++++++++++++++++++++++++++++++++
+    ===++++++++PASTE THE PUBLIC KEY INTO VI ON SECONDARY COMPUTER===++++++++++++++++++++++++++++++++++
+    ===++++++++PASTE THE PUBLIC KEY INTO VI ON SECONDARY COMPUTER===++++++++++++++++++++++++++++++++++
+    |||||||||||||||||||||||||||||||||||||||||||
+    ++++++++++++++++++++++++++++++++++++++++++++
+    ==Here is a public SSK KEY that if someone can verify that this is their key that they have with they own private key allow them to log into this computer so its basically like a user name and password for a user.
     ==================================
     +++PASTE the public ssh KEY info INTO VI on secondary computer then :wq
     =======================================
-    ls -lash = 4.0K -rw-r--r-- 1 value2 ubuntu 568 Dec 14 20:44 authorized_keys
+    ls -lash 
+    = 4.0K -rw-r--r-- 1 GirlMeetGuy ubuntu 568 Dec 14 20:44 authorized_keys
     ==================================
-    value2@secondary:~/.ssh$ chmod 700 ~/.ssh
-    <!-- cd .. -->
-    ls -lash = 4.0K drwx------ 2 value2 ubuntu 4.0K Dec 14 20:44 .ssh
+    ///////CHANGE PERMISSIONS ON THE SSH FOLDER///////
+    ///To make sure that the folder is secure and only the user can access it///
+    ==================================
+    GirlMeetGuy@secondary:~/.ssh$ chmod 700 ~/.ssh
+    ////unable to change no 
+    sudo permission///
+    ==================================
+    ++++++++++++++++++
+    to Fix 
+     +++++++TO GIVE USER SUPER USER PERMISSIONS+++++++
+      +++++++TO GIVE USER SUPER USER PERMISSIONS+++++++
+       +++++++TO GIVE USER SUPER USER PERMISSIONS+++++++
+     +++++++TO GIVE USER SUPER USER PERMISSIONS+++++++
+    ========///swith to ubuntu///=========
+    ubuntu@secondary:/$ sudo usermod -aG sudo GirlMeetGuy
+     +++++++TO GIVE USER SUPER USER PERMISSIONS+++++++
+      +++++++TO GIVE USER SUPER USER PERMISSIONS+++++++
+       +++++++TO GIVE USER SUPER USER PERMISSIONS+++++++
+
+    ================///make GirlMeetGuy a sudo member///
+    =
+    To run a command as administrator (user "root"), use "sudo <command>".
+    See "man sudo_root" for details.
+    ++++++++++++++++++++++++++++++++++++++++++
+    ==================================
+    ///////CHANGE PERMISSIONS ON THE SSH FOLDER///////
+    ///To make sure that the folder is secure and only the user can access it///
+    ==================================
+    GirlMeetGuy@secondary:~/.ssh$ chmod 700 ~/.ssh
+    ==================================
+    cd .. 
+    ls -lash 
+    = 4.0K drwx------ 2 GirlMeetGuy ubuntu 4.0K Dec 14 20:44 .ssh
     ===================================
-    value2@secondary:~/.ssh$ ls -lash = 4.0K -rw-r--r-- 1 value2 ubuntu 568 Dec 14 20:44 authorized_keys
+    GirlMeetGuy@secondary:~/.ssh$ ls -lash = 4.0K -rw-r--r-- 1 GirlMeetGuy ubuntu 568 Dec 14 20:44 authorized_keys
     =================================
     <!-- cd .. -->
-    value2@secondary:~$ chmod 600 ~/.ssh/authorized_keys
+    GirlMeetGuy@secondary:~$ chmod 600 ~/.ssh/authorized_keys
     ===========================
     <!-- cd .ssh -->
-    ls -lash = 4.0K -rw------- 1 value2 ubuntu 568 Dec 14 20:44 authorized_keys
+    ls -lash = 4.0K -rw------- 1 GirlMeetGuy ubuntu 568 Dec 14 20:44 authorized_keys
     ========================================
     +++++++++++++++++++++++++
     ==we now need to get an ip address from the secondary computer so the primary computer can connect to it
@@ -993,27 +1118,52 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
     groups = list the sudo privileges for the current user. //USER
     sudo -l = list the sudo privileges for the current user. //USER
     ======================================
-    <!-- ==seems value2 didnt have sudo right to install the net-tools which is needed to run ifconfig program.
-==will have to make value2 a sudo member using Ubuntu on secondary computer. -->
+    <!-- ==seems GirlMeetGuy didnt have sudo right to install the net-tools which is needed to run ifconfig program.
+    ==will have to make GirlMeetGuy a sudo member using Ubuntu on secondary computer. -->
     ==================================================
     ubuntu@secondary:~$ cat /etc/passwd =
     ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
-    value2:x:1001:1000::/home/value2:/bin/bash
+    GirlMeetGuy:x:1001:1000::/home/GirlMeetGuy:/bin/bash
     =============================
-    ubuntu@secondary:~$ sudo usermod -aG sudo value2
-    su value2 = Password:
+    ubuntu@secondary:~$ sudo usermod -aG sudo GirlMeetGuy
+    su GirlMeetGuy = Password:
     To run a command as administrator (user "root"), use "sudo <command>".
         See "man sudo_root" for details.
         ==========================================
-        value2@secondary:~$ ifconfig = Command 'ifconfig' not found, but can be installed with:
+  GirlMeetGuy@secondary:~/.ssh$ chmod 700 ~/.ssh
+  = OK
+  ==============
+  ls 
+  = 4.0K drwx------  2 ubuntu ubuntu 4.0K 
+  Jan 13 16:30 .ssh
+  =============================
+  /////PERMISSIONS ON THE SSH FOLDER CHANGED OK///////
+  =========================
+  ==NOW TO CHANGE PERMISSIONS ON THE AUTHORIZED KEYS FILE==////////
+  ========================
+    GirlMeetGuy@secondary:~/.ssh$ chmod 600 ~/.ssh/authorized_keys
+    = OK
+    ls -lash
+    =
+    4.0K -rw------- 1 GirlMeetGuy ubuntu  568 Jan 13 17:18 authorized_keys
+    =================================
+    ////permissions on the authorized keys file changed OK////===================
+    =========================================
++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++
+////////NOW WE NEED TO GET THE IP ADDRESS OF THE SECONDARY COMPUTER////////
++++++++++++++++++++++++++++++++++++++++++++++++++++
+        GirlMeetGuy@secondary:~$ ifconfig = Command 'ifconfig' not found, but can be installed with:
         sudo apt install net-tools
-        value2@secondary:~$
-
+        GirlMeetGuy@secondary:~$
++++++++++++++++++++++++++++++++++++++++++++++++++
         ===========================
         ++++++++++++++++++++++++++++++++
-        <!-- value2@secondary:~$ sudo apt update =
-            value2@secondary:~$ sudo apt update
-            [sudo] password for value2:
+        GirlMeetGuy@secondary:~$ sudo apt update 
+        =
+            [sudo] password for GirlMeetGuy:
             Hit:1 http://ports.ubuntu.com/ubuntu-ports noble InRelease
             Get:2 http://ports.ubuntu.com/ubuntu-ports noble-updates InRelease [126 kB]
             Hit:3 http://ports.ubuntu.com/ubuntu-ports noble-backports InRelease
@@ -1026,25 +1176,34 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
             Reading state information... Done
             37 packages can be upgraded. Run 'apt list --upgradable' to see them.
             ===================================
-value2@secondary:~$ sudo apt install net-tools
+            +++++++++++++++++++++++++
+            |||||||||||||||||||||||||||||||||
+            ////UPGRADE THE APT PACKAGE/////
+            sudo apt upgrade
+            = OK
+            ===========================
+            //////////INSTALLING NET-TOOLS////////
+            ================
+GirlMeetGuy@secondary:~$ sudo apt install net-tools
+=
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
 The following NEW packages will be installed:
-net-tools
-0 upgraded, 1 newly installed, 0 to remove and 37 not upgraded.
+  net-tools
+0 upgraded, 1 newly installed, 0 to remove and 4 not upgraded.
 Need to get 207 kB of archives.
 After this operation, 1229 kB of additional disk space will be used.
 Get:1 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 net-tools arm64 2.10-0.1ubuntu4 [207 kB]
-Fetched 207 kB in 1s (296 kB/s)
+Fetched 207 kB in 1s (342 kB/s)
 Selecting previously unselected package net-tools.
-(Reading database ... 77391 files and directories currently installed.)
+(Reading database ... 77400 files and directories currently installed.)
 Preparing to unpack .../net-tools_2.10-0.1ubuntu4_arm64.deb ...
 Unpacking net-tools (2.10-0.1ubuntu4) ...
 Setting up net-tools (2.10-0.1ubuntu4) ...
 Processing triggers for man-db (2.12.0-4build2) ...
-Scanning processes...
-Scanning linux images...
+Scanning processes...                                                                                  
+Scanning linux images...                                                                               
 
 Running kernel seems to be up-to-date.
 
@@ -1055,31 +1214,38 @@ No containers need to be restarted.
 No user sessions are running outdated binaries.
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
-value2@secondary:~$
+++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++
 =============================================== -->
-        value2@secondary:~$ ifconfig
-        enp0s1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST> mtu 1500
-            inet 192.168.64.14 netmask 255.255.255.0 broadcast 192.168.64.255
-            inet6 fe80::5054:ff:fe6a:9c28 prefixlen 64 scopeid 0x20
-            <link>
-            inet6 fd64:958e:edfe:5eeb:5054:ff:fe6a:9c28 prefixlen 64 scopeid 0x0<global>
-                ether 52:54:00:6a:9c:28 txqueuelen 1000 (Ethernet)
-                RX packets 30636 bytes 37330846 (37.3 MB)
-                RX errors 0 dropped 0 overruns 0 frame 0
-                TX packets 9443 bytes 908825 (908.8 KB)
-                TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+        GirlMeetGuy@secondary:~$ ifconfig  
+        ++++++++++++++++
+        =======================
+ enp0s1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.64.7  netmask 255.255.255.0  broadcast 192.168.64.255
+        inet6 fdd3:6e1a:4659:7723:5054:ff:fed9:891f  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::5054:ff:fed9:891f  prefixlen 64  scopeid 0x20<link>
+        ether 52:54:00:d9:89:1f  txqueuelen 1000  (Ethernet)
+        RX packets 28414  bytes 35769013 (35.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 5762  bytes 613603 (613.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
-                lo: flags=73<UP,LOOPBACK,RUNNING> mtu 65536
-                    inet 127.0.0.1 netmask 255.0.0.0
-                    inet6 ::1 prefixlen 128 scopeid 0x10<host>
-                        loop txqueuelen 1000 (Local Loopback)
-                        RX packets 156 bytes 14258 (14.2 KB)
-                        RX errors 0 dropped 0 overruns 0 frame 0
-                        TX packets 156 bytes 14258 (14.2 KB)
-                        TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 156  bytes 14258 (14.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 156  bytes 14258 (14.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+        +++++++++++++++++++++++++++++++++++++++++++
+        |||||||||||||||||||||||||||||||||||||||||||||||
+        |||||||||||||||||||||||||||||||||||||||||||||||
+        ================================================
                         ============================
                         <!-- # Switch to a user with sudo privileges
-                            su value2
+                            su GirlMeetGuy
 
                             # Update the package list
                             sudo apt update
@@ -1106,7 +1272,7 @@ value2@secondary:~$
                         ++++Linking two Machines with SSH++++
                         <!-- ==FROM primary computer  -->
                         ubuntu@primary:~/.ssh$ cd ~
-                        <!-- ssh value2@192.168.64.14 --> = Are you sure you want to
+                        <!-- ssh GirlMeetGuy@192.168.64.14 --> = Are you sure you want to
                         continue connecting
                         (yes/no/[fingerprint])? yes
 
@@ -1154,11 +1320,11 @@ value2@secondary:~$
                         ===============================
                         +++++++++++++++++++++
                         ===========================
-                        value2@secondary:~$ exit
+                        GirlMeetGuy@secondary:~$ exit
                         logout
                         Connection to 192.168.64.14 closed.
                         =========================
-                        ubuntu@primary:~$ ssh value2@192.168.64.14 = OK WAS ABLE TO LOG
+                        ubuntu@primary:~$ ssh GirlMeetGuy@192.168.64.14 = OK WAS ABLE TO LOG
                         IN AGAIN = INFO FROM LOGIN =
                         Last
                         login: Sat Dec 14 21:45:19 2024 from
@@ -1173,13 +1339,13 @@ value2@secondary:~$
                         ===========================
                         ===================================
                         ====SFTP========Secure File Transfer Protocol====
-                        <!-- ubuntu@primary:~$ sftp value2@192.168.64.14 = Connected to 192.168.64.14.
+                        <!-- ubuntu@primary:~$ sftp GirlMeetGuy@192.168.64.14 = Connected to 192.168.64.14.
                                                         sftp> -->
-                        sftp> pwd = Remote working directory: /home/value2
+                        sftp> pwd = Remote working directory: /home/GirlMeetGuy
                         sftp> lpwd = Local working directory: /home/ubuntu
                         sftp> lls = local list of files on the primary users computer
                         =================================
-                        <!-- sftp> put lover.txt = Uploading lover.txt to /home/value2/lover.txt
+                        <!-- sftp> put lover.txt = Uploading lover.txt to /home/GirlMeetGuy/lover.txt
                                                         lover.txt 100% 0 0.0KB/s 00:00 -->
 
                         ! = ALLOWS YOU TO RUN COMMANDS ON THE SECONDARY COMPUTER.
@@ -1189,16 +1355,16 @@ value2@secondary:~$
                         ==============================================
                         <!-- ===RENAME A FILE ON SECONDARY COMPUTER==== -->
                         sftp> put file-to-put.txt new-put-file.txt = Uploading
-                        file-to-put.txt to /home/value2/new-put-file.txt
+                        file-to-put.txt to /home/GirlMeetGuy/new-put-file.txt
                         file-to-put.txt 100% 68 47.9KB/s 00:00
                         ==================================================
                         ===From seconday=====
-                        value2@secondary:~$ ls -lash = 4.0K -rw-r--r-- 1 value2 ubuntu
+                        GirlMeetGuy@secondary:~$ ls -lash = 4.0K -rw-r--r-- 1 GirlMeetGuy ubuntu
                         68 Dec 15 06:43 new-put-file.txt
                         =============================
                         <!-- help = help with everything you can do  -->
                         ================
-                        sftp> pwd = Remote working directory: /home/value2
+                        sftp> pwd = Remote working directory: /home/GirlMeetGuy
                         sftp> lpwd = Local working directory: /home/ubuntu
                         sftp> cd ..
                         sftp> pwd = Remote working directory: /home
@@ -1206,12 +1372,12 @@ value2@secondary:~$
                         sftp> lpwd = Local working directory: /home
                         sftp> lcd ~
                         sftp> lpwd = Local working directory: /home/ubuntu
-                        sftp> cd value2
-                        sftp> pwd = Remote working directory: /home/value2
+                        sftp> cd GirlMeetGuy
+                        sftp> pwd = Remote working directory: /home/GirlMeetGuy
                         =======================================
                         <!-- ===getting files from the secondary computer==== -->
                         get hiiwashere.txt hihiiwashere.txt = Fetching
-                        /home/value2/hiiwashere.txt to hihiiwashere.txt
+                        /home/GirlMeetGuy/hiiwashere.txt to hihiiwashere.txt
                         ============================
                         <!-- sftp> bye = to exit sftp  -->
                         =====================================
@@ -1824,7 +1990,7 @@ value2@secondary:~$
                             =======
                             Enter a file prefix: value = done
                             ===================
-                            ubuntu@primary:~$ ls another_gen_files_folder/ = value1.txt value2.txt value4.txt value6.txt
+                            ubuntu@primary:~$ ls another_gen_files_folder/ = value1.txt GirlMeetGuy.txt value4.txt value6.txt
                             value8.txt
                             value10.txt value3.txt value5.txt value7.txt value9.txt
                             ==========================
