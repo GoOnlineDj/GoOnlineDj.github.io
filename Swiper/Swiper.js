@@ -42,8 +42,12 @@ loadframe.innerHTML = `
                         <div class="swiper-slide"> <img src="./images/web-development-Frontend-Masters/Michael_Junior_Williams_Frontend_Masters_Software_Developer_Success_Soft_Skills_Testing.png" alt="Frontend Masters"> </div>
                         <div class="swiper-slide"> <img src="./images/web-development-Frontend-Masters/Michael_Junior_Williams_Frontend_Masters_Introduction_to_Dev_Tools_v3.png" alt="Frontend Masters"> </div>
                         <div class="swiper-slide"> <img src="./images/web-development-Frontend-Masters/Michael_Junior_Williams_Frontend_Masters_Complete_Intro_to_Linux_and_the_Command-Line.png" alt="Frontend Masters"> </div>
-
+         
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+       
                     </div>
+           
                     </div>
                     
 `;
