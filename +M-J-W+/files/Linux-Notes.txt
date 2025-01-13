@@ -20,6 +20,7 @@ the shell is bash Bourne Again Shell + GNU Foundation
 TRY NOT TO COPY AND PASTE INTO THE COMMAND LINE DIRECTLY
 IS NOT SAFE TO COPY AND PASTE INTO THE COMMAND LINE.
 
+control + d = to exit a program
 pwd = present working directory
 {clear} or ctrl+L to clear
 tab = tab+key = very powerful
@@ -28,7 +29,7 @@ tab = tab+key = very powerful
 example = sudo !!
 
 
-<!-- ctrl + r = reverse search bash history <> -->
+ctrl + r = reverse search bash history 
 / = root directory
 ==================
 ls = {list} it list items inside a directory
@@ -53,6 +54,7 @@ cd = to change directory
 .. = relative path
 cd .. to up one directory
 cd ../.. up two directory
+cd ../ubuntu/../ubuntu/
 cd home relative to where you are
 cd folder i know there is a folder with this name
 cd tab auto complete tab auto complete
@@ -65,14 +67,17 @@ cd ~/home
 ls {-l} = wil provide more info the long form output.
 ls -a, --all will list all the items including hidden items
 ls -l -a
+ls -la
 ls -lash
 
 echo = like console.log
 echo "hi my name is Michael"
 echo "hi computer speak to me"
+
 which ls
 which = what the path is to the program that you'r running
-bin = binary = this is where ALL the PROGRAMS are kept
+
+bin = binary = folder where ALL the PROGRAMS are kept 
 
 touch .hidden = to create a hidden file {needs the .}
 
@@ -93,12 +98,25 @@ yanked
 CTRL + L = clear the screen
 CTRL + R = reverse search through history
 
+git --help 
+
+
 ========Signals ==========
 CTRL + C = SIGINT
 CTRL + D = SIGQUIT
 SIGTERM = computer sends this to end all programs
 kill -9 or kill -SIGKILL
+kill -9 then program number = to kill a program
 kill -l will show all the signals your computer supports.
+
+yes > /dev/null &
+ps aux | grep yes
+kill -9 ####
+kill -SIGKILL ####
+
+kill -l = for list of flags for kill
+
+
 =============
 head = first 10 lines
 head -n 3 ~/.bash_history = only first 3 lines
@@ -107,14 +125,18 @@ tail -n 3 ~/.bash_history = only last 3 lines
 tail -f ~/.bash_history
 tail = last 10 lines
 tail -f ~/.bash_history = keep watching a file in real time as things get added to it
->> = pins new text to the end of a file
+
+cat michael.txt = to read a file
+>> = pins new text to the end of a file = append
+
+
 <!-- +++++++++===========+++++++++++
     connect two shells to watch update in real time 
     +++++++++===========+++++++++++
     multipass shell primary
     echo hi michael >> williams.txt 
     +++++++++===========+++++++++++ -->
-<!-- CTRL+C = QUIT -->
+
 
 =====nana===========
 nano Michael.txt
@@ -125,15 +147,17 @@ ctrl + x = exit
 =====vim==========
 ed ed.txt
 ex mix.txt
+=================
 vim mmm.txt = to create a txt file in vim
 i = write
+:d100 = delete 100 lines
 esc = command mode
 :w = save
 :help tutor = vim tutor ======
 :wq = save and quit
-<!-- :q = quit -->
+:q = quit 
 :q! = quit
-<!-- :qa! = quitNOW -->
+:qa! = quitNOW
 ================
 =====vi=======
 :wq! = quit NOW
@@ -143,13 +167,6 @@ Ubuntu
 
 -zsh
 
-yes > /dev/null &
-ps aux | grep yes
-kill -9 ####
-kill -SIGKILL ####
-
-kill -l = for list of flags for kill
-
 ==========================
 
 Interacting with Files
@@ -157,10 +174,14 @@ Interacting with Files
 ++++++++++++++++++++++++++
 =========less==========
 less Michael.txt = allows you to read a File
-<!-- /Mic = to search  -->
+/hey to search within the file while in less
 q = quit
 ===============================
+=============cat============
+cat = concatanate files to standard out
+cat michael.txt = prints raw text quick like less
 
+======================
 
 ======man=============
 man = manual for a program
@@ -168,21 +189,22 @@ man echo
 man less
 q = quit
 ==============================
-cat = concatanate files to standard out
-cat michael.txt = prints raw text quick like less
-
-===============
-
+=========reate a new director or folder=========
 mkdir MJW = create a new director or folder
 -p = make multiple nested folders
 mkdir -p hi/my/name/is/michael
 mkdir --help
 =============================
+
+
 ======touch======= CREATE+++CREATE======
 touch you-are-so-cool.txt = create a new text File
 touch a.txt b.txt c.txt d.txt e.txt f.txt
 touch you-are-so-cool.txt = update the modifyTIME
+//////////////////
 touch goodyear{2003,2007,2009,2013,2015,2017,2020,2024}.txt
+<!-- ====NOTE , CAN BE ADDED TO LEAVE BLANK====== -->
+////////////////
 
 =============================
 =====+++++++++++======
@@ -191,7 +213,7 @@ rm = remove
 rm you-are-so-cool.txt = delete file
 -r = recursive delete
 rm -r my-folder = delete folder
-<!-- -f = force  -->
+-f = force  
 rm -rf my-folder = delete folder
 
 <!-- NO * NO NO  -->
@@ -200,6 +222,7 @@ rm -rf my-folder = delete folder
 ===========================
 
 ====================
+====TO COPY FILES====
 cp = copy
 cp williams.txt williams1983.txt
 =================
@@ -216,12 +239,13 @@ tar -zcf computer.tar.gz folder1983 junior.txt = GZIP
 mkdir extracted
 mv computer.tar.gz extracted
 cd extracted
-<!-- tar -xzf computer.tar.gz folder1983 = extract items into extracted folder from computer.tar.gz zip folder -->
-touch goodyear{2003,2007,2009,2013,2015,2017,2020,2024}.txt = EXPANSION
+ mkdir destination
+tar -xzf archive.tar.gz -C destination = unzip items
 
-<!-- ====NOTE , CAN BE ADDED TO LEAVE BLANK====== -->
+
 
 ===================================
+========SEARCHING FOR FILES======== 
 ls goodyear-* = wild card search
 ls file*.txt = only ONE SHOWED UP file.txt
 ls file* = all files that start with file
@@ -262,11 +286,16 @@ echo {A..Z}{01..02}{1..2}
 +++++++++++++++++++++++++++++++++++++++++
 ==========output streams========
 <!-- stdout = 1> 
+echo 'this is my text' 1> newfile.txt
+////////////
+> = replace
+>> = append
+///////////////////////
     stderr = 2> -->
 ++++++++++++++++++++++++++++++++++
 mkdir streams
 cd streams/
-<!-- echo 'this is my text for output' 1> new-file.txt = replace files with new text -->
+echo 'this is my text for output' 1> new-file.txt = replace files with new text
 cat new-file.txt
 cat new-file.txt 1> another-file.txt = replace text
 <!-- cat new-file.txt 1>> another-file.txt = add more text to file. -->
@@ -285,6 +314,7 @@ cat ls100.txt
 ls -lash >> ls100.txt = append text
 ls -lash 2> /dev/null = output to null
 ls -lash 1> /dev/null = error to null
+ls -lash 1> ls.txt 2> ls-error.txt
 <!-- cat some-file.txt 1> /dev/null = show output error
     cat some-file.txt 2> /dev/null = error gone forever -->
 ==========output streams========
@@ -314,26 +344,59 @@ grep 'cool' < williams1983.txt=to find cool in doc grep 'error.txt' < ls01.txt 1
     yes n | rm -i hi*
     yes n | rm -i hi*
     ==============================
+    ps aux = find all running processes
+    ==============================
     whoami = what program am i currently in
-    <!-- cat /etc/passwd = all the users on the computer at t particular time. -->
+    ==============================
+
+    =======LIST ALL USERS ON COMPUTER================
+    cat /etc/passwd = all the users on the computer at t particular time. -->
+    ==============================
     superuser = root user
     whoami = ubuntu
     sudo whoami = root = from root dir
-    <!-- su = switch user
-        sudo su = will make u root user  -->
+    su = switch user
+    ==============================
+
+    ====TO BECOME SUPER USER====
+    sudo su = will make u root user  
     exit = exit from root user account
+    ==============================
     sudo = usually ask for password
     ubuntu is a password less environment
     ++++++++++++++++++++++++++
+    =========================================
+    =============ADD NEW USER================
     sudo useradd Michael
     sudo passwd Michael
-    sudo su
-    -aG = --append --groups
-    sudo usermod -aG sudo Michael
-    su Michael
-    sudo whoami
+    ================================
+    exit = exit current session to become ROOT
+    +++TO MAKE USER AN ADMIN+++
+    ==============================
+     sudo usermod -aG sudo Michael = add user to sudo group
+     -aG = --append --groups
+     su Michael
+     sudo whoami
+    ==================
+    check permissions for ubuntu
+    ls -ld ubuntu
+    =====================
+    unable to change to ubuntu folder
+    sudo chmod 755 ubuntu 
+    permissions change = ok
+    able to access folder now as GirlMeetGuy
+    =====================
 
+    exit = exit current session to become ROOT
+    ==============================
+    
+   
 
+    ================================
+  
+
+    ==Changing Permissions on a File or directory==
+    ===========================
     ===============
     -rw-rw-r-- = normal files
     drwxr-x--- = directory files
@@ -347,124 +410,75 @@ grep 'cool' < williams1983.txt=to find cool in doc grep 'error.txt' < ls01.txt 1
     ================
 
     sudo mkdir hello
-    touch hello.txt
+    touch hello.txt = unable to touch file
     ls -lash
-    <!-- ubuntu@primary:/hello$ sudo chown ubuntu:ubuntu /hello -->
+
+    =====Change OWNERSHIP FROM ROOT DIRECTORY=====
+    switch to ubuntu and to root directory
+    ubuntu@primary:/hello$ sudo chown ubuntu:ubuntu /hello 
     =======================
-    ++++ADD++NEW++USER++++++
-    sudo echo hi
-    sudo useradd value
-    sudo passwd value
-    su value
-    whoami = value
-    ls
-    pwd = /
+   
+   changeing permission on a file 
+   sudo chmod u=rw,g=rw,o=rw hello.txt
+    ========================
+
+    to change permission on a folder
+    sudo chmod u=rwx,g=rwx,o=rwx hello2025/
+
     +++++++++++++++++++++++
+    ===TO FIND VERSION NUMBER===
     cat /etc/issue = Ubuntu 24.04.1 LTS \n \l
     ==============================================
-    <!-- $ sudo echo hi
-[sudo] password for value: 100
-reply from computer = value is not in the sudoers file.
-$ -->
-    ================================
-    exit = exit current session
-    ====================================
-    ==========GROUPS================
-    //from admin account:
-    <!-- sudo usermod --append --groups sudo value  -->
-    //to give regualar user admin rights
-    su value
-    enter value Password: 100
-    $ whoami
-    value
-    sudo whoami
-    [sudo] password for value: 100
-    <!-- output from system : root     -->
-
-    ===========================
-
-    exit
-    su value
-    value Password: 100
-    whoami
-    computer output = value
-    ls = ok ====signed in as user value
+    ===================================
     =====================
     sudo ls -ld /home/ubuntu = to check if a folder exist
     =============================
     Understanding 755 Permissions:
     The 755 permission setting is broken down as follows:
 
-    <!-- Owner (User): Read, write, and execute permissions (7).
-Group: Read and execute permissions (5).
-Others: Read and execute permissions (5).
-Detailed Breakdown:
-Owner (User): 7 (Read r, Write w, Execute x)
-The owner of the directory can read, write, and execute (access) the directory.
-Group: 5 (Read r, Execute x)
-Members of the group can read and execute (access) the directory, but cannot write to it.
-Others: 5 (Read r, Execute x)
-All other users can read and execute (access) the directory, but cannot write to it. -->
+    Owner (User): Read, write, and execute permissions (7).
+    Group: Read and execute permissions (5).
+    Others: Read and execute permissions (5).
+    Detailed Breakdown:
+    Owner (User): 7 (Read r, Write w, Execute x)
+    The owner of the directory can read, write, and execute (access) the directory.
+    Group: 5 (Read r, Execute x)
+    Members of the group can read and execute (access) the directory, but cannot write to it.
+    Others: 5 (Read r, Execute x)
+    All other users can read and execute (access) the directory, but cannot write to it. -->
     =======================
 
     //after becoming an admin still was unable to get into ubuntu folder + copilot helped me out
 
-    =============================
-
     sudo chmod 755 /home/ubuntu
-
     cd /home/ubuntu
+    ls = working fine at this point = oooookkkkk
+    =============
+    sudo chmod +x my-new.txt = make file executable
+    sudo chmod -w my-new.txt = remove write permission
 
     ===============================
-
-    ls = working fine at this point = oooookkkkk
+    +++++++++++++++++++++++++++++++++++++++++++++   
     ================================
-    <!-- 00 vm lover.txt as value = readonly ====ggggrrrrrr -->
+    printenv info about log in session
+    ///USE VARIABLE///
+    echo hello my name is $SSH_CLIENT
+    hello my name is 192.168.64.1 64133 22
+    ==================
+    USER=GOODGUY 
+    echo hello my name is $USER
+    hello my name is GOODGUY
     ============================================
     ||||||||||||||||||||||||||||||||||||||||||||
     ls -lash /bin/ = to show all the programs in bin directory
     ||||||||||||||||||||||||||||||||||||||||||||
     ============================================
-    touch lover.txt = as value = permission defined
-    ========================
-    sudo touch lover.txt = 0 -rw-r--r-- 1 root root
-    <!-- exit = exit out of a profile -->
-    ++++++++++++++++++++++
-    <!-- sudo chmod u=rw,g=rw,o=rw hello40.txt 
-        //to chage the PERMISSION on a file// -->
-    ++++++++++++++++++++++++++++++++++++++++
-
-    whoami
-    value
-    touch value.txt = Permission denied
-    <!-- //unable to touch a file but able to vi file into exsistance // -->
-    vi hello40.txt
-    :qw! from vi = to exit program
-    ls
-    exit
-    user = ubuntu
-    <!-- cat hello40.txt
-        Hello this was written by Michael Junior Williams = value notes from vi that he was able to save -->
-    ====================================
-    sudo chmod u=rwx,g=rwx,o=rwx /hello40
-    sudo chmod 777 file.txt
-    //to change permission on a folder//
-    ======================================
-    ls -lash
-    su value
-    password : value password = ok
-    cd hello40
-    touch wowIloveThis.txt = works fine = file exist in hello40 folder
-    =====================================
+    +++++++++++++++++++++++++++++++++++++++++++++
     +++++++++++++++++++++++++++++++++++
     ===============Permissions shortcuts============
     <!-- sudo chmod 777 file.txt
                 r=4,w=2,x=1 -->
-    ls -lash
-    whoami
-    value
-    touch file.txt
-    ls -lash
+
     sudo chmod 777 file.txt = -rwxrwxrwx
     sudo chmod 700 file.txt = -rwx------
     chmod 600 file.txt = -rw-------
@@ -484,8 +498,8 @@ All other users can read and execute (access) the directory, but cannot write to
     echo $USER = ubuntu
     echo $HOME = /home/ubuntu
     <!-- echo Hello the user im currently logged in as is $USER =
-Hello the user im currently logged in as is ubuntu -->
-    cho Hello this user lives at $HOME =
+    Hello the user im currently logged in as is ubuntu -->
+    echo Hello this user lives at $HOME =
     Hello this user lives at /home/ubuntu
     //$USER = bash is doing the work with the command is run not echo//
     <!-- USER=Michael  -->
@@ -503,24 +517,36 @@ Hello the user im currently logged in as is ubuntu -->
     echo $GREETING $USER , how are you?
     Greetings Ubuntu , how are you?
     ========================================
-    <!-- ////// making a permanet VARIABLE /////// -->
+
+
+    +++++++++++++++++++++++++++++++++++++++++++++
+    ||||||||||||||||||||||||||||||||||||||||||||||||||
+    ========================================
+    ===============Environment Variables=============
+    <!-- ////// MAKING PERMANENT VARIABLES /////// -->
     sudo vi /etc/environment
-    <!-- Test_Linux='wow this is so cool learing cool stuff' //made variable and saved it in VI -->
-    echo $Test_Linux = BLANK FOR NOW
+    Michael="WOW You will make allot of cash to help yourself and others. Amen."
+    echo $Michael = BLANK FOR NOW
     ===================
     exit = logout Ubuntu out of current session in shell
     <!-- logout
         girlmeetguy@Michaels-MacBook-Air-2 ~ % -->
     =====open Shell again ===log in as Ubuntu======
-    echo $Test_Linux
-    wow this is so cool learing cool stuff' = WORKS
+    echo $Michael
+    WOW You will make allot of cash to help yourself and others. Amen. = WORKS
     <!-- //VARIABLE CREATED AND SAVED////// -->
-    su value
-    echo $Test_Linux
-    wow this is so cool learing cool stuff' = works on another profile as well because the environment is
+    su GirlMeetGuy
+    echo $Michael
+    WOW You will make allot of cash to help yourself and others. Amen. = works on another profile as well because the environment is
     shared by
     all users.
     ===============================
+    |||||||||||||||||||||||||||||||||||||||||||||||
+    ========================================
+
+
+
+
     +++++++++++++++++++++++++++++++++++++++++++
     +++++++++++++++SYSTEM UPGRADE+++++++++++++++++++
     <!-- Update Package List: = sudo apt update
@@ -542,31 +568,54 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
     su value
     echo $Test_Linux = wow this is so cool learing cool stuff' = //from last inputed value
     ===============================
-    whoami
+    ================================
+    |||||||||||||||||||||||||||||||||||||||||||
+    =========BASH RC + BASH RC=============
+    ========================================
+    ===============.bashrc============= = .bashrc =   
+    whoami is where u can change prompts ,setup colors, 
+    input scrips to use +
+    and variables just for your user + ect
+    ========================================
+    +++++++++++++++++++++++++++++++++++++++++++
+    //////SETTTINGS FOR YOUR USER//////
+    +++++++++++++++++++++++++++++++++++++++++++
     ubuntu
-    <!-- vi ~/.bashrc -->
-    export Test_Linux2='wow this is cool 2' = added in .bashrc = save and quit
-    echo $Test_Linux2 = BLANK FOR NOW
+    vi ~/.bashrc
+    ==================================
+    export LINK="+GOD is Great"
+    ///////////// 
+    = added in .bashrc = save and quit
+    ///////////////
+    echo $LINK = BLANK FOR NOW
     ++++++++++++++++++++++++++++++++++++
     ==================================
     source = rerun script = rerun without exit
-    exit
-    echo $Test_Linux2
-    wow this is cool 2
+    source ~/.bashrc = rerun script
+    =======
+    echo $Link
+    = +GOD is Great
     =========================
-    <!-- .bashrc = is where u can change prompts ,setup colors, input scrips to use + and variables just for your user + ect  -->
     =================================
     ++++++++++++++++++++++++++++
-    .bash_profile //runs once a day or once when u open the shell interactively//
-    <!-- vi .bash_profile
+    ===============.bash_profile=============   
+    ============BASH PROFILE================
+    .bash_profile //runs once a day or once 
+    when u open the shell interactively//
+    ========================================
+    vi .bash_profile
+    ==================================
         if [ -f ~/.bashrc ]; then
         source ~/.bashrc
         fi
         save and quit vi;
-        ==================================
-        //this will ensure .bashrc runs everytime in every session /// -->
-    //every user has their own .bashrc
     ==================================
+    //this will ensure .bashrc runs everytime 
+    in every session /// -->
+    ==================================
+    //EVERY USER has their own .bashrc
+    ==================================
+    +++++++++++++++++++++++++++++++++++++++++++
     la -lash = 4.0K -rw-r--r-- 1 ubuntu ubuntu 3.9K Dec 14 17:00 .bashrc
     ===================================================
     sudo vi /etc/bashrc = BASH RC FOR EVERYBODY
@@ -577,48 +626,64 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
     ps aux = ALL RUNNING PROCESSES ON THE COMPUTER
     ===============================================
     ps = will show you only what the user is running
-    <!-- ps = PID TTY TIME CMD
-24209 pts/0 00:00:00 bash
-24277 pts/0 00:00:00 ps -->
+    ===============
+    ps 
+    = PID TTY TIME CMD
+    24209 pts/0 00:00:00 bash
+    24277 pts/0 00:00:00 ps 
     ===================================
     =====Commands====
+    /////SLEEP PROGRAM/////
     sleep = wait for a certin time then return
     sleep 1 = wait =ONE SEC= then return
     sleep 5 = wait =FIVE SEC= then return
     =============================
-    <!-- & = run in the background -->
+    & = run in the background
     ===============================
-    <!-- PID = Process ID -->
+    sleep 17 & = run in the background
+    ===============================
+    =====PID = Process ID======
     =========================
-    sleep 17 & = PID TTY TIME CMD
+    sleep 17 & 
+    ====
+    = PID TTY TIME CMD
     24209 pts/0 00:00:00 bash
     24287 pts/0 00:00:00 sleep
     24288 pts/0 00:00:00 ps
     =====================================
-    ps = PID TTY TIME CMD
+    ps 
+    = PID TTY TIME CMD
     24209 pts/0 00:00:00 bash
     24289 pts/0 00:00:00 ps
     [1]+ Done sleep 17
     ==========================
-    sleep 100 & = [1] 24290
+    sleep 100 & 
+    = [1] 24290
     ps = PID TTY TIME CMD
     24209 pts/0 00:00:00 bash
     24290 pts/0 00:00:00 sleep
     24291 pts/0 00:00:00 ps
     ==========================
     kill -SIGKILL 24290
-    ps = PID TTY TIME CMD
+    ps 
+    = PID TTY TIME CMD
     24209 pts/0 00:00:00 bash
     24295 pts/0 00:00:00 ps
     [1]+ Killed sleep 100
     =============================
     aux = what everyone is running
     ps aux
-    <!-- ps aux | less = piped into less = nice scool table  -->
-    ps aux | grep "ps" = to find just what you are looking for
+    ps aux | less = piped into less = nice scool table
     =======================================
+    =====SEARCH ======GREP TO FIND A PROGRAM====== 
+    ps aux | grep "ps" = to find just what you are 
+    looking for
+    ==================================== ===
 
     ++++++++++++++++++++++++++++++++++++++++++++
+    ======BACKGROUND & FOREGROUND============
+    ======BACKGROUND & FOREGROUND============
+    ======BACKGROUND & FOREGROUND============
     ======BACKGROUND & FOREGROUND============
     sleep 1000 = started sleep 1000 SECONDS PROGRAM
     ^Z = [1]+ Stopped
@@ -628,23 +693,66 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
     =================================
     ls // ok system running fine
     ===============================
-    fg 1 = sleep 1000
-    ^Z = [1]+ Stopped sleep 1000
-    jobs 1 = [1]+ Stopped sleep 1000
-    bg 1 = [1]+ sleep 1000 & ///sleep running the the background.
-    jobs = [1]+ Running sleep 1000 &
+    sleep 1000
+    ====
+     ^Z = TO STOP RUNNING PROGRAM
+     ++++++++++++++++++++++++++++++++++++++++++++
+    ===STOP ===^C = to kills running program ===STOP ===
+    ===STOP ===^C = to kills running program ===STOP ===
+    ++++++++++++++++++++++++++++++++++++++++++++
+    =================================
+    ^Z = TO STOP RUNNING PROGRAM
+    [1]+ Stopped sleep 1000
+    ============
+    ======================================
+    jobs 
+    = [1]+ Stopped sleep 1000
+    ++++++++++++++++++++++++++++++++++++++++++++
+    ////REACTIVATE PROGRAM////
+    bg 1
+    = [1]+ sleep 1000 & 
+    ///sleep running the the background.
+    ======================================
+    jobs 
+    = [1]+ Running sleep 1000 &
     ===================================
+    fg 1 = bring program back to the foreground
+    ===================================
+    bg 1 = bring program back to the background
+    +++++++++++++++++++++++++++++++++++++++++++++++
+    ================================================
+    +++++++++++++++++++++++++++++++++++++++++++++++
+    jobs -l = to show the job number
+    ========================================
     jobs -l = [1]+ 24313 Running sleep 1000 &
     kill -9 24313
-    jobs = [1]+ Killed sleep 1000
+    jobs 
+    = [1]+ Killed sleep 1000
+    ========================================
+    ///TO KILL MULTIPLE PROGRAMS///
+    kill -9 00000 00000 00000 00000
+    ========================================
     =====================================
-    <!-- sleep 1000 > sleep1000.txt & = send output to a file instead of displaying it on the screen. -->
-    jobs = [1]+ Running sleep 1000 > sleep1000.txt &
+    =====================================
+    =====================================
+    sleep 1000 > sleep1000.txt & 
+    = 
+    send output to a file instead of displaying 
+    it on the screen. since the screen might be 
+    interactive.
+    =====================================
+    jobs 
+    = [1]+ Running sleep 1000 > sleep1000.txt &
     ===========================================
     +++++++++++++++++++++++++++++++++++++++++++++++
-    <!-- =======Exit Codes & Process Operators & sub Commands ========== -->
+    ||||||||||||||||||||||||||||||||||||||||||||||||||
+    ================================================
+    |||||||||||||||||||||||||||||||||||||||||||||||||||
+    =======Exit Codes & Process Operators & 
+    sub Commands ==============================
     ===================================
-    //when program finishes it returns and exit code on how the process finised//
+    //when program finishes it returns and exit 
+    code on how the process finised//
     =================================
     date = current date
     date = Sat Dec 14 18:30:43 EST 2024
@@ -660,17 +768,43 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
     137 = program ended with -SIGKILL
     255 = OUT OF BOUNDS CODE LARGER THAN 255
     =========================
-    <!-- echo $? = 0 -->
-    yes = yes program starts running forever
-    ^C = killed the current running process
+    ///////EXIT CODES////////
+    ///////EXIT CODES////////
+    ///////EXIT CODES////////
+    ///////EXIT CODES////////
+    ///////EXIT CODES////////
+    echo $? 
+    = 0 = successful
+    |||||||||||||||||||||||||||||
+    ///////EXIT CODES////////
+    ///////EXIT CODES////////
+    ///////EXIT CODES////////
+    ////////////////////////////////
+    yes 
+    = yes program starts running forever
+    ==========
+    ^C 
+    = killed the current running process
+    ============
     echo $? = 148 = for yes = not zero = unsuccessful
     ====================
     +++++++++++++++++++
     ======OPERATORS===========
-    <!-- >> = append into  -->
-    $$ = ALL MUST BE TRUE
-    <!-- ====&& everything has to be true for all programs to run successfully====== -->
-    || = RUN ONLY IF THE PROGRAM THAT JUST FINISHED WAS UNSUCCESSFUL
+    >> 
+    = append into
+    ||||||||||||||||||||  
+    $$ 
+    = ALL MUST BE TRUE
+    |||||||||||||||||||||||||
+    ==========================
+    && 
+    = RUN ONLY IF THE PROGRAM THAT JUST FINISHED WAS SUCCESSFUL
+    everything has to be true for all programs to run 
+    successfully====== 
+    ======================================
+
+    || 
+    = RUN ONLY IF THE PROGRAM THAT JUST FINISHED WAS UNSUCCESSFUL
     ===============================
 
     touch status.txt && date >> status.txt && uptime >> status.txt
@@ -680,9 +814,13 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
     ==========================
     uptime = 18:47:40 up 1 day, 4:54, 4 users, load average: 0.02, 0.01, 0.00
     ====================================
-    <!-- false = false program = returns 0
-false
-echo $? = 1 -->
+    false = false program = returns 0
+    ====================
+    false
+    =======
+    echo $? 
+    = 1 = unsuccessful
+    ===========================
     ///////cat $? = cat: 0: No such file or directory/////
     ++++++++++++++++++++++++++++++++++++
     true = true program = returns 1
@@ -690,35 +828,54 @@ echo $? = 1 -->
     echo $? = 0
     ====================================
     false && echo hi = nothing = only return 1 in bg
-    <!-- true && echo hi = hi -->
+    true && echo hi = hi = return 0 in bg
     ++++++++++++++++++++++++++++++++++
     false || echo hey your suppose to be false = hey your suppose to be false
     true || echo hey i wanted to say something = echo = BLANK
     ==============================
-    true ; false ; echo hey i wanted to run this dont matter what = hey i wanted to run this dont matter
-    what
+    //////true ; false ;/////////////RUN NO MATTER WHAT/////
+    //////true ; false ;/////////////RUN NO MATTER WHAT/////
+    //////true ; false ;/////////////RUN NO MATTER WHAT/////
+    true ; false ; echo hey i wanted to run this dont matter what 
+    = hey i wanted to run this dont matter what
     =====================================
+    ||||||||||||||||||||||||||||||||||||||||||||||||||||
+    ||||||||||||||||||||||||||||||||||||||||||||||||||||
     ===========Subcommands=========
-    $() = will run return output info to higher running process that called it
-    <!-- echo hey im on this computer logged in as user $(whoami) and this user is wonderful = hey im on this computer logged in as user ubuntu and this user is wonderful -->
-    echo the current date and time and year is $(date) = the current date and time and year is Sat Dec 14
+    ||||||||||||||||||||||||||||||||||||||||
+    $() = will run return output info to higher running 
+    process that called it
+    echo hey im on this computer logged in as user
+    $(whoami) and this user is wonderful 
+    = 
+    hey im on this computer logged in as user ubuntu 
+    and this user is wonderful -->
+    echo the current date and time and year
+    is $(date) = the current date and time
+    and year is Sat Dec 14
     19:05:29
     EST 2024
     ===================================
-    echo $(date +%x) - $(uptime) >> mjwlog.txt
-    cat mjwlog.txt = 12/14/24 - 19:09:05 up 1 day, 5:16, 4 users, load average: 0.00, 0.00, 0.00
-    =============================
-    echo hi this data is from the mjwlog file here is the data $(cat mjwlog.txt) this data is good because
-    we have
-    the time
-    the work was done = hi this data is from the mjwlog file here is the data 12/14/24 - 19:09:05 up 1 day,
-    5:16, 4
-    users, load average: 0.00,
-    0.00, 0.00 this data is good because we have the time the work was done
-    ===========================================
-    <!-- echo hi `whoami` how are you today? = hi ubuntu how are you today? -->
-    $() = much better and you can nest them as well
+    |||||||+%x = just date +%x = INFO IN MAN|||||
     ===================================
+    echo $(date +%x) - $(uptime) >> mjwlog.txt
+    ===================
+    cat mjwlog.txt 
+    = 12/14/24 - 19:09:05 up 1 day, 5:16, 4 users, load average: 0.00, 0.00, 0.00
+    =============================
+    ||||||||||||||||||||||||||||||||||||||||||
+    echo hi $(cat < mjwlog.txt) user
+    ||||||||||||||||||||||||||||||||||||||||||
+    ===========================================
+    echo hi `whoami` how are you today? 
+    = hi ubuntu how are you today? 
+    ===========
+    +++++++++++++++++++++++++++++++++++++++++++++
+    $() 
+    = much better and you can nest them as well
+    ===================================
+    |||||||||||||||||||||||||||||||||||||||||||||||||
+    =================================================
     +++++++++++++++++++++++++++++++++
     <!-- =========SSH & Secondary Machine========== -->
     SSH = Secure Shell and allows you to connect
@@ -806,8 +963,8 @@ echo $? = 1 -->
     from value2 /.ssh folder
     cat id_rsa.pub =
     <!-- ssh-rsa
-AAAAB3NzaC1yc2EAAAADAQABAAABgQDOLqrza9GtaU7oDn/mf94mZjOCHUJF01As+4q209f1PbzVNW+T1o9Ra5Gbz0IlaEdWnFMqI13XUcYV/Of5shxUsj0iKXe0XP+326BKmKi8dN+serBvKrbJ4uq0qoR9GLcNnjJybEpFzkSKA4T9/CUrrpy4MBk73kqaz7cg161Xd6uPkHGH5UwMg7i8pVns0JnnfygtMZNsU0ctnuEJ0vHkZPf9qp1fr4qtns3knIVw+6mEEMOpOKXZWJxzflWssCUP0dEjo7/nzenmd/s0MDAERX44ICfkBP8isQ3oTVp+VFy3oO4Fo7p7D3DShGQll19Z29RvIK+blJ4ZWA7x6RedO3SZAOE0Fn+n4tybCzxwTiK1/4cFPqsyHOmXKkqa6B26iZ+kkXFAXM27bebfNsycAV4sAH+IDZOp7Kwh3NxlN2ZMtcJjYQLLQgTmtcw1w2r+6jimLay0odJ3k8C4Ojohqc0ue7BuohPk+J27bqKi0lOA89j7Oi7ELBRuxGaVMj8=
-ubuntu@primary -->
+    AAAAB3NzaC1yc2EAAAADAQABAAABgQDOLqrza9GtaU7oDn/mf94mZjOCHUJF01As+4q209f1PbzVNW+T1o9Ra5Gbz0IlaEdWnFMqI13XUcYV/Of5shxUsj0iKXe0XP+326BKmKi8dN+serBvKrbJ4uq0qoR9GLcNnjJybEpFzkSKA4T9/CUrrpy4MBk73kqaz7cg161Xd6uPkHGH5UwMg7i8pVns0JnnfygtMZNsU0ctnuEJ0vHkZPf9qp1fr4qtns3knIVw+6mEEMOpOKXZWJxzflWssCUP0dEjo7/nzenmd/s0MDAERX44ICfkBP8isQ3oTVp+VFy3oO4Fo7p7D3DShGQll19Z29RvIK+blJ4ZWA7x6RedO3SZAOE0Fn+n4tybCzxwTiK1/4cFPqsyHOmXKkqa6B26iZ+kkXFAXM27bebfNsycAV4sAH+IDZOp7Kwh3NxlN2ZMtcJjYQLLQgTmtcw1w2r+6jimLay0odJ3k8C4Ojohqc0ue7BuohPk+J27bqKi0lOA89j7Oi7ELBRuxGaVMj8=
+    ubuntu@primary -->
     ===========================================
     ==Here is a public SSK KEY that if someone can verify that this is their key tht they have with they own
     private
