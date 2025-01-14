@@ -63,7 +63,7 @@ loadframe.innerHTML = `
             prevEl: ".swiper-button-prev",
         },
         autoplay: {
-            delay: 1000, // Auto flip every 7 seconds
+            delay: 3000, // Auto flip every 3 seconds
             disableOnInteraction: false,
         },
     });

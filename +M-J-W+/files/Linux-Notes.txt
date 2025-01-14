@@ -901,7 +901,7 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
     ==========
     multipass shell secondary
     //to enter the shell of the secondary VM//
-    ubuntu@secondary:~$ 
+    GirlMeetGuy@secondary:~$ 
     = ///Secondary Ubuntu VM//
     ////==============================////////
     ////==================================/////////
@@ -1083,7 +1083,7 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
        +++++++TO GIVE USER SUPER USER PERMISSIONS+++++++
      +++++++TO GIVE USER SUPER USER PERMISSIONS+++++++
     ========///swith to ubuntu///=========
-    ubuntu@secondary:/$ sudo usermod -aG sudo GirlMeetGuy
+    GirlMeetGuy@secondary:/$ sudo usermod -aG sudo GirlMeetGuy
      +++++++TO GIVE USER SUPER USER PERMISSIONS+++++++
       +++++++TO GIVE USER SUPER USER PERMISSIONS+++++++
        +++++++TO GIVE USER SUPER USER PERMISSIONS+++++++
@@ -1121,11 +1121,11 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
     <!-- ==seems GirlMeetGuy didnt have sudo right to install the net-tools which is needed to run ifconfig program.
     ==will have to make GirlMeetGuy a sudo member using Ubuntu on secondary computer. -->
     ==================================================
-    ubuntu@secondary:~$ cat /etc/passwd =
+    GirlMeetGuy@secondary:~$ cat /etc/passwd =
     ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
     GirlMeetGuy:x:1001:1000::/home/GirlMeetGuy:/bin/bash
     =============================
-    ubuntu@secondary:~$ sudo usermod -aG sudo GirlMeetGuy
+    GirlMeetGuy@secondary:~$ sudo usermod -aG sudo GirlMeetGuy
     su GirlMeetGuy = Password:
     To run a command as administrator (user "root"), use "sudo <command>".
         See "man sudo_root" for details.
@@ -1139,6 +1139,12 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
   =============================
   /////PERMISSIONS ON THE SSH FOLDER CHANGED OK///////
   =========================
+  +++++++++++++++++++++++++++++
+  |||||||||||||||||||||||
+   0 -rw-r--r-- 1 GirlMeetGuy ubuntu    0 Jan 13 17:33  
+   .sudo_as_admin_successful
+   ||||||||||||||||||||||
+   ++++++++++++++++++++++++++++++++++++++++
   ==NOW TO CHANGE PERMISSIONS ON THE AUTHORIZED KEYS FILE==////////
   ========================
     GirlMeetGuy@secondary:~/.ssh$ chmod 600 ~/.ssh/authorized_keys
@@ -1240,6 +1246,20 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
         +++++++++++++++++++++++++++++++++++++++++++
+           ifconfig
+                        inet 192.168.64.14 = secondary computer ip-address on current
+                        network
+                        ==========
+                        netmask 255.255.255.0 = means 192.168.64 of the ip address is
+                        loced in and shouldnt change.
+                        ============
+                        broadcast 192.168.64.255 = 192.168.64 locked in for this
+                        computer on this network.
+                        ===================
+                        //////////////////////////
+                        +++++++++++++++++++++++++++
+                          flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1 = this is how the COMPUTER refers to itself
         |||||||||||||||||||||||||||||||||||||||||||||||
         |||||||||||||||||||||||||||||||||||||||||||||||
         ================================================
@@ -1256,23 +1276,21 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             # Run ifconfig
                             ifconfig -->
                         =================================
-                        ifconfig
-                        inet 192.168.64.14 = secondary computer ip-address on current
-                        network
-                        ==========
-                        netmask 255.255.255.0 = means 192.168.64 of the ip address is
-                        loced in and shouldnt change.
-                        ============
-                        broadcast 192.168.64.255 = 192.168.64 locked in for this
-                        computer on this network.
-                        ===================
+                     ||||||||||||||||||||||||||||||||||||
+                     ////NOW THAT WE HAVE THE IP ADDRESS OF THE SECONDARY COMPUTER WE CAN CONNECT TO IT FROM THE PRIMARY COMPUTER////  ======================
+                        +++++++++++++++++++++++++++++++++++++++++++
                         +++++++++++++++++++++++++++
                         ====CONNECTING TO SECONDARY COMPUTER=====
+                        ||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||
                         ===USING SSH AGENT=========
                         ++++Linking two Machines with SSH++++
                         <!-- ==FROM primary computer  -->
                         ubuntu@primary:~/.ssh$ cd ~
-                        <!-- ssh GirlMeetGuy@192.168.64.14 --> = Are you sure you want to
+                        ubuntu@primary:~$ 
+                        ssh GirlMeetGuy@192.168.64.7
+                        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                        = Are you sure you want to
                         continue connecting
                         (yes/no/[fingerprint])? yes
 
@@ -1320,51 +1338,111 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         ===============================
                         +++++++++++++++++++++
                         ===========================
+                        |||||||||||||||||||||||||||||||
+                        //Login was successful////////
+                        |||||||||||||||||||||||||||||||
                         GirlMeetGuy@secondary:~$ exit
-                        logout
+                        = logout
                         Connection to 192.168.64.14 closed.
                         =========================
-                        ubuntu@primary:~$ ssh GirlMeetGuy@192.168.64.14 = OK WAS ABLE TO LOG
-                        IN AGAIN = INFO FROM LOGIN =
-                        Last
-                        login: Sat Dec 14 21:45:19 2024 from
+                        ubuntu@primary:~$ ssh GirlMeetGuy@192.168.64.14 
+                        = OK WAS ABLE TO LOG
+                        IN AGAIN 
+                        = LAST LOGING INFO AFTER LOGGIN IN =
+                        Last login: Sat Dec 14 21:45:19 2024 from
                         192.168.64.10
                         ========================
-                        ubuntu@secondary:~$ ls -lash = 4.0K drwx------ 2 ubuntu ubuntu
-                        4.0K Dec 14 19:49 .ssh
+                        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                        /////browsing the secondary computer from the primary computer/////================
+                        +++++++++++++++++++++++++++++++++++++++++++
+                        GirlMeetGuy@secondary:~$ ls -lash 
+                        = 4.0K drwx------ 2 GirlMeetGuy ubuntu 4.0K Jan 13 17:18  .ssh
+                        ================
                         cd .ssh
-                        ls -lash = 4.0K -rw------- 1 ubuntu ubuntu 398 Dec 14 19:49
-                        authorized_keys
-                        ubuntu@secondary:~/.ssh$ vi authorized_keys = :q
+                        ls -lash 
+                        = 4.0K -rw------- 1 GirlMeetGuy ubuntu  568 Jan 13 17:18 authorized_keys
+                        ===========================
+                        GirlMeetGuy@secondary:~/.ssh$ vi authorized_keys = ok the key is still there and the permissions are still good
+                        +++++++++++++++++++++++++++++++++++++++++++
+                        :q = to exit vi
                         ===========================
                         ===================================
+                        |||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||
                         ====SFTP========Secure File Transfer Protocol====
-                        <!-- ubuntu@primary:~$ sftp GirlMeetGuy@192.168.64.14 = Connected to 192.168.64.14.
-                                                        sftp> -->
+                        |||||||||||||||||||||||||||||||
+                        ubuntu@primary:~$ sftp GirlMeetGuy@192.168.64.7 
+                        = Connected to 192.168.64.7.
+                        sftp> 
+                        ++++++++++++++++++++++++++++ 
+                        ||||||COMMANDS FOR SFTP||||||
+                        ||||||COMMANDS FOR SFTP||||||
+                        ===========================
                         sftp> pwd = Remote working directory: /home/GirlMeetGuy
+                        ==============================
+                        ++++++++++++++++++++++++++++
                         sftp> lpwd = Local working directory: /home/ubuntu
+                        ======
+                        ++++++++++++++++++++++++++++
                         sftp> lls = local list of files on the primary users computer
+                        +++++++++++++++++++++++++++++
+                        ||||||||||||||||||||||||||||||||
+                        ||||||||||||||||||||||||||||||||
                         =================================
-                        <!-- sftp> put lover.txt = Uploading lover.txt to /home/GirlMeetGuy/lover.txt
-                                                        lover.txt 100% 0 0.0KB/s 00:00 -->
-
-                        ! = ALLOWS YOU TO RUN COMMANDS ON THE SECONDARY COMPUTER.
-                        <!-- sftp> !echo "Hello this is michael two days before his birthday he is very happy" >> file-to-put.txt -->
-                        sftp> !cat file-to-put.txt = Hello this is michael two days
-                        before his birthday he is very happy
+                        ! = ALLOWS YOU TO RUN COMMANDS ON THE PRIMARY COMPUTER WHILE IN SFTP MODE |||||||||||||||||||||
+                        =================================
+                        sftp> put michael.txt
+                        = Uploading michael.txt to /home/GirlMeetGuy/michael.txt
+                        michael.txt                              100%  119   74.0KB/s   00:00 
+                        ||||||||||||||||||||||||||||||||
+                        ||||||||||||||||||||||||||||||||
+                         +++++++CREATED A FILE ON THE PRIMARY COMPUTER TO PUT ON THE SECONDARY COMPUTER++++++ 
+                         +++++++++++++++++++++++++++++++
+                         ==============================
+                         ! = RUN LOCAL COMMANDS WHILE IN SFTP MODE
+                         ====================
+                         ! = ALLOWS YOU TO RUN COMMANDS ON THE PRIMARY COMPUTER WHILE IN SFTP MODE+++++++++++++++++
+                         ===============
+                        sftp> !echo "Hello this is Michael how are you? happy 2025" >> file-to-put.txt 
+                        ||||||||||||||||||||||||||||||||
+                        ||||||||||||||||||||||||||||||||
+                       
+                        =================== 
+                        sftp> !cat file-to-put.txt = Hello this is Michael how are you? happy 2025
                         ==============================================
-                        <!-- ===RENAME A FILE ON SECONDARY COMPUTER==== -->
-                        sftp> put file-to-put.txt new-put-file.txt = Uploading
-                        file-to-put.txt to /home/GirlMeetGuy/new-put-file.txt
-                        file-to-put.txt 100% 68 47.9KB/s 00:00
-                        ==================================================
-                        ===From seconday=====
-                        GirlMeetGuy@secondary:~$ ls -lash = 4.0K -rw-r--r-- 1 GirlMeetGuy ubuntu
-                        68 Dec 15 06:43 new-put-file.txt
-                        =============================
-                        <!-- help = help with everything you can do  -->
+                        |||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||
+                        ===PUT THE FILE ON SECONDARY COMPUTER AND ALSO RENAME IT AT THE SAME TIME TO GIVE IT A NEW NAME ON THE SECONDARY COMPUTER====
+                        ===============================
+                        sftp> put file-to-put.txt NEW-put-file.txt  
+                        = Uploading file-to-put.txt to /home/GirlMeetGuy/NEW-put-file.txt
+                        file-to-put.txt                                       100%   46    52.5KB/s   00:00 
+                        =================================
+                        |||||||||||||||||||||||||||||||||
+                        ==============================
+                        ===FROM SECONDARY COMPUTER=====
+                        ===FROM SECONDARY COMPUTER=====
+                        GirlMeetGuy@secondary:~$ ls -lash 
+                        = NEW-put-file.txt  michael.txt
                         ================
+                        cat NEW-put-file.txt 
+                        =
+                        Hello this is Michael how are you? happy 2025
+                        |||||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||||
+                        =============================
+                        /////////////////////////////////
+                        ///////HELP FOR SFTP COMMANDS//////////=============
+                        ================================
+                        help = help with everything you can do  
+                        ==============================
+                        =================================
                         sftp> pwd = Remote working directory: /home/GirlMeetGuy
+                        ================
+                        L = Local 
+                        =========================
                         sftp> lpwd = Local working directory: /home/ubuntu
                         sftp> cd ..
                         sftp> pwd = Remote working directory: /home
@@ -1374,22 +1452,58 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         sftp> lpwd = Local working directory: /home/ubuntu
                         sftp> cd GirlMeetGuy
                         sftp> pwd = Remote working directory: /home/GirlMeetGuy
-                        =======================================
-                        <!-- ===getting files from the secondary computer==== -->
-                        get hiiwashere.txt hihiiwashere.txt = Fetching
-                        /home/GirlMeetGuy/hiiwashere.txt to hihiiwashere.txt
+                        =================================================================
+                        /////DOWNLOADING FILES FROM THE SECONDARY COMPUTER TO THE PRIMARY COMPUTER///////=========
+                        ==============================
+                        ===getting files from the secondary computer==== -->
+                        ==============================
+                        get lover1983GoOnlineDj.txt
+                        = Fetching /home/GirlMeetGuy/lover1983GoOnlineDj.txt to lover1983GoOnlineDj.txt
+                        lover1983GoOnlineDj.txt                               100%   79    39.9KB/s   00:00 
                         ============================
-                        <!-- sftp> bye = to exit sftp  -->
-                        =====================================
-                        +++++++++++++++++++++++++++
-                        <!-- ========Wget===and cURL========
-                                                
-                                                        +are two ways of getting a remote file. -->
-                        =====================================
+                        |||||||||||||||||||||||||||||||
+                        /////////////////////////////////
+                        |||||||||||||||||||||||||||||||
+                        /////USE SSH TO VIEW CONTENTS OF FILES ON SECONDARY COMPUTER///////////////////////
+                        ===============================
+                        cat command to view the contents of a .txt file on a secondary VM in Linux
+                        +++++++++++++++
+                        ubuntu@primary:~$ ssh GirlMeetGuy@192.168.64.7 'cat /home/GirlMeetGuy/lover1983GoOnlineDj.txt'
+                        |||||||||||||||||||||||||||||||
+                        ===============================
+                        ssh GirlMeetGuy@192.168.64.7 'echo /home/GirlMeetGuy/lover1983GoOnlineDj.txt'
+                        ======USING ECHO JUST ECHO THE PATH TO THE FILE ON THE SECONDARY COMPUTER====
+                        ===============================
+                        ////USE CAT TO VIEW THE CONTENTS OF THE FILE ON THE SECONDARY COMPUTER////=================
+                        |||||||||||||||||||||||||||||||
+                        ||||||||||||||||||||||||||||||||
+                        +++++++EXIT SFTP MODE+++++++
+                        ============================
+                        sftp> bye 
+                        = to exit sftp 
+                        =================================
+                        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                        ++++++++++++++++++++++++++++++
+                        ++++++++++++++++++++++++++++++
+                        ========Wget===and cURL========
+                        ========Wget===and cURL========
+                        ========Wget===and cURL========
+                        ========Wget===and cURL========
+                        ========Wget===and cURL========
+                        ========Wget===and cURL========
+                         +are two ways of getting a remote file. 
+                        =================================
+                        ========Wget===and cURL========
+                        ========Wget===and cURL========
+                        ========Wget===and cURL========
+                        ========Wget===and cURL========
+                        ========Wget===and cURL========
+                        =================================
                         Wget = downloading a file from the internet or it could also be
                         from a network.
                         =====================
-                        <!-- wget https://raw.githubusercontent.com/btholt/bash2048/master/bash2048.sh = to cl GAME FILE  -->
+                        wget https://raw.githubusercontent.com/btholt/bash2048/master/bash2048.sh 
+                        = to cl GAME FILE 
                         = --2024-12-15 07:11:24--
                         https://raw.githubusercontent.com/btholt/bash2048/master/bash2048.sh
                         Resolving raw.githubusercontent.com
