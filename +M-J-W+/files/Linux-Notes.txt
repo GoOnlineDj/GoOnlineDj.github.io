@@ -1642,6 +1642,11 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         192.168.64.4:8000 
                         = http://192.168.64.4:8000/
                         = SHOWS A SERVER WITH A LIST OF FILES|||||||||||||||||||||||||
+                        +++++++++++++++++++++++++++++
+                        |||||||||||||||||||||||||||||||
+                        ==NOTE if there is an INDEX.HTML file in the directory it will be displayed as the default page.==
+                        ++++++++++++++++++++++++++++++++
+                        |||||||||||||||||||||||||||||||
                         ========================== -->
                         =====================
                         FROM Primary # 2 =server log
@@ -1687,41 +1692,44 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                          +++++++++++++++++++++++++++++
                         |||||||||||||||||||||||||||||||
                         ===============================
+                        |||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||
                         +++++++++++++++++++++++++++++
                         ///new file created with name given NO PIPING to a existing file or a new file///////////
                         ===============================
-                        curl -0 https://GoOnlineDj.github.io/index.html > Money-Power-Respect.txt
-                        = the contents of the webpage will be saved in a file called Money-Power-Respect.txt
+                        curl -o Money-Power-Respect.txt https://GoOnlineDj.github.io/index.html 
+                        = the contents of the webpage will be saved in a file called Money-Power-Respect.txt 
                         |||||||||||||||||||||||||||||||
                         =====================
-                        ///KEEP THE SAME FILE NAME////
-                        curl -O http://192.168.64.4:8000/mmm.txt = % Total % Received % Xferd Average Speed Time Time
-                        Time Current
-                        Dload Upload Total Spent Left Speed
-                        100 237 100 237 0 0 71471 0 --:--:-- --:--:-- --:--:-- 79000
-
-                        ////KEEP THE SAME FILE NAME////
+                        |||||||||||||||||||||||||||||||
+                        ///KEEP THE ORIGINAL FILE NAME AS THE FILE NAME ON THE SERVER///////////////////////
+                         ////KEEP THE SAME FILE NAME////+++++++++++++++++++++++++++++++
+                        curl -O https://GoOnlineDj.github.io/index.html 
+                        =  index.html
+                        +++++++++++++++++++++++++++++
                         =====================
-                        <!-- from server = 192.168.64.4 - - [15/Dec/2024 10:05:02] "GET /mmm.txt HTTP/1.1" 200 - -->
+                        from server = 192.168.64.4 - - [15/Dec/2024 10:05:02] "GET /mmm.txt HTTP/1.1" 200 
                         ===================
+                        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                        +++++++++++++++++++++++++++++
+                        +++++++++++++++++++++++++++++
+                        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                         //TESTING API POSTING REQUEST///
                         ++FROM Primary #1
-                        ubuntu@primary:~$ curl -X POST http://192.168.64.4:8000/ =
+                        ubuntu@primary:~$ curl -X POST http://192.168.64.4:8000/ 
+                        =
                         <!DOCTYPE HTML>
                         <html lang="en">
-
                         <head>
-                            <meta charset="utf-8">
-                            <title>Error response</title>
+                        <meta charset="utf-8">
+                         <title>Error response</title>
                         </head>
-
                         <body>
-                            <h1>Error response</h1>
-                            <p>Error code: 501</p>
-                            <p>Message: Unsupported method ('POST').</p>
-                            <p>Error code explanation: 501 - Server does not support this operation.</p>
-                        </body>
-
+                         <h1>Error response</h1>
+                        <p>Error code: 501</p>
+                        <p>Message: Unsupported method ('POST').</p>
+                        <p>Error code explanation: 501 - Server does not support this operation.</p>
+                         </body>
                         </html>
 
                         =======================
@@ -1730,7 +1738,11 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         =====
                         192.168.64.4 - - [15/Dec/2024 10:15:50] "POST / HTTP/1.1" 501 -
                         ===========================
-                        ubuntu@primary:~$ curl -d "this is the post body" http://192.168.64.4:8000/ =
+                        |||||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||||
+                        ubuntu@primary:~$ curl -d "this is the post body" http://192.168.64.4:8000/ 
+                        =
                         <!DOCTYPE HTML>
                         <html lang="en">
 
@@ -1747,13 +1759,24 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         </body>
 
                         </html>
+                        =======================
+                        +++++++++++++++++++++++++++++
                         =====================
-                        //from server ==
-                        192.168.64.4 - - [15/Dec/2024 10:19:09] code 501, message Unsupported method ('POST')
+                        //from server 
+                        ==
+                        192.168.64.4 - - [13/Jan/2025 22:51:54] code 501, message Unsupported method ('POST')
                         ====
-                        192.168.64.4 - - [15/Dec/2024 10:19:09] "POST / HTTP/1.1" 501 -
+                       192.168.64.4 - - [13/Jan/2025 22:51:54] "POST / HTTP/1.1" 501 -
                         ======================
-                        <!-- ubuntu@primary:~$ curl -X PUT -d "this is the post body" http://192.168.64.4:8000/ = <!DOCTYPE HTML>
+                        +++++++++++++++++++++++++++++
+                        +++++++++++++++++++++++++++++
+                        +++++++++++++++++++++++++++++
+                        ==you can mix and match====
+                        +++++++++++++++++++++++++++++
+                        +++++++++++++++++++++++++++++
+                        ubuntu@primary:~$ curl -X PUT -d "this is the post body" http://192.168.64.4:8000/ 
+                        ||||||||||||||||||||||||||
+                        = <!DOCTYPE HTML>
                         <html lang="en">
                         
                         <head>
@@ -1768,14 +1791,17 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             <p>Error code explanation: 501 - Server does not support this operation.</p>
                         </body>
                         
-                        </html> -->
+                        </html> 
                         =================
                         //server //
                         192.168.64.4 - - [15/Dec/2024 10:21:20] code 501, message Unsupported method ('PUT')
                         ====
                         192.168.64.4 - - [15/Dec/2024 10:21:20] "PUT / HTTP/1.1" 501 -
                         ===================
-                        ubuntu@primary:~$ curl -X DELETE http://192.168.64.4:8000/ =
+                        ubuntu@primary:~$ curl -X DELETE http://192.168.64.4:8000/ 
+                        |||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||
+                        =
                         <!DOCTYPE HTML>
                         <html lang="en">
 
@@ -1798,8 +1824,13 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         ==
                         192.168.64.4 - - [15/Dec/2024 10:23:55] "DELETE / HTTP/1.1" 501 -
                         ====================
-                        +++++++To send a cookie using cURL ++++++
-                        ubuntu@primary:~$ curl -b "name:Michael" -X PATCH http://192.168.64.4:8000/ =
+                        |||||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||||
+                        +++++++++++++++++++++++++++++
+                        +++++++To send a cookie using cURL ++++++|||||||||||||||||||||
+                        ubuntu@primary:~$ curl -b "name:Michael" -X PATCH http://192.168.64.4:8000/ 
+                        =
+                        ||||||||||||||||||||||||||
                         <!DOCTYPE HTML>
                         <html lang="en">
 
@@ -1822,22 +1853,46 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         =====
                         192.168.64.4 - - [15/Dec/2024 10:26:31] "PATCH / HTTP/1.1" 501 -
                         ==========================
+                        |||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||
+                        +++++++++++++++++++++++++++++
+                        1.start a session in the browser
+                        2.get all the cookies set in the browser
+                        3.copy everything the browser is 
+                        outputting for those cookies
+                        4.put it into a file
+                        5.and then use that file in the cookie jar +++++++++++++++++++++++++++++
+                        |||||||||||||||||||||||||||||||
                         ++++++CHECK OUT -c to save to the cookie.jar file====save all your site cookies==to the
                         cookie.jar========
+                        |||||||||||||||||||||||||||||||
+                        +++++++++++++++++++++++++++++
+                        |||||||||||||||||||||||||||||||
                         ===================
                         ////Following redirects////
+                        ////Following redirects////
+                        ////Following redirects////
+                        ===by default cURL will not follow redirects====||||||||||
                         =============================
-                        <!-- ubuntu@primary:~$ curl http://bit.ly/linux-cli = <html>
+                        ubuntu@primary:~$ curl http://bit.ly/linux-cli 
                         
-                        <body><a href="https://btholt.github.io/complete-intro-to-linux-and-the-cli/">moved here</a></body> -->
+                        = <html>
+                        <body><a href="https://btholt.github.io/complete-intro-to-linux-and-the-cli/">moved here</a></body> 
+                        </html>
                         ======================
+                        |||||||||||||||||||||||||||||||
+                        curl -L = to follow redirects
+                        |||||||||||||||||||||||||||||||
                         //////cURL = EVERYTHING ON WEBSITE////
-
-                        </html>ubuntu@primary:~$ curl -L http://bit.ly/linux-cli = YOU WILL GET EVERYTHING ON THE
+                        |||||||||||||||||||||||||||||||
+                        curl -L = to follow redirects
+                        ========================
+                        |||||||||||||||||||||||||||||||
+                        curl -L http://bit.ly/linux-cli = YOU WILL GET EVERYTHING ON THE
                         WEBSITE =====
                         ========================
                         ==== -L will make cURL follow redirects=====
-                        <!-- ubuntu@primary:~$ curl -L https://goonlinedj.github.io/M-J-W/M-J-W+index.html -->
+                        curl -L https://GoOnlineDj.com
                         ==========================
                         -H to send headers
                         curl -H "accept-language: en-US" -H "Authorization: bearer 1983" http://192.168.64.4:8000
