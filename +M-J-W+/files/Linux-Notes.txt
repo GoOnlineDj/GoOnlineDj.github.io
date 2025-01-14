@@ -1350,7 +1350,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         IN AGAIN 
                         = LAST LOGING INFO AFTER LOGGIN IN =
                         Last login: Sat Dec 14 21:45:19 2024 from
-                        192.168.64.10
+                        192.168.64.4
                         ========================
                         ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                         /////browsing the secondary computer from the primary computer/////================
@@ -1468,10 +1468,10 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         ===============================
                         cat command to view the contents of a .txt file on a secondary VM in Linux
                         +++++++++++++++
-                        ubuntu@primary:~$ ssh GirlMeetGuy@192.168.64.7 'cat /home/GirlMeetGuy/lover1983GoOnlineDj.txt'
+                        ubuntu@primary:~$ ssh GirlMeetGuy@192.168.64.7 "cat /home/GirlMeetGuy/lover1983GoOnlineDj.txt"
                         |||||||||||||||||||||||||||||||
                         ===============================
-                        ssh GirlMeetGuy@192.168.64.7 'echo /home/GirlMeetGuy/lover1983GoOnlineDj.txt'
+                        ssh GirlMeetGuy@192.168.64.7 "echo /home/GirlMeetGuy/lover1983GoOnlineDj.txt"
                         ======USING ECHO JUST ECHO THE PATH TO THE FILE ON THE SECONDARY COMPUTER====
                         ===============================
                         ////USE CAT TO VIEW THE CONTENTS OF THE FILE ON THE SECONDARY COMPUTER////=================
@@ -1485,24 +1485,28 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                         ++++++++++++++++++++++++++++++
                         ++++++++++++++++++++++++++++++
-                        ========Wget===and cURL========
-                        ========Wget===and cURL========
-                        ========Wget===and cURL========
-                        ========Wget===and cURL========
-                        ========Wget===and cURL========
-                        ========Wget===and cURL========
+                        ========wet===&==curl========
+                        ========wet===&==curl========
+                        ========wet===&==curl========
+                        ========wet===&==curl========
+                        ========wet===&==curl========
+                        ========wet===&==curl========
                          +are two ways of getting a remote file. 
                         =================================
-                        ========Wget===and cURL========
-                        ========Wget===and cURL========
-                        ========Wget===and cURL========
-                        ========Wget===and cURL========
-                        ========Wget===and cURL========
+                        ========wget===&==curl========
+                        ========wget===&==curl========
+                        ========wget===&==curl========
+                        ========wget===&==curl========
+                        ========wget===&==curl========
                         =================================
-                        Wget = downloading a file from the internet or it could also be
+                        wget = downloading a file from the internet or it could also be
                         from a network.
-                        =====================
+                        ===========================
+                        ||||||||||||||||||||||||||||
+                        ==downloading a file =====
+                        ||||||||||||||||||||||||||||
                         wget https://raw.githubusercontent.com/btholt/bash2048/master/bash2048.sh 
+                        +++++++++++++
                         = to cl GAME FILE 
                         = --2024-12-15 07:11:24--
                         https://raw.githubusercontent.com/btholt/bash2048/master/bash2048.sh
@@ -1520,66 +1524,124 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
 
                         2024-12-15 07:11:24 (10.5 MB/s) - ‘bash2048.sh’ saved
                         [9514/9514]
+                        //////////////////////////////
+                        ===game downloaded successfully===////////////
+                        ||||||||||||||||||||||||||||||||
+                        ||||||||||||||||||||||||||||||||
                         ===========================
-                        <!-- ubuntu@primary:~$ ls -lash = 12K -rw-rw-r-- 1 ubuntu ubuntu 9.3K Dec 15 07:11 bash2048.sh  -->
+                        ls -lash 
+                        =  
+                        12K -rw-rw-r--  1 ubuntu ubuntu 9.3K Jan 13 21:13 bash2048.sh  
                         ==========================
+                        |||||||||||||||||||||||||||||||
+                        ==NOTE TO RUN THE GAME WITHOUT MAKING IT AN EXCECUTABLE FILE===
+                        ==bash bash2048.sh ============
+                        ||||||||||||||||||||||||||||||||
+                        ==========================
+                        |||||||||||||||||||||||||||||||
                         the file is not excecutable we could just pipe in into bash e.g
                         = bash bash2048.sh = or we can change the permissions to add
                         excecutable to the file.
                         ==========================
-
-                        chmod +x bash2048.sh = ADD EXCECUTABLE OPTION TO FILE
-                        ubuntu@primary:~$ ls -lash = 12K -rwxrwxr-x 1 ubuntu ubuntu 9.3K
-                        Dec 15 07:11 bash2048.sh
-                        ====================================
-                        ====EXCECUTE OR RUN A FILE LIKE THIS===
-                        <!-- . bash2048.sh = TO RUN FILE  -->
+                        +++++++++++++++++++++++++++++
+                        |||||||||||||||||||||||||||||||
+                        chmod +x bash2048.sh 
+                        = ADD EXCECUTABLE OPTION TO FILE
+                        ===========
+                        ls -lash 
+                        =  12K -rwxrwxr-x  1 ubuntu ubuntu 9.3K Jan 13 21:13 bash2048.sh
+                        ====================================|||||||||||||||||||||||||||||
+                        ====RUN/EXECUTE THE GAME====
+                        ====EXCECUTE OR RUN A FILE LIKE THIS===||||||||||||||||||||||
+                        =======================
+                        bash bash2048.sh
+                        . bash2048.sh = TO RUN FILE excecutable
+                        ./bash2048.sh = TO RUN FILE excecutable
+                        = TO RUN FILE  
                         ^C = save game info
                         =========================
-                        Wget = is like copy or like cp = only thing is you cant pipe =
-                        however Wget can do RECURSIVE DOWNLOADS and cURL CANNOT DO
+                        ============================
+                        |||||||||||||||||||||||||||||||
+                        wget = is like copy or like cp = only thing is you cant pipe =
+                        however Wget can do RECURSIVE DOWNLOADS and curl CANNOT DO
                         RECURSIVE DOWNLOAD. Wget can be used to download an entire
                         website because it can download all the SUB URLs as well .
                         info using Wget .
-
-                        ==============
-                        cURL = has standard in and standard out so it can pipe info or
-                        file into programs.
                         ==============================
-
-                        <!-- wget --help = GNU Wget 1.21.4, a non-interactive network retriever.
-                      Usage: wget [OPTION]... [URL]... -->
+                        wget --help 
+                        = GNU Wget 1.21.4, a non-interactive network retriever.
+                        Usage: wget [OPTION]... [URL]... 
+                        ||||||||||||||||||||||||||||||||
+                        ==============
+                        |||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||
+                        curl = has standard in and standard out so it can pipe info or file into programs.
+                        ||||||||||||||||||||||||||||||||
+                        ||||||||||||||||||||||||||||||||
                         =========================
-                        cURL = has the ability to plug into the greater Unix, Linux
+                        ||||||||||||||||||||||||||||||||
+                        ||||||||||||||||||||||||||||||||
+                        curl = has the ability to plug into the greater Unix, Linux
                         ecosystem.
                         ==========================
-                        ======cURL==========
-                        <!-- curl https://raw.githubusercontent.com/btholt/bash2048/master/bash2048.sh > game.sh --> = %
-                        Total % Received % Xferd Average Speed Time Time Time Current
-                        Dload Upload Total Spent Left Speed
-                        100 9514 100 9514 0 0 32743 0 --:--:-- --:--:-- --:--:-- 32806
+                        ======curl==========
+                        curl https://raw.githubusercontent.com/btholt/bash2048/master/bash2048.sh 
+                        =========++++++++++++++++++++
+                        ////all contents of the file will be displayed on the terminal//// or standard out/////
+                        ======since we dont want that we want to play the game , we will pipe the game into a file and give it a name ////////////
+                        ==========================
+                        |||||||||||||||||||||||||||||||
+                        curl https://raw.githubusercontent.com/btholt/bash2048/master/bash2048.sh > game2048.sh      
+                        =   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+                        100  9514  100  9514    0     0  62632      0 --:--:-- --:--:-- --:--:-- 63006
                         =========================
-                        <!-- ls -lash = 12K -rw-rw-r-- 1 ubuntu ubuntu 9.3K Dec 15 09:21 game.sh -->
+                        |||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||
+                        ls -lash 
+                        =  12K -rw-rw-r--  1 ubuntu ubuntu 9.3K Jan 13 22:05 game2048.sh
                         ============================
-                        cat game.sh = the contents of file. = #!/usr/bin/env bash
+                        cat game.sh 
+                        = the contents of file. = #!/usr/bin/env bash
                         ============================
                         ++++++++++++++++++++++++
+                        |||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||
                         ====Starting a server or creating a server to test API endpoints using python3=======
-                        <!-- +++started a new primary shell+++//FOR SERVER/// -->
+                        |||||||||||||||||||||||||||||||
+                        +++started a new primary shell
+                        ========================
+                        +++//FOR SERVER///+++++++++++
                         ==from second primary shell//
                         =====================
+                        ///STARTING A SERVER///
+                        +++++++++++++++++++++++++
+                        |||||||||||||||||||||||||||||||
                         ubuntu@primary:~$ python3 -m http.server 8000 --bind 0.0.0.0 = Serving HTTP on 0.0.0.0 port 8000
                         (http://0.0.0.0:8000/) ...
                         ====================
-                        <!-- //this is a running python3 static web server// -->
+                        //this is a running python3 static web server//////////
                         ==============
+                        +++++++++++++++++++++++++
+                        |||||||||||||||||||||||||||||||
+                        +++++++++++++++++++++++++
+                        |||||||||||||||||||||||||||||||
                         ==SWITCH BACK TO primary #1==
                         =======================
-                        ubuntu@primary:~$ ifconfig = inet 192.168.64.10
+                        ====TO GET THE IP ADDRESS OF THE PRIMARY COMPUTER====/////////
+                        ++++++++++++++++++++++++++++++++
+                        =================================
+                        ubuntu@primary:~$ ifconfig 
+                        =  inet 192.168.64.4
                         ==============
                         <!-- ++++++++++++++++
                         ++OPEN WEB BROWSER======
-                        192.168.64.10:8000 = http://192.168.64.10:8000/ = SHOWS A SERVER WITH A LIST OF FILES
+                        192.168.64.4:8000 
+                        = http://192.168.64.4:8000/
+                        = SHOWS A SERVER WITH A LIST OF FILES|||||||||||||||||||||||||
                         ========================== -->
                         =====================
                         FROM Primary # 2 =server log
@@ -1590,45 +1652,61 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         192.168.64.1 - - [15/Dec/2024 09:42:47] "GET /newlover.txt HTTP/1.1" 200 -
                         192.168.64.1 - - [15/Dec/2024 09:42:51] "GET /mmm.txt HTTP/1.1" 200 -
                         ==========================
+                        |||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||
                         +++python is installed on every Ubuntu box++++
                         ========================
-                        <!-- curl http://192.168.64.10:8000/ = <!DOCTYPE HTML> = contents of webpage -->
+                        curl http://192.168.64.4:8000/ = <!DOCTYPE HTML> = contents of webpage 
                         ============
                         ==from primary server===
-                        192.168.64.10 - - [15/Dec/2024 09:50:48] "GET / HTTP/1.1" 200 - ======/////log from
+                       192.168.64.4 - - [13/Jan/2025 22:25:03] "GET / HTTP/1.1" 200 - - ======/////log from
                         connection///
-                        ===========================
+                        ||||||||||||||||||||||||||||||
+                        +++++++++++++++++++++++++++++
+                        ||||||||||||||||||||||||||||||
+                        curl https://GoOnlineDj.github.io/index.html
+                        = all the contents OR SOURCE CODE of the webpage will be displayed on the terminal
+                        =============================
+                        ===============================
+                        +++++++++++++++++++++++++++++
                         ///piping to a new file///
-                        <!-- curl http://192.168.64.10:8000/ > res.txt = % Total % Received % Xferd Average Speed Time Time Time Current
-                        Dload Upload Total Spent Left Speed
-                        100 2639 100 2639 0 0 376k 0 --:--:-- --:--:-- --:--:-- 429k -->
+                        curl https://GoOnlineDj.github.io/index.html > Money-Power-Respect.txt
+                        = the contents of the webpage will be saved in a file called Money-Power-Respect.txt
+                        |||||||||||||||||||||||||||||||
+                        +++++++++++++++++++++++++++++
+                        |||||||||||||||||||||||||||||||
+                        ===========================
                         ======================
-                        ls -lash = 4.0K -rw-rw-r-- 1 ubuntu ubuntu 2.6K Dec 15 09:55 res.txt
+                        ls -lash 
+                        = 4.0K -rw-rw-r-- 1 ubuntu ubuntu 2.6K Dec 15 09:55 res.txt
                         =====================
-                        ++Primary server = 192.168.64.10 - - [15/Dec/2024 09:55:32] "GET / HTTP/1.1" 200 -
+                        ++Primary server 
+                        = 192.168.64.4 - - [15/Dec/2024 09:55:32] "GET / HTTP/1.1" 200 -
                         ==========================
-                        //dont have to pipe it file is created automatically///
-                        <!-- curl -o res2.txt http://192.168.64.10:8000/ = % Total % Received % Xferd Average Speed Time Time Time Current
-                        Dload Upload Total Spent Left Speed
-                        100 2639 100 2639 0 0 328k 0 --:--:-- --:--:-- --:--:-- 368k -->
-                        //dont have to pipe it file is created automatically///
-                        =======================
-                        ========================
-                        ls -lash = 4.0K -rw-rw-r-- 1 ubuntu ubuntu 335 Dec 15 10:02 output.txt
+                        |||||||||||||||||||||||||||||||
+                         +++++++++++++++++++++++++++++
+                        |||||||||||||||||||||||||||||||
+                        ===============================
+                        +++++++++++++++++++++++++++++
+                        ///new file created with name given NO PIPING to a existing file or a new file///////////
+                        ===============================
+                        curl -0 https://GoOnlineDj.github.io/index.html > Money-Power-Respect.txt
+                        = the contents of the webpage will be saved in a file called Money-Power-Respect.txt
+                        |||||||||||||||||||||||||||||||
                         =====================
                         ///KEEP THE SAME FILE NAME////
-                        curl -O http://192.168.64.10:8000/mmm.txt = % Total % Received % Xferd Average Speed Time Time
+                        curl -O http://192.168.64.4:8000/mmm.txt = % Total % Received % Xferd Average Speed Time Time
                         Time Current
                         Dload Upload Total Spent Left Speed
                         100 237 100 237 0 0 71471 0 --:--:-- --:--:-- --:--:-- 79000
 
                         ////KEEP THE SAME FILE NAME////
                         =====================
-                        <!-- from server = 192.168.64.10 - - [15/Dec/2024 10:05:02] "GET /mmm.txt HTTP/1.1" 200 - -->
+                        <!-- from server = 192.168.64.4 - - [15/Dec/2024 10:05:02] "GET /mmm.txt HTTP/1.1" 200 - -->
                         ===================
                         //TESTING API POSTING REQUEST///
                         ++FROM Primary #1
-                        ubuntu@primary:~$ curl -X POST http://192.168.64.10:8000/ =
+                        ubuntu@primary:~$ curl -X POST http://192.168.64.4:8000/ =
                         <!DOCTYPE HTML>
                         <html lang="en">
 
@@ -1648,11 +1726,11 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
 
                         =======================
                         //from server
-                        192.168.64.10 - - [15/Dec/2024 10:15:50] code 501, message Unsupported method ('POST')
+                        192.168.64.4 - - [15/Dec/2024 10:15:50] code 501, message Unsupported method ('POST')
                         =====
-                        192.168.64.10 - - [15/Dec/2024 10:15:50] "POST / HTTP/1.1" 501 -
+                        192.168.64.4 - - [15/Dec/2024 10:15:50] "POST / HTTP/1.1" 501 -
                         ===========================
-                        ubuntu@primary:~$ curl -d "this is the post body" http://192.168.64.10:8000/ =
+                        ubuntu@primary:~$ curl -d "this is the post body" http://192.168.64.4:8000/ =
                         <!DOCTYPE HTML>
                         <html lang="en">
 
@@ -1671,11 +1749,11 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         </html>
                         =====================
                         //from server ==
-                        192.168.64.10 - - [15/Dec/2024 10:19:09] code 501, message Unsupported method ('POST')
+                        192.168.64.4 - - [15/Dec/2024 10:19:09] code 501, message Unsupported method ('POST')
                         ====
-                        192.168.64.10 - - [15/Dec/2024 10:19:09] "POST / HTTP/1.1" 501 -
+                        192.168.64.4 - - [15/Dec/2024 10:19:09] "POST / HTTP/1.1" 501 -
                         ======================
-                        <!-- ubuntu@primary:~$ curl -X PUT -d "this is the post body" http://192.168.64.10:8000/ = <!DOCTYPE HTML>
+                        <!-- ubuntu@primary:~$ curl -X PUT -d "this is the post body" http://192.168.64.4:8000/ = <!DOCTYPE HTML>
                         <html lang="en">
                         
                         <head>
@@ -1693,11 +1771,11 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         </html> -->
                         =================
                         //server //
-                        192.168.64.10 - - [15/Dec/2024 10:21:20] code 501, message Unsupported method ('PUT')
+                        192.168.64.4 - - [15/Dec/2024 10:21:20] code 501, message Unsupported method ('PUT')
                         ====
-                        192.168.64.10 - - [15/Dec/2024 10:21:20] "PUT / HTTP/1.1" 501 -
+                        192.168.64.4 - - [15/Dec/2024 10:21:20] "PUT / HTTP/1.1" 501 -
                         ===================
-                        ubuntu@primary:~$ curl -X DELETE http://192.168.64.10:8000/ =
+                        ubuntu@primary:~$ curl -X DELETE http://192.168.64.4:8000/ =
                         <!DOCTYPE HTML>
                         <html lang="en">
 
@@ -1716,12 +1794,12 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         </html>
                         ====================
                         //from server ==
-                        192.168.64.10 - - [15/Dec/2024 10:23:55] code 501, message Unsupported method ('DELETE')
+                        192.168.64.4 - - [15/Dec/2024 10:23:55] code 501, message Unsupported method ('DELETE')
                         ==
-                        192.168.64.10 - - [15/Dec/2024 10:23:55] "DELETE / HTTP/1.1" 501 -
+                        192.168.64.4 - - [15/Dec/2024 10:23:55] "DELETE / HTTP/1.1" 501 -
                         ====================
                         +++++++To send a cookie using cURL ++++++
-                        ubuntu@primary:~$ curl -b "name:Michael" -X PATCH http://192.168.64.10:8000/ =
+                        ubuntu@primary:~$ curl -b "name:Michael" -X PATCH http://192.168.64.4:8000/ =
                         <!DOCTYPE HTML>
                         <html lang="en">
 
@@ -1740,9 +1818,9 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         </html>
                         ================
                         ///from server ///
-                        192.168.64.10 - - [15/Dec/2024 10:26:31] code 501, message Unsupported method ('PATCH')
+                        192.168.64.4 - - [15/Dec/2024 10:26:31] code 501, message Unsupported method ('PATCH')
                         =====
-                        192.168.64.10 - - [15/Dec/2024 10:26:31] "PATCH / HTTP/1.1" 501 -
+                        192.168.64.4 - - [15/Dec/2024 10:26:31] "PATCH / HTTP/1.1" 501 -
                         ==========================
                         ++++++CHECK OUT -c to save to the cookie.jar file====save all your site cookies==to the
                         cookie.jar========
@@ -1762,7 +1840,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         <!-- ubuntu@primary:~$ curl -L https://goonlinedj.github.io/M-J-W/M-J-W+index.html -->
                         ==========================
                         -H to send headers
-                        curl -H "accept-language: en-US" -H "Authorization: bearer 1983" http://192.168.64.10:8000
+                        curl -H "accept-language: en-US" -H "Authorization: bearer 1983" http://192.168.64.4:8000
                         ===================
                         +++++++++++++++++++++++
                         <!-- |bash ====DONT RUN THIS COMMAND  -->//be careful when curling and piping into bash
