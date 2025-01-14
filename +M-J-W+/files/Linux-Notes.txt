@@ -1895,40 +1895,62 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         curl -L https://GoOnlineDj.com
                         ==========================
                         -H to send headers
+                        ||||||||||||||||||||||||||||
                         curl -H "accept-language: en-US" -H "Authorization: bearer 1983" http://192.168.64.4:8000
                         ===================
+                        |||||||||||||||||||||||||||||||
+                        +++++++++++++++++++++++++++++
+                        |||||||||||||||||||||||||||||||
+                        +++++++++++++++++++++++++++++
+                        =NOTE:====under NETWORK tab==
+                        RIGHT CLICK ON THE DOC AND COPY AS CURL AND PASTE INTO TERMINAL
+                        +++++++++++++++++++++++++++++++
+                        |||||||||||||||||||||||||||||||
+                        nvm =
+                        Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions
+                        |||||||||||||||||||||||||||||||
                         +++++++++++++++++++++++
-                        <!-- |bash ====DONT RUN THIS COMMAND  -->//be careful when curling and piping into bash
+                        ============================
+                        |bash 
+                        ====DONT RUN THIS COMMAND  //be careful when curling and piping into bash
                         directly, check the file first then run the file.
                         +++++++++++++++++++++
                         //instead pipe data into file to check data///
 
-                        <!-- curl curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh > my-file.sh
+                        curl curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh > my-file.sh
                         =====
-                        cat my-file.sh = to check file. -->
+                        cat my-file.sh = to check file. 
 
                         ==================
+                        ||||||||||||||||||||||||||||||
+                        ||||||||||||||||||||||||||||||
                         ===Package Management & APT Basics====
                         +++++++++++++++++++
                         ====================
-                        <!-- ==Ubuntu has APT = Advanced packageing tool
-                        NOTE : Ubuntu can also use dpkg which is from Debian //since Ubuntu came from Debian its able to
-                        use that packaging tool as well. -->
+                        ==Ubuntu has APT = Advanced packageing tool ============
+                        |||||||||||||||||||||||||||||||
+                        |||||||||||||||||||||||||||||||
+                        NOTE : Ubuntu can also use dpkg which is from Debian //since Ubuntu came from Debian its able to use that packaging tool as well.
                         =====================
                         dpkg --help = Usage: dpkg [<option>...] <command></command>
                             Use 'apt' or 'aptitude' for user-friendly package management.
                             ============
+                            =====aptitude=========
                             ++++++++++++++
                             //installing aptitute///
                             ++TOOL for manageing apt =
-                            <!-- ubuntu@primary:~$ sudo apt install aptitude -->
+                            ||||||||||||||||||||||||||||
+                            ubuntu@primary:~$ sudo apt install aptitude 
                             ================
                             ubuntu@primary:~$ aptitude
                             ================
                             ^c to exit out of aptitude
+                            |||||||||||||||||||||||||||||
+                            ||||||||||||||||||||
+
                             ===========================
                             //NOTE: apt-get install = old ways = might be more advance than APT.
-                            //NOPE: APT install = new way
+                            //NOTE: APT install = new way
                             ===================
                             ubuntu@primary:~$ apt install lolcat = E: Could not open lock file
                             /var/lib/dpkg/lock-frontend - open (13: Permission denied)
