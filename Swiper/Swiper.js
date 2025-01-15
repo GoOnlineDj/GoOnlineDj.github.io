@@ -7,11 +7,12 @@ document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
 const loadframe = document.getElementById("_id_frame");
 loadframe.innerHTML = `
 
-
-                 <div class="swiper-container">
-                   <div class="_c_space-ship"> 
+<div class="_c_space-ship"> 
                         🛸
                     </div>
+
+                 <div class="swiper-container">
+                   
             <div class="swiper-wrapper">
                         <div class="swiper-slide"> <img src="./images/17.jpg" alt="Michael Junior Williams"> </div>
                         <div class="swiper-slide"> <img src="./images/web-development-W3Schools/Michael_J_Williams_Certificate_of_Completion_Front_End_Development_Michael_Junior_Williams.png" alt="W3Schools"></div>
@@ -39,12 +40,9 @@ loadframe.innerHTML = `
                         <div class="swiper-slide"> <img src="./images/web-development-Frontend-Masters/Michael_Junior_Williams_Frontend_Masters_Software_Developer_Success_Soft_Skills_Testing.png" alt="Frontend Masters"> </div>
                         <div class="swiper-slide"> <img src="./images/web-development-Frontend-Masters/Michael_Junior_Williams_Frontend_Masters_Introduction_to_Dev_Tools_v3.png" alt="Frontend Masters"> </div>
                         <div class="swiper-slide"> <img src="./images/web-development-Frontend-Masters/Michael_Junior_Williams_Frontend_Masters_Complete_Intro_to_Linux_and_the_Command-Line.png" alt="Frontend Masters"> </div>
-         
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-       
                     </div>
-           
+             <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
                     </div>
   `;    
 
@@ -66,6 +64,10 @@ new Swiper(".swiper-container", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 3000, // Auto flip every 3 seconds
+        disableOnInteraction: false,
     },
 
 });
