@@ -2169,6 +2169,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             version of node we need.
                             =======================
                             ++++++++++++++++++++
+                            ============================
                             ||||||||||||||||||||||||||
                             SHELL SCRIPTS + WRITING YOUR OWN SCRIPTS
                             |||||||||||||||||||||||||
@@ -2176,52 +2177,80 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ====BASH SCRIPTS=====
                             ===================
                             ||||||||||||||||||||||||||
-                            ubuntu@primary:~$ vi gen_files.sh
+                            SHELL SCRIPTS + WRITING YOUR OWN SCRIPTS
+                            |||||||||||||||||||||||||
+                            +++++++++++++++++++++++++++
+                            ||||||||||||||||||||||||||
+                            vi mjw_files.sh
                             ==========================
                             =writing bash script in vi
                             -p means if the file already exist dont error out.
                             text from vi =
-                            <!-- mkdir -p ~/temp
+                            ++++++++++++++++++++++++
+                            mkdir -p ~/temp
                             cd ~/temp
                             touch file{1..10}.txt
-                            echo done -->
+                            echo done 
+                            +++++++++++++++++++++++++
                             ===================
                             esc + :wq to get out of vi
                             ==============
-                            ubuntu@primary:~/temp$ . gen_files.sh
-                            ===============
-                            . gen_files.sh = to run script
-                            ================
-                            ubuntu@primary:~$ source gen_files.sh
-                            ======================
-                            source gen_files.sh = also can run the file. = RUN IN THE SAME PROCESS SO IT CHANGES THE
+                            ||||||||||||||||||||||||
+                            ====TO RUN SHELL SCRIPT====
+                            ====TO RUN SHELL SCRIPT====
+                            ====TO RUN SHELL SCRIPT====
+                            ====================
+                             ubuntu@primary:~$ source mjw_files.sh
+                             =
+                             done
+                             =====
+                              source mjw_files.sh 
+                            = also can run the file. = RUN IN THE SAME PROCESS SO IT CHANGES THE
                             DIRECTORY.
+                            ====================
+                            ls
+                            = files are there
+                            cd ..
+                            ================
+                            . mjw_files.sh = to run the file
+                            ========================
+                           ||||||||||||||||||||||||||
+                            ================
+                           ====TO RUN SHELL SCRIPT====
+                           ====TO RUN SHELL SCRIPT====
                             ======================
-                            <!-- ubuntu@primary:~$ bash gen_files.sh
+                            +++++++++++++++++++++++++++
+                            ||||||||||||||||||||||||
+                            ||||||||||||||||||||||||
+                            ======================
+                            bash mjw_files.sh
                             =================
-                            bash gen_files.sh = SEEMS TO BE BETTER BECAUSE IT DOESNT CHANGE THE DIRECTORY.
+                            bash mjw_files.sh = SEEMS TO BE BETTER BECAUSE IT DOESNT CHANGE THE DIRECTORY.
                             =======================
-                            bash gen_files.sh = STAY IN SAME DIRECTORY = IT RUNS ANOTHER PROCESS IN THE BACKGROUND.
+                            bash mjw_files.sh = STAY IN SAME DIRECTORY = IT RUNS ANOTHER PROCESS IN THE BACKGROUND.
+                            ||||||||||||||||||||||||||||
                             ===================
-                            sh = script file. -->
+                            |||||||||||||||||||||||||||||
+                            sh = script file. 
                             ================
                             +++++++++++++++++++
                             =====Hashbang========
-                            <!-- #! /bin/bash -->
+                            #! /bin/bash
+                            = 
                             ///this line that should be placed at the top of the vi window tell bash use bash to
                             interpret the file. or we could have said use python to interpret the file.
                             ====================
                             +++++example+++++++
                             ================
-                            mv gen_files.sh gen_files
-                            ls -lash =4.0K -rw-rw-r-- 1 ubuntu ubuntu 72 Dec 15 16:10 gen_files
+                            mv mjw_files.sh mjw_files
+                            ls -lash =4.0K -rw-rw-r-- 1 ubuntu ubuntu 72 Dec 15 16:10 mjw_files
                             ==
-                            ubuntu@primary:~$ chmod +x gen_files
-                            ls -lash = 4.0K -rwxrwxr-x 1 ubuntu ubuntu 72 Dec 15 16:10 gen_files
+                            ubuntu@primary:~$ chmod +x mjw_files
+                            ls -lash = 4.0K -rwxrwxr-x 1 ubuntu ubuntu 72 Dec 15 16:10 mjw_files
                             =========================
                             NOW ITS AN EXECUTABLE FILE.
                             ===================
-                            ubuntu@primary:~$ ./gen_files = done
+                            ubuntu@primary:~$ ./mjw_files = done
                             =====================
                             because of the hashband it knew how to run the script.
                             =======================
@@ -2251,12 +2280,12 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ===================
                             mkdir my_bin
                             mv node_test my_bin
-                            mv gen_files my_bin
+                            mv mjw_files my_bin
                             cd my_bin
                             ubuntu@primary:~/my_bin$ ls -lash = total 16K
                             4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 16:29 .
                             4.0K drwxr-xr-x 22 ubuntu ubuntu 4.0K Dec 15 16:29 ..
-                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 72 Dec 15 16:10 gen_files
+                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 72 Dec 15 16:10 mjw_files
                             4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test
                             ====================
                             <!-- //NOW WE HAVE TO PUT THIS FOLDER ON OUR PATH// -->
@@ -2280,14 +2309,14 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ++so now we should be able to run the script without . or source or bash = i should be able
                             to run the program using only the program name.
                             ===================
-                            ubuntu@primary:~$ ls my_bin = gen_files node_test
+                            ubuntu@primary:~$ ls my_bin = mjw_files node_test
                             =============
-                            gen_files = done
+                            mjw_files = done
                             node_test = this is running from node.js
                             =====================
                             # = this is how you comment in a bash script.
                             =================
-                            vi my_bin/gen_files = to add comments for Others
+                            vi my_bin/mjw_files = to add comments for Others
                             ===============
                             #this is a comment. = to be placed in the script
                             ===============
@@ -2314,7 +2343,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             touch ${FILE_PREFIX}{1..10}.txt
                             echo done #this is a comment.
                             ======================
-                            gen_files = done
+                            mjw_files = done
                             ===================
                             <!-- +++++++++++++++++++++++
                             ${} = accessing a variable 
@@ -2323,7 +2352,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             =========================
                             =========================
                             =======Arguments=========
-                            $0 = invoked by gen_files
+                            $0 = invoked by mjw_files
                             $1 = first arugument being provided from user.
                             ====================
                             giving Argument to the bash script =
@@ -2336,18 +2365,18 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             read = for user input
                             -p = prompt
                             ===================
-                            ubuntu@primary:~$ vi my_bin/gen_files
+                            ubuntu@primary:~$ vi my_bin/mjw_files
                             =================
 
                             read -p "Enter a file prefix: " FILE_PREFIX
                             ============
                             :wq
                             ==================
-                            ubuntu@primary:~$ gen_files another_gen_files_folder
+                            ubuntu@primary:~$ mjw_files another_mjw_files_folder
                             =======
                             Enter a file prefix: value = done
                             ===================
-                            ubuntu@primary:~$ ls another_gen_files_folder/ = value1.txt GirlMeetGuy.txt value4.txt value6.txt
+                            ubuntu@primary:~$ ls another_mjw_files_folder/ = value1.txt GirlMeetGuy.txt value4.txt value6.txt
                             value8.txt
                             value10.txt value3.txt value5.txt value7.txt value9.txt
                             ==========================
@@ -2380,7 +2409,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             if [] = for if statement
                             [] = rearange the arugument in the bracket to a test statement.
                             =======================
-                            ubuntu@primary:~$ vi my_bin/gen_files
+                            ubuntu@primary:~$ vi my_bin/mjw_files
                             =====================
                             if [ -z $DESTINATION ]; then
                             echo "no path provided, defaulting to ~/temp"
@@ -2403,7 +2432,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ++++++++++++++++
                             ++++++++++++++++++
                             ===============
-                            ubuntu@primary:~$ gen_files = Enter a file prefix: lol = no path provided, defaulting to
+                            ubuntu@primary:~$ mjw_files = Enter a file prefix: lol = no path provided, defaulting to
                             ~/temp
                             done
                             ==================
@@ -2464,7 +2493,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ubuntu@primary:~/my_bin$ ls -lash = total 16K
                             4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 18:32 .
                             4.0K drwxr-xr-x 26 ubuntu ubuntu 4.0K Dec 15 18:32 ..
-                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 gen_files
+                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 mjw_files
                             4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test
                             ====================
                             <!-- ubuntu@primary:~/my_bin$ touch check_number -->
@@ -2472,7 +2501,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 19:32 .
                             4.0K drwxr-xr-x 26 ubuntu ubuntu 4.0K Dec 15 18:32 ..
                             0 -rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 19:32 check_number
-                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 gen_files
+                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 mjw_files
                             4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test
                             =====================
                             <!-- ubuntu@primary:~/my_bin$ chmod +x check_number
@@ -2480,7 +2509,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 19:32 .
                             4.0K drwxr-xr-x 26 ubuntu ubuntu 4.0K Dec 15 18:32 ..
                             0 -rwxrwxr-x 1 ubuntu ubuntu 0 Dec 15 19:32 check_number
-                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 gen_files
+                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 mjw_files
                             4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test = check_number = color = green = ok -->
                             =======================
 
@@ -2550,7 +2579,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                              ==================
                              ubuntu@primary:~$ cd my_bin/ 
                              ubuntu@primary:~/my_bin$ touch friends
-                             ubuntu@primary:~/my_bin$ ls = check_number  friends  gen_files  node_test  smiley
+                             ubuntu@primary:~/my_bin$ ls = check_number  friends  mjw_files  node_test  smiley
                              ubuntu@primary:~/my_bin$ chmod +x friends
                              ubuntu@primary:~/my_bin$ vi friends
 
@@ -2649,7 +2678,7 @@ ubuntu@primary:/etc/cron.daily$ ls = apport  apt-compat  aptitude  dpkg  logrota
 ubuntu@primary:~/my_bin$ vi make_new_file_now = TO CREATE A NEW FILE. = using vi = didnt use touch to create file.
 =====================
 ubuntu@primary:~/my_bin$ ls = 
-check_number  friends  gen_files  guess  make_new_file_now  node_test  smiley
+check_number  friends  mjw_files  guess  make_new_file_now  node_test  smiley
 ============
 ubuntu@primary:~/my_bin$ chmod +x make_new_file_now 
 ===================
