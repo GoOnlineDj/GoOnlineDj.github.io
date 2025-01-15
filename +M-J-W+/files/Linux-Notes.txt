@@ -2236,35 +2236,86 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             +++++++++++++++++++
                             =====Hashbang========
                             #! /bin/bash
+                             =====Hashbang========
+                            #! /bin/bash
+                            ================
                             = 
                             ///this line that should be placed at the top of the vi window tell bash use bash to
                             interpret the file. or we could have said use python to interpret the file.
+                            ||||||||||||||||||||||||||||
+                            lolcat mjw_files.sh 
+                            ===================
+                            =
+                            #! /bin/bash
+
+                            mkdir -p ~/temp
+                            cd ~/temp
+                            touch file{1..10}.txt
+                            echo done
+                            ||||||||||||||||||||||||||||
+                            ===========================
                             ====================
+                            esc + :wq to get out of vi
+                            ||||||||||||||||||||||||||
+                            ==========================
+                            ||||||||||||||||||||||||||
                             +++++example+++++++
                             ================
                             mv mjw_files.sh mjw_files
-                            ls -lash =4.0K -rw-rw-r-- 1 ubuntu ubuntu 72 Dec 15 16:10 mjw_files
-                            ==
-                            ubuntu@primary:~$ chmod +x mjw_files
-                            ls -lash = 4.0K -rwxrwxr-x 1 ubuntu ubuntu 72 Dec 15 16:10 mjw_files
+                            ls -lash 
+                            =
+                            4.0K -rw-rw-r--  1 ubuntu ubuntu   72 Jan 15 18:16 mjw_files
+                            =======
+                            |||||||||||||||
+                            ///CHANGE PREMISSION TO MAKE FILE EXECUTABLE////////////
+                            \\\\\\\\\\\\\\\\\\\\\\\\\\\
+                            ====================
+                            chmod +x mjw_files
+                            ls -lash 
+                            = 4.0K -rwxrwxr-x  1 ubuntu ubuntu   72 Jan 15 18:16 mjw_files
                             =========================
                             NOW ITS AN EXECUTABLE FILE.
+                            |||||||||||||||||||||||||||
+                            +++++++++++++++++++++++++++
                             ===================
-                            ubuntu@primary:~$ ./mjw_files = done
+                            ./mjw_files = to run the file
+                            . mjw_files = to run the file
+                            = done
                             =====================
-                            because of the hashband it knew how to run the script.
+                            because of the hashband it knew to use bash to run the script.+++++++++++++++++++
                             =======================
-
+                            ||||||||||||||||||||||||||||
+                            +++++++++++++++++++++++++++
+                            +++++++++++++++++++++++++++
+                            //USE which to find out where the program is located.////+++++++++++++
+                            +++++++++++++++++++++++++++
+                            =============================
                             ////node example///
-                            ubuntu@primary:~$ which node = /usr/bin/node
+                            which node
+                            = 
+                            /usr/bin/node
                             ==================
-                            <!-- ubuntu@primary:~$ vi node_test = #! /usr/bin/node
+                            //USE which to find out where the program is located.////+++++++++++++
+                            =============================
+                            vi node_test 
+                            =
+                            #! /usr/bin/node
                             
-                            console.log('this is running from node.js'); -->
+                            console.log("Michael Junior Williams Loves The Lord And Savior Jesus Christ and His Father In Heaven +God"); 
                             =======================
-                            chmod +x node_test
+                            =========================
+                            esc + :wq to get out of vi
+                            ===========================
+                            ============================
+                            chmod +x node_test 
+                            =====
+                            //to make the file executable
+                            ++++++++++++++++++++++
                             ==================
-                            <!-- ubuntu@primary:~$ ./node_test = this is running from node.js  -->
+                            ./node_test 
+                            = 
+                            Michael Junior Williams Loves The Lord And Savior Jesus Christ and His Father In Heaven +God 
+                            ====================
                             ==========================
                             +++++++++++++++++++++++
                             =====Path & Variables=====
