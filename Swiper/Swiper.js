@@ -66,7 +66,7 @@ new Swiper(".swiper-container", {
         prevEl: ".swiper-button-prev",
     },
     autoplay: {
-        delay: 3000, // Auto flip every 3 seconds
+        delay: 7000, // Auto flip every 7 seconds
         disableOnInteraction: false,
     },
 
