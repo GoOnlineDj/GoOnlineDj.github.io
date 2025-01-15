@@ -2038,7 +2038,8 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             Section: universe/web
                             Origin: Ubuntu
                             =====================
-                            ubuntu@primary:~$ apt show lolcat = Package: lolcat
+                            ubuntu@primary:~$ apt show lolcat 
+                            = Package: lolcat
                             Version: 100.0.1-3
                             Priority: extra
                             Section: universe/games
