@@ -2118,32 +2118,50 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ==========================
                             //NOTE: package manager for Mac is Homebrew
                             =========================
+                            ||||||||||||||||||||||||
                             +++++++++++++++++++++++
+                            ||||||||||||||||||||||||
                             =========SNAPS========
-                            //snaps is able to sandbox the data so it wont break out////totally enclosed package.
+                            //snaps is able to sandbox the data so it wont break out////totally enclosed package./////////////
                             =================
-                            <!-- snaps are how Ubuntu install GUI apps, graphical user interface apps.
+                            ||||||||||||||||||||||||
+                            snaps are how Ubuntu install GUI apps, graphical user interface apps.
+                            |||||||||||||||||||||||||
                             =====================
                             snap can install Visual Studio code,Spotify,Firefox,Chrome, and other kinds of different
-                            tools. -->
+                            tools. 
+                            ||||||||||||||||||||||
                             ========================
-                            NOTE: Debs can do whatever they want.
+                            NOTE: Debs is another package manager for Ubuntu.
                             =======================
-                            ==SNAPS ==the way they are packaged can be updated by the developer without going through
-                            review.
+                            ||||||||||||||||||||||||
+                            ==SNAPS ==the way they are packaged can be updated by the developer without going through review.
                             =====================
-                            SNAP WORKS FINE FOR INSTALLING THAT COMES WITH AUTO UPDATE BUT MIGHT HAVE MORE SECURITY.
+                            SNAP WORKS FINE FOR INSTALLING APPS AND COMES WITH AUTO UPDATE BUT MIGHT HAVE MORE SECURITY.
                             ==================
-                            <!-- ubuntu@primary:~$ sudo apt install snap daemon -->
+                            |||||||||||||||||||||||
+                            =================
+                            |||REMOVE AN APT APP//////
+                            sudo apt remove lolcat
+                            ================
+                            ||||||||||||||||||||||||||
+                            sudo apt install snap daemon
                             daemon = the tool that executes the snap commands in the background that runs in the
                             background for snap.
                             =========================
-                            ubuntu@primary:~$ cat williams.txt | lolcat
+                            cat williams.txt | lolcat
                             ================
-                            ubuntu@primary:~$ snap info node
+                            |||||||||||||||||||||||||
+                            ///To Check node info before installing/////////////
+                            ||||||||||||||||||||
+                            +++++++++++++++
+                            snap info node
+                            +++++++++++++++++
+                            ||||||||||||||||||
                             ======================
-                            ubuntu@primary:~$ sudo snap install --channel=14/stable --classic node = node (14/stable)
-                            14.20.1 from OpenJS Foundation (iojs✓) installed
+                            sudo snap install --channel=20/stable --classic node 
+                            = node (20/stable)
+                             20.18.1 from OpenJS Foundation (iojs✓) installed
                             =======================
                             --classic = classic flag allows it to break out of its box = means you can trust the
                             publisher.
@@ -2151,10 +2169,13 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             version of node we need.
                             =======================
                             ++++++++++++++++++++
-                            <!-- SHELL SCRIPTS + WRITING YOUR OWN SCRIPTS -->
+                            ||||||||||||||||||||||||||
+                            SHELL SCRIPTS + WRITING YOUR OWN SCRIPTS
+                            |||||||||||||||||||||||||
                             =====================
                             ====BASH SCRIPTS=====
                             ===================
+                            ||||||||||||||||||||||||||
                             ubuntu@primary:~$ vi gen_files.sh
                             ==========================
                             =writing bash script in vi
