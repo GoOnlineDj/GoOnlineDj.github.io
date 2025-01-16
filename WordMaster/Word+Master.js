@@ -55,7 +55,8 @@ async function valueINIT() {
 
   function isCorrect() {
     if (guess === answer) {
-      alert(`WOW YOU WON THE GAME + THE WINNING "WORD" WAS = ${answer} + Thanks For Playing`);
+      window.location.href = "./+M-J-W+.html#word-game";
+      alert(`WOW YOU WON THE GAME + THE WINNING "WORD" IS = ${answer} + Thanks For Playing`);
       for (i = 0; i < 30; i++) {
         if (Math.floor(i / MAX_LETTERS) !== currentRow) {
           boxes[i].classList.add("green");
@@ -222,6 +223,10 @@ if (wordStatus === false) {
     currentRow++;
 
     if (currentRow === maxRows) {
+      if (done) {
+        return;
+      }
+      window.location.href = "./+M-J-W+.html#word-game";
       alert(`THANKS FOR PLAYING THE GAME + the word was = ${answer}`);
       done = true;
 
