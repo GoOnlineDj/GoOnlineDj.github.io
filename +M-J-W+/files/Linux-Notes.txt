@@ -2243,7 +2243,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ///this line that should be placed at the top of the vi window tell bash use bash to
                             interpret the file. or we could have said use python to interpret the file.
                             ||||||||||||||||||||||||||||
-                            lolcat mjw_files.sh 
+                            vi mjw_files.sh 
                             ===================
                             =
                             #! /bin/bash
@@ -2279,7 +2279,6 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             +++++++++++++++++++++++++++
                             ===================
                             ./mjw_files = to run the file
-                            . mjw_files = to run the file
                             = done
                             =====================
                             because of the hashband it knew to use bash to run the script.+++++++++++++++++++
@@ -2293,13 +2292,13 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ////node example///
                             which node
                             = 
-                            /usr/bin/node
+                            /snap/bin/node
                             ==================
                             //USE which to find out where the program is located.////+++++++++++++
                             =============================
                             vi node_test 
                             =
-                            #! /usr/bin/node
+                            #! /snap/bin/node
                             
                             console.log("Michael Junior Williams Loves The Lord And Savior Jesus Christ and His Father In Heaven +God"); 
                             =======================
@@ -2319,70 +2318,129 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ==========================
                             +++++++++++++++++++++++
                             =====Path & Variables=====
+                            $PATH = this is where all the programs are.
                             ========================
                             ====$PATH ===
-                            echo $PATH =
+                            echo $PATH 
+                            =
                             /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
                             =========================
-                            ubuntu@primary:~$ ls /snap/bin = multipass-sshfs.env node.npm node.yarn npm yarn
-                            node node.npx node.yarnpkg npx yarnpkg
+                            ls /usr/local/sbin
+                            ls /usr/local/games/
+                            ======
+                            ls /snap/bin 
+                            = multipass-sshfs.env  node  node.npm  node.npx  node.yarn  node.yarnpkg  npm  npx  yarn  yarnpkg
                             =====================
-                            <!-- ./ = i want you to run something that is in this directory. -->
+                            |||||||||||||||||||||||||||
+                            ./ = i want you to run something that is in this directory.
                             ===================
-                            mkdir my_bin
-                            mv node_test my_bin
-                            mv mjw_files my_bin
-                            cd my_bin
-                            ubuntu@primary:~/my_bin$ ls -lash = total 16K
-                            4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 16:29 .
-                            4.0K drwxr-xr-x 22 ubuntu ubuntu 4.0K Dec 15 16:29 ..
-                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 72 Dec 15 16:10 mjw_files
-                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test
+                            |||||||||||||||||||||||||||
+                            ===================
+                            mkdir mjw_bin
+                            mv node_test mjw_bin
+                            mv mjw_files mjw_bin
+                            cd mjw_bin
+                            =====
+                            ls -lash 
+                            = 
+                            total 16K
+                            4.0K drwxrwxr-x  2 ubuntu ubuntu 4.0K Jan 15 20:54 .
+                            4.0K drwxr-xr-x 15 ubuntu ubuntu 4.0K Jan 15 20:54 ..
+                            4.0K -rwxrwxr-x  1 ubuntu ubuntu   72 Jan 15 18:16 mjw_files
+                            4.0K -rwxrwxr-x  1 ubuntu ubuntu  128 Jan 15 18:30 node_test
                             ====================
-                            <!-- //NOW WE HAVE TO PUT THIS FOLDER ON OUR PATH// -->
+                            +++++++++++++++++++++++++
+                            ===========================
+                             +++++++++++++++++++++++++
+                            |||||||||||||||||||||||||||
+                            //NOW WE HAVE TO PUT THE FOLDER WITH THE PROGRAMS ON OUR PATH// we have to add this folder to the path that way we dont have to type ./ to run the program. we can run the program by just typing the name of the program.
+                            |||||||||||||||||||||||||||
+                            +++++++++++++++++++++++++
+                            ====================
                             ================
-                            ubuntu@primary:~/my_bin$ cd ..
+                            ubuntu@primary:~/mjw_bin$ cd ..
                             ===================
-                            vi .bashrc
+                            =================== 
+                            ubuntu@primary:~$ vi .bashrc
                             =================
-                            export PATH=~/my_bin:$PATH
+                            +++++++++++++++++++++++++
+                            |||||||||||||||||||||||||||
+                            ///the :$PATH seperate the folders on the path///
+                            //without the :$PATH the path would be overridden by the new path + with the :$PATH we will just add to the front of the path.
+                            ========================
+                            +++++++++++++++++++++++++
+                            ======  :$PATH   =======
+                            +++++++++++++++++++++++++
+                            ==========  :$PATH   ========
+                            ========================
+                            export PATH=~/mjw_bin:$PATH
                             ==========
-                            ~/ = add to this Path
-                            $PATH = keep current path and add to it.
+                            ~/ = list a full path
                             =====================
-                            <!-- :wq ==be careful not to include in file...when exiting..  -->
+                            :wq 
+                            ==be careful not to include in file...when exiting.. 
                             =================
-                            ubuntu@primary:~$ echo $PATH =
-                            /home/ubuntu/my_bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+                            |||||||||||||||||||||||||||
+                            === EXIT OUT OF TERMINAL AND REOPEN TERMINAL ===
+                            ||||||||||||||||||||||||||||
+                            echo $PATH 
+                            =
+                           /home/ubuntu/mjw_bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+                           ||||||||||||||||||||||
                             =============
-                            my_ bin IS NOW INCLUDED IN THE $PATH
+                            mjw_bin IS NOW INCLUDED IN THE $PATH
                             ====================
-                            ++so now we should be able to run the script without . or source or bash = i should be able
-                            to run the program using only the program name.
+                            ||||||||||||||||||||||||||
+                            ++so now we should be able to run the script without . or source or bash = i should be able to run the program using only the program name.
                             ===================
-                            ubuntu@primary:~$ ls my_bin = mjw_files node_test
+                            ls mjw_bin 
+                            = mjw_files node_test
                             =============
-                            mjw_files = done
-                            node_test = this is running from node.js
+                            ++++++++++++++++++
+                            mjw_files 
+                            = done
+                            ======
+                            ++++++++++++++++
+                            node_test 
+                            = Michael Junior Williams Loves The Lord And Savior Jesus Christ and His Father In Heaven +God 
+                            +++++++++++++++++++
                             =====================
                             # = this is how you comment in a bash script.
                             =================
-                            vi my_bin/mjw_files = to add comments for Others
+                            vi mjw_bin/mjw_files = to add comments for Others
                             ===============
-                            #this is a comment. = to be placed in the script
+                            ||||||||||||||||||||
+                            # = COMMENT IN BASH
+                            #this is a comment. 
+                            = to be placed in the script
+                            ||||||||||||||||||||||
                             ===============
                             ++++++++++++++++++
-                            ===CREATING VARIABLE IN BASH=====
-                            <!-- DESTINATION="~/temp"
+                            ============================
+                            ||||||||||||||||||||||||||||
+                            +++++++++++++++++++++++++++++
+                            ===CREATING VARIABLE IN ============BASH========
+                             ============================
+                             ||||||||||||||||||||||||||||
+                             +++++++++++++++++
+                             vi mjw_bin/mjw_files 
+                             ===================
+                            ||||||||||||||||||||||||||||
+                            ====NOTE if your putting a $ next to {} your will have to use another set of {} to make it work.+++++///////////
+                            +++++++++++++++++++++++++++++
+                            DESTINATION="~/temp"
                             mkdir -p $DESTINATION
-                            cd $DESTINATION -->
-
+                            cd $DESTINATION
+                             ============================
+                            ||||||||||||||||||||||||||||
+                            +++++++++++++++++++++++++++++
                             ====================
                             #! /bin/bash
 
-
+                            ||||#VARIABLES|||||||
                             DESTINATION="~/temp"
                             FILE_PREFIX=file
+                            ||||#VARIABLES|||||||
 
                             mkdir -p $DESTINATION
                             cd $DESTINATION
@@ -2392,37 +2450,71 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
 
 
                             touch ${FILE_PREFIX}{1..10}.txt
+
                             echo done #this is a comment.
+                            |||||||||||||||||||||
                             ======================
+                            ||||||||||||||||||||||
+                            esc + :wq to get out of vi
+                            ======================
+                            +++++++++++++++++++++++++++++
                             mjw_files = done
                             ===================
-                            <!-- +++++++++++++++++++++++
+                            ||||||||||||||||||||||||
+                            +++++++++++++++++++++++
+                            ||||||||||||||||||||||||
                             ${} = accessing a variable 
                             $() = run a sub command and return.
-                            +++++++++++++++++++++++++ -->
+                            ++++++++++++++++++++++++
                             =========================
+                            =======Arguments=========
+                            =======Arguments=========
+                            =======Arguments=========
+                            =======Arguments=========
                             =========================
                             =======Arguments=========
                             $0 = invoked by mjw_files
                             $1 = first arugument being provided from user.
+                            $1
+                            $2
                             ====================
                             giving Argument to the bash script =
                             DESTINATION=$1 in vi editor
                             ====================
-
-                            <!-- ++++++++++++++
-                            +++TO RECEIEVE USER INPUT INTERACTIVELY+++++ -->
+                            ||||||||||||||||||||||||
+                            ++++++++++++++
+                            +++TO RECEIEVE USER INPUT INTERACTIVELY+++++
                             ==================
                             read = for user input
                             -p = prompt
+                            ||||||||||||||||||||||||||||
                             ===================
-                            ubuntu@primary:~$ vi my_bin/mjw_files
+                            vi mjw_bin/mjw_files
                             =================
+                            #! /bin/bash
 
+
+                            #DESTINATION="~/temp"
+                            DESTINATION="$1"
+
+                            FILE_PREFIX=file
+
+                            mkdir -p $DESTINATION
+                            cd ${DESTINATION}
+                            touch $FILE_PREFIX{1..10}.txt
+
+                            #This is a comment
+
+                            echo done       #This Is A Comment!
+                            ==================
+                            |||||||||||||||||||||||||||
+                              :wq
+                            ==================
+                            |||||||||||||||||||||||||||
+                            ==================
                             read -p "Enter a file prefix: " FILE_PREFIX
                             ============
-                            :wq
-                            ==================
+                           =======================
                             ubuntu@primary:~$ mjw_files another_mjw_files_folder
                             =======
                             Enter a file prefix: value = done
@@ -2460,7 +2552,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             if [] = for if statement
                             [] = rearange the arugument in the bracket to a test statement.
                             =======================
-                            ubuntu@primary:~$ vi my_bin/mjw_files
+                            ubuntu@primary:~$ vi mjw_bin/mjw_files
                             =====================
                             if [ -z $DESTINATION ]; then
                             echo "no path provided, defaulting to ~/temp"
@@ -2540,23 +2632,23 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             <!-- test -w ~/status.txt && echo "yes" = 4.0K -rw-rw-r-- 1 ubuntu ubuntu 98 Dec 14 18:45
                             status.txt = yes -->
                             =====================
-                            ubuntu@primary:~$ cd my_bin/
-                            ubuntu@primary:~/my_bin$ ls -lash = total 16K
+                            ubuntu@primary:~$ cd mjw_bin/
+                            ubuntu@primary:~/mjw_bin$ ls -lash = total 16K
                             4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 18:32 .
                             4.0K drwxr-xr-x 26 ubuntu ubuntu 4.0K Dec 15 18:32 ..
                             4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 mjw_files
                             4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test
                             ====================
-                            <!-- ubuntu@primary:~/my_bin$ touch check_number -->
-                            ubuntu@primary:~/my_bin$ ls -lash = total 16K
+                            <!-- ubuntu@primary:~/mjw_bin$ touch check_number -->
+                            ubuntu@primary:~/mjw_bin$ ls -lash = total 16K
                             4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 19:32 .
                             4.0K drwxr-xr-x 26 ubuntu ubuntu 4.0K Dec 15 18:32 ..
                             0 -rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 19:32 check_number
                             4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 mjw_files
                             4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test
                             =====================
-                            <!-- ubuntu@primary:~/my_bin$ chmod +x check_number
-                            ubuntu@primary:~/my_bin$ ls -lash = total 16K
+                            <!-- ubuntu@primary:~/mjw_bin$ chmod +x check_number
+                            ubuntu@primary:~/mjw_bin$ ls -lash = total 16K
                             4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 19:32 .
                             4.0K drwxr-xr-x 26 ubuntu ubuntu 4.0K Dec 15 18:32 ..
                             0 -rwxrwxr-x 1 ubuntu ubuntu 0 Dec 15 19:32 check_number
@@ -2564,7 +2656,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test = check_number = color = green = ok -->
                             =======================
 
-                            ubuntu@primary:~/my_bin$ vi check_number
+                            ubuntu@primary:~/mjw_bin$ vi check_number
 
                             =================
                             #! /bin/bash
@@ -2581,15 +2673,15 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             =================
                             :wq
                             ================================
-                            <!-- ubuntu@primary:~/my_bin$ check_number 10 = equals 10
+                            <!-- ubuntu@primary:~/mjw_bin$ check_number 10 = equals 10
                             ===========
-                            ubuntu@primary:~/my_bin$ check_number 17 = greater than ten 
+                            ubuntu@primary:~/mjw_bin$ check_number 17 = greater than ten 
                             ====================
-                            ubuntu@primary:~/my_bin$ check_number 7 = less than ten
+                            ubuntu@primary:~/mjw_bin$ check_number 7 = less than ten
                             ======================= -->
                             //NOTE: in vi #! /bin/bash :wq and reopen the file = to get bash color codes in vi.///
                             =============
-                            ubuntu@primary:~/my_bin$ vi smiley
+                            ubuntu@primary:~/mjw_bin$ vi smiley
 
                             ========================================
                             #! /bin/bash
@@ -2615,9 +2707,9 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ==================
                             :wq
                             ==============
-                            ubuntu@primary:~/my_bin$ smiley smile = :)
-                            ubuntu@primary:~/my_bin$ smiley laugh = :D
-                            ubuntu@primary:~/my_bin$ smiley im learing cool Linux stuff = I DONT KNOW THAT ONE YET! -->
+                            ubuntu@primary:~/mjw_bin$ smiley smile = :)
+                            ubuntu@primary:~/mjw_bin$ smiley laugh = :D
+                            ubuntu@primary:~/mjw_bin$ smiley im learing cool Linux stuff = I DONT KNOW THAT ONE YET! -->
                             ======================
                             +++++++++++++++++++++++
                             ======Loops & Arrays=======
@@ -2628,11 +2720,11 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                              ${#friends[*]} = array Length
                              ${friends[1]} = friend at index 1
                              ==================
-                             ubuntu@primary:~$ cd my_bin/ 
-                             ubuntu@primary:~/my_bin$ touch friends
-                             ubuntu@primary:~/my_bin$ ls = check_number  friends  mjw_files  node_test  smiley
-                             ubuntu@primary:~/my_bin$ chmod +x friends
-                             ubuntu@primary:~/my_bin$ vi friends
+                             ubuntu@primary:~$ cd mjw_bin/ 
+                             ubuntu@primary:~/mjw_bin$ touch friends
+                             ubuntu@primary:~/mjw_bin$ ls = check_number  friends  mjw_files  node_test  smiley
+                             ubuntu@primary:~/mjw_bin$ chmod +x friends
+                             ubuntu@primary:~/mjw_bin$ vi friends
 
                              ================
                              #! /bin/bash
@@ -2656,7 +2748,7 @@ echo "i have ${#friends[*]} friends"
 =============================
 :wq
 ======================
-ubuntu@primary:~/my_bin$ friends = 
+ubuntu@primary:~/mjw_bin$ friends = 
 my second friend is Value
 friend: Angel
 friend: Value
@@ -2674,9 +2766,9 @@ $(()) = converts to a basic program = let = which does math = let does modular w
 Unix is an operating system that was built on the idea of modular design, which means that each tool or command is designed to do one thing well. This philosophy is known as the Unix philosophy
 ====================================
 
-ubuntu@primary:~/my_bin$ touch guess
-ubuntu@primary:~/my_bin$ chmod +x guess
-ubuntu@primary:~/my_bin$ vi guess
+ubuntu@primary:~/mjw_bin$ touch guess
+ubuntu@primary:~/mjw_bin$ chmod +x guess
+ubuntu@primary:~/mjw_bin$ vi guess
 ======================
 #! /bin/bash
 
@@ -2698,7 +2790,7 @@ echo "you got it!"
 
 :wq
 ===============
-ubuntu@primary:~/my_bin$ guess 
+ubuntu@primary:~/mjw_bin$ guess 
 
 guess a number between 1 and 10
 your guess: 2
@@ -2726,15 +2818,15 @@ ubuntu@primary:/etc/cron.daily$ ls = apport  apt-compat  aptitude  dpkg  logrota
 =========================
 //ANYTHING THAT IS PUT IN THE cron FOLDER NEEDS TO BE AN EXECUTALE FILE.
 ==========================
-ubuntu@primary:~/my_bin$ vi make_new_file_now = TO CREATE A NEW FILE. = using vi = didnt use touch to create file.
+ubuntu@primary:~/mjw_bin$ vi make_new_file_now = TO CREATE A NEW FILE. = using vi = didnt use touch to create file.
 =====================
-ubuntu@primary:~/my_bin$ ls = 
+ubuntu@primary:~/mjw_bin$ ls = 
 check_number  friends  mjw_files  guess  make_new_file_now  node_test  smiley
 ============
-ubuntu@primary:~/my_bin$ chmod +x make_new_file_now 
+ubuntu@primary:~/mjw_bin$ chmod +x make_new_file_now 
 ===================
 +++++++++++++++++++++++++++++
-ubuntu@primary:~/my_bin$ vi make_new_file_now
+ubuntu@primary:~/mjw_bin$ vi make_new_file_now
 ===================
 #! /bin/bash
 
@@ -2746,11 +2838,11 @@ touch file-$(date +%s).txt
 ==================
 :wq
 =================
-ubuntu@primary:~/my_bin$ date = Mon Dec 16 10:58:46 EST 2024
+ubuntu@primary:~/mjw_bin$ date = Mon Dec 16 10:58:46 EST 2024
 ==============
-ubuntu@primary:~/my_bin$ date +%s = 1734364763
+ubuntu@primary:~/mjw_bin$ date +%s = 1734364763
 ===================
-ubuntu@primary:~/my_bin$ make_new_file_now = ubuntu@primary:~$ ls temp-files = 
+ubuntu@primary:~/mjw_bin$ make_new_file_now = ubuntu@primary:~$ ls temp-files = 
 file-1734364665.txt  file-1734364719.txt
 =========================
 |||||||||||||||||||||||||
@@ -2769,7 +2861,7 @@ Select an editor.  To change later, run 'select-editor'.
 Choose 1-4 [2]: 
 =============================
 //in VIM////
-* * * * * /home/ubuntu/my_bin/make_new_file_now
+* * * * * /home/ubuntu/mjw_bin/make_new_file_now
 the first * = minutes = 2 every 2 mins everyhour, 2,25 = every 2 min and 25 min of every hour.
 the second * = hours
 the third * = day of the month 
@@ -2781,7 +2873,7 @@ the fifth * =  day of the week to run
 =============================
 ///from vim///
 =====================
-*/2 * * * * /home/ubuntu/my_bin/make_new_file_now = run every 2 minutes.
+*/2 * * * * /home/ubuntu/mjw_bin/make_new_file_now = run every 2 minutes.
 =========================
 :wq
 ==================
