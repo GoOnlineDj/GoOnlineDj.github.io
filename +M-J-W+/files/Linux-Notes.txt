@@ -2611,7 +2611,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             =========================
                             //inside the if statement//
                             -z = empty string
-                            if [] = for if statement
+                            if []; = for if statement
                             [] = rearange the arugument in the bracket to a test statement.
                             =======================
                             +++++++++++++++++++++
@@ -2627,26 +2627,55 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             =======================
                             :wq
                             =============
-                            ubuntu@primary:~$ test -z "" 
-                            ============
-                            $? = last program return value
-                            ========================
-                            //NOTE//ubuntu@primary:~$ echo $0 = bash //
-                            =======================
-                            ubuntu@primary:~$ echo $? = 0
-                            ======================
-                            ++++++++++++++++++++++
+                            +++++++++++++++++++++
+                            ===EXAMPLE OF WHAT [] IS RUNNING UNDER THE HOOD===============
                             +++++++++++++++
+                            test -z "" 
+                            =====
+                            ||||||||||||||||||
+                            $? = last program return value
+                            |||||||||||||||
+                            =======================
+                            echo $? = 0
+                            ======================
+                            ///AND THIS IS EITHER A 0 OR 1 , SO ITS ACTUALLY INVOKING A COMMAND AND THEN ITS CHECKING THE STATUS CODE OF IT============
+                            ++++++++++++++++++++++
+                            ++++++++++++++++++++++
+                            ||||||||||||||||||||||||
+                            ========================
+                            //NOTE//
+                            echo $0 
+                            = bash //
+                            |||||||||||||||||||||
+                            ++++++++++++++++++++++
+                            test -z lol
+                            echo $?
+                            =
+                            1
+                            +++++++++++++++
+                            ================
+                            //so test -z lol , this a a real statement its not an empty string , so this is going to return false, which is 1
+                            ||||||||||||||||||||||
+                            ||||||||||||||||||||||||
+                            ================
+                            +++++++++++++++++++
+                            ==== TEST =======
+                            ====== TEST =======
                             man test = manual for test
                             ++++++++++++++++
+                             ==== TEST =======
+                            ====== TEST =======
                             ++++++++++++++++++
                             ===============
-                            ubuntu@primary:~$ mjw_files = Enter a file prefix: lol = no path provided, defaulting to
+                            ||||||||||||||||||||
+                            mjw_files = Enter a file prefix: lol = no path provided, defaulting to
                             ~/temp
                             done
                             ==================
                             ubuntu@primary:~$ ls ~/temp = ok = files are There
+                            |||||||||||||||||||||||
                             =======================
+                            |||||||||||||||||||||||||||||||||||||||||||||||
                             ++++++++++++++++++
                             ====test=======
                             test 15 -eq 15 
@@ -2681,10 +2710,16 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             test 15 -le 10 && echo "yes" = NO RESPOND FROM echo
                             test 10 -le 15 && echo "yes" = yes
                             ======================
+                            ||||||||||||||||||||||||
+                            |||||||||||||||||||
                             +++++++++++++
+                            ==== TEST TO SEE IF A FILE EXIST = VERY USEFUL ===============
+                            ====================
                             +++++++++++
+                            ====================
                             -e = does file exist?
                             ++++++++++++
+                            ======================
                             test -e ~/williams.txt && echo "yes" = yes
                             =====================
                             +++++++++++++
@@ -2699,32 +2734,56 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             = 4.0K -rw-rw-r-- 1 ubuntu ubuntu 98 Dec 14 18:45
                             status.txt = yes 
                             =====================
-                            ubuntu@primary:~$ cd MJW_Programs/
-                            ubuntu@primary:~/MJW_Programs$ ls -lash = total 16K
-                            4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 18:32 .
-                            4.0K drwxr-xr-x 26 ubuntu ubuntu 4.0K Dec 15 18:32 ..
-                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 mjw_files
-                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test
+                            |||||||||||||||||||||||
+                            +++++++++++++++++++++++
+                            ++++++++++++++++++++++
+                            ========================
+                            ++++++++++++++++++++++++
+                            cd MJW_Programs/
+                            MJW_Programs$ ls -lash 
+                            = 
+                            ||||||||||||||||||||||
+                            total 16K
+                            4.0K drwxrwxr-x  2 ubuntu ubuntu 4.0K Jan 18 08:10 .
+                            4.0K drwxr-x--- 12 ubuntu ubuntu 4.0K Jan 18 08:10 ..
+                            4.0K -rwxrwxr-x  1 ubuntu ubuntu  577 Jan 18 08:10 mjw_files
+                            4.0K -rwxrwxr-x  1 ubuntu ubuntu  129 Jan 17 12:34 node_test
                             ====================
+                            ||||||||||||||||||||
+                             =====================
+                            |||||||||||||||||||||||
+                            +++++++++++++++++++++++
+                            ++++++++++++++++++++++
+                            ========================
+                            ++++++++++++++++++++++++
                             ubuntu@primary:~/MJW_Programs$ touch check_number
-                            ubuntu@primary:~/MJW_Programs$ ls -lash = total 16K
-                            4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 19:32 .
-                            4.0K drwxr-xr-x 26 ubuntu ubuntu 4.0K Dec 15 18:32 ..
-                            0 -rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 19:32 check_number
-                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 mjw_files
-                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test
+                            =====
+                            ubuntu@primary:~/MJW_Programs$ ls -lash = 
+                            total 16K
+                            4.0K drwxrwxr-x  2 ubuntu ubuntu 4.0K Jan 18 08:20 .
+                            4.0K drwxr-x--- 12 ubuntu ubuntu 4.0K Jan 18 08:10 ..
+                            0 -rw-rw-r--  1 ubuntu ubuntu    0 Jan 18 08:20 check_number
+                            4.0K -rwxrwxr-x  1 ubuntu ubuntu  577 Jan 18 08:10 mjw_files
+                            4.0K -rwxrwxr-x  1 ubuntu ubuntu  129 Jan 17 12:34 node_test
                             =====================
+                            |||||||||||||||||||||
+                            |||||||||||||||||
                             ubuntu@primary:~/MJW_Programs$ chmod +x check_number
-                            ubuntu@primary:~/MJW_Programs$ ls -lash = total 16K
-                            4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 19:32 .
-                            4.0K drwxr-xr-x 26 ubuntu ubuntu 4.0K Dec 15 18:32 ..
-                            0 -rwxrwxr-x 1 ubuntu ubuntu 0 Dec 15 19:32 check_number
-                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 mjw_files
-                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test = check_number = color = green = ok 
+                            =======
+                            ||||||||||||
+                            ubuntu@primary:~/MJW_Programs$ ls -lash = 
+                            total 16K
+                            4.0K drwxrwxr-x  2 ubuntu ubuntu 4.0K Jan 18 08:20 .
+                            4.0K drwxr-x--- 12 ubuntu ubuntu 4.0K Jan 18 08:10 ..
+                            0 -rwxrwxr-x  1 ubuntu ubuntu    0 Jan 18 08:20 check_number
+                            4.0K -rwxrwxr-x  1 ubuntu ubuntu  577 Jan 18 08:10 mjw_files
+                            4.0K -rwxrwxr-x  1 ubuntu ubuntu  129 Jan 17 12:34 node_test node_test = check_number = color = green = ok 
                             =======================
-
+                            =======================
+                            ||||||||||||||||||||||
                             ubuntu@primary:~/MJW_Programs$ vi check_number
-
+                            |||||||||||||||||||||
+                            ++++++++++++++++++++++
                             =================
                             #! /bin/bash
 
@@ -2736,10 +2795,12 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             else
                             echo "equals 10"
                             fi
-
+                            ===================
                             =================
                             :wq
-                            ================================
+                            ========================
+                            ||||||||||||||||========
+                            ||||||||||||||||||||
                             ubuntu@primary:~/MJW_Programs$ check_number 10 = equals 10
                             ===========
                             ubuntu@primary:~/MJW_Programs$ check_number 17 = greater than ten 
@@ -2748,13 +2809,15 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ======================= 
                             //NOTE: in vi #! /bin/bash :wq and reopen the file = to get bash color codes in vi.///
                             =============
+                            ++++++++++++++++++++++
+                            //MAKING ANOTHER PROGRAM//============
+                            |||||||||||||||||||||||
+                            touch smiley
+                            |||||||||||||||||||||:
                             ubuntu@primary:~/MJW_Programs$ vi smiley
-
+                            ++++++++++++++++++
                             ========================================
                             #! /bin/bash
-
-
-
 
                             case $1 in
                             "smile")
@@ -2770,7 +2833,9 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             echo "I DONT KNOW THAT ONE YET!"
                             ;;
                             esac
-
+                            ||||||||||||||||||||
+                            ||||||||||||||||||||
+                            ||||||||||||||||||||
                             ==================
                             :wq
                             ==============
@@ -2778,19 +2843,39 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ubuntu@primary:~/MJW_Programs$ smiley laugh = :D
                             ubuntu@primary:~/MJW_Programs$ smiley im learing cool Linux stuff = I DONT KNOW THAT ONE YET! 
                             ======================
+                            ======================
+                            ///SCOPING WITHING BASH SCRIPTS ALL VARIABLE STAYS WITH THE SCRIPT UNLESS YOU USE THE EXPORT FEATURE TO EXPORT VARIABLE TOTHE GLOBAL SCOPE MEANING IT WILL SURVIVE BEYOND THE BASH================
+                            |||||||||||||||||||||||
+                            ||||||||||||||||||||||  
                             +++++++++++++++++++++++
-                            ======Loops & Arrays=======
-                            ++++++++++++++++++++++++++
+                            ======Loops &+++++++++Arrays=======
+                            ++++++++++++++++++++++++++||||||||||||||||||
                             ========================
-                            friends=() = array 
-                             [*] = all items in array
-                             ${#friends[*]} = array Length
-                             ${friends[1]} = friend at index 1
+                            friends=() 
+                            = array 
+                            ==========
+                             [*] 
+                             = all items in array
+                             ===========
+                             ${#friends[*]} 
+                             = array Length
+                             ==================
+                             ${friends[1]} 
+                             = friend at index 1
+                             ==================
+                             |||||||||||||||||||
+                             ||||||||||||||||||||
+                             ================
+                             |||||||||||||||||
                              ==================
                              ubuntu@primary:~$ cd MJW_Programs/ 
+                             ==
                              ubuntu@primary:~/MJW_Programs$ touch friends
+                             ==
                              ubuntu@primary:~/MJW_Programs$ ls = check_number  friends  mjw_files  node_test  smiley
+                             ==
                              ubuntu@primary:~/MJW_Programs$ chmod +x friends
+                             ===
                              ubuntu@primary:~/MJW_Programs$ vi friends
 
                              ================
@@ -2811,7 +2896,7 @@ done
 
 echo "i have ${#friends[*]} friends"
 
-
+||||||||||||||||||||||||||||||||||||||
 =============================
 :wq
 ======================
@@ -2826,13 +2911,35 @@ friend: Williams
 friend: Money
 i have 5 friends
 =================================
+||||||||||||||||||||||||||||||||||
+//the reason Michael J Williams is sperated is because the for in look is seperating the words using spaces there is a way to out it as a whole word tho ==========================
+===========================================
+||||||||||||||||||||||||||||||||||||||||
 ++++++++++++++++++++++++
 ====WHILE LOOP======
-$(()) = converts to a basic program = let = which does math = let does modular work and return the value.
+||||||||||||||||||||||||||||||||||||||||
+++++++++++++++++++++++++
+====WHILE LOOP======
+||||||||||||||||||||||||||||||||||||||||
+++++++++++++++++++++++++
+====WHILE LOOP======
+||||||||||||||||||||||||||||||||||||||||
+++++++++++++++++++++++++
+====WHILE LOOP======
+++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++
+$(()) = converts to a basic program = let 
+let 
+= which does math = let does modular work and return the value.
+=================
+|||||||||||||||||||||
+===== man let ============
+======= let --help ========
+|||||||||||||||||||||||||||
 ======================
 Unix is an operating system that was built on the idea of modular design, which means that each tool or command is designed to do one thing well. This philosophy is known as the Unix philosophy
 ====================================
-
+|||||||||||||||||||||||||||||||||||||||||
 ubuntu@primary:~/MJW_Programs$ touch guess
 ubuntu@primary:~/MJW_Programs$ chmod +x guess
 ubuntu@primary:~/MJW_Programs$ vi guess
@@ -2852,7 +2959,7 @@ done
 
 echo "you got it!"
 
-
+||||||||||||||||||||||||||||||
 ===========================
 
 :wq
@@ -2872,9 +2979,24 @@ read -p "your guess: " GUESSED_NUM
 ++++++++++++++++++++++++++++++++++++++++
 =========cron================
 ==============================
+++++++++++++++++++++++++++++++++++++++++
+=========cron================
+==============================
+++++++++++++++++++++++++++++++++++++++++
+=========cron================
+==============================
+++++++++++++++++++++++++++++++++++++++++
+=========cron================
+==============================
+++++++++++++++++++++++++++++++++++++++++
+=========cron================
+==============================
+++++++++++++++++++++++++++++++++++++++++
+=========cron================
+==============================
 cron = you have some task and you want it to run at a set interval
 ====================================
-
+||||||||||||||||||||||||||||||
 ubuntu@primary:~$ cd /etc/
 ===============
 ubuntu@primary:~$ cd /etc/cron. = cron.d/       cron.hourly/  cron.weekly/  
@@ -2884,39 +3006,62 @@ ubuntu@primary:/etc$ cd cron.daily/
 ubuntu@primary:/etc/cron.daily$ ls = apport  apt-compat  aptitude  dpkg  logrotate  man-db  sysstat
 =========================
 //ANYTHING THAT IS PUT IN THE cron FOLDER NEEDS TO BE AN EXECUTALE FILE.
+++++++++++++++
+//ANYTHING THAT IS PUT IN THE cron FOLDER NEEDS TO BE AN EXECUTALE FILE.
++++++++++++++++++++++
+|||||||||||||||||||||||||||||||||
+===================================
 ==========================
-ubuntu@primary:~/MJW_Programs$ vi make_new_file_now = TO CREATE A NEW FILE. = using vi = didnt use touch to create file.
+ubuntu@primary:~/MJW_Programs$ vi make_new_file = TO CREATE A NEW FILE. = using vi = didnt use touch to create file.
 =====================
 ubuntu@primary:~/MJW_Programs$ ls = 
-check_number  friends  mjw_files  guess  make_new_file_now  node_test  smiley
+check_number  friends  mjw_files  guess  make_new_file  node_test  smiley
 ============
-ubuntu@primary:~/MJW_Programs$ chmod +x make_new_file_now 
+ubuntu@primary:~/MJW_Programs$ chmod +x make_new_file 
 ===================
 +++++++++++++++++++++++++++++
-ubuntu@primary:~/MJW_Programs$ vi make_new_file_now
+ubuntu@primary:~/MJW_Programs$ vi make_new_file
 ===================
 #! /bin/bash
 
 
-
-mkdir -p ~/temp-files
-cd ~/temp-files
-touch file-$(date +%s).txt
+mkdir -p ~/temp-files-cron
+cd ~/temp-files-cron
+touch Angel-$(date +%s).txt
 ==================
 :wq
 =================
-ubuntu@primary:~/MJW_Programs$ date = Mon Dec 16 10:58:46 EST 2024
+ubuntu@primary:~/MJW_Programs$ date 
+= Mon Dec 16 10:58:46 EST 2024
 ==============
-ubuntu@primary:~/MJW_Programs$ date +%s = 1734364763
+|||||||||||||||||||
+====== date +%s  =============
+||||||||||||||||||||||||||
+|||||||||||||||||||
+====== date +%s  =============
+||||||||||||||||||||||||||
+ubuntu@primary:~/MJW_Programs$ date +%s 
+= 1734364763
 ===================
-ubuntu@primary:~/MJW_Programs$ make_new_file_now = ubuntu@primary:~$ ls temp-files = 
-file-1734364665.txt  file-1734364719.txt
+|||||||||||||||||||
+====== date +%s  =============
+||||||||||||||||||||||||||
+|||||||||||||||||||
+====== date +%s  =============
+||||||||||||||||||||||||||
+ubuntu@primary:~/MJW_Programs$ make_new_file 
+ubuntu@primary:~$ ls temp-files-cron/
+ = 
+file-1737212422.txt
 =========================
 |||||||||||||||||||||||||
 =========================
 ///TO SET cron for every hour////
 ================
-ubuntu@primary:~$ crontab -e = 
+||||||||||||||||||||||||||||||
+|||||||||||||||||||||||||||||||
+ubuntu@primary:~$ crontab -e 
+= 
 no crontab for ubuntu - using an empty one
 
 Select an editor.  To change later, run 'select-editor'.
@@ -2928,8 +3073,11 @@ Select an editor.  To change later, run 'select-editor'.
 Choose 1-4 [2]: 
 =============================
 //in VIM////
-* * * * * /home/ubuntu/MJW_Programs/make_new_file_now
-the first * = minutes = 2 every 2 mins everyhour, 2,25 = every 2 min and 25 min of every hour.
+* * * * * /home/ubuntu/MJW_Programs/make_new_file
+2 * * * * =
+the first * = minutes = 2 every 2 mins everyhour,
+2,25 * * * * = 
+2,25 = every 2 min and 25 min of every hour.
 the second * = hours
 the third * = day of the month 
 the forth * = which month to run
@@ -2940,23 +3088,36 @@ the fifth * =  day of the week to run
 =============================
 ///from vim///
 =====================
-*/2 * * * * /home/ubuntu/MJW_Programs/make_new_file_now = run every 2 minutes.
+*/2 * * * * /home/ubuntu/MJW_Programs/make_new_file = run every 2 minutes.
 =========================
 :wq
 ==================
 crontab -e = auto restart the cron tab once exit 
 ======================
-crontab -u ubuntu -e = to run as another user other than root
+crontab -u ubuntu -e 
+= to run as another user other than root
 ======================
+||||||||||||||||||||||||
++++++++++++++++++++++++++
+|||||||||||||||||||||||||
 ////to RUN AS ROOT///
 sudo crontab -u root -e 
 =========================
 //in general you want to run crontab as another user other than root.
 ========================
+||||||||||||||||||||||||
++++++++++++++++++++++++++
+|||||||||||||||||||||||||
 +++++++++++++++++++++++++++
 +++++++++++++++++++++++++++++++
 ====HOW TO CUSTOMIZE YOUR SHELL==========
 ++++++++++++++++++++++++++++++++++
+||||||||||||||||||||||||
++++++++++++++++++++++++++
+|||||||||||||||||||||||||
+||||||||||||||||||||||||
++++++++++++++++++++++++++
+|||||||||||||||||||||||||
 //THIS PROMPT = ubuntu@primary:~$ = IS CUSTOMIZABLE
 ////its connected to a VARIABLE called PS1 
 =======================
