@@ -2,11 +2,11 @@
 ======================================================
 Unix is an operating system that was built on the idea of modular design, which means that each tool or command is designed to do one thing well. This philosophy is known as the Unix philosophy
 ======+++++Everything is a file in Linux+++++=========
-<!-- & = run in the background -->
-<!-- find *.txt = FIND ALL TXT FILES = COOL  -->
+& = run in the background 
+find *.txt = FIND ALL TXT FILES = COOL  
 ================================
-<!-- 
-    Emulator runs the shells inside of it e.g terminal -->
+
+    Emulator runs the shells inside of it e.g terminal 
 0 = TRUE
 1 = false
 +++++++++++++++++++++
@@ -16,7 +16,7 @@ Unix is an operating system that was built on the idea of modular design, which 
 ===============================
 the shell is bash Bourne Again Shell + GNU Foundation
 
-<!-- command line + CLI -->
+command line + CLI 
 TRY NOT TO COPY AND PASTE INTO THE COMMAND LINE DIRECTLY
 IS NOT SAFE TO COPY AND PASTE INTO THE COMMAND LINE.
 
@@ -25,7 +25,7 @@ pwd = present working directory
 {clear} or ctrl+L to clear
 tab = tab+key = very powerful
 !! = to rerun last command = !bang !bang
-<!-- !! can be inserted into another command -->
+!! can be inserted into another command 
 example = sudo !!
 
 
@@ -36,7 +36,7 @@ ls = {list} it list items inside a directory
 ls is a command or program that has allot of flags
 =================
 
-<!-- +++ORDER MATTERS PUT COMMAND FIRST THEN FLAGS+++ -->
++++ORDER MATTERS PUT COMMAND FIRST THEN FLAGS+++ 
 
 ====flags===
 --help = one long flag
@@ -62,8 +62,8 @@ cd ../ubuntu/../ubuntu/
 cd ~ = home directory
 cd ~/home
 
-<!-- ls home {home} here is a perameter or argument = an argument is like textual info that you are providing to a
-    program. -->
+ls home {home} here is a perameter or argument = an argument is like textual info that you are providing to a
+    program. 
 ls {-l} = wil provide more info the long form output.
 ls -a, --all will list all the items including hidden items
 ls -l -a
@@ -130,12 +130,12 @@ cat michael.txt = to read a file
 >> = pins new text to the end of a file = append
 
 
-<!-- +++++++++===========+++++++++++
++++++++++===========+++++++++++
     connect two shells to watch update in real time 
     +++++++++===========+++++++++++
     multipass shell primary
     echo hi michael >> williams.txt 
-    +++++++++===========+++++++++++ -->
+    +++++++++===========+++++++++++ 
 
 
 =====nana===========
@@ -203,12 +203,12 @@ touch a.txt b.txt c.txt d.txt e.txt f.txt
 touch you-are-so-cool.txt = update the modifyTIME
 //////////////////
 touch goodyear{2003,2007,2009,2013,2015,2017,2020,2024}.txt
-<!-- ====NOTE , CAN BE ADDED TO LEAVE BLANK====== -->
+====NOTE , CAN BE ADDED TO LEAVE BLANK====== 
 ////////////////
 
 =============================
 =====+++++++++++======
-<!-- ITEMS ARE GONE FOREVER after rm command  -->
+ITEMS ARE GONE FOREVER after rm command  
 rm = remove
 rm you-are-so-cool.txt = delete file
 -r = recursive delete
@@ -216,9 +216,9 @@ rm -r my-folder = delete folder
 -f = force  
 rm -rf my-folder = delete folder
 
-<!-- NO * NO NO  -->
+NO * NO NO  
 
-<!-- package call trash to save delete files up to 30 days  -->
+package call trash to save delete files up to 30 days  
 ===========================
 
 ====================
@@ -227,7 +227,7 @@ cp = copy
 cp williams.txt williams1983.txt
 =================
 
-<!-- mv = move + rename the file or folder by moving it to a new file or folder with that new name -->
+mv = move + rename the file or folder by moving it to a new file or folder with that new name 
 mv MJW MJW2024 = rename the files
 
 
@@ -251,54 +251,54 @@ ls file*.txt = only ONE SHOWED UP file.txt
 ls file* = all files that start with file
 ls file? = with one character after file
 ls file?? = with two character after file
-<!-- mkdir folder41
+mkdir folder41
     cd folder41
-    touch gyear{1983..2024} = wow this is beautiful -->
+    touch gyear{1983..2024} = wow this is beautiful 
 =======================================
 touch gchar{a..z}
 rm gchar{a..z}
 touch gchar={a..z}
-<!-- touch Michael\*Williams.txt = ADD * to file name -->
+touch Michael\*Williams.txt = ADD * to file name 
 ============================
-<!-- echo {a..z}
+echo {a..z}
     a b c d e f g h i j k l m n o p q r s t u v w x y z
     echo {1983..2024}
     1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005
     2006
-    2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 -->
+    2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 
 ==================================
-<!-- echo {a..z..2}
+echo {a..z..2}
     a c e g i k m o q s u w y
     echo {0..20..2}
     0 2 4 6 8 10 12 14 16 18 20
     echo {0..20..5}
-    0 5 10 15 20 -->
+    0 5 10 15 20 
 echo {A..Z}{1..2}
 ==================================
-<!-- echo {A..Z..10}
+echo {A..Z..10}
     A K U
     echo {a..Z..10}
     a
     echo {A..z..10}
-    A K U _ i s -->
+    A K U _ i s 
 echo {A..Z}{01..02}{1..2}
 ========================================
 +++++++++++++++++++++++++++++++++++++++++
 ==========output streams========
-<!-- stdout = 1> 
+stdout = 1> 
 echo 'this is my text' 1> newfile.txt
 ////////////
 > = replace
 >> = append
 ///////////////////////
-    stderr = 2> -->
+    stderr = 2> 
 ++++++++++++++++++++++++++++++++++
 mkdir streams
 cd streams/
 echo 'this is my text for output' 1> new-file.txt = replace files with new text
 cat new-file.txt
 cat new-file.txt 1> another-file.txt = replace text
-<!-- cat new-file.txt 1>> another-file.txt = add more text to file. -->
+cat new-file.txt 1>> another-file.txt = add more text to file. 
 ls -lash 1> savedfile.txt
 cat savedfile.txt
 ls 1> ls.txt
@@ -315,8 +315,8 @@ ls -lash >> ls100.txt = append text
 ls -lash 2> /dev/null = output to null
 ls -lash 1> /dev/null = error to null
 ls -lash 1> ls.txt 2> ls-error.txt
-<!-- cat some-file.txt 1> /dev/null = show output error
-    cat some-file.txt 2> /dev/null = error gone forever -->
+cat some-file.txt 1> /dev/null = show output error
+    cat some-file.txt 2> /dev/null = error gone forever 
 ==========output streams========
 ============================================
 
@@ -326,13 +326,13 @@ ls -lash 1> ls.txt 2> ls-error.txt
 ==========input streams========
 ====================================
 grep = find or search for an item in list
-<!-- cat < williams1983.txt=files input into cat 
-    cat williams1983.txt=cat reading text file  -->
+cat < williams1983.txt=files input into cat 
+    cat williams1983.txt=cat reading text file  
 grep 'cool' < williams1983.txt=to find cool in doc grep 'error.txt' < ls01.txt 1> grep.txt 2> /dev/null
     cat grep.txt
 
     ps aux = output all the current running processes
-    <!-- ps aux | grep 'ps aux' = find  -->
+    ps aux | grep 'ps aux' = find  
     & = keep running in background.
     yes > /dev/null & = keep running yes in background.
     ps aux | grep 'yes'
@@ -350,7 +350,7 @@ grep 'cool' < williams1983.txt=to find cool in doc grep 'error.txt' < ls01.txt 1
     ==============================
 
     =======LIST ALL USERS ON COMPUTER================
-    cat /etc/passwd = all the users on the computer at t particular time. -->
+    cat /etc/passwd = all the users on the computer at t particular time. 
     ==============================
     superuser = root user
     whoami = ubuntu
@@ -401,10 +401,10 @@ grep 'cool' < williams1983.txt=to find cool in doc grep 'error.txt' < ls01.txt 1
     -rw-rw-r-- = normal files
     drwxr-x--- = directory files
     ======================
-    <!-- rwx = read + write + excecute
+    rwx = read + write + excecute
         first rwx = user
         second rwx = grounp
-        thrid rwx = all others -->
+        thrid rwx = all others 
     ============================
     . = current directory
     ================
@@ -445,7 +445,7 @@ grep 'cool' < williams1983.txt=to find cool in doc grep 'error.txt' < ls01.txt 1
     Group: 5 (Read r, Execute x)
     Members of the group can read and execute (access) the directory, but cannot write to it.
     Others: 5 (Read r, Execute x)
-    All other users can read and execute (access) the directory, but cannot write to it. -->
+    All other users can read and execute (access) the directory, but cannot write to it. 
     =======================
 
     //after becoming an admin still was unable to get into ubuntu folder + copilot helped me out
@@ -476,8 +476,8 @@ grep 'cool' < williams1983.txt=to find cool in doc grep 'error.txt' < ls01.txt 1
     +++++++++++++++++++++++++++++++++++++++++++++
     +++++++++++++++++++++++++++++++++++
     ===============Permissions shortcuts============
-    <!-- sudo chmod 777 file.txt
-                r=4,w=2,x=1 -->
+    sudo chmod 777 file.txt
+                r=4,w=2,x=1 
 
     sudo chmod 777 file.txt = -rwxrwxrwx
     sudo chmod 700 file.txt = -rwx------
@@ -486,23 +486,23 @@ grep 'cool' < williams1983.txt=to find cool in doc grep 'error.txt' < ls01.txt 1
     sudo chmod 664 michael.txt = -rw-rw-r--
     =====================================
     touch mjw-new-program = -rw-rw-r--
-    <!-- sudo chmod +x mjw-new-program = -rwxrwxr-x -->
+    sudo chmod +x mjw-new-program = -rwxrwxr-x 
     sudo chmod -x mjw-new-program = -rw-rw-r-- 1 ubuntu ubuntu
-    <!-- sudo chmod +w mjw-new-program = -rw-rw-r-- -->
+    sudo chmod +w mjw-new-program = -rw-rw-r-- 
     ==========================================
     cat /etc/passwd
     ++++++++++++++++++++++++++++++++++++++
     ========================================
     =============Environments=============
-    <!-- printenv --> = //$//
+    printenv  = //$//
     echo $USER = ubuntu
     echo $HOME = /home/ubuntu
-    <!-- echo Hello the user im currently logged in as is $USER =
-    Hello the user im currently logged in as is ubuntu -->
+    echo Hello the user im currently logged in as is $USER =
+    Hello the user im currently logged in as is ubuntu 
     echo Hello this user lives at $HOME =
     Hello this user lives at /home/ubuntu
     //$USER = bash is doing the work with the command is run not echo//
-    <!-- USER=Michael  -->
+    USER=Michael  
     echo Hello the user im currently logged in as is $USER = Hello the user im currently logged in as is
     Michael
     USER=Ubuntu
@@ -523,18 +523,18 @@ grep 'cool' < williams1983.txt=to find cool in doc grep 'error.txt' < ls01.txt 1
     ||||||||||||||||||||||||||||||||||||||||||||||||||
     ========================================
     ===============Environment Variables=============
-    <!-- ////// MAKING PERMANENT VARIABLES /////// -->
+    ////// MAKING PERMANENT VARIABLES /////// 
     sudo vi /etc/environment
     Michael="WOW You will make allot of cash to help yourself and others. Amen."
     echo $Michael = BLANK FOR NOW
     ===================
     exit = logout Ubuntu out of current session in shell
-    <!-- logout
-        girlmeetguy@Michaels-MacBook-Air-2 ~ % -->
+    logout
+        girlmeetguy@Michaels-MacBook-Air-2 ~ % 
     =====open Shell again ===log in as Ubuntu======
     echo $Michael
     WOW You will make allot of cash to help yourself and others. Amen. = WORKS
-    <!-- //VARIABLE CREATED AND SAVED////// -->
+    //VARIABLE CREATED AND SAVED////// 
     su GirlMeetGuy
     echo $Michael
     WOW You will make allot of cash to help yourself and others. Amen. = works on another profile as well because the environment is
@@ -549,7 +549,7 @@ grep 'cool' < williams1983.txt=to find cool in doc grep 'error.txt' < ls01.txt 1
 
     +++++++++++++++++++++++++++++++++++++++++++
     +++++++++++++++SYSTEM UPGRADE+++++++++++++++++++
-    <!-- Update Package List: = sudo apt update
+    Update Package List: = sudo apt update
 List Upgradable Packages: = apt list --upgradable
 Upgrade Packages: = sudo apt upgrade
 Full Upgrade: = sudo apt full-upgrade
@@ -557,7 +557,7 @@ Clean Up: = sudo apt autoremove = sudo apt clean
 Install ubuntu-advantage-tools: = sudo apt install ubuntu-advantage-tools
 Attach to Ubuntu Advantage: sudo ua attach <your-token>
     Enable ESM for Applications: sudo ua enable esm-apps
-    By following these steps, you can upgrade your system and enable Expanded Security Maintenance for applications -->
+    By following these steps, you can upgrade your system and enable Expanded Security Maintenance for applications 
     ++++++++++++++++++++++++++++++++++++++++++++++++
     ++++++++++++++++++++++++++++++++++++++++++++++
     ========Variables===============
@@ -611,7 +611,7 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
         save and quit vi;
     ==================================
     //this will ensure .bashrc runs everytime 
-    in every session /// -->
+    in every session /// 
     ==================================
     //EVERY USER has their own .bashrc
     ==================================
@@ -849,7 +849,7 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
     $(whoami) and this user is wonderful 
     = 
     hey im on this computer logged in as user ubuntu 
-    and this user is wonderful -->
+    and this user is wonderful 
     echo the current date and time and year
     is $(date) = the current date and time
     and year is Sat Dec 14
@@ -897,7 +897,7 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
     ======OPEN A NEW SHELL TO RUN COMMANDS========
      ======OPEN A NEW SHELL TO RUN COMMANDS========
     multipass launch --name secondary 
-    = Launched: secondary -->
+    = Launched: secondary 
     ==========
     multipass shell secondary
     //to enter the shell of the secondary VM//
@@ -1105,10 +1105,10 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
     ===================================
     GirlMeetGuy@secondary:~/.ssh$ ls -lash = 4.0K -rw-r--r-- 1 GirlMeetGuy ubuntu 568 Dec 14 20:44 authorized_keys
     =================================
-    <!-- cd .. -->
+    cd .. 
     GirlMeetGuy@secondary:~$ chmod 600 ~/.ssh/authorized_keys
     ===========================
-    <!-- cd .ssh -->
+    cd .ssh 
     ls -lash = 4.0K -rw------- 1 GirlMeetGuy ubuntu 568 Dec 14 20:44 authorized_keys
     ========================================
     +++++++++++++++++++++++++
@@ -1118,8 +1118,8 @@ Attach to Ubuntu Advantage: sudo ua attach <your-token>
     groups = list the sudo privileges for the current user. //USER
     sudo -l = list the sudo privileges for the current user. //USER
     ======================================
-    <!-- ==seems GirlMeetGuy didnt have sudo right to install the net-tools which is needed to run ifconfig program.
-    ==will have to make GirlMeetGuy a sudo member using Ubuntu on secondary computer. -->
+    ==seems GirlMeetGuy didnt have sudo right to install the net-tools which is needed to run ifconfig program.
+    ==will have to make GirlMeetGuy a sudo member using Ubuntu on secondary computer. 
     ==================================================
     GirlMeetGuy@secondary:~$ cat /etc/passwd =
     ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
@@ -1222,7 +1222,7 @@ No user sessions are running outdated binaries.
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
 ++++++++++++++++++++++++++++++++++++++++++++
 +++++++++++++++++++++++++++++++++++++++++++++++++
-=============================================== -->
+=============================================== 
         GirlMeetGuy@secondary:~$ ifconfig  
         ++++++++++++++++
         =======================
@@ -1264,7 +1264,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         |||||||||||||||||||||||||||||||||||||||||||||||
         ================================================
                         ============================
-                        <!-- # Switch to a user with sudo privileges
+                        # Switch to a user with sudo privileges
                             su GirlMeetGuy
 
                             # Update the package list
@@ -1274,7 +1274,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             sudo apt install net-tools
 
                             # Run ifconfig
-                            ifconfig -->
+                            ifconfig 
                         =================================
                      ||||||||||||||||||||||||||||||||||||
                      ////NOW THAT WE HAVE THE IP ADDRESS OF THE SECONDARY COMPUTER WE CAN CONNECT TO IT FROM THE PRIMARY COMPUTER////  ======================
@@ -1285,7 +1285,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         |||||||||||||||||||||||||||
                         ===USING SSH AGENT=========
                         ++++Linking two Machines with SSH++++
-                        <!-- ==FROM primary computer  -->
+                        ==FROM primary computer  
                         ubuntu@primary:~/.ssh$ cd ~
                         ubuntu@primary:~$ 
                         ssh GirlMeetGuy@192.168.64.7
@@ -1455,7 +1455,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         =================================================================
                         /////DOWNLOADING FILES FROM THE SECONDARY COMPUTER TO THE PRIMARY COMPUTER///////=========
                         ==============================
-                        ===getting files from the secondary computer==== -->
+                        ===getting files from the secondary computer==== 
                         ==============================
                         get lover1983GoOnlineDj.txt
                         = Fetching /home/GirlMeetGuy/lover1983GoOnlineDj.txt to lover1983GoOnlineDj.txt
@@ -1637,7 +1637,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         ubuntu@primary:~$ ifconfig 
                         =  inet 192.168.64.4
                         ==============
-                        <!-- ++++++++++++++++
+                        ++++++++++++++++
                         ++OPEN WEB BROWSER======
                         192.168.64.4:8000 
                         = http://192.168.64.4:8000/
@@ -1647,7 +1647,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                         ==NOTE if there is an INDEX.HTML file in the directory it will be displayed as the default page.==
                         ++++++++++++++++++++++++++++++++
                         |||||||||||||||||||||||||||||||
-                        ========================== -->
+                        ========================== 
                         =====================
                         FROM Primary # 2 =server log
                         192.168.64.1 - - [15/Dec/2024 09:41:01] "GET / HTTP/1.1" 200 -
@@ -2053,7 +2053,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             = Reading package lists... Done
                             Building dependency tree... Done
                             Reading state information... Done
-                            0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded. -->
+                            0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded. 
                             =======================
                             |||||||||||||||||||||||||
                             ++++++++++++++++
@@ -2227,7 +2227,8 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             =================
                             bash mjw_files.sh = SEEMS TO BE BETTER BECAUSE IT DOESNT CHANGE THE DIRECTORY.
                             =======================
-                            bash mjw_files.sh = STAY IN SAME DIRECTORY = IT RUNS ANOTHER PROCESS IN THE BACKGROUND.
+                            bash mjw_files.sh 
+                            = STAY IN SAME DIRECTORY = IT RUNS ANOTHER PROCESS IN THE BACKGROUND.
                             ||||||||||||||||||||||||||||
                             ===================
                             |||||||||||||||||||||||||||||
@@ -2328,6 +2329,9 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ls /usr/local/sbin
                             ls /usr/local/games/
                             ======
+                            |||||||||||||||||||||||||||||||||||||||||||||||||||
+                            ====TO LIST ALL INSTALLED SNAP PROGRAMS========
+                            ||||||||||||||||||||||||||||||||||||||||||
                             ls /snap/bin 
                             = multipass-sshfs.env  node  node.npm  node.npx  node.yarn  node.yarnpkg  npm  npx  yarn  yarnpkg
                             =====================
@@ -2336,10 +2340,10 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ===================
                             |||||||||||||||||||||||||||
                             ===================
-                            mkdir mjw_bin
-                            mv node_test mjw_bin
-                            mv mjw_files mjw_bin
-                            cd mjw_bin
+                            mkdir MJW_Programs
+                            mv node_test MJW_Programs
+                            mv mjw_files MJW_Programs
+                            cd MJW_Programs
                             =====
                             ls -lash 
                             = 
@@ -2358,8 +2362,9 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             +++++++++++++++++++++++++
                             ====================
                             ================
-                            ubuntu@primary:~/mjw_bin$ cd ..
+                            ubuntu@primary:~/MJW_Programs$ cd ..
                             ===================
+                            |||||||||||||||||||||||||||||||
                             =================== 
                             ubuntu@primary:~$ vi .bashrc
                             =================
@@ -2373,7 +2378,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             +++++++++++++++++++++++++
                             ==========  :$PATH   ========
                             ========================
-                            export PATH=~/mjw_bin:$PATH
+                            export PATH=~/MJW_Programs:$PATH
                             ==========
                             ~/ = list a full path
                             =====================
@@ -2385,15 +2390,15 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ||||||||||||||||||||||||||||
                             echo $PATH 
                             =
-                           /home/ubuntu/mjw_bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+                           /home/ubuntu/MJW_Programs:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
                            ||||||||||||||||||||||
                             =============
-                            mjw_bin IS NOW INCLUDED IN THE $PATH
+                            MJW_Programs IS NOW INCLUDED IN THE $PATH
                             ====================
                             ||||||||||||||||||||||||||
                             ++so now we should be able to run the script without . or source or bash = i should be able to run the program using only the program name.
                             ===================
-                            ls mjw_bin 
+                            ls MJW_Programs 
                             = mjw_files node_test
                             =============
                             ++++++++++++++++++
@@ -2407,7 +2412,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             =====================
                             # = this is how you comment in a bash script.
                             =================
-                            vi mjw_bin/mjw_files = to add comments for Others
+                            vi MJW_Programs/mjw_files = to add comments for Others
                             ===============
                             ||||||||||||||||||||
                             # = COMMENT IN BASH
@@ -2423,7 +2428,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                              ============================
                              ||||||||||||||||||||||||||||
                              +++++++++++++++++
-                             vi mjw_bin/mjw_files 
+                             vi MJW_Programs/mjw_files 
                              ===================
                             ||||||||||||||||||||||||||||
                             ====NOTE if your putting a $ next to {} your will have to use another set of {} to make it work.+++++///////////
@@ -2489,7 +2494,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             -p = prompt
                             ||||||||||||||||||||||||||||
                             ===================
-                            vi mjw_bin/mjw_files
+                            vi MJW_Programs/mjw_files
                             =================
                             #! /bin/bash
 
@@ -2515,16 +2520,70 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             read -p "Enter a file prefix: " FILE_PREFIX
                             ============
                            =======================
-                            ubuntu@primary:~$ mjw_files another_mjw_files_folder
+                            ubuntu@primary:~$ mjw_files value1983
                             =======
                             Enter a file prefix: value = done
                             ===================
-                            ubuntu@primary:~$ ls another_mjw_files_folder/ = value1.txt GirlMeetGuy.txt value4.txt value6.txt
+                            ubuntu@primary:~$ ls value1983/ 
+                            = value1.txt GirlMeetGuy.txt value4.txt value6.txt
                             value8.txt
                             value10.txt value3.txt value5.txt value7.txt value9.txt
                             ==========================
+                        ||||||||||||||||||||||||||||||||||||
+                        +++++++++++++++++++++++
+                            ==ASKING THE USER TO ENTER A FILE PREFIX====
+                            ===+RECEVING =====INTERACTIVELY=====
+                            +++++++++++++++++++
+                            ======
+                            vi MJW_Programs/mjw_files
+                            ============
+                            #! /bin/bash
 
-                            <!-- 
+
+                            #this is a comment. 
+
+
+                            #DESTINATION="~/temp"
+                             DESTINATION="$1"
+
+
+                            # FILE_PREFIX=file
+                            read -p "enter a file prefix: " FILE_PREFIX #FILE_PREFIX IS STARTING VARIABLE
+                            # Everything will still work because we refer to file prefix below
+
+                            mkdir -p $DESTINATION
+                            cd $DESTINATION
+                            touch ${FILE_PREFIX}{1..10}.txt
+
+
+                            echo done      #this is a comment.    
+                        ||||||||||||||||||||||||||||
+                        ==================
+                        ====  -r allows you to read 
+                        ====input from user =======
+                        ++++++++++++++++++++++++++
+                        ||||||||| ++++++++++++++++
+                        ========================
+                        +++++++++++++++++++++++++
+                        =========================
+                        ===Running program to accept user input for file name =====================
+                         =========================
+                        ===Running program to accept user input for file name =====================
+                        ==========================
+                        ==========================
+                        mjw_files AngelFolder
+                        enter a file prefix: Angel
+                        = done
+                        ||||||||||||||||||||||||
+                        +++++++++++++++++++++++
+                        =========================
+                        ++++++++++++++++++++++++++
+                        ++++++++++++++++++++++++++
+                        ++++++++++++++++++++++++++
+                        ++++++++++++++++++++++++++
+                        ++++++++++++++++++++++++++
+                        ++++++++++++++++++++++++++
+                        ++++++++++++++++++++++++++
                         In shell scripting (like Bash), the case statement is concluded with esac, which is "case" spelled
                             backward.
                             #!/bin/bash
@@ -2541,18 +2600,25 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             =================
                             In this script, based on the input number, the corresponding message is printed, and the case statement is neatly
                             finished with esac
-                            ================ -->
+                            ================ 
                             ===================
-                            <!-- ++++++++++++++++++++++++
-                                                        ====Conditionals: if statement & tests ======
-                                                        ++++++++++++++++++++++++++ -->
+                            ++++++++++++++++++++++++
+                            ++++++++++++++++++++++++++
+                            ++++++++++++++++++++++++++
+                            ++++++++++++++++++++++++++
+                            ++++++++++++++++++++++++++                            ====Conditionals: if statement & tests ======
+                                                        ++++++++++++++++++++++++++ 
                             =========================
                             //inside the if statement//
                             -z = empty string
                             if [] = for if statement
                             [] = rearange the arugument in the bracket to a test statement.
                             =======================
-                            ubuntu@primary:~$ vi mjw_bin/mjw_files
+                            +++++++++++++++++++++
+                            ||||||||||||||||||||
+                            |||||||||||||||||||
+                            ||||||||||||||||||||||
+                            vi MJW_Programs/mjw_files
                             =====================
                             if [ -z $DESTINATION ]; then
                             echo "no path provided, defaulting to ~/temp"
@@ -2561,13 +2627,13 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             =======================
                             :wq
                             =============
-                            <!-- ubuntu@primary:~$ test -z "" -->
+                            ubuntu@primary:~$ test -z "" 
                             ============
                             $? = last program return value
                             ========================
                             //NOTE//ubuntu@primary:~$ echo $0 = bash //
                             =======================
-                            <!-- ubuntu@primary:~$ echo $? = 0 -->
+                            ubuntu@primary:~$ echo $? = 0
                             ======================
                             ++++++++++++++++++++++
                             +++++++++++++++
@@ -2583,15 +2649,15 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             =======================
                             ++++++++++++++++++
                             ====test=======
-                            <!-- test 15 -eq 15 
-                            echo $? = 0 -->
+                            test 15 -eq 15 
+                            echo $? = 0 
                             ==============
                             test 15 -eq 14
                             echo $? = 1
                             ==============
                             +++++++++++++
-                            <!-- 0 = true 
-                            1 = false  -->
+                            0 = true 
+                            1 = false  
                             +++++++++++++++
                             =================
                             test 15 -eq 14 && echo "is true"
@@ -2629,34 +2695,35 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             test -w ~/lover.txt && echo "yes" = 0 -rw-r--r-- 1 root root 0 Dec 13 21:32 lover.txt = NO
                             RESPOND FROM echo
                             ===============
-                            <!-- test -w ~/status.txt && echo "yes" = 4.0K -rw-rw-r-- 1 ubuntu ubuntu 98 Dec 14 18:45
-                            status.txt = yes -->
+                            test -w ~/status.txt && echo "yes" 
+                            = 4.0K -rw-rw-r-- 1 ubuntu ubuntu 98 Dec 14 18:45
+                            status.txt = yes 
                             =====================
-                            ubuntu@primary:~$ cd mjw_bin/
-                            ubuntu@primary:~/mjw_bin$ ls -lash = total 16K
+                            ubuntu@primary:~$ cd MJW_Programs/
+                            ubuntu@primary:~/MJW_Programs$ ls -lash = total 16K
                             4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 18:32 .
                             4.0K drwxr-xr-x 26 ubuntu ubuntu 4.0K Dec 15 18:32 ..
                             4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 mjw_files
                             4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test
                             ====================
-                            <!-- ubuntu@primary:~/mjw_bin$ touch check_number -->
-                            ubuntu@primary:~/mjw_bin$ ls -lash = total 16K
+                            ubuntu@primary:~/MJW_Programs$ touch check_number
+                            ubuntu@primary:~/MJW_Programs$ ls -lash = total 16K
                             4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 19:32 .
                             4.0K drwxr-xr-x 26 ubuntu ubuntu 4.0K Dec 15 18:32 ..
                             0 -rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 19:32 check_number
                             4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 mjw_files
                             4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test
                             =====================
-                            <!-- ubuntu@primary:~/mjw_bin$ chmod +x check_number
-                            ubuntu@primary:~/mjw_bin$ ls -lash = total 16K
+                            ubuntu@primary:~/MJW_Programs$ chmod +x check_number
+                            ubuntu@primary:~/MJW_Programs$ ls -lash = total 16K
                             4.0K drwxrwxr-x 2 ubuntu ubuntu 4.0K Dec 15 19:32 .
                             4.0K drwxr-xr-x 26 ubuntu ubuntu 4.0K Dec 15 18:32 ..
                             0 -rwxrwxr-x 1 ubuntu ubuntu 0 Dec 15 19:32 check_number
                             4.0K -rwxrwxr-x 1 ubuntu ubuntu 320 Dec 15 18:32 mjw_files
-                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test = check_number = color = green = ok -->
+                            4.0K -rwxrwxr-x 1 ubuntu ubuntu 63 Dec 15 16:19 node_test = check_number = color = green = ok 
                             =======================
 
-                            ubuntu@primary:~/mjw_bin$ vi check_number
+                            ubuntu@primary:~/MJW_Programs$ vi check_number
 
                             =================
                             #! /bin/bash
@@ -2673,15 +2740,15 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             =================
                             :wq
                             ================================
-                            <!-- ubuntu@primary:~/mjw_bin$ check_number 10 = equals 10
+                            ubuntu@primary:~/MJW_Programs$ check_number 10 = equals 10
                             ===========
-                            ubuntu@primary:~/mjw_bin$ check_number 17 = greater than ten 
+                            ubuntu@primary:~/MJW_Programs$ check_number 17 = greater than ten 
                             ====================
-                            ubuntu@primary:~/mjw_bin$ check_number 7 = less than ten
-                            ======================= -->
+                            ubuntu@primary:~/MJW_Programs$ check_number 7 = less than ten
+                            ======================= 
                             //NOTE: in vi #! /bin/bash :wq and reopen the file = to get bash color codes in vi.///
                             =============
-                            ubuntu@primary:~/mjw_bin$ vi smiley
+                            ubuntu@primary:~/MJW_Programs$ vi smiley
 
                             ========================================
                             #! /bin/bash
@@ -2689,7 +2756,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
 
 
 
-                            <!-- case $1 in
+                            case $1 in
                             "smile")
                             echo ":)"
                             ;;
@@ -2707,9 +2774,9 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                             ==================
                             :wq
                             ==============
-                            ubuntu@primary:~/mjw_bin$ smiley smile = :)
-                            ubuntu@primary:~/mjw_bin$ smiley laugh = :D
-                            ubuntu@primary:~/mjw_bin$ smiley im learing cool Linux stuff = I DONT KNOW THAT ONE YET! -->
+                            ubuntu@primary:~/MJW_Programs$ smiley smile = :)
+                            ubuntu@primary:~/MJW_Programs$ smiley laugh = :D
+                            ubuntu@primary:~/MJW_Programs$ smiley im learing cool Linux stuff = I DONT KNOW THAT ONE YET! 
                             ======================
                             +++++++++++++++++++++++
                             ======Loops & Arrays=======
@@ -2720,11 +2787,11 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
                              ${#friends[*]} = array Length
                              ${friends[1]} = friend at index 1
                              ==================
-                             ubuntu@primary:~$ cd mjw_bin/ 
-                             ubuntu@primary:~/mjw_bin$ touch friends
-                             ubuntu@primary:~/mjw_bin$ ls = check_number  friends  mjw_files  node_test  smiley
-                             ubuntu@primary:~/mjw_bin$ chmod +x friends
-                             ubuntu@primary:~/mjw_bin$ vi friends
+                             ubuntu@primary:~$ cd MJW_Programs/ 
+                             ubuntu@primary:~/MJW_Programs$ touch friends
+                             ubuntu@primary:~/MJW_Programs$ ls = check_number  friends  mjw_files  node_test  smiley
+                             ubuntu@primary:~/MJW_Programs$ chmod +x friends
+                             ubuntu@primary:~/MJW_Programs$ vi friends
 
                              ================
                              #! /bin/bash
@@ -2748,7 +2815,7 @@ echo "i have ${#friends[*]} friends"
 =============================
 :wq
 ======================
-ubuntu@primary:~/mjw_bin$ friends = 
+ubuntu@primary:~/MJW_Programs$ friends = 
 my second friend is Value
 friend: Angel
 friend: Value
@@ -2766,9 +2833,9 @@ $(()) = converts to a basic program = let = which does math = let does modular w
 Unix is an operating system that was built on the idea of modular design, which means that each tool or command is designed to do one thing well. This philosophy is known as the Unix philosophy
 ====================================
 
-ubuntu@primary:~/mjw_bin$ touch guess
-ubuntu@primary:~/mjw_bin$ chmod +x guess
-ubuntu@primary:~/mjw_bin$ vi guess
+ubuntu@primary:~/MJW_Programs$ touch guess
+ubuntu@primary:~/MJW_Programs$ chmod +x guess
+ubuntu@primary:~/MJW_Programs$ vi guess
 ======================
 #! /bin/bash
 
@@ -2790,7 +2857,7 @@ echo "you got it!"
 
 :wq
 ===============
-ubuntu@primary:~/mjw_bin$ guess 
+ubuntu@primary:~/MJW_Programs$ guess 
 
 guess a number between 1 and 10
 your guess: 2
@@ -2818,15 +2885,15 @@ ubuntu@primary:/etc/cron.daily$ ls = apport  apt-compat  aptitude  dpkg  logrota
 =========================
 //ANYTHING THAT IS PUT IN THE cron FOLDER NEEDS TO BE AN EXECUTALE FILE.
 ==========================
-ubuntu@primary:~/mjw_bin$ vi make_new_file_now = TO CREATE A NEW FILE. = using vi = didnt use touch to create file.
+ubuntu@primary:~/MJW_Programs$ vi make_new_file_now = TO CREATE A NEW FILE. = using vi = didnt use touch to create file.
 =====================
-ubuntu@primary:~/mjw_bin$ ls = 
+ubuntu@primary:~/MJW_Programs$ ls = 
 check_number  friends  mjw_files  guess  make_new_file_now  node_test  smiley
 ============
-ubuntu@primary:~/mjw_bin$ chmod +x make_new_file_now 
+ubuntu@primary:~/MJW_Programs$ chmod +x make_new_file_now 
 ===================
 +++++++++++++++++++++++++++++
-ubuntu@primary:~/mjw_bin$ vi make_new_file_now
+ubuntu@primary:~/MJW_Programs$ vi make_new_file_now
 ===================
 #! /bin/bash
 
@@ -2838,11 +2905,11 @@ touch file-$(date +%s).txt
 ==================
 :wq
 =================
-ubuntu@primary:~/mjw_bin$ date = Mon Dec 16 10:58:46 EST 2024
+ubuntu@primary:~/MJW_Programs$ date = Mon Dec 16 10:58:46 EST 2024
 ==============
-ubuntu@primary:~/mjw_bin$ date +%s = 1734364763
+ubuntu@primary:~/MJW_Programs$ date +%s = 1734364763
 ===================
-ubuntu@primary:~/mjw_bin$ make_new_file_now = ubuntu@primary:~$ ls temp-files = 
+ubuntu@primary:~/MJW_Programs$ make_new_file_now = ubuntu@primary:~$ ls temp-files = 
 file-1734364665.txt  file-1734364719.txt
 =========================
 |||||||||||||||||||||||||
@@ -2861,7 +2928,7 @@ Select an editor.  To change later, run 'select-editor'.
 Choose 1-4 [2]: 
 =============================
 //in VIM////
-* * * * * /home/ubuntu/mjw_bin/make_new_file_now
+* * * * * /home/ubuntu/MJW_Programs/make_new_file_now
 the first * = minutes = 2 every 2 mins everyhour, 2,25 = every 2 min and 25 min of every hour.
 the second * = hours
 the third * = day of the month 
@@ -2873,7 +2940,7 @@ the fifth * =  day of the week to run
 =============================
 ///from vim///
 =====================
-*/2 * * * * /home/ubuntu/mjw_bin/make_new_file_now = run every 2 minutes.
+*/2 * * * * /home/ubuntu/MJW_Programs/make_new_file_now = run every 2 minutes.
 =========================
 :wq
 ==================
