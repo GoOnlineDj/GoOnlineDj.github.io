@@ -3118,10 +3118,12 @@ sudo crontab -u root -e
 ||||||||||||||||||||||||
 +++++++++++++++++++++++++
 |||||||||||||||||||||||||
-//THIS PROMPT = ubuntu@primary:~$ = IS CUSTOMIZABLE
+//THIS PROMPT = ubuntu@primary:~$ 
+= IS CUSTOMIZABLE
 ////its connected to a VARIABLE called PS1 
 =======================
-ubuntu@primary:~$ echo $PS1 = \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$
+ubuntu@primary:~$ echo $PS1 
+= \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$
 ==========================
 ubuntu@primary:~$ PS1="MJW+Linux: "  = MJW+Linux: 
 ========================
@@ -3129,12 +3131,16 @@ ubuntu@primary:~$ PS1="MJW+Linux: "  = MJW+Linux:
 +++++++++++++++
 MJW+Linux: curl https://raw.githubusercontent.com/riobard/bash-powerline/master/bash-powerline.sh > ~/.bash-powerline.sh
 ++++++++++++++
-MJW+Linux: cat .bash-powerline.sh = #!/usr/bin/env bash
+||||||||||||||||||||||||||
+MJW+Linux: cat .bash-powerline.sh 
+
+= #!/usr/bin/env bash
 
 ## Uncomment to disable git info
 #POWERLINE_GIT=0
+|||||||||||||||||
 ======================
-
+|||||||||||||||||||||
 MJW+Linux: vi .bashrc
 ++++++++++
 //in .bashrc ////
@@ -3143,7 +3149,9 @@ source ~/.bash-powerline.sh
 =================
 :wq
 =================
-MJW+Linux: source .bash-powerline.sh = ~ $ 
+||||||||||||||||||||||||||||||||
+MJW+Linux: source .bash-powerline.sh 
+= ~ $ 
 =======
 ///WORKS FINE/////
 =======================
@@ -3151,6 +3159,7 @@ MJW+Linux: source .bash-powerline.sh = ~ $
 ~ $ cd my-git-project/
 ===========
 ~/my-git-project $ git init
+=
 hint: Using 'master' as the name for the initial branch. This default branch name
 hint: is subject to change. To configure the initial branch name to use in all
 hint: of your new repositories, which will suppress this warning, call:
@@ -3163,13 +3172,37 @@ hint:
 hint: 	git branch -m <name>
 Initialized empty Git repository in /home/ubuntu/my-git-project/.git/
 ==============
-~/my-git-project ⑂master $ git checkout -b another-git-project = Switched to a new branch 'another-git-project' 
+~/my-git-project ⑂master $ git checkout -b another-git-project 
+= Switched to a new branch 'another-git-project' 
 ======
 ~/my-git-project ⑂another-git-project $ 
 =======
+==========================
++++++++++++++++++++++++++++++
+======
+-e flag for echo 
++++++++++
+ -e  =
+  enable interpretation of backslash escapes
+  +++++++++++++++++
+===========
+=============
+||||||||||
 \e[32m = green = IN BASH
 =============
-~ $ echo -e "this is how you change the color of a text \e[32mGreen " = this is how you change the color of a text Green 
+======================
+echo -e hi
+=
+hi
++++++++++++++
+echo -e --help
+=
+--help
++++++++++++++++++++++
+|||||||||||||||||||||||||
+
+|||||||||||||||||||||||||||||
+echo -e "this is how you change the color of a text \e[32mGreen " = this is how you change the color of a text Green 
 ==========================
 /////////////////////////
 ============================
