@@ -990,7 +990,8 @@ const appleMusic = [
     ]
 },
 {
-    artist: "BIA & Lil Yachty",  
+    artist: "BIA & Lil Yachty",
+    birthday: [{ month: "August", day: 16, year: 1991 }, { month: "August", day: 23, year: 1997 }],  
     songs: [
         {
         title: 'PISSED OFF',
@@ -999,7 +1000,8 @@ const appleMusic = [
     ]
 },
 {
-    artist: "BIA & Timbaland",  
+    artist: "BIA & Timbaland",
+    birthday: [{ month: "August", day: 16, year: 1991 }, { month: "March", day: 10, year: 1972 }],  
     songs: [
         {
             title: "I'M THAT BITCH",
@@ -1033,7 +1035,8 @@ const appleMusic = [
             ]
         },
                 {
-                    artist: "Big Tymers & R. Kelly",  
+                    artist: "Big Tymers & R. Kelly",
+                    birthday: [{ month: "February", day: 15, year: 1969 },{ month: "March", day: 20, year: 1969 },{ month: "January", day: 8, year: 1967 }],  
                     songs: [
                 {
                   title: "Gangsta Girl (Closed Captioned)",
@@ -1093,7 +1096,8 @@ const appleMusic = [
             ]
         },
         {
-            artist: "Birdman & Jacquees",  
+            artist: "Birdman & Jacquees",
+            birthday: [{ month: "February", day: 15, year: 1969 }, { month: "April", day: 15, year: 1994 }],   
             songs: [
                 {
                   title: "Presidential",
@@ -1102,7 +1106,8 @@ const appleMusic = [
             ]
         },
         {
-            artist: "Birdman & Lil Wayne",   
+            artist: "Birdman & Lil Wayne",
+            birthday: [{ month: "February", day: 15, year: 1969 }, { month: "September", day: 27, year: 1982 }],   
             songs: [
                 {
                   title: "Leather So Soft",
@@ -1111,7 +1116,8 @@ const appleMusic = [
             ]
         },
         {
-            artist: "Birdman, Drake & Lil Wayne",  
+            artist: "Birdman, Drake & Lil Wayne",
+            birthday: [{ month: "February", day: 15, year: 1969 },{ month: "October", day: 24, year: 1986 }, { month: "September", day: 27, year: 1982 }],   
             songs: [
                 {
                   title: "4 My Town (Play Ball) [Edited Version]",
@@ -1130,7 +1136,8 @@ const appleMusic = [
             ]
         },
         {
-            artist: "Black Eyed Peas & Shakira",  
+            artist: "Black Eyed Peas & Shakira",
+            birthday: [{ month: "March", day: 15, year: 1975 }, { month: "November", day: 28, year: 1974 }, { month: "July", day: 14, year: 1975 }, { month: "March", day: 27, year: 1975 }, { month: "February", day: 2, year: 1977 }],  
             songs: [
                 {
                   title: "GIRL LIKE ME",
@@ -1139,7 +1146,8 @@ const appleMusic = [
             ]
         },
         {
-            artist: "BLACKPINK & Selena Gomez",  
+            artist: "BLACKPINK & Selena Gomez",
+            birthday: [{ month: "January", day: 3, year: 1995 }, { month: "January", day: 16, year: 1996 }, { month: "February", day: 11, year: 1997 }, { month: "March", day: 27, year: 1997 }, { month: "July", day: 22, year: 1992 }],  
             songs: [
                 {
                   title: "Ice Cream",
@@ -1256,7 +1264,8 @@ const appleMusic = [
             ]
         },
         {
-            artist: "Bow Wow & Omarion",  
+            artist: "Bow Wow & Omarion",
+            birthday: [{ month: "March", day: 9, year: 1987 }, { month: "November", day: 12, year: 1984 }],   
             songs: [
                 {
                   title: "Girlfriend",
@@ -1329,7 +1338,8 @@ const appleMusic = [
             ]
         },
         {
-            artist: "Britney Spears & Iggy Azalea",  
+            artist: "Britney Spears & Iggy Azalea",
+            birthday: [{ month: "December", day: 2, year: 1981 }, { month: "June", day: 7, year: 1990 }],  
             songs: [
                 {
                   title: "Pretty Girls",
@@ -1386,7 +1396,8 @@ const appleMusic = [
             ]
         },
                 {
-                    artist: "Bubba Sparxxx,Mr. Collipark & Ying Yang Twins",  
+                    artist: "Bubba Sparxxx,Mr. Collipark & Ying Yang Twins",
+                    birthday: [{ month: "March", day: 6, year: 1977 },{ month: "October", day: 5, year: 1970 },{ month: "December", day: 16, year: 1978 },{ month: "February", day: 23, year: 1979 }],  
                     songs: [
                 {
                   title: "Ms. New Booty",
@@ -1456,7 +1467,8 @@ const appleMusic = [
             ]
         },
         {
-            artist: "Calvin Harris & Rihanna",  
+            artist: "Calvin Harris & Rihanna",
+            birthday: [{ month: "January", day: 17, year: 1984 }, { month: "February", day: 20, year: 1988 }],  
             songs: [
                 {
                   title: "This Is What You Came For",
@@ -1465,7 +1477,8 @@ const appleMusic = [
             ]
         },
         {
-            artist: "Calvin Harris & Sam Smith",  
+            artist: "Calvin Harris & Sam Smith",
+            birthday: [{ month: "January", day: 17, year: 1984 }, { month: "May", day: 19, year: 1992 }],   
             songs: [
                 {
                   title: "Desire",
@@ -1474,7 +1487,8 @@ const appleMusic = [
             ]
         },
         {
-            artist: "Calvin Harris,Charlie Puth & Shenseea",  
+            artist: "Calvin Harris,Charlie Puth & Shenseea",
+            birthday: [{ month: "January", day: 17, year: 1984 }, { month: "December", day: 2, year: 1991 }, { month: "October", day: 1, year: 1996 }],  
             songs: [
                 {
                   title: "Obsessed",
@@ -1545,7 +1559,8 @@ const appleMusic = [
             ]
         },
         {
-            artist: "Cardi B & Megan Thee Stallion",  
+            artist: "Cardi B & Megan Thee Stallion",
+            birthday: [{ month: "October", day: 11, year: 1992 }, { month: "February", day: 15, year: 1995 }],   
             songs: [
                 {
                   title: "Bongos",
@@ -1610,7 +1625,8 @@ const appleMusic = [
             ]
         },
         {
-            artist: "Cash Cobain,Ice Spice & Bay Swag",  
+            artist: "Cash Cobain,Ice Spice & Bay Swag",
+            birthday: [{ month: "March", day: 31, year: 1998 },{ month: "January", day: 1, year: 2000 },{ month: "November", day: 26, year: 1999 }],  
             songs: [
                 {
                   title: "Fisherrr (Remix)",
@@ -1663,7 +1679,8 @@ const appleMusic = [
             ]
         },
         {
-            artist: "Chamillionaire featuring Krayzie Bone",  
+            artist: "Chamillionaire featuring Krayzie Bone", 
+            birthday: [{ month: "November", day: 28, year: 1979 }, { month: "June", day: 17, year: 1973 }], 
             songs: [
                 {
                   title: "Ridin' (feat. Krayzie Bone)",
@@ -1709,6 +1726,7 @@ const appleMusic = [
             },
             {
               artist: "Chingy, Snoop Dogg & Ludacris",
+              birthday: [{ month: "March", day: 9, year: 1980 }, { month: "October", day: 20, year: 1971 }, { month: "September", day: 11, year: 1977 }],
               songs: [
                 {
                   title: "Holidae In",
@@ -1718,6 +1736,7 @@ const appleMusic = [
             },
             {
               artist: "Chloe & Chris Brown",
+              birthday: [{ month: "July", day: 1, year: 1998 }, { month: "May", day: 5, year: 1989 }],
               songs: [
                 {
                   title: "How Does It Feel",
@@ -1793,6 +1812,7 @@ const appleMusic = [
         },
         {
             artist: "Chris Brown & Tyga",
+            birthday: [{ month: "May", day: 5, year: 1989 }, { month: "November", day: 19, year: 1989 }],
             songs: [
                 {
                   title: "Ayo",
@@ -1802,6 +1822,7 @@ const appleMusic = [
             },
             {
               artist: "Chris de Burgh",
+                birthday: [{ month: "October", day: 15, year: 1948 }],
               songs: [
                 {
                   title: "The Lady in Red",
@@ -1860,6 +1881,7 @@ const appleMusic = [
         },
                 {
                     artist: "Ciara & Chris Brown",
+                    birthday: [{ month: "October", day: 25, year: 1985 }, { month: "May", day: 5, year: 1989 }],
                     songs: [
                 {
                   title: "How We Roll",
@@ -1929,6 +1951,7 @@ const appleMusic = [
               },
             {
               artist: "Cory Gunz & Lil Wayne",
+              birthday: [{ month: "June", day: 22, year: 1987 },{ month: "September", day: 27, year: 1982 }],
               songs: [
                 {
                   title: "6 Foot 7 Foot (feat. Cory Gunz)",
@@ -1962,6 +1985,7 @@ const appleMusic = [
             },
             {
               artist: "D-Block",
+              birthday: [{ month: "May", day: 27, year: 1975 },{ month: "November", day: 28, year: 1974 },{ month: "September", day: 30, year: 1974 }],
               songs: [
                 {
                   title: "Get That Paper (Director's Cut)",
@@ -1981,6 +2005,7 @@ const appleMusic = [
         },
         {
             artist: "Da Brat & Tyrese",
+            birthday: [{ month: "April", day: 14, year: 1974 }, { month: "December", day: 30, year: 1978 }],
             songs: [
                 {
                   title: "What'chu Like",
@@ -2044,6 +2069,7 @@ const appleMusic = [
         },
                 {
                     artist: "David Guetta & Bebe Rexha",
+                    birthday: [{ month: "November", day: 7, year: 1967 },{ month: "August", day: 30, year: 1989 }],
                     songs: [
                 {
                   title: "I'm Good (Blue)",
@@ -2053,6 +2079,7 @@ const appleMusic = [
         },
         {
             artist: "Davido,Sean Paul & Ding Dong",
+            birthday: [{ month: "November", day: 21, year: 1992 },{ month: "January", day: 9, year: 1973 },{ month: "September", day: 29, year: 1980 }],
             songs: [
                 {
                   title: "UNAVAILABLE (feat. Musa Keys) [Sean Paul & DING DONG Remix]",
@@ -2100,6 +2127,7 @@ const appleMusic = [
         },
         {
             artist: "Daya & RL Grime",
+            birthday: [{ month: "October", day: 24, year: 1998 }, { month: "February", day: 8, year: 1991 }],
             songs: [
                 {
                   title: "I Wanna Know (feat. Daya)",
@@ -2173,6 +2201,7 @@ const appleMusic = [
             },
             {
               artist: "Destiny's Child",
+                birthday: [{ month: "September", day: 4, year: 1981 },{ month: "November", day: 1, year: 1981 },{ month: "February", day: 11, year: 1981 },,{ month: "March", day: 11, year: 1981 },{ month: "May", day: 3, year: 1981 },,{ month: "July", day: 23, year: 1979 }],
               songs: [
                 {
                   title: "Soldier (feat. T.I. & Lil Wayne)",
@@ -2192,6 +2221,7 @@ const appleMusic = [
         },
         {
             artist: "Diddy - Dirty Money & Rick Ross",
+            birthday: [{ month: "November", day: 4, year: 1969 },{ month: "August", day: 5, year: 1983 },{ month: "August", day: 13, year: 1982 },{ month: "January", day: 28, year: 1976 }],
             songs: [
                 {
                   title: "Angels (Remix)",
