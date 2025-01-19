@@ -80,11 +80,11 @@ document.getElementById("_id_frame").innerHTML = `<div class="contact-body">
                     <br>
                     +
                     <br>
-                    ++very+important++ Try Not To
+                    ++very+IMPORTANT++ Try Not To
                     <br>
-                    Rewind Any Of The +Music +Videos When
+                    Rewind Any Of The +Music +Videos When the
                     <br>
-                    +Video Are +Playing +
+                    +Video Is +Playing +
                     <br>
                     +
                     <br>
