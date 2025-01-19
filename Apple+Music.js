@@ -451,7 +451,6 @@ const appleMusic = [
     {
         artist: "Ashanti",
         birthday: [{ month: "October", day: 13, year: 1980 }],
-
         songs: [
     {
         title: "Baby",
@@ -474,6 +473,7 @@ const appleMusic = [
     },
     {
         artist: "Ashanti, Ja Rule, Charli Baltimore & Hussein Fatal",
+        birthday: [{ month: "October", day: 13, year: 1980 }, { month: "August", day: 16, year: 1974 }, { month: "April", day: 3, year: 1977 }, ],
         songs: [
  {
         title: "Rain on Me",
@@ -556,6 +556,7 @@ const appleMusic = [
     },
     {
         artist: "Bankroll Freddie & Megan Thee Stallion", 
+        birthdays: [{ month: "October", day: 15, year: 1994 }, { month: "February", day: 15, year: 1995 }],
         songs: [
     {
         title: "Pop It",
@@ -628,6 +629,7 @@ const appleMusic = [
 
     {
         artist: "Bea Miller & 6LACK", 
+        birthday: [{ month: "February", day: 7, year: 1999 }, { month: "June", day: 24, year: 1992 }],
         songs: [
     {
         title: "it's not u it's me",
@@ -708,7 +710,8 @@ const appleMusic = [
 ]
 },
     {
-        artist: "Bebe Rexha & David Guetta", 
+        artist: "Bebe Rexha & David Guetta",
+        birthday: [{ month: "August", day: 30, year: 1989 }, { month: "November", day: 7, year: 1967 }], 
         songs: [
     {
         title: "One in a Million",
@@ -759,7 +762,8 @@ const appleMusic = [
 ]
 },
  {
-        artist: "Becky G. & Natti Natasha", 
+        artist: "Becky G. & Natti Natasha",
+        birthday: [{ month: "March", day: 2, year: 1997 }, { month: "December", day: 10, year: 1986 }], 
         songs: [
     {
         title: "Sin Pijama",
@@ -768,7 +772,8 @@ const appleMusic = [
 ]
 },
 {
-    artist: "Beenie Man & Mya", 
+    artist: "Beenie Man & Mya",
+    birthday: [{ month: "August", day: 22, year: 1973 }, { month: "January", day: 3, year: 1978 }], 
     songs: [
 
     {
@@ -778,7 +783,8 @@ const appleMusic = [
     ]
 },
     {
-        artist: "Beenie Man, Ms. Thing & Shawna",  
+        artist: "Beenie Man, Ms. Thing & Shawna",
+        birthday: [{ month: "August", day: 22, year: 1973 }, { month: "September", day: 15, year: 1986 }, { month: "April", day: 9, year: 1978 }],  
         songs: [
     {
         title: "Dude",
@@ -903,7 +909,8 @@ const appleMusic = [
     ]
 },
 {
-    artist: "Beyoncé & Jay-Z",  
+    artist: "Beyoncé & Jay-Z",
+    birthday: [{ month: "September", day: 4, year: 1981 }, { month: "December", day: 4, year: 1969 }],   
     songs: [
         {
             title: 'Crazy in Love',
@@ -912,7 +919,8 @@ const appleMusic = [
     ]
 },
 {
-    artist: "Beyoncé, Blue Ivy, SAINt JHN & WizKid",  
+    artist: "Beyoncé, Blue Ivy, SAINt JHN & WizKid", 
+    birthday: [{ month: "September", day: 4, year: 1981 }, { month: "January", day: 7, year: 2012 }, { month: "August", day: 26, year: 1986 }, { month: "July", day: 16, year: 1990 }], 
     songs: [
         {
             title: 'Brown Skin Girl',
@@ -921,7 +929,8 @@ const appleMusic = [
     ]
 },
 {
-    artist: "Beyoncé, JAY Z & Childish Gambino",  
+    artist: "Beyoncé, JAY Z & Childish Gambino",
+    birthday: [{ month: "September", day: 4, year: 1981 }, { month: "September", day: 25, year: 1983 }],  
     songs: [
         {
             title: 'MOOD 4 EVA (feat. Oumou Sangaré)',
@@ -930,7 +939,7 @@ const appleMusic = [
     ]
 },
 {
-    artist: "Beyoncé, Shatta Wale & Major Lazer",  
+    artist: "Beyoncé, Shatta Wale & Major Lazer",
     songs: [
         {
             title: 'ALREADY',
@@ -971,7 +980,8 @@ const appleMusic = [
     ]
 },
 {
-    artist: "BIA & JID",  
+    artist: "BIA & JID",
+    birthday: [{ month: "August", day: 16, year: 1991 }, { month: "October", day: 31, year: 1990 }],  
     songs: [
         {
             title: 'LIGHTS OUT',
