@@ -66,6 +66,7 @@ const appleMusic = [
     },
     {
         artist: "ABBA",
+        birthday: [{ month: "April", day: 5, year: 1950 }, { month: "April", day: 25, year: 1945 }, { month: "December", day: 16, year: 1946 }, { month: "November", day: 15, year: 1945 }],
         songs: [
             {
                 title: "Dancing Queen",
@@ -163,6 +164,7 @@ const appleMusic = [
     },
     {
         artist: "Akon & T-Pain",
+        birthday: [{ month: "April", day: 16, year: 1973 } , { month: "September", day: 30, year: 1984 }],
         songs: [
             {
                 title: "Bartender (feat. Akon)",
@@ -172,6 +174,7 @@ const appleMusic = [
     },
    {
         artist: "Alabama",
+        birthday: [{ month: "January", day: 22, year: 1952 }, { month: "December", day: 13, year: 1949 }],
         songs: [
             {
                 title: "God Must Have Spent A Little More Time On You (feat. *NSYNC)",
@@ -181,6 +184,7 @@ const appleMusic = [
     },
     {
         artist: "Alesso & Katy Perry",
+        birthday: [{ month: "July", day: 7, year: 1991 }, { month: "October", day: 25, year: 1984 }],
         songs: [
             {
                 title: "When I'm Gone",
@@ -190,6 +194,7 @@ const appleMusic = [
     },
     {
         artist: "Alesso & Nate Smith",
+        birthday: [{ month: "July", day: 7, year: 1991 } , { month: "September", day: 19, year: 1985 }],
         songs: [
             {
                 title: "I Like It",
@@ -199,6 +204,7 @@ const appleMusic = [
     },
     {
         artist: "Alesso & Zara Larsson",
+        birthday: [{ month: "July", day: 7, year: 1991 } , { month: "December", day: 16, year: 1997 }],
         songs: [
             {
                 title: "Words",
@@ -222,7 +228,8 @@ const appleMusic = [
     },
 
     {
-        artist: "Alexandra Stan & MATTN", 
+        artist: "Alexandra Stan & MATTN",
+        birthday: [{ month: "June", day: 10, year: 1989 }, { month: "December", day: 18, year: 1992 }], 
         songs: [
             {
                 title: "Bitch Is Fire",
@@ -308,6 +315,7 @@ const appleMusic = [
 
     {
         artist: "Amil & Beanie Sigel",
+        birthday: [{ month: "September", day: 19, year: 1973 }, { month: "March", day: 6, year: 1974 }],
         songs: [
             {
                 title: "4 Da Fam (feat. Beanie Sigel, Memphis Bleek & Jay-Z)",
@@ -352,7 +360,6 @@ const appleMusic = [
     {
         artist: "Ariana Grande",  
         birthday: [{ month: "June", day: 26, year: 1993 }],
-
         songs: [
     {
         title: "Break Free (feat. Zedd)",
@@ -422,6 +429,7 @@ const appleMusic = [
     },
     {
         artist: "Ariana Grande & Justin Bieber",
+        birthday: [{ month: "June", day: 26, year: 1993 }, { month: "March", day: 1, year: 1994 }],
         songs: [
 
     {
@@ -432,6 +440,7 @@ const appleMusic = [
     },
     {
         artist: "Ariana Grande, Miley Cyrus & Lana Del Rey",
+        birthday: [{ month: "June", day: 26, year: 1993 }, { month: "November", day: 23, year: 1992 }, { month: "June", day: 21, year: 1985 }],
         songs: [
     {
         title: "Don't Call Me Angel (Charlie's Angels)",
