@@ -3113,6 +3113,7 @@ const appleMusic = [
 },
 {
     artist: "G-Eazy & Bebe Rexha",
+    birthday: [{ month: "May", day: 24, year: 1989 },{ month: "August", day: 30, year: 1989 }],
     songs: [
     {
         title: "Me, Myself & I",
@@ -3122,6 +3123,7 @@ const appleMusic = [
 },
 {
     artist: "G-Eazy & Halsey",
+    birthday: [{ month: "May", day: 24, year: 1989 },{ month: "September", day: 29, year: 1994 }],
     songs: [
     {
         title: "Him & I",
@@ -3212,6 +3214,7 @@ const appleMusic = [
 },
 {
     artist: "Gucci Mane & Nicki Minaj",
+    birthday: [{ month: "February", day: 12, year: 1980 }, { month: "December", day: 8, year: 1982 }],
     songs: [
     {
         title: "Make Love",
@@ -3251,6 +3254,7 @@ const appleMusic = [
 },
 {
     artist: "Gwen Stefani & Saweetie",
+    birthday: [{ month: "October", day: 3, year: 1969 }, { month: "July", day: 2, year: 1993 }],
     songs: [
     {
         title: "Slow Clap",
@@ -3260,6 +3264,7 @@ const appleMusic = [
 },
 {
     artist: "Gwen Stefani & Eve",
+    birthday: [{ month: "October", day: 3, year: 1969 }, { month: "November", day: 10, year: 1978 }],
     songs: [
     {
         title: "Rich Girl",
@@ -3269,6 +3274,7 @@ const appleMusic = [
 },
 {
     artist: "Gwen Stefani featuring Slim Thug",
+    birthday: [{ month: "October", day: 3, year: 1969 }, { month: "September", day: 8, year: 1980 }],
     songs: [
     {
         title: "Luxurious (feat. Slim Thug) [Remix featuring Slim Thug]",
@@ -3304,6 +3310,7 @@ const appleMusic = [
 },
 {
     artist: "Hailee Steinfeld & BloodPop®",
+    birthday: [{ month: "December", day: 11, year: 1996 }, { month: "August", day: 15, year: 1990 }],
     songs: [
     {
         title: "Capital Letters",
@@ -3430,6 +3437,7 @@ const appleMusic = [
 },
 {
     artist: "Ice Spice & Central Cee",
+    birthday: [{ month: "January", day: 1, year: 2000 },{ month: "June", day: 4, year: 1998 }],
     songs: [
 {
     title: "Did It First",
@@ -3440,6 +3448,7 @@ const appleMusic = [
 
 {
     artist: "Ice Spice & Nicki Minaj",
+    birthday: [{ month: "January", day: 1, year: 2000 },{ month: "December", day: 8, year: 1982 }],
     songs: [
 {
     title: "Princess Diana",
@@ -3449,6 +3458,7 @@ const appleMusic = [
 },
 {
     artist: "Ice Spice & Travis Scott",
+    birthday: [{ month: "January", day: 1, year: 2000 },{ month: "April", day: 30, year: 1991 }],
     songs: [
 {
     title: "Oh Shhh...",
@@ -3627,6 +3637,7 @@ const appleMusic = [
 },
 {
     artist: "Ja Rule & Lloyd",
+    birthday: [{ month: "February", day: 29, year: 1976 },{ month: "January", day: 3, year: 1986 } ],
     songs: [
 {
     title: "Caught Up (Edited Version)",
@@ -3636,6 +3647,7 @@ const appleMusic = [
 },
 {
     artist: "Ja Rule featuring Ashanti",
+    birthday: [{ month: "February", day: 29, year: 1976 }, { month: "October", day: 13, year: 1980 } ],
     songs: [
 {
     title: "Mesmerize",
@@ -3817,6 +3829,7 @@ const appleMusic = [
         },
 {
             artist: "JAY-Z & Kanye West",
+            birthday: [{ month: "December", day: 4, year: 1969 }, { month: "June", day: 8, year: 1977 }],
             songs: [
 {
     title: "Ni**as in Paris",
@@ -3889,6 +3902,7 @@ const appleMusic = [
         },
         {
             artist: "Jennifer Hudson & Ne-Yo",
+            birthday: [{ month: "September", day: 12, year: 1981 }, { month: "October", day: 18, year: 1979 }],
             songs: [
 {
     title: "Think Like a Man (feat. Rick Ross)",
@@ -3912,6 +3926,7 @@ const appleMusic = [
         },
         {
             artist: "Jennifer Lopez & Ja Rule",
+            birthday: [{ month: "July", day: 24, year: 1969 }, { month: "February", day: 29, year: 1976 }],
             songs: [
 {
     title: "I'm Real (Re-Mix Version)",
@@ -3921,6 +3936,7 @@ const appleMusic = [
         },
         {
             artist: "Jennifer Lopez & Shakira",
+            birthday: [{ month: "July", day: 24, year: 1969 }, { month: "February", day: 2, year: 1977 }],
             songs: [
 {
     title: "The Pepsi Super Bowl Halftime Performance",
@@ -3978,6 +3994,7 @@ const appleMusic = [
         },
         {
             artist: "Jim Jones & Harry Fraud",
+            birthday: [{ month: "July", day: 15, year: 1976 }, { month: "January", day: 26, year: 1987 }],
             songs: [
 {
     title: "Bada Bing (feat. French Montana)",
@@ -3987,6 +4004,7 @@ const appleMusic = [
         },
         {
             artist: "Jim Jones & Ron Browz",
+            birthday: [{ month: "July", day: 15, year: 1976 }, { month: "December", day: 6, year: 1982 }],
             songs: [
 {
     title: "Pop Champagne (feat. Juelz Santana)",
@@ -4242,6 +4260,7 @@ src: "https://embed.music.apple.com/us/music-video/world-tour-aquafina/176774637
 },
 {
     artist: "Kane Brown & Katelyn Brown",
+    birthday: [{ month: "October", day: 21, year: 1993 }, { month: "June", day: 19, year: 1992 }],
     songs: [
     {
         title: "Thank God",
@@ -4353,6 +4372,7 @@ src: "https://embed.music.apple.com/us/music-video/world-tour-aquafina/176774637
 },
 {
     artist: "Katy Perry & Snoop Dogg",
+    birthday: [{ month: "October", day: 25, year: 1984 }, { month: "October", day: 20, year: 1971 }],
     songs: [
 
     {
