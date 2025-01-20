@@ -2251,6 +2251,7 @@ const appleMusic = [
         },
         {
             artist: "Dimitri Vegas & Like Mike & Paris Hilton",
+            birthday: [{ month: "May", day: 16, year: 1982 },{ month: "December", day: 2, year: 1985 },{ month: "February", day: 17, year: 1981 }],
             songs: [
                 {
                   title: "Best Friend's Ass",
@@ -2360,6 +2361,7 @@ const appleMusic = [
         },
         {
             artist: "Doja Cat & Tyga",
+            birthday: [{ month: "October", day: 21, year: 1995 }, { month: "November", day: 19, year: 1989 }],
             songs: [
                 {
                   title: "Juicy (Official Video)",
@@ -2409,6 +2411,7 @@ const appleMusic = [
         },
         {
             artist: "Dr. Dre & Eminem",
+            birthday: [{ month: "February", day: 18, year: 1965 }, { month: "October", day: 17, year: 1972 }],
             songs: [
                 {
                   title: "Guilty Conscience (Director's Cut)",
@@ -2418,6 +2421,7 @@ const appleMusic = [
         },
         {
             artist: "Dr. Dre, Akon & Snoop Dogg",
+            birthday: [{ month: "February", day: 18, year: 1965 }, { month: "April", day: 16, year: 1973 }, { month: "October", day: 20, year: 1971 }],
             songs: [
                 {
                   title: "Kush (feat. Akon & Snoop Dogg)",
@@ -2427,6 +2431,7 @@ const appleMusic = [
         },
         {
             artist: "Dr. Dre, Snoop Dogg, Eminem, Mary J. Blige, Kendrick Lamar & 50 Cent",
+            birthday: [{ month: "February", day: 18, year: 1965 }, { month: "October", day: 20, year: 1971 }, { month: "October", day: 17, year: 1972 }, { month: "January", day: 11, year: 1971 }, { month: "June", day: 17, year: 1987 }, { month: "July", day: 6, year: 1975 }],
             songs: [
                 {
                   title: "Pepsi Super Bowl LVI Halftime Show (Live)",
@@ -2478,6 +2483,7 @@ const appleMusic = [
         },
         {
             artist: "Drake & 21 Savage",
+            birthday: [{ month: "October", day: 24, year: 1986 }, { month: "October", day: 22, year: 1992 }],
             songs: [
                 {
                   title: "Spin Bout U",
@@ -2487,6 +2493,7 @@ const appleMusic = [
         },
         {
             artist: "Drake & Nicki Minaj",
+            birthday: [{ month: "October", day: 24, year: 1986 }, { month: "December", day: 8, year: 1982 }],
             songs: [
                 {
                   title: "Moment 4 Life (feat. Drake)",
@@ -2496,6 +2503,7 @@ const appleMusic = [
         },
         {
             artist: "Drake & Rihanna",
+            birthday: [{ month: "October", day: 24, year: 1986 }, { month: "February", day: 20, year: 1988 }],
             songs: [
                 {
                   title: "What's My Name? (feat. Drake)",
@@ -2505,6 +2513,7 @@ const appleMusic = [
             },
             {
               artist: "Drake,Kanye West,Lil Wayne & Eminem",
+              birthday: [{ month: "October", day: 24, year: 1986 },{ month: "June", day: 8, year: 1977 },{ month: "September", day: 27, year: 1982 },{ month: "October", day: 17, year: 1972 }],
               songs: [
                 {
                   title: "Forever",
@@ -2729,6 +2738,7 @@ const appleMusic = [
         },
         {
             artist: "Fabolous & JAY-Z",
+            birthday: [{ month: "November", day: 18, year: 1977 },{ month: "December", day: 4, year: 1969 } ],
             songs: [
                 {
                   title: "Money Goes, Honey Stay (When the Money Goes Remix)",
@@ -2738,6 +2748,7 @@ const appleMusic = [
         },
         {
             artist: "Fabolous featuring Ne-Yo",
+            birthday: [{ month: "November", day: 18, year: 1977 },{ month: "October", day: 18, year: 1979 } ],
             songs: [
                 {
                   title: "Make Me Better (feat. Ne-Yo)",
@@ -2756,6 +2767,7 @@ const appleMusic = [
 },
 {
     artist: "Fabolous, Keri Hilson & Ryan Leslie",
+    birthday: [{ month: "November", day: 18, year: 1977 },{ month: "December", day: 5, year: 1982 },{ month: "September", day: 25, year: 1978 }],
     songs: [
         {
             title: "Everything, Everyday, Everywhere",
@@ -2809,6 +2821,7 @@ const appleMusic = [
 },
 {
     artist: "Farruko, Nicki Minaj & Bad Bunny", 
+    birthday: [{ month: "May", day: 2, year: 1991 },{ month: "December", day: 8, year: 1982 },{ month: "March", day: 10, year: 1994 }],
     songs: [
         {
             title: "Krippy Kush (feat. Travis Scott & Rvssian) [Remix]",
@@ -2828,6 +2841,7 @@ const appleMusic = [
 },
         {
             artist: "Fat Joe, DJ Khaled & Amorphous",
+            birthday: [{ month: "August", day: 19, year: 1970 },{ month: "November", day: 26, year: 1975 }, { month: "December", day: 31, year: 1997 }],
             songs: [
         {
             title: "Sunshine (The Light)",
@@ -2846,6 +2860,7 @@ const appleMusic = [
 },
 {
     artist: "Fat Joe, Remy & Terror Squad",
+    birthday: [{ month: "August", day: 19, year: 1970 },{ month: "May", day: 30, year: 1980 },{ month: "November", day: 26, year: 1975 },{ month: "December", day: 18, year: 1974 },{ month: "April", day: 23, year: 1977 },{ month: "November", day: 10, year: 1971 }],
     songs: [
         {
             title: "Lean Back (Alternate Version)",
@@ -2855,6 +2870,7 @@ const appleMusic = [
 },
 {
     artist: "Fat Joe, Anitta & DJ Khaled",
+    birthday: [{ month: "August", day: 19, year: 1970 },{ month: "March", day: 30, year: 1993 },{ month: "November", day: 26, year: 1975 }],
     songs: [
         {
             title: "Paradise",
@@ -2864,6 +2880,7 @@ const appleMusic = [
 },
 {
     artist: "FendiDa Rappa & Cardi B",
+    birthday: [{ month: "September", day: 27, year: 1995 },{ month: "October", day: 11, year: 1992 }],
     songs: [
         {
             title: "Point Me 2",
@@ -3023,6 +3040,7 @@ const appleMusic = [
 },
 {
     artist: "French Montana & Doja Cat",
+    birthday: [{ month: "November", day: 9, year: 1984 }, { month: "October", day: 21, year: 1995 }],
     songs: [
 
         {
@@ -3033,6 +3051,7 @@ const appleMusic = [
 },
 {
     artist: "French Montana, Fivio Foreign & Fabolous",
+    birthday: [{ month: "November", day: 9, year: 1984 }, { month: "March", day: 29, year: 1990 }, { month: "November", day: 18, year: 1977 }],
     songs: [
         {
             title: "To the Moon",
