@@ -19,6 +19,16 @@ loadframe.innerHTML = `
                         <div class="swiper-slide"> <img src="./images/web-development-W3Schools/Michael_J_Williams_Certificate_of_Completion_JavaScript_Michael_Junior_Williams.png" alt="W3Schools"></div>
                         <div class="swiper-slide"> <img src="./images/web-development-W3Schools/Michael_J_Williams_Certificate_of_Completion_CSS_Michael_Junior_Williams.png" alt="W3Schools"> </div>
                         <div class="swiper-slide"> <img src="./images/web-development-W3Schools/Michael_J_Williams_Certificate_of_Completion_HTML_Michael_Junior_Williams.png" alt="W3Schools"></div>
+                        <div class="swiper-slide"> <img src="./images/NCL/MJWNCL001.jpg" alt="Michael+Junior+Williams+NCL"></div>
+                        <div class="swiper-slide"> <img src="./images/NCL/MJWNCL002.jpg" alt="Michael+Junior+Williams+NCL"></div>
+                        <div class="swiper-slide"> <img src="./images/NCL/MJWNCL003.jpg" alt="Michael+Junior+Williams+NCL"></div>
+                        <div class="swiper-slide"> <img src="./images/NCL/NCL5KBonus.jpg" alt="Michael+Junior+Williams+NCL"></div>
+                        <div class="swiper-slide"> <img src="./images/NCL/MJWNCL011.jpg" alt="Michael+Junior+Williams+NCL"></div>
+                        <div class="swiper-slide"> <img src="./images/NCL/MJWNCL012.jpg" alt="Michael+Junior+Williams+NCL"></div>
+                        <div class="swiper-slide"> <img src="./images/NCL/MJWNCL013.jpg" alt="Michael+Junior+Williams+NCL"></div>
+                        <div class="swiper-slide"> <img src="./images/NCL/MJWNCL021.jpg" alt="Michael+Junior+Williams+NCL"></div>
+                        <div class="swiper-slide"> <img src="./images/NCL/MJWNCL022.jpg" alt="Michael+Junior+Williams+NCL"></div>
+                        <div class="swiper-slide"> <img src="./images/NCL/MJWNCL023.jpg" alt="Michael+Junior+Williams+NCL"></div>
                         <div class="swiper-slide"> <img src="./images/CollegeLife/Michael+Junior+Williams+University+Of+Bridgeport+College+Degree+66.jpg" alt="Michael+Junior+Williams+University+Of+Bridgeport+College+Degree+66"></div>
                         <div class="swiper-slide"> <img src="./images/web-development-Frontend-Masters/Michael_Junior_Williams_Frontend_Masters_Introduction-HTML.png" alt="Frontend Masters"></div>
                         <div class="swiper-slide"> <img src="./images/web-development-Frontend-Masters/Michael_Junior_Williams_Frontend_Masters_Introduction-CSS.png" alt="Frontend Masters"> </div>
