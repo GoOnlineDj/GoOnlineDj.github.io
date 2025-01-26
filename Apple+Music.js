@@ -8752,7 +8752,6 @@ function buttonClick(value) {
     const alphabet_number = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".split("");
 
     if (!alphabet_number.includes(value)) {
-        console.log("????????????");
         return;
     }
 
@@ -8782,7 +8781,7 @@ function handleLetter(value) {
         clearInterval(autoLoadInterval);
         iframe.src = appleMusic[a].songs[s].src;
     } else {
-        console.error('Artist not found');
+        console.log(value,'Artist not found');
     }
 }
 
@@ -8794,7 +8793,7 @@ function handleNumber(value) {
         clearInterval(autoLoadInterval);
         iframe.src = appleMusic[a].songs[s].src;
     } else {
-        console.error('Artist not found');
+        console.log(value,'Artist not found');
     }
 }
 
@@ -8803,7 +8802,6 @@ function handleNumber(value) {
 function valueInit() {
     document.querySelector("._c_Apple-Music-grid").addEventListener("click", function (event) {
         let value = event.target.innerText;
-        console.log(value);
         buttonClick(value);
 
         
