@@ -116,18 +116,18 @@ document.querySelector("._c_Music-Video-back").addEventListener("click", functio
   if (i === 0) {
     return;
   }
-  i--;
   iframe.src = urls[i];
   console.log("i: " + i + " urls[i]: " + urls[i]);
+  i--;
 });
 
 document.querySelector("._c_Music-Video-forward").addEventListener("click", function () {
   if (i === urls.length - 1) {
     return;
   }
-  i++;
   iframe.src = urls[i];
   console.log("i: " + i + " urls[i]: " + urls[i]);
+  i++;
 });
 
 
