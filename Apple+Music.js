@@ -8787,8 +8787,9 @@ function handleLetter(value) {
 }
 
 function handleNumber(value) {
-     a = appleMusic.findIndex((item) => item.artist.startsWith(Number(value)));
-    if (a !== -1) {
+    let newA = appleMusic.findIndex((item) => item.artist.startsWith(Number(value)));
+    if (newA !== -1) {
+        a = appleMusic.findIndex((item) => item.artist.startsWith(value));
         let s = 0;
         clearInterval(autoLoadInterval);
         iframe.src = appleMusic[a].songs[s].src;
