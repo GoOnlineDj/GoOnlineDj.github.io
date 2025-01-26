@@ -90,7 +90,7 @@ const urls = [
 
 
 
-let i = 0;
+let value = 0;
 const defaultUrl =
   "https://www.youtube.com/embed/videoseries?si=gV_w2OBPeYHWNH2C&amp;list=PLPdWITRXm_YeJI_pEeEh_YUSyyAgf2DHs";
 let randomSelectedUrl = getRandomUrl(urls);
@@ -113,21 +113,25 @@ document.querySelector("._c_Alive").addEventListener("click", function (event) {
 });
 
 document.querySelector("._c_Music-Video-back").addEventListener("click", function () {
-  if (i === 0) {
+
+  iframe.src = urls[value];
+  console.log("value: " + value + " url[value]: " + urls[value]);
+
+  if (value === 0) {
     return;
   }
-  iframe.src = urls[i];
-  console.log("i: " + i + " urls[i]: " + urls[i]);
-  i--;
+
+  value--;
+  
 });
 
 document.querySelector("._c_Music-Video-forward").addEventListener("click", function () {
-  if (i === urls.length) {
+  if (value === urls.length) {
     return;
   }
-  iframe.src = urls[i];
-  console.log("i: " + i + " urls[i]: " + urls[i]);
-  i++;
+  iframe.src = urls[value];
+  console.log("value: " + value + " url[value]: " + urls[value]);
+  value++;
 });
 
 
