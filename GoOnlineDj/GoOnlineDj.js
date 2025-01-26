@@ -122,7 +122,7 @@ document.querySelector("._c_Music-Video-back").addEventListener("click", functio
 });
 
 document.querySelector("._c_Music-Video-forward").addEventListener("click", function () {
-  if (i === urls.length - 1) {
+  if (i === urls.length) {
     return;
   }
   iframe.src = urls[i];
