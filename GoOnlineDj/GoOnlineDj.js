@@ -3,15 +3,21 @@ document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
   document.getElementById("_id_Good-News").innerHTML = new Date().toLocaleTimeString();
 }, 1000);
 
-
+let currentIndex = 0;
 
 function getRandomUrl(urls) {
   const minIndex = 0;
   const maxIndex = urls.length - 1;
   const randomIndex =
-    Math.floor(Math.random() * (maxIndex - minIndex)) + minIndex;
+  Math.floor(Math.random() * (maxIndex - minIndex)) + minIndex;
+
+  currentIndex = randomIndex;
+  console.log("currentIndex: " + currentIndex);
+
   return urls[randomIndex];
 }
+
+
 
 const urls = [
   "https://www.youtube.com/embed/videoseries?si=SmOAyomksctM9NLI&amp;list=PLPdWITRXm_YcnFFkRAFqqyZcRJfHmcgXN",
@@ -78,6 +84,13 @@ const urls = [
   "https://www.youtube.com/embed/videoseries?si=Pst3cpmWKtah7r2P&amp;list=PL-nG1cUOoV9_buQChZ9feF3BJ4mLST8Wz",
 ];
 
+
+
+
+
+
+
+let i = 0;
 const defaultUrl =
   "https://www.youtube.com/embed/videoseries?si=gV_w2OBPeYHWNH2C&amp;list=PLPdWITRXm_YeJI_pEeEh_YUSyyAgf2DHs";
 let randomSelectedUrl = getRandomUrl(urls);
@@ -96,6 +109,25 @@ document.querySelector("._c_Alive").addEventListener("click", function (event) {
   randomSelectedUrl = getRandomUrl(urls);
 
   iframe.src = randomSelectedUrl;
+  console.log("randomSelectedUrl: " + randomSelectedUrl);
+});
+
+document.querySelector("._c_Music-Video-back").addEventListener("click", function () {
+  if (i === 0) {
+    return;
+  }
+  i--;
+  iframe.src = urls[i];
+  console.log("i: " + i + " urls[i]: " + urls[i]);
+});
+
+document.querySelector("._c_Music-Video-forward").addEventListener("click", function () {
+  if (i === urls.length - 1) {
+    return;
+  }
+  i++;
+  iframe.src = urls[i];
+  console.log("i: " + i + " urls[i]: " + urls[i]);
 });
 
 
