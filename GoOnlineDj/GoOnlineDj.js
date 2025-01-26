@@ -126,13 +126,18 @@ document.querySelector("._c_Music-Video-back").addEventListener("click", functio
 });
 
 document.querySelector("._c_Music-Video-forward").addEventListener("click", function () {
-  if (value === urls.length) {
-    return;
-  }
+
   iframe.src = urls[value];
   console.log("value: " + value + " url[value]: " + urls[value]);
+
+  if (value === urls.length - 1) {
+    return;
+  }
+
   value++;
 });
 
-
+// if (value >= urls.length) {
+//   return;
+// }
 
