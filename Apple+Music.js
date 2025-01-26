@@ -8759,8 +8759,6 @@ function buttonClick(value) {
     if (isNaN(value)) {
         // this is not a number
         handleLetter(value);
-
-
     }
     else {
         // this is a number
@@ -8866,6 +8864,8 @@ function updateIframeSrc() {
     const artist = sortedAppleMusic[currentArtistIndex];
     const song = artist.songs[currentSongIndex];
     iframe.src = song.src;
+    a = appleMusic.indexOf(artist);
+    s = artist.songs.indexOf(song);
 }
 
 
