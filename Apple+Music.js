@@ -544,6 +544,16 @@ const appleMusic = [
         ]
     },
     {
+        artist: "BABYMONSTER",
+        birthday: [{ month: "March", day: 20, year: 2002 }, { month: "August", day: 26, year: 2005 }, { month: "April", day: 17, year: 2006 }, { month: "April", day: 11, year: 2007 }, { month: "October", day: 17, year: 2007 } , { month: "August", day: 14, year: 2008 } , { month: "February", day: 17, year: 2009 }],
+        songs: [
+            {
+                title: "Really Like You",
+                src: "https://embed.music.apple.com/us/music-video/really-like-you/1791019849"
+            },
+        ]
+    },
+    {
         artist: "Backstreet Boys",
         birthdays: [
             { month: "August", day: 22, year: 1973 },
@@ -564,6 +574,16 @@ const appleMusic = [
             {
                 title: "Larger Than Life",
                 src: "https://embed.music.apple.com/us/music-video/larger-than-life/580662466"
+            },
+        ]
+    },
+    {
+        artist: "Bankrol Hayden",
+        birthdays: [{ month: "September", day: 30, year: 2001 }],
+        songs: [
+            {
+                title: "Whatchu On Today (feat. Polo G)",
+                src: "https://embed.music.apple.com/us/music-video/whatchu-on-today-feat-polo-g/1530632674"
             },
         ]
     },
@@ -1831,6 +1851,10 @@ const appleMusic = [
                 title: "Zero",
                 src: "https://embed.music.apple.com/us/music-video/zero/1042686643"
             },
+            {
+                title: "Residuals",
+                src: "https://embed.music.apple.com/us/music-video/residuals/1791838447"
+            },
         ]
     },
     {
@@ -1935,6 +1959,16 @@ const appleMusic = [
                 src: "https://embed.music.apple.com/us/music-video/flashy/1712781373"
             }
          
+        ]
+    },
+    {
+        artist: "Claire Rosinkranz",
+        birthday: [{ month: "January", day: 2, year: 2004 }],
+        songs: [
+            {
+                title: "Frankenstein",
+                src: "https://embed.music.apple.com/us/music-video/frankenstein/1567945918"
+            },
         ]
     },
     {
@@ -2178,6 +2212,16 @@ const appleMusic = [
             {
                 title: "I Wanna Know (feat. Daya)",
                 src: "https://embed.music.apple.com/us/music-video/i-wanna-know-feat-daya/1707062873"
+            },
+        ]
+    },
+    {
+        artist: "DDG",
+        birthday: [{ month: "October", day: 10, year: 1997 }],
+        songs: [
+            {
+                title: "9 Lives (feat. Polo G & NLE Choppa)",
+                src: "https://embed.music.apple.com/us/music-video/9-lives-feat-polo-g-nle-choppa/1647664273"
             },
         ]
     },
@@ -2730,7 +2774,11 @@ const appleMusic = [
             {
                 title: "Turn The Streets Up",
                 src: "https://embed.music.apple.com/us/music-video/turn-the-streets-up/1689276430"
-            }
+            },
+            {
+                title: "The Streets",
+                src: "https://embed.music.apple.com/us/music-video/the-streets/1793242153"
+            },
         ]
     },
     {
@@ -3033,6 +3081,16 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Fivio Foreign & Polo G",
+        birthday: [{ month: "March", day: 29, year: 1990 }, { month: "January", day: 6, year: 1999 }],
+        songs: [
+            {
+                title: "Bop It",
+                src: "https://embed.music.apple.com/us/music-video/bop-it/1534812158"
+            },
+        ]
+    },
+    {
         artist: "Flo Rida",
         birthday: [{ month: "September", day: 16, year: 1979 }],
         songs: [
@@ -3150,8 +3208,17 @@ const appleMusic = [
             },
         ]
     },
-
     {
+        artist: "Funk Flex & King Von",
+        birthday: [{ month: "August", day: 5, year: 1968 }, { month: "August", day: 9, year: 1994 }],
+        songs: [
+            {
+                title: "Lurkin (feat. Polo G) [Remix]",
+                src: "https://embed.music.apple.com/us/music-video/lurkin-feat-polo-g-remix/1576745596"
+            },
+        ]
+    },
+    { 
         artist: "Future",
         birthday: [{ month: "November", day: 20, year: 1983 }],
         songs: [
@@ -3463,6 +3530,16 @@ const appleMusic = [
             {
                 title: "Watermelon Sugar",
                 src: "https://embed.music.apple.com/us/music-video/watermelon-sugar/1513630813"
+            },
+        ]
+    },
+    {
+        artist: "Hayes Warner",
+        birthday: [{ month: "July", day: 16, year: 1999 }],
+        songs: [
+            {
+                title: "Oh!",
+                src: "https://embed.music.apple.com/us/music-video/oh/1790240795"
             },
         ]
     },
@@ -4443,6 +4520,16 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Kalin White",
+        birthday: [{ month: "January", day: 4, year: 1995 }],
+        songs: [
+            {
+                title: "Zai Zai",
+                src: "https://embed.music.apple.com/us/music-video/zai-zai/1464075457"
+            },
+        ]
+    },
+    {
         artist: "Kane Brown & Katelyn Brown",
         birthday: [{ month: "October", day: 21, year: 1993 }, { month: "June", day: 19, year: 1992 }],
         songs: [
@@ -5052,6 +5139,10 @@ const appleMusic = [
                 title: "Turn Up A Notch",
                 src: "https://embed.music.apple.com/us/music-video/turn-up-a-notch/1770205924"
             },
+            {
+                title: "3 Headed Goat (feat. Lil Baby & Polo G)",
+                src: "https://embed.music.apple.com/us/music-video/3-headed-goat-feat-lil-baby-polo-g/1580218657"
+            },
         ]
     },
     {
@@ -5436,6 +5527,25 @@ const appleMusic = [
             {
                 title: "Material Girl",
                 src: "https://embed.music.apple.com/us/music-video/material-girl/453875194"
+            },
+        ]
+    },
+    {
+        artist: "Magdalene",
+        songs: [
+            {
+                title: "Radio",
+                src: "https://embed.music.apple.com/us/music-video/radio/1789118477"
+            },
+        ]
+    },
+    {
+        artist: "Mahalia",
+        birthday: [{ month: "May", day: 1, year: 1998 }],
+        songs: [
+            {
+                title: "Pressure Points (feat. Lila Iké)",
+                src: "https://embed.music.apple.com/us/music-video/pressure-points-feat-lila-ik%C3%A9/1793367176"
             },
         ]
     },
@@ -5856,6 +5966,16 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Mike Posner",
+        birthday: [{ month: "February", day: 12, year: 1988 }],
+        songs: [
+            {
+                title: "Is It Just Me?",
+                src: "https://embed.music.apple.com/us/music-video/is-it-just-me/1793659734"
+            },
+        ]
+    },
+    {
         artist: "Mike WiLL Made-It",
         birthday: [{ month: "March", day: 23, year: 1989 }],
         songs: [
@@ -5912,6 +6032,15 @@ const appleMusic = [
             {
                 title: "Younger Now",
                 src: "https://embed.music.apple.com/us/music-video/younger-now/1272955901"
+            },
+        ]
+    },
+    {
+        artist: "MINNIE",
+        songs: [
+            {
+                title: "HER",
+                src: "https://embed.music.apple.com/us/music-video/her/1791710881"
             },
         ]
     },
@@ -5986,6 +6115,16 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Morray",
+        birthday: [{ month: "November", day: 10, year: 1992 }],
+        songs: [
+            {
+                title: "Trenches (feat. Polo G) [Remix]",
+                src: "https://embed.music.apple.com/us/music-video/trenches-feat-polo-g-remix/1578960959"
+            },
+        ]
+    },
+    {
         artist: "Muni Long",
         birthday: [{ month: "September", day: 14, year: 1988 }],
         songs: [
@@ -6002,6 +6141,16 @@ const appleMusic = [
             {
                 title: "Baby Boo",
                 src: "https://embed.music.apple.com/us/music-video/baby-boo/1634022058"
+            },
+        ]
+    },
+    {
+        artist: "Murda Beatz",
+        birthday: [{ month: "February", day: 11, year: 1994 }],
+        songs: [
+            {
+                title: "DOORS UNLOCKED (feat. Ty Dolla $ign & Polo G)",
+                src: "https://embed.music.apple.com/us/music-video/doors-unlocked-feat-ty-dolla-%24ign-polo-g/1529224928"
             },
         ]
     },
@@ -6058,6 +6207,16 @@ const appleMusic = [
             {
                 title: "Express Yourself [Freedom Version]",
                 src: "https://embed.music.apple.com/us/music-video/express-yourself-freedom-version/719774626"
+            },
+        ]
+    },
+    {
+        artist: "Nardo Wick",
+        birthday: [{ month: "December", day: 30, year: 2001 }],
+        songs: [
+            {
+                title: "G Nikes (feat. Polo G)",
+                src: "https://embed.music.apple.com/us/music-video/g-nikes-feat-polo-g/1649841557"
             },
         ]
     },
@@ -6122,6 +6281,15 @@ const appleMusic = [
             {
                 title: "Push Back",
                 src: "https://embed.music.apple.com/us/music-video/push-back/1368093791"
+            },
+        ]
+    },
+    {
+        artist: "NEIKED, Mae Muller & Polo G",
+        songs: [
+            {
+                title: "Better Days",
+                src: "https://embed.music.apple.com/us/music-video/better-days/1588951362"
             },
         ]
     },
@@ -6194,6 +6362,16 @@ const appleMusic = [
             {
                 title: "Right Now",
                 src: "https://embed.music.apple.com/us/music-video/right-now/1752511792"
+            },
+        ]
+    },
+    {
+        artist: "Nickelback",
+        birthday: [{ month: "November", day: 15, year: 1974 }, { month: "March", day: 1, year: 1973 }, { month: "June", day: 25, year: 1972 }, { month: "February", day: 19, year: 1975 }],
+        songs: [
+            {
+                title: "She Keeps Me Up",
+                src: "https://embed.music.apple.com/us/music-video/she-keeps-me-up/1790261841"
             },
         ]
     },
@@ -6280,6 +6458,16 @@ const appleMusic = [
             {
                 title: "Move Ya Body (Edited) [feat. Jabba]",
                 src: "https://embed.music.apple.com/us/music-video/move-ya-body-edited-feat-jabba/1445826368"
+            },
+        ]
+    },
+    {
+        artist: "NLE Choppa",
+        birthday: [{ month: "November", day: 1, year: 2002 }],
+        songs: [
+            {
+                title: "Jumpin (feat. Polo G)",
+                src: "https://embed.music.apple.com/us/music-video/jumpin-feat-polo-g/1593856429"
             },
         ]
     },
@@ -6592,8 +6780,30 @@ const appleMusic = [
         birthday: [{ month: "January", day: 6, year: 1999 }],
         songs: [
             {
-                title: 'Thorns',
+                title: "Thorns",
                 src: "https://embed.music.apple.com/us/music-video/thorns/1781089029"
+            },
+            {
+                title: "Don't Play (feat. Lil Baby)",
+                src: "https://embed.music.apple.com/us/music-video/dont-play-feat-lil-baby/1611454555"
+            },
+            {
+                title: "Start Up Again (feat. Moneybagg Yo)",
+                src: "https://embed.music.apple.com/us/music-video/start-up-again-feat-moneybagg-yo/1607406901"
+            },
+            {
+                title: "GNF (OKOKOK)",
+                src: "https://embed.music.apple.com/us/music-video/gnf-okokok/1553061710"
+            },
+        ]
+    },
+    {
+        artist: "Polo G & Lil Wayne",
+        birthday: [{ month: "January", day: 6, year: 1999 }, { month: "September", day: 27, year: 1982 }],
+        songs: [
+            {
+                title: "GANG GANG",
+                src: "https://embed.music.apple.com/us/music-video/gang-gang/1568562119"
             },
         ]
     },
@@ -6816,6 +7026,16 @@ const appleMusic = [
             {
                 title: "Throw Some D's",
                 src: "https://embed.music.apple.com/us/music-video/throw-some-ds/1446734036"
+            },
+        ]
+    },
+    {
+        artist: "Rich The Kid",
+        birthday: [{ month: "July", day: 13, year: 1992 }],
+        songs: [
+            {
+                title: "Prada (feat. Polo G) [Remix]",
+                src: "https://embed.music.apple.com/us/music-video/prada-feat-polo-g-remix/1711446641"
             },
         ]
     },
@@ -7479,6 +7699,16 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Skilla Baby",
+        birthday: [{ month: "October", day: 2, year: 1998 }],
+        songs: [
+            {
+                title: "Misfit (feat. Polo G)",
+                src: "https://embed.music.apple.com/us/music-video/misfit-feat-polo-g/1758460247"
+            },
+        ]
+    },
+    {
         artist: "Skillibeng",
         birthday: [{ month: "December", day: 23, year: 1996 }],
         songs: [
@@ -7705,6 +7935,10 @@ const appleMusic = [
             {
                 title: "It's ok I'm ok",
                 src: "https://embed.music.apple.com/us/music-video/its-ok-im-ok/1767934738"
+            },
+            {
+                title: "Sports car",
+                src: "https://embed.music.apple.com/us/music-video/sports-car/1792291322"
             },
         ]
     },
@@ -8606,6 +8840,16 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Will Smith & Big Sean",
+        birthday: [{ month: "September", day: 25, year: 1968 }, { month: "March", day: 25, year: 1988 }],
+        songs: [
+            {
+                title: "BEAUTIFUL SCARS (feat. OBanga)",
+                src: "https://embed.music.apple.com/us/music-video/beautiful-scars-feat-obanga/1794090542"
+            },
+        ]
+    },
+    {
         artist: "will.i.am",
         birthday: [{ month: "March", day: 15, year: 1975 }],
         songs: [
@@ -9096,7 +9340,7 @@ let iframe = document.createElement("iframe");
 iframe.className = "random-iframe";
 iframe.src = defaultUrl;
 iframe.quality = "high";
-iframe.allow = "fullscreen; autoplay";
+iframe.allow = "fullscreen; autoplay; encrypted-media";
 iframe.allowfullscreen = true;
 iframe.autoplay = true;
 iframe.width = "100%";
