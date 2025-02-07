@@ -2046,6 +2046,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Critical Records Presents",
+        songs: [
+            {
+                title: "Krack the Gates (feat. Dojia V & Mozzy)",
+                src: "https://embed.music.apple.com/us/music-video/krack-the-gates-feat-dojia-v-mozzy/1640866307"
+            },
+        ]
+    },
+    {
         artist: "Cyndi Lauper",
         birthday: [{ month: "June", day: 22, year: 1953 }],
         songs: [
@@ -2053,6 +2062,15 @@ const appleMusic = [
                 title: "Girls Just Want to Have Fun",
                 src: "https://embed.music.apple.com/us/music-video/girls-just-want-to-have-fun/275614769"
             }
+        ]
+    },
+    {
+        artist: "D3szn",
+        songs: [
+            {
+                title: "Red Rags (feat. YG & Mozzy)",
+                src: "https://embed.music.apple.com/us/music-video/red-rags-feat-yg-mozzy/1647600743"
+            },
         ]
     },
     {
@@ -2082,6 +2100,15 @@ const appleMusic = [
             {
                 title: "What'chu Like",
                 src: "https://embed.music.apple.com/us/music-video/whatchu-like/1536521020"
+            },
+        ]
+    },
+    {
+        artist: "Dame D.O.L.L.A.",
+        songs: [
+            {
+                title: "Right One (feat. Lil Wayne & Mozzy)",
+                src: "https://embed.music.apple.com/us/music-video/right-one-feat-lil-wayne-mozzy/1591074517"
             },
         ]
     },
@@ -2222,6 +2249,14 @@ const appleMusic = [
             {
                 title: "9 Lives (feat. Polo G & NLE Choppa)",
                 src: "https://embed.music.apple.com/us/music-video/9-lives-feat-polo-g-nle-choppa/1647664273"
+            },
+            {
+                title: "I'm Geekin",
+                src: "https://embed.music.apple.com/us/music-video/im-geekin/1683655395"
+            },
+            {
+                title: "I'm Geekin (feat. NLE Choppa & BIA) [Remix - Official Music Video]",
+                src: "https://embed.music.apple.com/us/music-video/im-geekin-feat-nle-choppa-bia-remix-official-music-video/1692967159"
             },
         ]
     },
@@ -2768,6 +2803,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Eric Bellinger",
+        songs: [
+            {
+                title: "Gang Slide (feat. Mozzy)",
+                src: "https://embed.music.apple.com/us/music-video/gang-slide-feat-mozzy/1744391205"
+            }
+        ]
+    },
+    {
         artist: "EST Gee",
         birthday: [{ month: "May", day: 11, year: 1994 }],
         songs: [
@@ -3091,6 +3135,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Flau'jae & NLE Choppa",
+        songs: [
+            {
+                title: "AMF",
+                src: "https://embed.music.apple.com/us/music-video/amf/1738049648"
+            },
+        ]
+    },
+    {
         artist: "Flo Rida",
         birthday: [{ month: "September", day: 16, year: 1979 }],
         songs: [
@@ -3195,6 +3248,15 @@ const appleMusic = [
             {
                 title: "To the Moon",
                 src: "https://embed.music.apple.com/us/music-video/to-the-moon/1755779296"
+            },
+        ]
+    },
+    {
+        artist: "Fresco Trey",
+        songs: [
+            {
+                title: "Passenger Princess (feat. NLE Choppa)",
+                src: "https://embed.music.apple.com/us/music-video/passenger-princess-feat-nle-choppa/1716795289"
             },
         ]
     },
@@ -3769,11 +3831,29 @@ const appleMusic = [
         ]
     },
     {
+        artist: "J.P. & NLE Choppa",
+        songs: [
+            {
+                title: "Bad Bitty (Remix)",
+                src: "https://embed.music.apple.com/us/music-video/bad-bitty-remix/1760165199"
+            },
+        ]
+    },
+    {
         artist: "J.R. & Trey Songz",
         songs: [
             {
                 title: "Best Friend (feat. Trey Songz)",
                 src: "https://embed.music.apple.com/us/music-video/best-friend-feat-trey-songz/1134695803"
+            },
+        ]
+    },
+    {
+        artist: "J. Stone",
+        songs: [
+            {
+                title: "Flowers Now (feat. Mozzy)",
+                src: "https://embed.music.apple.com/us/music-video/flowers-now-feat-mozzy/1648293144"
             },
         ]
     },
@@ -5471,6 +5551,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "M1llionz",
+        songs: [
+            {
+                title: "RS11 (feat. Mozzy)",
+                src: "https://embed.music.apple.com/us/music-video/rs11-feat-mozzy/1772302695"
+            },
+        ]
+    },
+    {
         artist: "Mabel",
         birthday: [{ month: "February", day: 19, year: 1996 }],
         songs: [
@@ -5568,6 +5657,50 @@ const appleMusic = [
             {
                 title: "Wait a Minute",
                 src: "https://embed.music.apple.com/us/music-video/wait-a-minute/1486263252"
+            },
+        ]
+    },
+    {
+        artist: "Malie Donn",
+        songs: [
+            {
+                title: "High Roller",
+                src: "https://embed.music.apple.com/us/music-video/high-roller/1770639019"
+            },
+            {
+                title: "Anything Yo Like",
+                src: "https://embed.music.apple.com/us/music-video/anything-yo-like/1734659247"
+            },
+            {
+                title: "Rifle Power",
+                src: "https://embed.music.apple.com/us/music-video/rifle-power/1641601507"
+            },
+        ]
+    },
+    {
+        artist: "Malie Donn, DJ Mac & CrashDummy",
+        songs: [
+            {
+                title: "Nuh Regular",
+                src: "https://embed.music.apple.com/us/music-video/nuh-regular/1756779766"
+            },
+        ]
+    },
+    {
+        artist: "Malie Donn & Grim YG",
+        songs: [
+            {
+                title: "Banga",
+                src: "https://embed.music.apple.com/us/music-video/banga/1773751837"
+            },
+        ]
+    },
+    {
+        artist: "Malie Donn, Rajev Caution & Thagging",
+        songs: [
+            {
+                title: "Ritzy",
+                src: "https://embed.music.apple.com/us/music-video/ritzy/1753775314"
             },
         ]
     },
@@ -6077,6 +6210,16 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Molly Brazy",
+        birthday: [{ month: "February", day: 22, year: 1999 }],
+        songs: [
+            {
+                title: "Boss Up (feat. Mozzy)",
+                src: "https://embed.music.apple.com/us/music-video/boss-up-feat-mozzy/1711892068"
+            },
+        ]
+    },
+    {
         artist: "Moneybagg Yo",
         birthday: [{ month: "September", day: 22, year: 1991 }],
         songs: [
@@ -6121,6 +6264,43 @@ const appleMusic = [
             {
                 title: "Trenches (feat. Polo G) [Remix]",
                 src: "https://embed.music.apple.com/us/music-video/trenches-feat-polo-g-remix/1578960959"
+            },
+        ]
+    },
+    {
+        artist: "Mozzy",
+        birthday: [{ month: "June", day: 24, year: 1987 }],
+        songs: [
+            {
+                title: "WE ACTIVE (feat. YFN Lucci)",
+                src: "https://embed.music.apple.com/us/music-video/we-active-feat-yfn-lucci/1681173227"
+            },
+        ]
+    },
+    {
+        artist: "Mozzy & Baby Money",
+        songs: [
+            {
+                title: "Every Night",
+                src: "https://embed.music.apple.com/us/music-video/every-night/1668003897"
+            },
+        ]
+    },
+    {
+        artist: "Mozzy, 2 Chainz & Saweetie",
+        songs: [
+            {
+                title: "In My Face (feat. YG)",
+                src: "https://embed.music.apple.com/us/music-video/in-my-face-feat-yg/1635199327"
+            },
+        ]
+    },
+    {
+        artist: "Mozzy, Dcmbr & Yhung T.O.",
+        songs: [
+            {
+                title: "Excuse Me (feat. Too $hort)",
+                src: "https://embed.music.apple.com/us/music-video/excuse-me-feat-too-%24hort/1439252027"
             },
         ]
     },
@@ -6468,6 +6648,52 @@ const appleMusic = [
             {
                 title: "Jumpin (feat. Polo G)",
                 src: "https://embed.music.apple.com/us/music-video/jumpin-feat-polo-g/1593856429"
+            },
+            {
+                title: "Stickin And Movin",
+                src: "https://embed.music.apple.com/us/music-video/stickin-and-movin/1746201475"
+            },
+            {
+                title: "SLUT ME OUT 2",
+                src: "https://embed.music.apple.com/us/music-video/slut-me-out-2/1740828976"
+            },
+            {
+                title: "MO UP FRONT",
+                src: "https://embed.music.apple.com/us/music-video/mo-up-front/1677516786"
+            },
+            {
+                title: "CHAMPIONS",
+                src: "https://embed.music.apple.com/us/music-video/champions/1690301910"
+            },
+            {
+                title: "I Like",
+                src: "https://embed.music.apple.com/us/music-video/i-like/1658667482"
+            },
+            {
+                title: "Ice Spice",
+                src: "https://embed.music.apple.com/us/music-video/ice-spice/1653686280"
+            },
+            {
+                title: "Yak Flow",
+                src: "https://embed.music.apple.com/us/music-video/yak-flow/1617872801"
+            },
+        ]
+    },
+    {
+        artist: "NLE Choppa, 41 & Kyle Richh",
+        songs: [
+            {
+                title: "Or What",
+                src: "https://embed.music.apple.com/us/music-video/or-what/1767583226"
+            },
+        ]
+    },
+    {
+        artist: "NLE Choppa & Rick Ross",
+        songs: [
+            {
+                title: "COLD GAME",
+                src: "https://embed.music.apple.com/us/music-video/cold-game/1692864449"
             },
         ]
     },
@@ -6991,6 +7217,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Ray Vaughn",
+        songs: [
+            {
+                title: "FNBM (feat. NLE Choppa)",
+                src: "https://embed.music.apple.com/us/music-video/fnbm-feat-nle-choppa/1769267810"
+            },
+        ]
+    },
+    {
         artist: "RDGLDGRN",
         songs: [
             {
@@ -7397,6 +7632,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "ScarLip",
+        songs: [
+            {
+                title: "Blick (Remix) [feat. NLE Choppa]",
+                src: "https://embed.music.apple.com/us/music-video/blick-remix-feat-nle-choppa/1724233184"
+            },
+        ]
+    },
+    {
         artist: "ScHoolboy Q",
         birthday: [{ month: "October", day: 26, year: 1986 }],
         songs: [
@@ -7758,6 +8002,10 @@ const appleMusic = [
                 title: "Sensual Seduction",
                 src: "https://embed.music.apple.com/us/music-video/sensual-seduction/1445834159"
             },
+            {
+                title: "Gang Signs (feat. Mozzy)",
+                src: "https://embed.music.apple.com/us/music-video/gang-signs-feat-mozzy/1566179348"
+            },
         ]
     },
     {
@@ -7829,6 +8077,15 @@ const appleMusic = [
             {
                 title: "Senseless",
                 src: "https://embed.music.apple.com/us/music-video/senseless/1399236247"
+            },
+        ]
+    },
+    {
+        artist: "Stunna Girl",
+        songs: [
+            {
+                title: "Wake Dis Shit Up (feat. Mozzy)",
+                src: "https://embed.music.apple.com/us/music-video/wake-dis-shit-up-feat-mozzy/1706414643"
             },
         ]
     },
@@ -8933,11 +9190,44 @@ const appleMusic = [
         ]
     },
     {
+        artist: "YG & Mozzy",
+        birthday: [{ month: "March", day: 9, year: 1990 }, { month: "June", day: 24, year: 1987 }],
+        songs: [
+            {
+                title: "Vibe With You (feat. Ty Dolla $ign)",
+                src: "https://embed.music.apple.com/us/music-video/vibe-with-you-feat-ty-dolla-%24ign/1572503966"
+            },
+            {
+                title: "Bompton to Oak Park",
+                src: "https://embed.music.apple.com/us/music-video/bompton-to-oak-park/1564290834"
+            },
+        ]
+    },
+    {
+        artist: "YG, Mozzy & Blxst",
+        birthday: [{ month: "March", day: 9, year: 1990 }, { month: "June", day: 24, year: 1987 }, { month: "September", day: 17, year: 1992 }],
+        songs: [
+            {
+                title: "Perfect Timing",
+                src: "https://embed.music.apple.com/us/music-video/perfect-timing/1565823538"
+            },
+        ]
+    },
+    {
         artist: "Ying Yang Twins",
         songs: [
             {
                 title: "Wait (The Whisper Song)",
                 src: "https://embed.music.apple.com/us/music-video/wait-the-whisper-song/299412103"
+            },
+        ]
+    },
+    {
+        artist: "YNW BSlime",
+        songs: [
+            {
+                title: "Citi Trends (feat. NLE Choppa)",
+                src: "https://embed.music.apple.com/us/music-video/citi-trends-feat-nle-choppa/1590597364"
             },
         ]
     },
@@ -9122,6 +9412,10 @@ const appleMusic = [
                 title: "Winter Baby / New Jersey Blues",
                 src: "https://embed.music.apple.com/us/music-video/winter-baby-new-jersey-blues/1772887065"
             },
+            {
+                title: "Lose My Cool (feat. NLE Choppa)",
+                src: "https://embed.music.apple.com/us/music-video/lose-my-cool-feat-nle-choppa/1598606064"
+            },
         ]
     },
     {
@@ -9236,6 +9530,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "450 & NLE Choppa",
+        songs: [
+            {
+                title: "Bad Gyal Remix",
+                src: "https://embed.music.apple.com/us/music-video/bad-gyal-remix/1751836044"
+            },
+        ]
+    },
+    {
         artist: "4batz & Lil Baby",
         birthday: [{ month: "November", day: 5, year: 2003 }, { month: "December", day: 3, year: 1994 }],
         songs: [
@@ -9244,7 +9547,7 @@ const appleMusic = [
                 src: "https://embed.music.apple.com/us/music-video/roll-da-dice/1770533767"
             },
         ]
-    },
+    },  
     {
         artist: "50 Cent",
         birthday: [{ month: "July", day: 6, year: 1975 }],
