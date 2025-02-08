@@ -614,10 +614,6 @@ const appleMusic = [
                 src: "https://embed.music.apple.com/us/music-video/feel-something/1476307294"
             },
             {
-                title: "forever is a lie",
-                src: "https://embed.music.apple.com/us/music-video/forever-is-a-lie/1539911696"
-            },
-            {
                 title: "gauche",
                 src: "https://embed.music.apple.com/us/music-video/gauche/1707111662"
             },
