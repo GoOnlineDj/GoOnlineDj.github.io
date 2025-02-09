@@ -10120,7 +10120,7 @@ musicRefresh.forEach(x => x.addEventListener("click", () => {
 const FINDtxt = document.querySelectorAll("._c_FINDtxt");
 FINDtxt.forEach(x => x.addEventListener("click", () => {
     clearInterval(autoLoadInterval);
-    window.open("https://goonlinedj.github.io/FINDtxt/FINDtxt.html");
+    window.location.href = "https://goonlinedj.github.io/FINDtxt/FINDtxt.html";
 }));
 
 const musicBack = document.querySelectorAll("._c_Apple-Music-back");
