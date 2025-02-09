@@ -1484,6 +1484,19 @@ const appleMusic = [
                 title: "Put Your Hands Where My Eyes Could See",
                 src: "https://embed.music.apple.com/us/music-video/put-your-hands-where-my-eyes-could-see/560984540"
             },
+            {
+                title: "Girlfriend (feat. Vybz Kartel & Tory Lanez) [Extended Version]",
+                src: "https://embed.music.apple.com/us/music-video/girlfriend-feat-vybz-kartel-tory-lanez-extended-version/1291531905"
+            },
+        ]
+    },
+    {
+        artist: "Byrd Gang, Jim Jones & Capella Grey", 
+        songs: [
+            {
+                title: "FaceTime (feat. Dyce Payso & DramaB2R)",
+                src: "https://embed.music.apple.com/us/music-video/facetime-feat-dyce-payso-dramab2r/1695586407"
+            },
         ]
     },
     {
@@ -1546,6 +1559,18 @@ const appleMusic = [
             {
                 title: "What Means the World to You",
                 src: "https://embed.music.apple.com/us/music-video/what-means-the-world-to-you/958613036"
+            },
+            {
+                title: "Medellin",
+                src: "https://embed.music.apple.com/us/music-video/medellin/1516003415"
+            },
+            {
+                title: "Oh Boy",
+                src: "https://embed.music.apple.com/us/music-video/oh-boy/1445733922"
+            },
+            {
+                title: "Let Me Know",
+                src: "https://embed.music.apple.com/us/music-video/let-me-know/311609664"
             },
         ]
     },
@@ -1850,6 +1875,10 @@ const appleMusic = [
             {
                 title: "Residuals",
                 src: "https://embed.music.apple.com/us/music-video/residuals/1791838447"
+            },
+            {
+                title: "Run It! (feat. Juelz Santana)",
+                src: "https://embed.music.apple.com/us/music-video/run-it-feat-juelz-santana/1355846929"
             },
         ]
     },
@@ -2715,6 +2744,33 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Dunw3ll & Vybz Kartel",
+        songs: [
+            {
+                title: "Amazing (feat. Stefflon Don)",
+                src: "https://embed.music.apple.com/us/music-video/amazing-feat-stefflon-don/1653135672"
+            },
+        ]
+    },
+    {
+        artist: "Dyce Payso",
+        songs: [
+            {
+                title: "Bling Bling (feat. Jim Jones)",
+                src: "https://embed.music.apple.com/us/music-video/bling-bling-feat-jim-jones/1659108999"
+            },
+        ]
+    },
+    {
+        artist: "Dyce Payso, Jim Jones & Keen Streetz",
+        songs: [
+            {
+                title: "Go Girl",
+                src: "https://embed.music.apple.com/us/music-video/go-girl/1630405313"
+            },
+        ]
+    },
+    {
         artist: "E-40",
         birthday: [{ month: "November", day: 15, year: 1967 }],
         songs: [
@@ -3224,6 +3280,14 @@ const appleMusic = [
                 title: "Shot Caller (feat. Charlie Rock)",
                 src: "https://embed.music.apple.com/us/music-video/shot-caller-feat-charlie-rock/1445838671"
             },
+            {
+                title: "Too Late (feat. Jim Jones)",
+                src: "https://embed.music.apple.com/us/music-video/too-late-feat-jim-jones/1547915502"
+            },
+            {
+                title: "Pardon My Thoughts (feat. Dave East)",
+                src: "https://embed.music.apple.com/us/music-video/pardon-my-thoughts-feat-dave-east/1544018013"
+            },
         ]
     },
     {
@@ -3304,6 +3368,10 @@ const appleMusic = [
             {
                 title: "TOO FAST",
                 src: "https://embed.music.apple.com/us/music-video/too-fast/1769246597"
+            },
+            {
+                title: "100 Shooters (feat. Meek Mill & Doe Boy)",
+                src: "https://embed.music.apple.com/us/music-video/100-shooters-feat-meek-mill-doe-boy/1477401481"
             },
         ]
     },
@@ -3419,6 +3487,10 @@ const appleMusic = [
             {
                 title: "Spotlight (feat. Usher)",
                 src: "https://embed.music.apple.com/us/music-video/spotlight-feat-usher/339603639"
+            },
+            {
+                title: "Pissy (feat. Roddy Ricch, Nardo Wick)",
+                src: "https://embed.music.apple.com/us/music-video/pissy-feat-roddy-ricch-nardo-wick/1685383661"
             },
         ]
     },
@@ -3642,6 +3714,19 @@ const appleMusic = [
             {
                 title: "When I Hustle",
                 src: "https://embed.music.apple.com/us/music-video/when-i-hustle/349992285"
+            },
+        ]
+    },
+    {
+        artist: "IAMJOSHSTONE",
+        songs: [
+            {
+                title: "Drip Sauce Swag (feat. Juelz Santana)",
+                src: "https://embed.music.apple.com/us/music-video/drip-sauce-swag-feat-juelz-santana/1555553684"
+            },
+            {
+                title: "Magic (feat. Jim Jones, Rose & Pnb Relly)",
+                src: "https://embed.music.apple.com/us/music-video/magic-feat-jim-jones-rose-pnb-relly/1591629843"
             },
         ]
     },
@@ -4128,6 +4213,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Jazzy T",
+        songs: [
+            {
+                title: "Moneyholic (feat. Raneson & Vybz Kartel)",
+                src: "https://embed.music.apple.com/us/music-video/moneyholic-feat-raneson-vybz-kartel/1471606335"
+            },
+        ]
+    },
+    {
         artist: "JCY",
         songs: [
             {
@@ -4276,6 +4370,34 @@ const appleMusic = [
                 title: "A Monster Made It",
                 src: "https://embed.music.apple.com/us/music-video/a-monster-made-it/1560365398"
             },
+            {
+                title: "Election (feat. Marc Scibilia & Juelz Santana)",
+                src: "https://embed.music.apple.com/us/music-video/election-feat-marc-scibilia-juelz-santana/1548027961"
+            },
+            {
+                title: "Wish List (feat. Tommyboyfame)",
+                src: "https://embed.music.apple.com/us/music-video/wish-list-feat-tommyboyfame/1660169231"
+            },
+            {
+                title: "Fit Lit (Betty White) [feat. Dave East, Maino & Fabolous]",
+                src: "https://embed.music.apple.com/us/music-video/fit-lit-betty-white-feat-dave-east-maino-fabolous/1616930190"
+            },
+            {
+                title: "MMTC (feat. Vado & Rain910)",
+                src: "https://embed.music.apple.com/us/music-video/mmtc-feat-vado-rain910/1551371538"
+            },
+            {
+                title: "Bad Boyz (feat. Axel Leon, Nino Man & Fred the Godson)",
+                src: "https://embed.music.apple.com/us/music-video/bad-boyz-feat-axel-leon-nino-man-fred-the-godson/1550339382"
+            },
+            {
+                title: "Love of the Hustle (feat. Trav)",
+                src: "https://embed.music.apple.com/us/music-video/love-of-the-hustle-feat-trav/1502294868"
+            },
+            {
+                title: "State of the Union (feat. Rick Ross & Marc Scibilia)",
+                src: "https://embed.music.apple.com/us/music-video/state-of-the-union-feat-rick-ross-marc-scibilia/1483272237"
+            },
         ]
     },
     {
@@ -4286,6 +4408,20 @@ const appleMusic = [
                 title: "Bada Bing (feat. French Montana)",
                 src: "https://embed.music.apple.com/us/music-video/bada-bing-feat-french-montana/1556723846"
             },
+            {
+                title: "Say A Prayer (feat. Curren$y & Jay Worthy)",
+                src: "https://embed.music.apple.com/us/music-video/say-a-prayer-feat-curren%24y-jay-worthy/1570650558"
+            },
+        ]
+    },
+    {
+        artist: "Jim Jones & Hitmaka",
+        birthday: [{ month: "July", day: 15, year: 1976 }, { month: "September", day: 9, year: 1985 }],
+        songs: [
+            {
+                title: "Status Update (feat. Goldiie)",
+                src: "https://embed.music.apple.com/us/music-video/status-update-feat-goldiie/1649399972"
+            },
         ]
     },
     {
@@ -4295,6 +4431,42 @@ const appleMusic = [
             {
                 title: "Pop Champagne (feat. Juelz Santana)",
                 src: "https://embed.music.apple.com/us/music-video/pop-champagne-feat-juelz-santana/297603450"
+            },
+        ]
+    },
+    {
+        artist: "Jim Jones, Dilla illa & 34Zeussy",
+        songs: [
+            {
+                title: "Really Cold",
+                src: "https://embed.music.apple.com/us/music-video/really-cold/1660648274"
+            },
+        ]
+    },
+    {
+        artist: "Jim Jones, Ditta, Lord Ju & OnPointLikeOP",
+        songs: [
+            {
+                title: "Big Gifts",
+                src: "https://embed.music.apple.com/us/music-video/big-gifts/1662617552"
+            },
+        ]
+    },
+    {
+        artist: "Jim Jones, Dyce Payso, Mr.Chicken & Ditta",
+        songs: [
+            {
+                title: "Everything",
+                src: "https://embed.music.apple.com/us/music-video/everything/1660648326"
+            },
+        ]
+    },
+    {
+        artist: "Jim Jones, The Real Ace HT & Brand HT",
+        songs: [
+            {
+                title: "Xmas Carol",
+                src: "https://embed.music.apple.com/us/music-video/xmas-carol/1661688407"
             },
         ]
     },
@@ -4417,6 +4589,43 @@ const appleMusic = [
                 title: "Heavy (feat. The Game)",
                 src: "https://embed.music.apple.com/us/music-video/heavy-feat-the-game/1689508984"
             },
+        ]
+    },
+    {
+        artist: "Juelz Santana",
+        birthday: [{ month: "February", day: 18, year: 1982 }],
+        songs: [
+            {
+                title: "Dipset (Santana's Town) [feat. Cam'ron]",
+                src: "https://embed.music.apple.com/us/music-video/dipset-santanas-town-feat-camron/1691849685"
+            },
+            {
+                title: "Friendly (feat. A Boogie wit da Hoodie)",
+                src: "https://embed.music.apple.com/us/music-video/friendly-feat-a-boogie-wit-da-hoodie/1757646866"
+            },
+            {
+                title: "Clockwork (Edited Version)",
+                src: "https://embed.music.apple.com/us/music-video/clockwork-edited-version/1445852273"
+            },
+            {
+                title: "Mic Check",
+                src: "https://embed.music.apple.com/us/music-video/mic-check/1691867015"
+            },
+            {
+                title: "Rain Drops",
+                src: "https://embed.music.apple.com/us/music-video/rain-drops/1446731631"
+            },
+        ]
+    },
+    {
+        artist: "Juelz Santana & Jadakiss",
+        birthday: [{ month: "February", day: 18, year: 1982 } , { month: "May", day: 27, year: 1975 }],
+        songs: [
+            {
+                title: "Party N B******t",
+                src: "https://embed.music.apple.com/us/music-video/party-n-b-t/1753337206"
+            },
+          
         ]
     },
     {
@@ -4899,6 +5108,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Kim Kelly",
+        songs: [
+            {
+                title: "Alive (feat. Vybz Kartel)",
+                src: "https://embed.music.apple.com/us/music-video/alive-feat-vybz-kartel/1661021102"
+            },
+        ]
+    },
+    {
         artist: "Kim Petras & Nicki Minaj",
         birthday: [{ month: "August", day: 27, year: 1992 }, { month: "December", day: 8, year: 1982 }],
         songs: [
@@ -5190,6 +5408,7 @@ const appleMusic = [
     },
     {
         artist: "Lil Baby & Gunna",
+        birthday: [{ month: "December", day: 3, year: 1994 }, { month: "June", day: 14, year: 1993 }],
         songs: [
             {
                 title: "Heatin Up",
@@ -5204,6 +5423,25 @@ const appleMusic = [
             {
                 title: "On Me (Remix)",
                 src: "https://embed.music.apple.com/us/music-video/on-me-remix/1564812944"
+            },
+        ]
+    },
+    {
+        artist: "Lil Baby & Nardo Wick",
+        birthday: [{ month: "December", day: 3, year: 1994 } , { month: "December", day: 30, year: 2001 }],
+        songs: [
+            {
+                title: "Pop Out",
+                src: "https://embed.music.apple.com/us/music-video/pop-out/1656111472"
+            },
+        ]
+    },
+    {
+        artist: "Lil Darius, Tay Keith & Nardo Wick",
+        songs: [
+            {
+                title: "Lamborghini Boys (with Tay Keith and Nardo Wick)",
+                src: "https://embed.music.apple.com/us/music-video/lamborghini-boys-with-tay-keith-and-nardo-wick/1702074523"
             },
         ]
     },
@@ -5750,6 +5988,10 @@ const appleMusic = [
                 title: "With You",
                 src: "https://embed.music.apple.com/us/music-video/with-you/1438614543"
             },
+            {
+                title: "Triumphant (Get 'Em) [feat. Rick Ross & Meek Mill]",
+                src: "https://embed.music.apple.com/us/music-video/triumphant-get-em-feat-rick-ross-meek-mill/1446004608"
+            },
         ]
     },
     {
@@ -5885,6 +6127,14 @@ const appleMusic = [
             {
                 title: "CYBER TRUCK",
                 src: "https://embed.music.apple.com/us/music-video/cyber-truck/1771084661"
+            },
+            {
+                title: "Middle of It (feat. Vory)",
+                src: "https://embed.music.apple.com/us/music-video/middle-of-it-feat-vory/1544096192"
+            },
+            {
+                title: "Pain Away (feat. Lil Durk)",
+                src: "https://embed.music.apple.com/us/music-video/pain-away-feat-lil-durk/1543186692"
             },
         ]
     },
@@ -6216,6 +6466,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Mooga Ma$e",
+        songs: [
+            {
+                title: "Pressure (feat. Jim jones , Shyst vader & Shineboy double)",
+                src: "https://embed.music.apple.com/us/music-video/pressure-feat-jim-jones-shyst-vader-shineboy-double/1656562302"
+            },
+        ]
+    },
+    {
         artist: "Moneybagg Yo",
         birthday: [{ month: "September", day: 22, year: 1991 }],
         songs: [
@@ -6393,6 +6652,30 @@ const appleMusic = [
             {
                 title: "G Nikes (feat. Polo G)",
                 src: "https://embed.music.apple.com/us/music-video/g-nikes-feat-polo-g/1649841557"
+            },
+            {
+                title: "I Wonder",
+                src: "https://embed.music.apple.com/us/music-video/i-wonder/1793858590"
+            },
+            {
+                title: "Wickstyle (Official Video)",
+                src: "https://embed.music.apple.com/us/music-video/wickstyle-official-video/1735060578"
+            },
+            {
+                title: "Somethin' (feat. Sexyy Red)",
+                src: "https://embed.music.apple.com/us/music-video/somethin-feat-sexyy-red/1729889283"
+            },
+            {
+                title: "Hot Boy (feat. Lil Baby)",
+                src: "https://embed.music.apple.com/us/music-video/hot-boy-feat-lil-baby/1679875174"
+            },
+            {
+                title: "Burning Up (feat. The Kid LAROI)",
+                src: "https://embed.music.apple.com/us/music-video/burning-up-feat-the-kid-laroi/1637948175"
+            },
+            {
+                title: "Me or Sum (feat. Future & Lil Baby)",
+                src: "https://embed.music.apple.com/us/music-video/me-or-sum-feat-future-lil-baby/1608110747"
             },
         ]
     },
@@ -6803,6 +7086,15 @@ const appleMusic = [
             {
                 title: "What Makes You Beautiful",
                 src: "https://embed.music.apple.com/us/music-video/what-makes-you-beautiful/459227180"
+            },
+        ]
+    },
+    {
+        artist: "OT The Real", 
+        songs: [
+            {
+                title: "Connected (feat. Jim Jones)",
+                src: "https://embed.music.apple.com/us/music-video/connected-feat-jim-jones/1596196499"
             },
         ]
     },
@@ -7251,6 +7543,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Red Mcfly",
+        songs: [
+            {
+                title: "No Exceptions (feat. Juelz Santana)",
+                src: "https://embed.music.apple.com/us/music-video/no-exceptions-feat-juelz-santana/1737608317"
+            },
+        ]
+    },
+    {
         artist: "Rich Boy featuring Polow Da Don",
         birthday: [{ month: "September", day: 2, year: 1983 }, { month: "October", day: 15, year: 1977 }],
         songs: [
@@ -7340,6 +7641,10 @@ const appleMusic = [
             {
                 title: 'Wiggle (feat. DreamDoll)',
                 src: 'https://embed.music.apple.com/us/music-video/wiggle-feat-dreamdoll/1604672534'
+            },
+            {
+                title: "Lamborghini Doors (feat. Meek Mill & Anthony Hamilton)",
+                src: "https://embed.music.apple.com/us/music-video/lamborghini-doors-feat-meek-mill-anthony-hamilton/1277945867"
             },
         ]
     },
@@ -7916,16 +8221,6 @@ const appleMusic = [
         ]
     },
     {
-        artist: "Sisqó",
-        birthday: [{ month: "November", day: 9, year: 1978 }],
-        songs: [
-            {
-                title: "Thong Song (Edited Version)",
-                src: "https://embed.music.apple.com/us/music-video/thong-song-edited-version/1445826589"
-            },
-        ]
-    },
-    {
         artist: "SISTAR",
         songs: [
             {
@@ -7935,6 +8230,25 @@ const appleMusic = [
             {
                 title: "Touch My Body",
                 src: "https://embed.music.apple.com/us/music-video/touch-my-body/905014641"
+            },
+        ]
+    },
+    {
+        artist: "Sigdatrig",
+        songs: [
+            {
+                title: "Habits (feat. Jim Jones & T'Juan TMK)",
+                src: "https://embed.music.apple.com/us/music-video/habits-feat-jim-jones-tjuan-tmk/1688045118"
+            },
+        ]
+    },
+    {
+        artist: "Sisqó",
+        birthday: [{ month: "November", day: 9, year: 1978 }],
+        songs: [
+            {
+                title: "Thong Song (Edited Version)",
+                src: "https://embed.music.apple.com/us/music-video/thong-song-edited-version/1445826589"
             },
         ]
     },
@@ -7960,6 +8274,10 @@ const appleMusic = [
                 title: "Patience (feat. TrackOne)",
                 src: "https://embed.music.apple.com/us/music-video/patience-feat-trackone/1590666427"
             },
+            {
+                title: "16CHOPPA (feat. Nardo Wick)",
+                src: "https://embed.music.apple.com/us/music-video/16choppa-feat-nardo-wick/1667686375"
+            },
         ]
     },
     {
@@ -7983,6 +8301,15 @@ const appleMusic = [
             {
                 title: "I Run",
                 src: "https://embed.music.apple.com/us/music-video/i-run/303540834"
+            },
+        ]
+    },
+    {
+        artist: "SNS", 
+        songs: [
+            {
+                title: "Dougie (feat. Jim Jones)",
+                src: "https://embed.music.apple.com/us/music-video/dougie-feat-jim-jones/1538013661"
             },
         ]
     },
@@ -8096,6 +8423,16 @@ const appleMusic = [
             {
                 title: "Heart Of A Woman",
                 src: "https://embed.music.apple.com/us/music-video/heart-of-a-woman/1789010906"
+            },
+        ]
+    },
+    {
+        artist: "Swizz Beatz",
+        birthday: [{ month: "September", day: 13, year: 1978 }], 
+        songs: [
+            {
+                title: "Preach (feat. Jim Jones)",
+                src: "https://embed.music.apple.com/us/music-video/preach-feat-jim-jones/1438790622"
             },
         ]
     },
@@ -8384,6 +8721,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "The Diplomats",
+        songs: [
+            {
+                title: "Dipset Anthem (feat. Cam'ron & Juelz Santana)",
+                src: "https://embed.music.apple.com/us/music-video/dipset-anthem-feat-camron-juelz-santana/1698618940"
+            },
+        ]
+    },
+    {
         artist: "The Game",
         birthday: [{ month: "November", day: 29, year: 1979 }],
         songs: [
@@ -8508,6 +8854,16 @@ const appleMusic = [
             {
                 title: "Slow It Down (feat. Fabolous)",
                 src: "https://embed.music.apple.com/us/music-video/slow-it-down-feat-fabolous/1444340949"
+            },
+        ]
+    },
+    {
+        artist: "The-Dream, Fabolous, Juelz Santana, Rick Ross & Ludacris ",
+        birthday: [{ month: "September", day: 20, year: 1977 } , { month: "November", day: 18, year: 1977 }, { month: "February", day: 18, year: 1982 }, { month: "January", day: 28, year: 1976 }, { month: "September", day: 11, year: 1977 }],
+        songs: [
+            {
+                title: "Rockin' That Thang (Rap Remix)",
+                src: "https://embed.music.apple.com/us/music-video/rockin-that-thang-rap-remix/1446735613"
             },
         ]
     },
@@ -8683,6 +9039,16 @@ const appleMusic = [
             {
                 title: "Unbreakable Smile",
                 src: "https://embed.music.apple.com/us/music-video/unbreakable-smile/1444899798"
+            },
+        ]
+    },
+    {
+        artist: "Tory Lanez",
+        birthday: [{ month: "July", day: 27, year: 1992 }],
+        songs: [
+            {
+                title: "DrIP DrIp Drip (feat. Meek Mill)",
+                src: "https://embed.music.apple.com/us/music-video/drip-drip-drip-feat-meek-mill/1439489747"
             },
         ]
     },
@@ -9069,6 +9435,42 @@ const appleMusic = [
             {
                 title: "SOS (Sex on Sight) [Visualizer]",
                 src: "https://embed.music.apple.com/us/music-video/sos-sex-on-sight-visualizer/1766595932"
+            },
+        ]
+    },
+    {
+        artist: "Vybz Kartel",
+        birthday: [{ month: "January", day: 7, year: 1976 }],
+        songs: [
+            {
+                title: "Str8 Vybz",
+                src: "https://embed.music.apple.com/us/music-video/str8-vybz/1789719410"
+            },
+            {
+                title: "Ramp Ruff",
+                src: "https://embed.music.apple.com/us/music-video/ramp-ruff/1631360377"
+            },
+            {
+                title: "Thickiana",
+                src: "https://embed.music.apple.com/us/music-video/thickiana/1514194705"
+            },
+            {
+                title: "Up Top Gaza",
+                src: "https://embed.music.apple.com/us/music-video/up-top-gaza/1507855633"
+            },
+            {
+                title: "Go Go Wine",
+                src: "https://embed.music.apple.com/us/music-video/go-go-wine/1529858643"
+            },
+        ]
+    },
+    {
+        artist: "Vybz Kartel & Likkle Vybz",
+        birthday: [{ month: "January", day: 7, year: 1976 } , { month: "April", day: 18, year: 2003 }],
+        songs: [
+            {
+                title: "Lemonade",
+                src: "https://embed.music.apple.com/us/music-video/lemonade/1786393858"
             },
         ]
     },
