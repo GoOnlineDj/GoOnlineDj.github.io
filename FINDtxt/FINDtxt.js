@@ -1,40 +1,11 @@
-// const appleMusic = document.querySelector("apple-music-container");
-
-// appleMusic.addEventListener("load", function () {
-//   alert("Apple Music is loaded");
-// });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const iframes = document.querySelectorAll("iframe[data-src]");
-//   let currentIndex = 0;
-
-//   function loadIframes() {
-//     const batchSize = 1;
-//     for (
-//       let i = currentIndex;
-//       i < currentIndex + batchSize && i < iframes.length;
-//       i++
-//     ) {
-//       const iframe = iframes[i];
-//       iframe.src = iframe.getAttribute("data-src");
-//     }
-//     currentIndex += batchSize;
-//   }
-
-//   // Load iframes every ? seconds
-//   setInterval(() => {
-//     if (currentIndex < iframes.length) {
-//       loadIframes();
-//     }
-//   }, 500);
-
-//   // Initial load
-//   loadIframes();
-// });
+document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
+    document.getElementById("_id_Good-News").innerHTML = new Date().toLocaleTimeString();
+  }, 1000);
 
 
+  const id_frame = document.getElementById("_id_frame");
 
- const appleMusic = [
+  const appleMusic = [
     {
         artist: "A$AP Rocky",
         birthday: [{ month: "October", day: 3, year: 1988 }],
@@ -10026,266 +9997,48 @@
 
 
 
-
-document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
-
-    document.getElementById("_id_Good-News").innerHTML = `${new Date().toLocaleTimeString()}`;
-    //   appleMusic[Math.floor(Math.random() * appleMusic.length)].artist;
-}, 1000);
-
-
-
-
-const defaultUrl = appleMusic[0].songs[0].src;
-let iframe = document.createElement("iframe");
-iframe.className = "random-iframe";
-iframe.src = defaultUrl;
-iframe.quality = "high";
-iframe.allow = "fullscreen; autoplay; encrypted-media";
-iframe.allowfullscreen = true;
-iframe.autoplay = true;
-iframe.width = "100%";
-iframe.height = "100%";
-iframe.referrerPolicy = "strict-origin";
-iframe.sandbox = "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation";
-iframe.frameborder = 0;
-iframe.framepadding = 0;
-iframe.allowtransparency = true;
-iframe.title = "Apple Music";
-iframe.name = "Apple Music";
-iframe.seamless = "seamless";
-
-
-let Appleiframe = document.getElementById("_id_iframe");
-Appleiframe.appendChild(iframe);
-
-
-
-let currentUrl = defaultUrl;
-let a = 0;
-let s = 0;
-let autoLoadInterval;
-
-
-
-async function AppleMusicForward() {
-    if (appleMusic[a].songs.length > s + 1) {
-        s++;
-        iframe.src = appleMusic[a].songs[s].src;
-    } else if (appleMusic.length > a + 1) {
-        s = 0;
-        a++;
-        iframe.src = appleMusic[a].songs[s].src;
-    } else {
-        return;
-    }
-}
-
-async function AppleMusicBack() {
-    if (s > 0) {
-        s--;
-        fetch(appleMusic[a].songs[s].src);
-        iframe.src = appleMusic[a].songs[s].src;
-    } else if (a > 0) {
-        a--;
-        s = appleMusic[a].songs.length - 1;
-        iframe.src = appleMusic[a].songs[s].src;
-    } else {
-        return;
-    }
-}
-
-
-
-document.getElementById("_id_iframe").addEventListener("click", () => {
-    clearInterval(autoLoadInterval);
-    iframe.src = appleMusic[a].songs[s].src;
-});
-
-
-
-
-const musicForward = document.querySelectorAll("._c_Apple-Music-forward");
-musicForward.forEach(x => x.addEventListener("click", () => {
-    clearInterval(autoLoadInterval);
-    AppleMusicForward();
-}));
-
-const musicRefresh = document.querySelectorAll("._c_Apple-Music-refresh");
-musicRefresh.forEach(x => x.addEventListener("click", () => {
-    clearInterval(autoLoadInterval);
-    iframe.src = appleMusic[a].songs[s].src;
-}));
-
-const FINDtxt = document.querySelectorAll("._c_FINDtxt");
-FINDtxt.forEach(x => x.addEventListener("click", () => {
-    clearInterval(autoLoadInterval);
-    window.open("https://goonlinedj.github.io/FINDtxt/FINDtxt.html");
-}));
-
-const musicBack = document.querySelectorAll("._c_Apple-Music-back");
-musicBack.forEach(x => x.addEventListener("click", () => {
-    clearInterval(autoLoadInterval);
-    AppleMusicBack();
-}));
-
-
-
-
-
-
-function buttonClick(value) {
-
-    const alphabet_number = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".split("");
-
-    if (!alphabet_number.includes(value)) {
-        return;
-    }
-
-    
-    if (isNaN(value)) {
-        // this is not a number
-        handleLetter(value);
-    }
-    else {
-        // this is a number
-        handleNumber(value);
-
-    }   
-
-}
-
-
-
-
-
-function handleLetter(value) {
-     a = appleMusic.findIndex((item) => item.artist.startsWith(value));
-    if (a !== -1) {
-        let s = 0;
-        clearInterval(autoLoadInterval);
-        iframe.src = appleMusic[a].songs[s].src;
-    } else {
-        console.log(value,'Artist not found');
-    }
-}
-
-function handleNumber(value) {
-    let newA = appleMusic.findIndex((item) => item.artist.startsWith(Number(value)));
-    if (newA !== -1) {
-        a = appleMusic.findIndex((item) => item.artist.startsWith(value));
-        let s = 0;
-        clearInterval(autoLoadInterval);
-        iframe.src = appleMusic[a].songs[s].src;
-    } else {
-        console.log(value,'Artist not found');
-    }
-}
-
-
-
-function valueInit() {
-    document.querySelector("._c_Apple-Music-grid").addEventListener("click", function (event) {
-        let value = event.target.innerText;
-        buttonClick(value);
-
-        
-    });
-}
-
-valueInit();
-
-
-
-
-
-
-
-
-
-
-////////////////////////////////////////////////////////////////////////////////
-
-
-
-///////////////////////
-
-let currentArtistIndex = 0;
-let currentSongIndex = 0;
-
-function createDateFromBirthday(birthday) {
-    if (!birthday || !birthday.month || !birthday.day || !birthday.year) return null;
-    return new Date(birthday.year, new Date(`${birthday.month} 1`).getMonth(), birthday.day);
-}
-
-function sortArtistsByUpcomingBirthday(artists) {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0); // Set time to the start of the day
-
-    return artists.slice().sort((a, b) => {
-        if (!a.birthday || !a.birthday[0]) return 1;
-        if (!b.birthday || !b.birthday[0]) return -1;
-
-        const aBirthday = createDateFromBirthday(a.birthday[0]);
-        const bBirthday = createDateFromBirthday(b.birthday[0]);
-
-        if (!aBirthday) return 1;
-        if (!bBirthday) return -1;
-
-        const aNextBirthday = new Date(today.getFullYear(), aBirthday.getMonth(), aBirthday.getDate());
-        const bNextBirthday = new Date(today.getFullYear(), bBirthday.getMonth(), bBirthday.getDate());
-
-        if (aNextBirthday < today) aNextBirthday.setFullYear(today.getFullYear() + 1);
-        if (bNextBirthday < today) bNextBirthday.setFullYear(today.getFullYear() + 1);
-
-        return aNextBirthday - bNextBirthday;
-    });
-}
-
-const sortedAppleMusic = sortArtistsByUpcomingBirthday(appleMusic);
-
-
-///////////////////////////////////////
-
-function updateIframeSrc() {
-    const artist = sortedAppleMusic[currentArtistIndex];
-    const song = artist.songs[currentSongIndex];
-    iframe.src = song.src;
-    a = appleMusic.indexOf(artist);
-    s = artist.songs.indexOf(song);
-}
-
-
-// Start cycling through artists and songs
-autoLoadInterval = setInterval(cycleThroughArtists, 3000);
-
-function cycleThroughArtists() {
-    currentSongIndex = (currentSongIndex + 1) % sortedAppleMusic[currentArtistIndex].songs.length;
-    if (currentSongIndex === 0) {
-        currentArtistIndex = (currentArtistIndex + 1) % sortedAppleMusic.length;
-    }
-    updateIframeSrc();
-}
-
-//////////////////////////////////////////////////
-
-
-
-// Initial update to include the first item in the list
-updateIframeSrc();
-
-//////////////////////////////////////////////
-
-// Log all birthdays, including artists without birthdays
-sortedAppleMusic.forEach(artist => {
-    if (artist.birthday && artist.birthday.length > 0) {
-        artist.birthday.forEach(birthday => {
-            console.log(`Artist: ${artist.artist}, Birthday: ${birthday.month} ${birthday.day}, ${birthday.year}`);
+// Function to log all artist names from appleMusic array
+function logArtistNames(appleMusic) {
+    const id_frame = document.getElementById('_id_frame');
+    appleMusic.forEach(artist => {
+        const artistElement = document.createElement('h4');
+        artistElement.innerHTML = artist.artist;
+        artistElement.addEventListener('click', () => {
+            listArtistSongs(artist.songs);
         });
-    } else {
-        console.log(`Artist: ${artist.artist}, Birthday: Not available`);
-    }
-});
+        id_frame.appendChild(artistElement);
+    });
+}
+
+// Function to list all songs of an artist
+///add event listener to each song element
+function listArtistSongs(songs) {
+    const id_frame = document.getElementById('_id_frame');
+    id_frame.innerHTML = ''; // Clear previous content
+    songs.forEach(song => {
+        const songElement = document.createElement('h4');
+        console.log(song.title);
+        songElement.innerHTML = song.title;
+        songElement.addEventListener('click', () => {
+            // Code to handle song click event
+            console.log(`Song clicked: ${song.title}`);
+            // Call goToArtistSongPage when song is clicked
+            goToArtistSongPage(song.src);
+        });
+        id_frame.appendChild(songElement);
+    });
+}
+
+// Function to take user to an artist on the index.html page to a specific artist and a specific song when song is clicked on 
+function goToArtistSongPage(src) {
+    window.open(`../index.html?iframeSrc=${encodeURIComponent(src)}`, '_blank');
+    console.log(src);
+}
+
+
+logArtistNames(appleMusic);
+
+
 
 
 //SPECIAL THANKS TO MICROSOFT COPILOT FOR HELPING ME WITH THIS CODE
@@ -10293,3 +10046,15 @@ sortedAppleMusic.forEach(artist => {
 //SPECIAL THANKS TO MICROSOFT COPILOT FOR HELPING ME WITH THIS CODE
 //SPECIAL THANKS TO MICROSOFT COPILOT FOR HELPING ME WITH THIS CODE
 //SPECIAL THANKS TO MICROSOFT COPILOT FOR HELPING ME WITH THIS CODE
+
+//ALSO SPECIAL THANKS TO GOOGLE.COM FOR HELPING ME WITH THIS CODE
+//ALSO SPECIAL THANKS TO GOOGLE.COM FOR HELPING ME WITH THIS CODE
+//ALSO SPECIAL THANKS TO GOOGLE.COM FOR HELPING ME WITH THIS CODE
+//ALSO SPECIAL THANKS TO GOOGLE.COM FOR HELPING ME WITH THIS CODE
+//ALSO SPECIAL THANKS TO GOOGLE.COM FOR HELPING ME WITH THIS CODE
+
+//ALSO SPECIAL THANKS TO FrontendMasters.COM FOR Teaching ME HOW TO CODE
+//ALSO SPECIAL THANKS TO FrontendMasters.COM FOR Teaching ME HOW TO CODE
+//ALSO SPECIAL THANKS TO FrontendMasters.COM FOR Teaching ME HOW TO CODE
+//ALSO SPECIAL THANKS TO FrontendMasters.COM FOR Teaching ME HOW TO CODE
+//ALSO SPECIAL THANKS TO FrontendMasters.COM FOR Teaching ME HOW TO CODE
