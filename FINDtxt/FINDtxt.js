@@ -9996,8 +9996,32 @@ document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
 ]
 
 
+/////////////////////////////////////
 
-// Function to log all artist names from appleMusic array
+
+    function attachEventListeners() {
+        const FINDtxt = document.querySelectorAll("._c_Apple-Music-Video-refresh");
+        FINDtxt.forEach(x => x.addEventListener("click", () => {
+            location.reload();
+        }));
+    }
+
+    attachEventListeners();
+
+    const observer = new MutationObserver(() => {
+        attachEventListeners();
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+
+/////////////////////////////////////
+
+
+
+
+//Function to log all artist names from appleMusic array
+
 function logArtistNames(appleMusic) {
     const id_frame = document.getElementById('_id_frame');
     appleMusic.forEach(artist => {
@@ -10037,6 +10061,20 @@ function goToArtistSongPage(src) {
 
 
 logArtistNames(appleMusic);
+
+
+
+
+    
+
+    // document.body.addEventListener("click", (event) => {
+    //     alert("Welcome to FINDtxt, Click on an artist to view their songs");
+    //     if (event.target.matches("._c_Apple-Music-Video-refresh")) {
+    //         window.location.href = "https://goonlinedj.github.io/FINDtxt/FINDtxt.html";
+    //     }
+    // });
+
+
 
 
 
