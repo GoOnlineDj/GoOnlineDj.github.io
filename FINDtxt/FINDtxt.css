@@ -1,4 +1,7 @@
 @import url(../valueINITbase.css);
 @import url(../Contact/contact.css);
 
-
+body {
+ font-family: Arial, sans-serif;
+ cursor: progress;
+}
