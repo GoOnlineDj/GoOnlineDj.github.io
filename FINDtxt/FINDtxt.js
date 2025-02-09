@@ -10065,17 +10065,68 @@ logArtistNames(appleMusic);
 
 
 
-    
 
-    // document.body.addEventListener("click", (event) => {
-    //     alert("Welcome to FINDtxt, Click on an artist to view their songs");
-    //     if (event.target.matches("._c_Apple-Music-Video-refresh")) {
-    //         window.location.href = "https://goonlinedj.github.io/FINDtxt/FINDtxt.html";
-    //     }
-    // });
+//////////////////////////////////////////////////////////////////
 
 
 
+
+function buttonClick(value) {
+    const alphabet_number = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".split("");
+
+    if (!alphabet_number.includes(value)) {
+        return;
+    }
+
+    if (isNaN(value)) {
+        // this is not a number
+        handleLetter(value);
+    } else {
+        // this is a number
+        handleNumber(value);
+    }
+}
+
+function handleLetter(value) {
+    const artists = appleMusic.filter((item) => item.artist.startsWith(value));
+    const frame = document.getElementById("_id_frame");
+    frame.innerHTML = ''; // Clear previous content
+    if (artists.length > 0) {
+        artists.forEach(artist => {
+            const artistElement = document.createElement('h4');
+            artistElement.innerHTML = artist.artist;
+            artistElement.addEventListener('click', () => listArtistSongs(artist.songs));
+            frame.appendChild(artistElement);
+        });
+    } else {
+        frame.innerHTML = ` <h4> not found <h4>`;
+    }
+}
+
+function handleNumber(value) {
+    const artists = appleMusic.filter((item) => item.artist.startsWith(Number(value)));
+    const frame = document.getElementById("_id_frame");
+    frame.innerHTML = ''; // Clear previous content
+    if (artists.length > 0) {
+        artists.forEach(artist => {
+            const artistElement = document.createElement('h4');
+            artistElement.innerHTML = artist.artist;
+            artistElement.addEventListener('click', () => listArtistSongs(artist.songs));
+            frame.appendChild(artistElement);
+        });
+    } else {
+        frame.innerHTML = ` <h4> not found <h4> `;
+    }
+}
+
+function valueInit() {
+    document.querySelector("._c_Apple-Music-grid").addEventListener("click", function (event) {
+        let value = event.target.innerText;
+        buttonClick(value);
+    });
+}
+
+valueInit();
 
 
 
