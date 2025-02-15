@@ -11218,9 +11218,7 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 
 //Function to log all artist names from appleMusic array
-
 function logArtistNames(appleMusic) {
-    alert("logArtistNames");
     const id_frame = document.getElementById('_id_frame');
     appleMusic.forEach(artist => {
         const artistElement = document.createElement('h4');
@@ -11235,7 +11233,6 @@ function logArtistNames(appleMusic) {
 // Function to list all songs of an artist
 ///add event listener to each song element
 function listArtistSongs(songs) {
-    alert("listArtistSongs");
     const id_frame = document.getElementById('_id_frame');
     id_frame.innerHTML = ''; // Clear previous content
     songs.forEach(song => { // List all songs
