@@ -5,3 +5,13 @@ body {
  font-family: Arial, sans-serif;
  cursor: progress;
 }
+
+
+#_id_frame {
+    align-content: center;
+    align-content: webkit-center;
+    align-content: moz-center;
+    align-content: ms-center;
+    align-content: o-center;
+    align-content: khtml-center;       
+}
