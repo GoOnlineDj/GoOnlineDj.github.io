@@ -4716,8 +4716,12 @@ const appleMusic = [
     },
     {
         artist: "Ja Rule, Ashanti, Vita & Charli Baltimore",
-        title: "Down 4 U",
-        src: "https://embed.music.apple.com/us/music-video/down-4-u/1445833866"
+        songs: [
+            {
+               title: "Down 4 U",
+               src: "https://embed.music.apple.com/us/music-video/down-4-u/1445833866"
+            },
+        ]
     },
     {
         artist: "Jack Harlow",
