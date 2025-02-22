@@ -170,8 +170,16 @@
             }
         ]
     },
-
-
+    {
+        artist: "Aitch & Ashanti",
+        birthday: [{ month: "December", day: 9, year: 1999 }, { month: "October", day: 13, year: 1980 }],
+        songs: [
+            {
+                title: "Baby",
+                src: "https://embed.music.apple.com/us/music-video/baby/1613513631"
+            }
+        ]
+    },
     {
         artist: "Akon",
         birthday: [{ month: "April", day: 16, year: 1973 }],
@@ -529,7 +537,22 @@
                 title: "The Way That I Love You",
                 src: "https://embed.music.apple.com/us/music-video/the-way-that-i-love-you/1446732087"
             },
-
+            {
+                title: "Falling For You",
+                src: "https://embed.music.apple.com/us/music-video/falling-for-you/1651983643"
+            },
+            {
+                title: "Never Should Have",
+                src: "https://embed.music.apple.com/us/music-video/never-should-have/647715924"
+            },
+            {
+                title: "Only U",
+                src: "https://embed.music.apple.com/us/music-video/only-u/1675470503"
+            },
+            {
+                title: "Rock Wit U (Awww Baby)",
+                src: "https://embed.music.apple.com/us/music-video/rock-wit-u-awww-baby/1445835051"
+            },
         ]
     },
     {
@@ -541,6 +564,40 @@
                 src: "https://embed.music.apple.com/us/music-video/rain-on-me/1445841190"
             },
 
+        ]
+    },
+    {
+        artist: "Ashanti & Keyshia Cole",
+        birthday: [{ month: "October", day: 13, year: 1980 }, { month: "October", day: 15, year: 1981 }],
+        songs: [
+            {
+                title: "Always On Time (Verzuz Live)",
+                src: "https://embed.music.apple.com/us/music-video/always-on-time-verzuz-live/1550860369"
+            },
+            {
+                title: "Baby (Verzuz Live)",
+                src: "https://embed.music.apple.com/us/music-video/baby-verzuz-live/1550861162"
+            },
+            {
+                title: "Down 4 U (Verzuz Live)",
+                src: "https://embed.music.apple.com/us/music-video/down-4-u-verzuz-live/1550861942"
+            },
+            {
+                title: "Foolish (Verzuz Live)",
+                src: "https://embed.music.apple.com/us/music-video/foolish-verzuz-live/1550863516"
+            },
+            {
+                title: "Mesmerize (Verzuz Live)",
+                src: "https://embed.music.apple.com/us/music-video/mesmerize-verzuz-live/1550865042"
+            },
+            {
+                title: "Rain On Me (Verzuz Live)",
+                src: "https://embed.music.apple.com/us/music-video/rain-on-me-verzuz-live/1550866426"
+            },
+            {
+                title: "What's Luv? (Verzuz Live)",
+                src: "https://embed.music.apple.com/us/music-video/whats-luv-verzuz-live/1550867871"
+            },
         ]
     },
     {
@@ -895,13 +952,13 @@
         ]
     },
     {
-        artist: "Beenie Man & Mya",
-        birthday: [{ month: "August", day: 22, year: 1973 }, { month: "January", day: 3, year: 1978 }],
+        artist: "Beenie Man",
+        birthday: [{ month: "August", day: 22, year: 1973 },],
         songs: [
 
             {
-                title: "Girls Dem Sugar (feat. Mya)",
-                src: "https://embed.music.apple.com/us/music-video/girls-dem-sugar-feat-mya/720136449"
+                title: "Girls Dem Sugar (feat. Mýa)",
+                src: "https://embed.music.apple.com/us/music-video/girls-dem-sugar-feat-m%C3%BDa/1655407461"
             },
         ]
     },
@@ -1084,6 +1141,15 @@
         ]
     },
     {
+        artist: "Beyoncé, Mary J. Blige, Rihanna, Fergie, Natasha Bedingfield, Miley Cyrus, Leona Lewis, Carrie Underwood, Keyshia Cole, Ashanti, Ciara, Nicole Scherzinger & Mariah Carey",
+        songs: [
+            {
+                title: 'Just Stand Up! (Just Stand Up Live: A Benefit for Stand Up to Cancer)',
+                src: "https://embed.music.apple.com/us/music-video/just-stand-up-just-stand-up-live-a-benefit-for/1445842350"
+            },
+        ]
+    },
+    {
         artist: "Beyoncé, Shatta Wale & Major Lazer",
         songs: [
             {
@@ -1107,6 +1173,26 @@
             {
                 title: 'I Got It',
                 src: 'https://embed.music.apple.com/us/music-video/i-got-it/1331133129'
+            },
+            {
+                title: 'Get Like Me (feat. NLE Choppa)',
+                src: "https://embed.music.apple.com/us/music-video/get-like-me-feat-nle-choppa/1470208939"
+            },
+            {
+                title: 'Babyface Savage (feat. Tory Lanez)',
+                src: "https://embed.music.apple.com/us/music-video/babyface-savage-feat-tory-lanez/1449578410"
+            },
+            {
+                title: 'Juice (feat. YG)',
+                src: "https://embed.music.apple.com/us/music-video/juice-feat-yg/1440058835"
+            },
+            {
+                title: "Geek'd (feat. Lil Baby)",
+                src: "https://embed.music.apple.com/us/music-video/geekd-feat-lil-baby/1437159745"
+            },
+            {
+                title: "Mama Don't Worry (Still Ain't Dirty)",
+                src: "https://embed.music.apple.com/us/music-video/mama-dont-worry-still-aint-dirty/1333299667"
             },
         ]
     },
@@ -1161,6 +1247,16 @@
             {
                 title: "1999 (feat. Lloyd)",
                 src: "https://embed.music.apple.com/us/music-video/1999-feat-lloyd/1711293653"
+            },
+        ]
+    },
+    {
+        artist: "Big Punisher & Fat Joe",
+        birthday: [{ month: "November", day: 10, year: 1971 }, { month: "August", day: 19, year: 1970 }],
+        songs: [
+            {
+                title: "Twinz (Deep Cover 98)",
+                src: "https://embed.music.apple.com/us/music-video/twinz-deep-cover-98/1536519587"
             },
         ]
     },
@@ -1477,6 +1573,15 @@
             {
                 title: "JACKIE BROWN",
                 src: "https://embed.music.apple.com/us/music-video/jackie-brown/1704215219"
+            },
+        ]
+    },
+    {
+        artist: "Bria Lee",
+        songs: [
+            {
+                title: "One Shot (feat. Fat Joe)",
+                src: "https://embed.music.apple.com/us/music-video/one-shot-feat-fat-joe/1444670654"
             },
         ]
     },
@@ -2262,7 +2367,45 @@
             {
                 title: "Good Love (feat. Usher)",
                 src: "https://embed.music.apple.com/us/music-video/good-love-feat-usher/1632119216"
-            }
+            },
+            {
+                title: "I Need A Thug",
+                src: "https://embed.music.apple.com/us/music-video/i-need-a-thug/1692260647"
+            },
+            {
+                title: "Flewed Out (feat. Lil Baby)",
+                src: "https://embed.music.apple.com/us/music-video/flewed-out-feat-lil-baby/1537739995"
+            },
+            {
+                title: "Twerk (feat. Cardi B)",
+                src: "https://embed.music.apple.com/us/music-video/twerk-feat-cardi-b/1449668962"
+            },
+            {
+                title: "Season (feat. Lil Baby)",
+                src: "https://embed.music.apple.com/us/music-video/season-feat-lil-baby/1443959967"
+            },
+            {
+                title: "Millionaire Dick",
+                src: "https://embed.music.apple.com/us/music-video/millionaire-dick/1437562934"
+            },
+            {
+                title: "Sweet Tooth",
+                src: "https://embed.music.apple.com/us/music-video/sweet-tooth/1405312110"
+            },
+            {
+                title: "Where the Bag At",
+                src: "https://embed.music.apple.com/us/music-video/where-the-bag-at/1354196336"
+            },
+        ]
+    },
+    {
+        artist: "City Girls & Fivio Foreign",
+        birthday: [{ month: "February", day: 11, year: 1994 }, { month: "December", day: 3, year: 1992 }, { month: "March", day: 29, year: 1990 }],
+        songs: [
+            {
+                title: "Top Notch",
+                src: "https://embed.music.apple.com/us/music-video/top-notch/1617202505"
+            },
         ]
     },
     {
@@ -2915,12 +3058,31 @@
         ]
     },
     {
+        artist: "Diamond D",
+        songs: [
+            {
+                title: "Survive or Die (feat. Fat Joe, Fred the Godson & Raekwon)",
+                src: "https://embed.music.apple.com/us/music-video/survive-or-die-feat-fat-joe-fred-the-godson-raekwon/1502313444"
+            },
+        ]
+    },
+    {
         artist: "Diddy - Dirty Money & Rick Ross",
         birthday: [{ month: "November", day: 4, year: 1969 }, { month: "August", day: 5, year: 1983 }, { month: "August", day: 13, year: 1982 }, { month: "January", day: 28, year: 1976 }],
         songs: [
             {
                 title: "Angels (Remix)",
                 src: "https://embed.music.apple.com/us/music-video/angels-remix/1445892898"
+            },
+        ]
+    },
+    {
+        artist: "Diddy, Bryson Tiller, Ashanti & Yung Miami",
+        birthday: [{ month: "November", day: 4, year: 1969 }, { month: "January", day: 2, year: 1993 }, { month: "October", day: 13, year: 1980 }, { month: "February", day: 11, year: 1994 }],
+        songs: [
+            {
+                title: "Gotta Move On (Queens Remix)",
+                src: "https://embed.music.apple.com/us/music-video/gotta-move-on-queens-remix/1651351332"
             },
         ]
     },
@@ -3022,6 +3184,15 @@
                 title: "JADAKISS INTERLUDE (feat. Jadakiss)",
                 src: "https://embed.music.apple.com/us/music-video/jadakiss-interlude-feat-jadakiss/1643168382"
             },
+        ]
+    },
+    {
+        artist: "DJ Khaled featuring Akon, T.I., Rick Ross, Fat Joe, Baby & Lil Wayne",
+        songs: [
+            {
+                title: "We Takin Over (Extended Version)",
+                src: "https://embed.music.apple.com/us/music-video/we-takin-over-extended-version/251136698"
+            }
         ]
     },
     {
@@ -3702,6 +3873,26 @@
                 title: "What's Luv? (feat. Ashanti)",
                 src: "https://embed.music.apple.com/us/music-video/whats-luv-feat-ashanti/1170751133"
             },
+            {
+                title: "Make It Rain (Remix)",
+                src: "https://embed.music.apple.com/us/music-video/make-it-rain-remix/719977420"
+            },
+            {
+                title: "All I Need (feat. Armageddon & Tony Sunshine)",
+                src: "https://embed.music.apple.com/us/music-video/all-i-need-feat-armageddon-tony-sunshine/281899565"
+            },
+            {
+                title: "So Much More",
+                src: "https://embed.music.apple.com/us/music-video/so-much-more/86500817"
+            },
+            {
+                title: "Success",
+                src: "https://embed.music.apple.com/us/music-video/success/1380483760"
+            },
+            {
+                title: "Flow Joe",
+                src: "https://embed.music.apple.com/us/music-video/flow-joe/1380492523"
+            },
         ]
     },
     {
@@ -3730,6 +3921,15 @@
             {
                 title: "Lean Back (Alternate Version)",
                 src: "https://embed.music.apple.com/us/music-video/lean-back-alternate-version/1445834531"
+            },
+        ]
+    },
+    {
+        artist: "Fat Joe, Remy Ma & Cool & Dre",
+        songs: [
+            {
+                title: "Outta Control",
+                src: "https://embed.music.apple.com/us/music-video/outta-control/1766173041"
             },
         ]
     },
@@ -3936,6 +4136,10 @@
             {
                 title: "Pardon My Thoughts (feat. Dave East)",
                 src: "https://embed.music.apple.com/us/music-video/pardon-my-thoughts-feat-dave-east/1544018013"
+            },
+            {
+                title: "Wiggle It (feat. City Girls)",
+                src: "https://embed.music.apple.com/us/music-video/wiggle-it-feat-city-girls/1472598780"
             },
         ]
     },
@@ -5114,6 +5318,10 @@
                 title: "Can't Get Enough (feat. Latto)",
                 src: "https://embed.music.apple.com/us/music-video/cant-get-enough-feat-latto/1728290958"
             },
+            {
+                title: "Hold You Down (feat. Fat Joe)",
+                src: "https://embed.music.apple.com/us/music-video/hold-you-down-feat-fat-joe/1279622703"
+            },
         ]
     },
     {
@@ -5133,6 +5341,16 @@
             {
                 title: "The Pepsi Super Bowl Halftime Performance",
                 src: "https://embed.music.apple.com/us/music-video/the-pepsi-super-bowl-halftime-performance/1497482857"
+            },
+        ]
+    },
+    {
+        artist: "Jennifer Lopez, Fat Joe & Big Punisher",
+        birthday: [{ month: "July", day: 24, year: 1969 }, { month: "August", day: 19, year: 1970 }, { month: "November", day: 10, year: 1971 }],
+        songs: [
+            {
+                title: "Feelin' So Good",
+                src: "https://embed.music.apple.com/us/music-video/feelin-so-good/547488500"
             },
         ]
     },
@@ -6241,7 +6459,7 @@
             },
             {
                 title: "Happy",
-                src: "https://embed.music.apple.com/us/music-video/happy/337860208"
+                src: "https://embed.music.apple.com/us/music-video/happy/1782514589"
             },
             {
                 title: "I Will Be",
@@ -6680,6 +6898,16 @@
             {
                 title: "You (feat. Bryson Tiller)",
                 src: "https://embed.music.apple.com/us/music-video/you-feat-bryson-tiller/1708483378"
+            },
+        ]
+    },
+    {
+        artist: "London On Da Track & G-Eazy",
+        birthday: [{ month: "March", day: 27, year: 1991 }, { month: "May", day: 24, year: 1989 }],
+        songs: [
+            {
+                title: "Throw Fits (feat. City Girls & Juvenile)",
+                src: "https://embed.music.apple.com/us/music-video/throw-fits-feat-city-girls-juvenile/1463690402"
             },
         ]
     },
@@ -7685,6 +7913,10 @@
                 title: "RICH VIKING",
                 src: "https://embed.music.apple.com/us/music-video/rich-viking/1752589317"
             },
+            {
+                title: "Said Sum (feat. City Girls & DaBaby) [Remix]",
+                src: "https://embed.music.apple.com/us/music-video/said-sum-feat-city-girls-dababy-remix/1536589483"
+            },
         ]
     },
     {
@@ -7874,6 +8106,83 @@
                 title: "Free",
                 src: "https://embed.music.apple.com/us/music-video/free/1445840327"
             },
+            {
+                title: "Whine (feat. Bounty Killer)",
+                src: "https://embed.music.apple.com/us/music-video/whine-feat-bounty-killer/1698790710"
+            },
+            {
+                title: "It's All About Me (25th Anniversary Remix)",
+                src: "https://embed.music.apple.com/us/music-video/its-all-about-me-25th-anniversary-remix/1690564573"
+            },
+            {
+                title: "Space and Time",
+                src: "https://embed.music.apple.com/us/music-video/space-and-time/1524064269"
+            },
+            {
+                title: "Simple Things (In Studio)",
+                src: "https://embed.music.apple.com/us/music-video/simple-things-in-studio/1510777077"
+            },
+            {
+                title: "The Truth (Official Music Video)",
+                src: "https://embed.music.apple.com/us/music-video/the-truth-official-music-video/1496830877"
+            },
+            {
+                title: "Down (Official Music Video)",
+                src: "https://embed.music.apple.com/us/music-video/down-official-music-video/1459320100"
+            },
+            {
+                title: "With You (feat. MyGuyMars)",
+                src: "https://embed.music.apple.com/us/music-video/with-you-feat-myguymars/1451095078"
+            },
+            {
+                title: "G.M.O. (Got My Own) [feat. Tink]",
+                src: "https://embed.music.apple.com/us/music-video/g-m-o-got-my-own-feat-tink/1424645343"
+            },
+            {
+                title: "Damage",
+                src: "https://embed.music.apple.com/us/music-video/damage/1410324789"
+            },
+            {
+                title: "You Got Me",
+                src: "https://embed.music.apple.com/us/music-video/you-got-me/1396787799"
+            },
+            {
+                title: "Ready For Whatever",
+                src: "https://embed.music.apple.com/us/music-video/ready-for-whatever/1293936509"
+            },
+            {
+                title: "Coolin'",
+                src: "https://embed.music.apple.com/us/music-video/coolin/1204094032"
+            },
+            {
+                title: "Fallen",
+                src: "https://embed.music.apple.com/us/music-video/fallen/1446009144"
+            },
+            {
+                title: "Lock U Down",
+                src: "https://embed.music.apple.com/us/music-video/lock-u-down/1467926481"
+            },
+            {
+                title: "Ridin",
+                src: "https://embed.music.apple.com/us/music-video/ridin/1445733343"
+            },
+            {
+                title: "My First Night With You",
+                src: "https://embed.music.apple.com/us/music-video/my-first-night-with-you/1445848066"
+            },
+            {
+                title: "My Love Is Like...Wo (Unedited Version)",
+                src: "https://embed.music.apple.com/us/music-video/my-love-is-like-wo-unedited-version/1445745669"
+            },
+        ]
+    },
+    {
+        artist: "Mýa & Dru Hill",
+        songs: [
+            {
+                title: "It's All About Me",
+                src: "https://embed.music.apple.com/us/music-video/its-all-about-me/1445841481"
+            },
         ]
     },
     {
@@ -7941,7 +8250,7 @@
                 src: "https://embed.music.apple.com/us/music-video/me-or-sum-feat-future-lil-baby/1608110747"
             },
         ]
-    },
+    },    
     {
         artist: "Nas",
         birthday: [{ month: "September", day: 14, year: 1973 }],
@@ -7967,6 +8276,15 @@
             {
                 title: "Somebody (feat. Jeremih)",
                 src: "https://embed.music.apple.com/us/music-video/somebody-feat-jeremih/1444878800"
+            },
+        ]
+    },
+    {
+        artist: "Ncredible Gang",
+        songs: [
+            {
+                title: "Only You (feat. Nick Cannon, Fat Joe & DJ Luke Nasty)",
+                src: "https://embed.music.apple.com/us/music-video/only-you-feat-nick-cannon-fat-joe-dj-luke-nasty/1356116351"
             },
         ]
     },
@@ -8030,6 +8348,16 @@
         ]
     },
     {
+        artist: "Nelly, Ashanti & Akon",
+        birthday: [{ month: "November", day: 2, year: 1974 }, { month: "October", day: 13, year: 1980 }, { month: "April", day: 16, year: 1973 }],
+        songs: [
+            {
+                title: "Body On Me",
+                src: "https://embed.music.apple.com/us/music-video/body-on-me/1445726544"
+            },
+        ]
+    },
+    {
         artist: "Nelly & Kelly Rowland",
         birthday: [{ month: "November", day: 2, year: 1974 }, { month: "February", day: 11, year: 1981 }],
         songs: [
@@ -8084,6 +8412,15 @@
             {
                 title: "You're a Jerk",
                 src: "https://embed.music.apple.com/us/music-video/youre-a-jerk/442169663"
+            },
+        ]
+    },
+    {
+        artist: "NewFlo Brody",
+        songs: [
+            {
+                title: "Up Right Now (feat. Nari Millz & Fat Joe)",
+                src: "https://embed.music.apple.com/us/music-video/up-right-now-feat-nari-millz-fat-joe/1588185549"
             },
         ]
     },
@@ -8639,6 +8976,10 @@
             {
                 title: 'Shawty (feat. T-Pain)',
                 src: 'https://embed.music.apple.com/us/music-video/shawty-feat-t-pain/260555464'
+            },
+            {
+                title: 'Want It, Need It (feat. Ashanti)',
+                src: "https://embed.music.apple.com/us/music-video/want-it-need-it-feat-ashanti/306014590"
             },
         ]
     },
@@ -11886,7 +12227,7 @@
             },
         ]
     },
-]
+];
 
 
 
