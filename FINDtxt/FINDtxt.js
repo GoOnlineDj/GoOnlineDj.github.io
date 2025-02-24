@@ -224,6 +224,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Alexa Ayaz",
+        songs: [
+            {
+                title: "Hey Danze (feat. Elephant Man)",
+                src: "https://embed.music.apple.com/us/music-video/hey-danze-feat-elephant-man/1445019561" 
+            }
+        ]
+    },
+    {
         artist: "Alexandra Stan",
         birthday: [{ month: "June", day: 10, year: 1989 }],
         songs: [
@@ -296,6 +305,16 @@ const appleMusic = [
                 title: "You Don't Know My Name",
                 src: "https://embed.music.apple.com/us/music-video/you-dont-know-my-name/1348934836"
             }
+        ]
+    },
+    {
+        artist: "Alok & Kylie Minogue",
+        birthday: [{ month: "August", day: 26, year: 1991 }, { month: "May", day: 28, year: 1968 }],
+        songs: [
+            {
+                title: "last night i dreamt i fell in love",
+                src: "https://embed.music.apple.com/us/music-video/last-night-i-dreamt-i-fell-in-love/1797069258"
+            },
         ]
     },
     {
@@ -374,6 +393,15 @@ const appleMusic = [
             {
                 title: "To Be Young",
                 src: "https://embed.music.apple.com/us/music-video/to-be-young-feat-doja-cat/1524291684"
+            },
+        ]
+    },
+    {
+        artist: "Anthony Lewis",
+        songs: [
+            {
+                title: "It's Not My Fault (feat. T.I.)",
+                src: "https://embed.music.apple.com/us/music-video/its-not-my-fault-feat-t-i/1444610500" 
             },
         ]
     },
@@ -635,6 +663,10 @@ const appleMusic = [
                 title: "Headband (feat. 2 Chainz)",
                 src: "https://embed.music.apple.com/us/music-video/headband-feat-2-chainz/677518497"
             },
+            {
+                title: "We Still In This Bitch (feat. T.I. & Juicy J)",
+                src: "https://embed.music.apple.com/us/music-video/we-still-in-this-bitch-feat-t-i-juicy-j/606562008" 
+            },
         ]
     },
     {
@@ -688,6 +720,15 @@ const appleMusic = [
             {
                 title: "Pop It",
                 src: "https://embed.music.apple.com/us/music-video/pop-it/1561635220"
+            },
+        ]
+    },
+    {
+        artist: "Bankroll Mafia, T.I., Shad Da God, Young Thug & London Jae",
+        songs: [
+            {
+                title: "Out My Face (feat. T.I., Shad Da God, Young Thug & London Jae)",
+                src: "https://embed.music.apple.com/us/music-video/out-my-face-feat-t-i-shad-da-god-young-thug-london-jae/1101541887" 
             },
         ]
     },
@@ -1387,6 +1428,16 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Blanco Brown & T.I.",
+        birthday: [{ month: "March", day: 24, year: 1985 }, { month: "September", day: 25, year: 1980 }],
+        songs: [
+            {
+                title: "Trap Still Bumpin",
+                src: "https://embed.music.apple.com/us/music-video/trap-still-bumpin/1653699875" 
+            },
+        ]
+    },
+    {
         artist: "Blaque",
         birthday: [{ month: "February", day: 22, year: 1980 }, { month: "October", day: 28, year: 1980 }, { month: "October", day: 5, year: 1982 }],
         songs: [
@@ -2049,7 +2100,11 @@ const appleMusic = [
             {
                 title: "With Ur Love (feat. Mike Posner)",
                 src: "https://embed.music.apple.com/us/music-video/with-ur-love-feat-mike-posner/470689719"
-            }
+            },
+            {
+                title: "I Wish (feat. T.I.)",
+                src: "https://embed.music.apple.com/us/music-video/i-wish-feat-t-i/712603653" 
+            },
         ]
     },
     {
@@ -2424,6 +2479,16 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Coco Jones",
+        birthday: [{ month: "January", day: 4, year: 1998 }],
+        songs: [
+            {
+                title: "Taste",
+                src: "https://embed.music.apple.com/us/music-video/taste/1797607851" 
+            }
+        ]
+    },
+    {
         artist: "Coi Leray",
         birthday: [{ month: "May", day: 11, year: 1997 }],
         songs: [
@@ -2457,6 +2522,15 @@ const appleMusic = [
             {
                 title: "Light It Up (KE Remix) [feat. Snoop Dogg]",
                 src: "https://embed.music.apple.com/us/music-video/light-it-up-ke-remix-feat-snoop-dogg/1286217582"
+            }
+        ]
+    },
+    {
+        artist: "Colonel Loud",
+        songs: [
+            {
+                title: "California (feat. T.I., Young Dolph & Ricco Barrino)",
+                src: "https://embed.music.apple.com/us/music-video/california-feat-t-i-young-dolph-ricco-barrino/1070649206" 
             }
         ]
     },
@@ -2722,6 +2796,15 @@ const appleMusic = [
             {
                 title: "What'chu Like",
                 src: "https://embed.music.apple.com/us/music-video/whatchu-like/1536521020"
+            },
+        ]
+    },
+    {
+        artist: "Da Great Ape",
+        songs: [
+            {
+                title: "Ape Mode (feat. T.I.)",
+                src: "https://embed.music.apple.com/us/music-video/ape-mode-feat-t-i/1480915002" 
             },
         ]
     },
@@ -3039,6 +3122,16 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Diddy - Dirty Money, Rick Ross & T.I.",
+        birthday: [{ month: "November", day: 4, year: 1969 }, { month: "August", day: 5, year: 1983 }, { month: "August", day: 13, year: 1982 }, { month: "January", day: 28, year: 1976 }, { month: "September", day: 25, year: 1980 }], 
+        songs: [
+            {
+                title: "Hello Good Morning (feat. Rick Ross & T.I.) [Final Version]",
+                src: "https://embed.music.apple.com/us/music-video/hello-good-morning-feat-rick-ross-t-i-final-version/1445737125" 
+            },
+        ]
+    },
+    {
         artist: "Diddy - Dirty Money & Rick Ross",
         birthday: [{ month: "November", day: 4, year: 1969 }, { month: "August", day: 5, year: 1983 }, { month: "August", day: 13, year: 1982 }, { month: "January", day: 28, year: 1976 }],
         songs: [
@@ -3099,6 +3192,10 @@ const appleMusic = [
             {
                 title: "Day Dreaming (feat. Akon, Snoop Dogg & T.I.)",
                 src: "https://embed.music.apple.com/us/music-video/day-dreaming-feat-akon-snoop-dogg-t-i/314314160"
+            },
+            {
+                title: "We in This (feat. Ludacris, Young Jeezy, T.I. & Future)",
+                src: "https://embed.music.apple.com/us/music-video/we-in-this-feat-ludacris-young-jeezy-t-i-future/528054053" 
             },
         ]
     },
@@ -3505,6 +3602,61 @@ const appleMusic = [
             {
                 title: "Right Now",
                 src: "https://embed.music.apple.com/us/music-video/right-now/1567072732"
+            },
+        ]
+    },
+    {
+        artist: "Elephant Man",
+        songs: [
+            {
+                title: "Neat & Tight",
+                src: "https://embed.music.apple.com/us/music-video/neat-tight/1684333266"
+            },
+            {
+                title: "Cool Reminder",
+                src: "https://embed.music.apple.com/us/music-video/cool-reminder/1659782416" 
+            },
+            {
+                title: "Dancers Segment (feat. Horro General)",
+                src: "https://embed.music.apple.com/us/music-video/dancers-segment-feat-horro-general/1607563673" 
+            },
+            {
+                title: "Watch Watch (feat. Breeza)",
+                src: "https://embed.music.apple.com/us/music-video/watch-watch-feat-breeza/1524825681" 
+            },
+            {
+                title: "Jesus Take The Wheel",
+                src: "https://embed.music.apple.com/us/music-video/jesus-take-the-wheel/1461152005" 
+            },
+            {
+                title: "Oh Nah Nah",
+                src: "https://embed.music.apple.com/us/music-video/oh-nah-nah/1382578294" 
+            },
+            {
+                title: "Miley Cyrus (Twerk) [Clean]",
+                src: "https://embed.music.apple.com/us/music-video/miley-cyrus-twerk-clean/777012408"  
+            },
+            {
+                title: "Bad Man Style",
+                src: "https://embed.music.apple.com/us/music-video/bad-man-style/587977704" 
+            },
+        ]
+    },
+    {
+        artist: "Elephant Man, DJ Mac & CrashDummy",
+        songs: [
+            {
+                title: "Workout",
+                src: "https://embed.music.apple.com/us/music-video/workout/1756781486" 
+            },
+        ]
+    },
+    {
+        artist: "Elephant Man & Kat Deluna",
+        songs: [
+            {
+                title: "Whine Up (English Version)",
+                src: "https://embed.music.apple.com/us/music-video/whine-up-english-version/263175176" 
             },
         ]
     },
@@ -4608,6 +4760,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Hustle Gang",
+        songs: [
+            {
+                title: "Game 7 (feat. T.I., Rara & Brandon Rossi)",
+                src: "https://embed.music.apple.com/us/music-video/game-7-feat-t-i-rara-brandon-rossi/1444845330" 
+            },
+        ]
+    },
+    {
         artist: "IAMJOSHSTONE",
         songs: [
             {
@@ -5081,15 +5242,21 @@ const appleMusic = [
                 title: "You Changed Me (feat. Chris Brown)",
                 src: "https://embed.music.apple.com/us/music-video/you-changed-me-feat-chris-brown/1001265848"
             },
-        ]
-    },
-    {
-        artist: "Jamie Foxx & Jamie Foxx",
-        birthday: [{ month: "December", day: 13, year: 1967 }, { month: "October", day: 24, year: 1986 }, { month: "June", day: 8, year: 1977 }, { month: "September", day: 20, year: 1977 }],
-        songs: [
             {
-                title: "Digital Girl Remix (Featuring featuring Drake, Kanye West & The-Dream)",
-                src: "https://embed.music.apple.com/us/music-video/digital-girl-remix-feat-drake-kanye-west-the-dream/327572547"
+                title: "In Love By Now",
+                src: "https://embed.music.apple.com/us/music-video/in-love-by-now/1538627307" 
+            },
+            {
+                title: "Digital Girl Remix (feat. Drake, Kanye West & The-Dream)",
+                src: "https://embed.music.apple.com/us/music-video/digital-girl-remix-feat-drake-kanye-west-the-dream/327572547" 
+            },
+            {
+                title: "Extravaganza (feat. Kanye West)",
+                src: "https://embed.music.apple.com/us/music-video/extravaganza-feat-kanye-west/290231690"  
+            },
+            {
+                title: "DJ Play A Love Song (feat. Twista) [VIDEO]",
+                src: "https://embed.music.apple.com/us/music-video/dj-play-a-love-song-feat-twista-video/1609612378"   
             },
         ]
     },
@@ -5787,7 +5954,6 @@ const appleMusic = [
         artist: "K-Ci & JoJo",
         birthday: [{ month: "September", day: 2, year: 1969 }, { month: "June", day: 10, year: 1971 }],
         songs: [
-
             {
                 title: "All My Life",
                 src: "https://embed.music.apple.com/us/music-video/all-my-life/1445843174"
@@ -5802,10 +5968,13 @@ const appleMusic = [
         artist: "K CAMP",
         birthday: [{ month: "April", day: 27, year: 1990 }],
         songs: [
-
             {
                 title: "Cut Her Off (feat. Too $hort, YG & Lil Boosie)",
                 src: "https://embed.music.apple.com/us/music-video/cut-her-off-feat-too-%24hort-yg-lil-boosie/1444597477"
+            },
+            {
+                title: "Till I Die (feat. T.I.)",
+                src: "https://embed.music.apple.com/us/music-video/till-i-die-feat-t-i/1445020085" 
             },
         ]
     },
@@ -5921,6 +6090,38 @@ const appleMusic = [
             {
                 title: "I Promise (feat. Styles P)",
                 src: "https://embed.music.apple.com/us/music-video/i-promise-feat-styles-p/1537004528"
+            },
+        ]
+    },
+    {
+        artist: "Kat Deluna",
+        birthday: [{ month: "November", day: 26, year: 1987 }],
+        songs: [
+            {
+                title: "Hottie With a Body",
+                src: "https://embed.music.apple.com/us/music-video/hottie-with-a-body/1703830307" 
+            },
+            {
+                title: "Drop It Low",
+                src: "https://embed.music.apple.com/us/music-video/drop-it-low/458633158" 
+            },
+            {
+                title: "Dancing Tonight (feat. Fo Onassis)",
+                src: "https://embed.music.apple.com/us/music-video/dancing-tonight-feat-fo-onassis/428283031"  
+            },
+            {
+                title: "Run the Show (feat. Busta Rhymes)",
+                src: "https://embed.music.apple.com/us/music-video/run-the-show-feat-busta-rhymes/276136076"   
+            },
+        ]
+    },
+    {
+        artist: "Kat Deluna & Jeremih",
+        birthday: [{ month: "November", day: 26, year: 1987 }, { month: "July", day: 17, year: 1987 }],
+        songs: [
+            {
+                title: "What a Night",
+                src: "https://embed.music.apple.com/us/music-video/what-a-night/1090230384" 
             },
         ]
     },
@@ -7152,6 +7353,10 @@ const appleMusic = [
             {
                 title: "Triumphant (Get 'Em) [feat. Rick Ross & Meek Mill]",
                 src: "https://embed.music.apple.com/us/music-video/triumphant-get-em-feat-rick-ross-meek-mill/1446004608"
+            },
+            {
+                title: "I'll Be Lovin' U Long Time (feat. T.I.)",
+                src: "https://embed.music.apple.com/us/music-video/ill-be-lovin-u-long-time-feat-t-i/1446741608" 
             },
         ]
     },
@@ -8766,6 +8971,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "P$C", 
+        songs: [
+            {
+                title: "I'm a King (Remix) [feat. T.I. & Lil' Scrappy]",
+                src: "https://embed.music.apple.com/us/music-video/im-a-king-remix-feat-t-i-lil-scrappy/281899394" 
+            },
+        ]
+    },
+    {
         artist: "P-LO, E-40 & Too $hort",
         songs: [
             {
@@ -8809,6 +9023,15 @@ const appleMusic = [
             {
                 title: "ADHD",
                 src: "https://embed.music.apple.com/us/music-video/adhd/1773873828"
+            },
+        ]
+    },
+    {
+        artist: "Patoranking, Konshens & Elephant Man",
+        songs: [
+            {
+                title: "Daniella Whine (feat. Konshens & Elephant Man) [Remix]",
+                src: "https://embed.music.apple.com/us/music-video/daniella-whine-feat-konshens-elephant-man-remix/1236642492" 
             },
         ]
     },
@@ -8956,6 +9179,16 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Plies, Jamie Foxx & The-Dream",
+        birthday: [{ month: "July", day: 1, year: 1976 }, { month: "December", day: 13, year: 1967 }, { month: "September", day: 20, year: 1977 }],
+        songs: [
+            {
+                title: "Please Excuse My Hands (feat. Jamie Foxx & The-Dream)",
+                src: "https://embed.music.apple.com/us/music-video/please-excuse-my-hands-feat-jamie-foxx-the-dream/355595562" 
+            },
+        ]
+    },
+    {
         artist: "Polo G",
         birthday: [{ month: "January", day: 6, year: 1999 }],
         songs: [
@@ -9043,6 +9276,10 @@ const appleMusic = [
                 title: 'Wall To Wall',
                 src: 'https://embed.music.apple.com/us/music-video/wall-to-wall/1711856737'
             },
+            {
+                title: 'Trappa Rappa',
+                src: "https://embed.music.apple.com/us/music-video/trappa-rappa/1797678730" 
+            },
         ]
     },
     {
@@ -9087,6 +9324,10 @@ const appleMusic = [
             {
                 title: "The World's Greatest",
                 src: "https://embed.music.apple.com/us/music-video/the-worlds-greatest/327541804"
+            },
+            {
+                title: "I'm a Flirt Remix (Without Number)",
+                src: "https://embed.music.apple.com/us/music-video/im-a-flirt-remix-without-number/262583303" 
             },
         ]
     },
@@ -9383,6 +9624,16 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Rico Love",
+        birthday: [{ month: "December", day: 3, year: 1982 }],
+        songs: [
+            {
+                title: "They Don't Know (feat. Ludacris, Trey Songz, Tiara Thomas, T.I. & Emjay) [Remix]",
+                src: "https://embed.music.apple.com/us/music-video/they-dont-know-feat-ludacris-trey-songz-tiara-thomas/1445013977" 
+            },
+        ]
+    },
+    {
         artist: "Rihanna",
         birthday: [{ month: "February", day: 20, year: 1988 }],
         songs: [
@@ -9522,12 +9773,32 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Robin Thicke",
+        birthday: [{ month: "March", day: 10, year: 1977 }],
+        songs: [
+            {
+                title: "Blurred Lines (feat. T.I. & Pharrell)",
+                src: "https://embed.music.apple.com/us/music-video/blurred-lines-feat-t-i-pharrell/1444344257" 
+            },
+        ]
+    },
+    {
         artist: "Robin Thicke & Snoop Dogg",
         birthday: [{ month: "March", day: 10, year: 1977 }, { month: "October", day: 20, year: 1971 }],
         songs: [
             {
                 title: "It's In the Mornin",
                 src: "https://embed.music.apple.com/us/music-video/its-in-the-mornin/1445707248"
+            },
+        ]
+    },
+    {
+        artist: "ROLE MODEL",
+        birthday: [{ month: "May", day: 15, year: 1997 }], 
+        songs: [
+            {
+                title: "Sally, When The Wine Runs Out",
+                src: "https://embed.music.apple.com/us/music-video/sally-when-the-wine-runs-out/1797669438" 
             },
         ]
     },
@@ -9572,6 +9843,10 @@ const appleMusic = [
             {
                 title: "Summer On Lock (feat. Pusha T, Fabolous, Jadakiss, Agent Sasco)",
                 src: "https://embed.music.apple.com/us/music-video/summer-on-lock-feat-pusha-t-fabolous-jadakiss-agent-sasco/1434630503"
+            },
+            {
+                title: "Black Savage (feat. T.I., Cyhi The Prynce, White Gold & Sy Ari Da Kid)",
+                src: "https://embed.music.apple.com/us/music-video/black-savage-feat-t-i-cyhi-the-prynce-white-gold-sy-ari-da-kid/1493455665" 
             },
         ]
     },
@@ -10367,6 +10642,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Stafford Brothers",
+        songs: [
+            {
+                title: "This Girl (feat. Eva Simons & T.I.)",
+                src: "https://embed.music.apple.com/us/music-video/this-girl-feat-eva-simons-t-i/1713573929" 
+            },
+        ]
+    },
+    {
         artist: "Static & Ben El, Snoop Dogg & Lil Baby",
         songs: [
             {
@@ -10547,6 +10831,68 @@ const appleMusic = [
                 title: "Wraith (feat. Yo Gotti)",
                 src: "https://embed.music.apple.com/us/music-video/wraith-feat-yo-gotti/1438179575"
             },
+            {
+                title: "Writer (feat. Translee & B.o.B)",
+                src: "https://embed.music.apple.com/us/music-video/writer-feat-translee-b-o-b/1444867542" 
+            },
+            {
+                title: "Black Man (feat. Quavo, Meek Mill & Rara)",
+                src: "https://embed.music.apple.com/us/music-video/black-man-feat-quavo-meek-mill-rara/1444605474" 
+            },
+            {
+                title: "Money Talk",
+                src: "https://embed.music.apple.com/us/music-video/money-talk/1445009734" 
+            },
+            {
+                title: "G' Shit (feat. Jeezy & WatchTheDuck)",
+                src: "https://embed.music.apple.com/us/music-video/g-shit-feat-jeezy-watchtheduck/964634671"
+            },
+            {
+                title: "Ball (feat. Lil Wayne)",
+                src: "https://embed.music.apple.com/us/music-video/ball-feat-lil-wayne/1437479775" 
+            },
+            {
+                title: "Go Get It",
+                src: "https://embed.music.apple.com/us/music-video/go-get-it/1437479776"
+            },
+            {
+                title: "Big Things Poppin' (Do It)",
+                src: "https://embed.music.apple.com/us/music-video/big-things-poppin-do-it/1260873366" 
+            },
+            {
+                title: "You Know What It Is (feat. Wyclef Jean)",
+                src: "https://embed.music.apple.com/us/music-video/you-know-what-it-is-feat-wyclef-jean/1260870365"  
+            },
+            {
+                title: "Asap",
+                src: "https://embed.music.apple.com/us/music-video/asap/1260866392"   
+            },
+            {
+                title: "I'm Serious (feat. Beenie Man)",
+                src: "https://embed.music.apple.com/us/music-video/im-serious-feat-beenie-man/1279364891"   
+            },
+            {
+                title: "Let's Get Away",
+                src: "https://embed.music.apple.com/us/music-video/lets-get-away/1260863968"   
+            },
+            {
+                title: "Rubber Band Man",
+                src: "https://embed.music.apple.com/us/music-video/rubber-band-man/1260772267"    
+            },
+            {
+                title: "24'S",
+                src: "https://embed.music.apple.com/us/music-video/24s/1260772269"    
+            },
+        ]
+    },
+    {
+        artist: "T.I. & Domani",
+        birthday: [{ month: "September", day: 25, year: 1980 }, { month: "March", day: 16, year: 2001 }],
+        songs: [
+            {
+                title: "Family Connect",
+                src: "https://embed.music.apple.com/us/music-video/family-connect/1615132403" 
+            },
         ]
     },
     {
@@ -10574,6 +10920,10 @@ const appleMusic = [
             {
                 title: "Sports car",
                 src: "https://embed.music.apple.com/us/music-video/sports-car/1792291322"
+            },
+            {
+                title: "Revolving door",
+                src: "https://embed.music.apple.com/us/music-video/revolving-door/1797539454" 
             },
         ]
     },
@@ -11814,6 +12164,10 @@ const appleMusic = [
                 title: "Rihanna (feat. Young Thug)",
                 src: "https://embed.music.apple.com/us/music-video/rihanna-feat-young-thug/1025134480"
             },
+            {
+                title: "King Shit (feat. T.I.)",
+                src: "https://embed.music.apple.com/us/music-video/king-shit-feat-t-i/724704858" 
+            },
         ]
     },
     {
@@ -11908,6 +12262,16 @@ const appleMusic = [
             {
                 title: "Baddest",
                 src: "https://embed.music.apple.com/us/music-video/baddest/1575637463"
+            },
+        ]
+    },
+    {
+        artist: "Yung L.A., Young Dro & T.I.",
+        birthday: [{ month: "March", day: 26, year: 1986 }, { month: "January", day: 15, year: 1979 }, { month: "September", day: 25, year: 1980 }],
+        songs: [
+            {
+                title: "Ain't I",
+                src: "https://embed.music.apple.com/us/music-video/aint-i/1446737074" 
             },
         ]
     },
@@ -12200,6 +12564,7 @@ const appleMusic = [
         ]
     },
 ];
+
 
 
 /////////////////////////////////////
