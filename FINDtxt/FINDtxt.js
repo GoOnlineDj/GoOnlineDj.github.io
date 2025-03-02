@@ -6,6 +6,7 @@ document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
 const id_frame = document.getElementById("_id_frame");
 
 
+
 const appleMusic = [
     {
         artist: "A Great Big World & Christina Aguilera",
@@ -12276,10 +12277,6 @@ const appleMusic = [
             {
                 title: "Been Pretty",
                 src: "https://embed.music.apple.com/us/music-video/been-pretty/1749150442"
-            },
-            {
-                title: "Skin Out Di Red",
-                src: "https://embed.music.apple.com/us/music-video/skin-out-di-red/1736592821"
             },
             {
                 title: "Pon Mi Sneakers",

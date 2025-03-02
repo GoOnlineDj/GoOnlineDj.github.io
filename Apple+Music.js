@@ -12306,10 +12306,6 @@
                 src: "https://embed.music.apple.com/us/music-video/been-pretty/1749150442"
             },
             {
-                title: "Skin Out Di Red",
-                src: "https://embed.music.apple.com/us/music-video/skin-out-di-red/1736592821"
-            },
-            {
                 title: "Pon Mi Sneakers",
                 src: "https://embed.music.apple.com/us/music-video/pon-mi-sneakers/1708612632"
             },
