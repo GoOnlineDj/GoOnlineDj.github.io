@@ -733,6 +733,20 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Bas & J. Cole",
+        birthdays: [{ month: "May", day: 27, year: 1987 }, { month: "January", day: 28, year: 1985 }],
+        songs: [
+            {
+                title: "Passport Bros",
+                src: "https://embed.music.apple.com/us/music-video/passport-bros/1698321197"
+            },
+            {
+                title: "The Jackie (feat. Lil Tjay)",
+                src: "https://embed.music.apple.com/us/music-video/the-jackie-feat-lil-tjay/1574968972"
+            },
+        ]
+    },
+    {
         artist: "Bea Miller",
         birthday: [{ month: "February", day: 7, year: 1999 }],
         songs: [
@@ -1552,6 +1566,46 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Bounty Killer",
+        birthday: [{ month: "June", day: 12, year: 1972 }],
+        songs: [
+            {
+                title: "Inner Voice",
+                src: "https://embed.music.apple.com/us/music-video/inner-voice/1795971455"
+            },
+            {
+                title: "Every Night",
+                src: "https://embed.music.apple.com/us/music-video/every-night/1779145669"
+            },
+            {
+                title: "Cock Up",
+                src: "https://embed.music.apple.com/us/music-video/cock-up/1651507367"
+            },
+            {
+                title: "Change Like the Weather",
+                src: "https://embed.music.apple.com/us/music-video/change-like-the-weather/300227651"
+            },
+        ]
+    },
+    {
+        artist: "Bounty Killer & Brian & Tony Gold",
+        songs: [
+            {
+                title: "Things You Do (Official Music Video)",
+                src: "https://embed.music.apple.com/us/music-video/things-you-do-official-music-video/1607785966"
+            },
+        ]
+    },
+    {
+        artist: "Bounty Killer & Cham",
+        songs: [
+            {
+                title: "Time Bomb",
+                src: "https://embed.music.apple.com/us/music-video/time-bomb/1708958805"
+            },
+        ]
+    },
+    {
         artist: "Bow Wow",
         birthday: [{ month: "March", day: 9, year: 1987 }],
         songs: [
@@ -1576,6 +1630,16 @@ const appleMusic = [
             {
                 title: "Girlfriend",
                 src: "https://embed.music.apple.com/us/music-video/girlfriend/268589422"
+            },
+        ]
+    },
+    {
+        artist: "Brad Paisley",
+        birthday: [{ month: "October", day: 28, year: 1972 }],
+        songs: [
+            {
+                title: "Remind Me (with Carrie Underwood)",
+                src: "https://embed.music.apple.com/us/music-video/remind-me-with-carrie-underwood/453490819"
             },
         ]
     },
@@ -1727,6 +1791,15 @@ const appleMusic = [
             {
                 title: "Ms. New Booty",
                 src: "https://embed.music.apple.com/us/music-video/ms-new-booty/719632692"
+            },
+        ]
+    },
+    {
+        artist: "Bugle, Julian Marley & Bounty Killer",
+        songs: [
+            {
+                title: "Time Is of Essence",
+                src: "https://embed.music.apple.com/us/music-video/time-is-of-essence/1760356117"
             },
         ]
     },
@@ -1965,12 +2038,143 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Caribbean Connection, Angel y Khriz & Wayne Wonder",
+        songs: [
+            {
+                title: "Dance",
+                src: "https://embed.music.apple.com/us/music-video/dance/1445843624"
+            },
+        ]
+    },
+    {
         artist: "Carl Thomas",
         birthday: [{ month: "June", day: 15, year: 1972 }],
         songs: [
             {
                 title: "Don't Kiss Me (feat. Snoop Dogg)",
                 src: "https://embed.music.apple.com/us/music-video/dont-kiss-me-feat-snoop-dogg/1445750483"
+            },
+        ]
+    },
+    {
+        artist: "Carrie Underwood",
+        birthday: [{ month: "March", day: 10, year: 1983 }],
+        songs: [
+            {
+                title: "O Holy Night (Live From Carols In The Domain, 2021)",
+                src: "https://embed.music.apple.com/us/music-video/o-holy-night-live-from-carols-in-the-domain-2021/1600740739"
+            },
+            {
+                title: "Silent Night (2021 Opry Live: USO Holiday Special)",
+                src: "https://embed.music.apple.com/us/music-video/silent-night-2021-opry-live-uso-holiday-special/1600753451"
+            },
+            {
+                title: "O Come All Ye Faithful (2021 Santa Claus Parade)",
+                src: "https://embed.music.apple.com/us/music-video/o-come-all-ye-faithful-2021-santa-claus-parade/1600554248"
+            },
+            {
+                title: "Great Is Thy Faithfulness (feat. CeCe Winans) [Performance Video]",
+                src: "https://embed.music.apple.com/us/music-video/great-is-thy-faithfulness-feat-cece-winans-performance/1561397985"
+            },
+            {
+                title: "How Great Thou Art (Performance Video)",
+                src: "https://embed.music.apple.com/us/music-video/how-great-thou-art-performance-video/1561390840"
+            },
+            {
+                title: "Nothing But The Blood Of Jesus",
+                src: "https://embed.music.apple.com/us/music-video/nothing-but-the-blood-of-jesus/1561393890"
+            },
+            {
+                title: "Drinking Alone",
+                src: "https://embed.music.apple.com/us/music-video/drinking-alone/1488030419"
+            },
+            {
+                title: "Mama's Song (Walmart Soundcheck 2009)",
+                src: "https://embed.music.apple.com/us/music-video/mamas-song-walmart-soundcheck-2009/1477564159"
+            },
+            {
+                title: "So Small (Walmart Soundcheck 2009)",
+                src: "https://embed.music.apple.com/us/music-video/so-small-walmart-soundcheck-2009/1477566398"
+            },
+            {
+                title: "Before He Cheats (Walmart Soundcheck 2009)",
+                src: "https://embed.music.apple.com/us/music-video/before-he-cheats-walmart-soundcheck-2009/1477564815"
+            },
+            {
+                title: "All-American Girl (Walmart Soundcheck 2009)",
+                src: "https://embed.music.apple.com/us/music-video/all-american-girl-walmart-soundcheck-2009/1477561474"
+            },
+            {
+                title: "Jesus Take The Wheel (Walmart Soundcheck 2009)",
+                src: "https://embed.music.apple.com/us/music-video/jesus-take-the-wheel-walmart-soundcheck-2009/1467312940"
+            },
+            {
+                title: "Southbound",
+                src: "https://embed.music.apple.com/us/music-video/southbound/1467092018"
+            },
+            {
+                title: "Love Wins",
+                src: "https://embed.music.apple.com/us/music-video/love-wins/1435733789"
+            },
+            {
+                title: "Cry Pretty",
+                src: "https://embed.music.apple.com/us/music-video/cry-pretty/1380458651"
+            },
+            {
+                title: "Heartbeat",
+                src: "https://embed.music.apple.com/us/music-video/heartbeat/1062393150"
+            },
+            {
+                title: "Smoke Break",
+                src: "https://embed.music.apple.com/us/music-video/smoke-break/1032876566"
+            },
+            {
+                title: "Something in the Water",
+                src: "https://embed.music.apple.com/us/music-video/something-in-the-water/934905094"
+            },
+            {
+                title: "Mama's Song",
+                src: "https://embed.music.apple.com/us/music-video/mamas-song/393967660"
+            },
+            {
+                title: "Cowboy Casanova",
+                src: "https://embed.music.apple.com/us/music-video/cowboy-casanova/333703169"
+            },
+            {
+                title: "Last Name",
+                src: "https://embed.music.apple.com/us/music-video/last-name/280391330"
+            },
+            {
+                title: "All-American Girl",
+                src: "https://embed.music.apple.com/us/music-video/all-american-girl/274141746"
+            },
+            {
+                title: "Before He Cheats (Live)",
+                src: "https://embed.music.apple.com/us/music-video/before-he-cheats-live/1070312046"
+            },
+            {
+                title: "Don't Forget to Remember Me",
+                src: "https://embed.music.apple.com/us/music-video/dont-forget-to-remember-me/1277927064"
+            },
+            {
+                title: "Jesus, Take the Wheel",
+                src: "https://embed.music.apple.com/us/music-video/jesus-take-the-wheel/1369386812"
+            },
+            {
+                title: "Jesus, Take The Wheel (Sessions @ AOL 2005)",
+                src: "https://embed.music.apple.com/us/music-video/jesus-take-the-wheel-sessions-aol-2005/1609841768"
+            },
+            {
+                title: "Some Hearts (Sessions @ AOL 2005)",
+                src: "https://embed.music.apple.com/us/music-video/some-hearts-sessions-aol-2005/1609835468"
+            },
+            {
+                title: "Wasted (Sessions @ AOL 2005)",
+                src: "https://embed.music.apple.com/us/music-video/wasted-sessions-aol-2005/1609841656"
+            },
+            {
+                title: "Inside Your Heaven (Sessions @ AOL 2005)",
+                src: "https://embed.music.apple.com/us/music-video/inside-your-heaven-sessions-aol-2005/1538371048"
             },
         ]
     },
@@ -2360,6 +2564,16 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Christopher Martin",
+        birthday: [{ month: "February", day: 14, year: 1987 }],
+        songs: [
+            {
+                title: "It's Guaranteed (feat. Bounty Killer & Busy Signal) [Remix]",
+                src: "https://embed.music.apple.com/us/music-video/its-guaranteed-feat-bounty-killer-busy-signal-remix/1699315402"
+            },
+        ]
+    },
+    {
         artist: "Ciara",
         birthday: [{ month: "October", day: 25, year: 1985 }],
         songs: [
@@ -2489,6 +2703,26 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Cocoa Tea",
+        birthday: [{ month: "September", day: 3, year: 1959 }],
+        songs: [
+            {
+                title: "New Immigration Law",
+                src: "https://embed.music.apple.com/us/music-video/new-immigration-law/1445849145" 
+            }
+        ]
+    },
+    {
+        artist: "Cody Johnson",
+        birthday: [{ month: "May", day: 21, year: 1987 }],
+        songs: [
+            {
+                title: "I'm Gonna Love You (with Carrie Underwood)",
+                src: "https://embed.music.apple.com/us/music-video/im-gonna-love-you-with-carrie-underwood/1769479661"
+            }
+        ]
+    },
+    {
         artist: "Coi Leray",
         birthday: [{ month: "May", day: 11, year: 1997 }],
         songs: [
@@ -2522,6 +2756,15 @@ const appleMusic = [
             {
                 title: "Light It Up (KE Remix) [feat. Snoop Dogg]",
                 src: "https://embed.music.apple.com/us/music-video/light-it-up-ke-remix-feat-snoop-dogg/1286217582"
+            }
+        ]
+    },
+    {
+        artist: "Collie Buddz, Bounty Killer & Massive B",
+        songs: [
+            {
+                title: "Twisted Agenda",
+                src: "https://embed.music.apple.com/us/music-video/twisted-agenda/1606036310"
             }
         ]
     },
@@ -2747,6 +2990,15 @@ const appleMusic = [
             {
                 title: "Krack the Gates (feat. Dojia V & Mozzy)",
                 src: "https://embed.music.apple.com/us/music-video/krack-the-gates-feat-dojia-v-mozzy/1640866307"
+            },
+        ]
+    },
+    {
+        artist: "Cuban Deejay$, Black Box, Mr. Vegas & DJ Shorty",
+        songs: [
+            {
+                title: "Ride On Time",
+                src: "https://embed.music.apple.com/us/music-video/ride-on-time/1663925118"
             },
         ]
     },
@@ -3113,6 +3365,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Dexta Daps, Cham & Bounty Killer",
+        songs: [
+            {
+                title: "Slow Motion",
+                src: "https://embed.music.apple.com/us/music-video/slow-motion/1718325189"
+            },
+        ]
+    },
+    {
         artist: "Diamond D",
         songs: [
             {
@@ -3253,6 +3514,18 @@ const appleMusic = [
                 title: "JADAKISS INTERLUDE (feat. Jadakiss)",
                 src: "https://embed.music.apple.com/us/music-video/jadakiss-interlude-feat-jadakiss/1643168382"
             },
+            {
+                title: "THESE STREETS KNOW MY NAME (feat. Skillibeng, Buju Banton, Capleton, Bounty Killer & Sizzla)",
+                src: "https://embed.music.apple.com/us/music-video/these-streets-know-my-name-feat-skillibeng-buju-banton/1642068836"
+            },
+            {
+                title: "Holy Mountain (feat. Buju Banton, Sizzla, Mavado & 070 Shake)",
+                src: "https://embed.music.apple.com/us/music-video/holy-mountain-feat-buju-banton-sizzla-mavado-070-shake/1463900664"
+            },
+            {
+                title: "(Intro) I'm so Grateful [feat. Sizzla]",
+                src: "https://embed.music.apple.com/us/music-video/intro-im-so-grateful-feat-sizzla/1251751738"
+            },
         ]
     },
     {
@@ -3262,6 +3535,15 @@ const appleMusic = [
                 title: "We Takin Over (Extended Version)",
                 src: "https://embed.music.apple.com/us/music-video/we-takin-over-extended-version/251136698"
             }
+        ]
+    },
+    {
+        artist: "Dj Norie, Shaggy & Wayne Wonder",
+        songs: [
+            {
+                title: "The One",
+                src: "https://embed.music.apple.com/us/music-video/the-one/1733719695"
+            },
         ]
     },
     {
@@ -3504,6 +3786,24 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Dreamville", 
+        songs: [
+            {
+                title: "Down Bad (feat. JID, Bas, J. Cole, EARTHGANG & Young Nudy)",
+                src: "https://embed.music.apple.com/us/music-video/down-bad-feat-jid-bas-j-cole-earthgang-young-nudy/1484370652"
+            }
+        ]
+    },
+    {
+        artist: "Dreamville, JID & J. Cole", 
+        songs: [
+            {
+                title: "Stick (feat. Kenny Mason & Sheck Wes)",
+                src: "https://embed.music.apple.com/us/music-video/stick-feat-kenny-mason-sheck-wes/1635426422"
+            }
+        ]
+    },
+    {
         artist: "Drewski",
         birthday: [{ month: "August", day: 22, year: 1987 }],
         songs: [
@@ -3587,6 +3887,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "E-Dee",
+        songs: [
+            {
+                title: "Needed Me (alone) [feat. Wayne Wonder]",
+                src: "https://embed.music.apple.com/us/music-video/needed-me-alone-feat-wayne-wonder/1536016757"
+            },
+        ]
+    },
+    {
         artist: "EARTHGANG & Musiq Soulchild",
         songs: [
             {
@@ -3602,6 +3911,15 @@ const appleMusic = [
             {
                 title: "Right Now",
                 src: "https://embed.music.apple.com/us/music-video/right-now/1567072732"
+            },
+        ]
+    },
+    {
+        artist: "Elbizzle Tha Flame Spitta",
+        songs: [
+            {
+                title: "Power of She (feat. Sizzla Kalonji)",
+                src: "https://embed.music.apple.com/us/music-video/power-of-she-feat-sizzla-kalonji/1669687834"
             },
         ]
     },
@@ -3667,6 +3985,15 @@ const appleMusic = [
             {
                 title: "Power",
                 src: "https://embed.music.apple.com/us/music-video/power/1514102333"
+            }
+        ]
+    },
+    {
+        artist: "Elvis Presley, Post Malone, Shawn Mendes, Darius Rucker, Blake Shelton & Carrie Underwood",
+        songs: [
+            {
+                title: "If I Can Dream (from the NBC Elvis All-Star Tribute)",
+                src: "https://embed.music.apple.com/us/music-video/if-i-can-dream-from-the-nbc-elvis-all-star-tribute/1451268268"
             }
         ]
     },
@@ -3765,6 +4092,15 @@ const appleMusic = [
                 title: "The Streets",
                 src: "https://embed.music.apple.com/us/music-video/the-streets/1793242153"
             },
+        ]
+    },
+    {
+        artist: "Esco",
+        songs: [
+            {
+                title: "Bounce Suh Riddim Medley (feat. Bounty Killer, Pamputtae, Iyara & Sanjay & Shelly Belly)",
+                src: "https://embed.music.apple.com/us/music-video/bounce-suh-riddim-medley-feat-bounty-killer-pamputtae/1445326440"
+            }
         ]
     },
     {
@@ -3942,6 +4278,44 @@ const appleMusic = [
             {
                 title: "Breathe",
                 src: "https://embed.music.apple.com/us/music-video/breathe/265001620"
+            },
+            {
+                title: "American Heart",
+                src: "https://embed.music.apple.com/us/music-video/american-heart/577992838"
+            },
+            {
+                title: "Joy to the World",
+                src: "https://embed.music.apple.com/us/music-video/joy-to-the-world/298883815"
+            },
+            {
+                title: "Just to Hear You Say That You Love Me",
+                src: "https://embed.music.apple.com/us/music-video/just-to-hear-you-say-that-you-love-me/1607495259"
+            },
+            {
+                title: "Free",
+                src: "https://embed.music.apple.com/us/music-video/free/539781026"
+            },
+            {
+                title: "Take Me As I Am",
+                src: "https://embed.music.apple.com/us/music-video/take-me-as-i-am/281897743"
+            },
+            {
+                title: "This Kiss",
+                src: "https://embed.music.apple.com/us/music-video/this-kiss/281882911"
+            },
+            {
+                title: "You Can't Lose Me",
+                src: "https://embed.music.apple.com/us/music-video/you-cant-lose-me/281895256"
+            },
+        ]
+    },
+    {
+        artist: "Faith Hill & Tim McGraw",
+        birthday: [{ month: "September", day: 21, year: 1967 }, { month: "May", day: 1, year: 1967 }],
+        songs: [
+            {
+                title: "Let's Make Love",
+                src: "https://embed.music.apple.com/us/music-video/lets-make-love/1612123842"
             },
         ]
     },
@@ -4415,6 +4789,24 @@ const appleMusic = [
         ]
     },
     {
+        artist: "George Strait",
+        birthday: [{ month: "May", day: 18, year: 1952 }],
+        songs: [
+            {
+                title: "All My Ex's Live In Texas (feat. Jason Aldean, Ray Benson, Kenny Chesney, Eric Church, Sheryl Crow, Vince Gill, Faith Hill, Alan Jackson, Miranda Lambert & Martina McBride) [Live]",
+                src: "https://embed.music.apple.com/us/music-video/all-my-exs-live-in-texas-feat-jason-aldean-ray-benson/1585919003"
+            },
+            {
+                title: "Let's Fall To Pieces Together (feat. Faith Hill) [Live]",
+                src: "https://embed.music.apple.com/us/music-video/lets-fall-to-pieces-together-feat-faith-hill-live/1585918898"
+            },
+            {
+                title: "A Showman's Life (feat. Faith Hill) [Live]",
+                src: "https://embed.music.apple.com/us/music-video/a-showmans-life-feat-faith-hill-live/1585918897"
+            },
+        ]
+    },
+    {
         artist: "Ghostface Killah featuring Jadakiss & Comp",
         songs: [
             {
@@ -4442,6 +4834,15 @@ const appleMusic = [
             {
                 title: "So Anxious",
                 src: "https://embed.music.apple.com/us/music-video/so-anxious/1366594178"
+            },
+        ]
+    },
+    {
+        artist: "Girll Codee",
+        songs: [
+            {
+                title: "Chaa Chaa Chaa (feat. HoodCelebrityy)",
+                src: "https://embed.music.apple.com/us/music-video/chaa-chaa-chaa-feat-hoodcelebrityy/1631463122"
             },
         ]
     },
@@ -4515,6 +4916,10 @@ const appleMusic = [
             {
                 title: "Pissy (feat. Roddy Ricch, Nardo Wick)",
                 src: "https://embed.music.apple.com/us/music-video/pissy-feat-roddy-ricch-nardo-wick/1685383661"
+            },
+            {
+                title: "There I Go (feat. J. Cole & Mike WiLL Made-It)",
+                src: "https://embed.music.apple.com/us/music-video/there-i-go-feat-j-cole-mike-will-made-it/1703158821"
             },
         ]
     },
@@ -5650,6 +6055,34 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Jo Dee Messina",
+        birthday: [{ month: "August", day: 25, year: 1970 }],
+        songs: [
+            {
+                title: "Delicious Surprise (I Believe It)",
+                src: "https://embed.music.apple.com/us/music-video/delicious-surprise-i-believe-it/1659153104"
+            },
+            {
+                title: "Heads Carolina, Tails California",
+                src: "https://embed.music.apple.com/us/music-video/heads-carolina-tails-california/1642960491"
+            },
+            {
+                title: "My Give a Damn's Busted",
+                src: "https://embed.music.apple.com/us/music-video/my-give-a-damns-busted/1659366439"
+            },
+        ]
+    },
+    {
+        artist: "Jo Dee Messina & Tim McGraw",
+        birthday: [{ month: "August", day: 25, year: 1970 }, { month: "May", day: 1, year: 1967 }],
+        songs: [
+            {
+                title: "Bring On the Rain",
+                src: "https://embed.music.apple.com/us/music-video/bring-on-the-rain/1636946390"
+            },
+        ]
+    },
+    {
         artist: "Jodeci",
         birthday: [{ month: "September", day: 29, year: 1969 },{ month: "July", day: 23, year: 1971 },{ month: "September", day: 2, year: 1969 },{ month: "June", day: 10, year: 1971 }],
         songs: [
@@ -6231,6 +6664,110 @@ const appleMusic = [
             {
                 title: "Milkshake",
                 src: "https://embed.music.apple.com/us/music-video/milkshake/279013019"
+            },
+        ]
+    },
+    {
+        artist: "Kelly Clarkson",
+        birthday: [{ month: "April", day: 24, year: 1982 }],
+        songs: [
+            {
+                title: "Love So Soft",
+                src: "https://embed.music.apple.com/us/music-video/love-so-soft/1282105737"
+            },
+            {
+                title: "Meaning of Life",
+                src: "https://embed.music.apple.com/us/music-video/meaning-of-life/1363191171"
+            },
+            {
+                title: "Invincible",
+                src: "https://embed.music.apple.com/us/music-video/invincible/1015646529"
+            },
+            {
+                title: "Heartbeat Song",
+                src: "https://embed.music.apple.com/us/music-video/heartbeat-song/965068333"
+            },
+            {
+                title: "Wrapped in Red",
+                src: "https://embed.music.apple.com/us/music-video/wrapped-in-red/944043499"
+            },
+            {
+                title: "Silent Night (feat. Reba McEntire & Trisha Yearwood)",
+                src: "https://embed.music.apple.com/us/music-video/silent-night-feat-reba-mcentire-trisha-yearwood/774656543"
+            },
+            {
+                title: "Underneath the Tree",
+                src: "https://embed.music.apple.com/us/music-video/underneath-the-tree/1282459559"
+            },
+            {
+                title: "Tie It Up",
+                src: "https://embed.music.apple.com/us/music-video/tie-it-up/688803460"
+            },
+            {
+                title: "People Like Us",
+                src: "https://embed.music.apple.com/us/music-video/people-like-us/656269509"
+            },
+            {
+                title: "Don't Rush (CMA Awards Performance 2012)",
+                src: "https://embed.music.apple.com/us/music-video/dont-rush-cma-awards-performance-2012/1538915241"
+            },
+            {
+                title: "Catch My Breath",
+                src: "https://embed.music.apple.com/us/music-video/catch-my-breath/578763845"
+            },
+            {
+                title: "Stronger (What Doesn't Kill You)",
+                src: "https://embed.music.apple.com/us/music-video/stronger-what-doesnt-kill-you/489257593"
+            },
+            {
+                title: "Mr. Know It All",
+                src: "https://embed.music.apple.com/us/music-video/mr-know-it-all/468219024"
+            },
+            {
+                title: "Already Gone",
+                src: "https://embed.music.apple.com/us/music-video/already-gone/325439418"
+            },
+            {
+                title: "I Do Not Hook Up",
+                src: "https://embed.music.apple.com/us/music-video/i-do-not-hook-up/313398520"
+            },
+            {
+                title: "Because of You",
+                src: "https://embed.music.apple.com/us/music-video/because-of-you/548917935"
+            },
+            {
+                title: "Behind These Hazel Eyes",
+                src: "https://embed.music.apple.com/us/music-video/behind-these-hazel-eyes/327233958"
+            },
+            {
+                title: "Breakaway",
+                src: "https://embed.music.apple.com/us/music-video/breakaway/277266922"
+            },
+            {
+                title: "Before Your Love",
+                src: "https://embed.music.apple.com/us/music-video/before-your-love/332798611"
+            },
+            {
+                title: "A Moment Like This",
+                src: "https://embed.music.apple.com/us/music-video/a-moment-like-this/452720145"
+            },
+            {
+                title: "The Trouble With Love Is",
+                src: "https://embed.music.apple.com/us/music-video/the-trouble-with-love-is/993665021"
+            },
+            {
+                title: "Miss Independent",
+                src: "https://embed.music.apple.com/us/music-video/miss-independent/1349410273"
+            },
+        ]
+    },
+    {
+        artist: "Kelly Clarkson & Reba McEntire",
+        birthday: [{ month: "April", day: 24, year: 1982 }, { month: "March", day: 28, year: 1955 }],
+        songs: [
+            {
+                title: "Because of You",
+                src: "https://embed.music.apple.com/us/music-video/because-of-you/1445826412"
             },
         ]
     },
@@ -7104,6 +7641,32 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Luciano",
+        birthday: [{ month: "October", day: 20, year: 1964 }],
+        songs: [
+            {
+                title: "Africa We Love You",
+                src: "https://embed.music.apple.com/us/music-video/africa-we-love-you/1698414282"
+            },
+            {
+                title: "It's Me Again Jah (2022 Version)",
+                src: "https://embed.music.apple.com/us/music-video/its-me-again-jah-2022-version/1604637975"
+            },
+            {
+                title: "Serve Jah, Rototom Sunsplash, Benicasim, 2017 (En Vivo)",
+                src: "https://embed.music.apple.com/us/music-video/serve-jah-rototom-sunsplash-benicasim-2017-en-vivo/1596220280"
+            },
+            {
+                title: "The Music (feat. Jesse Royal)",
+                src: "https://embed.music.apple.com/us/music-video/the-music-feat-jesse-royal/1560696529"
+            },
+            {
+                title: "In the Name of Love",
+                src: "https://embed.music.apple.com/us/music-video/in-the-name-of-love/1091608801"
+            },
+        ]
+    },
+    {
         artist: "Ludacris",
         birthday: [{ month: "September", day: 11, year: 1977 }],
         songs: [
@@ -7203,6 +7766,15 @@ const appleMusic = [
             {
                 title: "Material Girl",
                 src: "https://embed.music.apple.com/us/music-video/material-girl/453875194"
+            },
+        ]
+    },
+    {
+        artist: "Maestro Don",
+        songs: [
+            {
+                title: "Pioneer (feat. Bounty Killer)",
+                src: "https://embed.music.apple.com/us/music-video/pioneer-feat-bounty-killer/1515512861"
             },
         ]
     },
@@ -7405,6 +7977,15 @@ const appleMusic = [
             {
                 title: "Main One (feat. Tyga)",
                 src: "https://embed.music.apple.com/us/music-video/main-one-feat-tyga/1700754718"
+            },
+        ]
+    },
+    {
+        artist: "Mark Wonder",
+        songs: [
+            {
+                title: "Guiding Light (feat. Sizzla)",
+                src: "https://embed.music.apple.com/us/music-video/guiding-light-feat-sizzla/1560703341"
             },
         ]
     },
@@ -8094,6 +8675,10 @@ const appleMusic = [
                 title: "Said Sum (feat. City Girls & DaBaby) [Remix]",
                 src: "https://embed.music.apple.com/us/music-video/said-sum-feat-city-girls-dababy-remix/1536589483"
             },
+            {
+                title: "Say Na (feat. J. Cole)",
+                src: "https://embed.music.apple.com/us/music-video/say-na-feat-j-cole/1441980331"
+            },
         ]
     },
     {
@@ -8117,6 +8702,15 @@ const appleMusic = [
             {
                 title: "This Is How We Do It (Edited Version)",
                 src: "https://embed.music.apple.com/us/music-video/this-is-how-we-do-it-edited-version/1445860722"
+            },
+        ]
+    },
+    {
+        artist: "Morgan Heritage",
+        songs: [
+            {
+                title: "Who Deh Like U (feat. Bounty Killer, Stonebwoy & Cham)",
+                src: "https://embed.music.apple.com/us/music-video/who-deh-like-u-feat-bounty-killer-stonebwoy-cham/1678400878"
             },
         ]
     },
@@ -8164,6 +8758,78 @@ const appleMusic = [
             {
                 title: "Excuse Me (feat. Too $hort)",
                 src: "https://embed.music.apple.com/us/music-video/excuse-me-feat-too-%24hort/1439252027"
+            },
+        ]
+    },
+    {
+        artist: "Mr. Vegas",
+        birthday: [{ month: "December", day: 29, year: 1974 }],
+        songs: [
+            {
+                title: "Alive (Year 2025)",
+                src: "https://embed.music.apple.com/us/music-video/alive-year-2025/1792432304"
+            },
+            {
+                title: "Happy Day",
+                src: "https://embed.music.apple.com/us/music-video/happy-day/1772148759"
+            },
+            {
+                title: "Dugu Dugu 2",
+                src: "https://embed.music.apple.com/us/music-video/dugu-dugu-2/1724449754"
+            },
+            {
+                title: "Money Mike Walk",
+                src: "https://embed.music.apple.com/us/music-video/money-mike-walk/1719652928"
+            },
+            {
+                title: "Love Has No Color",
+                src: "https://embed.music.apple.com/us/music-video/love-has-no-color/1714518598"
+            },
+            {
+                title: "Zodiac Whine",
+                src: "https://embed.music.apple.com/us/music-video/zodiac-whine/1717075986"
+            },
+            {
+                title: "God out (Enuh)",
+                src: "https://embed.music.apple.com/us/music-video/god-out-enuh/1704887661"
+            },
+            {
+                title: "Slippers and Socks",
+                src: "https://embed.music.apple.com/us/music-video/slippers-and-socks/1634071545"
+            },
+            {
+                title: "Driva",
+                src: "https://embed.music.apple.com/us/music-video/driva/1631645088"
+            },
+            {
+                title: "Beautiful Life (Clean)",
+                src: "https://embed.music.apple.com/us/music-video/beautiful-life-clean/674694334"
+            },
+            {
+                title: "Sweet Jamaica (feat. Shaggy, Josey Wales) [Clean]",
+                src: "https://embed.music.apple.com/us/music-video/sweet-jamaica-feat-shaggy-josey-wales-clean/550360902"
+            },
+            {
+                title: "Bruk It Down / Party Tun Up (feat. Alison Hinds)",
+                src: "https://embed.music.apple.com/us/music-video/bruk-it-down-party-tun-up-feat-alison-hinds/543635923"
+            },
+        ]
+    },
+    {
+        artist: "Mr. Vegas, DJ Rony & Topo La Maskara",
+        songs: [
+            {
+                title: "Let's Dance",
+                src: "https://embed.music.apple.com/us/music-video/lets-dance/1659225335"
+            },
+        ]
+    },
+    {
+        artist: "Mr. Vegas, Kaka Highflames & Laa Lee",
+        songs: [
+            {
+                title: "Money Mike Ii",
+                src: "https://embed.music.apple.com/us/music-video/money-mike-ii/1727177195"
             },
         ]
     },
@@ -8502,6 +9168,15 @@ const appleMusic = [
         ]
     },
     {
+        artist: "NEEDTOBREATHE",
+        songs: [
+            {
+                title: "I Wanna Remember (feat. Carrie Underwood)",
+                src: "https://embed.music.apple.com/us/music-video/i-wanna-remember-feat-carrie-underwood/1571667921"
+            },
+        ]
+    },
+    {
         artist: "NEIKED, Mae Muller & Polo G",
         songs: [
             {
@@ -8760,6 +9435,15 @@ const appleMusic = [
             {
                 title: "COLD GAME",
                 src: "https://embed.music.apple.com/us/music-video/cold-game/1692864449"
+            },
+        ]
+    },
+    {
+        artist: "Noise Cans & Lady Bee",
+        songs: [
+            {
+                title: "Bucka (feat. Mr. Vegas)",
+                src: "https://embed.music.apple.com/us/music-video/bucka-feat-mr-vegas/1522895209"
             },
         ]
     },
@@ -9450,6 +10134,168 @@ const appleMusic = [
             {
                 title: "Danger (feat. Nitty Scott & Alexandra Stan)",
                 src: "https://embed.music.apple.com/us/music-video/danger-feat-nitty-scott-alexandra-stan/1503515247"
+            },
+        ]
+    },
+    {
+        artist: "Reba McEntire",
+        birthday: [{ month: "March", day: 28, year: 1955 }],
+        songs: [
+            {
+                title: "Softly And Tenderly (feat. Kelly Clarkson & Trisha Yearwood) [Live At Ryman Auditorium, Nashville, TN / 2017]",
+                src: "https://embed.music.apple.com/us/music-video/softly-and-tenderly-feat-kelly-clarkson-trisha/1613754053"
+            },
+            {
+                title: "The Star Spangled Banner (Live from Super Bowl LVIII)",
+                src: "https://embed.music.apple.com/us/music-video/the-star-spangled-banner-live-from-super-bowl-lviii/1730397116"
+            },
+            {
+                title: "Seven Minutes In Heaven",
+                src: "https://embed.music.apple.com/us/music-video/seven-minutes-in-heaven/1710606363"
+            },
+            {
+                title: "I Needed Christmas (2022 Version)",
+                src: "https://embed.music.apple.com/us/music-video/i-needed-christmas-2022-version/1659955559"
+            },
+            {
+                title: "Jesus Loves Me (Live At Ryman Auditorium, Nashville, TN / 2017)",
+                src: "https://embed.music.apple.com/us/music-video/jesus-loves-me-live-at-ryman-auditorium-nashville-tn-2017/1654809979"
+            },
+            {
+                title: "It Is Well (Live At Ryman Auditorium, Nashville, TN / 2017)",
+                src: "https://embed.music.apple.com/us/music-video/it-is-well-live-at-ryman-auditorium-nashville-tn-2017/1651686822"
+            },
+            {
+                title: "God And My Girlfriends (Live At Ryman Auditorium, Nashville, TN / 2017)",
+                src: "https://embed.music.apple.com/us/music-video/god-and-my-girlfriends-live-at-ryman-auditorium/1645364591"
+            },
+            {
+                title: "Just Like Them Horses (Live At Ryman Auditorium, Nashville, TN, 2017)",
+                src: "https://embed.music.apple.com/us/music-video/just-like-them-horses-live-at-ryman-auditorium-nashville/1632334228"
+            },
+            {
+                title: "Swing Low, Sweet Chariot (Live At Ryman Auditorium, Nashville, TN, 2017)",
+                src: "https://embed.music.apple.com/us/music-video/swing-low-sweet-chariot-live-at-ryman-auditorium-nashville/1629140581"
+            },
+            {
+                title: "The Lord's Prayer (Live In Nashville, TN / 2021)",
+                src: "https://embed.music.apple.com/us/music-video/the-lords-prayer-live-in-nashville-tn-2021/1621339168"
+            },
+            {
+                title: "Because He Lives (Live In Nashville, TN / 2021)",
+                src: "https://embed.music.apple.com/us/music-video/because-he-lives-live-in-nashville-tn-2021/1619017005"
+            },
+            {
+                title: "Back To God (Live At Ryman Auditorium, Nashville, TN / 2017)",
+                src: "https://embed.music.apple.com/us/music-video/back-to-god-live-at-ryman-auditorium-nashville-tn-2017/1616918777"
+            },
+            {
+                title: "How Great Thou Art (Live In Nashville, TN, 2021)",
+                src: "https://embed.music.apple.com/us/music-video/how-great-thou-art-live-in-nashville-tn-2021/1615855090"
+            },
+            {
+                title: "Does He Love You (feat. Dolly Parton) [Revisited]",
+                src: "https://embed.music.apple.com/us/music-video/does-he-love-you-feat-dolly-parton-revisited/1588759764"
+            },
+            {
+                title: "I'm A Survivor (Revisited)",
+                src: "https://embed.music.apple.com/us/music-video/im-a-survivor-revisited/1588147330"
+            },
+            {
+                title: "Rumor Has It (Live From Reba...In Concert, 1990)",
+                src: "https://embed.music.apple.com/us/music-video/rumor-has-it-live-from-reba-in-concert-1990/1528643581"
+            },
+            {
+                title: "Is There Life Out There (Live From The Omaha Civic Center, 1994)",
+                src: "https://embed.music.apple.com/us/music-video/is-there-life-out-there-live-from-the-omaha-civic-center-1994/1528276714"
+            },
+            {
+                title: "Why Haven't I Heard From You (Live From The Omaha Civic Center, 1994)",
+                src: "https://embed.music.apple.com/us/music-video/why-havent-i-heard-from-you-live-from-the-omaha-civic/1523907396"
+            },
+            {
+                title: "What if",
+                src: "https://embed.music.apple.com/us/music-video/what-if/1512028662"
+            },
+            {
+                title: "I'll Fly Away (Live At Ryman Auditorium, Nashville, TN / 2017)",
+                src: "https://embed.music.apple.com/us/music-video/ill-fly-away-live-at-ryman-auditorium-nashville-tn-2017/1625012812"
+            },
+            {
+                title: "Strange (Close Captioned)",
+                src: "https://embed.music.apple.com/us/music-video/strange-close-captioned/1610584589"
+            },
+            {
+                title: "She Thinks His Name Was John",
+                src: "https://embed.music.apple.com/us/music-video/she-thinks-his-name-was-john/1446735021"
+            },
+            {
+                title: "What Do You Say",
+                src: "https://embed.music.apple.com/us/music-video/what-do-you-say/1446732279"
+            },
+            {
+                title: "What If It's You",
+                src: "https://embed.music.apple.com/us/music-video/what-if-its-you/1446739208"
+            },
+            {
+                title: "Forever Love",
+                src: "https://embed.music.apple.com/us/music-video/forever-love/1445856364"
+            },
+            {
+                title: "Take It Back",
+                src: "https://embed.music.apple.com/us/music-video/take-it-back/1445829936"
+            },
+            {
+                title: "I Know How He Feels",
+                src: "https://embed.music.apple.com/us/music-video/i-know-how-he-feels/1445728640"
+            },
+            {
+                title: "The Last One to Know",
+                src: "https://embed.music.apple.com/us/music-video/the-last-one-to-know/1445743835"
+            },
+            {
+                title: "Rumor Has It",
+                src: "https://embed.music.apple.com/us/music-video/rumor-has-it/1445827679"
+            },
+            {
+                title: "Sunday Kind of Love",
+                src: "https://embed.music.apple.com/us/music-video/sunday-kind-of-love/1445827358"
+            },
+            {
+                title: "Till You Love Me",
+                src: "https://embed.music.apple.com/us/music-video/till-you-love-me/1709597632"
+            },
+            {
+                title: "Why Haven't I Heard from You",
+                src: "https://embed.music.apple.com/us/music-video/why-havent-i-heard-from-you/1445848837"
+            },
+            {
+                title: "I'm Gonna Take That Mountain",
+                src: "https://embed.music.apple.com/us/music-video/im-gonna-take-that-mountain/1445849321"
+            },
+            {
+                title: "Is There Life Out There",
+                src: "https://embed.music.apple.com/us/music-video/is-there-life-out-there/1445846430"
+            },
+        ]
+    },
+    {
+        artist: "Reba McEntire & Vince Gill",
+        birthday: [{ month: "March", day: 28, year: 1955 }, { month: "April", day: 12, year: 1957 }],
+        songs: [
+            {
+                title: "The Heart Won't Lie",
+                src: "https://embed.music.apple.com/us/music-video/the-heart-wont-lie/1446858171"
+            },
+        ]
+    },
+    {
+        artist: "Reba McEntire, Trisha Yearwood, Martina McBride & Linda Davis",
+        birthday: [{ month: "March", day: 28, year: 1955 }, { month: "September", day: 19, year: 1964 }, { month: "July", day: 29, year: 1966 }, { month: "November", day: 26, year: 1962 }],
+        songs: [
+            {
+                title: "On My Own",
+                src: "https://embed.music.apple.com/us/music-video/on-my-own/1445727457"
             },
         ]
     },
@@ -10410,6 +11256,29 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Sizzla",
+        birthday: [{ month: "April", day: 17, year: 1976 }],
+        songs: [
+            {
+                title: "Glory & Honor",
+                src: "https://embed.music.apple.com/us/music-video/glory-honor/1727740821"
+            },
+            {
+                title: "Crown on Your Head",
+                src: "https://embed.music.apple.com/us/music-video/crown-on-your-head/1607656913"
+            },
+        ]
+    },
+    {
+        artist: "Sizzla, Chino Mcgregor, Tarrus Riley & Dre Island",
+        songs: [
+            {
+                title: "Every Nation (XTM.Nation)",
+                src: "https://embed.music.apple.com/us/music-video/every-nation-xtm-nation/1718292390"
+            },
+        ]
+    },
+    {
         artist: "Skilla Baby",
         birthday: [{ month: "October", day: 2, year: 1998 }],
         songs: [
@@ -10458,6 +11327,15 @@ const appleMusic = [
             {
                 title: "I Run",
                 src: "https://embed.music.apple.com/us/music-video/i-run/303540834"
+            },
+        ]
+    },
+    {
+        artist: "Sly & Robbie",
+        songs: [
+            {
+                title: "Make a Change (feat. Luciano)",
+                src: "https://embed.music.apple.com/us/music-video/make-a-change-feat-luciano/1718300074"
             },
         ]
     },
@@ -10925,6 +11803,18 @@ const appleMusic = [
                 title: "Revolving door",
                 src: "https://embed.music.apple.com/us/music-video/revolving-door/1797539454" 
             },
+            {
+                title: "greedy",
+                src: "https://embed.music.apple.com/us/music-video/greedy/1707092755"
+            },
+            {
+                title: "she's all i wanna be",
+                src: "https://embed.music.apple.com/us/music-video/shes-all-i-wanna-be/1609138754"
+            },
+            {
+                title: "bad ones",
+                src: "https://embed.music.apple.com/us/music-video/bad-ones/1560011411"
+            },
         ]
     },
     {
@@ -11336,6 +12226,93 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Tim McGraw",
+        birthday: [{ month: "May", day: 1, year: 1967 }],
+        songs: [
+            {
+                title: "Meanwhile Back At Mama's (Director's Cut) [feat. Faith Hill]",
+                src: "https://embed.music.apple.com/us/music-video/meanwhile-back-at-mamas-directors-cut-feat-faith-hill/1467930770"
+            },
+        ]
+    },
+    {
+        artist: "Tim McGraw & Faith Hill",
+        birthday: [{ month: "May", day: 1, year: 1967 }, { month: "September", day: 21, year: 1967 }],
+        songs: [
+            {
+                title: "The Rest of Our Life",
+                src: "https://embed.music.apple.com/us/music-video/the-rest-of-our-life/1293453120"
+            },
+            {
+                title: "Speak to a Girl",
+                src: "https://embed.music.apple.com/us/music-video/speak-to-a-girl/1243861524"
+            },
+        ]
+    },
+    {
+        artist: "Tina (Hoodcelebrityy)",
+        birthday: [{ month: "July", day: 5, year: 1991 }],
+        songs: [
+            {
+                title: "Hurt Inside",
+                src: "https://embed.music.apple.com/us/music-video/hurt-inside/1780626235"
+            },
+            {
+                title: "Roses",
+                src: "https://embed.music.apple.com/us/music-video/roses/1765563175"
+            },
+            {
+                title: "Lover Man",
+                src: "https://embed.music.apple.com/us/music-video/lover-man/1763724569"
+            },
+            {
+                title: "Pressure",
+                src: "https://embed.music.apple.com/us/music-video/pressure/1755468341"
+            },
+            {
+                title: "Funny Funny Funny (Intro)",
+                src: "https://embed.music.apple.com/us/music-video/funny-funny-funny-intro/1753137310"
+            },
+            {
+                title: "Been Pretty",
+                src: "https://embed.music.apple.com/us/music-video/been-pretty/1749150442"
+            },
+            {
+                title: "Skin Out Di Red",
+                src: "https://embed.music.apple.com/us/music-video/skin-out-di-red/1736592821"
+            },
+            {
+                title: "Pon Mi Sneakers",
+                src: "https://embed.music.apple.com/us/music-video/pon-mi-sneakers/1708612632"
+            },
+            {
+                title: "Hype Me Up",
+                src: "https://embed.music.apple.com/us/music-video/hype-me-up/1643001083"
+            },
+            {
+                title: "Champagne",
+                src: "https://embed.music.apple.com/us/music-video/champagne/1566605495"
+            },
+            {
+                title: "Inside",
+                src: "https://embed.music.apple.com/us/music-video/inside/1454583327"
+            },
+            {
+                title: "Walking Trophy",
+                src: "https://embed.music.apple.com/us/music-video/walking-trophy/1383556508"
+            },
+        ]
+    },
+    {
+        artist: "Tina (Hoodcelebrityy) & Shatta Wale",
+        songs: [
+            {
+                title: "YKTV (You Know the Vibes)",
+                src: "https://embed.music.apple.com/us/music-video/yktv-you-know-the-vibes/1716552670"
+            },
+        ]
+    },
+    {
         artist: "Tinashe",
         birthday: [{ month: "February", day: 6, year: 1993 }],
         songs: [
@@ -11434,6 +12411,16 @@ const appleMusic = [
             {
                 title: "ACTIN UP",
                 src: "https://embed.music.apple.com/us/music-video/actin-up/1795669278"
+            },
+        ]
+    },
+    {
+        artist: "Tony Bennett & Faith Hill",
+        birthday: [{ month: "August", day: 3, year: 1926 }, { month: "September", day: 21, year: 1967 }],
+        songs: [
+            {
+                title: "The Way You Look Tonight (from Duets II: The Great Performances)",
+                src: "https://embed.music.apple.com/us/music-video/the-way-you-look-tonight-from-duets-ii-the/1280870538"
             },
         ]
     },
@@ -11567,6 +12554,15 @@ const appleMusic = [
             {
                 title: "TOPIA TWINS (feat. Rob49 & 21 Savage)",
                 src: "https://embed.music.apple.com/us/music-video/topia-twins-feat-rob49-21-savage/1724410874"
+            },
+        ]
+    },
+    {
+        artist: "Trensettahs Sound System",
+        songs: [
+            {
+                title: "La Fiebre (feat. Sizzla & Zalama Crew)",
+                src: "https://embed.music.apple.com/us/music-video/la-fiebre-feat-sizzla-zalama-crew/1670314650"
             },
         ]
     },
@@ -11933,11 +12929,44 @@ const appleMusic = [
         ]
     },
     {
+        artist: "Wale",
+        birthday: [{ month: "September", day: 21, year: 1984 }],
+        songs: [
+            {
+                title: "Poke It Out (feat. J. Cole)",
+                src: "https://embed.music.apple.com/us/music-video/poke-it-out-feat-j-cole/1588942746"
+            },
+        ]
+    },
+    {
         artist: "Walk Off the Earth",
         songs: [
             {
                 title: "Lighters Up (feat. Snoop Dogg)",
                 src: "https://embed.music.apple.com/us/music-video/lighters-up-feat-snoop-dogg/1492824543"
+            },
+        ]
+    },
+    {
+        artist: "Wayne Wonder",
+        birthday: [{ month: "July", day: 26, year: 1972 }],
+        songs: [
+            {
+                title: "Jah Lift Me Up",
+                src: "https://embed.music.apple.com/us/music-video/jah-lift-me-up/1754194150"
+            },
+            {
+                title: "Jah Will Protect Me",
+                src: "https://embed.music.apple.com/us/music-video/jah-will-protect-me/1720832181"
+            },
+        ]
+    },
+    {
+        artist: "Wayne Wonder & DJ Kamar",
+        songs: [
+            {
+                title: "Tun Up",
+                src: "https://embed.music.apple.com/us/music-video/tun-up/1758109546"
             },
         ]
     },
@@ -12087,6 +13116,10 @@ const appleMusic = [
             {
                 title: "Who Do You Love? (feat. Drake)",
                 src: "https://embed.music.apple.com/us/music-video/who-do-you-love-feat-drake/1444343797"
+            },
+            {
+                title: "Scared Money (feat. J. Cole & Moneybagg Yo)",
+                src: "https://embed.music.apple.com/us/music-video/scared-money-feat-j-cole-moneybagg-yo/1607908984"
             },
         ]
     },
