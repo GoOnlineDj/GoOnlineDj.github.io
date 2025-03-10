@@ -15117,7 +15117,7 @@ function handleLetter(value) {
     frame.innerHTML = ''; // Clear previous content
     if (artists.length > 0) {
         artists.forEach(artist => {
-            const artistElement = document.createElement('h4');
+            const artistElement = document.createElement('p');
             artistElement.innerHTML = artist.artist;
             artistElement.addEventListener('click', () => listArtistSongs(artist.songs));
             frame.appendChild(artistElement);
@@ -15133,7 +15133,7 @@ function handleNumber(value) {
     frame.innerHTML = ''; // Clear previous content
     if (artists.length > 0) {
         artists.forEach(artist => {
-            const artistElement = document.createElement('h4');
+            const artistElement = document.createElement('p');
             artistElement.innerHTML = artist.artist;
             artistElement.addEventListener('click', () => listArtistSongs(artist.songs));
             frame.appendChild(artistElement);
