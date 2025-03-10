@@ -9,12 +9,12 @@ body {
 
 
 #_id_frame {
-    align-content: khtml-center;
-    align-content: o-center;
-    align-content: ms-center;
-    align-content: moz-center;
+    align-content: center;
     align-content: webkit-center;
-    align-content: center;          
+    align-content: moz-center;
+    align-content: ms-center;
+    align-content: o-center;
+    align-content: khtml-center;       
 }
 
 p {
