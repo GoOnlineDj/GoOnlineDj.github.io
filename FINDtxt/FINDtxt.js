@@ -15048,7 +15048,7 @@ observer.observe(document.body, { childList: true, subtree: true });
 function logArtistNames(appleMusic) {
     const id_frame = document.getElementById('_id_frame');
     appleMusic.forEach(artist => {
-        const artistElement = document.createElement('h4');
+        const artistElement = document.createElement('p');
         artistElement.innerHTML = artist.artist;
         artistElement.addEventListener('click', () => {
             listArtistSongs(artist.songs);
@@ -15063,7 +15063,7 @@ function listArtistSongs(songs) {
     const id_frame = document.getElementById('_id_frame');
     id_frame.innerHTML = ''; // Clear previous content
     songs.forEach(song => { // List all songs
-        const songElement = document.createElement('h4');
+        const songElement = document.createElement('p');
         console.log(song.title);
         songElement.innerHTML = song.title;
         songElement.addEventListener('click', () => {
