@@ -16,3 +16,10 @@ body {
     align-content: webkit-center;
     align-content: center;          
 }
+
+p {
+    text-align: center;
+    border: 3px solid green;
+    margin: 0;
+    padding: 0;
+}
