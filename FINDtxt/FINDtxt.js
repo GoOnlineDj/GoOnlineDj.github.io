@@ -2958,10 +2958,6 @@ const appleMusic = [
                 src: "https://embed.music.apple.com/us/music-video/majesty-where-we-gonna-take-it/1598206731"
             },
             {
-                title: "When We Move (feat. Black Thought & Seun Kuti)",
-                src: "https://embed.music.apple.com/us/music-video/when-we-move-feat-black-thought-seun-kuti/1587067079"
-            },
-            {
                 title: "Imagine (feat. PJ)",
                 src: "https://embed.music.apple.com/us/music-video/imagine-feat-pj/1574364889"
             },
