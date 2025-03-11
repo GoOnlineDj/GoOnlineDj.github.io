@@ -14949,11 +14949,11 @@ const appleMusic = [
                 src: "https://embed.music.apple.com/us/music-video/im-the-man-feat-chris-brown-remix/1444869221"
             },
             {
-                title: "in da Club (Edited Version)",
+                title: "In da Club (Edited Version)",
                 src: "https://embed.music.apple.com/us/music-video/in-da-club-edited-version/1445827611"
             },
             {
-                title: "in Da Club (International Version) [International Version]",
+                title: "In da Club (International Version) [International Version]",
                 src: "https://embed.music.apple.com/us/music-video/in-da-club-international-version-international-version/1445848339"
             },
             {
