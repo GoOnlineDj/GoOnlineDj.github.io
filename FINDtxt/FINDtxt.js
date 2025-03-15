@@ -15043,6 +15043,7 @@ observer.observe(document.body, { childList: true, subtree: true });
 //Function to log all artist names from appleMusic array
 function logArtistNames(appleMusic) {
     const id_frame = document.getElementById('_id_frame');
+    id_frame.innerHTML = ''; // Clears previous content
     appleMusic.forEach(artist => {
         const artistElement = document.createElement('p');
         artistElement.innerHTML = artist.artist;

@@ -2,9 +2,9 @@
 @import url(../Contact/contact.css);
 
 body {
- font-family: Arial, sans-serif;
- font-size: 2rem;
- cursor: progress;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    cursor: progress;
 }
 
 
@@ -22,4 +22,8 @@ p {
     border: 3px solid green;
     margin: 0;
     padding: 0;
+}
+
+footer {
+    font-size: 1rem;
 }
