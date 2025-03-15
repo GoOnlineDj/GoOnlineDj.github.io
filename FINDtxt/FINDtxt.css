@@ -9,6 +9,7 @@ body {
 
 
 #_id_frame {
+    display: block;
     align-content: center;
     align-content: webkit-center;
     align-content: moz-center;
