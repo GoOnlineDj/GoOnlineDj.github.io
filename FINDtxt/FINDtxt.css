@@ -21,10 +21,13 @@ body {
 p {
     text-align: center;
     border: 3px solid green;
-    margin: 0.5rem;
-    padding: 0;
+    margin: 0;
+    padding: 0.5rem;
 }
 
+p:hover {
+    background-color: blue;
+}
 footer {
     font-size: 1rem;
 }
