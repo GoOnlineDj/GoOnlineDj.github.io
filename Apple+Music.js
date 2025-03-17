@@ -393,6 +393,16 @@
         ]
     },
     {
+        artist: "Alok, Sigala & Ellie Goulding",
+        birthday: [{ month: "August", day: 26, year: 1991 }, { month: "November", day: 7, year: 1992 }, { month: "December", day: 30, year: 1986 }],
+        songs: [
+            {
+                title: "All By Myself",
+                src: "https://embed.music.apple.com/us/music-video/all-by-myself/1665635134"
+            },
+        ]
+    },
+    {
         artist: "Alok & Kylie Minogue",
         birthday: [{ month: "August", day: 26, year: 1991 }, { month: "May", day: 28, year: 1968 }],
         songs: [
@@ -716,6 +726,16 @@
             {
                 title: "What's Luv? (Verzuz Live)",
                 src: "https://embed.music.apple.com/us/music-video/whats-luv-verzuz-live/1550867871"
+            },
+        ]
+    },
+    {
+        artist: "Asher Roth & Keri Hilson",
+        birthday: [{ month: "August", day: 11, year: 1985 }, { month: "December", day: 5, year: 1982 }],
+        songs: [
+            {
+                title: "She Don't Wanna Man",
+                src: "https://embed.music.apple.com/us/music-video/she-dont-wanna-man/1445855285"
             },
         ]
     },
@@ -1138,6 +1158,15 @@
         ]
     },
     {
+        artist: "Belly & The Weeknd",
+        songs: [
+            {
+                title: "Die For It (feat. Nas)",
+                src: "https://embed.music.apple.com/us/music-video/die-for-it-feat-nas/1581054744"
+            },
+        ]
+    },
+    {
         artist: "Berner",
         songs: [
             {
@@ -1397,6 +1426,15 @@
         ]
     },
     {
+        artist: "Big Bad 40",
+        songs: [
+            {
+                title: "Damn (feat. Ray J) [Edited] [edited]",
+                src: "https://embed.music.apple.com/us/music-video/damn-feat-ray-j-edited-edited/381994332"
+            }
+        ]
+    },
+    {
         artist: "Big K.R.I.T.",
         birthday: [{ month: "August", day: 26, year: 1986 }],
         songs: [
@@ -1634,6 +1672,15 @@
         ]
     },
     {
+        artist: "Bobby Brackins, Ray J & P-LO",
+        songs: [
+            {
+                title: "On Top",
+                src: "https://embed.music.apple.com/us/music-video/on-top/1699931926"
+            },
+        ]
+    },
+    {
         artist: "Bobby Shmurda",
         birthday: [{ month: "August", day: 4, year: 1994 }],
         songs: [
@@ -1778,6 +1825,23 @@
                 title: "Bow Wow (That's My Name) [feat. Snoop Dogg]",
                 src: "https://embed.music.apple.com/us/music-video/bow-wow-thats-my-name-feat-snoop-dogg/584947804"
             },
+            {
+                title: "Thank You (feat. Jagged Edge & Fundisha)",
+                src: "https://embed.music.apple.com/us/music-video/thank-you-feat-jagged-edge-fundisha/1536521533"
+            },
+            {
+                title: "Puppy Love (feat. Jagged Edge)",
+                src: "https://embed.music.apple.com/us/music-video/puppy-love-feat-jagged-edge/329057281"
+            },
+        ]
+    },
+    {
+        artist: "Bow Wow & Jagged Edge",
+        songs: [
+            {
+                title: "My Baby",
+                src: "https://embed.music.apple.com/us/music-video/my-baby/304239200"
+            },
         ]
     },
     {
@@ -1807,6 +1871,68 @@
             {
                 title: "Put It Down (feat. Chris Brown)",
                 src: "https://embed.music.apple.com/us/music-video/put-it-down-feat-chris-brown/553041803"
+            },
+            {
+                title: "Starting Now (Live from Disneyland Resort)",
+                src: "https://embed.music.apple.com/us/music-video/starting-now-live-from-disneyland-resort/1640793912"
+            },
+            {
+                title: "Baby Mama (feat. Chance the Rapper)",
+                src: "https://embed.music.apple.com/us/music-video/baby-mama-feat-chance-the-rapper/1510369725"
+            },
+            {
+                title: "Almost Doesn't Count",
+                src: "https://embed.music.apple.com/us/music-video/almost-doesnt-count/1480745887"
+            },
+            {
+                title: "Best Friend",
+                src: "https://embed.music.apple.com/us/music-video/best-friend/1480746327"
+            },
+            {
+                title: "Wildest Dreams",
+                src: "https://embed.music.apple.com/us/music-video/wildest-dreams/576332879"
+            },
+            {
+                title: "Right Here (Departed)",
+                src: "https://embed.music.apple.com/us/music-video/right-here-departed/297747217"
+            },
+            {
+                title: "Afrodisiac",
+                src: "https://embed.music.apple.com/us/music-video/afrodisiac/281896183"
+            },
+            {
+                title: "Talk About Our Love (feat. Kanye West)",
+                src: "https://embed.music.apple.com/us/music-video/talk-about-our-love-feat-kanye-west/1623471396"
+            },
+            {
+                title: "Full Moon",
+                src: "https://embed.music.apple.com/us/music-video/full-moon/1481509763"
+            },
+            {
+                title: "Have You Ever?", 
+                src: "https://embed.music.apple.com/us/music-video/have-you-ever/1480746817"
+            },
+            {
+                title: "I Wanna Be Down (feat. Queen Latifah, Yo-Yo & MC Lyte) [Human Rhythm Hip Hop Remix]", 
+                src: "https://embed.music.apple.com/us/music-video/i-wanna-be-down-feat-queen-latifah-yo-yo-mc-lyte-human/1480747155"
+            },
+            {
+                title: "Baby", 
+                src: "https://embed.music.apple.com/us/music-video/baby/281901576"
+            },
+            {
+                title: "I Wanna Be Down", 
+                src: "https://embed.music.apple.com/us/music-video/i-wanna-be-down/281901625"
+            },
+        ]
+    },
+    {
+        artist: "Brandy & Monica",
+        birthday: [{ month: "February", day: 11, year: 1979 }, { month: "October", day: 24, year: 1980 }],
+        songs: [
+            {
+                title: "The Boy Is Mine",
+                src: "https://embed.music.apple.com/us/music-video/the-boy-is-mine/1480744815"
             },
         ]
     },
@@ -1870,6 +1996,142 @@
             {
                 title: "Toxic",
                 src: "https://embed.music.apple.com/us/music-video/toxic/276269931"
+            },
+            {
+                title: "Me Against the Music (feat. Madonna)",
+                src: "https://embed.music.apple.com/us/music-video/me-against-the-music-feat-madonna/389896988"
+            },
+            {
+                title: "...Baby One More Time (Live from Apple Music Festival, London, 2016)",
+                src: "https://embed.music.apple.com/us/music-video/baby-one-more-time-live-from-apple-music-festival-london/1380343175"
+            },
+            {
+                title: "Gimme More (Live from Apple Music Festival, London, 2016)",
+                src: "https://embed.music.apple.com/us/music-video/gimme-more-live-from-apple-music-festival-london-2016/1380349577"
+            },
+            {
+                title: "I'm a Slave 4 U (Live from Apple Music Festival, London, 2016)",
+                src: "https://embed.music.apple.com/us/music-video/im-a-slave-4-u-live-from-apple-music-festival-london-2016/1380381968"
+            },
+            {
+                title: "If U Seek Amy (Live from Apple Music Festival, London, 2016)",
+                src: "https://embed.music.apple.com/us/music-video/if-u-seek-amy-live-from-apple-music-festival-london-2016/1380370238"
+            },
+            {
+                title: "Oops!... I Did It Again (Live from Apple Music Festival, London, 2016)",
+                src: "https://embed.music.apple.com/us/music-video/oops-i-did-it-again-live-from-apple-music-festival/1380357592"
+            },
+            {
+                title: "Piece of Me (Live from Apple Music Festival, London, 2016)",
+                src: "https://embed.music.apple.com/us/music-video/piece-of-me-live-from-apple-music-festival-london-2016/1380371097"
+            },
+            {
+                title: "Toxic (Live from Apple Music Festival, London, 2016)",
+                src: "https://embed.music.apple.com/us/music-video/toxic-live-from-apple-music-festival-london-2016/1380449344"
+            },
+            {
+                title: "Womanizer (Live from Apple Music Festival, London, 2016)",
+                src: "https://embed.music.apple.com/us/music-video/womanizer-live-from-apple-music-festival-london-2016/1380448544"
+            },
+            {
+                title: "Work Bitch (Live from Apple Music Festival, London, 2016)",
+                src: "https://embed.music.apple.com/us/music-video/work-bitch-live-from-apple-music-festival-london-2016/1380433950"
+            },
+            {
+                title: "Do Somethin'",
+                src: "https://embed.music.apple.com/us/music-video/do-somethin/1437689529"
+            },
+            {
+                title: "Perfume",
+                src: "https://embed.music.apple.com/us/music-video/perfume/790346249"
+            },
+            {
+                title: "Work Bitch",
+                src: "https://embed.music.apple.com/us/music-video/work-bitch/719362319"
+            },
+            {
+                title: 'Ooh La La (From "The Smurfs 2")',
+                src: "https://embed.music.apple.com/us/music-video/ooh-la-la-from-the-smurfs-2/672479671"
+            },
+            {
+                title: "Criminal",
+                src: "https://embed.music.apple.com/us/music-video/criminal/472849565"
+            },
+            {
+                title: "I Wanna Go",
+                src: "https://embed.music.apple.com/us/music-video/i-wanna-go/445603322"
+            },
+            {
+                title: "Hold It Against Me",
+                src: "https://embed.music.apple.com/us/music-video/hold-it-against-me/421224069"
+            },
+            {
+                title: "3",
+                src: "https://embed.music.apple.com/us/music-video/3/338828415"
+            },
+            {
+                title: "Overprotected",
+                src: "https://embed.music.apple.com/us/music-video/overprotected/320885810"
+            },
+            {
+                title: "Radar",
+                src: "https://embed.music.apple.com/us/music-video/radar/321636570"
+            },
+            {
+                title: "If U Seek Amy",
+                src: "https://embed.music.apple.com/us/music-video/if-u-seek-amy/308095988"
+            },
+            {
+                title: "Womanizer (Director's Cut)",
+                src: "https://embed.music.apple.com/us/music-video/womanizer-directors-cut/296259532"
+            },
+            {
+                title: "Piece of Me",
+                src: "https://embed.music.apple.com/us/music-video/piece-of-me/270793155"
+            },
+            {
+                title: "Someday (I Will Understand)",
+                src: "https://embed.music.apple.com/us/music-video/someday-i-will-understand/548919034"
+            },
+            {
+                title: "My Prerogative",
+                src: "https://embed.music.apple.com/us/music-video/my-prerogative/287817777"
+            },
+            {
+                title: "(You Drive Me) Crazy",
+                src: "https://embed.music.apple.com/us/music-video/you-drive-me-crazy/287852873"
+            },
+            {
+                title: "I Love Rock 'N' Roll",
+                src: "https://embed.music.apple.com/us/music-video/i-love-rock-n-roll/1000046666"
+            },
+            {
+                title: "I'm Not a Girl, Not Yet a Woman",
+                src: "https://embed.music.apple.com/us/music-video/im-not-a-girl-not-yet-a-woman/287852844"
+            },
+            {
+                title: "I'm a Slave 4 U",
+                src: "https://embed.music.apple.com/us/music-video/im-a-slave-4-u/326339365"
+            },
+            {
+                title: "Don't Let Me Be the Last to Know",
+                src: "https://embed.music.apple.com/us/music-video/dont-let-me-be-the-last-to-know/274224514"
+            },
+            {
+                title: "Oops!...I Did It Again",
+                src: "https://embed.music.apple.com/us/music-video/oops-i-did-it-again/332777704"
+            },
+            {
+                title: "Born to Make You Happy",
+                src: "https://embed.music.apple.com/us/music-video/born-to-make-you-happy/320840714"
+            },
+            {
+                title: "Sometimes",
+                src: "https://embed.music.apple.com/us/music-video/sometimes/299199305"
+            },
+            {
+                title: "...Baby One More Time",
+                src: "https://embed.music.apple.com/us/music-video/baby-one-more-time/307560076"
             },
         ]
     },
@@ -2072,11 +2334,30 @@
         ]
     },
     {
+        artist: "Calvin Harris",
+        birthday: [{ month: "January", day: 17, year: 1984 }],
+        songs: [
+            {
+                title: "I Need Your Love (feat. Ellie Goulding)",
+                src: "https://embed.music.apple.com/us/music-video/i-need-your-love-feat-ellie-goulding/636608021"
+            },
+        ]
+    },
+    {
         artist: "Calvin Harris & Ellie Goulding",
+        birthday: [{ month: "January", day: 17, year: 1984 }, { month: "December", day: 30, year: 1986 }],
         songs: [
             {
                 title: "Miracle",
                 src: "https://embed.music.apple.com/us/music-video/miracle/1678495297"
+            },
+            {
+                title: "Free (Live at Ushuaïa Ibiza, 2024)",
+                src: "https://embed.music.apple.com/us/music-video/free-live-at-ushua%C3%AFa-ibiza-2024/1760616690"
+            },
+            {
+                title: "Miracle (Live at The BRIT Awards, 2024)",
+                src: "https://embed.music.apple.com/us/music-video/miracle-live-at-the-brit-awards-2024/1734411898"
             },
         ]
     },
@@ -2577,6 +2858,10 @@
                 title: "Don't Think They Know (feat. Aaliyah)",
                 src: "https://embed.music.apple.com/us/music-video/dont-think-they-know-feat-aaliyah/664702952"
             },
+            {
+                title: "Superhuman (feat. Keri Hilson)",
+                src: "https://embed.music.apple.com/us/music-video/superhuman-feat-keri-hilson/293390968"
+            },
         ]
     },
     {
@@ -2596,6 +2881,16 @@
             {
                 title: "The Lady in Red",
                 src: "https://embed.music.apple.com/us/music-video/the-lady-in-red/1444337671"
+            },
+        ]
+    },
+    {
+        artist: "Chris Lane",
+        birthday: [{ month: "November", day: 9, year: 1984 }],
+        songs: [
+            {
+                title: "Take Back Home Girl (Feat. Tori Kelly)",
+                src: "https://embed.music.apple.com/us/music-video/take-back-home-girl-feat-tori-kelly/1443673613"
             },
         ]
     },
@@ -2973,6 +3268,15 @@
         ]
     },
     {
+        artist: "Colt Ford",
+        songs: [
+            {
+                title: "Hood (feat. Kevin Gates & Jermaine Dupri)",
+                src: "https://embed.music.apple.com/us/music-video/hood-feat-kevin-gates-jermaine-dupri/1596537571"
+            }
+        ]
+    },
+    {
         artist: "Common",
         birthday: [{ month: "March", day: 13, year: 1972 }],
         songs: [
@@ -3270,6 +3574,29 @@
         ]
     },
     {
+        artist: `Damian "Jr. Gong" Marley & Nas`,
+        birthday: [{ month: "July", day: 21, year: 1978 }, { month: "September", day: 14, year: 1973 }],
+        songs: [
+            {
+                title: "Dispear (Live from Wembley Stadium, 2011)",
+                src: "https://embed.music.apple.com/us/music-video/dispear-live-from-wembley-stadium-2011/1445863039"
+            },
+            {
+                title: "Nah Mean",
+                src: "https://embed.music.apple.com/us/music-video/nah-mean/1445830873"
+            },
+        ]
+    },
+    {
+        artist: `Damian "Jr. Gong" Marley, Nas, Ras Kassa & Yamani Watkins`,
+        songs: [
+            {
+                title: "Land of Promise (feat. Dennis Brown)",
+                src: "https://embed.music.apple.com/us/music-video/land-of-promise-feat-dennis-brown/1446013286"
+            },
+        ]
+    },
+    {
         artist: "Danielle Bradbery",
         birthday: [{ month: "July", day: 23, year: 1996 }],
         songs: [
@@ -3349,6 +3676,16 @@
             {
                 title: "Be With You (feat. Ludacris & Marsha Ambrosius)",
                 src: "https://embed.music.apple.com/us/music-video/be-with-you-feat-ludacris-marsha-ambrosius/411008341"
+            },
+        ]
+    },
+    {
+        artist: "David Guetta",
+        birthday: [{ month: "November", day: 7, year: 1967 }],
+        songs: [
+            {
+                title: "This One's for You (feat. Zara Larsson) [Official Song UEFA EURO 2016]",
+                src: "https://embed.music.apple.com/us/music-video/this-ones-for-you-feat-zara-larsson-official-song-uefa/1126060284"
             },
         ]
     },
@@ -3447,6 +3784,15 @@
         ]
     },
     {
+        artist: "De La Soul",
+        songs: [
+            {
+                title: "Buddy (Native Tongue Decision) [Official Music Video] [feat. Jungle Brothers, A Tribe Called Quest, Queen Latifah & Monie Love]",
+                src: "https://embed.music.apple.com/us/music-video/buddy-native-tongue-decision-official-music-video-feat/1700293985"
+            },
+        ]
+    },
+    {
         artist: "Deana Carter",
         birthday: [{ month: "January", day: 4, year: 1966 }],
         songs: [
@@ -3498,6 +3844,15 @@
             {
                 title: "Plese Don't Go",
                 src: "https://embed.music.apple.com/us/music-video/plese-dont-go/1710219002"
+            },
+        ]
+    },
+    {
+        artist: "Dem Franchize Boyz, Jermaine Dupri, Da Brat & Bow Wow",
+        songs: [
+            {
+                title: "I Think They Like Me (feat. Jermaine Dupri, Da Brat & Bow Wow) [BET edit]",
+                src: "https://embed.music.apple.com/us/music-video/i-think-they-like-me-feat-jermaine-dupri-da-brat-bow/744191487"
             },
         ]
     },
@@ -3753,6 +4108,10 @@
                 title: "Get Buck In Here (feat. Diddy, Akon, Ludacris & Lil Jon)",
                 src: "https://embed.music.apple.com/us/music-video/get-buck-in-here-feat-diddy-akon-ludacris-lil-jon/1446735713"
             },
+            {
+                title: "Boomerang (feat. Akon, Pitbull & Jermaine Dupri)",
+                src: "https://embed.music.apple.com/us/music-video/boomerang-feat-akon-pitbull-jermaine-dupri/450564801"
+            },
         ]
     },
     {
@@ -3771,6 +4130,10 @@
             {
                 title: "The Jungle (feat. Snoop Dogg, Too $hort, Sheek Louch & Papoose)",
                 src: "https://embed.music.apple.com/us/music-video/the-jungle-feat-snoop-dogg-too-%24hort-sheek-louch-papoose/1598629194"
+            },
+            {
+                title: "Thug Luv (Director's Cut) [feat. Ray J, Maino, Papoose & Red Café) [Director's Cut]",
+                src: "https://embed.music.apple.com/us/music-video/thug-luv-directors-cut-feat-ray-j-maino-papoose-red/352630291"
             },
         ]
     },
@@ -3833,6 +4196,18 @@
             {
                 title: "WE GOING CRAZY (feat. H.E.R. & Migos)",
                 src: "https://embed.music.apple.com/us/music-video/we-going-crazy-feat-h-e-r-migos/1566275272"
+            },
+            {
+                title: "SORRY NOT SORRY (feat. Nas, JAY-Z & James Fauntleroy) [Harmonies by The Hive]",
+                src: "https://embed.music.apple.com/us/music-video/sorry-not-sorry-feat-nas-jay-z-james-fauntleroy-harmonies/1565477690"
+            },
+            {
+                title: "It's Secured (feat. Nas & Travis Scott)",
+                src: "https://embed.music.apple.com/us/music-video/its-secured-feat-nas-travis-scott/1252092865"
+            },
+            {
+                title: "Nas Album Done (feat. Nas)",
+                src: "https://embed.music.apple.com/us/music-video/nas-album-done-feat-nas/1152676561"
             },
         ]
     },
@@ -4361,6 +4736,68 @@
             {
                 title: "Power",
                 src: "https://embed.music.apple.com/us/music-video/power/1514102333"
+            },
+            {
+                title: "Like A Saviour (Live At Koko)",
+                src: "https://embed.music.apple.com/us/music-video/like-a-saviour-live-at-koko/1680753087"
+            },
+            {
+                title: "By The End Of The Night (Live)",
+                src: "https://embed.music.apple.com/us/music-video/by-the-end-of-the-night-live/1680754172"
+            },
+            {
+                title: "Like A Saviour",
+                src: "https://embed.music.apple.com/us/music-video/like-a-saviour/1668086645"
+            },
+            {
+                title: "Fields Of Gold",
+                src: "https://embed.music.apple.com/us/music-video/fields-of-gold/1660756621"
+            },
+            {
+                title: "Easy Lover (feat. Big Sean)",
+                src: "https://embed.music.apple.com/us/music-video/easy-lover-feat-big-sean/1634632151"
+            },
+            {
+                title: "Love I'm Given",
+                src: "https://embed.music.apple.com/us/music-video/love-im-given/1528183275"
+            },
+            {
+                title: `Still Falling for You (From "Bridget Jones's Baby" Original Soundtrack)`,
+                src: "https://embed.music.apple.com/us/music-video/still-falling-for-you-from-bridget-joness-baby-original/1444877208"
+            },
+            {
+                title: "Something In the Way You Move",
+                src: "https://embed.music.apple.com/us/music-video/something-in-the-way-you-move/1444901847"
+            },
+            {
+                title: "Love Me Like You Do (Abbey Road Performance)",
+                src: "https://embed.music.apple.com/us/music-video/love-me-like-you-do-abbey-road-performance/1445147103"
+            },
+            {
+                title: "Love Me Like You Do",
+                src: "https://embed.music.apple.com/us/music-video/love-me-like-you-do/1445130329"
+            },
+            {
+                title: "Goodness Gracious",
+                src: "https://embed.music.apple.com/us/music-video/goodness-gracious/1444877784"
+            },
+            {
+                title: "Lights",
+                src: "https://embed.music.apple.com/us/music-video/lights/1445825830"
+            },
+            {
+                title: "Your Song",
+                src: "https://embed.music.apple.com/us/music-video/your-song/1445832933"
+            },
+        ]
+    },
+    {
+        artist: "Ellie Goulding, Diplo & Swae Lee",
+        birthday: [{ month: "December", day: 30, year: 1986 }, { month: "November", day: 10, year: 1978 }, { month: "June", day: 7, year: 1993 }],
+        songs: [
+            {
+                title: "Close To Me",
+                src: "https://embed.music.apple.com/us/music-video/close-to-me/1523531833"
             }
         ]
     },
@@ -5354,6 +5791,16 @@
         ]
     },
     {
+        artist: "Gromee & Inna",
+        birthday: [{ month: "December", day: 14, year: 1978 }, { month: "October", day: 16, year: 1986 }],
+        songs: [
+            {
+                title: "Cool Me Down",
+                src: "https://embed.music.apple.com/us/music-video/cool-me-down/1563970489"
+            },
+        ]
+    },
+    {
         artist: "Gucci Mane",
         birthday: [{ month: "February", day: 12, year: 1980 }],
         songs: [
@@ -5832,6 +6279,30 @@
                 title: "10 Minutes",
                 src: "https://embed.music.apple.com/us/music-video/10-minutes/415916301"
             },
+            {
+                title: "Club Rocker",
+                src: "https://embed.music.apple.com/us/music-video/club-rocker/451205177"
+            },
+            {
+                title: "Amazing",
+                src: "https://embed.music.apple.com/us/music-video/amazing/399125251"
+            },
+            {
+                title: "Sun Is Up",
+                src: "https://embed.music.apple.com/us/music-video/sun-is-up/1797339660"
+            },
+            {
+                title: "Hot",
+                src: "https://embed.music.apple.com/us/music-video/hot/1797039636"
+            },
+            {
+                title: "Love",
+                src: "https://embed.music.apple.com/us/music-video/love/399125172"
+            },
+            {
+                title: "Deja Vu",
+                src: "https://embed.music.apple.com/us/music-video/deja-vu/1798536733"
+            },
         ]
     },
     {
@@ -6085,6 +6556,73 @@
                 title: "Where The Party At (feat. Nelly)",
                 src: "https://embed.music.apple.com/us/music-video/where-the-party-at-feat-nelly/282475801"
             },
+            {
+                title: "Let's Get Married (feat. Run DMC)",
+                src: "https://embed.music.apple.com/us/music-video/lets-get-married-feat-run-dmc/311562864"
+            },
+            {
+                title: "Let's Get Married",
+                src: "https://embed.music.apple.com/us/music-video/lets-get-married/695113452"
+            },
+            {
+                title: "Stunnas",
+                src: "https://embed.music.apple.com/us/music-video/stunnas/205899369"
+            },
+            {
+                title: "Good Luck Charm",
+                src: "https://embed.music.apple.com/us/music-video/good-luck-charm/400013656"
+            },
+            {
+                title: "So Amazing",
+                src: "https://embed.music.apple.com/us/music-video/so-amazing/530926891"
+            },
+            {
+                title: "I Gotta Be",
+                src: "https://embed.music.apple.com/us/music-video/i-gotta-be/580448088"
+            },
+            {
+                title: "Keys to the Range (feat. Jermaine Dupri)",
+                src: "https://embed.music.apple.com/us/music-video/keys-to-the-range-feat-jermaine-dupri/309568918"
+            },
+            {
+                title: "What's It Like (feat. Jermaine Dupri)",
+                src: "https://embed.music.apple.com/us/music-video/whats-it-like-feat-jermaine-dupri/347063311"
+            },
+            {
+                title: "Walked Outta Heaven",
+                src: "https://embed.music.apple.com/us/music-video/walked-outta-heaven/1356861075"
+            },
+            {
+                title: "Promise",
+                ssrc: "https://embed.music.apple.com/us/music-video/promise/370300717"
+            },
+        ]
+    },
+    {
+        artist: "Jagged Edge & Nas",
+        songs: [
+            {
+                title: "I Got It 2",
+                src: "https://embed.music.apple.com/us/music-video/i-got-it-2/313867011"
+            },
+        ]
+    },
+    {
+        artist: "Jagged Edge featuring Jermaine Dupri",
+        songs: [
+            {
+                title: "What's It Like (ReMarqable Remix)",
+                src: "https://embed.music.apple.com/us/music-video/whats-it-like-remarqable-remix/254295903"
+            },
+        ]
+    },
+    {
+        artist: "Jagged Edge featuring Jermaine Dupri, Da Brat, R.O.C., Lil Bow Wow & Tigah",
+        songs: [
+            {
+                title: "Where the Party At (11-01-01 Dupri Remix)",
+                src: "https://embed.music.apple.com/us/music-video/where-the-party-at-11-01-01-dupri-remix/254367712"
+            },
         ]
     },
     {
@@ -6180,6 +6718,16 @@
             {
                 title: "Why Ya Wanna",
                 src: "https://embed.music.apple.com/us/music-video/why-ya-wanna/501207325"
+            },
+        ]
+    },
+    {
+        artist: "Janet Jackson",
+        birthday: [{ month: "May", day: 16, year: 1966 }],
+        songs: [
+            {
+                title: "Someone To Call My Lover (feat. Jermaine Dupri) [So So Def Remix]",
+                src: "https://embed.music.apple.com/us/music-video/someone-to-call-my-lover-feat-jermaine-dupri-so-so-def-remix/1646511682"
             },
         ]
     },
@@ -6325,6 +6873,16 @@
         ]
     },
     {
+        artist: "Jeezy & Nas",
+        birthday: [{ month: "September", day: 28, year: 1977 }, { month: "September", day: 14, year: 1973 }],
+        songs: [
+            {
+                title: "My President",
+                src: "https://embed.music.apple.com/us/music-video/my-president/1446737909"
+            },
+        ]
+    },
+    {
         artist: "Jennifer Hudson",
         birthday: [{ month: "September", day: 12, year: 1981 }],
         songs: [
@@ -6433,12 +6991,54 @@
         ]
     },
     {
+        artist: "Jermaine Dupri",
+        birthday: [{ month: "September", day: 23, year: 1972 }],
+        songs: [
+            {
+                title: "Gotta Getcha",
+                src: "https://embed.music.apple.com/us/music-video/gotta-getcha/720089062"
+            },
+            {
+                title: "Money Ain't a Thang (feat. JAY-Z)",
+                src: "https://embed.music.apple.com/us/music-video/money-aint-a-thang-feat-jay-z/1674661567"
+            },
+        ]
+    },
+    {
+        artist: "Jermaine Dupri, Destiny's Child, Bow Wow & Da Brat",
+        songs: [
+            {
+                title: "Jumpin', Jumpin' (So So Def Remix)",
+                src: "https://embed.music.apple.com/us/music-video/jumpin-jumpin-so-so-def-remix/602356879"
+            },
+        ]
+    },
+    {
+        artist: "Jermaine Dupri, Nas & Monica",
+        songs: [
+            {
+                title: "I've Got To Have It",
+                src: "https://embed.music.apple.com/us/music-video/ive-got-to-have-it/1536518511"
+            },
+        ]
+    },
+    {
         artist: "Jermaine Dupri & Ludacris",
         birthday: [{ month: "September", day: 23, year: 1972 }, { month: "September", day: 11, year: 1977 }],
         songs: [
             {
                 title: "Welcome to Atlanta",
                 src: "https://embed.music.apple.com/us/music-video/welcome-to-atlanta/293110951"
+            },
+        ]
+    },
+    {
+        artist: "Jermaine Dupri & Mariah Carey",
+        birthday: [{ month: "September", day: 23, year: 1972 }, { month: "March", day: 27, year: 1969 }],
+        songs: [
+            {
+                title: "Sweetheart",
+                src: "https://embed.music.apple.com/us/music-video/sweetheart/291644751"
             },
         ]
     },
@@ -7165,6 +7765,16 @@
         ]
     },
     {
+        artist: "Kardinal Offishall",
+        birthday: [{ month: "May", day: 11, year: 1976 }],
+        songs: [
+            {
+                title: "Numba 1 (Tide Is High) [feat. Keri Hilson] {Extended Mix} [Extended Mix]",
+                src: "https://embed.music.apple.com/us/music-video/numba-1-tide-is-high-feat-keri-hilson-extended-mix/1446006043"
+            },
+        ]
+    },
+    {
         artist: "Kash Doll & DJ Infamous",
         songs: [
             {
@@ -7344,6 +7954,10 @@
             {
                 title: "Milkshake",
                 src: "https://embed.music.apple.com/us/music-video/milkshake/279013019"
+            },
+            {
+                title: "Blindfold Me (feat. Nas)",
+                src: "https://embed.music.apple.com/us/music-video/blindfold-me-feat-nas/326593346"
             },
         ]
     },
@@ -7563,14 +8177,50 @@
                 title: "Pretty Girl Rock",
                 src: "https://embed.music.apple.com/us/music-video/pretty-girl-rock/1445831196"
             },
+            {
+                title: "Lose Control (feat. Nelly)",
+                src: "https://embed.music.apple.com/us/music-video/lose-control-feat-nelly/1445860952"
+            },
+            {
+                title: "One Night Stand (feat. Chris Brown)",
+                src: "https://embed.music.apple.com/us/music-video/one-night-stand-feat-chris-brown/1446733747"
+            },
+            {
+                title: "Slow Dance",
+                src: "https://embed.music.apple.com/us/music-video/slow-dance/1445855593"
+            },
+            {
+                title: "Energy",
+                src: "https://embed.music.apple.com/us/music-video/energy/1445826572"
+            },
+        ]
+    },
+    {
+        artist: "Keri Hilson & Chipmunk",
+        songs: [
+            {
+                title: "In the Air",
+                src: "https://embed.music.apple.com/us/music-video/in-the-air/430368533"
+            },
         ]
     },
     {
         artist: "Keri Hison & Lil Wayne",
+        birthday: [{ month: "December", day: 5, year: 1982 }, { month: "September", day: 27, year: 1982 }],
         songs: [
             {
                 title: "Turnin Me On (feat. Lil Wayne)",
                 src: "https://embed.music.apple.com/us/music-video/turnin-me-on-feat-lil-wayne/1445864946"
+            },
+        ]
+    },
+    {
+        artist: "Keri Hilson & Rick Ross",
+        birthday: [{ month: "December", day: 5, year: 1982 }, { month: "January", day: 28, year: 1976 }],
+        songs: [
+            {
+                title: "The Way You Love Me (feat. Rick Ross)",
+                src: "https://embed.music.apple.com/us/music-video/the-way-you-love-me-feat-rick-ross/1445846227"
             },
         ]
     },
@@ -7684,6 +8334,16 @@
             {
                 title: "Pay For It",
                 src: "https://embed.music.apple.com/us/music-video/pay-for-it/1562189159"
+            },
+        ]
+    },
+    {
+        artist: "Kool G Rap & Nas",
+        birthday: [{ month: "July", day: 20, year: 1968 }, { month: "September", day: 14, year: 1973 }],
+        songs: [
+            {
+                title: "Fast Life (feat. Nas)",
+                src: "https://embed.music.apple.com/us/music-video/fast-life-feat-nas/313872976"
             },
         ]
     },
@@ -7831,6 +8491,15 @@
             {
                 title: "The Good Kind",
                 src: "https://embed.music.apple.com/us/music-video/the-good-kind/1703126807"
+            },
+        ]
+    },
+    { 
+        artist: "LaTheGoat",
+        songs: [
+            {
+                title: "8 Bands (feat. Rick Ross & Jermaine Dupri) [Remix / Performance Version]",
+                src: "https://embed.music.apple.com/us/music-video/8-bands-feat-rick-ross-jermaine-dupri-remix-performance/1552919842"
             },
         ]
     },
@@ -8070,6 +8739,16 @@
             {
                 title: "LIGHT AGAIN!",
                 src: "https://embed.music.apple.com/us/music-video/light-again/1779614991"
+            },
+        ]
+    },
+    {
+        artist: "Lil Nas X & Nas",
+        birthday: [{ month: "April", day: 9, year: 1999 }, { month: "September", day: 14, year: 1973 }],
+        songs: [
+            {
+                title: "Rodeo (feat. Nas)",
+                src: "https://embed.music.apple.com/us/music-video/rodeo-feat-nas/1497969008"
             },
         ]
     },
@@ -8668,6 +9347,168 @@
                 title: "Material Girl",
                 src: "https://embed.music.apple.com/us/music-video/material-girl/453875194"
             },
+            {
+                title: "Give Me All Your Luvin' (feat. Nicki Minaj & M.I.A.)",
+                src: "https://embed.music.apple.com/us/music-video/give-me-all-your-luvin-feat-nicki-minaj-m-i-a/1446736306"
+            },
+            {
+                title: "Turn Up the Radio",
+                src: "https://embed.music.apple.com/us/music-video/turn-up-the-radio/1445725649"
+            },
+            {
+                title: "Don't Tell Me",
+                src: "https://embed.music.apple.com/us/music-video/dont-tell-me/1716122709"
+            },
+            {
+                title: "Frozen",
+                src: "https://embed.music.apple.com/us/music-video/frozen/1651805259"
+            },
+            {
+                title: "Justify My Love (HD Remaster)",
+                src: "https://embed.music.apple.com/us/music-video/justify-my-love-hd-remaster/1704101357"
+            },
+            {
+                title: "Celebration",
+                src: "https://embed.music.apple.com/us/music-video/celebration/328936586"
+            },
+            {
+                title: "Give It 2 Me",
+                src: "https://embed.music.apple.com/us/music-video/give-it-2-me/281969320"
+            },
+            {
+                title: "Miles Away",
+                src: "https://embed.music.apple.com/us/music-video/miles-away/1651802263"
+            },
+            {
+                title: "American Pie (Without Film Footage)",
+                src: "https://embed.music.apple.com/us/music-video/american-pie-without-film-footage/453354869"
+            },
+            {
+                title: "Jump",
+                src: "https://embed.music.apple.com/us/music-video/jump/276689381"
+            },
+            {
+                title: "Get Together",
+                src: "https://embed.music.apple.com/us/music-video/get-together/272782224"
+            },
+            {
+                title: "Like a Virgin",
+                src: "https://embed.music.apple.com/us/music-video/like-a-virgin/278120622"
+            },
+            {
+                title: "Lucky Star",
+                src: "https://embed.music.apple.com/us/music-video/lucky-star/278120050"
+            },
+            {
+                title: "Open Your Heart",
+                src: "https://embed.music.apple.com/us/music-video/open-your-heart/278129197"
+            },
+            {
+                title: "Hung Up",
+                src: "https://embed.music.apple.com/us/music-video/hung-up/278110330"
+            },
+            {
+                title: "Like a Prayer (Live at Live 8, Hyde Park, London, 2nd July 2005)",
+                src: "https://embed.music.apple.com/us/music-video/like-a-prayer-live-at-live-8-hyde-park-london-2nd-july-2005/1470889894"
+            },
+            {
+                title: "Music (Live at Live 8, Hyde Park, London, 2nd July 2005)",
+                src: "https://embed.music.apple.com/us/music-video/music-live-at-live-8-hyde-park-london-2nd-july-2005/1470906564"
+            },
+            {
+                title: "Ray of Light (Live at Live 8, Hyde Park, London, 2nd July 2005)",
+                src: "https://embed.music.apple.com/us/music-video/ray-of-light-live-at-live-8-hyde-park-london-2nd-july-2005/1470996254"
+            },
+            {
+                title: "Love Profusion",
+                src: "https://embed.music.apple.com/us/music-video/love-profusion/278119120"
+            },
+            {
+                title: "Vogue",
+                src: "https://embed.music.apple.com/us/music-video/vogue/81949409"
+            },
+            {
+                title: "Hollywood",
+                src: "https://embed.music.apple.com/us/music-video/hollywood/1495912241"
+            },
+            {
+                title: "Music (4:44 Version)",
+                src: "https://embed.music.apple.com/us/music-video/music-4-44-version/278119968"
+            },
+            {
+                title: "Ray of Light",
+                src: "https://embed.music.apple.com/us/music-video/ray-of-light/278129005"
+            },
+            {
+                title: "I Want You",
+                src: "https://embed.music.apple.com/us/music-video/i-want-you/1402550576"
+            },
+            {
+                title: "Bedtime Story",
+                src: "https://embed.music.apple.com/us/music-video/bedtime-story/278129383"
+            },
+            {
+                title: "Human Nature",
+                src: "https://embed.music.apple.com/us/music-video/human-nature/489340769"
+            },
+            {
+                title: "Express Yourself / Deeper And Deeper (Live at the Sydney Cricket Grounds, Sydney, Australia, 11/19/1993) [HD Remaster]",
+                src: "https://embed.music.apple.com/us/music-video/express-yourself-deeper-and-deeper-live-at-the/1704069586"
+            },
+            {
+                title: "Fever",
+                src: "https://embed.music.apple.com/us/music-video/fever/1495912489"
+            },
+            {
+                title: "Erotica",
+                src: "https://embed.music.apple.com/us/music-video/erotica/278117832"
+            },
+            {
+                title: "Cherish",
+                src: "https://embed.music.apple.com/us/music-video/cherish/278113110"
+            },
+            {
+                title: "Express Yourself",
+                src: "https://embed.music.apple.com/us/music-video/express-yourself/276688610"
+            },
+            {
+                title: "True Blue",
+                src: "https://embed.music.apple.com/us/music-video/true-blue/1495911505"
+            },
+            {
+                title: "Holiday (Live at Live Aid, John F. Kennedy Stadium, 13th July 1985)",
+                src: "https://embed.music.apple.com/us/music-video/holiday-live-at-live-aid-john-f-kennedy-stadium-13th/1453888568"
+            },
+            {
+                title: "Into the Groove (Live at Live Aid, John F. Kennedy Stadium, 13th July 1985)",
+                src: "https://embed.music.apple.com/us/music-video/into-the-groove-live-at-live-aid-john-f-kennedy/1453899643"
+            },
+            {
+                title: "Burning Up",
+                src: "https://embed.music.apple.com/us/music-video/burning-up/278118782"
+            },
+            {
+                title: "Dress You Up",
+                src: "https://embed.music.apple.com/us/music-video/dress-you-up/1382998693"
+            },
+            {
+                title: "Borderline",
+                src: "https://embed.music.apple.com/us/music-video/borderline/278111997"
+            },
+            {
+                title: "Everybody",
+                src: "https://embed.music.apple.com/us/music-video/everybody/278143141"
+            },
+        ]
+    },
+    {
+        artist: "Madonna & Swae Lee",
+        birthday: [{ month: "August", day: 16, year: 1958 },{ month: "June", day: 7, year: 1993 }],
+        songs: [
+            {
+                title: "Crave",
+                src: "https://embed.music.apple.com/us/music-video/crave/1464765380"
+            },
         ]
     },
     {
@@ -8695,6 +9536,15 @@
             {
                 title: "Pressure Points (feat. Lila Iké)",
                 src: "https://embed.music.apple.com/us/music-video/pressure-points-feat-lila-ik%C3%A9/1793367176"
+            },
+        ]
+    },
+    {
+        artist: "Major Lazer",
+        songs: [
+            {
+                title: "Powerful (feat. Ellie Goulding & Tarrus Riley)",
+                src: "https://embed.music.apple.com/us/music-video/powerful-feat-ellie-goulding-tarrus-riley/1707076350"
             },
         ]
     },
@@ -8830,6 +9680,18 @@
             {
                 title: "I'll Be Lovin' U Long Time (feat. T.I.)",
                 src: "https://embed.music.apple.com/us/music-video/ill-be-lovin-u-long-time-feat-t-i/1446741608" 
+            },
+            {
+                title: "Get Your Number (feat. Jermaine Dupri)",
+                src: "https://embed.music.apple.com/us/music-video/get-your-number-feat-jermaine-dupri/1640172788"
+            }, 
+            {
+                title: "The Roof (When I Feel the Need) [feat. Brandy]",
+                src: "https://embed.music.apple.com/us/music-video/the-roof-when-i-feel-the-need-feat-brandy/1646314252"
+            },
+            {
+                title: "Thank God I Found You (feat. Joe & Nas) [Make It Last Remix]",
+                src: "https://embed.music.apple.com/us/music-video/thank-god-i-found-you-feat-joe-nas-make-it-last-remix/1609933579"
             },
         ]
     },
@@ -10034,6 +10896,152 @@
                 title: "Nas Is Like",
                 src: "https://embed.music.apple.com/us/music-video/nas-is-like/306098848"
             },
+            {
+                title: "Black Magic",
+                src: "https://embed.music.apple.com/us/music-video/black-magic/1704725754"
+            },
+            {
+                title: "30",
+                src: "https://embed.music.apple.com/us/music-video/30/1675321112"
+            },
+            {
+                title: "EPMD",
+                src: "https://embed.music.apple.com/us/music-video/epmd/1561053286"
+            },
+            {
+                title: "27 Summers",
+                src: "https://embed.music.apple.com/us/music-video/27-summers/1550364461"
+            },
+            {
+                title: "Replace Me (feat. Big Sean & Don Toliver)",
+                src: "https://embed.music.apple.com/us/music-video/replace-me-feat-big-sean-don-toliver/1536972060"
+            },
+            {
+                title: "Life's a Bitch / Street Dreams (from Made You Look: God's Son Live)",
+                src: "https://embed.music.apple.com/us/music-video/lifes-a-bitch-street-dreams-from-made-you-look-gods-son-live/1438595034"
+            },
+            {
+                title: "Made You Look / Made You Look (Remix) [from Made You Look: God's Son Live]",
+                src: "https://embed.music.apple.com/us/music-video/made-you-look-made-you-look-remix-from-made-you-look/1438656871"
+            },
+            {
+                title: "Rewind / Last Real N***** Alive (from Made You Look: God's Son Live)",
+                src: "https://embed.music.apple.com/us/music-video/rewind-last-real-n-alive-from-made-you-look-gods-son-live/1438593481"
+            },
+            {
+                title: "The World Is Yours / It Ain't Hard to Tell (from Made You Look: God's Son Live)",
+                src: "https://embed.music.apple.com/us/music-video/the-world-is-yours-it-aint-hard-to-tell-from-made-you/1438593250"
+            },
+            {
+                title: "The Cross (from Made You Look: God's Son Live)",
+                src: "https://embed.music.apple.com/us/music-video/the-cross-from-made-you-look-gods-son-live/1437862181"
+            },
+            {
+                title: "Got Ur Self A... (from Made You Look: God's Son Live)",
+                src: "https://embed.music.apple.com/us/music-video/got-ur-self-a-from-made-you-look-gods-son-live/1437862082"
+            },
+            {
+                title: "If I Ruled the World (Imagine That) [from Made You Look: God's Son Live]",
+                src: "https://embed.music.apple.com/us/music-video/if-i-ruled-the-world-imagine-that-from-made-you-look/1437861860"
+            },
+            {
+                title: "Mastermind (from Made You Look: God's Son Live)",
+                src: "https://embed.music.apple.com/us/music-video/mastermind-from-made-you-look-gods-son-live/1437862376"
+            },
+            {
+                title: "N.Y. State of Mind (from Made You Look: God's Son Live)",
+                src: "https://embed.music.apple.com/us/music-video/n-y-state-of-mind-from-made-you-look-gods-son-live/1437862455"
+            },
+            {
+                title: "Nas Is Like (from Made You Look: God's Son Live)",
+                src: "https://embed.music.apple.com/us/music-video/nas-is-like-from-made-you-look-gods-son-live/1437861162"
+            },
+            {
+                title: "You're da Man (from Made You Look: God's Son Live)",
+                src: "https://embed.music.apple.com/us/music-video/youre-da-man-from-made-you-look-gods-son-live/1437863414"
+            },
+            {
+                title: "Zone Out (from Made You Look: God's Son Live)",
+                src: "https://embed.music.apple.com/us/music-video/zone-out-from-made-you-look-gods-son-live/1437861668"
+            },
+            {
+                title: "Halftime",
+                src: "https://embed.music.apple.com/us/music-video/halftime/853110110"
+            },
+            {
+                title: "It Ain't Hard To Tell",
+                src: "https://embed.music.apple.com/us/music-video/it-aint-hard-to-tell/853108213"
+            },
+            {
+                title: "Daughters",
+                src: "https://embed.music.apple.com/us/music-video/daughters/1445863785"
+            },
+            {
+                title: "The Don",
+                src: "https://embed.music.apple.com/us/music-video/the-don/1445854219"
+            },
+            {
+                title: "Nasty",
+                src: "https://embed.music.apple.com/us/music-video/nasty/1445879696"
+            },
+            {
+                title: "Make the World Go Round (feat. Chris Brown & The Game)",
+                src: "https://embed.music.apple.com/us/music-video/make-the-world-go-round-feat-chris-brown-the-game/1445746536"
+            },
+            {
+                title: "Surviving the Times",
+                src: "https://embed.music.apple.com/us/music-video/surviving-the-times/269473916"
+            },
+            {
+                title: "U.B.R. (Unauthorized Biography Of Rakim) [Album Version]",
+                src: "https://embed.music.apple.com/us/music-video/u-b-r-unauthorized-biography-of-rakim-album-version/1538251803"
+            },
+            {
+                title: "Got Ur Self A...",
+                src: "https://embed.music.apple.com/us/music-video/got-ur-self-a/1279501121"
+            },
+            {
+                title: "You Owe Me (feat. Ginuwine)",
+                src: "https://embed.music.apple.com/us/music-video/you-owe-me-feat-ginuwine/1461921731"
+            },
+            {
+                title: "Bridging the Gap (feat. Olu Dara)",
+                src: "https://embed.music.apple.com/us/music-video/bridging-the-gap-feat-olu-dara/1280138373"
+            },
+            {
+                title: "Thief's Theme",
+                src: "https://embed.music.apple.com/us/music-video/thiefs-theme/1380457324"
+            },
+            {
+                title: "One Mic",
+                src: "https://embed.music.apple.com/us/music-video/one-mic/304242459"
+            },
+            {
+                title: "Made You Look",
+                src: "https://embed.music.apple.com/us/music-video/made-you-look/1279498201"
+            },
+            {
+                title: "Nastradamus",
+                src: "https://embed.music.apple.com/us/music-video/nastradamus/304238037"
+            },
+            {
+                title: "Hate Me Now (feat. Puff Daddy)",
+                src: "https://embed.music.apple.com/us/music-video/hate-me-now-feat-puff-daddy/327114693"
+            },
+            {
+                title: "If I Ruled the World (Imagine That)",
+                src: "https://embed.music.apple.com/us/music-video/if-i-ruled-the-world-imagine-that/1366604122"
+            },
+        ]
+    },
+    {
+        artist: "Nas & Keri Hilson",
+        birthday: [{ month: "September", day: 14, year: 1973 }, { month: "December", day: 5, year: 1982 }],
+        songs: [
+            {
+                title: "Hero",
+                src: "https://embed.music.apple.com/us/music-video/hero/1445728137"
+            },
         ]
     },
     {
@@ -10918,6 +11926,24 @@
         ]
     },
     {
+        artist: "Queen Latifah",
+        birthday: [{ month: "March", day: 18, year: 1970 }],
+        songs: [
+            {
+                title: "U.N.I.T.Y.",
+                src: "https://embed.music.apple.com/us/music-video/u-n-i-t-y/1445755062"
+            },
+            {
+                title: "Go Head",
+                src: "https://embed.music.apple.com/us/music-video/go-head/1445852847"
+            },
+            {
+                title: "Just Another Day...",
+                src: "https://embed.music.apple.com/us/music-video/just-another-day/1683203503"
+            },
+        ]
+    },
+    {
         artist: "Queen Naija & YoungBoy Never Broke Again",
         birthday: [{ month: "October", day: 17, year: 1995 }, { month: "October", day: 20, year: 1999 }],
         songs: [
@@ -10954,6 +11980,14 @@
             {
                 title: "I'm a Flirt Remix (Without Number)",
                 src: "https://embed.music.apple.com/us/music-video/im-a-flirt-remix-without-number/262583303" 
+            },
+            {
+                title: "Number One (feat. Keri Hilson)",
+                src: "https://embed.music.apple.com/us/music-video/number-one-feat-keri-hilson/328215857" 
+            },
+            {
+                title: "I Like",
+                src: "https://embed.music.apple.com/us/music-video/i-like/1445833788"
             },
         ]
     },
@@ -11051,6 +12085,28 @@
             {
                 title: "Tailgate",
                 src: "https://embed.music.apple.com/us/music-video/tailgate/1438897179"
+            },
+        ]
+    },
+    {
+        artist: "Ray J",
+        birthday: [{ month: "January", day: 17, year: 1981 }],
+        songs: [
+            {
+                title: "Be with You",
+                src: "https://embed.music.apple.com/us/music-video/be-with-you/1150737309"
+            },
+            {
+                title: "For the Love of Ray J",
+                src: "https://embed.music.apple.com/us/music-video/for-the-love-of-ray-j/317902279"
+            },
+            {
+                title: "Gifts",
+                src: "https://embed.music.apple.com/us/music-video/gifts/282914656"
+            },
+            {
+                title: "Sexy Can I (feat. Yung Berg)",
+                src: "https://embed.music.apple.com/us/music-video/sexy-can-i-feat-yung-berg/273191681"
             },
         ]
     },
@@ -11294,8 +12350,16 @@
         ]
     },
     {
+        artist: "Rich Boy",
+        songs: [
+            {
+                title: "Good Things (feat. Keri Hilson & Polow Da Don)",
+                src: "https://embed.music.apple.com/us/music-video/good-things-feat-keri-hilson-polow-da-don/1445844101"
+            },
+        ]
+    },
+    {
         artist: "Rich Boy featuring Polow Da Don",
-        birthday: [{ month: "September", day: 2, year: 1983 }, { month: "October", day: 15, year: 1977 }],
         songs: [
             {
                 title: "Throw Some D's",
@@ -11564,6 +12628,15 @@
         ]
     },
     {
+        artist: "Rita Ora, Kylie Cantrall, Brandy & Malia Baker",
+        songs: [
+            {
+                title: `Love Ain't It (From "Descendants: The Rise of Red")`,
+                src: "https://embed.music.apple.com/us/music-video/love-aint-it-from-descendants-the-rise-of-red/1778208275"
+            },
+        ]
+    },
+    {
         artist: "Rob49 & Lil Wayne",
         birthday: [{ month: "March", day: 6, year: 1999 }, { month: "September", day: 27, year: 1982 }],
         songs: [
@@ -11670,6 +12743,15 @@
             {
                 title: "They Ain't Ready",
                 src: "https://embed.music.apple.com/us/music-video/they-aint-ready/1446728821"
+            },
+        ]
+    },
+    {
+        artist: "Run-DMC",
+        songs: [
+            {
+                title: "Let's Stay Together (Together Forever) [feat. Jagged Edge]",
+                src: "https://embed.music.apple.com/us/music-video/lets-stay-together-together-forever-feat-jagged-edge/1279188980"
             },
         ]
     },
@@ -12264,6 +13346,16 @@
         ]
     },
     {
+        artist: "Silk City, Dua Lipa & Ellie Goulding",
+        birthday: [ { month: "September", day: 4, year: 1975 },{ month: "November", day: 10, year: 1978 }, { month: "August", day: 22, year: 1995 }, { month: "December", day: 30, year: 1986 }],
+        songs: [
+            {
+                title: "New Love (feat. Diplo & Mark Ronson)",
+                src: "https://embed.music.apple.com/us/music-video/new-love-feat-diplo-mark-ronson/1550006881"
+            },
+        ]
+    },
+    {
         artist: "Sisqó",
         birthday: [{ month: "November", day: 9, year: 1978 }],
         songs: [
@@ -12674,6 +13766,16 @@
             {
                 title: "JIGGLE & WHINE (feat. Spice)",
                 src: "https://embed.music.apple.com/us/music-video/jiggle-whine-feat-spice/1786263917"
+            },
+        ]
+    },
+    {
+        artist: "Stonebwoy & Keri Hilson",
+        birthday: [{ month: "March", day: 5, year: 1988 }, { month: "December", day: 5, year: 1982 }],
+        songs: [
+            {
+                title: "Nominate",
+                src: "https://embed.music.apple.com/us/music-video/nominate/1507434280"
             },
         ]
     },
@@ -13281,6 +14383,10 @@
                 title: "Warning",
                 src: "https://embed.music.apple.com/us/music-video/warning/1479907568"
             },
+            {
+                title: "Nasty Girl (feat. Nelly, P. Diddy, Jagged Edge, Avery Storm)",
+                src: "https://embed.music.apple.com/us/music-video/nasty-girl-feat-nelly-p-diddy-jagged-edge-avery-storm/1481505651"
+            },
         ]
     },
     {
@@ -13606,6 +14712,16 @@
         ]
     },
     {
+        artist: "Tony Bennett & Queen Latifah",
+        birthday: [{ month: "August", day: 3, year: 1926 }, { month: "March", day: 18, year: 1970 }],
+        songs: [
+            {
+                title: "Who Can I Turn To (When Nobody Needs Me) [from Duets II: The Great Performances]",
+                src: "https://embed.music.apple.com/us/music-video/who-can-i-turn-to-when-nobody-needs-me-from-duets-ii/1281204035"
+            },
+        ]
+    },
+    {
         artist: "Too $hort",
         birthday: [{ month: "April", day: 28, year: 1966 }],
         songs: [
@@ -13675,6 +14791,66 @@
             {
                 title: "Unbreakable Smile",
                 src: "https://embed.music.apple.com/us/music-video/unbreakable-smile/1444899798"
+            },
+            {
+                title: "cut",
+                src: "https://embed.music.apple.com/us/music-video/cut/1701701631"
+            },
+            {
+                title: "25th",
+                src: "https://embed.music.apple.com/us/music-video/25th/1540689081"
+            },
+            {
+                title: "Unbothered",
+                src: "https://embed.music.apple.com/us/music-video/unbothered/1529214396"
+            },
+            {
+                title: "Language (Live From Capitol Studios)",
+                src: "https://embed.music.apple.com/us/music-video/language-live-from-capitol-studios/1477170720"
+            },
+            {
+                title: "Coffee (Live From Capitol Studios)",
+                src: "https://embed.music.apple.com/us/music-video/coffee-live-from-capitol-studios/1475696575"
+            },
+            {
+                title: "Sorry Would Go a Long Way",
+                src: "https://embed.music.apple.com/us/music-video/sorry-would-go-a-long-way/1469625664"
+            },
+            {
+                title: "Change Your Mind",
+                src: "https://embed.music.apple.com/us/music-video/change-your-mind/1466678193"
+            },
+            {
+                title: "Masterpiece (feat. Lecrae) [Live From Warner Theatre, Washington, DC, 10/28/18]",
+                src: "https://embed.music.apple.com/us/music-video/masterpiece-feat-lecrae-live-from-warner-theatre-washington/1446961330"
+            },
+            {
+                title: "Soul's Anthem (It Is Well)",
+                src: "https://embed.music.apple.com/us/music-video/souls-anthem-it-is-well/1436769090"
+            },
+            {
+                title: "Sunday (Live)",
+                src: "https://embed.music.apple.com/us/music-video/sunday-live/1435778803"
+            },
+            {
+                title: "Just As Sure (feat. Jonathan McReynolds) [Live]",
+                src: "https://embed.music.apple.com/us/music-video/just-as-sure-feat-jonathan-mcreynolds-live/1435780484"
+            },
+            {
+                title: "Psalm 42 (Live)",
+                src: "https://embed.music.apple.com/us/music-video/psalm-42-live/1435420458"
+            },
+            {
+                title: "Help Us To Love (feat. The HamilTones) [Live]",
+                src: "https://embed.music.apple.com/us/music-video/help-us-to-love-feat-the-hamiltones-live/1435226838"
+            },
+            {
+                title: "Never Alone (feat. Kirk Franklin) [Live]",
+                src: "https://embed.music.apple.com/us/music-video/never-alone-feat-kirk-franklin-live/1433289970"
+            },
+            {
+                title: "Don't You Worry 'Bout a Thing",
+                src: "https://embed.music.apple.com/us/music-video/dont-you-worry-bout-a-thing/1444865254"
             },
         ]
     },
@@ -14425,6 +15601,14 @@
                 title: "Feelin' Myself (feat. Miley Cyrus, Wiz Khalifa & French Montana)",
                 src: "https://embed.music.apple.com/us/music-video/feelin-myself-feat-miley-cyrus-wiz-khalifa-french-montana/1445061047"
             },
+            {
+                title: "Scream & Shout (feat. Britney Spears, Hit-Boy, Waka Flocka Flame, Lil Wayne & Diddy) [Remix] [Remix]",
+                src: "https://embed.music.apple.com/us/music-video/scream-shout-feat-britney-spears-hit-boy-waka-flocka/1445014267"
+            },
+            {
+                title: "Scream & Shout (feat. Britney Spears)",
+                src: "https://embed.music.apple.com/us/music-video/scream-shout-feat-britney-spears/1422696277"
+            },
         ]
     },
     {
@@ -14799,6 +15983,78 @@
                 title: "You Love Who You Love",
                 src: "https://embed.music.apple.com/us/music-video/you-love-who-you-love/1729450703"
             },
+            {
+                title: "The Healing (Venus Pawn Shop Sessions)",
+                src: "https://embed.music.apple.com/us/music-video/the-healing-venus-pawn-shop-sessions/1735823975"
+            },
+            {
+                title: "You Love Who You Love (Venus Pawn Shop Sessions)",
+                src: "https://embed.music.apple.com/us/music-video/you-love-who-you-love-venus-pawn-shop-sessions/1733549209"
+            },
+            {
+                title: "Can't Tame Her (Venus Pawn Shop Sessions)",
+                src: "https://embed.music.apple.com/us/music-video/cant-tame-her-venus-pawn-shop-sessions/1732372020"
+            },
+            {
+                title: "Never Forget You (Orchestral Version - Performance Video)",
+                src: "https://embed.music.apple.com/us/music-video/never-forget-you-orchestral-version-performance-video/1573480351"
+            },
+            {
+                title: "Ruin My Life (Orchestral Version - Performance Video)",
+                src: "https://embed.music.apple.com/us/music-video/ruin-my-life-orchestral-version-performance-video/1573309240"
+            },
+            {
+                title: "Talk About Love (Live from Good Morning America)",
+                src: "https://embed.music.apple.com/us/music-video/talk-about-love-live-from-good-morning-america/1557487636"
+            },
+            {
+                title: "Talk About Love (Performance Music Video)",
+                src: "https://embed.music.apple.com/us/music-video/talk-about-love-performance-music-video/1557813594"
+            },
+            {
+                title: "Look What You've Done (Performance Music Video)",
+                src: "https://embed.music.apple.com/us/music-video/look-what-youve-done-performance-music-video/1557377926"
+            },
+            {
+                title: "WOW",
+                src: "https://embed.music.apple.com/us/music-video/wow/1557813334"
+            },
+            {
+                title: "I Need Love",
+                src: "https://embed.music.apple.com/us/music-video/i-need-love/1557676571"
+            },
+            {
+                title: "Love Me Land",
+                src: "https://embed.music.apple.com/us/music-video/love-me-land/1557752323"
+            },
+            {
+                title: "Right Here",
+                src: "https://embed.music.apple.com/us/music-video/right-here/1557672067"
+            },
+            {
+                title: "Poster Girl",
+                src: "https://embed.music.apple.com/us/music-video/poster-girl/1557694199"
+            },
+            {
+                title: "Ruin My Life",
+                src: "https://embed.music.apple.com/us/music-video/ruin-my-life/1557696629"
+            },
+            {
+                title: "Talk About Love (feat. Young Thug)",
+                src: "https://embed.music.apple.com/us/music-video/talk-about-love-feat-young-thug/1547712010"
+            },
+            {
+                title: "WOW",
+                src: "https://embed.music.apple.com/us/music-video/wow/1536169094"
+            },
+            {
+                title: "Love Me Land (Live from Gröna Lund)",
+                src: "https://embed.music.apple.com/us/music-video/love-me-land-live-from-gr%C3%B6na-lund/1526485783"
+            },
+            {
+                title: "Uncover",
+                src: "https://embed.music.apple.com/us/music-video/uncover/960095606"
+            },
         ]
     },
     {
@@ -14808,6 +16064,10 @@
             {
                 title: "On My Love",
                 src: "https://embed.music.apple.com/us/music-video/on-my-love/1707089724"
+            },
+            {
+                title: "On My Love (Venus Pawn Shop Sessions)",
+                src: "https://embed.music.apple.com/us/music-video/on-my-love-venus-pawn-shop-sessions/1734698254"
             },
         ]
     },
@@ -14937,6 +16197,15 @@
             {
                 title: "redrum",
                 src: "https://embed.music.apple.com/us/music-video/redrum/1726276331"
+            },
+        ]
+    },
+    {
+        artist: "3LW featuring Jermaine Dupri",
+        songs: [
+            {
+                title: "Feelin' You",
+                src: "https://embed.music.apple.com/us/music-video/feelin-you/212242119"
             },
         ]
     },
