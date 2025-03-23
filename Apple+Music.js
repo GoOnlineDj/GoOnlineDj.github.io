@@ -234,10 +234,6 @@
 
         songs: [
             {
-                title: "Don't Matter",
-                src: "https://embed.music.apple.com/us/music-video/dont-matter/1446006069"
-            },
-            {
                 title: "Smack That (feat. Eminem)",
                 src: "https://embed.music.apple.com/us/music-video/smack-that-feat-eminem/1445893631"
             },
@@ -246,8 +242,6 @@
                 src: "https://embed.music.apple.com/us/music-video/akons-beautiful-day/1771920539"
             }
         ]
-
-
     },
     {
         artist: "Akon & T-Pain",
