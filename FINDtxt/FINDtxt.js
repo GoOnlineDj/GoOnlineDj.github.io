@@ -17440,6 +17440,56 @@ logArtistNames(appleMusic);
 
 
 
+//////////////////////////////////////////////////////////////////
+
+const scrollUpButtons = document.querySelectorAll('._c_Scroll-Up');
+const scrollDownButtons = document.querySelectorAll('._c_Scroll-Down');
+
+if (!id_frame) {
+    console.error("id_frame element not found. Please check the selector or ensure the element exists in the DOM.");
+}
+
+let scrollInterval;
+let isHolding = false;
+
+function startScrolling(direction) {
+    if (id_frame) {
+        isHolding = true;
+        scrollInterval = setInterval(() => {
+            id_frame.scrollBy({ top: direction === 'up' ? -500 : 500, behavior: 'smooth' }); // Faster scrolling for holding
+        }, 500); // Faster interval for holding
+    }
+}
+
+function stopScrolling() {
+    isHolding = false;
+    clearInterval(scrollInterval);
+}
+
+scrollUpButtons.forEach(button => {
+    button.addEventListener('mousedown', () => startScrolling('up'));
+    button.addEventListener('mouseup', stopScrolling);
+    button.addEventListener('mouseleave', stopScrolling); // Stop scrolling if the mouse leaves the button
+    button.addEventListener('click', () => {
+        if (!isHolding) id_frame.scrollBy({ top: -300, behavior: 'smooth' }); // Slower scroll for clicking
+    });
+});
+
+scrollDownButtons.forEach(button => {
+    button.addEventListener('mousedown', () => startScrolling('down'));
+    button.addEventListener('mouseup', stopScrolling);
+    button.addEventListener('mouseleave', stopScrolling); // Stop scrolling if the mouse leaves the button
+    button.addEventListener('click', () => {
+        if (!isHolding) id_frame.scrollBy({ top: 300, behavior: 'smooth' }); // Slower scroll for clicking
+    });
+});
+
+
+
+// setInterval(() => {
+//     const currentSecond = new Date().getSeconds();
+//     document.documentElement.style.setProperty('--current-second', currentSecond);
+// }, 1000);
 
 
 //////////////////////////////////////////////////////////////////
@@ -17523,3 +17573,4 @@ valueInit();
 //ALSO SPECIAL THANKS TO FrontendMasters.COM FOR Teaching ME HOW TO CODE
 //ALSO SPECIAL THANKS TO FrontendMasters.COM FOR Teaching ME HOW TO CODE
 //ALSO SPECIAL THANKS TO FrontendMasters.COM FOR Teaching ME HOW TO CODE
+
