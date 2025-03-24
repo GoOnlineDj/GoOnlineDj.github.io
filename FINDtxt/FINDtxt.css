@@ -33,9 +33,9 @@ footer {
 }
 
 
-button[class*="_c_Apple-Music-Video-"] {
+/* button[class*="_c_Apple-Music-Video-"] {
     animation: flash-green 1s infinite alternate;
-}
+} */
 
 ._c_Apple-Music-grid-buttons  ._c_Scroll-Up {
     animation: flash-blue 1s infinite alternate;
