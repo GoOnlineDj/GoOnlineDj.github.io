@@ -14796,10 +14796,6 @@
                 src: "https://embed.music.apple.com/us/music-video/i-know/579158698"
             },
             {
-                title: "Araab Styles",
-                src: "https://embed.music.apple.com/us/music-video/araab-styles/574909880"
-            },
-            {
                 title: "Blow Your Mind - Director's Cut",
                 src: "https://embed.music.apple.com/us/music-video/blow-your-mind-directors-cut/268250090"
             },
