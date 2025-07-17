@@ -171,3 +171,51 @@ nav div {
         margin: 0;
         padding: 0;
 } */
+
+
+
+
+
+
+
+._c_Apple-Music-grid-buttons  ._c_Scroll-Up {
+    animation: flash-blue 1s infinite alternate;
+}
+
+._c_Apple-Music-grid-buttons ._c_Scroll-Down {
+    animation: flash-red 1s infinite alternate;
+}
+
+
+@keyframes flash-blue {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: blue;
+    }
+}
+
+@keyframes flash-red {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: red;
+    }
+}
+
+@keyframes flash-green {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: green;
+    }
+}
+
+
+
+/* This is the end of the CSS file for the Apple Music Video page layout. 
+   It defines the grid structure, styles for buttons, and other elements 
+   to create a responsive and visually appealing interface. */
