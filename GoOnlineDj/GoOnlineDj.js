@@ -112,7 +112,7 @@ document.querySelector("._c_Alive").addEventListener("click", function (event) {
   console.log("randomSelectedUrl: " + randomSelectedUrl);
 });
 
-document.querySelector("._c_Music-Video-back").addEventListener("click", function () {
+document.querySelectorAll("._c_Music-Video-back").addEventListener("click", function () {
 
   iframe.src = urls[value];
   console.log("value: " + value + " url[value]: " + urls[value]);
@@ -125,7 +125,7 @@ document.querySelector("._c_Music-Video-back").addEventListener("click", functio
   
 });
 
-document.querySelector("._c_Music-Video-forward").addEventListener("click", function () {
+document.querySelectorAll("._c_Music-Video-forward").addEventListener("click", function () {
 
   iframe.src = urls[value];
   console.log("value: " + value + " url[value]: " + urls[value]);
