@@ -131,7 +131,6 @@ document.querySelectorAll("._c_Music-Video-forward").forEach(function(btn) {
   });
 });
 
-// if (value >= urls.length) {
-//   return;
-// }
+// Thank You + Microsoft Copilot + For Assisting + Thank You For Your Support +
+// + Thank You Bill Gates For Microsoft Copilot +
 
