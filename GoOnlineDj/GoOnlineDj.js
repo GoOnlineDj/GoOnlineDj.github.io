@@ -112,7 +112,7 @@ document.querySelector("._c_Alive").addEventListener("click", function (event) {
   console.log("randomSelectedUrl: " + randomSelectedUrl);
 });
 
-ocument.querySelectorAll("._c_Music-Video-back").forEach(function(btn) {
+document.querySelectorAll("._c_Music-Video-back").forEach(function(btn) {
   btn.addEventListener("click", function () {
     if (value > 0) {
       value--;
