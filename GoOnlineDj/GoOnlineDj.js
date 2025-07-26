@@ -112,29 +112,24 @@ document.querySelector("._c_Alive").addEventListener("click", function (event) {
   console.log("randomSelectedUrl: " + randomSelectedUrl);
 });
 
-document.querySelectorAll("._c_Music-Video-back").addEventListener("click", function () {
-
-  iframe.src = urls[value];
-  console.log("value: " + value + " url[value]: " + urls[value]);
-
-  if (value === 0) {
-    return;
-  }
-
-  value--;
-  
+ocument.querySelectorAll("._c_Music-Video-back").forEach(function(btn) {
+  btn.addEventListener("click", function () {
+    if (value > 0) {
+      value--;
+      iframe.src = urls[value];
+      console.log("value: " + value + " url[value]: " + urls[value]);
+    }
+  });
 });
 
-document.querySelectorAll("._c_Music-Video-forward").addEventListener("click", function () {
-
-  iframe.src = urls[value];
-  console.log("value: " + value + " url[value]: " + urls[value]);
-
-  if (value === urls.length - 1) {
-    return;
-  }
-
-  value++;
+document.querySelectorAll("._c_Music-Video-forward").forEach(function(btn) {
+  btn.addEventListener("click", function () {
+    if (value < urls.length - 1) {
+      value++;
+      iframe.src = urls[value];
+      console.log("value: " + value + " url[value]: " + urls[value]);
+    }
+  });
 });
 
 // if (value >= urls.length) {
