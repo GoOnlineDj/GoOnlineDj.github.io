@@ -106,9 +106,8 @@ document.getElementById("_id_iframe").appendChild(iframe);
 
 document.querySelector("._c_Alive").addEventListener("click", function (event) {
   randomSelectedUrl = getRandomUrl(urls);
-  randomSelectedUrl = getRandomUrl(urls);
-
   iframe.src = randomSelectedUrl;
+  value = urls.indexOf(randomSelectedUrl); // Synchronize value with the current URL
   console.log("randomSelectedUrl: " + randomSelectedUrl);
 });
 
