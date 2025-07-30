@@ -2,6 +2,7 @@
 @import url(../Contact/contact.css);
 
 body {
+    display: contents;
     font-family: Arial, sans-serif;
     font-size: 2rem;
     cursor: progress;
