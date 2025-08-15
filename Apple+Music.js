@@ -18996,6 +18996,7 @@ let currentUrl = defaultUrl;
 let a = 0;
 let s = 0;
 let autoLoadInterval;
+let firstPress = 0;
 
 
 
@@ -19039,7 +19040,13 @@ document.getElementById("_id_iframe").addEventListener("click", () => {
 const musicForward = document.querySelectorAll("._c_Apple-Music-forward");
 musicForward.forEach(x => x.addEventListener("click", () => {
     clearInterval(autoLoadInterval);
-    AppleMusicForward();
+
+    if (firstPress === 0) {
+        iframe.src = appleMusic[a].songs[s].src;
+        firstPress = 1;
+    } else {
+        AppleMusicForward();
+    }
 }));
 
 const musicRefresh = document.querySelectorAll("._c_Apple-Music-refresh");
@@ -19057,7 +19064,13 @@ FINDtxt.forEach(x => x.addEventListener("click", () => {
 const musicBack = document.querySelectorAll("._c_Apple-Music-back");
 musicBack.forEach(x => x.addEventListener("click", () => {
     clearInterval(autoLoadInterval);
-    AppleMusicBack();
+
+    if (firstPress === 0) {
+        iframe.src = appleMusic[a].songs[s].src;
+        firstPress = 1;
+    } else {
+        AppleMusicBack();
+    }
 }));
 
 
