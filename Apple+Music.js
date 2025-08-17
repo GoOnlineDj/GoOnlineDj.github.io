@@ -18996,7 +18996,7 @@ let currentUrl = defaultUrl;
 let a = 0;
 let s = 0;
 let autoLoadInterval;
-let firstPress = 0;
+let firstPress = 1;
 
 
 
@@ -19041,9 +19041,9 @@ const musicForward = document.querySelectorAll("._c_Apple-Music-forward");
 musicForward.forEach(x => x.addEventListener("click", () => {
     clearInterval(autoLoadInterval);
 
-    if (firstPress === 0) {
+    if (firstPress === 1) {
         iframe.src = appleMusic[a].songs[s].src;
-        firstPress = 1;
+        firstPress = 0;
     } else {
         AppleMusicForward();
     }
@@ -19065,9 +19065,9 @@ const musicBack = document.querySelectorAll("._c_Apple-Music-back");
 musicBack.forEach(x => x.addEventListener("click", () => {
     clearInterval(autoLoadInterval);
 
-    if (firstPress === 0) {
+    if (firstPress === 1) {
         iframe.src = appleMusic[a].songs[s].src;
-        firstPress = 1;
+        firstPress = 0;
     } else {
         AppleMusicBack();
     }
