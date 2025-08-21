@@ -19053,6 +19053,7 @@ const musicRefresh = document.querySelectorAll("._c_Apple-Music-refresh");
 musicRefresh.forEach(x => x.addEventListener("click", () => {
     clearInterval(autoLoadInterval);
     iframe.src = appleMusic[a].songs[s].src;
+    firstPress = 0;
 }));
 
 const FINDtxt = document.querySelectorAll("._c_FINDtxt");
