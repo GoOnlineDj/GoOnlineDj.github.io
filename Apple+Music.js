@@ -7033,7 +7033,7 @@
             },
             {
                 title: "More Than Friends (feat. Daddy Yankee)",
-                src: "https://embed.music.apple.com/us/music-video/more-than-friends-feat-daddy-yankee/714521124"
+                src: "https://embed.music.apple.com/us/music-video/more-than-friends-feat-daddy-yankee/1800221185"
             },
             {
                 title: "No Help",
@@ -11609,10 +11609,6 @@
             {
                 title: "Hollywood Tonight",
                 src: "https://embed.music.apple.com/us/music-video/hollywood-tonight/425270835"
-            },
-            {
-                title: "Thriller",
-                src: "https://embed.music.apple.com/us/music-video/thriller/287857650"
             },
         ]
     },
@@ -19082,6 +19078,7 @@ musicBack.forEach(x => x.addEventListener("click", () => {
 function buttonClick(value) {
 
     const alphabet_number = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".split("");
+    firstPress = 0;
 
     if (!alphabet_number.includes(value)) {
         return;
