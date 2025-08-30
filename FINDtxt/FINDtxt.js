@@ -1196,10 +1196,6 @@ const id_frame = document.getElementById("_id_frame");
                 src: "https://embed.music.apple.com/us/music-video/baby-im-jealous-feat-doja-cat/1535667658"
             },
             {
-                title: "Break My Heart Myself (feat. Travis Barker)",
-                src: "https://embed.music.apple.com/us/music-video/break-my-heart-myself-feat-travis-barker/1566549248"
-            },
-            {
                 title: "F.F.F. (feat. G-Eazy)",
                 src: "https://embed.music.apple.com/us/music-video/f-f-f-feat-g-eazy/1213441116"
             },
@@ -7006,7 +7002,7 @@ const id_frame = document.getElementById("_id_frame");
             },
             {
                 title: "More Than Friends (feat. Daddy Yankee)",
-                src: "https://embed.music.apple.com/us/music-video/more-than-friends-feat-daddy-yankee/714521124"
+                src: "https://embed.music.apple.com/us/music-video/more-than-friends-feat-daddy-yankee/1800221185"
             },
             {
                 title: "No Help",
@@ -11583,10 +11579,6 @@ const id_frame = document.getElementById("_id_frame");
                 title: "Hollywood Tonight",
                 src: "https://embed.music.apple.com/us/music-video/hollywood-tonight/425270835"
             },
-            {
-                title: "Thriller",
-                src: "https://embed.music.apple.com/us/music-video/thriller/287857650"
-            },
         ]
     },
     {
@@ -15820,10 +15812,6 @@ const id_frame = document.getElementById("_id_frame");
             {
                 title: "Romantic Mood",
                 src: "https://embed.music.apple.com/us/music-video/romantic-mood/1459423635"
-            },
-            {
-                title: "Twerk",
-                src: "https://embed.music.apple.com/us/music-video/twerk/647915280"
             },
         ]
     },

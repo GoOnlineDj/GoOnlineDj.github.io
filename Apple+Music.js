@@ -1223,10 +1223,6 @@
                 src: "https://embed.music.apple.com/us/music-video/baby-im-jealous-feat-doja-cat/1535667658"
             },
             {
-                title: "Break My Heart Myself (feat. Travis Barker)",
-                src: "https://embed.music.apple.com/us/music-video/break-my-heart-myself-feat-travis-barker/1566549248"
-            },
-            {
                 title: "F.F.F. (feat. G-Eazy)",
                 src: "https://embed.music.apple.com/us/music-video/f-f-f-feat-g-eazy/1213441116"
             },
