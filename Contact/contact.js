@@ -32,10 +32,7 @@ document.getElementById("_id_frame").innerHTML = `<div class="contact-body">
             <hr>
             <section>
                 <div>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1548794.8773160155!2d-74.26723900000005!3d40.696217999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ad9f6f9daa9b%3A0x570322a196f054c!2sUnion%2C%20NJ!5e0!3m2!1sen!2sus!4v1721748335280!5m2!1sen!2sus"
-                        style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28741.256812237058!2d-80.15580631743448!3d25.781887243459224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b48e8bc080f1%3A0x7afeece4a9efe6bd!2sSouth%20Beach%2C%20Miami%20Beach%2C%20FL%2033139!5e0!3m2!1sen!2sus!4v1756515581959!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </section>
             <hr>
