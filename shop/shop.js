@@ -5,9 +5,9 @@ document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
 
 
 document.getElementById("_id_frame").innerHTML = `<div class="_c_shop">
-                    <a href="https://www.barnesandnoble.com/w/the-telomere-effect-dr-elizabeth-blackburn/1125091851?ean=2940170117970"
-                            target="_blank" rel="noopener"><img src="./images/telomere.jpg" 
-                                    style="text-decoration: none;"  alt="telomere"></a>
+                    <a href="https://www.amazon.com/Mastering-Clinical-Research-Pathway-Six-Figure/dp/1968061347/ref=tmm_pap_swatch_0"
+                            target="_blank" rel="noopener"><img src="./images/Mastering Clinical Research Pathway to a Six-Figure Career.jpg"" 
+                                    style="text-decoration: none;"  alt="Mastering-Clinical-Research-Pathway-Six-Figure"></a>
                     <a href="https://amazon.com/music/player/albums/B00DUIBZSK?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_LNW5QSn81neTHUmv8kaW17zkK"
                             target="_blank" rel="noopener"><img src="./images/starsdance.jpg.webp" 
                                     style="text-decoration: none;"  alt="SelenaGomez"></a>
