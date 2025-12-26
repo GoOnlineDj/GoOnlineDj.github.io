@@ -92,7 +92,7 @@ const urls = [
 
 let value = 0;
 const defaultUrl =
-  "https://www.youtube.com/embed/videoseries?si=Pst3cpmWKtah7r2P&amp;list=PL-nG1cUOoV9_buQChZ9feF3BJ4mLST8Wz";
+  "https://www.youtube.com/embed/videoseries?si=3gn4pM0uXnS17haI&amp;list=PLPdWITRXm_YeJI_pEeEh_YUSyyAgf2DHs";
 let randomSelectedUrl = getRandomUrl(urls);
 let iframe = document.createElement("iframe");
 iframe.className = "random-iframe";
