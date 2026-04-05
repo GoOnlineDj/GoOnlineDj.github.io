@@ -38,10 +38,7 @@ loadframe.innerHTML = `
                 <option value="www.CoreOfWoman.com"> www.CoreOfWoman.com </option>
                 <option value="www.ProfileCalendar.com"> www.ProfileCalendar.com </option>
                 <option value="www.TheAdviseGuy.com"> www.TheAdviseGuy.com </option>
-                <option value="www.seeMEsayHI.com"> www.seeMEsayHI.com </option>
                 <option value="www.TheAdviseGirl.com"> www.TheAdviseGirl.com </option>
-                <option value="www.AskToEnter.com"> www.AskToEnter.com </option>
-                <option value="www.ciFbi.com"> www.ciFbi.com </option>
                 <option value="www.OfficerOfGod.com"> www.OfficerOfGod.com </option>
                 <option value="www.valueINIT.com"> www.valueINIT.com </option>
                 <option value="www.favJOIN.com"> www.favJOIN.com </option>
@@ -50,15 +47,12 @@ loadframe.innerHTML = `
                 <option value="www.GoOnlineDj.com"> www.GoOnlineDj.com </option>
                 <option value="www.CopilotTwin.com"> www.CopilotTwin.com </option>
                 <option value="www.FINDtxt.com"> www.FINDtxt.com </option>
-                <option value="www.C-a-l-i-f-o-r-n-i-a.com"> www.C-a-l-i-f-o-r-n-i-a.com </option>
-                <option value="www.C-o-n-n-e-c-t-i-c-u-t.com"> www.C-o-n-n-e-c-t-i-c-u-t.com </option>
                 <option value="www.D-i-r-e-c-T-V.com"> www.D-i-r-e-c-T-V.com </option>
                 <option value="www.G-o-O-n-l-i-n-e-D-j.com"> www.G-o-O-n-l-i-n-e-D-j.com </option>
                 <option value="www.I-n-t-e-l.com"> www.I-n-t-e-l.com </option>
                 <option selected value="www.L-A-P-D.com"> www.L-A-P-D.com </option>
                 <option value="www.M-J-W.com"> www.M-J-W.com </option>
                 <option value="www.M-y-S-p-a-c-e.com"> www.M-y-S-p-a-c-e.com </option>
-                <option value="www.My-Video-Profile.com"> www.My-Video-Profile.com </option>
                 <option value="www.S-O-N-Y.com"> www.S-O-N-Y.com </option>
             </select>
         </div>
