@@ -156,7 +156,21 @@
             {
                 title: "Hustle Hard (Remix) [feat. Rick Ross & Lil Wayne]",
                 src: "https://embed.music.apple.com/us/music-video/hustle-hard-remix-feat-rick-ross-lil-wayne-video/1445753102"
+            },
+             {
+                title: "Overtime (feat. Akon & T-Pain) [Bonus Video]",
+                src: "https://embed.music.apple.com/us/music-video/overtime-feat-akon-t-pain-bonus-video/1446015022"
             }
+        ]
+    },
+       {
+        artist: "Ace Hood, Rick Ross & T-Pain",
+        birthday: [{ month: "May", day: 11, year: 1988 }, { month: "January", day: 28, year: 1976 }, { month: "September", day: 30, year: 1984 }],
+        songs: [
+            {
+                title: "Cash Flow",
+                src: "https://embed.music.apple.com/us/music-video/cash-flow/1445830280"
+            },
         ]
     },
     {
@@ -188,7 +202,6 @@
     {
         artist: "Adele",
         birthday: [{ month: "May", day: 5, year: 1988 }],
-
         songs: [
             {
                 title: "Easy On Me",
@@ -519,6 +532,10 @@
                 title: "I'm Coming Out",
                 src: "https://embed.music.apple.com/us/music-video/im-coming-out/1380461471"
             },
+             {
+                title: "Mine",
+                src: "https://embed.music.apple.com/us/music-video/mine/1808948677"
+            },
         ]
     },
 
@@ -532,14 +549,23 @@
             }
         ]
     },
-
-    {
+ {
         artist: "Anitta",
         birthday: [{ month: "March", day: 30, year: 1993 }],
         songs: [
             {
                 title: "Girl from Rio (feat. DaBaby)",
                 src: "https://embed.music.apple.com/us/music-video/girl-from-rio-feat-dababy/1570199195"
+            },
+        ]
+    },
+     {
+        artist: "Anitta & Becky G",
+        birthday: [{ month: "March", day: 30, year: 1993 }, { month: "March", day: 2, year: 1997 }],
+        songs: [
+            {
+                title: "Banana",
+                src: "https://embed.music.apple.com/us/music-video/banana/1459704153"
             },
         ]
     },
@@ -686,6 +712,14 @@
             {
                 title: "34+35 (feat. Doja Cat & Megan Thee Stallion) [Remix]",
                 src: "https://embed.music.apple.com/us/music-video/34-35-feat-doja-cat-megan-thee-stallion-remix/1553403346"
+            },
+             {
+                title: "supernatural (feat. Troye Sivan)",
+                src: "https://embed.music.apple.com/us/music-video/supernatural-feat-troye-sivan/1814892273"
+            },
+            {
+                title: "twilight zone",
+                src: "https://embed.music.apple.com/us/music-video/twilight-zone/1821008073"
             },
         ]
     },
@@ -860,6 +894,20 @@
                 title: "Slumber Party (feat. Princess Nokia)",
                 src: "https://embed.music.apple.com/us/music-video/slumber-party-feat-princess-nokia/1567395206"
             },
+             {
+                title: "Smoochie Girl",
+                src: "https://embed.music.apple.com/us/music-video/smoochie-girl/1844585781"
+            },
+        ]
+    },
+       {
+        artist: "Audrey Hobert",
+        birthday: [{ month: "February", day: 19, year: 1999 }],
+        songs: [
+            {
+                title: "Thirst Trap",
+                src: "https://embed.music.apple.com/us/music-video/thirst-trap/1833030298"
+            },
         ]
     },
        {
@@ -957,6 +1005,16 @@
             },
         ]
     },
+     {
+        artist: "Ayra Starr",
+        birthday: [{ month: "June", day: 14, year: 2002 }],
+        songs: [
+            {
+                title: "Hot Body",
+                src: "https://embed.music.apple.com/us/music-video/hot-body/1837550544"
+            },
+        ]
+    },
     {
         artist: "B.o.B",
         birthday: [{ month: "November", day: 15, year: 1988 }],
@@ -982,6 +1040,16 @@
             {
                 title: "Really Like You",
                 src: "https://embed.music.apple.com/us/music-video/really-like-you/1791019849"
+            },
+        ]
+    },
+     {
+        artist: "Baby Bash",
+        birthday: [{ month: "October ", day: 18, year: 1975 }],
+        songs: [
+            {
+                title: "Cyclone",
+                src: "https://embed.music.apple.com/us/music-video/cyclone/262565513"
             },
         ]
     },
@@ -1049,6 +1117,16 @@
             {
                 title: "The Jackie (feat. Lil Tjay)",
                 src: "https://embed.music.apple.com/us/music-video/the-jackie-feat-lil-tjay/1574968972"
+            },
+        ]
+    },
+    {
+        artist: "Bazzi",
+        birthday: [{ month: "August", day: 28, year: 1997 }],
+        songs: [
+            {
+                title: "Beautiful (feat. Camila Cabello)",
+                src: "https://embed.music.apple.com/us/music-video/beautiful-feat-camila-cabello/1439142714"
             },
         ]
     },
@@ -1258,6 +1336,14 @@
                 title: "You Can't Stop The Girl (From Disney's 'Maleficent: Mistress of Evil')",
                 src: "https://embed.music.apple.com/us/music-video/you-cant-stop-the-girl-from-disneys-maleficent/1484723675"
             },
+             {
+                title: "Chase It (Mmm Da Da Da)",
+                src: "https://embed.music.apple.com/us/music-video/chase-it-mmm-da-da-da/1747049249"
+            },
+            {
+                title: "I'm The Drama",
+                src: "https://embed.music.apple.com/us/music-video/im-the-drama/1761888311"
+            },
         ]
     },
     {
@@ -1310,16 +1396,29 @@
                 title: "Shower",
                 src: "https://embed.music.apple.com/us/music-video/shower/893764093"
             },
+            {
+                title: "They Ain't Ready",
+                src: "https://embed.music.apple.com/us/music-video/they-aint-ready/1507240660"
+            },
+        ]
+    },
+       {
+        artist: "Becky G & Digital Farm Animals", 
+        songs: [
+            {
+                title: "Next To You (feat. Rvssian)",
+                src: "https://embed.music.apple.com/us/music-video/next-to-you-feat-rvssian/1460834068"
+            },
         ]
     },
     {
-        artist: "Becky G. & Natti Natasha",
+        artist: "Becky G & NATTI NATASHA",
         birthday: [{ month: "March", day: 2, year: 1997 }, { month: "December", day: 10, year: 1986 }],
         songs: [
             {
                 title: "Sin Pijama",
                 src: "https://embed.music.apple.com/us/music-video/sin-pijama/1374667561"
-            }
+            },
         ]
     },
     {
@@ -1598,6 +1697,10 @@
                 title: 'MILLIONS',
                 src: 'https://embed.music.apple.com/us/music-video/millions/1699825268'
             },
+            {
+                title: 'ONE THING',
+                src: "https://embed.music.apple.com/us/music-video/one-thing/1828286611"
+            },
         ]
     },
     {
@@ -1627,6 +1730,16 @@
             {
                 title: "I'M THAT BITCH",
                 src: 'https://embed.music.apple.com/us/music-video/im-that-bitch/1678614033'
+            },
+        ]
+    },
+       {
+        artist: "BIA & Young Miko",
+        birthday: [{ month: "August", day: 16, year: 1991 }, { month: "November", day: 8, year: 1997 }],
+        songs: [
+            {
+                title: "BIRTHDAY BEHAVIOR",
+                src: "https://embed.music.apple.com/us/music-video/birthday-behavior/1833671541"
             },
         ]
     },
@@ -2228,6 +2341,10 @@
                 title: "Ready or Not",
                 src: "https://embed.music.apple.com/us/music-video/ready-or-not/1445826725"
             },
+              {
+                title: "Temperamental Love (feat. Devontée)",
+                src: "https://embed.music.apple.com/us/music-video/temperamental-love-feat-devont%C3%A9e/1210471257"
+            },
         ]
     },
     {
@@ -2529,12 +2646,31 @@
             },
         ]
     },
+      {
+        artist: "Busta Rhymes & T-Pain",
+        birthday: [{ month: "May", day: 20, year: 1972 }, { month: "September", day: 30, year: 1984 }],
+        songs: [
+            {
+                title: "Hustler's Anthem 09 (feat. T-Pain) [Squeaky Clean Version]",
+                src: "https://embed.music.apple.com/us/music-video/hustlers-anthem-09-feat-t-pain-squeaky-clean-version/1445864987"
+            },
+        ]
+    },
     {
         artist: "Byrd Gang, Jim Jones & Capella Grey", 
         songs: [
             {
                 title: "FaceTime (feat. Dyce Payso & DramaB2R)",
                 src: "https://embed.music.apple.com/us/music-video/facetime-feat-dyce-payso-dramab2r/1695586407"
+            },
+        ]
+    },
+     {
+        artist: "C-Ride",
+        songs: [
+            {
+                title: "Money Round Here (feat. T-Pain)",
+                src: "https://embed.music.apple.com/us/music-video/money-round-here-feat-t-pain/332084013"
             },
         ]
     },
@@ -2712,6 +2848,18 @@
                 title: "Never Be the Same",
                 src: "https://embed.music.apple.com/us/music-video/never-be-the-same/1356757463"
             },
+              {
+                title: "Living Proof",
+                src: "https://embed.music.apple.com/us/music-video/living-proof/1489101371"
+            },
+             {
+                title: "Million To One",
+                src: "https://embed.music.apple.com/us/music-video/million-to-one/1583625528"
+            },
+              {
+                title: "Shameless",
+                src: "https://embed.music.apple.com/us/music-video/shameless/1478956517"
+            },
         ]
     },
     {
@@ -2733,6 +2881,10 @@
             {
                 title: "Ring (feat. Kehlani)",
                 src: "https://embed.music.apple.com/us/music-video/ring-feat-kehlani/1433831106"
+            },
+             {
+                title: "Imaginary Playerz",
+                src: "https://embed.music.apple.com/us/music-video/imaginary-playerz/1833496219"
             },
         ]
     },
@@ -2770,6 +2922,60 @@
             {
                 title: "Summer Rain",
                 src: "https://embed.music.apple.com/us/music-video/summer-rain/1470045652"
+            },
+        ]
+    },
+    {
+        artist: "Carly Rae Jepsen",
+        birthday: [{ month: "November", day: 21, year: 1985 }],
+        songs: [
+            {
+                title: "Call Me Maybe",
+                src: "https://embed.music.apple.com/us/music-video/call-me-maybe/1445866423"
+            },
+             {
+                title: "The Loneliest Time (feat. Rufus Wainwright)",
+                src: "https://embed.music.apple.com/us/music-video/the-loneliest-time-feat-rufus-wainwright/1648945847"
+            },
+            {
+                title: "Me And The Boys In The Band",
+                src: "https://embed.music.apple.com/us/music-video/me-and-the-boys-in-the-band/1527848891"
+            },
+            {
+                title: "Now That I Found You",
+                src: "https://embed.music.apple.com/us/music-video/now-that-i-found-you/1456180819"
+            },
+            {
+                title: "Party For One",
+                src: "https://embed.music.apple.com/us/music-video/party-for-one/1440701450"
+            },
+            {
+                title: "Run Away With Me",
+                src: "https://embed.music.apple.com/us/music-video/run-away-with-me/1444854384"
+            },
+            {
+                title: "Surrender My Heart",
+                src: "https://embed.music.apple.com/us/music-video/surrender-my-heart/1659936433"
+            },
+            {
+                title: "This Kiss",
+                src: "https://embed.music.apple.com/us/music-video/this-kiss/1445863456"
+            },
+            {
+                title: "Too Much",
+                src: "https://embed.music.apple.com/us/music-video/too-much/1463893874"
+            },
+            {
+                title: "Want You In My Room",
+                src: "https://embed.music.apple.com/us/music-video/want-you-in-my-room/1480854378"
+            },
+            {
+                title: "Western Wind",
+                src: "https://embed.music.apple.com/us/music-video/western-wind/1622749923"
+            },
+            {
+                title: "Your Type",
+                src: "https://embed.music.apple.com/us/music-video/your-type/1444874560"
             },
         ]
     },
@@ -3019,6 +3225,10 @@
                 title: "party 4 u",
                 src: "https://embed.music.apple.com/us/music-video/party-4-u/1815381936"
             },
+            {
+                title: "Chains of Love",
+                src: "https://embed.music.apple.com/us/music-video/chains-of-love/1854225518"
+            },
         ]
     },
     {
@@ -3053,6 +3263,10 @@
             {
                 title: "I Wish (feat. T.I.)",
                 src: "https://embed.music.apple.com/us/music-video/i-wish-feat-t-i/712603653" 
+            },
+            {
+                title: "M.I.A",
+                src: "https://embed.music.apple.com/us/music-video/m-i-a/1481612481"
             },
         ]
     },
@@ -3570,6 +3784,26 @@
             {
                 title: "Players (DJ Smallz 732 Jersey Club Remix)",
                 src: "https://embed.music.apple.com/us/music-video/players-dj-smallz-732-jersey-club-remix/1666006004"
+            },
+        ]
+    },
+       {
+        artist: "Coi Leray & BKTHERULA",
+        birthday: [{ month: "May", day: 11, year: 1997 }, { month: "August", day: 30, year: 2002 }],
+        songs: [
+            {
+                title: "Pink Money (feat. G Herbo)",
+                src: "https://embed.music.apple.com/us/music-video/pink-money-feat-g-herbo/1840753588"
+            },
+        ]
+    },
+    {
+        artist: "Coi Leray & Shoreline Mafia",
+        birthday: [{ month: "May", day: 11, year: 1997 }],
+        songs: [
+            {
+                title: "Act Like You Know",
+                src: "https://embed.music.apple.com/us/music-video/act-like-you-know/1843485630"
             },
         ]
     },
@@ -4119,6 +4353,18 @@
                 title: "Love You When You're Gone",
                 src: "https://embed.music.apple.com/us/music-video/love-you-when-youre-gone/1631209233"
             },
+            {
+                title: "Demise",
+                src: "https://embed.music.apple.com/us/music-video/demise/1822671459"
+            },
+            {
+                title: "Drift Away",
+                src: "https://embed.music.apple.com/us/music-video/drift-away/1845458240"
+            },
+            {
+                title: "Infrared",
+                src: "https://embed.music.apple.com/us/music-video/infrared/1817677529"
+            },
         ]
     },
     {
@@ -4146,6 +4392,16 @@
             {
                 title: "I'm Geekin (feat. NLE Choppa & BIA) [Remix - Official Music Video]",
                 src: "https://embed.music.apple.com/us/music-video/im-geekin-feat-nle-choppa-bia-remix-official-music-video/1692967159"
+            },
+        ]
+    },
+       {
+        artist: "DDG & Gunna",
+        birthday: [{ month: "October", day: 10, year: 1997 }, { month: "June", day: 14, year: 1993 }],
+        songs: [
+            {
+                title: "no smoke",
+                src: "https://embed.music.apple.com/us/music-video/no-smoke/1849509688"
             },
         ]
     },
@@ -4263,7 +4519,15 @@
             {
                 title: "Tell Me You Love Me",
                 src: "https://embed.music.apple.com/us/music-video/tell-me-you-love-me/1445025749"
-            }
+            },
+            {
+                title: "Fast",
+                src: "https://embed.music.apple.com/us/music-video/fast/1830091832"
+            },
+            {
+                title: "Here All Night",
+                src: "https://embed.music.apple.com/us/music-video/here-all-night/1839096296"
+            },
         ]
     },
     {
@@ -4699,6 +4963,16 @@
             },
         ]
     },
+     {
+        artist: "DJ Seinfeld & Confidence Man",
+        birthday: [{ month: "November", day: 4, year: 1991 }],
+        songs: [
+            {
+                title: "The Right",
+                src: "https://embed.music.apple.com/us/music-video/the-right/1845075653"
+            },
+        ]
+    },
     {
         artist: "DMX",
         birthday: [{ month: "December", day: 18, year: 1970 }],
@@ -4802,6 +5076,14 @@
             {
                 title: "Woman",
                 src: "https://embed.music.apple.com/us/music-video/woman/1598227453"
+            },
+            {
+                title: "Stranger",
+                src: "https://embed.music.apple.com/us/music-video/stranger/1842871719"
+            },
+            {
+                title: "Gorgeous",
+                src: "https://embed.music.apple.com/us/music-video/gorgeous/1842452995"
             },
         ]
     },
@@ -5291,6 +5573,16 @@
             },
         ]
     },
+       {
+        artist: "Ella Mai",
+        birthday: [{ month: "November", day: 3, year: 1994 }],
+        songs: [
+            {
+                title: "Little Things",
+                src: "https://embed.music.apple.com/us/music-video/little-things/1851342370" 
+            },
+        ]
+    },
     {
         artist: "Ellie Goulding",
         birthday: [{ month: "December", day: 30, year: 1986 }],
@@ -5427,12 +5719,35 @@
             }
         ]
     },
+     {
+        artist: "Emotional Oranges",
+        songs: [
+            {
+                title: "CANDY GUM (feat. Jessie Reyez & Becky G)",
+                src: "https://embed.music.apple.com/us/music-video/candy-gum-feat-jessie-reyez-becky-g/1811458665"
+            },
+            {
+                title: "Down To Miami (feat. Becky G.)",
+                src: "https://embed.music.apple.com/us/music-video/down-to-miami-feat-becky-g/1569401410"
+            },
+        ]
+    },
     {
         artist: "Empire Cast",
         songs: [
             {
                 title: "All Nite (feat. Yazz, Serayah, Jamila Velazquez & Yo Gotti) [Yo Gotti Remix [Video]]",
                 src: "https://embed.music.apple.com/us/music-video/all-nite-feat-yazz-serayah-jamila-velazquez-yo-gotti/1610045575"
+            }
+        ]
+    },
+    {
+        artist: "Enrique Iglesias & Miranda Lambert",
+        birthday: [{ month: "May", day: 8, year: 1975 }, { month: "November", day: 10, year: 1983 }],
+        songs: [
+            {
+                title: "Space in My Heart",
+                src: "https://embed.music.apple.com/us/music-video/space-in-my-heart/1735356366"
             }
         ]
     },
@@ -5908,6 +6223,15 @@
             },
         ]
     },
+       {
+        artist: "Fcukers",
+        songs: [
+            {
+                title: "I Like It Like That",
+                src: "https://embed.music.apple.com/us/music-video/i-like-it-like-that/1845057643"
+            },
+        ]
+    },
     {
         artist: "FendiDa Rappa & Cardi B",
         birthday: [{ month: "September", day: 27, year: 1995 }, { month: "October", day: 11, year: 1992 }],
@@ -6302,6 +6626,14 @@
                 title: "LIL DEMON",
                 src: "https://embed.music.apple.com/us/music-video/lil-demon/1799048095"
             },
+            {
+                title: "Magic",
+                src: "https://embed.music.apple.com/us/music-video/magic/497882680"
+            },
+            {
+                title: "Move That Dope (feat. Pharrell & Pusha T)",
+                src: "https://embed.music.apple.com/us/music-video/move-that-dope-feat-pharrell-pusha-t/833884526"
+            },
         ]
     },
     {
@@ -6578,6 +6910,16 @@
             {
                 title: "Make Love",
                 src: "https://embed.music.apple.com/us/music-video/make-love/1220510181"
+            },
+        ]
+    },
+    {
+        artist: "Gunna",
+        birthday: [{ month: "June", day: 14, year: 1993 }],
+        songs: [
+            {
+                title: "wgft (feat. Burna Boy)",
+                src: "https://embed.music.apple.com/us/music-video/wgft-feat-burna-boy/1850601151"
             },
         ]
     },
@@ -6937,6 +7279,16 @@
         ]
     },
     {
+        artist: "Ice Spice & Tokischa",
+        birthday: [{ month: "January", day: 1, year: 2000 }, { month: "March", day: 17, year: 1996 }],
+        songs: [
+            {
+                title: "Thootie",
+                src: "https://embed.music.apple.com/us/music-video/thootie/1858408264"
+            },
+        ]
+    },
+    {
         artist: "Ice Spice & Travis Scott",
         birthday: [{ month: "January", day: 1, year: 2000 }, { month: "April", day: 30, year: 1991 }],
         songs: [
@@ -6946,7 +7298,6 @@
             },
         ]
     },
-
     {
         artist: "Ice T",
         birthday: [{ month: "February", day: 16, year: 1958 }],
@@ -7070,6 +7421,15 @@
             {
                 title: "Deja Vu",
                 src: "https://embed.music.apple.com/us/music-video/deja-vu/1798536733"
+            },
+        ]
+    },
+    {
+        artist: "Isaia Huron",
+        songs: [
+            {
+                title: "SEE RIGHT THROUGH ME (feat. Kehlani)",
+                src: "https://embed.music.apple.com/us/music-video/see-right-through-me-feat-kehlani/1836313626"
             },
         ]
     },
@@ -7263,6 +7623,16 @@
             {
                 title: "At the Club (feat. DeJ Loaf)",
                 src: "https://embed.music.apple.com/us/music-video/at-the-club-feat-dej-loaf/1445012505"
+            },
+        ]
+    },
+        {
+        artist: "JADE",
+        birthday: [{ month: "December", day: 26, year: 1992}],
+        songs: [
+            {
+                title: "Church",
+                src: "https://embed.music.apple.com/us/music-video/church/1858589170"
             },
         ]
     },
@@ -7847,7 +8217,17 @@
             },
         ]
     },
-     {
+    {
+        artist: "Jessie J",
+        birthday: [{ month: "March", day: 27, year: 1988 }],
+        songs: [
+            {
+                title: "H.A.P.P.Y",
+                src: "https://embed.music.apple.com/us/music-video/h-a-p-p-y/1848352715"
+            },
+        ]
+    },
+    {
         artist: "Jessie Murph & Sexyy Red",
         birthday: [{ month: "September", day: 22, year: 2004 }, { month: "April", day: 15, year: 1998 }],
         songs: [
@@ -8713,6 +9093,15 @@
         ]
     },
     {
+        artist: "Karri",
+        songs: [
+            {
+                title: "go (feat. Kehlani)",
+                src: "https://embed.music.apple.com/us/music-video/go-feat-kehlani/1852066140"
+            },
+        ]
+    },
+    {
         artist: "Kash Doll & DJ Infamous",
         songs: [
             {
@@ -8886,6 +9275,14 @@
             {
                 title: "Folded",
                 src: "https://embed.music.apple.com/us/music-video/folded/1822891728"
+            },
+            {
+                title: "(un)Folded",
+                src: "https://embed.music.apple.com/us/music-video/un-folded/1830503363"
+            },
+            {
+                title: "Out The Window",
+                src: "https://embed.music.apple.com/us/music-video/out-the-window/1860399723"
             },
         ]
     },
@@ -9135,6 +9532,66 @@
             {
                 title: "Yeah Boy",
                 src: "https://embed.music.apple.com/us/music-video/yeah-boy/1186322864"
+            },
+            {
+                title: "Mountain With A View (Chapter 1)",
+                src: "https://embed.music.apple.com/us/music-video/mountain-with-a-view-chapter-1/1671526860"
+            },
+            {
+                title: "Kelsea Ballerini - Just Married (Chapter 2)",
+                src: "https://embed.music.apple.com/us/music-video/kelsea-ballerini-just-married-chapter-2/1671525898"
+            },
+            {
+                title: "Penthouse (Chapter 3)",
+                src: "https://embed.music.apple.com/us/music-video/penthouse-chapter-3/1671525126"
+            },
+            {
+                title: "Blindsided (Chapter 5)",
+                src: "https://embed.music.apple.com/us/music-video/blindsided-chapter-5/1671527343"
+            },
+            {
+                title: "Leave Me Again (Chapter 6)",
+                src: "https://embed.music.apple.com/us/music-video/leave-me-again-chapter-6/1671527196"
+            },
+            {
+                title: "How Do I Do This (The Final Chapter)",
+                src: "https://embed.music.apple.com/us/music-video/how-do-i-do-this-the-final-chapter/1718832287"
+            },
+            {
+                title: "Emerald City",
+                src: "https://embed.music.apple.com/us/music-video/emerald-city/1860642442"
+            },
+            {
+                title: "First Rodeo",
+                src: "https://embed.music.apple.com/us/music-video/first-rodeo/1773418802"
+            },
+            {
+                title: "HEARTFIRST",
+                src: "https://embed.music.apple.com/us/music-video/heartfirst/1633105825"
+            },
+            {
+                title: "I Hate Love Songs",
+                src: "https://embed.music.apple.com/us/music-video/i-hate-love-songs/1392822857"
+            },
+            {
+                title: "THE LITTLE THINGS",
+                src: "https://embed.music.apple.com/us/music-video/the-little-things/1637906432"
+            },
+            {
+                title: "Love Me Like You Mean It",
+                src: "https://embed.music.apple.com/us/music-video/love-me-like-you-mean-it/971467215"
+            },
+            {
+                title: "Sorry Mom",
+                src: "https://embed.music.apple.com/us/music-video/sorry-mom/1761606524"
+            },
+            {
+                title: "Two Things",
+                src: "https://embed.music.apple.com/us/music-video/two-things/1769223726"
+            },
+            {
+                title: "I Sit In Parks",
+                src: "https://embed.music.apple.com/us/music-video/i-sit-in-parks/1850838771"
             },
         ]
     },
@@ -9436,6 +9893,10 @@
                 title: "Lights Camera Action",
                 src: "https://embed.music.apple.com/us/music-video/lights-camera-action/1770720629"
             },
+            {
+                title: "Office Party",
+                src: "https://embed.music.apple.com/us/music-video/office-party/1858275338"
+            },
         ]
     },
     {
@@ -9534,6 +9995,16 @@
             {
                 title: "Black Man",
                 src: "https://embed.music.apple.com/us/music-video/black-man/1815827848"
+            },
+        ]
+    },
+    { 
+        artist: "Lathan Warlick & RaeLynn",
+        birthday: [{ month: "September", day: 12, year: 1987 }, { month: "May", day: 4, year: 1994 }],
+        songs: [
+            {
+                title: "Roots",
+                src: "https://embed.music.apple.com/us/music-video/roots/1551709933"
             },
         ]
     },
@@ -9831,11 +10302,19 @@
     },
     {
         artist: "Lil Uzi Vert",
-        birthday: [{ month: "July", day: 31, year: 1994 }],
+        birthday: [{ month: "July", day: 31, year: 1995 }],
         songs: [
             {
                 title: "Just Wanna Rock",
                 src: "https://embed.music.apple.com/us/music-video/just-wanna-rock/1655440239"
+            },
+            {
+                title: "Chanel Boy",
+                src: "https://embed.music.apple.com/us/music-video/chanel-boy/1855684835"
+            },
+            {
+                title: "Regular",
+                src: "https://embed.music.apple.com/us/music-video/regular/1857993360"
             },
         ]
     },
@@ -9963,10 +10442,6 @@
             {
                 title: "The Jump Off (feat. Mr. Cheeks)",
                 src: "https://embed.music.apple.com/us/music-video/the-jump-off-feat-mr-cheeks/269753977"
-            },
-            {
-                title: "How Many Licks? (feat. Sisqo)",
-                src: "https://embed.music.apple.com/us/music-video/how-many-licks-feat-sisqo/281883358"
             },
             {
                 title: "No Matter What They Say",
@@ -10128,6 +10603,16 @@
         ]
     },
     {
+        artist: "Lloyd Banks featuring 50 Cent",
+        birthday: [{ month: "April", day: 30, year: 1982 }, { month: "July", day: 6, year: 1975 }],
+        songs: [
+            {
+                title: "Hands Up (feat. 50 Cent)",
+                src: "https://embed.music.apple.com/us/music-video/hands-up-feat-50-cent/1445858209"
+            },
+        ]
+    },
+    {
         artist: "Lloyd featuring Lil Wayne",
         songs: [
             {
@@ -10160,6 +10645,16 @@
             {
                 title: "Slide",
                 src: "https://embed.music.apple.com/us/music-video/slide/1626225429"
+            },
+        ]
+    },
+    {
+        artist: "Loe Shimmy",
+        birthday: [{ month: "March", day: 24, year: 1999 }],
+        songs: [
+            {
+                title: "Lost & Found",
+                src: "https://embed.music.apple.com/us/music-video/lost-found/1858376121"
             },
         ]
     },
@@ -10227,6 +10722,16 @@
             {
                 title: "Get Along (feat. Shenseea)",
                 src: "https://embed.music.apple.com/us/music-video/get-along-feat-shenseea/1599812406"
+            },
+        ]
+    },
+    {
+        artist: "LoveRance",
+        birthday: [{ month: "September", day: 6, year: 1989 }],
+        songs: [
+            {
+                title: "UP! (feat. 50 Cent)",
+                src: "https://embed.music.apple.com/us/music-video/up-feat-50-cent/1445893793"
             },
         ]
     },
@@ -10914,6 +11419,15 @@
         ]
     },
     {
+        artist: "Manuel Riva & Alexandra Stan",
+        songs: [
+            {
+                title: "Heal Your Soul",
+                src: "https://embed.music.apple.com/us/music-video/heal-your-soul/1739682607"
+            },
+        ]
+    },
+    {
         artist: "María Isabel",
         birthday: [{ month: "May", day: 24, year: 1996 }],
         songs: [
@@ -11028,13 +11542,23 @@
             },
         ]
     },
-      {
+    {
         artist: "Mariah the Scientist",
         birthday: [{ month: "October", day: 27, year: 1997 }],
         songs: [
             {
                 title: "Burning Blue",
                 src: "https://embed.music.apple.com/us/music-video/burning-blue/1813045299"
+            },
+        ]
+    },
+    {
+        artist: "Mariah the Scientist & Kali Uchis",
+        birthday: [{ month: "October", day: 27, year: 1997 }, { month: "July", day: 17, year: 1994 }],
+        songs: [
+            {
+                title: "Is It a Crime",
+                src: "https://embed.music.apple.com/us/music-video/is-it-a-crime/1843476983"
             },
         ]
     },
@@ -11066,7 +11590,17 @@
             },
         ]
     },
-       {
+    {
+        artist: "Mark Ronson",
+        birthday: [{ month: "September", day: 4, year: 1975 }],
+        songs: [
+            {
+                title: "Find U Again (feat. Camila Cabello)",
+                src: "https://embed.music.apple.com/us/music-video/find-u-again-feat-camila-cabello/1471649457"
+            },
+        ]
+    },
+    {
         artist: "Mark Ronson & RAYE",
         birthday: [{ month: "September", day: 4, year: 1975 }, { month: "October", day: 24, year: 1997 }],
         songs: [
@@ -11456,6 +11990,10 @@
                 title: "Whenever",
                 src: "https://embed.music.apple.com/us/music-video/whenever/1810764464"
             },
+            {
+                title: "LOVER GIRL",
+                src: "https://embed.music.apple.com/us/music-video/lover-girl/1848548658"
+            },
         ]
     },
     {
@@ -11469,7 +12007,7 @@
         ]
     },
     {
-        artist: "Megan Trainor",
+        artist: "Meghan Trainor",
         birthday: [{ month: "December", day: 22, year: 1993 }],
         songs: [
             {
@@ -11523,6 +12061,10 @@
             {
                 title: "To The Moon",
                 src: "https://embed.music.apple.com/us/music-video/to-the-moon/1745015804"
+            },
+            {
+                title: "Still Don't Care",
+                src: "https://embed.music.apple.com/us/music-video/still-dont-care/1852605593"
             },
         ]
     },
@@ -11615,6 +12157,16 @@
             {
                 title: "Wonders (feat. Rakim)",
                 src: "https://embed.music.apple.com/us/music-video/wonders-feat-rakim/1653982483"
+            },
+        ]
+    },
+    {
+        artist: "Michaël Brun, Anne-Marie & Becky G",
+        birthday: [{ month: "May", day: 19, year: 1992 }, { month: "April", day: 7, year: 1991 }, { month: "March", day: 2, year: 1997 }],
+        songs: [
+            {
+                title: "Coming Your Way",
+                src: "https://embed.music.apple.com/us/music-video/coming-your-way/1701911849"
             },
         ]
     },
@@ -11816,6 +12368,16 @@
         ]
     },
     {
+        artist: "Miranda Lambert & Leon Bridges",
+        birthday: [{ month: "November", day: 10, year: 1983 }, { month: "July", day: 13, year: 1989 }],
+        songs: [
+            {
+                title: "If You Were Mine",
+                src: "https://embed.music.apple.com/us/music-video/if-you-were-mine/1694804308"
+            },
+        ]
+    },
+    {
         artist: "Missy Elliott",
         birthday: [{ month: "July", day: 1, year: 1971 }],
         songs: [
@@ -11959,6 +12521,16 @@
         ]
     },
     {
+        artist: "Monaleo",
+        birthday: [{ month: "April", day: 24, year: 2001 }],
+        songs: [
+            {
+                title: "Sexy Soulaan",
+                src: "https://embed.music.apple.com/us/music-video/sexy-soulaan/1842749452"
+            },
+        ]
+    },
+    {
         artist: "Moneybagg Yo",
         birthday: [{ month: "September", day: 22, year: 1991 }],
         songs: [
@@ -11981,6 +12553,20 @@
             {
                 title: "One Of Dem Nights (feat. Jhené Aiko)",
                 src: "https://embed.music.apple.com/us/music-video/one-of-dem-nights-feat-jhen%C3%A9-aiko/1591545955"
+            },
+            {
+                title: "One Of Dem Nights (feat. Jhené Aiko)",
+                src: "https://embed.music.apple.com/us/music-video/one-of-dem-nights-feat-jhen%C3%A9-aiko/1591545955"
+            },
+        ]
+    },
+    {
+        artist: "Moneybagg Yo & G Herbo",
+        birthday: [{ month: "September", day: 22, year: 1991 }, { month: "October", day: 8, year: 1995 }],
+        songs: [
+            {
+                title: "Feet On Land",
+                src: "https://embed.music.apple.com/us/music-video/feet-on-land/1848425901"
             },
         ]
     },
@@ -13186,6 +13772,10 @@
                 title: "Lady Lady",
                 src: "https://embed.music.apple.com/us/music-video/lady-lady/1825603823"
             },
+            {
+                title: "So Easy (To Fall In Love)",
+                src: "https://embed.music.apple.com/us/music-video/so-easy-to-fall-in-love/1841944840"
+            },
         ]
     },
     {
@@ -13357,6 +13947,10 @@
                 title: "ADHD",
                 src: "https://embed.music.apple.com/us/music-video/adhd/1773873828"
             },
+            {
+                title: "Without Love (feat. Maria Becerra)",
+                src: "https://embed.music.apple.com/us/music-video/without-love-feat-maria-becerra/1781353726"
+            },
         ]
     },
     {
@@ -13501,6 +14095,10 @@
             {
                 title: "Illegal",
                 src: "https://embed.music.apple.com/us/music-video/illegal/1813842234"
+            },
+            {
+                title: "Noises (with JT)",
+                src: "https://embed.music.apple.com/us/music-video/noises-with-jt/1851222650"
             },
         ]
     },
@@ -13844,6 +14442,16 @@
         ]
     },
     {
+        artist: "RESCENE",
+        birthday: [{ month: "May", day: 25, year: 2004 }, { month: "October", day: 11, year: 2006 }, { month: "November", day: 29, year: 2006 }, , { month: "August", day: 19, year: 2008 }, , { month: "November", day: 27, year: 2008 }],
+        songs: [
+            {
+                title: "Heart Drop",
+                src: "https://embed.music.apple.com/us/music-video/heart-drop/1851178032"
+            },
+        ]
+    },
+    {
         artist: "R Plus & Dido",
         songs: [
             {
@@ -13927,6 +14535,22 @@
             {
                 title: "Tailgate",
                 src: "https://embed.music.apple.com/us/music-video/tailgate/1438897179"
+            },
+            {
+                title: "Heaven Is A Honky Tonk",
+                src: "https://embed.music.apple.com/us/music-video/heaven-is-a-honky-tonk/1813006563"
+            },
+            {
+                title: "Jingle Jangle Rock",
+                src: "https://embed.music.apple.com/us/music-video/jingle-jangle-rock/1854804733"
+            },
+            {
+                title: "Long Live Country Music",
+                src: "https://embed.music.apple.com/us/music-video/long-live-country-music/1832857070"
+            },
+            {
+                title: "Run Run Rudolph",
+                src: "https://embed.music.apple.com/us/music-video/run-run-rudolph/1858616982"
             },
         ]
     },
@@ -14557,6 +15181,10 @@
                 title: "Your Song",
                 src: "https://embed.music.apple.com/us/music-video/your-song/1251454096"
             },
+            {
+                title: "All Natural",
+                src: "https://embed.music.apple.com/us/music-video/all-natural/1841445618"
+            },
         ]
     },
     {
@@ -14615,6 +15243,16 @@
             {
                 title: "It's In the Mornin",
                 src: "https://embed.music.apple.com/us/music-video/its-in-the-mornin/1445707248"
+            },
+        ]
+    },
+    {
+        artist: "Robyn",
+        birthday: [{ month: "June", day: 12, year: 1979 }],
+        songs: [
+            {
+                title: "Dopamine",
+                src: "https://embed.music.apple.com/us/music-video/dopamine/1853085119"
             },
         ]
     },
@@ -14900,6 +15538,16 @@
         ]
     },
     {
+        artist: "Saweetie & J White Did It",
+        birthday: [{ month: "July", day: 2, year: 1993 }, { month: "December", day: 17, year: 1984 }],
+        songs: [
+            {
+                title: "boffum",
+                src: "https://embed.music.apple.com/us/music-video/boffum/1830341114"
+            },
+        ]
+    },
+    {
         artist: "Saweetie & P-LO",
         birthday: [{ month: "July", day: 2, year: 1993 }, { month: "May", day: 7, year: 1991 }],
         songs: [
@@ -15020,6 +15668,10 @@
                 title: "Sativa (feat. Rae Sremmurd)",
                 src: "https://embed.music.apple.com/us/music-video/sativa-feat-rae-sremmurd/1444346466"
             },
+            {
+                title: "Light My Fire (feat. Gwen Stefani & Shenseea)",
+                src: "https://embed.music.apple.com/us/music-video/light-my-fire-feat-gwen-stefani-shenseea/1634031261"
+            },
         ]
     },
     {
@@ -15100,6 +15752,10 @@
                 title: 'Slow Down',
                 src: 'https://embed.music.apple.com/us/music-video/slow-down/1444875586'
             },
+            {
+                title: `In The Dark (From the Netflix Series "Nobody Wants This" Season 2)`,
+                src: "https://embed.music.apple.com/us/music-video/in-the-dark-from-the-netflix-series-nobody-wants/1848015086"
+            },
         ]
     },
     {
@@ -15141,6 +15797,38 @@
                 title: "It Won't Stop (feat. Chris Brown)",
                 src: 'https://embed.music.apple.com/us/music-video/it-wont-stop-feat-chris-brown/736424826'
             },
+            {
+                title: "D4L (feat. The-Dream)",
+                src: "https://embed.music.apple.com/us/music-video/d4l-feat-the-dream/1174113787"
+            },
+            {
+                title: "Fallen (feat. Ty Dolla $ign & Cam Wallace)",
+                src: "https://embed.music.apple.com/us/music-video/fallen-feat-ty-dolla-%24ign-cam-wallace/1204921607"
+            },
+            {
+                title: "It's a Man's World",
+                src: "https://embed.music.apple.com/us/music-video/its-a-mans-world/1686963842"
+            },
+        ]
+    },
+    {
+        artist: "Sevyn Streeter, Chris Brown & A$AP Ferg",
+        birthday: [{ month: "July", day: 7, year: 1986 }, { month: "May", day: 5, year: 1989 }, { month: "October", day: 20, year: 1988 }],
+        songs: [
+            {
+                title: "Guilty",
+                src: "https://embed.music.apple.com/us/music-video/guilty/1571531102"
+            },
+        ]
+    },
+    {
+        artist: "Sevyn Streeter & Jeremih",
+        birthday: [{ month: "July", day: 7, year: 1986 }, { month: "July", day: 17, year: 1987 }],
+        songs: [
+            {
+                title: "Wet Dreamz",
+                src: "https://embed.music.apple.com/us/music-video/wet-dreamz/1588804982"
+            },
         ]
     },
     {
@@ -15150,6 +15838,14 @@
             {
                 title: 'Get It Sexyy',
                 src: 'https://embed.music.apple.com/us/music-video/get-it-sexyy/1738710282'
+            },
+            {
+                title: "For No Reason",
+                src: "https://embed.music.apple.com/us/music-video/for-no-reason/1851523600"
+            },
+            {
+                title: "Is You Coo",
+                src: "https://embed.music.apple.com/us/music-video/is-you-coo/1841450412"
             },
         ]
     },
@@ -15206,6 +15902,7 @@
     },
     {
         artist: "Shawn Mendes & Camila Cabello",
+        birthday: [{ month: "August", day: 8, year: 1998 }, { month: "March", day: 3, year: 1997 }],
         songs: [
             {
                 title: "Señorita",
@@ -15339,6 +16036,10 @@
             {
                 title: "R U That (feat. 21 Savage)",
                 src: "https://embed.music.apple.com/us/music-video/r-u-that-feat-21-savage/1619521084"
+            },
+            {
+                title: "BOSS UP",
+                src: "https://embed.music.apple.com/us/music-video/boss-up/1848255508"
             },
         ]
     },
@@ -15548,6 +16249,15 @@
             {
                 title: "Erotic Electronic",
                 src: "https://embed.music.apple.com/us/music-video/erotic-electronic/1702783420"
+            },
+        ]
+    },
+    {
+        artist: "Slice 9",
+        songs: [
+            {
+                title: "Another One (feat. Future & Levi Leer)",
+                src: "https://embed.music.apple.com/us/music-video/another-one-feat-future-levi-leer/592304934"
             },
         ]
     },
@@ -16287,6 +16997,10 @@
                 title: "Just Keep Watching (From F1® The Movie)",
                 src: "https://embed.music.apple.com/us/music-video/just-keep-watching-from-f1-the-movie/1817530418"
             },
+            {
+                title: "NOBODY'S GIRL",
+                src: "https://embed.music.apple.com/us/music-video/nobodys-girl/1854559914"
+            },
         ]
     },
     {
@@ -16398,6 +17112,10 @@
             {
                 title: "You Need To Calm Down",
                 src: "https://embed.music.apple.com/us/music-video/you-need-to-calm-down/1468647174"
+            },
+            {
+                title: "The Fate of Ophelia",
+                src: "https://embed.music.apple.com/us/music-video/the-fate-of-ophelia/1845446611"
             },
         ]
     },
@@ -16552,6 +17270,16 @@
             {
                 title: "How We Do (Main Version, Closed Captioned)",
                 src: "https://embed.music.apple.com/us/music-video/how-we-do-main-version-closed-captioned/1513229647"
+            },
+        ]
+    },
+    {
+        artist: "The Game & 50 Cent",
+        birthday: [{ month: "November", day: 29, year: 1979 }, { month: "July", day: 6, year: 1975 }],
+        songs: [
+            {
+                title: "Hate It Or Love It",
+                src: "https://embed.music.apple.com/us/music-video/hate-it-or-love-it/1670545311"
             },
         ]
     },
@@ -16717,6 +17445,10 @@
             {
                 title: "Gucci This (Gucci That)",
                 src: "https://embed.music.apple.com/us/music-video/gucci-this-gucci-that/1446014165"
+            },
+            {
+                title: "Tea",
+                src: "https://embed.music.apple.com/us/music-video/tea/1835343752"
             },
         ]
     },
@@ -17031,6 +17763,14 @@
                 title: "No Broke Boys",
                 src: "https://embed.music.apple.com/us/music-video/no-broke-boys/1773486784"
             },
+            {
+                title: "Getting No Sleep",
+                src: "https://embed.music.apple.com/us/music-video/getting-no-sleep/1760674689"
+            },
+            {
+                title: "Cross That Line",
+                src: "https://embed.music.apple.com/us/music-video/cross-that-line/1784353401"
+            },
         ]
     },
     {
@@ -17158,6 +17898,16 @@
             {
                 title: "Who Can I Turn To (When Nobody Needs Me) [from Duets II: The Great Performances]",
                 src: "https://embed.music.apple.com/us/music-video/who-can-i-turn-to-when-nobody-needs-me-from-duets-ii/1281204035"
+            },
+        ]
+    },
+    {
+        artist: "Tony Yayo & 50 Cent",
+        birthday: [{ month: "March", day: 31, year: 1978 }, { month: "July", day: 6, year: 1975 }],
+        songs: [
+            {
+                title: "So Seductive (Edited Version)",
+                src: "https://embed.music.apple.com/us/music-video/so-seductive-edited-version/1446732217"
             },
         ]
     },
@@ -17368,6 +18118,16 @@
             },
         ]
     },
+    {
+        artist: "Travis Scott, Tyla & Vybz Kartel",
+        birthday: [{ month: "April", day: 30, year: 1991 }, { month: "January", day: 30, year: 2002 }, { month: "January", day: 7, year: 1976 }],
+        songs: [
+            {
+                title: "PBT",
+                src: "https://embed.music.apple.com/us/music-video/pbt/1862003039"
+            },
+        ]
+    },
       {
         artist: "Trap Beckham",
         birthday: [{ month: "July", day: 14, year: 1991 }],
@@ -17495,6 +18255,16 @@
             {
                 title: "Oops (Oh My) [feat. Missy Elliot]",
                 src: "https://embed.music.apple.com/us/music-video/oops-oh-my-feat-missy-elliot/1537186857"
+            },
+        ]
+    },
+    {
+        artist: "TWICE",
+        birthday: [{ month: "September", day: 22, year: 1995 }, { month: "November", day: 1, year: 1996 }, { month: "November", day: 9, year: 1996 }, { month: "December", day: 29, year: 1996 }, { month: "February", day: 1, year: 1997 }, { month: "March", day: 24, year: 1997 }, { month: "May", day: 28, year: 1998 }, { month: "April", day: 23, year: 1999 }, { month: "June", day: 14, year: 1999 }],
+        songs: [
+            {
+                title: "Strategy (feat. Megan Thee Stallion)",
+                src: "https://embed.music.apple.com/us/music-video/strategy-feat-megan-thee-stallion/1783453709"
             },
         ]
     },
@@ -17649,6 +18419,10 @@
              {
                 title: "IS IT",
                 src: "https://embed.music.apple.com/us/music-video/is-it/1825967295"
+            },
+            {
+                title: "CHANEL",
+                src: "https://embed.music.apple.com/us/music-video/chanel/1847980296"
             },
         ]
     },
@@ -18396,7 +19170,7 @@
         ]
     },
     {
-        artist: "Young Jeezy",
+        artist: "Jeezy",
         birthday: [{ month: "September", day: 28, year: 1977 }],
         songs: [
             {
@@ -18406,6 +19180,10 @@
             {
                 title: "OJ (feat. Fabolous & Jadakiss)",
                 src: "https://embed.music.apple.com/us/music-video/oj-feat-fabolous-jadakiss/1445707007"
+            },
+            {
+                title: "Way Too Gone (feat. Future)",
+                src: "https://embed.music.apple.com/us/music-video/way-too-gone-feat-future/1445836807"
             },
         ]
     },
@@ -18446,13 +19224,17 @@
             },
         ]
     },
-      {
+    {
         artist: "Young Thug",
         birthday: [{ month: "August", day: 16, year: 1991 }],
         songs: [
             {
                 title: "Money On Money (feat. Future)",
                 src: "https://embed.music.apple.com/us/music-video/money-on-money-feat-future/1810775301"
+            },
+            {
+                title: "F*****g Told U",
+                src: "https://embed.music.apple.com/us/music-video/f-g-told-u/1842395305"
             },
         ]
     },
@@ -18903,6 +19685,18 @@
                 title: "Chase The Paper (feat. Prodigy, Kidd Kidd & Styles P)",
                 src: "https://embed.music.apple.com/us/music-video/chase-the-paper-feat-prodigy-kidd-kidd-styles-p/1445317055"
             },
+            {
+                title: "Amusement Park (BET AM, Closed Captioned)",
+                src: "https://embed.music.apple.com/us/music-video/amusement-park-bet-am-closed-captioned/1445840083"
+            },
+            {
+                title: "Do You Think About Me",
+                src: "https://embed.music.apple.com/us/music-video/do-you-think-about-me/1446010585"
+            },
+            {
+                title: "First Date (feat. Too $hort)",
+                src: "https://embed.music.apple.com/us/music-video/first-date-feat-too-%24hort/1445860890"
+            },
         ]
     },
     {
@@ -18922,6 +19716,16 @@
             {
                 title: "Candy Shop (Director's Version)",
                 src: "https://embed.music.apple.com/us/music-video/candy-shop-directors-version/1445737548"
+            },
+        ]
+    },
+    {
+        artist: "50 Cent featuring Olivia",
+        birthday: [{ month: "July", day: 6, year: 1975 }, { month: "February", day: 15, year: 1981 }],
+        songs: [
+            {
+                title: "Best Friend (Remix) [Remix]",
+                src: "https://embed.music.apple.com/us/music-video/best-friend-remix-remix/1445747812"
             },
         ]
     },

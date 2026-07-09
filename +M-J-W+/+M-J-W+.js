@@ -20,10 +20,9 @@ loadframe.innerHTML = `
             <hr>
 
             <select name="websites" id="_id_GoOnlineDj-Websites">
-
                 <option value="www.instagram.com/MarilynMonroe"> www.MarilynMonroe.com </option>
                 <option value="www.CoupleCheckin.com"> www.CoupleCheckin.com </option>
-                <option value="www.CrownOfSuccess.com"> www.CrownOfSuccess.com </option>
+                <option value="www.FINDtxt.com"> www.FINDtxt.com </option>
                 <option value="www.24HoursAway.com"> www.24HoursAway.com </option>
                 <option value="www.ForeverPhonebook.com"> www.ForeverPhonebook.com </option>
                 <option value="www.OliviaMcEntire.com"> www.OliviaMcEntire.com </option>
@@ -36,16 +35,11 @@ loadframe.innerHTML = `
                 <option value="CancelTake.com"> www.CancelTake.com </option>
                 <option value="www.CoreOfWoman.com"> www.CoreOfWoman.com </option>
                 <option value="www.ProfileCalendar.com"> www.ProfileCalendar.com </option>
-                <option value="www.TheAdviseGuy.com"> www.TheAdviseGuy.com </option>
-                <option value="www.TheAdviseGirl.com"> www.TheAdviseGirl.com </option>
                 <option value="www.OfficerOfGod.com"> www.OfficerOfGod.com </option>
                 <option value="www.valueINIT.com"> www.valueINIT.com </option>
-                <option value="www.favJOIN.com"> www.favJOIN.com </option>
-                <option value="www.PackComing.com"> www.PackComing.com </option>
                 <option value="www.Comp100.com"> www.Comp100.com </option>
                 <option value="www.GoOnlineDj.com"> www.GoOnlineDj.com </option>
                 <option value="www.CopilotTwin.com"> www.CopilotTwin.com </option>
-                <option value="www.FINDtxt.com"> www.FINDtxt.com </option>
                 <option value="www.D-i-r-e-c-T-V.com"> www.D-i-r-e-c-T-V.com </option>
                 <option value="www.G-o-O-n-l-i-n-e-D-j.com"> www.G-o-O-n-l-i-n-e-D-j.com </option>
                 <option value="www.I-n-t-e-l.com"> www.I-n-t-e-l.com </option>
