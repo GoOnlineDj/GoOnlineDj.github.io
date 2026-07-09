@@ -10432,10 +10432,6 @@
                 src: "https://embed.music.apple.com/us/music-video/took-us-a-break/1312704553"
             },
             {
-                title: "Crush On You",
-                src: "https://embed.music.apple.com/us/music-video/crush-on-you/539744158"
-            },
-            {
                 title: "Lighters Up",
                 src: "https://embed.music.apple.com/us/music-video/lighters-up/269733437"
             },
