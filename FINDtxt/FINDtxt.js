@@ -10409,10 +10409,6 @@ const id_frame = document.getElementById("_id_frame");
                 src: "https://embed.music.apple.com/us/music-video/lighters-up/269733437"
             },
             {
-                title: "The Jump Off (feat. Mr. Cheeks)",
-                src: "https://embed.music.apple.com/us/music-video/the-jump-off-feat-mr-cheeks/269753977"
-            },
-            {
                 title: "No Matter What They Say",
                 src: "https://embed.music.apple.com/us/music-video/no-matter-what-they-say/281883326"
             },
