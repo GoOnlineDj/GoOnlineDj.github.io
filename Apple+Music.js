@@ -12069,7 +12069,7 @@
         ]
     },
     {
-        artist: "Megan Trainor & T-Pain",
+        artist: "Meghan Trainor & T-Pain",
         birthday: [{ month: "December", day: 22, year: 1993 }, { month: "September", day: 30, year: 1984 }],
         songs: [
             {
