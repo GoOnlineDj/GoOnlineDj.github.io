@@ -19778,8 +19778,15 @@ function listArtistSongs(songs) {
 
 // Function to take user to an artist on the index.html page to a specific artist and a specific song when song is clicked on 
 function goToArtistSongPage(src) {
-    window.open(`../index.html?iframeSrc=${encodeURIComponent(src)}`, '_blank');
-    console.log(src);
+    const newWindow = window.open("Video.html", "_blank");
+
+    // Keep pinging the new window until it is ready
+    const interval = setInterval(() => {
+        if (newWindow && newWindow.postMessage) {
+            newWindow.postMessage({ src }, "*");
+            clearInterval(interval);
+        }
+    }, 100);
 }
 
 
