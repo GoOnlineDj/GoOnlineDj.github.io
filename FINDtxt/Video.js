@@ -3,6 +3,11 @@ document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
 }, 1000);
 
 
+window.onload = () => {
+    if (window.opener) {
+        window.opener.postMessage({ ready: true }, "*");
+    }
+};
 
 
 window.addEventListener("message", (event) => {

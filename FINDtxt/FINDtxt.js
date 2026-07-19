@@ -19780,14 +19780,16 @@ function listArtistSongs(songs) {
 function goToArtistSongPage(src) {
     const newWindow = window.open("Video.html", "_blank");
 
-    // Keep pinging the new window until it is ready
-    const interval = setInterval(() => {
-        if (newWindow && newWindow.postMessage) {
+    function handleReady(event) {
+        if (event.data.ready) {
             newWindow.postMessage({ src }, "*");
-            clearInterval(interval);
+            window.removeEventListener("message", handleReady);
         }
-    }, 100);
+    }
+
+    window.addEventListener("message", handleReady);
 }
+
 
 
 logArtistNames(appleMusic);
