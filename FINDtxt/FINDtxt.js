@@ -13046,10 +13046,6 @@ const id_frame = document.getElementById("_id_frame");
                 title: "Burning Up (feat. The Kid LAROI)",
                 src: "https://embed.music.apple.com/us/music-video/burning-up-feat-the-kid-laroi/1637948175"
             },
-            {
-                title: "Me or Sum (feat. Future & Lil Baby)",
-                src: "https://embed.music.apple.com/us/music-video/me-or-sum-feat-future-lil-baby/1608110747"
-            },
         ]
     },    
     {
