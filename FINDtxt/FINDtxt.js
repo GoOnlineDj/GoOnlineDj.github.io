@@ -13027,10 +13027,6 @@ const id_frame = document.getElementById("_id_frame");
         birthday: [{ month: "December", day: 30, year: 2001 }],
         songs: [
             {
-                title: "G Nikes (feat. Polo G)",
-                src: "https://embed.music.apple.com/us/music-video/g-nikes-feat-polo-g/1649841557"
-            },
-            {
                 title: "I Wonder",
                 src: "https://embed.music.apple.com/us/music-video/i-wonder/1793858590"
             },
