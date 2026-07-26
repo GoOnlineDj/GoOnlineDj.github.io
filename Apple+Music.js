@@ -6507,10 +6507,6 @@
                 src: "https://embed.music.apple.com/us/music-video/too-late-feat-jim-jones/1547915502"
             },
             {
-                title: "Pardon My Thoughts (feat. Dave East)",
-                src: "https://embed.music.apple.com/us/music-video/pardon-my-thoughts-feat-dave-east/1544018013"
-            },
-            {
                 title: "Wiggle It (feat. City Girls)",
                 src: "https://embed.music.apple.com/us/music-video/wiggle-it-feat-city-girls/1472598780"
             },
@@ -8330,6 +8326,10 @@
             {
                 title: "My Era (feat. Maino & Drama)",
                 src: "https://embed.music.apple.com/us/music-video/my-era-feat-maino-drama/1468562914"
+            },
+            {
+                title: "Pardon My Thoughts (feat. Dave East)",
+                src: "https://embed.music.apple.com/us/music-video/pardon-my-thoughts-feat-dave-east/1544018013"
             },
         ]
     },
