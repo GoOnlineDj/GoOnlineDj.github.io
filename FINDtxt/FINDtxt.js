@@ -18585,6 +18585,16 @@ const id_frame = document.getElementById("_id_frame");
         ]
     },
     {
+        artist: "Vybz Kartel & Likkle Vybz",
+        birthday: [{ month: "January", day: 7, year: 1976 } , { month: "April", day: 18, year: 2003 }],
+        songs: [
+            {
+                title: "Lemonade",
+                src: "https://embed.music.apple.com/us/music-video/lemonade/1786393858"
+            },
+        ]
+    },
+    {
         artist: "Wale",
         birthday: [{ month: "September", day: 21, year: 1984 }],
         songs: [
@@ -18650,16 +18660,6 @@ const id_frame = document.getElementById("_id_frame");
             {
                 title: "CPR",
                 src: "https://embed.music.apple.com/us/music-video/cpr/1816888687"
-            },
-        ]
-    },
-    {
-        artist: "Vybz Kartel & Likkle Vybz",
-        birthday: [{ month: "January", day: 7, year: 1976 } , { month: "April", day: 18, year: 2003 }],
-        songs: [
-            {
-                title: "Lemonade",
-                src: "https://embed.music.apple.com/us/music-video/lemonade/1786393858"
             },
         ]
     },
