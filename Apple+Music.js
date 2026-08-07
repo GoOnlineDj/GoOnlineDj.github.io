@@ -42,6 +42,10 @@
                 title: "AFFECTION",
                 src: "https://embed.music.apple.com/us/music-video/affection/6789699145"
             },
+            {
+                title: "FREEZING",
+                src: "https://embed.music.apple.com/us/music-video/freezing/6798411676"
+            },
         ]
     },
     {
