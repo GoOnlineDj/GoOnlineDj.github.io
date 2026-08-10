@@ -32,7 +32,6 @@ loadframe.innerHTML = `
                 <option value="www.Instagram.com/ExoticAmerican"> www.Instagram.com/ExoticAmerican </option>
                 <option value="www.tiktok.com/@GirlMeetGuy"> www.tiktok.com/@GirlMeetGuy </option>
                 <option value="www.GirlMeetGuy.com"> www.GirlMeetGuy.com </option>
-                <option value="CancelTake.com"> www.CancelTake.com </option>
                 <option value="www.CoreOfWoman.com"> www.CoreOfWoman.com </option>
                 <option value="www.ProfileCalendar.com"> www.ProfileCalendar.com </option>
                 <option value="www.OfficerOfGod.com"> www.OfficerOfGod.com </option>
