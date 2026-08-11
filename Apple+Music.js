@@ -46,6 +46,10 @@
                 title: "FREEZING",
                 src: "https://embed.music.apple.com/us/music-video/freezing/6798411676"
             },
+            {
+                title: "JUST US TONIGHT",
+                src: "https://embed.music.apple.com/us/music-video/just-us-tonight/6799181374"
+            },
         ]
     },
     {
