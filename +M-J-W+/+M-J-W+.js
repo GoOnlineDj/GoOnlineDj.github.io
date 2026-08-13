@@ -34,7 +34,6 @@ loadframe.innerHTML = `
                 <option value="www.GirlMeetGuy.com"> www.GirlMeetGuy.com </option>
                 <option value="www.CoreOfWoman.com"> www.CoreOfWoman.com </option>
                 <option value="www.ProfileCalendar.com"> www.ProfileCalendar.com </option>
-                <option value="www.OfficerOfGod.com"> www.OfficerOfGod.com </option>
                 <option value="www.valueINIT.com"> www.valueINIT.com </option>
                 <option value="www.Comp100.com"> www.Comp100.com </option>
                 <option value="www.GoOnlineDj.com"> www.GoOnlineDj.com </option>
