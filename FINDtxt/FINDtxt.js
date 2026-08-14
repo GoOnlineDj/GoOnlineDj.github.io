@@ -8267,6 +8267,24 @@ const id_frame = document.getElementById("_id_frame");
         ]
     },
     {
+        artist: "Jeezy",
+        birthday: [{ month: "September", day: 28, year: 1977 }],
+        songs: [
+            {
+                title: "Back (feat. Yo Gotti)",
+                src: "https://embed.music.apple.com/us/music-video/back-feat-yo-gotti/1537381386"
+            },
+            {
+                title: "OJ (feat. Fabolous & Jadakiss)",
+                src: "https://embed.music.apple.com/us/music-video/oj-feat-fabolous-jadakiss/1445707007"
+            },
+            {
+                title: "Way Too Gone (feat. Future)",
+                src: "https://embed.music.apple.com/us/music-video/way-too-gone-feat-future/1445836807"
+            },
+        ]
+    },
+    {
         artist: "Jeezy & Nas",
         birthday: [{ month: "September", day: 28, year: 1977 }, { month: "September", day: 14, year: 1973 }],
         songs: [
@@ -19746,24 +19764,6 @@ const id_frame = document.getElementById("_id_frame");
         ]
     },
     {
-        artist: "Jeezy",
-        birthday: [{ month: "September", day: 28, year: 1977 }],
-        songs: [
-            {
-                title: "Back (feat. Yo Gotti)",
-                src: "https://embed.music.apple.com/us/music-video/back-feat-yo-gotti/1537381386"
-            },
-            {
-                title: "OJ (feat. Fabolous & Jadakiss)",
-                src: "https://embed.music.apple.com/us/music-video/oj-feat-fabolous-jadakiss/1445707007"
-            },
-            {
-                title: "Way Too Gone (feat. Future)",
-                src: "https://embed.music.apple.com/us/music-video/way-too-gone-feat-future/1445836807"
-            },
-        ]
-    },
-    {
         artist: "Young Money",
         songs: [
             {
@@ -20336,7 +20336,6 @@ const id_frame = document.getElementById("_id_frame");
         ]
     },
 ];
-
 
 
 /////////////////////////////////////
