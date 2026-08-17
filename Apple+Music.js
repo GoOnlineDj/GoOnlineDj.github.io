@@ -11492,7 +11492,7 @@
         songs: [
             {
                 title: "Bitch I'm Madonna (feat. Nicki Minaj)",
-                src: "https://embed.music.apple.com/us/music-video/bitch-im-madonna-feat-nicki-minaj/1444851074"
+                src: "https://embed.music.apple.com/us/music-video/bitch-im-madonna-feat-nicki-minaj/1874759775"
             },
             {
                 title: "Material Girl",
@@ -11500,11 +11500,11 @@
             },
             {
                 title: "Give Me All Your Luvin' (feat. Nicki Minaj & M.I.A.)",
-                src: "https://embed.music.apple.com/us/music-video/give-me-all-your-luvin-feat-nicki-minaj-m-i-a/1446736306"
+                src: "https://embed.music.apple.com/us/music-video/give-me-all-your-luvin-feat-m-i-a-nicki-minaj/1874762935"
             },
             {
                 title: "Turn Up the Radio",
-                src: "https://embed.music.apple.com/us/music-video/turn-up-the-radio/1445725649"
+                src: "https://embed.music.apple.com/us/music-video/turn-up-the-radio/1874761327"
             },
             {
                 title: "Don't Tell Me",
