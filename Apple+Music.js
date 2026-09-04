@@ -1579,10 +1579,6 @@
                 src: "https://embed.music.apple.com/us/music-video/drunk-in-love-feat-jay-z/790644918"
             },
             {
-                title: "Ego (Remix) [feat. Kanye West]",
-                src: "https://embed.music.apple.com/us/music-video/ego-remix-feat-kanye-west/319783403"
-            },
-            {
                 title: "Grown Woman",
                 src: "https://embed.music.apple.com/us/music-video/grown-woman/939778272"
             },
