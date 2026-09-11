@@ -32,7 +32,7 @@ document.getElementById("_id_frame").innerHTML = `<div class="contact-body">
             <hr>
             <section>
                 <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28741.256812237058!2d-80.15580631743448!3d25.781887243459224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b48e8bc080f1%3A0x7afeece4a9efe6bd!2sSouth%20Beach%2C%20Miami%20Beach%2C%20FL%2033139!5e0!3m2!1sen!2sus!4v1756515581959!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d846586.9345924997!2d-119.07122956896738!3d34.01871884588524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1789150142289!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
             </section>
             <hr>
