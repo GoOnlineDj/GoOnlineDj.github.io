@@ -16739,6 +16739,30 @@
                 title: "Erotic Electronic",
                 src: "https://embed.music.apple.com/us/music-video/erotic-electronic/1895051968"
             },
+            {
+                title: "UNKNOWN LOVERZ",
+                src: "https://embed.music.apple.com/us/music-video/unknown-loverz/1887956036"
+            },
+            {
+                title: "I'M ACTUALLY KINDA FAMOUS",
+                src: "https://embed.music.apple.com/us/music-video/im-actually-kinda-famous/1887952836"
+            },
+            {
+                title: "GAS STATION",
+                src: "https://embed.music.apple.com/us/music-video/gas-station/1887997633"
+            },
+            {
+                title: "CRANK",
+                src: "https://embed.music.apple.com/us/music-video/crank/1848163542"
+            },
+            {
+                title: "DANCE...",
+                src: "https://embed.music.apple.com/us/music-video/dance/1869138505"
+            },
+            {
+                title: "*PRAYER*",
+                src: "https://embed.music.apple.com/us/music-video/prayer/1887944545"
+            },
         ]
     },
     {
@@ -17382,7 +17406,7 @@
             },
             {
                 title: "Private Show (feat. Chris Brown) [Video]",
-                src: "https://embed.music.apple.com/us/music-video/private-show-feat-chris-brown/1445340623"
+                src: "https://embed.music.apple.com/us/music-video/private-show-feat-chris-brown/1896770537"
             },
             {
                 title: "Whatever You Like",
@@ -17406,7 +17430,7 @@
             },
             {
                 title: "G' Shit (feat. Jeezy & WatchTheDuck)",
-                src: "https://embed.music.apple.com/us/music-video/g-shit-feat-jeezy-watchtheduck/964634671"
+                src: "https://embed.music.apple.com/us/music-video/g-shit-feat-watch-the-duck-young-jeezy/1896770640"
             },
             {
                 title: "Ball (feat. Lil Wayne)",
@@ -17430,7 +17454,7 @@
             },
             {
                 title: "I'm Serious (feat. Beenie Man)",
-                src: "https://embed.music.apple.com/us/music-video/im-serious-feat-beenie-man/1279364891"   
+                src: "https://embed.music.apple.com/us/music-video/im-serious-feat-beenie-man/1882058434"   
             },
             {
                 title: "Let's Get Away",
@@ -17439,10 +17463,6 @@
             {
                 title: "Rubber Band Man",
                 src: "https://embed.music.apple.com/us/music-video/rubber-band-man/1260772267"    
-            },
-            {
-                title: "24'S",
-                src: "https://embed.music.apple.com/us/music-video/24s/1260772269"    
             },
             {
                 title: "LET 'EM KNOW",
