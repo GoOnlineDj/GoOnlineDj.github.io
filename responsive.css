@@ -145,6 +145,17 @@ button {
         height: auto;
         aspect-ratio: 16 / 9;
     }
+
+    /* Copyright line: one line, text shrinks to fit the screen width */
+    footer {
+        container-type: inline-size;
+        text-align: center;
+    }
+
+    footer span {
+        white-space: nowrap;
+        font-size: min(1.25rem, 3.1cqw);
+    }
 }
 
 /* Phones held sideways: the Apple Music player sizes its video to the full
