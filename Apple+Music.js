@@ -20604,6 +20604,17 @@ function sortArtistsByUpcomingBirthday(artists) {
 
 const sortedAppleMusic = sortArtistsByUpcomingBirthday(appleMusic);
 
+// Log all birthdays, including artists without birthdays
+sortedAppleMusic.forEach(artist => {
+    if (artist.birthday && artist.birthday.length > 0) {
+        artist.birthday.forEach(birthday => {
+            console.log(`Artist: ${artist.artist}, Birthday: ${birthday.month} ${birthday.day}, ${birthday.year}`);
+        });
+    } else {
+        console.log(`Artist: ${artist.artist}, Birthday: Not available`);
+    }
+});
+
 
 ///////////////////////////////////////
 
