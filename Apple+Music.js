@@ -20457,7 +20457,6 @@ async function AppleMusicBack() {
 
 
 document.getElementById("_id_iframe").addEventListener("click", () => {
-    stopAutoCycle();
     iframe.src = appleMusic[a].songs[s].src;
 });
 
@@ -20726,12 +20725,13 @@ function reclaimFocus() {
     }
 }
 
-// Click on the video: stop the preview cycle and (re)start the auto-advance timer
+// Click on the video: (re)start the auto-advance timer. While the preview
+// cycle is still running, clicks on the video are ignored so it keeps cycling
+// until the user presses an arrow, a flower, or next/previous.
 window.addEventListener("blur", () => {
     setTimeout(() => {
         if (document.activeElement !== iframe) return;
-        stopAutoCycle();
-        firstPress = 0;
+        if (autoCycling) return;
         startAdvanceTimer();
         setTimeout(reclaimFocus, 1000);
     }, 0);
