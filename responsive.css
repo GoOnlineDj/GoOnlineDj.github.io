@@ -135,3 +135,18 @@ button {
         aspect-ratio: 1;
     }
 }
+
+/* Phones held sideways: the Apple Music player sizes its video to the full
+   width, so a short box cuts the bottom half off. Keep the box 16:9 and small
+   enough to fit under the header, so the whole video shows; the buttons sit
+   below it (scroll down to reach them). */
+@media (max-height: 500px) and (orientation: landscape) {
+    #_id_iframe iframe {
+        display: block;
+        width: min(100%, calc((100vh - 56px) * 16 / 9));
+        width: min(100%, calc((100svh - 56px) * 16 / 9));
+        height: auto;
+        aspect-ratio: 16 / 9;
+        margin: 0 auto;
+    }
+}
