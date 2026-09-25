@@ -136,6 +136,17 @@ button {
     }
 }
 
+/* Phones held upright: the Apple Music card is 16:9, so a 60vh-tall box
+   leaves an empty gap under it. Size the box to the card so the buttons
+   sit right below the player. */
+@media (max-width: 700px) and (orientation: portrait) {
+    #_id_iframe iframe {
+        display: block;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
 /* Phones held sideways: the Apple Music player sizes its video to the full
    width, so a short box cuts the bottom half off. Keep the box 16:9 and small
    enough to fit under the header, so the whole video shows; the buttons sit
