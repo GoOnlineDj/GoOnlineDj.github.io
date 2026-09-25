@@ -149,4 +149,30 @@ button {
         aspect-ratio: 16 / 9;
         margin: 0 auto;
     }
+
+    /* Neat, even rows instead of wrapping wherever the width runs out:
+       bottom buttons = 2 rows of 10, A-M = 1 row of 14, N-Z = 1 row of 14.
+       Every button is the same size so the rows line up. */
+    ._c_Apple-Music-grid-buttons,
+    ._c_Apple-Music-Video-alphabet-buttons-left,
+    ._c_Apple-Music-Video-alphabet-buttons-right {
+        --btn: min(60px, calc((100vw - 16px) / 14));
+        display: grid;
+        justify-content: center;
+    }
+
+    ._c_Apple-Music-grid-buttons {
+        grid-template-columns: repeat(10, var(--btn));
+    }
+
+    ._c_Apple-Music-Video-alphabet-buttons-left,
+    ._c_Apple-Music-Video-alphabet-buttons-right {
+        grid-template-columns: repeat(14, var(--btn));
+    }
+
+    ._c_Apple-Music-grid-buttons button,
+    ._c_Apple-Music-Video-alphabet-buttons-left button,
+    ._c_Apple-Music-Video-alphabet-buttons-right button {
+        --btn: inherit;
+    }
 }

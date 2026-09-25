@@ -20392,20 +20392,15 @@ const defaultUrl = appleMusic[0].songs[0].src;
 let iframe = document.createElement("iframe");
 iframe.className = "random-iframe";
 iframe.src = defaultUrl;
-iframe.quality = "high";
 iframe.allow = "fullscreen; autoplay; encrypted-media";
-iframe.allowfullscreen = true;
-iframe.autoplay = true;
+iframe.allowFullscreen = true;
 iframe.width = "100%";
 iframe.height = "100%";
 iframe.referrerPolicy = "strict-origin";
 iframe.sandbox = "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation";
-iframe.frameborder = 0;
-iframe.framepadding = 0;
-iframe.allowtransparency = true;
+iframe.frameBorder = 0;
 iframe.title = "Apple Music";
 iframe.name = "Apple Music";
-iframe.seamless = "seamless";
 
 
 let Appleiframe = document.getElementById("_id_iframe");
