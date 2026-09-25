@@ -38,7 +38,6 @@ async function valueINIT() {
    //////////////////////////////////////////////////////////////////////////////////////////////////
 
   function userInputData(letterData) {
-    console.log("letterData", letterData);
     if (isLetter(letterData)) {
       if (guess.length < MAX_LETTERS) {
         guess += letterData.toLocaleUpperCase();
@@ -64,10 +63,9 @@ async function valueINIT() {
         }
       }
 
-      for (c = 0; c < 5; c++) {
+      for (let c = 0; c < 5; c++) {
         boxes[currentRow * MAX_LETTERS + c].classList.add("green");
 
-        console.log("you won the game");
 
         done = true;
         return;
@@ -77,23 +75,21 @@ async function valueINIT() {
 
   //////////////////////////////////////////////////////////////////////////////////////////////////
 
-  console.log("answerParts from promise", typeof answerParts, answerParts);
-  console.log("secret word from server is =", answer, "typeof for secret word =", typeof answer);
+  // For the site owner: shows today's word in the browser console
+  console.log("secret word from server is =", answer);
 
   document.addEventListener("keydown", function (event) {
     if (done) {
       return;
     }
 
-    console.log("event.key", event.key);
-    letterData = event.key;
+    const letterData = event.key;
 
     userInputData(letterData);
 
     
 
     if (letterData === "Enter") {
-      console.log("user pressed Enter");
       commit();
     }
 
@@ -111,21 +107,17 @@ async function valueINIT() {
   async function commit() {
 
     if (done) {
-      console.log("currentRow DONE", currentRow);
       return;
     }
 
     if (guess.length !== MAX_LETTERS) {
       alert("5 letters please + thank you");
       currentRow = currentRow;
-      console.log("guess.length", guess.length);
-      console.log("currentRow MAX_LETTERS", currentRow);
       return;
     }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-  console.log("guess", guess);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -138,7 +130,6 @@ async function valueINIT() {
     const wordStatus = await promiseProcessing.validWord;
 
 
-    console.log("!validWord or validWord", wordStatus);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -155,7 +146,6 @@ if (wordStatus === false) {
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
     function makeMap(array) {
-      console.log("makeMap being called");
       let obj = {};
 
       for (i = 0; i < array.length; i++) {
@@ -165,21 +155,18 @@ if (wordStatus === false) {
         } else {
           obj[letter] = 1;
         }
-        console.log("map object for keeping letter count", obj);
       }
       return obj;
     }
 
 
     const map = makeMap(answerParts);
-    console.log("map object from makeMap function 1983", map);
 
     isCorrect();
 
     const guessParts = guess.split("");
 
 
-    console.log("guessParts", guessParts);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
   
@@ -195,7 +182,6 @@ if (wordStatus === false) {
       if (guess[c] === answer[c]) {
         boxes[currentRow * MAX_LETTERS + c].classList.add("green");
         map[guess[c]]--;
-        console.log("green");
 
         decor = currentRow;
         while (decor < 5) {
@@ -205,7 +191,6 @@ if (wordStatus === false) {
       } else if (answerParts.includes(guessParts[c]) && map[guessParts[c]] > 0) {
         boxes[currentRow * MAX_LETTERS + c].classList.add("yellow");
         map[guess[c]]--;
-        console.log("yellow");
 
         decor = currentRow;
         while (decor < 5) {
@@ -214,7 +199,6 @@ if (wordStatus === false) {
         }
       } else {
         boxes[currentRow * MAX_LETTERS + c].classList.add("gray");
-        console.log("gray");
       }
     }
   }
@@ -232,7 +216,6 @@ if (wordStatus === false) {
 
     }
 
-    console.log("!validWord or validWord", wordStatus);
     
   } 
 
@@ -253,8 +236,6 @@ else return;
 
       if (guess.length !== MAX_LETTERS) {
         alert("5 letters please + thank you");
-        console.log("guess.length", guess.length);
-        console.log("currentRow MAX_LETTERS", currentRow);
         return;
       }
       else commit();
@@ -287,7 +268,6 @@ function handleButtonClick(event) {
     return;
   }
   const value = event.target.innerText;
-  console.log("event 007", value);
   userInputData(value);
   window.location.href = "./+M-J-W+.html#word-game";
 }
@@ -318,7 +298,10 @@ numberButtons.forEach(button => {
 }
 
 
-valueINIT();
+valueINIT().catch(() => {
+  const answerDiv = document.querySelector(".answer-div");
+  if (answerDiv) answerDiv.textContent = "Word game is offline right now, please try again later.";
+});
 
 
 

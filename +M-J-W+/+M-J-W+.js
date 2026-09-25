@@ -1,4 +1,4 @@
-document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
+setInterval(() => {
     document.getElementById("_id_Good-News").innerHTML = new Date().toLocaleTimeString();
   }, 1000);
 
@@ -12,7 +12,7 @@ loadframe.innerHTML = `
 
         <hr>
 
-        <img src="images/UnsignedGoldLLC-Gold-Equation.jpg" alt="UnsignedGoldLLC-Gold-Equation"
+        <img loading="lazy" src="images/UnsignedGoldLLC-Gold-Equation.jpg" alt="UnsignedGoldLLC-Gold-Equation"
             title="UnsignedGoldLLC-Gold-Equation">
 
         <div class="change-website">
@@ -52,7 +52,7 @@ loadframe.innerHTML = `
 
 
         <div>
-            <a href="https://Facebook.com/MichaelJWilliams83" target="_blank" rel="noopener"> <img src="images/MJW+Passport+83.JPG"
+            <a href="https://Facebook.com/MichaelJWilliams83" target="_blank" rel="noopener"> <img loading="lazy" src="images/MJW+Passport+83.JPG"
                     alt=" Michael Junior Williams Passport" title="Michael Junior Williams Passport"> </a>
         </div>
 
@@ -381,7 +381,7 @@ And may God continue to bless you
 
 
         <a href="https://www.CopilotTwin.com" target="_blank" rel="noopener">
-            <img src="./images/www_GoOnlineDj_com-GoOnlineDj-Pen.jpg" alt="GoOnlineDj+Pen"
+            <img loading="lazy" src="./images/www_GoOnlineDj_com-GoOnlineDj-Pen.jpg" alt="GoOnlineDj+Pen"
                 title="GoOnlineD+Pen">
         </a>
 
@@ -456,7 +456,7 @@ And may God continue to bless you
 
         <div>
             <a href="https://www.CopilotTwin.com" target="_blank">
-                <img src="./images/www_GoOnlineDj_com-GoOnlineDj-Pen83.jpg" alt="GoOnlineDj+Pen"
+                <img loading="lazy" src="./images/www_GoOnlineDj_com-GoOnlineDj-Pen83.jpg" alt="GoOnlineDj+Pen"
                     title="GoOnlineD+Pen">
             </a>
         </div>
@@ -506,7 +506,7 @@ And may God continue to bless you
 
         <div>
             <a href="https://www.CopilotTwin.com" target="_blank" rel="noopener">
-                <img src="images/Copilot=Twin.jpg" alt="CopilotTwin" title="CopilotTwin">
+                <img loading="lazy" src="images/Copilot=Twin.jpg" alt="CopilotTwin" title="CopilotTwin">
             </a>
         </div>
 
@@ -617,7 +617,7 @@ And may God continue to bless you
 
             <div>
                 <a href="https://www.G-o-O-n-l-i-n-e-D-j.com" target="_blank" rel="noopener">
-                    <img src="./images/1.jpg" alt="soulsexisting" title="soulsexisting">
+                    <img loading="lazy" src="./images/1.jpg" alt="soulsexisting" title="soulsexisting">
                 </a>
             </div>
 
@@ -625,7 +625,7 @@ And may God continue to bless you
 
             <div>
                 <a href="https://www.G-o-O-n-l-i-n-e-D-j.com" target="_blank" rel="noopener">
-                    <img src="./images/2.jpg" alt="soulsexisting" title="soulsexisting">
+                    <img loading="lazy" src="./images/2.jpg" alt="soulsexisting" title="soulsexisting">
                 </a>
             </div>
 
@@ -633,7 +633,7 @@ And may God continue to bless you
 
             <div>
                 <a href="https://www.G-o-O-n-l-i-n-e-D-j.com" target="_blank" rel="noopener">
-                    <img src="./images/3.jpg" alt="soulsexisting" title="soulsexisting">
+                    <img loading="lazy" src="./images/3.jpg" alt="soulsexisting" title="soulsexisting">
                 </a>
             </div>
 
@@ -641,7 +641,7 @@ And may God continue to bless you
 
             <div>
                 <a href="https://www.G-o-O-n-l-i-n-e-D-j.com" target="_blank" rel="noopener">
-                    <img src="./images/4.jpg" alt="soulsexisting" title="soulsexisting">
+                    <img loading="lazy" src="./images/4.jpg" alt="soulsexisting" title="soulsexisting">
                 </a>
             </div>
 
@@ -649,7 +649,7 @@ And may God continue to bless you
 
             <div>
                 <a href="https://www.G-o-O-n-l-i-n-e-D-j.com" target="_blank" rel="noopener">
-                    <img src="./images/5.jpg" alt="soulsexisting" title="soulsexisting">
+                    <img loading="lazy" src="./images/5.jpg" alt="soulsexisting" title="soulsexisting">
                 </a>
             </div>
 
@@ -657,7 +657,7 @@ And may God continue to bless you
 
             <div>
                 <a href="https://www.G-o-O-n-l-i-n-e-D-j.com" target="_blank" rel="noopener">
-                    <img src="./images/6.jpg" alt="soulsexisting" title="soulsexisting">
+                    <img loading="lazy" src="./images/6.jpg" alt="soulsexisting" title="soulsexisting">
                 </a>
             </div>
 
@@ -687,6 +687,7 @@ let isHolding = false;
 
 function startScrolling(direction) {
     if (id_frame) {
+        clearInterval(scrollInterval);
         isHolding = true;
         scrollInterval = setInterval(() => {
             id_frame.scrollBy({ top: direction === 'up' ? -500 : 500, behavior: 'smooth' }); // Faster scrolling for holding
@@ -700,18 +701,20 @@ function stopScrolling() {
 }
 
 scrollUpButtons.forEach(button => {
-    button.addEventListener('mousedown', () => startScrolling('up'));
-    button.addEventListener('mouseup', stopScrolling);
-    button.addEventListener('mouseleave', stopScrolling); // Stop scrolling if the mouse leaves the button
+    button.addEventListener('pointerdown', () => startScrolling('up'));
+    button.addEventListener('pointerup', stopScrolling);
+    button.addEventListener('pointercancel', stopScrolling);
+    button.addEventListener('pointerleave', stopScrolling); // Stop scrolling if the mouse leaves the button
     button.addEventListener('click', () => {
         if (!isHolding) id_frame.scrollBy({ top: -300, behavior: 'smooth' }); // Slower scroll for clicking
     });
 });
 
 scrollDownButtons.forEach(button => {
-    button.addEventListener('mousedown', () => startScrolling('down'));
-    button.addEventListener('mouseup', stopScrolling);
-    button.addEventListener('mouseleave', stopScrolling); // Stop scrolling if the mouse leaves the button
+    button.addEventListener('pointerdown', () => startScrolling('down'));
+    button.addEventListener('pointerup', stopScrolling);
+    button.addEventListener('pointercancel', stopScrolling);
+    button.addEventListener('pointerleave', stopScrolling); // Stop scrolling if the mouse leaves the button
     button.addEventListener('click', () => {
         if (!isHolding) id_frame.scrollBy({ top: 300, behavior: 'smooth' }); // Slower scroll for clicking
     });

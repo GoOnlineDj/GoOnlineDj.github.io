@@ -20379,7 +20379,7 @@
 
 
 
-document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
+setInterval(() => {
 
     document.getElementById("_id_Good-News").innerHTML = `${new Date().toLocaleTimeString()}`;
     //   appleMusic[Math.floor(Math.random() * appleMusic.length)].artist;
@@ -20417,7 +20417,14 @@ let currentUrl = defaultUrl;
 let a = 0;
 let s = 0;
 let autoLoadInterval;
+let autoCycling = true;
 let firstPress = 1;
+
+// Stops the startup preview cycle once the user takes control
+function stopAutoCycle() {
+    autoCycling = false;
+    clearTimeout(autoLoadInterval);
+}
 
 
 
@@ -20437,7 +20444,6 @@ async function AppleMusicForward() {
 async function AppleMusicBack() {
     if (s > 0) {
         s--;
-        fetch(appleMusic[a].songs[s].src);
         iframe.src = appleMusic[a].songs[s].src;
     } else if (a > 0) {
         a--;
@@ -20451,7 +20457,7 @@ async function AppleMusicBack() {
 
 
 document.getElementById("_id_iframe").addEventListener("click", () => {
-    clearInterval(autoLoadInterval);
+    stopAutoCycle();
     iframe.src = appleMusic[a].songs[s].src;
 });
 
@@ -20460,7 +20466,7 @@ document.getElementById("_id_iframe").addEventListener("click", () => {
 
 const musicForward = document.querySelectorAll("._c_Apple-Music-forward");
 musicForward.forEach(x => x.addEventListener("click", () => {
-    clearInterval(autoLoadInterval);
+    stopAutoCycle();
 
     if (firstPress === 1) {
         iframe.src = appleMusic[a].songs[s].src;
@@ -20472,20 +20478,20 @@ musicForward.forEach(x => x.addEventListener("click", () => {
 
 const musicRefresh = document.querySelectorAll("._c_Apple-Music-refresh");
 musicRefresh.forEach(x => x.addEventListener("click", () => {
-    clearInterval(autoLoadInterval);
+    stopAutoCycle();
     iframe.src = appleMusic[a].songs[s].src;
     firstPress = 0;
 }));
 
 const FINDtxt = document.querySelectorAll("._c_FINDtxt");
 FINDtxt.forEach(x => x.addEventListener("click", () => {
-    clearInterval(autoLoadInterval);
+    stopAutoCycle();
     window.location.href = "https://goonlinedj.github.io/FINDtxt/FINDtxt.html";
 }));
 
 const musicBack = document.querySelectorAll("._c_Apple-Music-back");
 musicBack.forEach(x => x.addEventListener("click", () => {
-    clearInterval(autoLoadInterval);
+    stopAutoCycle();
 
     if (firstPress === 1) {
         iframe.src = appleMusic[a].songs[s].src;
@@ -20526,27 +20532,20 @@ function buttonClick(value) {
 
 
 
+// Only move to the artist if one exists, so a letter with no artists
+// can't leave `a` at -1 and break the forward/back buttons
 function handleLetter(value) {
-     a = appleMusic.findIndex((item) => item.artist.startsWith(value));
-    if (a !== -1) {
-        let s = 0;
-        clearInterval(autoLoadInterval);
+    const newA = appleMusic.findIndex((item) => item.artist.startsWith(value));
+    if (newA !== -1) {
+        a = newA;
+        s = 0;
+        stopAutoCycle();
         iframe.src = appleMusic[a].songs[s].src;
-    } else {
-        console.log(value,'Artist not found');
     }
 }
 
 function handleNumber(value) {
-    let newA = appleMusic.findIndex((item) => item.artist.startsWith(Number(value)));
-    if (newA !== -1) {
-        a = appleMusic.findIndex((item) => item.artist.startsWith(value));
-        let s = 0;
-        clearInterval(autoLoadInterval);
-        iframe.src = appleMusic[a].songs[s].src;
-    } else {
-        console.log(value,'Artist not found');
-    }
+    handleLetter(value);
 }
 
 
@@ -20623,15 +20622,40 @@ function updateIframeSrc() {
 }
 
 
-// Start cycling through artists and songs
-autoLoadInterval = setInterval(cycleThroughArtists, 3000);
+// Cycle through artists and songs, but only after the current embed has
+// finished loading. A fixed 3s setInterval stacked up embed reloads faster
+// than they could load, which froze the page.
+const CYCLE_DELAY = 3000;
+const LOAD_TIMEOUT = 15000; // move on if an embed never finishes loading
+// Each preview is a full Apple Music page load. Stop after this many so a tab
+// left open doesn't load hundreds of videos an hour and bloat the browser cache.
+const MAX_PREVIEWS = window.matchMedia("(max-width: 700px), (max-height: 500px)").matches ? 20 : 100;
+let previewCount = 0;
+
+function scheduleNextCycle(delay) {
+    clearTimeout(autoLoadInterval);
+    if (autoCycling) autoLoadInterval = setTimeout(cycleThroughArtists, delay);
+}
+
+iframe.addEventListener("load", () => scheduleNextCycle(CYCLE_DELAY));
 
 function cycleThroughArtists() {
+    if (!autoCycling) return;
+    // Don't load embeds in a background tab
+    if (document.hidden) {
+        scheduleNextCycle(CYCLE_DELAY);
+        return;
+    }
+    if (++previewCount > MAX_PREVIEWS) {
+        stopAutoCycle();
+        return;
+    }
     currentSongIndex = (currentSongIndex + 1) % sortedAppleMusic[currentArtistIndex].songs.length;
     if (currentSongIndex === 0) {
         currentArtistIndex = (currentArtistIndex + 1) % sortedAppleMusic.length;
     }
     updateIframeSrc();
+    scheduleNextCycle(LOAD_TIMEOUT);
 }
 
 //////////////////////////////////////////////////
@@ -20640,19 +20664,93 @@ function cycleThroughArtists() {
 
 // Initial update to include the first item in the list
 updateIframeSrc();
+scheduleNextCycle(LOAD_TIMEOUT);
 
 //////////////////////////////////////////////
 
-// Log all birthdays, including artists without birthdays
-sortedAppleMusic.forEach(artist => {
-    if (artist.birthday && artist.birthday.length > 0) {
-        artist.birthday.forEach(birthday => {
-            console.log(`Artist: ${artist.artist}, Birthday: ${birthday.month} ${birthday.day}, ${birthday.year}`);
-        });
-    } else {
-        console.log(`Artist: ${artist.artist}, Birthday: Not available`);
+////////////////////////////////////////////////////////////////////////////////
+// Auto-advance: after a video plays to the end, load the next one.
+//
+// The Apple Music embed doesn't tell this page when a video ends, so we look up
+// the video's length from Apple's public lookup API and start a timer when the
+// user presses play. Every click on the video restarts the timer, so it errs on
+// the late side and never cuts a video off early.
+
+// true  = wait the full video length (viewers signed in to Apple Music)
+// false = move on after the ~30s preview non-subscribers get
+const PLAY_FULL_LENGTH = true;
+const PREVIEW_MS = 30000;
+const END_BUFFER_MS = 4000; // slack for buffering before moving on
+
+const durationCache = new Map();
+let advanceTimer;
+
+async function getDurationMs(src) {
+    const match = src.match(/\/(\d+)(?:[?#]|$)/);
+    if (!match) return null;
+    const id = match[1];
+    if (durationCache.has(id)) return durationCache.get(id);
+    try {
+        const res = await fetch(`https://itunes.apple.com/lookup?id=${id}&country=us`);
+        const data = await res.json();
+        const ms = (data.results && data.results[0] && data.results[0].trackTimeMillis) || null;
+        durationCache.set(id, ms);
+        return ms;
+    } catch {
+        return null; // lookup failed: just don't auto-advance this one
     }
+}
+
+async function startAdvanceTimer() {
+    clearTimeout(advanceTimer);
+    const src = iframe.src;
+    const fullMs = await getDurationMs(src);
+    if (iframe.src !== src) return; // user already moved on
+    const ms = PLAY_FULL_LENGTH ? fullMs : Math.min(fullMs || PREVIEW_MS, PREVIEW_MS);
+    if (!ms) return;
+    advanceTimer = setTimeout(AppleMusicForward, ms + END_BUFFER_MS);
+}
+
+// Invisible element the page focuses so the NEXT click on the video can be
+// detected too (a click into the iframe only shows up as the page losing focus)
+const focusCatcher = document.createElement("button");
+focusCatcher.type = "button";
+focusCatcher.tabIndex = -1;
+focusCatcher.setAttribute("aria-hidden", "true");
+focusCatcher.style.cssText = "position:fixed;left:-9999px;width:1px;height:1px;opacity:0;";
+document.body.appendChild(focusCatcher);
+
+function reclaimFocus() {
+    if (document.activeElement === iframe && !document.fullscreenElement) {
+        focusCatcher.focus({ preventScroll: true });
+    }
+}
+
+// Click on the video: stop the preview cycle and (re)start the auto-advance timer
+window.addEventListener("blur", () => {
+    setTimeout(() => {
+        if (document.activeElement !== iframe) return;
+        stopAutoCycle();
+        firstPress = 0;
+        startAdvanceTimer();
+        setTimeout(reclaimFocus, 1000);
+    }, 0);
 });
+
+// New video loaded: wait for play again
+iframe.addEventListener("load", () => {
+    clearTimeout(advanceTimer);
+    reclaimFocus();
+});
+
+// Optional deep link: index.html?iframeSrc=<Apple Music embed URL>
+// Only Apple Music embeds are accepted so the link can't load other pages.
+const linkedSrc = new URLSearchParams(window.location.search).get("iframeSrc");
+if (linkedSrc && linkedSrc.startsWith("https://embed.music.apple.com/")) {
+    stopAutoCycle();
+    firstPress = 0;
+    iframe.src = linkedSrc;
+}
 
 
 //SPECIAL THANKS TO MICROSOFT COPILOT FOR HELPING ME WITH THIS CODE

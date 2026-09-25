@@ -14,6 +14,7 @@
     <title>+=-=+Apple+Music+=-=+</title>
     <link rel="stylesheet" href="./Apple+Music.css">
     <link rel="icon" href="./value/images/GoOnlineDj.png">
+    <link rel="stylesheet" href="./responsive.css">
 </head>
 
 <body id="_id_GoOnlineDj-body">
@@ -92,30 +93,7 @@
                 
 
 
-                    <script>
-                        function getQueryParam(param) {
-                            const urlParams = new URLSearchParams(window.location.search);
-                            return urlParams.get(param);
-                        }
-
-                        document.addEventListener('DOMContentLoaded', () => {
-                            const iframeSrc = getQueryParam('iframeSrc');
-                            if (iframeSrc) {
-                                const iframeContainer = document.getElementById('_id_iframe');
-                                if (iframeContainer) {
-                                    // Remove existing iframe if any
-                                    while (iframeContainer.firstChild) {
-                                        iframeContainer.removeChild(iframeContainer.firstChild);
-                                    }
-                                    const iframe = document.createElement('iframe');
-                                    iframe.src = decodeURIComponent(iframeSrc);
-                                    iframeContainer.appendChild(iframe);
-                                } else {
-                                    console.error('Iframe container element not found');
-                                }
-                            }
-                        });
-                    </script>
+                    <!-- ?iframeSrc= deep links are handled in Apple+Music.js -->
 
 
 <!-- //SPECIAL THANKS TO MICROSOFT COPILOT FOR HELPING ME WITH THIS CODE

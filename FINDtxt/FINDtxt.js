@@ -1,4 +1,4 @@
-document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
+setInterval(() => {
     document.getElementById("_id_Good-News").innerHTML = new Date().toLocaleTimeString();
 }, 1000);
 
@@ -20362,13 +20362,9 @@ function attachEventListeners() {
     }));
 }
 
+// The refresh buttons are static, so attach once. (A MutationObserver used to
+// re-attach on every list change, stacking duplicate listeners forever.)
 attachEventListeners();
-
-const observer = new MutationObserver(() => {
-    attachEventListeners();
-});
-
-observer.observe(document.body, { childList: true, subtree: true });
 
 
 /////////////////////////////////////
@@ -20397,11 +20393,9 @@ function listArtistSongs(songs) {
     id_frame.innerHTML = ''; // Clear previous content
     songs.forEach(song => { // List all songs
         const songElement = document.createElement('p');
-        console.log(song.title);
         songElement.innerHTML = song.title;
         songElement.addEventListener('click', () => {
             // Code to handle song click event
-            console.log(`Song clicked: ${song.title}`);
             // Call goToArtistSongPage when song is clicked
             goToArtistSongPage(song.src);
         });
@@ -20413,15 +20407,18 @@ function listArtistSongs(songs) {
 // Function to take user to an artist on the index.html page to a specific artist and a specific song when song is clicked on 
 function goToArtistSongPage(src) {
     const newWindow = window.open("Video.html", "_blank");
+    if (!newWindow) return; // popup blocked
 
     function handleReady(event) {
-        if (event.data.ready) {
-            newWindow.postMessage({ src }, "*");
+        if (event.source === newWindow && event.data && event.data.ready) {
+            newWindow.postMessage({ src }, window.location.origin);
             window.removeEventListener("message", handleReady);
         }
     }
 
     window.addEventListener("message", handleReady);
+    // Don't keep listening if the new tab never reports ready
+    setTimeout(() => window.removeEventListener("message", handleReady), 30000);
 }
 
 
@@ -20444,6 +20441,7 @@ let isHolding = false;
 
 function startScrolling(direction) {
     if (id_frame) {
+        clearInterval(scrollInterval);
         isHolding = true;
         scrollInterval = setInterval(() => {
             id_frame.scrollBy({ top: direction === 'up' ? -500 : 500, behavior: 'smooth' }); // Faster scrolling for holding
@@ -20457,18 +20455,20 @@ function stopScrolling() {
 }
 
 scrollUpButtons.forEach(button => {
-    button.addEventListener('mousedown', () => startScrolling('up'));
-    button.addEventListener('mouseup', stopScrolling);
-    button.addEventListener('mouseleave', stopScrolling); // Stop scrolling if the mouse leaves the button
+    button.addEventListener('pointerdown', () => startScrolling('up'));
+    button.addEventListener('pointerup', stopScrolling);
+    button.addEventListener('pointercancel', stopScrolling);
+    button.addEventListener('pointerleave', stopScrolling); // Stop scrolling if the mouse leaves the button
     button.addEventListener('click', () => {
         if (!isHolding) id_frame.scrollBy({ top: -300, behavior: 'smooth' }); // Slower scroll for clicking
     });
 });
 
 scrollDownButtons.forEach(button => {
-    button.addEventListener('mousedown', () => startScrolling('down'));
-    button.addEventListener('mouseup', stopScrolling);
-    button.addEventListener('mouseleave', stopScrolling); // Stop scrolling if the mouse leaves the button
+    button.addEventListener('pointerdown', () => startScrolling('down'));
+    button.addEventListener('pointerup', stopScrolling);
+    button.addEventListener('pointercancel', stopScrolling);
+    button.addEventListener('pointerleave', stopScrolling); // Stop scrolling if the mouse leaves the button
     button.addEventListener('click', () => {
         if (!isHolding) id_frame.scrollBy({ top: 300, behavior: 'smooth' }); // Slower scroll for clicking
     });

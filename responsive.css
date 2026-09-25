@@ -1,0 +1,137 @@
+/* Shared phone + tablet rules for the main GoOnlineDj pages.
+   Linked LAST in each page's <head> so it overrides the page stylesheets. */
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* Faster taps on iPhone: no double-tap-zoom delay, no long-press text
+   selection or callout menu on the buttons */
+button {
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* Bottom button row: all 20 buttons stay on one line and shrink to fit the
+   row's width (max 60px each). --fit-count must match the number of buttons. */
+._c_Apple-Music-grid-buttons {
+    --fit-count: 20;
+    container-type: inline-size;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+}
+
+._c_Apple-Music-grid-buttons > div {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+._c_Apple-Music-grid-buttons button {
+    --btn: min(60px, calc(100cqw / var(--fit-count)));
+    flex: 0 0 var(--btn);
+    width: var(--btn);
+    height: var(--btn);
+    padding: 0;
+    font-size: calc(var(--btn) * 0.5);
+    line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    border-width: clamp(1px, calc(var(--btn) / 20), 3px);
+    border-radius: calc(var(--btn) / 6);
+}
+
+
+/* Phones (portrait, and landscape via the height check): stack everything in
+   one column: header, video/content, clock, button row, then A-Z as rows. */
+@media (max-width: 700px), (max-height: 500px) {
+
+    ._c_Apple-Music-grid {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "_c_header"
+            "main"
+            "GoodNews"
+            "_c_Apple-buttons"
+            "left"
+            "right";
+        align-items: start;
+        row-gap: 6px;
+    }
+
+    #_id_iframe,
+    #_id_frame {
+        grid-area: main;
+    }
+
+    /* Apple Music / YouTube player: fill most of the screen, not a fixed 750px */
+    #_id_iframe iframe {
+        height: 60vh;
+        height: 60svh;
+    }
+
+    /* Scrollable content boxes: shorter than the screen so the page itself
+       can still be scrolled past them */
+    #_id_frame {
+        height: 70vh;
+        height: 70svh;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Videos and maps inside content boxes (Contact page) */
+    #_id_frame iframe {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    #_id_Good-News {
+        justify-self: center;
+    }
+
+    /* Bottom button row: two rows of 10 so each button is big enough to tap
+       (computers keep the single row above) */
+    ._c_Apple-Music-grid-buttons {
+        flex-wrap: wrap;
+    }
+
+    ._c_Apple-Music-grid-buttons > div {
+        display: contents;
+    }
+
+    ._c_Apple-Music-grid-buttons button {
+        --btn: min(60px, calc(100cqw / 10));
+    }
+
+    /* A-Z columns become rows of 7 big, easy-to-tap buttons */
+    ._c_Apple-Music-Video-alphabet-buttons-left,
+    ._c_Apple-Music-Video-alphabet-buttons-right {
+        container-type: inline-size;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    ._c_Apple-Music-Video-alphabet-buttons-left button,
+    ._c_Apple-Music-Video-alphabet-buttons-right button {
+        --btn: min(60px, calc(100cqw / 7));
+        width: var(--btn);
+        height: var(--btn);
+        padding: 0;
+        font-size: calc(var(--btn) * 0.5);
+        line-height: 1;
+    }
+
+    /* Shop covers: never wider than the screen */
+    ._c_shop img {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+}

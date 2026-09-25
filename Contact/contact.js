@@ -1,4 +1,4 @@
-document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
+setInterval(() => {
     document.getElementById("_id_Good-News").innerHTML = new Date().toLocaleTimeString();
   }, 1000);
 
@@ -22,7 +22,7 @@ document.getElementById("_id_frame").innerHTML = `<div class="contact-body">
         <hr>
          <section>
                 <div>
-                    <iframe
+                    <iframe loading="lazy"
                         src="https://www.youtube.com/embed/G7KNmW9a75Y?si=2YozCCi2SD-6mplm" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -38,7 +38,7 @@ document.getElementById("_id_frame").innerHTML = `<div class="contact-body">
             <hr>
             <section>
                 <div>
-                    <iframe
+                    <iframe loading="lazy"
                         src="https://www.youtube.com/embed/4q-Y6wt1h3k?si=_rj6p_a3fKRRNDPg" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -48,7 +48,7 @@ document.getElementById("_id_frame").innerHTML = `<div class="contact-body">
             <hr>
             <section>
                 <div>
-                    <iframe
+                    <iframe loading="lazy"
                         src="https://www.youtube.com/embed/QYeElOeWz6M?si=sUTqnxcqjCiiJ5bI" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -58,7 +58,7 @@ document.getElementById("_id_frame").innerHTML = `<div class="contact-body">
             <hr>
             <section>
                 <div>
-                    <iframe
+                    <iframe loading="lazy"
                         src="https://www.youtube.com/embed/nz4iunAoanE?si=-HCU2c66eUhsvh1F" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -132,6 +132,7 @@ let isHolding = false;
 
 function startScrolling(direction) {
     if (id_frame) {
+        clearInterval(scrollInterval);
         isHolding = true;
         scrollInterval = setInterval(() => {
             id_frame.scrollBy({ top: direction === 'up' ? -500 : 500, behavior: 'smooth' }); // Faster scrolling for holding
@@ -145,18 +146,20 @@ function stopScrolling() {
 }
 
 scrollUpButtons.forEach(button => {
-    button.addEventListener('mousedown', () => startScrolling('up'));
-    button.addEventListener('mouseup', stopScrolling);
-    button.addEventListener('mouseleave', stopScrolling); // Stop scrolling if the mouse leaves the button
+    button.addEventListener('pointerdown', () => startScrolling('up'));
+    button.addEventListener('pointerup', stopScrolling);
+    button.addEventListener('pointercancel', stopScrolling);
+    button.addEventListener('pointerleave', stopScrolling); // Stop scrolling if the mouse leaves the button
     button.addEventListener('click', () => {
         if (!isHolding) id_frame.scrollBy({ top: -300, behavior: 'smooth' }); // Slower scroll for clicking
     });
 });
 
 scrollDownButtons.forEach(button => {
-    button.addEventListener('mousedown', () => startScrolling('down'));
-    button.addEventListener('mouseup', stopScrolling);
-    button.addEventListener('mouseleave', stopScrolling); // Stop scrolling if the mouse leaves the button
+    button.addEventListener('pointerdown', () => startScrolling('down'));
+    button.addEventListener('pointerup', stopScrolling);
+    button.addEventListener('pointercancel', stopScrolling);
+    button.addEventListener('pointerleave', stopScrolling); // Stop scrolling if the mouse leaves the button
     button.addEventListener('click', () => {
         if (!isHolding) id_frame.scrollBy({ top: 300, behavior: 'smooth' }); // Slower scroll for clicking
     });

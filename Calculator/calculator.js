@@ -45,7 +45,6 @@ function handleNumber(numberString) {
 }
 
 function handleSymbol(symbol) {
-    console.log(symbol, "buffer", buffer, "runningTotal", runningTotal, previousOperator);
 
     switch (symbol) {
 
@@ -63,7 +62,6 @@ function handleSymbol(symbol) {
             flushOperation(+buffer);
             previousOperator = null;
             buffer = runningTotal;
-            console.log("runningTotal", runningTotal);
             runningTotal = 0;
             break;
 
@@ -106,7 +104,6 @@ function handleMath(symbol) {
     previousOperator = symbol;
     screen.innerText = buffer;
     buffer = "0";
-    console.log("runningTotal", runningTotal);
 }
 
 function flushOperation(intBuffer) {

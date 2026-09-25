@@ -1,5 +1,5 @@
 
-document.getElementById("_id_Good-News").innerHTML = setInterval(() => {
+setInterval(() => {
   document.getElementById("_id_Good-News").innerHTML = new Date().toLocaleTimeString();
 }, 1000);
 
@@ -9,10 +9,9 @@ function getRandomUrl(urls) {
   const minIndex = 0;
   const maxIndex = urls.length - 1;
   const randomIndex =
-  Math.floor(Math.random() * (maxIndex - minIndex)) + minIndex;
+  Math.floor(Math.random() * (maxIndex - minIndex + 1)) + minIndex;
 
   currentIndex = randomIndex;
-  console.log("currentIndex: " + currentIndex);
 
   return urls[randomIndex];
 }
@@ -108,7 +107,6 @@ document.querySelector("._c_Alive").addEventListener("click", function (event) {
   randomSelectedUrl = getRandomUrl(urls);
   iframe.src = randomSelectedUrl;
   value = urls.indexOf(randomSelectedUrl); // Synchronize value with the current URL
-  console.log("randomSelectedUrl: " + randomSelectedUrl);
 });
 
 document.querySelectorAll("._c_Music-Video-back").forEach(function(btn) {
@@ -116,7 +114,6 @@ document.querySelectorAll("._c_Music-Video-back").forEach(function(btn) {
     if (value > 0) {
       value--;
       iframe.src = urls[value];
-      console.log("value: " + value + " url[value]: " + urls[value]);
     }
   });
 });
@@ -126,7 +123,6 @@ document.querySelectorAll("._c_Music-Video-forward").forEach(function(btn) {
     if (value < urls.length - 1) {
       value++;
       iframe.src = urls[value];
-      console.log("value: " + value + " url[value]: " + urls[value]);
     }
   });
 });
