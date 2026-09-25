@@ -86,7 +86,7 @@
         songs: [
             {
                 title: "Rock The Boat",
-                src: "https://embed.music.apple.com/us/music-video/rock-the-boat/1585461561"
+                src: "https://embed.music.apple.com/us/music-video/rock-the-boat/1780671888"
             },
             {
                 title: "Age Ain't Nothing But a Number",
@@ -102,7 +102,7 @@
             },
             {
                 title: "More Than A Woman",
-                src: "https://embed.music.apple.com/us/music-video/more-than-a-woman/1585460722"
+                src: "https://embed.music.apple.com/us/music-video/more-than-a-woman/1780662873"
             },
             {
                 title: "Try Again",
@@ -114,7 +114,7 @@
             },
             {
                 title: "4 Page Letter",
-                src: "https://embed.music.apple.com/us/music-video/4-page-letter/1582104491"
+                src: "https://embed.music.apple.com/us/music-video/4-page-letter/1780672753"
             },
             {
                 title: "One In A Million",
@@ -1989,15 +1989,6 @@
         ]
     },
     {
-        artist: "Black Bear Beats",
-        songs: [
-            {
-                title: "Black Bear Beats - Who Shot Ya Ft. J.A.D.A.K.I.S.S. (Mix Video) (feat. Jadakiss)",
-                src: "https://embed.music.apple.com/us/music-video/black-bear-beats-who-shot-ya-ft-j-a-d-a-k-i-s-s/1743287011"
-            },
-        ]
-    },
-    {
         artist: "Black Eyed Peas & Shakira",
         birthday: [{ month: "March", day: 15, year: 1975 }, { month: "November", day: 28, year: 1974 }, { month: "July", day: 14, year: 1975 }, { month: "March", day: 27, year: 1975 }, { month: "February", day: 2, year: 1977 }],
         songs: [
@@ -2067,11 +2058,11 @@
         ]
     },
     {
-        artist: "Blvk H3ro, Wayne J & Skillibeng",
+        artist: "Blvk H3ro & Wayne J",
         songs: [
             {
                 title: "Young Boss (Remix)",
-                src: "https://embed.music.apple.com/us/music-video/young-boss-remix/1534824615"
+                src: "https://embed.music.apple.com/us/music-video/young-boss-remix/6797693830"
             },
         ]
     },
@@ -2773,52 +2764,6 @@
         ]
     },
     {
-        artist: "Caely Rae Jepsen",
-        birthday: [{ month: "November", day: 21, year: 1985 }],
-        songs: [
-            {
-                title: "Call Me Maybe",
-                src: "https://embed.music.apple.com/us/music-video/call-me-maybe/1445866423"
-            },
-            {
-                title: "Me and the Boys in the Band",
-                src: "https://embed.music.apple.com/us/music-video/me-and-the-boys-in-the-band/1527848891"
-            },
-            {
-                title: "Now That I Found You",
-                src: "https://embed.music.apple.com/us/music-video/now-that-i-found-you/1456180819"
-            },
-            {
-                title: "Party for One",
-                src: "https://embed.music.apple.com/us/music-video/party-for-one/1440701450"
-            },
-            {
-                title: "Run Away with Me",
-                src: "https://embed.music.apple.com/us/music-video/run-away-with-me/1444854384"
-            },
-            {
-                title: "This Kiss",
-                src: "https://embed.music.apple.com/us/music-video/this-kiss/1445863456"
-            },
-            {
-                title: "Too Much",
-                src: "https://embed.music.apple.com/us/music-video/too-much/1463893874"
-            },
-            {
-                title: "Want You in My Room",
-                src: "https://embed.music.apple.com/us/music-video/want-you-in-my-room/1480854378"
-            },
-            {
-                title: "Western Wind",
-                src: "https://embed.music.apple.com/us/music-video/western-wind/1622749923"
-            },
-            {
-                title: "Your Type",
-                src: "https://embed.music.apple.com/us/music-video/your-type/1444874560"
-            },
-        ]
-    },
-    {
         artist: "Calvin Harris",
         birthday: [{ month: "January", day: 17, year: 1984 }],
         songs: [
@@ -3033,10 +2978,6 @@
              {
                 title: "The Loneliest Time (feat. Rufus Wainwright)",
                 src: "https://embed.music.apple.com/us/music-video/the-loneliest-time-feat-rufus-wainwright/1648945847"
-            },
-            {
-                title: "Me And The Boys In The Band",
-                src: "https://embed.music.apple.com/us/music-video/me-and-the-boys-in-the-band/1527848891"
             },
             {
                 title: "Now That I Found You",
