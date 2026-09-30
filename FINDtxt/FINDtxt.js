@@ -4095,15 +4095,6 @@ const id_frame = document.getElementById("_id_frame");
         ]
     },
     {
-        artist: "Cris Streetz",
-        songs: [
-            {
-                title: "Get It Str8 (feat. Jadakiss)",
-                src: "https://embed.music.apple.com/us/music-video/get-it-str8-feat-jadakiss/1674773287"
-            },
-        ]
-    },
-    {
         artist: "Critical Records Presents",
         songs: [
             {
@@ -4520,15 +4511,15 @@ const id_frame = document.getElementById("_id_frame");
             },
             {
                 title: "Can You Take It (feat. Babyface Ray)",
-                src: "https://embed.music.apple.com/us/music-video/can-you-take-it-feat-babyface-ray/1778536445"
+                src: "https://embed.music.apple.com/us/music-video/can-you-take-it-feat-babyface-ray/1846630129"
             },
             {
                 title: "MIAMI FLOW",
-                src: "https://embed.music.apple.com/us/music-video/miami-flow/1771690167"
+                src: "https://embed.music.apple.com/us/music-video/miami-flow/1846629363"
             },
             {
                 title: "BNB",
-                src: "https://embed.music.apple.com/us/music-video/bnb/1769246535"
+                src: "https://embed.music.apple.com/us/music-video/bnb/1846629650"
             },
             {
                 title: "Me U & Hennessy (Video)",
@@ -4954,10 +4945,6 @@ const id_frame = document.getElementById("_id_frame");
                 src: "https://embed.music.apple.com/us/music-video/fed-up-directors-cut-feat-usher-drake-rick-ross-young-jeezy/346267940"
             },
             {
-                title: "Gold Slugs (feat. Chris Brown, August Alsina & Fetty Wap)",
-                src: "https://embed.music.apple.com/us/music-video/gold-slugs-feat-chris-brown-august-alsina-fetty-wap/1445238190"
-            },
-            {
                 title: "I DID IT (feat. Post Malone, Megan Thee Stallion, Lil Baby & DaBaby)",
                 src: "https://embed.music.apple.com/us/music-video/i-did-it-feat-post-malone-megan-thee-stallion-lil-baby-dababy/1569647572"
             },
@@ -5060,10 +5047,6 @@ const id_frame = document.getElementById("_id_frame");
             {
                 title: "No Love For Me (feat. Swizz Beatz & Drag-On)",
                 src: "https://embed.music.apple.com/us/music-video/no-love-for-me-feat-swizz-beatz-drag-on/1714510363"
-            },
-            {
-                title: "No Sunshine",
-                src: "https://embed.music.apple.com/us/music-video/no-sunshine/1584069949"
             },
             {
                 title: "I Don't Dance (feat. Machine Gun Kelly)",
@@ -5275,12 +5258,12 @@ const id_frame = document.getElementById("_id_frame");
         ]
     },
     {
-        artist: "Dr. Dre, Snoop Dogg, Eminem, Mary J. Blige, Kendrick Lamar & 50 Cent",
-        birthday: [{ month: "February", day: 18, year: 1965 }, { month: "October", day: 20, year: 1971 }, { month: "October", day: 17, year: 1972 }, { month: "January", day: 11, year: 1971 }, { month: "June", day: 17, year: 1987 }, { month: "July", day: 6, year: 1975 }],
+        artist: "Dr. Dre, Snoop Dogg, Eminem, Kendrick Lamar, Mary J. Blige & 50 Cent",
+        birthday: [{ month: "February", day: 18, year: 1965 }, { month: "October", day: 20, year: 1971 }, { month: "October", day: 17, year: 1972 }, { month: "June", day: 17, year: 1987 }, { month: "January", day: 11, year: 1971 }, { month: "July", day: 6, year: 1975 }],
         songs: [
             {
                 title: "Pepsi Super Bowl LVI Halftime Show (Live)",
-                src: "https://embed.music.apple.com/us/music-video/pepsi-super-bowl-lvi-halftime-show-live/1609894651"
+                src: "https://embed.music.apple.com/us/music-video/pepsi-super-bowl-lvi-halftime-show-live/1843486161"
             }
         ]
     },
@@ -5629,14 +5612,6 @@ const id_frame = document.getElementById("_id_frame");
                 title: "Oh Nah Nah",
                 src: "https://embed.music.apple.com/us/music-video/oh-nah-nah/1382578294" 
             },
-            {
-                title: "Miley Cyrus (Twerk) [Clean]",
-                src: "https://embed.music.apple.com/us/music-video/miley-cyrus-twerk-clean/777012408"  
-            },
-            {
-                title: "Bad Man Style",
-                src: "https://embed.music.apple.com/us/music-video/bad-man-style/587977704" 
-            },
         ]
     },
     {
@@ -5982,7 +5957,7 @@ const id_frame = document.getElementById("_id_frame");
         songs: [
             {
                 title: "Something About You (feat. Dent May)",
-                src: "https://embed.music.apple.com/us/music-video/something-about-you-feat-dent-may/1601866943"
+                src: "https://embed.music.apple.com/us/music-video/something-about-you-feat-dent-may/1829744155"
             }
         ]
     },
@@ -6332,7 +6307,7 @@ const id_frame = document.getElementById("_id_frame");
         songs: [
             {
                 title: "Point Me 2",
-                src: "https://embed.music.apple.com/us/music-video/point-me-2/1696353729"
+                src: "https://embed.music.apple.com/us/music-video/point-me-2/1889929339"
             },
         ]
     },
@@ -6481,15 +6456,6 @@ const id_frame = document.getElementById("_id_frame");
             {
                 title: "Perfect Stranger",
                 src: "https://embed.music.apple.com/us/music-video/perfect-stranger/1776264378"
-            },
-        ]
-    },
-    {
-        artist: "Flau'jae & NLE Choppa",
-        songs: [
-            {
-                title: "AMF",
-                src: "https://embed.music.apple.com/us/music-video/amf/1738049648"
             },
         ]
     },
@@ -7124,10 +7090,6 @@ const id_frame = document.getElementById("_id_frame");
         birthday: [{ month: "June", day: 27, year: 1997 }],
         songs: [
             {
-                title: "America the Beautiful",
-                src: "https://embed.music.apple.com/us/music-video/america-the-beautiful/1552052358"
-            },
-            {
                 title: "Damage",
                 src: "https://embed.music.apple.com/us/music-video/damage/1536506952"
             },
@@ -7651,11 +7613,11 @@ const id_frame = document.getElementById("_id_frame");
         ]
     },
     {
-        artist: "J.P. & NLE Choppa",
+        artist: "J.P.",
         songs: [
             {
                 title: "Bad Bitty (Remix)",
-                src: "https://embed.music.apple.com/us/music-video/bad-bitty-remix/1760165199"
+                src: "https://embed.music.apple.com/us/music-video/bad-bitty-remix/1834315796"
             },
         ]
     },
@@ -8072,7 +8034,7 @@ const id_frame = document.getElementById("_id_frame");
         ]
     },
     {
-        artist: "JAY-Z",
+        artist: "JAŸ-Z",
         birthday: [{ month: "December", day: 4, year: 1969 }],
         songs: [
             {
@@ -8081,15 +8043,15 @@ const id_frame = document.getElementById("_id_frame");
             },
             {
                 title: "Empire State Of Mind (feat. Alicia Keys)",
-                src: "https://embed.music.apple.com/us/music-video/empire-state-of-mind-feat-alicia-keys/1445845689"
+                src: "https://embed.music.apple.com/us/music-video/empire-state-of-mind-feat-alicia-keys/6806122100"
             },
             {
                 title: "Holy Grail (feat. Justin Timberlake)",
-                src: "https://embed.music.apple.com/us/music-video/holy-grail-feat-justin-timberlake/1444605742"
+                src: "https://embed.music.apple.com/us/music-video/holy-grail-feat-justin-timberlake/6806277592"
             },
             {
                 title: "On To The Next One (feat. Swizz Beatz)",
-                src: "https://embed.music.apple.com/us/music-video/on-to-the-next-one-feat-swizz-beatz/1445839270"
+                src: "https://embed.music.apple.com/us/music-video/on-to-the-next-one-feat-swizz-beatz/6806143497"
             },
             {
                 title: "Run This Town (feat. Rihanna & Kanye West)",
@@ -8105,7 +8067,7 @@ const id_frame = document.getElementById("_id_frame");
             },
             {
                 title: "Young Forever (feat. Mr. Hudson)",
-                src: "https://embed.music.apple.com/us/music-video/young-forever-feat-mr-hudson/1445863993"
+                src: "https://embed.music.apple.com/us/music-video/young-forever-feat-mr-hudson/6806149367"
             },
         ]
     },
@@ -8454,8 +8416,8 @@ const id_frame = document.getElementById("_id_frame");
                 src: "https://embed.music.apple.com/us/music-video/10k-hours-feat-nas/1558717559"
             },
             {
-                title: "America the Beautiful (Live)",
-                src: "https://embed.music.apple.com/us/music-video/america-the-beautiful-live/1609883735"
+                title: "America The Beautiful (Live)",
+                src: "https://embed.music.apple.com/us/music-video/america-the-beautiful-live/1843476999"
             },
             {
                 title: "A&B",
@@ -8644,10 +8606,6 @@ const id_frame = document.getElementById("_id_frame");
             {
                 title: "Gotta Love",
                 src: "https://embed.music.apple.com/us/music-video/gotta-love/1445828725"
-            },
-            {
-                title: "Every Moment",
-                src: "https://embed.music.apple.com/us/music-video/every-moment/970825049"
             },
         ]
     },
@@ -9087,19 +9045,19 @@ const id_frame = document.getElementById("_id_frame");
             },
             {
                 title: "Richard Milli",
-                src: "https://embed.music.apple.com/us/music-video/richard-milli/1732698129"
+                src: "https://embed.music.apple.com/us/music-video/richard-milli/1803128685"
             },
             {
                 title: "Dead Wrong",
-                src: "https://embed.music.apple.com/us/music-video/dead-wrong/1729369670"
+                src: "https://embed.music.apple.com/us/music-video/dead-wrong/1802915281"
             },
             {
                 title: "Spin The Block",
-                src: "https://embed.music.apple.com/us/music-video/spin-the-block/1717613592"
+                src: "https://embed.music.apple.com/us/music-video/spin-the-block/1803099649"
             },
             {
                 title: "Buss Down",
-                src: "https://embed.music.apple.com/us/music-video/buss-down/1689286717"
+                src: "https://embed.music.apple.com/us/music-video/buss-down/1803076368"
             },
             {
                 title: "If These Walls Could Talk",
@@ -9111,7 +9069,7 @@ const id_frame = document.getElementById("_id_frame");
             },
             {
                 title: "Birthday (feat. Yella Beezy)",
-                src: "https://embed.music.apple.com/us/music-video/birthday-feat-yella-beezy/1571096914"
+                src: "https://embed.music.apple.com/us/music-video/birthday-feat-yella-beezy/1803047057"
             },
             {
                 title: "Tatted Up (feat. Fabo)",
@@ -9321,15 +9279,6 @@ const id_frame = document.getElementById("_id_frame");
             {
                 title: "Numba 1 (Tide Is High) [feat. Keri Hilson] {Extended Mix} [Extended Mix]",
                 src: "https://embed.music.apple.com/us/music-video/numba-1-tide-is-high-feat-keri-hilson-extended-mix/1446006043"
-            },
-        ]
-    },
-    {
-        artist: "Karri",
-        songs: [
-            {
-                title: "go (feat. Kehlani)",
-                src: "https://embed.music.apple.com/us/music-video/go-feat-kehlani/1852066140"
             },
         ]
     },
@@ -9850,7 +9799,7 @@ const id_frame = document.getElementById("_id_frame");
             },
             {
                 title: "Super Bowl LIX Halftime Show (Live)",
-                src: "https://embed.music.apple.com/us/music-video/super-bowl-lix-halftime-show-live/1794822455"
+                src: "https://embed.music.apple.com/us/music-video/super-bowl-lix-halftime-show-live/1836358807"
             },
         ]
     },
@@ -10123,7 +10072,7 @@ const id_frame = document.getElementById("_id_frame");
             },
             {
                 title: "Tension",
-                src: "https://embed.music.apple.com/us/music-video/tension/1705455458"
+                src: "https://embed.music.apple.com/us/music-video/tension/1746554419"
             },
             {
                 title: "Lights Camera Action",
@@ -10529,8 +10478,8 @@ const id_frame = document.getElementById("_id_frame");
         artist: "Lil Darius, Tay Keith & Nardo Wick",
         songs: [
             {
-                title: "Lamborghini Boys (with Tay Keith and Nardo Wick)",
-                src: "https://embed.music.apple.com/us/music-video/lamborghini-boys-with-tay-keith-and-nardo-wick/1702074523"
+                title: "Lamborghini Boys",
+                src: "https://embed.music.apple.com/us/music-video/lamborghini-boys/1818412320"
             },
         ]
     },
@@ -11570,7 +11519,7 @@ const id_frame = document.getElementById("_id_frame");
         songs: [
             {
                 title: "Crave",
-                src: "https://embed.music.apple.com/us/music-video/crave/1464765380"
+                src: "https://embed.music.apple.com/us/music-video/crave-feat-swae-lee/1874761237"
             },
         ]
     },
@@ -11682,10 +11631,6 @@ const id_frame = document.getElementById("_id_frame");
             {
                 title: "I Want It All",
                 src: "https://embed.music.apple.com/us/music-video/i-want-it-all/1703210214"
-            },
-            {
-                title: "Material Things",
-                src: "https://embed.music.apple.com/us/music-video/material-things/1687768339"
             },
             {
                 title: "Outta My Face",
@@ -12699,7 +12644,7 @@ const id_frame = document.getElementById("_id_frame");
         songs: [
             {
                 title: "HER",
-                src: "https://embed.music.apple.com/us/music-video/her/1791710881"
+                src: "https://embed.music.apple.com/us/music-video/her/1802871285"
             },
         ]
     },
@@ -13323,35 +13268,35 @@ const id_frame = document.getElementById("_id_frame");
             },
             {
                 title: "Space and Time",
-                src: "https://embed.music.apple.com/us/music-video/space-and-time/1524064269"
+                src: "https://embed.music.apple.com/us/music-video/space-and-time/1814515728"
             },
             {
                 title: "Simple Things (In Studio)",
-                src: "https://embed.music.apple.com/us/music-video/simple-things-in-studio/1510777077"
+                src: "https://embed.music.apple.com/us/music-video/simple-things-in-studio/1813866788"
             },
             {
                 title: "The Truth (Official Music Video)",
-                src: "https://embed.music.apple.com/us/music-video/the-truth-official-music-video/1496830877"
+                src: "https://embed.music.apple.com/us/music-video/the-truth/1814351787"
             },
             {
                 title: "Down (Official Music Video)",
-                src: "https://embed.music.apple.com/us/music-video/down-official-music-video/1459320100"
+                src: "https://embed.music.apple.com/us/music-video/down/1813984089"
             },
             {
                 title: "With You (feat. MyGuyMars)",
-                src: "https://embed.music.apple.com/us/music-video/with-you-feat-myguymars/1451095078"
+                src: "https://embed.music.apple.com/us/music-video/with-you/1814516466"
             },
             {
                 title: "G.M.O. (Got My Own) [feat. Tink]",
-                src: "https://embed.music.apple.com/us/music-video/g-m-o-got-my-own-feat-tink/1424645343"
+                src: "https://embed.music.apple.com/us/music-video/g-m-o-got-my-own-feat-tink/1813865994"
             },
             {
                 title: "Damage",
-                src: "https://embed.music.apple.com/us/music-video/damage/1410324789"
+                src: "https://embed.music.apple.com/us/music-video/damage/1813449542"
             },
             {
                 title: "You Got Me",
-                src: "https://embed.music.apple.com/us/music-video/you-got-me/1396787799"
+                src: "https://embed.music.apple.com/us/music-video/you-got-me/1813346220"
             },
             {
                 title: "Ready For Whatever",
@@ -13389,15 +13334,6 @@ const id_frame = document.getElementById("_id_frame");
             {
                 title: "It's All About Me",
                 src: "https://embed.music.apple.com/us/music-video/its-all-about-me/1445841481"
-            },
-        ]
-    },
-    {
-        artist: "My Darkest Days",
-        songs: [
-            {
-                title: "Porn Star Dancing (The Allstar Version) [feat. Ludacris & Zakk Wylde] [Exclusive Bonus Video]",
-                src: "https://embed.music.apple.com/us/music-video/porn-star-dancing-the-allstar-version-feat-ludacris/1440754514"
             },
         ]
     },
@@ -14241,7 +14177,7 @@ const id_frame = document.getElementById("_id_frame");
         songs: [
             {
                 title: "So What",
-                src: "https://embed.music.apple.com/us/music-video/so-what/293525412"
+                src: "https://embed.music.apple.com/us/music-video/so-what/289293667"
             },
             {
                 title: "TRUSTFALL",
@@ -14454,16 +14390,6 @@ const id_frame = document.getElementById("_id_frame");
             {
                 title: "Touch",
                 src: "https://embed.music.apple.com/us/music-video/touch/1445060278"
-            },
-        ]
-    },
-      {
-        artist: "Pink Siifu, Turich Benjy & HiTech",
-        songs: [
-
-            {
-                title: "Wywd..'!? (feat. Milfie)",
-                src: "https://embed.music.apple.com/us/music-video/wywd-feat-milfie/1714988559"
             },
         ]
     },
@@ -14969,16 +14895,6 @@ const id_frame = document.getElementById("_id_frame");
             },
         ]
     },
-    {
-        artist: "Rakim, Nipsey Hussle & Planet Asia",
-        birthday: [{ month: "January", day: 28, year: 1968 }, { month: "August", day: 15, year: 1985 }, { month: "October", day: 24, year: 1976 }],
-        songs: [
-            {
-                title: "LOVE IS THE MESSAGE (feat. Louis King, Snoop Dogg, Sally Green, Kobe Honeycutt & The LA Grand Choir)",
-                src: "https://embed.music.apple.com/us/music-video/love-is-the-message-feat-louis-king-snoop-dogg-sally/1760003705"
-            },
-        ]
-    },
      {
         artist: "Ravyn Lenae",
         birthday: [{ month: "January", day: 22, year: 1999 }],
@@ -14986,10 +14902,6 @@ const id_frame = document.getElementById("_id_frame");
             {
                 title: "Love Me Not",
                 src: "https://embed.music.apple.com/us/music-video/love-me-not/1743852435"
-            },
-             {
-                title: "Sticky",
-                src: "https://embed.music.apple.com/us/music-video/sticky/1340501829"
             },
         ]
     },
@@ -15004,10 +14916,6 @@ const id_frame = document.getElementById("_id_frame");
             {
                 title: "For the Love of Ray J",
                 src: "https://embed.music.apple.com/us/music-video/for-the-love-of-ray-j/317902279"
-            },
-            {
-                title: "Gifts",
-                src: "https://embed.music.apple.com/us/music-video/gifts/282914656"
             },
             {
                 title: "Sexy Can I (feat. Yung Berg)",
@@ -15074,10 +14982,6 @@ const id_frame = document.getElementById("_id_frame");
             {
                 title: "Softly And Tenderly (feat. Kelly Clarkson & Trisha Yearwood) [Live At Ryman Auditorium, Nashville, TN / 2017]",
                 src: "https://embed.music.apple.com/us/music-video/softly-and-tenderly-feat-kelly-clarkson-trisha/1613754053"
-            },
-            {
-                title: "The Star Spangled Banner (Live from Super Bowl LVIII)",
-                src: "https://embed.music.apple.com/us/music-video/the-star-spangled-banner-live-from-super-bowl-lviii/1730397116"
             },
             {
                 title: "Seven Minutes In Heaven",
@@ -15206,6 +15110,16 @@ const id_frame = document.getElementById("_id_frame");
             {
                 title: "Is There Life Out There",
                 src: "https://embed.music.apple.com/us/music-video/is-there-life-out-there/1445846430"
+            },
+        ]
+    },
+    {
+        artist: "Reba McEntire & NFL",
+        birthday: [{ month: "March", day: 28, year: 1955 }, { month: "September", day: 17, year: 1920 }],
+        songs: [
+            {
+                title: "The Star Spangled Banner (Live)",
+                src: "https://embed.music.apple.com/us/music-video/the-star-spangled-banner-live/1843672216"
             },
         ]
     },
@@ -15491,7 +15405,7 @@ const id_frame = document.getElementById("_id_frame");
             },
             {
                 title: 'Super Bowl LVII Halftime Show (Live)',
-                src: 'https://embed.music.apple.com/us/music-video/super-bowl-lvii-halftime-show-live/1671474255'
+                src: 'https://embed.music.apple.com/us/music-video/super-bowl-lvii-halftime-show-live/1843686989'
             },
             {
                 title: 'Take a Bow',
@@ -16258,7 +16172,7 @@ const id_frame = document.getElementById("_id_frame");
         songs: [
             {
                 title: 'Part Time Psycho',
-                src: 'https://embed.music.apple.com/us/music-video/part-time-psycho/1556911607'
+                src: 'https://embed.music.apple.com/us/music-video/part-time-psycho/1813254909'
             },
         ]
     },
@@ -16745,7 +16659,7 @@ const id_frame = document.getElementById("_id_frame");
         songs: [
             {
                 title: "2 Mazza",
-                src: "https://embed.music.apple.com/us/music-video/2-mazza/1820354071"
+                src: "https://embed.music.apple.com/us/music-video/2-mazza/1849773139"
             },
         ]
     },
@@ -17073,7 +16987,7 @@ const id_frame = document.getElementById("_id_frame");
             },
             {
                 title: "Clockwork (feat. Spice)",
-                src: "https://embed.music.apple.com/us/music-video/clockwork-feat-spice/1641198433"
+                src: "https://embed.music.apple.com/us/music-video/clockwork-feat-spice/1785875344"
             },
         ]
     },
@@ -17093,16 +17007,6 @@ const id_frame = document.getElementById("_id_frame");
             {
                 title: "JIGGLE & WHINE (feat. Spice)",
                 src: "https://embed.music.apple.com/us/music-video/jiggle-whine-feat-spice/1786263917"
-            },
-        ]
-    },
-    {
-        artist: "Stonebwoy & Keri Hilson",
-        birthday: [{ month: "March", day: 5, year: 1988 }, { month: "December", day: 5, year: 1982 }],
-        songs: [
-            {
-                title: "Nominate",
-                src: "https://embed.music.apple.com/us/music-video/nominate/1507434280"
             },
         ]
     },
@@ -17694,8 +17598,8 @@ const id_frame = document.getElementById("_id_frame");
         artist: "The 9ine & Jada Kingdom",
         songs: [
             {
-                title: "Turn Me On (with Jada Kingdom)",
-                src: "https://embed.music.apple.com/us/music-video/turn-me-on-with-jada-kingdom/1690857202"
+                title: "Turn Me On",
+                src: "https://embed.music.apple.com/us/music-video/turn-me-on/1816060923"
             },
         ]
     },
@@ -17747,10 +17651,6 @@ const id_frame = document.getElementById("_id_frame");
             {
                 title: "West Side",
                 src: "https://embed.music.apple.com/us/music-video/west-side/1475041051"
-            },
-            {
-                title: "How We Do (Main Version, Closed Captioned)",
-                src: "https://embed.music.apple.com/us/music-video/how-we-do-main-version-closed-captioned/1513229647"
             },
         ]
     },
@@ -19038,10 +18938,6 @@ const id_frame = document.getElementById("_id_frame");
                 src: "https://embed.music.apple.com/us/music-video/nice-slow/279017830"
             },
             {
-                title: "Super Bowl LVIII Halftime Show (Live)",
-                src: "https://embed.music.apple.com/us/music-video/super-bowl-lviii-halftime-show-live/1730428556"
-            },
-            {
                 title: "U Don't Have to Call",
                 src: "https://embed.music.apple.com/us/music-video/u-dont-have-to-call/548916411"
             },
@@ -19052,6 +18948,16 @@ const id_frame = document.getElementById("_id_frame");
         ]
     },
     {
+        artist: "USHER & NFL",
+        birthday: [{ month: "October", day: 14, year: 1978 }, { month: "September", day: 20, year: 1920 },],
+        songs: [
+             {
+                title: "Super Bowl LVIII Halftime Show (Live)",
+                src: "https://embed.music.apple.com/us/music-video/super-bowl-lviii-halftime-show-live/1843685055"
+            },
+        ]
+    },
+        {
         artist: "USHER, Summer Walker & 21 Savage",
         birthday: [{ month: "October", day: 14, year: 1978 }, { month: "April", day: 11, year: 1996 }, { month: "October", day: 22, year: 1992 }],
         songs: [
