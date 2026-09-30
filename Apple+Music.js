@@ -17195,10 +17195,6 @@
                 title: "That's Just Tips",
                 src: "https://embed.music.apple.com/us/music-video/thats-just-tips/1636978008"
             },
-            {
-                title: "F.B.G.M. (feat. Young M.A.)",
-                src: "https://embed.music.apple.com/us/music-video/f-b-g-m-feat-young-m-a/1245779566"
-            },
              {
                 title: "Make That Sh*t Work (feat. Juicy J)",
                 src: "https://embed.music.apple.com/us/music-video/make-that-sh-t-work-feat-juicy-j/1031993947"
