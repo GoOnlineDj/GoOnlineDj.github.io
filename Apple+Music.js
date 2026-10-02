@@ -20511,16 +20511,21 @@ scheduleNextCycle(LOAD_TIMEOUT);
 ////////////////////////////////////////////////////////////////////////////////
 // Auto-advance: after a video plays to the end, load the next one.
 //
-// The Apple Music embed doesn't tell this page when a video ends, so we look up
-// the video's length from Apple's public lookup API and start a timer when the
-// user presses play. Every click on the video restarts the timer, so it errs on
-// the late side and never cuts a video off early.
+// The Apple Music embed doesn't tell this page when a video ends (it sends no
+// postMessage events, and a page can't see a cross-origin iframe's network
+// traffic), so we look up the video's length from Apple's public lookup API and
+// start a timer when the user presses play. Every click on the video restarts
+// the timer, so it errs on the late side. The timer counts wall-clock time, so
+// loading, buffering and pauses are covered by a generous end buffer plus a
+// countdown notice with a "Keep playing" button before anything is skipped.
 
 // true  = wait the full video length (viewers signed in to Apple Music)
 // false = move on after the ~30s preview non-subscribers get
 const PLAY_FULL_LENGTH = true;
 const PREVIEW_MS = 30000;
-const END_BUFFER_MS = 4000; // slack for buffering before moving on
+const END_BUFFER_MS = 10000; // slack for loading/buffering
+const COUNTDOWN_MS = 10000;    // notice shown this long before skipping
+const KEEP_PLAYING_MS = 60000; // "Keep playing" pushes the skip back this much
 
 const durationCache = new Map();
 let advanceTimer;
@@ -20541,15 +20546,63 @@ async function getDurationMs(src) {
     }
 }
 
-async function startAdvanceTimer() {
+// Countdown notice: "Next video in 10s · Keep playing"
+let countdownTicker;
+const advanceNotice = document.createElement("div");
+advanceNotice.setAttribute("role", "status");
+advanceNotice.style.cssText = "position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:9999;display:none;align-items:center;gap:12px;padding:8px 14px;border-radius:999px;background:rgba(0,0,0,.8);color:#fff;font:14px system-ui,sans-serif;";
+const advanceNoticeText = document.createElement("span");
+const keepPlayingBtn = document.createElement("button");
+keepPlayingBtn.type = "button";
+keepPlayingBtn.textContent = "Keep playing";
+keepPlayingBtn.style.cssText = "border:0;border-radius:999px;padding:4px 10px;background:#fa243c;color:#fff;font:inherit;cursor:pointer;";
+advanceNotice.append(advanceNoticeText, keepPlayingBtn);
+document.body.appendChild(advanceNotice);
+
+function cancelAdvance() {
     clearTimeout(advanceTimer);
+    clearInterval(countdownTicker);
+    advanceNotice.style.display = "none";
+}
+
+function scheduleAdvance(ms) {
+    cancelAdvance();
+    advanceTimer = setTimeout(startCountdown, Math.max(0, ms - COUNTDOWN_MS));
+}
+
+function startCountdown() {
+    let remaining = Math.round(COUNTDOWN_MS / 1000);
+    const tick = () => {
+        if (remaining <= 0) {
+            cancelAdvance();
+            AppleMusicForward();
+            return;
+        }
+        advanceNoticeText.textContent = `Next video in ${remaining}s`;
+        remaining--;
+    };
+    advanceNotice.style.display = "flex";
+    tick();
+    countdownTicker = setInterval(tick, 1000);
+}
+
+keepPlayingBtn.addEventListener("click", () => scheduleAdvance(KEEP_PLAYING_MS));
+
+async function startAdvanceTimer() {
+    cancelAdvance();
     const src = iframe.src;
     const fullMs = await getDurationMs(src);
     if (iframe.src !== src) return; // user already moved on
     const ms = PLAY_FULL_LENGTH ? fullMs : Math.min(fullMs || PREVIEW_MS, PREVIEW_MS);
     if (!ms) return;
-    advanceTimer = setTimeout(AppleMusicForward, ms + END_BUFFER_MS);
+    scheduleAdvance(ms + END_BUFFER_MS);
 }
+
+// Leaving fullscreen: take focus back so the next click (e.g. pause/play) on
+// the video is detected again and restarts the timer
+document.addEventListener("fullscreenchange", () => {
+    if (!document.fullscreenElement) setTimeout(reclaimFocus, 0);
+});
 
 // Invisible element the page focuses so the NEXT click on the video can be
 // detected too (a click into the iframe only shows up as the page losing focus)
@@ -20580,7 +20633,7 @@ window.addEventListener("blur", () => {
 
 // New video loaded: wait for play again
 iframe.addEventListener("load", () => {
-    clearTimeout(advanceTimer);
+    cancelAdvance();
     reclaimFocus();
 });
 
