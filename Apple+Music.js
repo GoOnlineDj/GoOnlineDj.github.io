@@ -20224,22 +20224,43 @@ setInterval(() => {
 
 
 const defaultUrl = appleMusic[0].songs[0].src;
-let iframe = document.createElement("iframe");
-iframe.className = "random-iframe";
-iframe.src = defaultUrl;
-iframe.allow = "fullscreen; autoplay; encrypted-media";
-iframe.allowFullscreen = true;
-iframe.width = "100%";
-iframe.height = "100%";
-iframe.referrerPolicy = "strict-origin";
-iframe.sandbox = "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation";
-iframe.frameBorder = 0;
-iframe.title = "Apple Music";
-iframe.name = "Apple Music";
+let iframe;
+let playerSession = 0;
+const Appleiframe = document.getElementById("_id_iframe");
 
+function loadAppleMusic(src) {
+    cancelAdvance();
+    clearTimeout(autoLoadInterval);
+    if (iframe) {
+        iframe.src = "about:blank";
+        iframe.remove();
+    }
 
-let Appleiframe = document.getElementById("_id_iframe");
-Appleiframe.appendChild(iframe);
+    currentUrl = src;
+    const playerUrl = new URL(src);
+    playerUrl.searchParams.set("_playerSession", `${Date.now()}-${++playerSession}`);
+    const nextIframe = document.createElement("iframe");
+    nextIframe.className = "random-iframe";
+    nextIframe.allow = "fullscreen; autoplay; encrypted-media";
+    nextIframe.allowFullscreen = true;
+    nextIframe.width = "100%";
+    nextIframe.height = "100%";
+    nextIframe.referrerPolicy = "strict-origin";
+    nextIframe.sandbox = "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation";
+    nextIframe.frameBorder = 0;
+    nextIframe.title = "Apple Music";
+    nextIframe.name = "Apple Music";
+    nextIframe.addEventListener("load", () => {
+        if (iframe !== nextIframe) return;
+        scheduleNextCycle(CYCLE_DELAY);
+        cancelAdvance();
+        reclaimFocus();
+    });
+    nextIframe.src = playerUrl.href;
+    iframe = nextIframe;
+    Appleiframe.appendChild(iframe);
+    scheduleNextCycle(LOAD_TIMEOUT);
+}
 
 
 
@@ -20261,11 +20282,11 @@ function stopAutoCycle() {
 async function AppleMusicForward() {
     if (appleMusic[a].songs.length > s + 1) {
         s++;
-        iframe.src = appleMusic[a].songs[s].src;
+        loadAppleMusic(appleMusic[a].songs[s].src);
     } else if (appleMusic.length > a + 1) {
         s = 0;
         a++;
-        iframe.src = appleMusic[a].songs[s].src;
+        loadAppleMusic(appleMusic[a].songs[s].src);
     } else {
         return;
     }
@@ -20274,22 +20295,15 @@ async function AppleMusicForward() {
 async function AppleMusicBack() {
     if (s > 0) {
         s--;
-        iframe.src = appleMusic[a].songs[s].src;
+        loadAppleMusic(appleMusic[a].songs[s].src);
     } else if (a > 0) {
         a--;
         s = appleMusic[a].songs.length - 1;
-        iframe.src = appleMusic[a].songs[s].src;
+        loadAppleMusic(appleMusic[a].songs[s].src);
     } else {
         return;
     }
 }
-
-
-
-document.getElementById("_id_iframe").addEventListener("click", () => {
-    iframe.src = appleMusic[a].songs[s].src;
-});
-
 
 
 
@@ -20298,7 +20312,7 @@ musicForward.forEach(x => x.addEventListener("click", () => {
     stopAutoCycle();
 
     if (firstPress === 1) {
-        iframe.src = appleMusic[a].songs[s].src;
+        loadAppleMusic(appleMusic[a].songs[s].src);
         firstPress = 0;
     } else {
         AppleMusicForward();
@@ -20308,7 +20322,7 @@ musicForward.forEach(x => x.addEventListener("click", () => {
 const musicRefresh = document.querySelectorAll("._c_Apple-Music-refresh");
 musicRefresh.forEach(x => x.addEventListener("click", () => {
     stopAutoCycle();
-    iframe.src = appleMusic[a].songs[s].src;
+    loadAppleMusic(currentUrl);
     firstPress = 0;
 }));
 
@@ -20323,7 +20337,7 @@ musicBack.forEach(x => x.addEventListener("click", () => {
     stopAutoCycle();
 
     if (firstPress === 1) {
-        iframe.src = appleMusic[a].songs[s].src;
+        loadAppleMusic(appleMusic[a].songs[s].src);
         firstPress = 0;
     } else {
         AppleMusicBack();
@@ -20369,7 +20383,7 @@ function handleLetter(value) {
         a = newA;
         s = 0;
         stopAutoCycle();
-        iframe.src = appleMusic[a].songs[s].src;
+        loadAppleMusic(appleMusic[a].songs[s].src);
     }
 }
 
@@ -20456,7 +20470,7 @@ sortedAppleMusic.forEach(artist => {
 function updateIframeSrc() {
     const artist = sortedAppleMusic[currentArtistIndex];
     const song = artist.songs[currentSongIndex];
-    iframe.src = song.src;
+    loadAppleMusic(song.src);
     a = appleMusic.indexOf(artist);
     s = artist.songs.indexOf(song);
 }
@@ -20476,8 +20490,6 @@ function scheduleNextCycle(delay) {
     clearTimeout(autoLoadInterval);
     if (autoCycling) autoLoadInterval = setTimeout(cycleThroughArtists, delay);
 }
-
-iframe.addEventListener("load", () => scheduleNextCycle(CYCLE_DELAY));
 
 function cycleThroughArtists() {
     if (!autoCycling) return;
@@ -20501,10 +20513,6 @@ function cycleThroughArtists() {
 //////////////////////////////////////////////////
 
 
-
-// Initial update to include the first item in the list
-updateIframeSrc();
-scheduleNextCycle(LOAD_TIMEOUT);
 
 //////////////////////////////////////////////
 
@@ -20590,9 +20598,10 @@ keepPlayingBtn.addEventListener("click", () => scheduleAdvance(KEEP_PLAYING_MS))
 
 async function startAdvanceTimer() {
     cancelAdvance();
-    const src = iframe.src;
+    const activeIframe = iframe;
+    const src = currentUrl;
     const fullMs = await getDurationMs(src);
-    if (iframe.src !== src) return; // user already moved on
+    if (iframe !== activeIframe) return;
     const ms = PLAY_FULL_LENGTH ? fullMs : Math.min(fullMs || PREVIEW_MS, PREVIEW_MS);
     if (!ms) return;
     scheduleAdvance(ms + END_BUFFER_MS);
@@ -20631,19 +20640,15 @@ window.addEventListener("blur", () => {
     }, 0);
 });
 
-// New video loaded: wait for play again
-iframe.addEventListener("load", () => {
-    cancelAdvance();
-    reclaimFocus();
-});
-
 // Optional deep link: index.html?iframeSrc=<Apple Music embed URL>
 // Only Apple Music embeds are accepted so the link can't load other pages.
 const linkedSrc = new URLSearchParams(window.location.search).get("iframeSrc");
 if (linkedSrc && linkedSrc.startsWith("https://embed.music.apple.com/")) {
     stopAutoCycle();
     firstPress = 0;
-    iframe.src = linkedSrc;
+    loadAppleMusic(linkedSrc);
+} else {
+    updateIframeSrc();
 }
 
 
