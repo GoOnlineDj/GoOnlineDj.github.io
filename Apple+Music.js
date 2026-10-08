@@ -20226,40 +20226,52 @@ setInterval(() => {
 const defaultUrl = appleMusic[0].songs[0].src;
 let iframe;
 let playerSession = 0;
+let pendingLoadToken = 0;
 const Appleiframe = document.getElementById("_id_iframe");
 
 function loadAppleMusic(src) {
     cancelAdvance();
     clearTimeout(autoLoadInterval);
+    const token = ++pendingLoadToken;
     if (iframe) {
         iframe.src = "about:blank";
         iframe.remove();
+        iframe = null;
     }
 
     currentUrl = src;
-    const playerUrl = new URL(src);
-    playerUrl.searchParams.set("_playerSession", `${Date.now()}-${++playerSession}`);
-    const nextIframe = document.createElement("iframe");
-    nextIframe.className = "random-iframe";
-    nextIframe.allow = "fullscreen; autoplay; encrypted-media";
-    nextIframe.allowFullscreen = true;
-    nextIframe.width = "100%";
-    nextIframe.height = "100%";
-    nextIframe.referrerPolicy = "strict-origin";
-    nextIframe.sandbox = "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation";
-    nextIframe.frameBorder = 0;
-    nextIframe.title = "Apple Music";
-    nextIframe.name = "Apple Music";
-    nextIframe.addEventListener("load", () => {
-        if (iframe !== nextIframe) return;
-        scheduleNextCycle(CYCLE_DELAY);
-        cancelAdvance();
-        reclaimFocus();
-    });
-    nextIframe.src = playerUrl.href;
-    iframe = nextIframe;
-    Appleiframe.appendChild(iframe);
-    scheduleNextCycle(LOAD_TIMEOUT);
+
+    // Wait a couple of frames before starting the next video: swapping the
+    // iframe in the same tick doesn't give the browser time to fully release
+    // the old video's audio/video decoders, so trailing audio from the
+    // previous video can bleed into the new one's picture (lip-sync mismatch).
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+        if (token !== pendingLoadToken) return; // a newer load superseded this one
+
+        const playerUrl = new URL(src);
+        playerUrl.searchParams.set("_playerSession", `${Date.now()}-${++playerSession}`);
+        const nextIframe = document.createElement("iframe");
+        nextIframe.className = "random-iframe";
+        nextIframe.allow = "fullscreen; autoplay; encrypted-media";
+        nextIframe.allowFullscreen = true;
+        nextIframe.width = "100%";
+        nextIframe.height = "100%";
+        nextIframe.referrerPolicy = "strict-origin";
+        nextIframe.sandbox = "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation";
+        nextIframe.frameBorder = 0;
+        nextIframe.title = "Apple Music";
+        nextIframe.name = "Apple Music";
+        nextIframe.addEventListener("load", () => {
+            if (iframe !== nextIframe) return;
+            scheduleNextCycle(CYCLE_DELAY);
+            cancelAdvance();
+            reclaimFocus();
+        });
+        nextIframe.src = playerUrl.href;
+        iframe = nextIframe;
+        Appleiframe.appendChild(iframe);
+        scheduleNextCycle(LOAD_TIMEOUT);
+    }));
 }
 
 
