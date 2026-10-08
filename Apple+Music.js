@@ -20252,12 +20252,17 @@ function loadAppleMusic(src) {
         playerUrl.searchParams.set("_playerSession", `${Date.now()}-${++playerSession}`);
         const nextIframe = document.createElement("iframe");
         nextIframe.className = "random-iframe";
-        nextIframe.allow = "fullscreen; autoplay; encrypted-media";
-        nextIframe.allowFullscreen = true;
+        // Apple's own embed snippet requires the "*" wildcard on cross-origin allow
+        // directives and allow-storage-access-by-user-activation in the sandbox;
+        // without them the player can't reach its signed-in/accelerated playback
+        // path and silently falls back to a path where audio and video drift apart.
+        // "fullscreen *" in allow already grants fullscreen; allowFullscreen would
+        // just trigger a console warning that it's being overridden.
+        nextIframe.allow = "autoplay *; encrypted-media *; fullscreen *; clipboard-write";
         nextIframe.width = "100%";
         nextIframe.height = "100%";
         nextIframe.referrerPolicy = "strict-origin";
-        nextIframe.sandbox = "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation";
+        nextIframe.sandbox = "allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation";
         nextIframe.frameBorder = 0;
         nextIframe.title = "Apple Music";
         nextIframe.name = "Apple Music";
@@ -20630,7 +20635,8 @@ document.addEventListener("fullscreenchange", () => {
 const focusCatcher = document.createElement("button");
 focusCatcher.type = "button";
 focusCatcher.tabIndex = -1;
-focusCatcher.setAttribute("aria-hidden", "true");
+// Not aria-hidden: this element is intentionally focused, and browsers block/warn
+// on aria-hidden elements that retain focus.
 focusCatcher.style.cssText = "position:fixed;left:-9999px;width:1px;height:1px;opacity:0;";
 document.body.appendChild(focusCatcher);
 
