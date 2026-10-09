@@ -20229,9 +20229,33 @@ let playerSession = 0;
 let pendingLoadToken = 0;
 const Appleiframe = document.getElementById("_id_iframe");
 
+// Every embed load (auto-cycle AND manual forward/back/refresh) counts
+// against this cap. Stop after this many so a tab left open - or repeatedly
+// clicked - doesn't load hundreds of videos and bloat/exhaust the browser's
+// video decoder pool.
+const MAX_LOADS = window.matchMedia("(max-width: 700px), (max-height: 500px)").matches ? 20 : 100;
+let loadCount = 0;
+
 function loadAppleMusic(src) {
     cancelAdvance();
     clearTimeout(autoLoadInterval);
+
+    // Every embed load spins up a fresh MusicKit instance/video decoder, and
+    // removing an iframe doesn't always fully release the browser's hardware
+    // decoder pool right away. After enough sequential loads in one tab -
+    // whether from auto-cycling or manual forward/back/refresh clicks - the
+    // decoder pool can get exhausted and even a previously-fine video starts
+    // freezing. A full navigation reliably clears that, so once the cap is
+    // hit, reload the page instead of swapping in yet another iframe, and
+    // restore the requested video via the existing ?iframeSrc= deep link.
+    if (++loadCount > MAX_LOADS) {
+        stopAutoCycle();
+        const reloadUrl = new URL(window.location.href);
+        reloadUrl.searchParams.set("iframeSrc", src);
+        window.location.href = reloadUrl.href;
+        return;
+    }
+
     const token = ++pendingLoadToken;
     if (iframe) {
         iframe.src = "about:blank";
@@ -20498,10 +20522,6 @@ function updateIframeSrc() {
 // than they could load, which froze the page.
 const CYCLE_DELAY = 3000;
 const LOAD_TIMEOUT = 15000; // move on if an embed never finishes loading
-// Each preview is a full Apple Music page load. Stop after this many so a tab
-// left open doesn't load hundreds of videos an hour and bloat the browser cache.
-const MAX_PREVIEWS = window.matchMedia("(max-width: 700px), (max-height: 500px)").matches ? 20 : 100;
-let previewCount = 0;
 
 function scheduleNextCycle(delay) {
     clearTimeout(autoLoadInterval);
@@ -20515,10 +20535,8 @@ function cycleThroughArtists() {
         scheduleNextCycle(CYCLE_DELAY);
         return;
     }
-    if (++previewCount > MAX_PREVIEWS) {
-        stopAutoCycle();
-        return;
-    }
+    // loadAppleMusic() enforces MAX_LOADS itself (it reloads the page once
+    // the cap is hit), so there's nothing more to check here.
     currentSongIndex = (currentSongIndex + 1) % sortedAppleMusic[currentArtistIndex].songs.length;
     if (currentSongIndex === 0) {
         currentArtistIndex = (currentArtistIndex + 1) % sortedAppleMusic.length;
