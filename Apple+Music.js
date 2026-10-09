@@ -20225,85 +20225,7 @@ setInterval(() => {
 
 const defaultUrl = appleMusic[0].songs[0].src;
 let iframe;
-let playerSession = 0;
-let pendingLoadToken = 0;
 const Appleiframe = document.getElementById("_id_iframe");
-
-// Every embed load (auto-cycle AND manual forward/back/refresh) counts
-// against this cap. Stop after this many so a tab left open - or repeatedly
-// clicked - doesn't load hundreds of videos and bloat/exhaust the browser's
-// video decoder pool.
-const MAX_LOADS = window.matchMedia("(max-width: 700px), (max-height: 500px)").matches ? 20 : 100;
-let loadCount = 0;
-
-function loadAppleMusic(src) {
-    cancelAdvance();
-    clearTimeout(autoLoadInterval);
-
-    // Every embed load spins up a fresh MusicKit instance/video decoder, and
-    // removing an iframe doesn't always fully release the browser's hardware
-    // decoder pool right away. After enough sequential loads in one tab -
-    // whether from auto-cycling or manual forward/back/refresh clicks - the
-    // decoder pool can get exhausted and even a previously-fine video starts
-    // freezing. A full navigation reliably clears that, so once the cap is
-    // hit, reload the page instead of swapping in yet another iframe, and
-    // restore the requested video via the existing ?iframeSrc= deep link.
-    if (++loadCount > MAX_LOADS) {
-        stopAutoCycle();
-        const reloadUrl = new URL(window.location.href);
-        reloadUrl.searchParams.set("iframeSrc", src);
-        window.location.href = reloadUrl.href;
-        return;
-    }
-
-    const token = ++pendingLoadToken;
-    if (iframe) {
-        iframe.src = "about:blank";
-        iframe.remove();
-        iframe = null;
-    }
-
-    currentUrl = src;
-
-    // Wait a couple of frames before starting the next video: swapping the
-    // iframe in the same tick doesn't give the browser time to fully release
-    // the old video's audio/video decoders, so trailing audio from the
-    // previous video can bleed into the new one's picture (lip-sync mismatch).
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-        if (token !== pendingLoadToken) return; // a newer load superseded this one
-
-        const playerUrl = new URL(src);
-        playerUrl.searchParams.set("_playerSession", `${Date.now()}-${++playerSession}`);
-        const nextIframe = document.createElement("iframe");
-        nextIframe.className = "random-iframe";
-        // Apple's own embed snippet requires the "*" wildcard on cross-origin allow
-        // directives and allow-storage-access-by-user-activation in the sandbox;
-        // without them the player can't reach its signed-in/accelerated playback
-        // path and silently falls back to a path where audio and video drift apart.
-        // "fullscreen *" in allow already grants fullscreen; allowFullscreen would
-        // just trigger a console warning that it's being overridden.
-        nextIframe.allow = "autoplay *; encrypted-media *; fullscreen *; clipboard-write";
-        nextIframe.width = "100%";
-        nextIframe.height = "100%";
-        nextIframe.referrerPolicy = "strict-origin";
-        nextIframe.sandbox = "allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation";
-        nextIframe.frameBorder = 0;
-        nextIframe.title = "Apple Music";
-        nextIframe.name = "Apple Music";
-        nextIframe.addEventListener("load", () => {
-            if (iframe !== nextIframe) return;
-            scheduleNextCycle(CYCLE_DELAY);
-            cancelAdvance();
-            reclaimFocus();
-        });
-        nextIframe.src = playerUrl.href;
-        iframe = nextIframe;
-        Appleiframe.appendChild(iframe);
-        scheduleNextCycle(LOAD_TIMEOUT);
-    }));
-}
-
-
 
 let currentUrl = defaultUrl;
 let a = 0;
@@ -20316,6 +20238,73 @@ let firstPress = 1;
 function stopAutoCycle() {
     autoCycling = false;
     clearTimeout(autoLoadInterval);
+}
+
+// Builds the URL used to switch tracks, carrying along the state needed to
+// resume correctly once the page comes back (see the bootstrap deep link at
+// the bottom of this file).
+function buildTrackUrl(src) {
+    const url = new URL(window.location.href);
+    url.search = "";
+    url.searchParams.set("iframeSrc", src);
+    url.searchParams.set("a", a);
+    url.searchParams.set("s", s);
+    url.searchParams.set("ai", currentArtistIndex);
+    url.searchParams.set("si", currentSongIndex);
+    if (autoCycling) url.searchParams.set("cycle", "1");
+    return url;
+}
+
+// Switches to a new track. Every embed load spins up a fresh MusicKit
+// instance/video decoder, and removing an iframe doesn't always fully
+// release the browser's hardware decoder pool right away - after enough
+// sequential loads in one tab (confirmed happening after as few as ~10),
+// the decoder pool gets exhausted and even a previously-fine video starts
+// freezing. A full same-origin navigation reliably clears that, so every
+// track switch - manual or auto-cycle - reloads the page instead of
+// swapping in another iframe, then restores the requested video via the
+// ?iframeSrc= deep link below. `@view-transition { navigation: auto; }` in
+// Apple+Music.css cross-fades this navigation so it doesn't flash like a
+// hard reload.
+function loadAppleMusic(src) {
+    cancelAdvance();
+    clearTimeout(autoLoadInterval);
+    currentUrl = src;
+    window.location.replace(buildTrackUrl(src).href);
+}
+
+// Builds the iframe for the track this page load was handed. Runs exactly
+// once per page load (from the bootstrap deep link at the bottom of this
+// file) - loadAppleMusic() above handles every later switch via navigation.
+function renderIframe(src) {
+    currentUrl = src;
+    const playerUrl = new URL(src);
+    playerUrl.searchParams.set("_playerSession", `${Date.now()}`);
+    const nextIframe = document.createElement("iframe");
+    nextIframe.className = "random-iframe";
+    // Apple's own embed snippet requires the "*" wildcard on cross-origin allow
+    // directives and allow-storage-access-by-user-activation in the sandbox;
+    // without them the player can't reach its signed-in/accelerated playback
+    // path and silently falls back to a path where audio and video drift apart.
+    // "fullscreen *" in allow already grants fullscreen; allowFullscreen would
+    // just trigger a console warning that it's being overridden.
+    nextIframe.allow = "autoplay *; encrypted-media *; fullscreen *; clipboard-write";
+    nextIframe.width = "100%";
+    nextIframe.height = "100%";
+    nextIframe.referrerPolicy = "strict-origin";
+    nextIframe.sandbox = "allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation";
+    nextIframe.frameBorder = 0;
+    nextIframe.title = "Apple Music";
+    nextIframe.name = "Apple Music";
+    nextIframe.addEventListener("load", () => {
+        scheduleNextCycle(CYCLE_DELAY);
+        cancelAdvance();
+        reclaimFocus();
+    });
+    nextIframe.src = playerUrl.href;
+    iframe = nextIframe;
+    Appleiframe.appendChild(iframe);
+    scheduleNextCycle(LOAD_TIMEOUT);
 }
 
 
@@ -20511,9 +20500,11 @@ sortedAppleMusic.forEach(artist => {
 function updateIframeSrc() {
     const artist = sortedAppleMusic[currentArtistIndex];
     const song = artist.songs[currentSongIndex];
-    loadAppleMusic(song.src);
+    // a/s must be set before loadAppleMusic() runs: it reads them
+    // synchronously to build the reload URL.
     a = appleMusic.indexOf(artist);
     s = artist.songs.indexOf(song);
+    loadAppleMusic(song.src);
 }
 
 
@@ -20535,14 +20526,13 @@ function cycleThroughArtists() {
         scheduleNextCycle(CYCLE_DELAY);
         return;
     }
-    // loadAppleMusic() enforces MAX_LOADS itself (it reloads the page once
-    // the cap is hit), so there's nothing more to check here.
     currentSongIndex = (currentSongIndex + 1) % sortedAppleMusic[currentArtistIndex].songs.length;
     if (currentSongIndex === 0) {
         currentArtistIndex = (currentArtistIndex + 1) % sortedAppleMusic.length;
     }
+    // updateIframeSrc() -> loadAppleMusic() reloads the page for this track,
+    // so there's no "still loading" state left here to schedule a fallback for.
     updateIframeSrc();
-    scheduleNextCycle(LOAD_TIMEOUT);
 }
 
 //////////////////////////////////////////////////
@@ -20678,13 +20668,33 @@ window.addEventListener("blur", () => {
 
 // Optional deep link: index.html?iframeSrc=<Apple Music embed URL>
 // Only Apple Music embeds are accepted so the link can't load other pages.
-const linkedSrc = new URLSearchParams(window.location.search).get("iframeSrc");
+// a/s/ai/si/cycle restore the browsing position and whether the startup
+// preview cycle should keep going, since every track switch now arrives
+// here via a full navigation (see loadAppleMusic() above) instead of an
+// in-page iframe swap.
+const bootParams = new URLSearchParams(window.location.search);
+const linkedSrc = bootParams.get("iframeSrc");
 if (linkedSrc && linkedSrc.startsWith("https://embed.music.apple.com/")) {
-    stopAutoCycle();
+    const pa = parseInt(bootParams.get("a"), 10);
+    const ps = parseInt(bootParams.get("s"), 10);
+    const pai = parseInt(bootParams.get("ai"), 10);
+    const psi = parseInt(bootParams.get("si"), 10);
+    if (!Number.isNaN(pa)) a = pa;
+    if (!Number.isNaN(ps)) s = ps;
+    if (!Number.isNaN(pai)) currentArtistIndex = pai;
+    if (!Number.isNaN(psi)) currentSongIndex = psi;
     firstPress = 0;
-    loadAppleMusic(linkedSrc);
+    autoCycling = bootParams.get("cycle") === "1";
+    renderIframe(linkedSrc);
 } else {
-    updateIframeSrc();
+    // Fresh visit, no deep link yet: render the first preview track directly
+    // instead of going through loadAppleMusic(), which would otherwise
+    // immediately reload the page before anything had a chance to show.
+    const artist = sortedAppleMusic[currentArtistIndex];
+    const song = artist.songs[currentSongIndex];
+    a = appleMusic.indexOf(artist);
+    s = artist.songs.indexOf(song);
+    renderIframe(song.src);
 }
 
 
