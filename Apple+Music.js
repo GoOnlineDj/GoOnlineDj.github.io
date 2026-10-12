@@ -20461,24 +20461,31 @@ function sortArtistsByUpcomingBirthday(artists) {
     const today = new Date();
     today.setHours(0, 0, 0, 0); // Set time to the start of the day
 
-    return artists.slice().sort((a, b) => {
-        if (!a.birthday || !a.birthday[0]) return 1;
-        if (!b.birthday || !b.birthday[0]) return -1;
+    // An artist can have several birthdays (e.g. a duo). Each one gets its own
+    // slot at its own upcoming date, so New Boyz (Oct 12 + Oct 13) is listed
+    // on both days, not just by whichever birthday happens to be first.
+    const entries = [];
+    const undated = [];
 
-        const aBirthday = createDateFromBirthday(a.birthday[0]);
-        const bBirthday = createDateFromBirthday(b.birthday[0]);
-
-        if (!aBirthday) return 1;
-        if (!bBirthday) return -1;
-
-        const aNextBirthday = new Date(today.getFullYear(), aBirthday.getMonth(), aBirthday.getDate());
-        const bNextBirthday = new Date(today.getFullYear(), bBirthday.getMonth(), bBirthday.getDate());
-
-        if (aNextBirthday < today) aNextBirthday.setFullYear(today.getFullYear() + 1);
-        if (bNextBirthday < today) bNextBirthday.setFullYear(today.getFullYear() + 1);
-
-        return aNextBirthday - bNextBirthday;
+    artists.forEach((artist, index) => {
+        let added = false;
+        const seen = new Set(); // same date listed twice (e.g. Nina Sky) = one slot
+        (artist.birthday || []).forEach(birthday => {
+            const date = createDateFromBirthday(birthday);
+            if (!date) return;
+            const next = new Date(today.getFullYear(), date.getMonth(), date.getDate());
+            if (next < today) next.setFullYear(today.getFullYear() + 1);
+            if (seen.has(next.getTime())) return;
+            seen.add(next.getTime());
+            entries.push({ artist, next, index });
+            added = true;
+        });
+        if (!added) undated.push(artist);
     });
+
+    entries.sort((a, b) => (a.next - b.next) || (a.index - b.index));
+
+    return entries.map(entry => entry.artist).concat(undated);
 }
 
 const sortedAppleMusic = sortArtistsByUpcomingBirthday(appleMusic);
