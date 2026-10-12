@@ -20266,6 +20266,19 @@ function buildTrackUrl(src) {
 // ?iframeSrc= deep link below. `@view-transition { navigation: auto; }` in
 // Apple+Music.css cross-fades this navigation so it doesn't flash like a
 // hard reload.
+// The cross-document view transition can be aborted (rapid track switches,
+// tab hidden, opt-in missing on the incoming page). That's cosmetic, so swallow
+// the resulting unhandled InvalidStateError rejections.
+for (const evt of ['pageswap', 'pagereveal']) {
+    window.addEventListener(evt, (e) => {
+        const vt = e.viewTransition;
+        if (!vt) return;
+        vt.ready.catch(() => {});
+        vt.finished.catch(() => {});
+        vt.updateCallbackDone.catch(() => {});
+    });
+}
+
 function loadAppleMusic(src) {
     cancelAdvance();
     clearTimeout(autoLoadInterval);
