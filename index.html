@@ -29,6 +29,19 @@
     <!-- SEO:end -->
     <link rel="preconnect" href="https://embed.music.apple.com">
     <link rel="preconnect" href="https://js-cdn.music.apple.com">
+    <script>
+        // Must run before first render: pagereveal/pageswap fire before the
+        // end-of-body Apple+Music.js executes. Aborted view transitions are cosmetic.
+        for (const evt of ['pageswap', 'pagereveal']) {
+            window.addEventListener(evt, (e) => {
+                const vt = e.viewTransition;
+                if (!vt) return;
+                vt.ready.catch(() => {});
+                vt.finished.catch(() => {});
+                vt.updateCallbackDone.catch(() => {});
+            });
+        }
+    </script>
     <link rel="stylesheet" href="./Apple+Music.css">
     <link rel="icon" href="./value/images/GoOnlineDj.png">
     <link rel="stylesheet" href="./responsive.css">
