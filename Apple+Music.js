@@ -20477,7 +20477,7 @@ function sortArtistsByUpcomingBirthday(artists) {
             if (next < today) next.setFullYear(today.getFullYear() + 1);
             if (seen.has(next.getTime())) return;
             seen.add(next.getTime());
-            entries.push({ artist, next, index });
+            entries.push({ artist, next, index, birthday });
             added = true;
         });
         if (!added) undated.push(artist);
@@ -20485,17 +20485,20 @@ function sortArtistsByUpcomingBirthday(artists) {
 
     entries.sort((a, b) => (a.next - b.next) || (a.index - b.index));
 
-    return entries.map(entry => entry.artist).concat(undated);
+    // slotBirthdays[i] is the birthday that put sorted[i] in its slot
+    const sorted = entries.map(entry => entry.artist).concat(undated);
+    const slotBirthdays = entries.map(entry => entry.birthday);
+    return { sorted, slotBirthdays };
 }
 
-const sortedAppleMusic = sortArtistsByUpcomingBirthday(appleMusic);
+const { sorted: sortedAppleMusic, slotBirthdays: sortedBirthdays } = sortArtistsByUpcomingBirthday(appleMusic);
 
-// Log all birthdays, including artists without birthdays
-sortedAppleMusic.forEach(artist => {
-    if (artist.birthday && artist.birthday.length > 0) {
-        artist.birthday.forEach(birthday => {
-            console.log(`Artist: ${artist.artist}, Birthday: ${birthday.month} ${birthday.day}, ${birthday.year}`);
-        });
+// Log each slot with only the birthday that placed it there, so New Boyz
+// shows Oct 12 in its Oct 12 slot and Oct 13 in its Oct 13 slot
+sortedAppleMusic.forEach((artist, i) => {
+    const birthday = sortedBirthdays[i];
+    if (birthday) {
+        console.log(`Artist: ${artist.artist}, Birthday: ${birthday.month} ${birthday.day}, ${birthday.year}`);
     } else {
         console.log(`Artist: ${artist.artist}, Birthday: Not available`);
     }
