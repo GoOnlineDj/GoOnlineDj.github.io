@@ -63,7 +63,7 @@ body {
     background: #111;
     border: 3px solid green;
     border-radius: 0.75rem;
-    outline: none;
+    outline: 3px solid transparent; /* shows in forced-colors mode; the green border is the normal focus cue */
     cursor: text;
     -webkit-appearance: none;
     appearance: none;
@@ -71,7 +71,7 @@ body {
 
 /* Attention flash (red, white, blue) until the user starts typing */
 ._c_search-input._c_search-flash {
-    animation: search-flash-rwb 1.5s steps(1, end) infinite;
+    animation: search-flash-rwb 1.5s steps(1, end) 3; /* stops after 4.5s (WCAG 2.2.2) */
 }
 
 @keyframes search-flash-rwb {
@@ -147,7 +147,8 @@ body {
     border-radius: 0.2rem;
 }
 
-#_id_results h4 {
+#_id_results h2 {
+    font-size: 1.2rem;
     margin: 1rem;
     text-align: center;
     color: #aaa;
@@ -173,11 +174,11 @@ footer {
 } */
 
 ._c_Apple-Music-grid-buttons  ._c_Scroll-Up {
-    animation: flash-blue 1s infinite alternate;
+    animation: flash-blue 1s 5 alternate; /* stops after 5s (WCAG 2.2.2) */
 }
 
 ._c_Apple-Music-grid-buttons ._c_Scroll-Down {
-    animation: flash-red 1s infinite alternate;
+    animation: flash-red 1s 5 alternate; /* stops after 5s (WCAG 2.2.2) */
 }
 
 

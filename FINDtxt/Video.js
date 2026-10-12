@@ -1,11 +1,14 @@
-setInterval(() => {
-    document.getElementById("_id_Good-News").innerHTML = new Date().toLocaleTimeString();
-}, 1000);
+function showClock() {
+    document.getElementById("_id_Good-News").textContent = new Date().toLocaleTimeString();
+}
+showClock(); // show the time right away instead of after the first second
+setInterval(showClock, 1000);
 
 
 window.onload = () => {
     if (window.opener) {
-        window.opener.postMessage({ ready: true }, window.location.origin);
+        // file:// pages report the origin "null", which postMessage rejects as a target
+        window.opener.postMessage({ ready: true }, window.location.origin === 'null' ? '*' : window.location.origin);
     }
 };
 

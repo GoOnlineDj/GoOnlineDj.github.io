@@ -1,6 +1,8 @@
-setInterval(() => {
-    document.getElementById("_id_Good-News").innerHTML = new Date().toLocaleTimeString();
-}, 1000);
+function showClock() {
+    document.getElementById("_id_Good-News").textContent = new Date().toLocaleTimeString();
+}
+showClock(); // show the time right away instead of after the first second
+setInterval(showClock, 1000);
 
 
 const id_frame = document.getElementById("_id_frame");
@@ -7868,7 +7870,7 @@ const id_frame = document.getElementById("_id_frame");
             },
             {
                 title: "Promise",
-                ssrc: "https://embed.music.apple.com/us/music-video/promise/370300717"
+                src: "https://embed.music.apple.com/us/music-video/promise/370300717"
             },
         ]
     },
@@ -17900,7 +17902,7 @@ const id_frame = document.getElementById("_id_frame");
         ]
     },
     {
-        artist: "The-Dream, Fabolous, Juelz Santana, Rick Ross & Ludacris ",
+        artist: "The-Dream, Fabolous, Juelz Santana, Rick Ross & Ludacris",
         birthday: [{ month: "September", day: 20, year: 1977 } , { month: "November", day: 18, year: 1977 }, { month: "February", day: 18, year: 1982 }, { month: "January", day: 28, year: 1976 }, { month: "September", day: 11, year: 1977 }],
         songs: [
             {
@@ -20206,6 +20208,11 @@ attachEventListeners();
 
 
 
+// Keep the list A-Z by artist name: ignores case, accents and punctuation
+// (so "Usher &" and "Usher ," sort together) and reads "$" as "s" (A$AP = ASAP)
+const artistCollator = new Intl.Collator('en', { sensitivity: 'base', ignorePunctuation: true, numeric: true });
+appleMusic.sort((a, b) => artistCollator.compare(a.artist.replace(/\$/g, 's'), b.artist.replace(/\$/g, 's')));
+
 // The search bar lives in #_id_frame; every list is drawn into #_id_results
 const id_results = document.getElementById('_id_results');
 const searchInput = document.getElementById('_id_search-input');
@@ -20218,13 +20225,36 @@ function setSearchCount(text) {
 
 const MAX_SONGS_PER_ARTIST = 5;
 
+// Make a clickable row work from the keyboard too: focusable, announced as a
+// button, and activated by Enter or Space as well as by a click.
+function makeActivatable(el, handler) {
+    el.setAttribute('role', 'button');
+    el.tabIndex = 0;
+    el.addEventListener('click', handler);
+    el.addEventListener('keydown', (event) => {
+        if (event.target !== el) return;
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            handler();
+        }
+    });
+}
+
+// Hidden text read by screen readers after a row's visible text
+function appendScreenReaderText(el, text) {
+    const span = document.createElement('span');
+    span.className = '_c_sr-only';
+    span.textContent = ' ' + text;
+    el.appendChild(span);
+}
+
 // Draw a list of artists. `hits` (optional) maps an artist to its search hit:
 // the [start, end) ranges of its name to highlight and the matching songs,
 // which are listed under the artist.
 function renderArtists(artists, emptyMessage, hits) {
     id_results.textContent = '';
     if (artists.length === 0) {
-        const empty = document.createElement('h4');
+        const empty = document.createElement("h2");
         empty.textContent = emptyMessage || 'not found';
         id_results.appendChild(empty);
         return;
@@ -20234,7 +20264,7 @@ function renderArtists(artists, emptyMessage, hits) {
         const artistElement = document.createElement('p');
         const hit = hits && hits.get(artist);
         appendHighlighted(artistElement, artist.artist, hit && hit.ranges);
-        artistElement.addEventListener('click', () => listArtistSongs(artist.songs));
+        makeActivatable(artistElement, () => listArtistSongs(artist.songs, artist.artist));
         fragment.appendChild(artistElement);
 
         if (hit && hit.songs.length > 0) {
@@ -20243,7 +20273,8 @@ function renderArtists(artists, emptyMessage, hits) {
                 songElement.className = '_c_search-song';
                 songElement.appendChild(document.createTextNode('♪ '));
                 appendHighlighted(songElement, song.title, ranges);
-                songElement.addEventListener('click', () => goToArtistSongPage(song.src));
+                appendScreenReaderText(songElement, 'by ' + artist.artist + ', opens video in a new tab');
+                makeActivatable(songElement, () => goToArtistSongPage(song.src));
                 fragment.appendChild(songElement);
             });
             const extra = hit.songs.length - MAX_SONGS_PER_ARTIST;
@@ -20251,7 +20282,7 @@ function renderArtists(artists, emptyMessage, hits) {
                 const more = document.createElement('p');
                 more.className = '_c_search-song _c_search-more';
                 more.textContent = `+ ${extra} more by ${artist.artist}`;
-                more.addEventListener('click', () => listArtistSongs(artist.songs));
+                makeActivatable(more, () => listArtistSongs(artist.songs, artist.artist));
                 fragment.appendChild(more);
             }
         }
@@ -20283,31 +20314,40 @@ function logArtistNames(appleMusic) {
 
 // Function to list all songs of an artist
 ///add event listener to each song element
-function listArtistSongs(songs) {
+function listArtistSongs(songs, artistName) {
     const id_frame = id_results;
     id_frame.innerHTML = ''; // Clear previous content
     document.getElementById('_id_frame').scrollTop = 0;
     songs.forEach(song => { // List all songs
         const songElement = document.createElement('p');
         songElement.textContent = song.title;
-        songElement.addEventListener('click', () => {
-            // Code to handle song click event
-            // Call goToArtistSongPage when song is clicked
-            goToArtistSongPage(song.src);
-        });
+        appendScreenReaderText(songElement, 'opens video in a new tab');
+        // Call goToArtistSongPage when song is clicked
+        makeActivatable(songElement, () => goToArtistSongPage(song.src));
         id_frame.appendChild(songElement);
     });
+    // The clicked artist row was just replaced: announce the new list and move
+    // keyboard focus to it so screen reader and keyboard users are not lost
+    setSearchCount(artistName ? `${songs.length} ${songs.length === 1 ? 'song' : 'songs'} by ${artistName}` : '');
+    id_frame.focus({ preventScroll: true });
 }
 
 
 // Function to take user to an artist on the index.html page to a specific artist and a specific song when song is clicked on 
+// A page opened from a file (file://) reports its origin as the string "null",
+// which postMessage rejects as a target, so fall back to "*" there. The message
+// holds only an Apple Music link, and Video.js checks the sender and the link.
+function messageTargetOrigin() {
+    return window.location.origin === 'null' ? '*' : window.location.origin;
+}
+
 function goToArtistSongPage(src) {
     const newWindow = window.open("Video.html", "_blank");
     if (!newWindow) return; // popup blocked
 
     function handleReady(event) {
         if (event.source === newWindow && event.data && event.data.ready) {
-            newWindow.postMessage({ src }, window.location.origin);
+            newWindow.postMessage({ src }, messageTargetOrigin());
             window.removeEventListener("message", handleReady);
         }
     }
@@ -20333,21 +20373,32 @@ if (!id_frame) {
 }
 
 let scrollInterval;
-let isHolding = false;
+let holdScrolled = false;   // the current press has already scrolled the list
+let holdEndedAt = -Infinity; // when the last scrolling hold ended (ms)
+const HOLD_CLICK_WINDOW = 400; // a click this soon after a hold is the hold's own release
+
+// True when this click is just the release of a hold that already scrolled
+function isReleaseOfHold() {
+    return performance.now() - holdEndedAt < HOLD_CLICK_WINDOW;
+}
 
 function startScrolling(direction) {
     if (id_frame) {
         clearInterval(scrollInterval);
-        isHolding = true;
+        holdScrolled = false;
         scrollInterval = setInterval(() => {
+            holdScrolled = true;
             id_frame.scrollBy({ top: direction === 'up' ? -500 : 500, behavior: 'smooth' }); // Faster scrolling for holding
         }, 500); // Faster interval for holding
     }
 }
 
 function stopScrolling() {
-    isHolding = false;
     clearInterval(scrollInterval);
+    if (holdScrolled) {
+        holdScrolled = false;
+        holdEndedAt = performance.now();
+    }
 }
 
 scrollUpButtons.forEach(button => {
@@ -20356,7 +20407,7 @@ scrollUpButtons.forEach(button => {
     button.addEventListener('pointercancel', stopScrolling);
     button.addEventListener('pointerleave', stopScrolling); // Stop scrolling if the mouse leaves the button
     button.addEventListener('click', () => {
-        if (!isHolding) id_frame.scrollBy({ top: -300, behavior: 'smooth' }); // Slower scroll for clicking
+        if (!isReleaseOfHold()) id_frame.scrollBy({ top: -300, behavior: 'smooth' }); // Slower scroll for clicking
     });
 });
 
@@ -20366,7 +20417,7 @@ scrollDownButtons.forEach(button => {
     button.addEventListener('pointercancel', stopScrolling);
     button.addEventListener('pointerleave', stopScrolling); // Stop scrolling if the mouse leaves the button
     button.addEventListener('click', () => {
-        if (!isHolding) id_frame.scrollBy({ top: 300, behavior: 'smooth' }); // Slower scroll for clicking
+        if (!isReleaseOfHold()) id_frame.scrollBy({ top: 300, behavior: 'smooth' }); // Slower scroll for clicking
     });
 });
 
@@ -20403,7 +20454,7 @@ function buttonClick(value) {
 function showStartingWith(value) {
     searchInput.value = '';
     searchClear.hidden = true;
-    const artists = appleMusic.filter((item) => item.artist.startsWith(value));
+    const artists = appleMusic.filter((item) => item.artist.toUpperCase().startsWith(value));
     setSearchCount(artists.length ? `${artists.length} starting with “${value}”` : '');
     renderArtists(artists);
     document.getElementById('_id_frame').scrollTop = 0;
