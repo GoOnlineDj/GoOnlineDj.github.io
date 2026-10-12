@@ -19,6 +19,140 @@ body {
     align-content: khtml-center;       
 }
 
+/* Search bar: pinned above the first artist while the list scrolls */
+/* The site's base CSS makes plain divs inline; these need real boxes */
+._c_search,
+._c_search-count,
+#_id_results {
+    display: block;
+}
+
+._c_search {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5rem;
+    background: #000;
+    border-bottom: 3px solid green;
+}
+
+._c_search-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+._c_search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+._c_search-input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.6rem 3rem; /* equal sides so the text stays centered beside the ✕ */
+    text-align: center;
+    font: inherit;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #111;
+    border: 3px solid green;
+    border-radius: 0.75rem;
+    outline: none;
+    cursor: text;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Attention flash (red, white, blue) until the user starts typing */
+._c_search-input._c_search-flash {
+    animation: search-flash-rwb 1.5s steps(1, end) infinite;
+}
+
+@keyframes search-flash-rwb {
+    0%   { border-color: red;   box-shadow: 0 0 10px 2px red; }
+    33%  { border-color: white; box-shadow: 0 0 10px 2px white; }
+    66%  { border-color: blue;  box-shadow: 0 0 10px 2px blue; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    ._c_search-input._c_search-flash {
+        animation: none;
+        border-color: white;
+    }
+}
+
+._c_search-input::placeholder {
+    color: #888;
+}
+
+._c_search-input:focus {
+    border-color: #4dff4d;
+    box-shadow: 0 0 0 3px rgba(77, 255, 77, 0.3);
+}
+
+._c_search-input::-webkit-search-cancel-button {
+    display: none;
+}
+
+._c_search-clear {
+    position: absolute;
+    right: 0.6rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1;
+    color: #fff;
+    background: #333;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+._c_search-clear:hover {
+    background: green;
+}
+
+._c_search-count {
+    min-height: 1.2rem;
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #aaa;
+}
+
+/* Songs found by the search, shown under their artist */
+._c_search-song {
+    font-size: 1.4rem;
+    color: #cfcfcf;
+    background: #0b1a0b;
+    border-top: 0;
+    cursor: pointer;
+}
+
+._c_search-more {
+    font-size: 1.1rem;
+    color: #8fd18f;
+}
+
+#_id_results mark {
+    color: #000;
+    background: #ffe600;
+    border-radius: 0.2rem;
+}
+
+#_id_results h4 {
+    margin: 1rem;
+    text-align: center;
+    color: #aaa;
+}
+
 p {
     text-align: center;
     border: 3px solid green;

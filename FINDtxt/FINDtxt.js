@@ -20206,28 +20206,90 @@ attachEventListeners();
 
 
 
+// The search bar lives in #_id_frame; every list is drawn into #_id_results
+const id_results = document.getElementById('_id_results');
+const searchInput = document.getElementById('_id_search-input');
+const searchClear = document.getElementById('_id_search-clear');
+const searchCount = document.getElementById('_id_search-count');
+
+function setSearchCount(text) {
+    searchCount.textContent = text;
+}
+
+const MAX_SONGS_PER_ARTIST = 5;
+
+// Draw a list of artists. `hits` (optional) maps an artist to its search hit:
+// the [start, end) ranges of its name to highlight and the matching songs,
+// which are listed under the artist.
+function renderArtists(artists, emptyMessage, hits) {
+    id_results.textContent = '';
+    if (artists.length === 0) {
+        const empty = document.createElement('h4');
+        empty.textContent = emptyMessage || 'not found';
+        id_results.appendChild(empty);
+        return;
+    }
+    const fragment = document.createDocumentFragment();
+    artists.forEach(artist => {
+        const artistElement = document.createElement('p');
+        const hit = hits && hits.get(artist);
+        appendHighlighted(artistElement, artist.artist, hit && hit.ranges);
+        artistElement.addEventListener('click', () => listArtistSongs(artist.songs));
+        fragment.appendChild(artistElement);
+
+        if (hit && hit.songs.length > 0) {
+            hit.songs.slice(0, MAX_SONGS_PER_ARTIST).forEach(({ song, ranges }) => {
+                const songElement = document.createElement('p');
+                songElement.className = '_c_search-song';
+                songElement.appendChild(document.createTextNode('♪ '));
+                appendHighlighted(songElement, song.title, ranges);
+                songElement.addEventListener('click', () => goToArtistSongPage(song.src));
+                fragment.appendChild(songElement);
+            });
+            const extra = hit.songs.length - MAX_SONGS_PER_ARTIST;
+            if (extra > 0) {
+                const more = document.createElement('p');
+                more.className = '_c_search-song _c_search-more';
+                more.textContent = `+ ${extra} more by ${artist.artist}`;
+                more.addEventListener('click', () => listArtistSongs(artist.songs));
+                fragment.appendChild(more);
+            }
+        }
+    });
+    id_results.appendChild(fragment);
+}
+
+function appendHighlighted(el, text, ranges) {
+    if (!ranges || ranges.length === 0) {
+        el.textContent = text;
+        return;
+    }
+    let pos = 0;
+    ranges.forEach(([start, end]) => {
+        if (start > pos) el.appendChild(document.createTextNode(text.slice(pos, start)));
+        const mark = document.createElement('mark');
+        mark.textContent = text.slice(start, end);
+        el.appendChild(mark);
+        pos = end;
+    });
+    if (pos < text.length) el.appendChild(document.createTextNode(text.slice(pos)));
+}
+
 //Function to log all artist names from appleMusic array
 function logArtistNames(appleMusic) {
-    const id_frame = document.getElementById('_id_frame');
-    id_frame.innerHTML = ''; // Clears previous content
-    appleMusic.forEach(artist => {
-        const artistElement = document.createElement('p');
-        artistElement.innerHTML = artist.artist;
-        artistElement.addEventListener('click', () => {
-            listArtistSongs(artist.songs);
-        });
-        id_frame.appendChild(artistElement);
-    });
+    setSearchCount('');
+    renderArtists(appleMusic);
 }
 
 // Function to list all songs of an artist
 ///add event listener to each song element
 function listArtistSongs(songs) {
-    const id_frame = document.getElementById('_id_frame');
+    const id_frame = id_results;
     id_frame.innerHTML = ''; // Clear previous content
+    document.getElementById('_id_frame').scrollTop = 0;
     songs.forEach(song => { // List all songs
         const songElement = document.createElement('p');
-        songElement.innerHTML = song.title;
+        songElement.textContent = song.title;
         songElement.addEventListener('click', () => {
             // Code to handle song click event
             // Call goToArtistSongPage when song is clicked
@@ -20337,37 +20399,182 @@ function buttonClick(value) {
     }
 }
 
-function handleLetter(value) {
+// A letter/number button replaces whatever is typed in the search bar
+function showStartingWith(value) {
+    searchInput.value = '';
+    searchClear.hidden = true;
     const artists = appleMusic.filter((item) => item.artist.startsWith(value));
-    const frame = document.getElementById("_id_frame");
-    frame.innerHTML = ''; // Clear previous content
-    if (artists.length > 0) {
-        artists.forEach(artist => {
-            const artistElement = document.createElement('p');
-            artistElement.innerHTML = artist.artist;
-            artistElement.addEventListener('click', () => listArtistSongs(artist.songs));
-            frame.appendChild(artistElement);
-        });
-    } else {
-        frame.innerHTML = ` <h4> not found <h4>`;
-    }
+    setSearchCount(artists.length ? `${artists.length} starting with “${value}”` : '');
+    renderArtists(artists);
+    document.getElementById('_id_frame').scrollTop = 0;
+}
+
+function handleLetter(value) {
+    showStartingWith(value);
 }
 
 function handleNumber(value) {
-    const artists = appleMusic.filter((item) => item.artist.startsWith(Number(value)));
-    const frame = document.getElementById("_id_frame");
-    frame.innerHTML = ''; // Clear previous content
-    if (artists.length > 0) {
-        artists.forEach(artist => {
-            const artistElement = document.createElement('p');
-            artistElement.innerHTML = artist.artist;
-            artistElement.addEventListener('click', () => listArtistSongs(artist.songs));
-            frame.appendChild(artistElement);
-        });
-    } else {
-        frame.innerHTML = ` <h4> not found <h4> `;
-    }
+    showStartingWith(String(Number(value)));
 }
+
+///////////////////////////////////////////////////////////////////
+// Live artist search
+
+// Lowercase, drop accents (Sisqó = sisqo), read "$" as "s" (A$AP = asap) and
+// drop other punctuation (T-Pain = tpain). `map[i]` is the index in the
+// original text of normalized character i, so matches can be highlighted.
+function normalizeWithMap(text) {
+    let norm = '';
+    const map = [];
+    for (let i = 0; i < text.length; i++) {
+        let ch = text[i].normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+        if (ch === '$') ch = 's';
+        if (/\s|&|,/.test(ch)) ch = ' ';
+        ch = ch.replace(/[^a-z0-9 ]/g, '');
+        if (!ch) continue;
+        if (ch === ' ' && (norm === '' || norm.endsWith(' '))) continue;
+        norm += ch;
+        map.push(i);
+    }
+    return { norm: norm.trimEnd(), map };
+}
+
+const searchIndex = appleMusic.map((artist, order) => ({
+    artist,
+    order,
+    ...normalizeWithMap(artist.artist),
+    songs: (artist.songs || []).map(song => ({ song, ...normalizeWithMap(song.title) }))
+}));
+
+// Find `token` in `norm`, preferring the start of a word. Returns the start
+// index, or -1.
+function findToken(norm, token) {
+    if (norm.startsWith(token)) return 0;
+    const wordStart = norm.indexOf(' ' + token);
+    if (wordStart !== -1) return wordStart + 1;
+    return norm.indexOf(token);
+}
+
+function isWordStart(norm, index) {
+    return index === 0 || norm[index - 1] === ' ';
+}
+
+// Ranges (in the original text) covered by the matched tokens
+function toRanges(spans, map) {
+    spans.sort((a, b) => a[0] - b[0]);
+    const merged = [];
+    spans.forEach(([s, e]) => {
+        const last = merged[merged.length - 1];
+        if (last && s <= last[1]) last[1] = Math.max(last[1], e);
+        else merged.push([s, e]);
+    });
+    return merged.map(([s, e]) => [map[s], map[e - 1] + 1]);
+}
+
+// Match every typed word against one text. Returns { spans, loose } or null
+// when any word is missing. `loose` counts words found mid-word.
+function matchTokens(norm, tokens) {
+    const spans = [];
+    let loose = 0;
+    for (const token of tokens) {
+        const at = findToken(norm, token);
+        if (at === -1) return null;
+        spans.push([at, at + token.length]);
+        if (!isWordStart(norm, at)) loose++;
+    }
+    return { spans, loose };
+}
+
+// Search by artist, by song, or both ("ashanti baby"). Every typed word must
+// be found: in the artist name, or in ONE song title (words may be split
+// between the two). Artist-name matches rank first (exact, then starts-with,
+// then word-start, then mid-word), then artists found through a song title.
+// Ties keep the list order.
+function searchArtists(query) {
+    const { norm: q } = normalizeWithMap(query);
+    if (!q) return null;
+    const tokens = q.split(' ');
+    const results = [];
+
+    searchIndex.forEach(entry => {
+        const { norm, map, artist, order } = entry;
+        const byArtist = matchTokens(norm, tokens);
+
+        // Words the artist name does not contain must all be in one title
+        const inArtist = tokens.filter(token => findToken(norm, token) !== -1);
+        const rest = tokens.filter(token => findToken(norm, token) === -1);
+        const songs = [];
+        if (!byArtist) {
+            entry.songs.forEach(item => {
+                const m = matchTokens(item.norm, rest);
+                if (m) songs.push({ song: item.song, ranges: toRanges(m.spans, item.map), loose: m.loose });
+            });
+        }
+
+        if (!byArtist && songs.length === 0) return;
+
+        let score;
+        if (byArtist) {
+            if (norm === q) score = 0;
+            else if (norm.startsWith(q)) score = 1;
+            else if (norm.includes(' ' + q)) score = 2;
+            else score = 3 + byArtist.loose;
+        } else {
+            score = 10 + Math.min(...songs.map(s => s.loose));
+        }
+
+        // Highlight the words found in the artist name
+        const artistSpans = (byArtist ? tokens : inArtist).map(token => {
+            const at = findToken(norm, token);
+            return [at, at + token.length];
+        });
+
+        results.push({
+            artist,
+            order,
+            score,
+            ranges: toRanges(artistSpans, map),
+            songs: songs.sort((a, b) => a.loose - b.loose) // artist-only hits list no songs
+        });
+    });
+
+    results.sort((a, b) => (a.score - b.score) || (a.order - b.order));
+    return results;
+}
+
+searchInput.classList.add('_c_search-flash'); // starts empty, so starts flashing
+
+function runSearch() {
+    const query = searchInput.value;
+    searchClear.hidden = query === '';
+    // Flash the border whenever the box is empty (page load, ✕, backspace, Esc)
+    searchInput.classList.toggle('_c_search-flash', query === '');
+    const results = searchArtists(query);
+
+    if (results === null) { // empty box: back to the full list
+        logArtistNames(appleMusic);
+        return;
+    }
+
+    const hits = new Map(results.map(r => [r.artist, r]));
+    const count = results.length;
+    setSearchCount(count === 1 ? '1 artist found' : `${count} artists found`);
+    renderArtists(results.map(r => r.artist), `No artists or songs match “${query.trim()}”`, hits);
+    document.getElementById('_id_frame').scrollTop = 0;
+}
+
+searchInput.addEventListener('input', runSearch);
+searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && searchInput.value) {
+        searchInput.value = '';
+        runSearch();
+    }
+});
+searchClear.addEventListener('click', () => {
+    searchInput.value = '';
+    runSearch();
+    searchInput.focus();
+});
 
 function valueInit() {
     document.querySelector("._c_Apple-Music-grid").addEventListener("click", function (event) {
