@@ -20232,6 +20232,11 @@ try {
         searchInput.focus();
     }
 } catch (e) {}
+// Fallback for when the Apple page can't share sessionStorage with this page
+if (location.hash === '#search') {
+    searchInput.focus();
+    history.replaceState(null, '', location.pathname + location.search);
+}
 const searchClear = document.getElementById('_id_search-clear');
 const searchCount = document.getElementById('_id_search-count');
 
