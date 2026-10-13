@@ -20364,8 +20364,7 @@ musicRefresh.forEach(x => x.addEventListener("click", () => {
 const FINDtxt = document.querySelectorAll("._c_FINDtxt");
 FINDtxt.forEach(x => x.addEventListener("click", () => {
     stopAutoCycle();
-    try { sessionStorage.setItem('_focusSearch', '1'); } catch (e) {}
-    window.location.href = "https://goonlinedj.github.io/FINDtxt/FINDtxt.html#search";
+    window.location.href = "https://goonlinedj.github.io/FINDtxt/FINDtxt.html";
 }));
 
 const musicBack = document.querySelectorAll("._c_Apple-Music-back");

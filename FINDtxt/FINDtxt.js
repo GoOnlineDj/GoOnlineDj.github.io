@@ -20226,17 +20226,6 @@ appleMusic.sort((a, b) =>
 // The search bar lives in #_id_frame; every list is drawn into #_id_results
 const id_results = document.getElementById('_id_results');
 const searchInput = document.getElementById('_id_search-input');
-try {
-    if (sessionStorage.getItem('_focusSearch')) {
-        sessionStorage.removeItem('_focusSearch');
-        searchInput.focus();
-    }
-} catch (e) {}
-// Fallback for when the Apple page can't share sessionStorage with this page
-if (location.hash === '#search') {
-    searchInput.focus();
-    history.replaceState(null, '', location.pathname + location.search);
-}
 const searchClear = document.getElementById('_id_search-clear');
 const searchCount = document.getElementById('_id_search-count');
 
