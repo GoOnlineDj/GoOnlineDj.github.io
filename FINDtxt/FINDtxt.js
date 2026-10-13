@@ -20194,6 +20194,8 @@ const id_frame = document.getElementById("_id_frame");
 function attachEventListeners() {
     const FINDtxt = document.querySelectorAll("._c_Apple-Music-Video-refresh");
     FINDtxt.forEach(x => x.addEventListener("click", () => {
+        // Reload to reset the list, then focus the search bar once the page is back
+        try { sessionStorage.setItem('_focusSearch', '1'); } catch (e) {}
         location.reload();
     }));
 }
@@ -20224,6 +20226,12 @@ appleMusic.sort((a, b) =>
 // The search bar lives in #_id_frame; every list is drawn into #_id_results
 const id_results = document.getElementById('_id_results');
 const searchInput = document.getElementById('_id_search-input');
+try {
+    if (sessionStorage.getItem('_focusSearch')) {
+        sessionStorage.removeItem('_focusSearch');
+        searchInput.focus();
+    }
+} catch (e) {}
 const searchClear = document.getElementById('_id_search-clear');
 const searchCount = document.getElementById('_id_search-count');
 
