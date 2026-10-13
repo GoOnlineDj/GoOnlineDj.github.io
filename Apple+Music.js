@@ -20701,6 +20701,11 @@ if (linkedSrc && linkedSrc.startsWith("https://embed.music.apple.com/")) {
     firstPress = 0;
     autoCycling = bootParams.get("cycle") === "1";
     renderIframe(linkedSrc);
+    // The state is loaded; show the clean address instead of the long one.
+    // (Track switches still build their own full URL in buildTrackUrl().)
+    try {
+        history.replaceState(null, "", window.location.pathname + window.location.hash);
+    } catch (e) { /* address bar just keeps the long URL */ }
 } else {
     // Fresh visit, no deep link yet: render the first preview track directly
     // instead of going through loadAppleMusic(), which would otherwise

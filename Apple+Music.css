@@ -1,12 +1,11 @@
 @import url(./valueINITbase.css);
 
-/* Every track switch now reloads the page (see Apple+Music.js) to reliably
-   clear the browser's video decoder pool between embeds. Opting in to
-   cross-document view transitions (Chrome/Edge 126+) makes that reload
-   cross-fade instead of flashing like a hard page reload; unsupported
-   browsers just get a normal reload. */
+/* Every track switch reloads the page (see Apple+Music.js) to reliably clear
+   the browser's video decoder pool between embeds. The cross-fade between
+   pages is turned off on purpose so the new video comes in hard. To bring the
+   fade back, change this to `navigation: auto`. */
 @view-transition {
-    navigation: auto;
+    navigation: none;
 }
 
 #_id_iframe {
