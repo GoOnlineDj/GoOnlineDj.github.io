@@ -20627,8 +20627,17 @@ searchClear.addEventListener('click', () => {
     searchInput.focus();
 });
 
+// Arriving from the 🏦 button on the Apple page, a slow phone can deliver a
+// second tap to this page's buttons (wherever the layout puts, say, K). Ignore
+// taps in the first moment after the page loads.
+const pageOpenedAt = performance.now();
+const IGNORE_TAPS_MS = 700;
+
 function valueInit() {
     document.querySelector("._c_Apple-Music-grid").addEventListener("click", function (event) {
+        // event.timeStamp is on the same clock as performance.now(): a click
+        // made before this script finished loading is a leftover tap, not a choice
+        if (event.timeStamp < pageOpenedAt + IGNORE_TAPS_MS) return;
         let value = event.target.innerText;
         buttonClick(value);
     });
