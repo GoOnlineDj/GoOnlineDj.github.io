@@ -20214,11 +20214,13 @@
 
 
 
-setInterval(() => {
-
-    document.getElementById("_id_Good-News").innerHTML = `${new Date().toLocaleTimeString()}`;
-    //   appleMusic[Math.floor(Math.random() * appleMusic.length)].artist;
-}, 1000);
+// Every track switch reloads the page, so the clock must paint immediately
+// on load (not after the first 1s tick) or it vanishes for a second.
+function updateClock() {
+    document.getElementById("_id_Good-News").textContent = new Date().toLocaleTimeString();
+}
+updateClock();
+setInterval(updateClock, 1000);
 
 
 

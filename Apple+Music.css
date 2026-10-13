@@ -56,6 +56,22 @@
 
 #_id_Good-News {
     grid-area: GoodNews;
+    /* Own view-transition group so the clock stays put instead of
+       cross-fading out/in when the page reloads on a track change. */
+    view-transition-name: clock;
+}
+
+::view-transition-group(clock) {
+    animation-duration: 0s;
+}
+
+::view-transition-old(clock) {
+    display: none;
+}
+
+::view-transition-new(clock) {
+    animation: none;
+    opacity: 1;
 }
 
 ._c_Apple-Music-grid-buttons {
