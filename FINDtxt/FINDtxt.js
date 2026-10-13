@@ -20208,10 +20208,18 @@ attachEventListeners();
 
 
 
-// Keep the list A-Z by artist name: ignores case, accents and punctuation
-// (so "Usher &" and "Usher ," sort together) and reads "$" as "s" (A$AP = ASAP)
+// Keep the list ordered by artist name: names starting with "$" come first,
+// then names starting with any other special character, then A-Z / 0-9
+// (ignores case and accents; "Usher &" and "Usher ," sort together)
 const artistCollator = new Intl.Collator('en', { sensitivity: 'base', ignorePunctuation: true, numeric: true });
-appleMusic.sort((a, b) => artistCollator.compare(a.artist.replace(/\$/g, 's'), b.artist.replace(/\$/g, 's')));
+const artistRank = (name) => {
+    const first = name.trimStart().charAt(0);
+    if (first === '$') return 0;
+    return /[\p{L}\p{N}]/u.test(first) ? 2 : 1;
+};
+appleMusic.sort((a, b) =>
+    artistRank(a.artist) - artistRank(b.artist) ||
+    artistCollator.compare(a.artist, b.artist));
 
 // The search bar lives in #_id_frame; every list is drawn into #_id_results
 const id_results = document.getElementById('_id_results');
@@ -20471,23 +20479,63 @@ function handleNumber(value) {
 ///////////////////////////////////////////////////////////////////
 // Live artist search
 
-// Lowercase, drop accents (Sisqó = sisqo), read "$" as "s" (A$AP = asap) and
-// drop other punctuation (T-Pain = tpain). `map[i]` is the index in the
-// original text of normalized character i, so matches can be highlighted.
-function normalizeWithMap(text) {
+// Make text comparable so creative artist names are still found:
+//  - lowercase, drop accents (Sisqó = sisqo), unfold stylized letters
+//    (𝓐𝓢𝓐𝓟, ＡＢＣ, ™) and fold special letters (MØ = mo, Æ = ae, ß = ss)
+//  - read look-alike symbols as letters ($ = s, ¢ = c, £ = l, ¥ = y, € = e,
+//    @ = a, and ! = i between letters: A$AP = asap, P!nk = pink)
+//  - treat spaces, & + × , as word breaks and drop plain punctuation (T-Pain = tpain)
+//  - keep letters and numbers of any alphabet (Japanese, Korean, Cyrillic...)
+//  - keep every other symbol as itself, so †, ♥, ★, ∆, #, %, emoji can be typed
+// "Raw" mode (used only when a search is nothing but punctuation, like "." or
+// "!!!") keeps every character except spaces, so any symbol can be searched.
+// map[i] / ends[i] are the start / end index in the original text of
+// normalized character i, so matches can be highlighted.
+const LETTER_FOLDS = { 'ø': 'o', 'æ': 'ae', 'œ': 'oe', 'ß': 'ss', 'đ': 'd', 'ð': 'd', 'þ': 'th', 'ł': 'l', 'ı': 'i', 'ħ': 'h' };
+const SYMBOL_LETTERS = { '$': 's', '¢': 'c', '£': 'l', '¥': 'y', '€': 'e', '@': 'a' };
+const WORD_BREAKS = /[\s&+×,]/u;
+const DROPPED_PUNCTUATION = /[\p{Pd}\p{Pi}\p{Pf}\p{Ps}\p{Pe}'"`.\-_\/\\:;?*·•​-‏﻿]/u;
+const IS_ALNUM = /[\p{L}\p{N}]/u;
+const IS_LETTER = /\p{L}/u;
+
+function normalizeWithMap(text, raw = false) {
     let norm = '';
     const map = [];
-    for (let i = 0; i < text.length; i++) {
-        let ch = text[i].normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-        if (ch === '$') ch = 's';
-        if (/\s|&|,/.test(ch)) ch = ' ';
-        ch = ch.replace(/[^a-z0-9 ]/g, '');
-        if (!ch) continue;
-        if (ch === ' ' && (norm === '' || norm.endsWith(' '))) continue;
-        norm += ch;
-        map.push(i);
+    const ends = [];
+    const chars = [];
+    let at = 0;
+    for (const original of text) {
+        chars.push({
+            start: at,
+            end: at + original.length,
+            folded: original.normalize(raw ? 'NFC' : 'NFKD').replace(raw ? /$^/u : /\p{M}/gu, '').toLowerCase()
+        });
+        at += original.length;
     }
-    return { norm: norm.trimEnd(), map };
+    const isLetterAt = (i) => i >= 0 && i < chars.length && IS_LETTER.test(chars[i].folded);
+
+    chars.forEach(({ start, end, folded }, i) => {
+        // NFKD can turn one character into several (ﬁ = fi, ™ = tm)
+        for (let ch of folded) {
+            if (raw) {
+                if (/\s/u.test(ch)) continue;
+            } else {
+                if (LETTER_FOLDS[ch]) ch = LETTER_FOLDS[ch];
+                else if (SYMBOL_LETTERS[ch]) ch = SYMBOL_LETTERS[ch];
+                else if (ch === '!' && isLetterAt(i - 1) && isLetterAt(i + 1)) ch = 'i';
+                else if (WORD_BREAKS.test(ch)) ch = ' ';
+                else if (DROPPED_PUNCTUATION.test(ch)) continue;
+                else if (!IS_ALNUM.test(ch) && ch.trim() === '') continue;
+                if (ch === ' ' && (norm === '' || norm.endsWith(' '))) continue;
+            }
+            for (let k = 0; k < ch.length; k++) {
+                norm += ch[k];
+                map.push(start);
+                ends.push(end);
+            }
+        }
+    });
+    return { norm: norm.trimEnd(), map, ends };
 }
 
 const searchIndex = appleMusic.map((artist, order) => ({
@@ -20511,7 +20559,7 @@ function isWordStart(norm, index) {
 }
 
 // Ranges (in the original text) covered by the matched tokens
-function toRanges(spans, map) {
+function toRanges(spans, map, ends) {
     spans.sort((a, b) => a[0] - b[0]);
     const merged = [];
     spans.forEach(([s, e]) => {
@@ -20519,7 +20567,7 @@ function toRanges(spans, map) {
         if (last && s <= last[1]) last[1] = Math.max(last[1], e);
         else merged.push([s, e]);
     });
-    return merged.map(([s, e]) => [map[s], map[e - 1] + 1]);
+    return merged.map(([s, e]) => [map[s], ends[e - 1]]);
 }
 
 // Match every typed word against one text. Returns { spans, loose } or null
@@ -20541,14 +20589,32 @@ function matchTokens(norm, tokens) {
 // between the two). Artist-name matches rank first (exact, then starts-with,
 // then word-start, then mid-word), then artists found through a song title.
 // Ties keep the list order.
+let rawIndex = null; // built the first time a punctuation-only search is made
+function buildIndex(raw) {
+    return appleMusic.map((artist, order) => ({
+        artist,
+        order,
+        ...normalizeWithMap(artist.artist, raw),
+        songs: (artist.songs || []).map(song => ({ song, ...normalizeWithMap(song.title, raw) }))
+    }));
+}
+
 function searchArtists(query) {
-    const { norm: q } = normalizeWithMap(query);
-    if (!q) return null;
+    let { norm: q } = normalizeWithMap(query);
+    let index = searchIndex;
+    if (!q) {
+        // Nothing but punctuation/symbols typed: match those characters literally
+        if (!query.trim()) return null;
+        q = normalizeWithMap(query, true).norm;
+        if (!q) return null;
+        rawIndex = rawIndex || buildIndex(true);
+        index = rawIndex;
+    }
     const tokens = q.split(' ');
     const results = [];
 
-    searchIndex.forEach(entry => {
-        const { norm, map, artist, order } = entry;
+    index.forEach(entry => {
+        const { norm, map, ends, artist, order } = entry;
         const byArtist = matchTokens(norm, tokens);
 
         // Words the artist name does not contain must all be in one title
@@ -20558,7 +20624,7 @@ function searchArtists(query) {
         if (!byArtist) {
             entry.songs.forEach(item => {
                 const m = matchTokens(item.norm, rest);
-                if (m) songs.push({ song: item.song, ranges: toRanges(m.spans, item.map), loose: m.loose });
+                if (m) songs.push({ song: item.song, ranges: toRanges(m.spans, item.map, item.ends), loose: m.loose });
             });
         }
 
@@ -20584,7 +20650,7 @@ function searchArtists(query) {
             artist,
             order,
             score,
-            ranges: toRanges(artistSpans, map),
+            ranges: toRanges(artistSpans, map, ends),
             songs: songs.sort((a, b) => a.loose - b.loose) // artist-only hits list no songs
         });
     });
