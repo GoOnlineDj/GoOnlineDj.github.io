@@ -20711,6 +20711,16 @@ function valueInit() {
 
 valueInit();
 
+// Always start at the top of the list, including when Safari restores the page
+// (back button, reopened tab) at an old scroll position
+function scrollListToTop() {
+    document.getElementById('_id_frame').scrollTop = 0;
+}
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+scrollListToTop();
+window.addEventListener('load', scrollListToTop);
+window.addEventListener('pageshow', scrollListToTop);
+
 
 
 //SPECIAL THANKS TO MICROSOFT COPILOT FOR HELPING ME WITH THIS CODE

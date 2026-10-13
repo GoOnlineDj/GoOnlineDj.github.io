@@ -28,9 +28,14 @@ body {
 }
 
 ._c_search {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 2;
+    /* iPhone Safari doesn't paint a sticky bar inside a scrolling box until
+       something repaints it (a tap); its own compositing layer fixes that */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     box-sizing: border-box;
     width: 100%;
     padding: 0.5rem;
