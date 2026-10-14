@@ -54,7 +54,7 @@ async function valueINIT() {
 
   function isCorrect() {
     if (guess === answer) {
-      window.location.href = "./+M-J-W+.html#word-game";
+      window.location.href = "../+M-J-W+/+M-J-W+.html#word-game";
       alert(`WOW YOU WON THE GAME + THE WINNING "WORD" IS = ${answer} + Thanks For Playing`);
       for (i = 0; i < 30; i++) {
         if (Math.floor(i / MAX_LETTERS) !== currentRow) {
@@ -210,7 +210,7 @@ if (wordStatus === false) {
       if (done) {
         return;
       }
-      window.location.href = "./+M-J-W+.html#word-game";
+      window.location.href = "../+M-J-W+/+M-J-W+.html#word-game";
       alert(`THANKS FOR PLAYING THE GAME + the word was = ${answer}`);
       done = true;
 
@@ -229,7 +229,7 @@ else return;
   const submitWord = document.querySelectorAll("._c_Apple-Music-Video-submit");
   submitWord.forEach(button => {
     button.addEventListener("click", () => {
-      window.location.href = "./+M-J-W+.html#word-game";
+      window.location.href = "../+M-J-W+/+M-J-W+.html#word-game";
       if (done) {
         return;
       }
@@ -247,7 +247,7 @@ else return;
   const deleteWord = document.querySelectorAll("._c_Apple-Music-Video-delete");
   deleteWord.forEach(button => {
     button.addEventListener("click", () => {
-      window.location.href = "./+M-J-W+.html#word-game";
+      window.location.href = "../+M-J-W+/+M-J-W+.html#word-game";
       if (done) {
         return;
       }
@@ -269,7 +269,7 @@ function handleButtonClick(event) {
   }
   const value = event.target.innerText;
   userInputData(value);
-  window.location.href = "./+M-J-W+.html#word-game";
+  window.location.href = "../+M-J-W+/+M-J-W+.html#word-game";
 }
 
 // Add click event listeners to all alphabet buttons
@@ -283,7 +283,7 @@ alphabetButtons.forEach(button => {
 const numberButtons = document.querySelectorAll("._c_Apple-Music-Video-numbers");
 
 function handleNumberButtonClick(event) {
-  window.location.href = "./+M-J-W+.html#_id_web-development";
+  window.location.href = "../+M-J-W+/+M-J-W+.html#_id_web-development";
 }
 
 // Add click event listeners to all number buttons

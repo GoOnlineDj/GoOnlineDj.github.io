@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /FINDtxt/Video.html
 
 Sitemap: https://goonlinedj.github.io/sitemap.xml

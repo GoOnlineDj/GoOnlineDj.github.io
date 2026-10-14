@@ -11,7 +11,7 @@ const id_frame = document.getElementById("_id_frame");
 
 
 
-// appleMusic data comes from ./Apple+Music/AppleMusicVideos.js (loaded in FINDtxt.html)
+// appleMusic data comes from ../Apple+Music/AppleMusicVideos.js (loaded in FINDtxt.html)
 
 /////////////////////////////////////
 
