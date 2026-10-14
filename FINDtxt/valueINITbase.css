@@ -190,7 +190,7 @@ img {
 @layer header {
   #_id_GoOnlineDj-body {
     background-color: var(--black);
-    background-image: url(./Swiper/images/GoOnlineDj.png);
+    background-image: url(../Swiper/images/GoOnlineDj.png);
     background-repeat:round; 
     text-align: center;
   }
