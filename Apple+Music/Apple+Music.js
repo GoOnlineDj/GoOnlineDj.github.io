@@ -164,8 +164,34 @@ async function AppleMusicBack() {
 
 
 
+// Every click reloads the page (see loadAppleMusic), so the lit state is
+// remembered in sessionStorage and re-applied on the next load for whatever
+// is left of LIT_MS.
+const LIT_MS = 1000;
+
+function lightButtons(cls, ms) {
+    const btns = document.querySelectorAll("." + cls);
+    btns.forEach(b => b.classList.add("lit"));
+    setTimeout(() => btns.forEach(b => b.classList.remove("lit")), ms);
+}
+
+function flashButton(btn) {
+    const cls = btn.classList.contains("_c_Apple-Music-forward")
+        ? "_c_Apple-Music-forward" : "_c_Apple-Music-back";
+    try { sessionStorage.setItem("litButton", JSON.stringify({ cls, at: Date.now() })); } catch (e) {}
+    lightButtons(cls, LIT_MS);
+}
+
+try {
+    const lit = JSON.parse(sessionStorage.getItem("litButton"));
+    sessionStorage.removeItem("litButton");
+    const left = lit ? LIT_MS - (Date.now() - lit.at) : 0;
+    if (left > 0) lightButtons(lit.cls, left);
+} catch (e) {}
+
 const musicForward = document.querySelectorAll("._c_Apple-Music-forward");
 musicForward.forEach(x => x.addEventListener("click", () => {
+    flashButton(x);
     stopAutoCycle();
 
     if (firstPress === 1) {
@@ -191,6 +217,7 @@ FINDtxt.forEach(x => x.addEventListener("click", () => {
 
 const musicBack = document.querySelectorAll("._c_Apple-Music-back");
 musicBack.forEach(x => x.addEventListener("click", () => {
+    flashButton(x);
     stopAutoCycle();
 
     if (firstPress === 1) {
@@ -235,7 +262,8 @@ function buttonClick(value) {
 // Only move to the artist if one exists, so a letter with no artists
 // can't leave `a` at -1 and break the forward/back buttons
 function handleLetter(value) {
-    const newA = appleMusic.findIndex((item) => item.artist.startsWith(value));
+    // case-insensitive, so artists starting with a lowercase letter match too
+    const newA = appleMusic.findIndex((item) => item.artist.toUpperCase().startsWith(value.toUpperCase()));
     if (newA !== -1) {
         a = newA;
         s = 0;

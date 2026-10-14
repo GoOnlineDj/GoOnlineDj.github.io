@@ -106,3 +106,6 @@ button {
 ._c_header {
     grid-area: _c_header;
 }
+/* Click-registered feedback: stays lit (see litButton in Apple+Music.js) */
+._c_Apple-Music-forward.lit { background-color: #1e90ff; box-shadow: 0 0 12px #1e90ff; }
+._c_Apple-Music-back.lit    { background-color: #e5201f; box-shadow: 0 0 12px #e5201f; }
