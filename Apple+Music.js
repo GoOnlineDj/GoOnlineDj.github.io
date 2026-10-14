@@ -20314,30 +20314,27 @@ function renderIframe(src) {
 
 
 
+// Next/back (and the end-of-song auto-advance) follow the same
+// birthday-sorted order as the startup cycle, from wherever we are now.
 async function AppleMusicForward() {
-    if (appleMusic[a].songs.length > s + 1) {
-        s++;
-        loadAppleMusic(appleMusic[a].songs[s].src);
-    } else if (appleMusic.length > a + 1) {
-        s = 0;
-        a++;
-        loadAppleMusic(appleMusic[a].songs[s].src);
+    const songs = sortedAppleMusic[currentArtistIndex].songs;
+    if (currentSongIndex + 1 < songs.length) {
+        currentSongIndex++;
     } else {
-        return;
+        currentArtistIndex = (currentArtistIndex + 1) % sortedAppleMusic.length;
+        currentSongIndex = 0;
     }
+    updateIframeSrc();
 }
 
 async function AppleMusicBack() {
-    if (s > 0) {
-        s--;
-        loadAppleMusic(appleMusic[a].songs[s].src);
-    } else if (a > 0) {
-        a--;
-        s = appleMusic[a].songs.length - 1;
-        loadAppleMusic(appleMusic[a].songs[s].src);
+    if (currentSongIndex > 0) {
+        currentSongIndex--;
     } else {
-        return;
+        currentArtistIndex = (currentArtistIndex - 1 + sortedAppleMusic.length) % sortedAppleMusic.length;
+        currentSongIndex = sortedAppleMusic[currentArtistIndex].songs.length - 1;
     }
+    updateIframeSrc();
 }
 
 
@@ -20417,6 +20414,9 @@ function handleLetter(value) {
     if (newA !== -1) {
         a = newA;
         s = 0;
+        // keep the sorted position in sync so next/back continue from here
+        currentArtistIndex = sortedAppleMusic.indexOf(appleMusic[a]);
+        currentSongIndex = 0;
         stopAutoCycle();
         loadAppleMusic(appleMusic[a].songs[s].src);
     }
