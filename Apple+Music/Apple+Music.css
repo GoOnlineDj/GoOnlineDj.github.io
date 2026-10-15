@@ -23,6 +23,46 @@
     display: block;
 }
 
+/* Nudge the 👑 up so it looks vertically centered in the nav bar.
+   transform doesn't change layout, so the nav height stays the same.
+   Adjust the px value to move it more or less. */
+._c_CROWN {
+    transform: translateY(-5px);
+    position: relative;
+}
+
+/* Birthday tooltip for the artist now playing (text set in Apple+Music.js) */
+._c_CROWN[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 10;
+    width: max-content;
+    max-width: min(300px, 80vw);
+    padding: 8px 12px;
+    background: var(--black);
+    color: var(--white);
+    border: 3px solid var(--green);
+    border-radius: 10px;
+    font-family: var(--main);
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: left;
+    text-transform: none;
+    white-space: pre-line;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.15s;
+}
+
+._c_CROWN[data-tooltip]:hover::after,
+._c_CROWN[data-tooltip]:focus-visible::after {
+    opacity: 1;
+    visibility: visible;
+}
+
 ._c_Apple-Music-Video-back-button {
     grid-area: center-lt;
 }

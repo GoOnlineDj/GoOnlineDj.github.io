@@ -108,6 +108,7 @@ function loadAppleMusic(src) {
 // file) - loadAppleMusic() above handles every later switch via navigation.
 function renderIframe(src) {
     currentUrl = src;
+    updateCrownTooltip(src);
     const playerUrl = new URL(src);
     playerUrl.searchParams.set("_playerSession", `${Date.now()}`);
     const nextIframe = document.createElement("iframe");
@@ -364,6 +365,29 @@ sortedAppleMusic.forEach((artist, i) => {
 
 
 ///////////////////////////////////////
+
+// 👑 tooltip: hovering the crown shows the birthday of the artist whose video
+// is on screen (styled in Apple+Music.css via the data-tooltip attribute).
+// The crown's link itself is unchanged.
+function updateCrownTooltip(src) {
+    const crown = document.querySelector("._c_CROWN");
+    if (!crown) return;
+    // Trust the restored artist index only if that artist really owns this
+    // video; a bare ?iframeSrc= link has no index, so look the artist up.
+    let artist = sortedAppleMusic[currentArtistIndex];
+    if (!artist || !artist.songs.some(song => song.src === src)) {
+        artist = sortedAppleMusic.find(ar => ar.songs.some(song => song.src === src));
+    }
+    // No birthday listed: no data-tooltip, so nothing shows on hover
+    if (!artist || !artist.birthday || artist.birthday.length === 0) {
+        crown.removeAttribute("data-tooltip");
+        return;
+    }
+    const birthdays = artist.birthday
+        .map(b => `${b.month} ${b.day}, ${b.year}`)
+        .join("  •  ");
+    crown.setAttribute("data-tooltip", `${artist.artist}\n🎂 ${birthdays}`);
+}
 
 function updateIframeSrc() {
     const artist = sortedAppleMusic[currentArtistIndex];
