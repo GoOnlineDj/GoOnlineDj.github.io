@@ -160,3 +160,5 @@ button {
 /* This is the end of the CSS file for the Apple Music Video page layout. 
    It defines the grid structure, styles for buttons, and other elements 
    to create a responsive and visually appealing interface. */
+/* Letter/number buttons turn green for one second after a click */
+button.lit-green { background-color: green !important; box-shadow: 0 0 12px green; }

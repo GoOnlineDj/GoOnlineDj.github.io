@@ -729,3 +729,11 @@ scrollDownButtons.forEach(button => {
 
 
 //////////////////////////////////////////////////////////////////
+
+// Letter/number buttons turn green for one second after a click
+document.addEventListener('click', (event) => {
+    const btn = event.target.closest('button');
+    if (!btn || !/_c_Apple-Music-Video-[A-Z0-9]\b/.test(btn.className)) return;
+    btn.classList.add('lit-green');
+    setTimeout(() => btn.classList.remove('lit-green'), 1000);
+});

@@ -190,6 +190,25 @@ try {
     if (left > 0) lightButtons(lit.cls, left);
 } catch (e) {}
 
+// Letter/number buttons flash green the same way (matched by their text)
+function litKeys(key, ms) {
+    const btns = [...document.querySelectorAll("button")].filter(b => b.innerText.trim() === key && /_c_Apple-Music-Video-[A-Z0-9]\b/.test(b.className));
+    btns.forEach(b => b.classList.add("lit-green"));
+    setTimeout(() => btns.forEach(b => b.classList.remove("lit-green")), ms);
+}
+
+function flashKey(key) {
+    try { sessionStorage.setItem("litKey", JSON.stringify({ key, at: Date.now() })); } catch (e) {}
+    litKeys(key, LIT_MS);
+}
+
+try {
+    const litK = JSON.parse(sessionStorage.getItem("litKey"));
+    sessionStorage.removeItem("litKey");
+    const leftK = litK ? LIT_MS - (Date.now() - litK.at) : 0;
+    if (leftK > 0) litKeys(litK.key, leftK);
+} catch (e) {}
+
 const musicForward = document.querySelectorAll("._c_Apple-Music-forward");
 musicForward.forEach(x => x.addEventListener("click", () => {
     flashButton(x);
@@ -285,6 +304,7 @@ function handleNumber(value) {
 function valueInit() {
     document.querySelector("._c_Apple-Music-grid").addEventListener("click", function (event) {
         let value = event.target.innerText;
+        if (event.target.tagName === "BUTTON" && /^[A-Z0-9]$/.test((value || "").trim())) flashKey(value.trim());
         buttonClick(value);
 
         
