@@ -9828,7 +9828,7 @@
         ]
     },
     {
-        artist: "Keri Hison & Lil Wayne",
+        artist: "Keri Hilson & Lil Wayne",
         birthday: [{ month: "December", day: 5, year: 1982 }, { month: "September", day: 27, year: 1982 }],
         songs: [
             {
