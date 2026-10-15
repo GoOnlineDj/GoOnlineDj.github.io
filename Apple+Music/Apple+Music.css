@@ -12,6 +12,15 @@
     grid-area: iframe;
     padding: 0;
     margin: 0;
+    /* The iframe is added by Apple+Music.js after first paint. Reserve its
+       height now (matches the 750px in valueINITbase.css) so the clock and
+       buttons below don't jump down when it appears. responsive.css overrides
+       this for phones. */
+    min-height: 750px;
+}
+
+#_id_iframe iframe {
+    display: block;
 }
 
 ._c_Apple-Music-Video-back-button {

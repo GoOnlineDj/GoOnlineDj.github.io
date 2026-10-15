@@ -289,7 +289,9 @@ function buttonClick(value) {
 function showStartingWith(value) {
     searchInput.value = '';
     searchClear.hidden = true;
-    const artists = appleMusic.filter((item) => item.artist.toUpperCase().startsWith(value));
+    // Upper or lower case first letters both count, and accents are ignored (Élan = E)
+    const firstChar = (name) => name.trimStart().normalize('NFD').replace(/\p{M}/gu, '').toUpperCase();
+    const artists = appleMusic.filter((item) => firstChar(item.artist).startsWith(value));
     setSearchCount(artists.length ? `${artists.length} starting with “${value}”` : '');
     renderArtists(artists);
     document.getElementById('_id_frame').scrollTop = 0;
