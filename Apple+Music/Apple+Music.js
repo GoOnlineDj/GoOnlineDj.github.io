@@ -466,10 +466,15 @@ function peekNextTrack() {
 
 // Preview cycle only: PREFETCH_AT ms into each video, the next one is built
 // in a hidden iframe stacked behind the visible one. When the cycle fires it
-// is swapped in already loaded - no page reload, no blank frame. A reload
-// every MAX_SWAPS swaps still clears the browser's video-decoder pool (see
-// the note above loadAppleMusic), and any manual control reloads as before.
-const MAX_SWAPS = 10;
+// is swapped in already loaded - no page reload, no blank frame. Any manual
+// control still reloads the page as before.
+//
+// Reload limit (disabled): a page reload every MAX_SWAPS swaps would clear the
+// browser's video-decoder pool (see the note above loadAppleMusic). Swapping
+// has not shown the freeze so far, so it is off. If videos start freezing
+// after many swaps, re-enable it by uncommenting the two MAX_SWAPS lines here
+// and in preloadNext() (preview swaps and auto-next swaps count together).
+// const MAX_SWAPS = 10;
 // The iframe "load" event fires before Apple's player has fetched its poster
 // image, and a page can't see inside the player, so a preloaded frame only
 // counts as ready this long after it loaded.
@@ -494,7 +499,8 @@ function discardPreload() {
 // Also called when the end-of-video countdown starts, so "auto next" has a
 // loaded frame waiting too (that is outside the preview cycle).
 function preloadNext() {
-    if (document.hidden || swapsSinceReload >= MAX_SWAPS) return;
+    if (document.hidden) return;
+    // if (swapsSinceReload >= MAX_SWAPS) return; // reload limit, see MAX_SWAPS above
     if (preloaded) return; // already loading/loaded
     discardPreload();
     const track = peekNextTrack();
@@ -727,10 +733,17 @@ if (linkedSrc && linkedSrc.startsWith("https://embed.music.apple.com/")) {
     const ps = parseInt(bootParams.get("s"), 10);
     const pai = parseInt(bootParams.get("ai"), 10);
     const psi = parseInt(bootParams.get("si"), 10);
-    if (!Number.isNaN(pa)) a = pa;
-    if (!Number.isNaN(ps)) s = ps;
-    if (!Number.isNaN(pai)) currentArtistIndex = pai;
-    if (!Number.isNaN(psi)) currentSongIndex = psi;
+    // Only accept indexes that point at a real artist/song, so a crafted or
+    // stale link can't leave the forward/back code reading past the lists.
+    const inRange = (n, len) => Number.isInteger(n) && n >= 0 && n < len;
+    if (inRange(pa, appleMusic.length)) {
+        a = pa;
+        if (inRange(ps, appleMusic[a].songs.length)) s = ps;
+    }
+    if (inRange(pai, sortedAppleMusic.length)) {
+        currentArtistIndex = pai;
+        if (inRange(psi, sortedAppleMusic[pai].songs.length)) currentSongIndex = psi;
+    }
     firstPress = 0;
     autoCycling = bootParams.get("cycle") === "1";
     renderIframe(linkedSrc);

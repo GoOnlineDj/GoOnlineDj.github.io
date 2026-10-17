@@ -180,7 +180,7 @@ loadframe.innerHTML = `
 
         <div id="_id_Links">
            
-                <a href="http://www.frontendmasters.com" target="_blank" rel="noopener">Frontend
+                <a href="https://frontendmasters.com" target="_blank" rel="noopener">Frontend
                         Masters</a>
                         <br>
                 <a href="https://www.google.com/" target="_blank" rel="noopener">Google</a>
