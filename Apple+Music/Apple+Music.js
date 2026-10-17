@@ -96,6 +96,7 @@ function buildTrackUrl(src) {
 // (Aborted-transition rejections are swallowed by an inline script in
 // index.html's <head>, which must run before first render.)
 
+const REVEAL_DELAY_MS = 700;   // wait after the embed loads so its artwork can arrive
 const IFRAME_STALL_MS = 10000; // retry an embed that hasn't loaded after this long
 
 function loadAppleMusic(src) {
@@ -132,12 +133,16 @@ function renderIframe(src, attempt = 0) {
     // Apple's embed sometimes stalls and never fires "load". Rebuild it (fresh
     // session id) up to twice instead of leaving a blank player.
     const stallTimer = setTimeout(() => {
-        if (attempt >= 2 || iframe !== nextIframe) return;
+        if (iframe !== nextIframe) return;
+        if (attempt >= 2) { nextIframe.classList.add("ready"); return; } // out of retries: show whatever we have
         nextIframe.remove();
         renderIframe(src, attempt + 1);
     }, IFRAME_STALL_MS);
     nextIframe.addEventListener("load", () => {
         clearTimeout(stallTimer);
+        // A page can't see inside Apple's cross-origin player, so "loaded" plus a
+        // short grace period is the closest signal that the artwork is ready.
+        setTimeout(() => nextIframe.classList.add("ready"), REVEAL_DELAY_MS);
         scheduleNextCycle(CYCLE_DELAY);
         cancelAdvance();
         reclaimFocus();
