@@ -480,8 +480,11 @@ function discardPreload() {
     preloaded = null;
 }
 
+// Also called when the end-of-video countdown starts, so "auto next" has a
+// loaded frame waiting too (that is outside the preview cycle).
 function preloadNext() {
-    if (!autoCycling || document.hidden || swapsSinceReload >= MAX_SWAPS) return;
+    if (document.hidden || swapsSinceReload >= MAX_SWAPS) return;
+    if (preloaded) return; // already loading/loaded
     discardPreload();
     const track = peekNextTrack();
     const frame = buildPlayer(track.src);
@@ -516,8 +519,19 @@ function swapInPreloaded() {
     if (old) old.remove();
 
     cancelAdvance();
-    scheduleNextCycle(CYCLE_DELAY);
-    preloadTimer = setTimeout(preloadNext, PREFETCH_AT);
+    if (autoCycling) {
+        scheduleNextCycle(CYCLE_DELAY);
+        preloadTimer = setTimeout(preloadNext, PREFETCH_AT);
+    }
+}
+
+// End-of-video auto next: use the preloaded frame if it is ready, else reload.
+function autoAdvance() {
+    if (preloaded && preloaded.loaded) {
+        swapInPreloaded();
+        return;
+    }
+    AppleMusicForward();
 }
 
 function cycleThroughArtists() {
@@ -611,11 +625,12 @@ function scheduleAdvance(ms) {
 }
 
 function startCountdown() {
+    preloadNext(); // ~10s head start for the next video to load
     let remaining = Math.round(COUNTDOWN_MS / 1000);
     const tick = () => {
         if (remaining <= 0) {
             cancelAdvance();
-            AppleMusicForward();
+            autoAdvance();
             return;
         }
         advanceNoticeText.textContent = `Next video in ${remaining}s`;
