@@ -65,6 +65,7 @@ let firstPress = 1;
 function stopAutoCycle() {
     autoCycling = false;
     clearTimeout(autoLoadInterval);
+    discardPreload();
 }
 
 // Builds the URL used to switch tracks, carrying along the state needed to
@@ -112,24 +113,7 @@ function loadAppleMusic(src) {
 function renderIframe(src, attempt = 0) {
     currentUrl = src;
     updateCrownTooltip(src);
-    const playerUrl = new URL(src);
-    playerUrl.searchParams.set("_playerSession", `${Date.now()}`);
-    const nextIframe = document.createElement("iframe");
-    nextIframe.className = "random-iframe";
-    // Apple's own embed snippet requires the "*" wildcard on cross-origin allow
-    // directives and allow-storage-access-by-user-activation in the sandbox;
-    // without them the player can't reach its signed-in/accelerated playback
-    // path and silently falls back to a path where audio and video drift apart.
-    // "fullscreen *" in allow already grants fullscreen; allowFullscreen would
-    // just trigger a console warning that it's being overridden.
-    nextIframe.allow = "autoplay *; encrypted-media *; fullscreen *; clipboard-write";
-    nextIframe.width = "100%";
-    nextIframe.height = "100%";
-    nextIframe.referrerPolicy = "strict-origin";
-    nextIframe.sandbox = "allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation";
-    nextIframe.frameBorder = 0;
-    nextIframe.title = "Apple Music";
-    nextIframe.name = "Apple Music";
+    const nextIframe = buildPlayer(src);
     // Apple's embed sometimes stalls and never fires "load". Rebuild it (fresh
     // session id) up to twice instead of leaving a blank player.
     const stallTimer = setTimeout(() => {
@@ -144,13 +128,37 @@ function renderIframe(src, attempt = 0) {
         // short grace period is the closest signal that the artwork is ready.
         setTimeout(() => nextIframe.classList.add("ready"), REVEAL_DELAY_MS);
         scheduleNextCycle(CYCLE_DELAY);
+        if (autoCycling) preloadTimer = setTimeout(preloadNext, PREFETCH_AT);
         cancelAdvance();
         reclaimFocus();
     });
-    nextIframe.src = playerUrl.href;
     iframe = nextIframe;
     Appleiframe.appendChild(iframe);
     scheduleNextCycle(LOAD_TIMEOUT);
+}
+
+// Creates one Apple Music player iframe (not yet attached) for a track.
+function buildPlayer(src) {
+    const playerUrl = new URL(src);
+    playerUrl.searchParams.set("_playerSession", `${Date.now()}`);
+    const player = document.createElement("iframe");
+    player.className = "random-iframe";
+    // Apple's own embed snippet requires the "*" wildcard on cross-origin allow
+    // directives and allow-storage-access-by-user-activation in the sandbox;
+    // without them the player can't reach its signed-in/accelerated playback
+    // path and silently falls back to a path where audio and video drift apart.
+    // "fullscreen *" in allow already grants fullscreen; allowFullscreen would
+    // just trigger a console warning that it's being overridden.
+    player.allow = "autoplay *; encrypted-media *; fullscreen *; clipboard-write";
+    player.width = "100%";
+    player.height = "100%";
+    player.referrerPolicy = "strict-origin";
+    player.sandbox = "allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation";
+    player.frameBorder = 0;
+    player.title = "Apple Music";
+    player.name = "Apple Music";
+    player.src = playerUrl.href;
+    return player;
 }
 
 
@@ -438,12 +446,78 @@ function updateIframeSrc() {
 // Cycle through artists and songs, but only after the current embed has
 // finished loading. A fixed 3s setInterval stacked up embed reloads faster
 // than they could load, which froze the page.
-const CYCLE_DELAY = 3000;
+const CYCLE_DELAY = 5000;
+const PREFETCH_AT = 3000; // this far into the cycle, start fetching the next video in the background
 const LOAD_TIMEOUT = 15000; // move on if an embed never finishes loading
 
 function scheduleNextCycle(delay) {
     clearTimeout(autoLoadInterval);
     if (autoCycling) autoLoadInterval = setTimeout(cycleThroughArtists, delay);
+}
+
+// Which track the cycle will show next, as sorted indices (same order the
+// cycle has always used).
+function peekNextTrack() {
+    let artistIndex = currentArtistIndex;
+    let songIndex = (currentSongIndex + 1) % sortedAppleMusic[artistIndex].songs.length;
+    if (songIndex === 0) artistIndex = (artistIndex + 1) % sortedAppleMusic.length;
+    return { artistIndex, songIndex, src: sortedAppleMusic[artistIndex].songs[songIndex].src };
+}
+
+// Preview cycle only: PREFETCH_AT ms into each video, the next one is built
+// in a hidden iframe stacked behind the visible one. When the cycle fires it
+// is swapped in already loaded - no page reload, no blank frame. A reload
+// every MAX_SWAPS swaps still clears the browser's video-decoder pool (see
+// the note above loadAppleMusic), and any manual control reloads as before.
+const MAX_SWAPS = 4;
+let swapsSinceReload = 0;
+let preloadTimer;
+let preloaded = null; // { track, frame, loaded }
+
+function discardPreload() {
+    clearTimeout(preloadTimer);
+    if (preloaded) preloaded.frame.remove();
+    preloaded = null;
+}
+
+function preloadNext() {
+    if (!autoCycling || document.hidden || swapsSinceReload >= MAX_SWAPS) return;
+    discardPreload();
+    const track = peekNextTrack();
+    const frame = buildPlayer(track.src);
+    frame.classList.add("preload");
+    frame.setAttribute("aria-hidden", "true");
+    frame.tabIndex = -1;
+    const entry = { track, frame, loaded: false };
+    frame.addEventListener("load", () => { entry.loaded = true; });
+    preloaded = entry;
+    Appleiframe.appendChild(frame);
+}
+
+function swapInPreloaded() {
+    const { track, frame } = preloaded;
+    preloaded = null;
+    const artist = sortedAppleMusic[track.artistIndex];
+    const song = artist.songs[track.songIndex];
+    currentArtistIndex = track.artistIndex;
+    currentSongIndex = track.songIndex;
+    a = appleMusic.indexOf(artist);
+    s = artist.songs.indexOf(song);
+    currentUrl = song.src;
+    updateCrownTooltip(song.src);
+    swapsSinceReload++;
+
+    const old = iframe;
+    frame.classList.remove("preload");
+    frame.removeAttribute("aria-hidden");
+    frame.removeAttribute("tabindex");
+    iframe = frame;
+    frame.classList.add("ready");
+    if (old) old.remove();
+
+    cancelAdvance();
+    scheduleNextCycle(CYCLE_DELAY);
+    preloadTimer = setTimeout(preloadNext, PREFETCH_AT);
 }
 
 function cycleThroughArtists() {
@@ -453,12 +527,18 @@ function cycleThroughArtists() {
         scheduleNextCycle(CYCLE_DELAY);
         return;
     }
+    // Next video already loaded in the background: swap it in.
+    if (preloaded && preloaded.loaded) {
+        swapInPreloaded();
+        return;
+    }
+    discardPreload();
     currentSongIndex = (currentSongIndex + 1) % sortedAppleMusic[currentArtistIndex].songs.length;
     if (currentSongIndex === 0) {
         currentArtistIndex = (currentArtistIndex + 1) % sortedAppleMusic.length;
     }
-    // updateIframeSrc() -> loadAppleMusic() reloads the page for this track,
-    // so there's no "still loading" state left here to schedule a fallback for.
+    // Not preloaded (or time for a clean slate): updateIframeSrc() ->
+    // loadAppleMusic() reloads the page for this track.
     updateIframeSrc();
 }
 
