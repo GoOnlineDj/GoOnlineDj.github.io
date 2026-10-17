@@ -470,9 +470,20 @@ function peekNextTrack() {
 // every MAX_SWAPS swaps still clears the browser's video-decoder pool (see
 // the note above loadAppleMusic), and any manual control reloads as before.
 const MAX_SWAPS = 10;
+// The iframe "load" event fires before Apple's player has fetched its poster
+// image, and a page can't see inside the player, so a preloaded frame only
+// counts as ready this long after it loaded.
+const ARTWORK_GRACE_MS = 1500;
+// Preview cycle: if the next frame is still loading when the cycle fires, wait
+// up to this long for it rather than falling back to a page reload.
+const PRELOAD_MAX_WAIT_MS = 8000;
 let swapsSinceReload = 0;
 let preloadTimer;
-let preloaded = null; // { track, frame, loaded }
+let preloaded = null; // { track, frame, startedAt, loadedAt }
+
+function preloadIsReady() {
+    return !!(preloaded && preloaded.loadedAt && Date.now() - preloaded.loadedAt >= ARTWORK_GRACE_MS);
+}
 
 function discardPreload() {
     clearTimeout(preloadTimer);
@@ -491,8 +502,8 @@ function preloadNext() {
     frame.classList.add("preload");
     frame.setAttribute("aria-hidden", "true");
     frame.tabIndex = -1;
-    const entry = { track, frame, loaded: false };
-    frame.addEventListener("load", () => { entry.loaded = true; });
+    const entry = { track, frame, startedAt: Date.now(), loadedAt: 0 };
+    frame.addEventListener("load", () => { entry.loadedAt = Date.now(); });
     preloaded = entry;
     Appleiframe.appendChild(frame);
 }
@@ -527,7 +538,8 @@ function swapInPreloaded() {
 
 // End-of-video auto next: use the preloaded frame if it is ready, else reload.
 function autoAdvance() {
-    if (preloaded && preloaded.loaded) {
+    // Had PRELOAD_BEFORE_END_MS to load; the grace period is covered too.
+    if (preloaded && preloaded.loadedAt) {
         swapInPreloaded();
         return;
     }
@@ -542,8 +554,14 @@ function cycleThroughArtists() {
         return;
     }
     // Next video already loaded in the background: swap it in.
-    if (preloaded && preloaded.loaded) {
+    if (preloadIsReady()) {
         swapInPreloaded();
+        return;
+    }
+    // Still loading (or its artwork may still be arriving): give it a little
+    // longer before giving up and reloading the page.
+    if (preloaded && Date.now() - preloaded.startedAt < PRELOAD_MAX_WAIT_MS) {
+        scheduleNextCycle(250);
         return;
     }
     discardPreload();
@@ -583,6 +601,7 @@ const KEEP_PLAYING_MS = 60000; // "Keep playing" pushes the skip back this much
 
 const durationCache = new Map();
 let advanceTimer;
+let preloadBeforeEndTimer;
 
 async function getDurationMs(src) {
     const match = src.match(/\/(\d+)(?:[?#]|$)/);
@@ -615,17 +634,24 @@ document.body.appendChild(advanceNotice);
 
 function cancelAdvance() {
     clearTimeout(advanceTimer);
+    clearTimeout(preloadBeforeEndTimer);
     clearInterval(countdownTicker);
     advanceNotice.style.display = "none";
 }
 
+// Start loading the next video this long before the current one ends, so its
+// player and poster image have time to arrive (Apple can be slow with those).
+const PRELOAD_BEFORE_END_MS = 30000;
+
 function scheduleAdvance(ms) {
     cancelAdvance();
     advanceTimer = setTimeout(startCountdown, Math.max(0, ms - COUNTDOWN_MS));
+    clearTimeout(preloadBeforeEndTimer);
+    preloadBeforeEndTimer = setTimeout(preloadNext, Math.max(0, ms - PRELOAD_BEFORE_END_MS));
 }
 
 function startCountdown() {
-    preloadNext(); // ~10s head start for the next video to load
+    preloadNext(); // no-op if the 30s-before-end preload already started
     let remaining = Math.round(COUNTDOWN_MS / 1000);
     const tick = () => {
         if (remaining <= 0) {
