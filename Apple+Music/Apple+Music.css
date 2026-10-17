@@ -29,6 +29,7 @@
 ._c_CROWN {
     transform: translateY(-5px);
     position: relative;
+    z-index: 20; /* keep the birthday tooltip above the positioned player area below the nav */
 }
 
 /* Birthday tooltip for the artist now playing (text set in Apple+Music.js) */

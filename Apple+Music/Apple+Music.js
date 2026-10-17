@@ -469,7 +469,7 @@ function peekNextTrack() {
 // is swapped in already loaded - no page reload, no blank frame. A reload
 // every MAX_SWAPS swaps still clears the browser's video-decoder pool (see
 // the note above loadAppleMusic), and any manual control reloads as before.
-const MAX_SWAPS = 4;
+const MAX_SWAPS = 10;
 let swapsSinceReload = 0;
 let preloadTimer;
 let preloaded = null; // { track, frame, loaded }
