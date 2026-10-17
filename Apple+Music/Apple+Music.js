@@ -96,6 +96,8 @@ function buildTrackUrl(src) {
 // (Aborted-transition rejections are swallowed by an inline script in
 // index.html's <head>, which must run before first render.)
 
+const IFRAME_STALL_MS = 10000; // retry an embed that hasn't loaded after this long
+
 function loadAppleMusic(src) {
     cancelAdvance();
     clearTimeout(autoLoadInterval);
@@ -106,7 +108,7 @@ function loadAppleMusic(src) {
 // Builds the iframe for the track this page load was handed. Runs exactly
 // once per page load (from the bootstrap deep link at the bottom of this
 // file) - loadAppleMusic() above handles every later switch via navigation.
-function renderIframe(src) {
+function renderIframe(src, attempt = 0) {
     currentUrl = src;
     updateCrownTooltip(src);
     const playerUrl = new URL(src);
@@ -127,7 +129,15 @@ function renderIframe(src) {
     nextIframe.frameBorder = 0;
     nextIframe.title = "Apple Music";
     nextIframe.name = "Apple Music";
+    // Apple's embed sometimes stalls and never fires "load". Rebuild it (fresh
+    // session id) up to twice instead of leaving a blank player.
+    const stallTimer = setTimeout(() => {
+        if (attempt >= 2 || iframe !== nextIframe) return;
+        nextIframe.remove();
+        renderIframe(src, attempt + 1);
+    }, IFRAME_STALL_MS);
     nextIframe.addEventListener("load", () => {
+        clearTimeout(stallTimer);
         scheduleNextCycle(CYCLE_DELAY);
         cancelAdvance();
         reclaimFocus();
