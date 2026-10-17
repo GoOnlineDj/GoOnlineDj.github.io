@@ -165,8 +165,8 @@ button.lit-green { background-color: green !important; box-shadow: 0 0 12px gree
 
 /* The player stays invisible until Apple's embed has loaded (plus a short
    grace period for its artwork), then fades in so frame and image appear together. */
-#_id_iframe iframe.random-iframe { opacity: 0; transition: opacity 0.3s ease; }
-#_id_iframe iframe.random-iframe.ready { opacity: 1; }
+#_id_iframe iframe.fade-in { opacity: 0; transition: opacity 0.3s ease; }
+#_id_iframe iframe.fade-in.ready { opacity: 1; }
 
 /* Next video loads here, invisibly, stacked behind the current one */
 #_id_iframe { position: relative; }

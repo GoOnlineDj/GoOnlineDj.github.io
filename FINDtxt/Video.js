@@ -5,10 +5,24 @@ showClock(); // show the time right away instead of after the first second
 setInterval(showClock, 1000);
 
 
+// file:// pages have an opaque origin (event.origin is "null", location.origin is
+// "file://"), which postMessage rejects as a target, so fall back to "*" there.
+function messageTargetOrigin() {
+    return window.location.protocol === 'file:' ? '*' : window.location.origin;
+}
+
 window.onload = () => {
+    if (!window.opener) {
+        // Opened on its own (no search page sent a song), so say what to do
+        // instead of leaving an empty player area.
+        const hint = document.createElement("p");
+        hint.style.cssText = "padding:2rem;text-align:center;color:#fff;font-size:1.25rem;";
+        hint.innerHTML = 'No video selected. <a href="FINDtxt.html" style="color:#31b28a">Search for an artist</a> and click a song to play it here.';
+        document.getElementById("_id_iframe").appendChild(hint);
+    }
     if (window.opener) {
         // file:// pages report the origin "null", which postMessage rejects as a target
-        window.opener.postMessage({ ready: true }, window.location.origin === 'null' ? '*' : window.location.origin);
+        window.opener.postMessage({ ready: true }, messageTargetOrigin());
     }
 };
 
@@ -17,7 +31,8 @@ let iframe = null;
 
 window.addEventListener("message", (event) => {
     // Only accept Apple Music links sent by the FINDtxt page that opened this tab
-    if (event.source !== window.opener || event.origin !== window.location.origin) return;
+    if (event.source !== window.opener) return;
+    if (window.location.protocol !== 'file:' && event.origin !== window.location.origin) return;
     const src = event.data && event.data.src;
     if (typeof src !== "string" || !src.startsWith("https://embed.music.apple.com/")) return;
 
@@ -32,6 +47,9 @@ window.addEventListener("message", (event) => {
         iframe.sandbox = "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation";
         iframe.frameBorder = 0;
         iframe.title = "Apple Video";
+        // Apple+Music.css keeps .random-iframe invisible until it has .ready;
+        // this page has no preload step, so show the player straight away.
+        iframe.classList.add("ready");
         document.getElementById("_id_iframe").appendChild(iframe);
     }
     iframe.src = src;

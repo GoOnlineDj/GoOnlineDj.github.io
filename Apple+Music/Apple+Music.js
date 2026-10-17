@@ -142,7 +142,7 @@ function buildPlayer(src) {
     const playerUrl = new URL(src);
     playerUrl.searchParams.set("_playerSession", `${Date.now()}`);
     const player = document.createElement("iframe");
-    player.className = "random-iframe";
+    player.className = "random-iframe fade-in"; // fade-in: hidden until .ready (see Apple+Music.css)
     // Apple's own embed snippet requires the "*" wildcard on cross-origin allow
     // directives and allow-storage-access-by-user-activation in the sandbox;
     // without them the player can't reach its signed-in/accelerated playback

@@ -173,7 +173,7 @@ function listArtistSongs(songs, artistName) {
 // which postMessage rejects as a target, so fall back to "*" there. The message
 // holds only an Apple Music link, and Video.js checks the sender and the link.
 function messageTargetOrigin() {
-    return window.location.origin === 'null' ? '*' : window.location.origin;
+    return window.location.protocol === 'file:' ? '*' : window.location.origin;
 }
 
 function goToArtistSongPage(src) {
