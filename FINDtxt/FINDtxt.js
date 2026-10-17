@@ -176,13 +176,22 @@ function messageTargetOrigin() {
     return window.location.protocol === 'file:' ? '*' : window.location.origin;
 }
 
+// Same text the Apple Music page shows when hovering the crown: artist + birthdays
+function crownTooltipFor(src) {
+    const artist = appleMusic.find(ar => ar.songs.some(song => song.src === src));
+    if (!artist || !artist.birthday || artist.birthday.length === 0) return "";
+    const birthdays = artist.birthday.map(b => `${b.month} ${b.day}, ${b.year}`).join("  •  ");
+    return `${artist.artist}
+🎂 ${birthdays}`;
+}
+
 function goToArtistSongPage(src) {
     const newWindow = window.open("Video.html", "_blank");
     if (!newWindow) return; // popup blocked
 
     function handleReady(event) {
         if (event.source === newWindow && event.data && event.data.ready) {
-            newWindow.postMessage({ src }, messageTargetOrigin());
+            newWindow.postMessage({ src, tooltip: crownTooltipFor(src) }, messageTargetOrigin());
             window.removeEventListener("message", handleReady);
         }
     }

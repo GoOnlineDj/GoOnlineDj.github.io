@@ -36,6 +36,14 @@ window.addEventListener("message", (event) => {
     const src = event.data && event.data.src;
     if (typeof src !== "string" || !src.startsWith("https://embed.music.apple.com/")) return;
 
+    // Birthday tooltip on the 👑 (styled in Apple+Music.css via data-tooltip)
+    const crown = document.querySelector("._c_CROWN");
+    if (crown) {
+        const tip = typeof event.data.tooltip === "string" ? event.data.tooltip : "";
+        if (tip) crown.setAttribute("data-tooltip", tip);
+        else crown.removeAttribute("data-tooltip");
+    }
+
     // Reuse one player instead of adding a new iframe per message
     if (!iframe) {
         iframe = document.createElement("iframe");
