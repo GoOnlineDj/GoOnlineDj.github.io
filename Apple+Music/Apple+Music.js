@@ -127,8 +127,10 @@ function renderIframe(src, attempt = 0) {
         // A page can't see inside Apple's cross-origin player, so "loaded" plus a
         // short grace period is the closest signal that the artwork is ready.
         setTimeout(() => nextIframe.classList.add("ready"), REVEAL_DELAY_MS);
-        scheduleNextCycle(CYCLE_DELAY);
-        if (autoCycling) preloadTimer = setTimeout(preloadNext, PREFETCH_AT);
+        clearTimeout(autoLoadInterval); // the LOAD_TIMEOUT fallback is no longer needed
+        // Don't cycle (or preload the next video) until this one's artwork is
+        // confirmed loadable - see startCycleWhenArtworkReady().
+        if (autoCycling) startCycleWhenArtworkReady(src);
         cancelAdvance();
         reclaimFocus();
     });
@@ -484,10 +486,59 @@ const ARTWORK_GRACE_MS = 1500;
 const PRELOAD_MAX_WAIT_MS = 8000;
 let swapsSinceReload = 0;
 let preloadTimer;
-let preloaded = null; // { track, frame, startedAt, loadedAt }
+let preloaded = null; // { track, frame, startedAt, loadedAt, artworkOk }
+
+// Artwork check. Apple's player fetches its poster image from Apple's artwork
+// CDN (mzstatic); when that CDN is slow or failing, the player shows no image.
+// The page can't see inside the player, but it can load the same artwork
+// itself (the URL comes from the Apple lookup the auto-next timer already
+// uses), which is a direct test that the image is available right now.
+const ARTWORK_LOAD_TIMEOUT_MS = 8000;  // one image attempt
+const ARTWORK_RETRY_MS = 3000;         // pause between attempts
+const ARTWORK_MAX_WAIT_MS = 60000;     // arrival gate: give up and cycle anyway
+
+async function getArtworkUrl(src) {
+    const track = await lookupTrack(src);
+    const art = track && track.artworkUrl100;
+    return art ? art.replace(/\d+x\d+bb/, "600x600bb") : null;
+}
+
+function loadImage(url, ms) {
+    return new Promise(resolve => {
+        const img = new Image();
+        const timer = setTimeout(() => { img.src = ""; resolve(false); }, ms);
+        img.onload = () => { clearTimeout(timer); resolve(true); };
+        img.onerror = () => { clearTimeout(timer); resolve(false); };
+        img.src = url;
+    });
+}
+
+// One attempt: true when the video's artwork loads.
+async function artworkLoads(src) {
+    const url = await getArtworkUrl(src);
+    return url ? loadImage(url, ARTWORK_LOAD_TIMEOUT_MS) : false;
+}
+
+// Arrival gate: the preview cycle doesn't start until the first video's
+// artwork is confirmed, retrying until it is (or ARTWORK_MAX_WAIT_MS passes,
+// then it cycles anyway rather than sitting on one video forever).
+async function startCycleWhenArtworkReady(src) {
+    const activeIframe = iframe;
+    const started = Date.now();
+    let ok = false;
+    while (!ok && Date.now() - started < ARTWORK_MAX_WAIT_MS) {
+        ok = await artworkLoads(src);
+        if (!autoCycling || iframe !== activeIframe) return;
+        if (!ok) await new Promise(resolve => setTimeout(resolve, ARTWORK_RETRY_MS));
+    }
+    if (!autoCycling || iframe !== activeIframe) return;
+    scheduleNextCycle(CYCLE_DELAY);
+    preloadTimer = setTimeout(preloadNext, PREFETCH_AT);
+}
 
 function preloadIsReady() {
-    return !!(preloaded && preloaded.loadedAt && Date.now() - preloaded.loadedAt >= ARTWORK_GRACE_MS);
+    return !!(preloaded && preloaded.loadedAt && preloaded.artworkOk
+        && Date.now() - preloaded.loadedAt >= ARTWORK_GRACE_MS);
 }
 
 function discardPreload() {
@@ -508,8 +559,9 @@ function preloadNext() {
     frame.classList.add("preload");
     frame.setAttribute("aria-hidden", "true");
     frame.tabIndex = -1;
-    const entry = { track, frame, startedAt: Date.now(), loadedAt: 0 };
+    const entry = { track, frame, startedAt: Date.now(), loadedAt: 0, artworkOk: false };
     frame.addEventListener("load", () => { entry.loadedAt = Date.now(); });
+    artworkLoads(track.src).then(ok => { entry.artworkOk = ok; });
     preloaded = entry;
     Appleiframe.appendChild(frame);
 }
@@ -559,16 +611,21 @@ function cycleThroughArtists() {
         scheduleNextCycle(CYCLE_DELAY);
         return;
     }
-    // Next video already loaded in the background: swap it in.
-    if (preloadIsReady()) {
-        swapInPreloaded();
-        return;
-    }
-    // Still loading (or its artwork may still be arriving): give it a little
-    // longer before giving up and reloading the page.
-    if (preloaded && Date.now() - preloaded.startedAt < PRELOAD_MAX_WAIT_MS) {
-        scheduleNextCycle(250);
-        return;
+    if (preloaded) {
+        const waited = Date.now() - preloaded.startedAt;
+        // Next video loaded in the background with its artwork confirmed: swap
+        // it in. Past the wait limit a loaded frame is swapped in even without
+        // the artwork check, since a page reload would show no image either.
+        if (preloadIsReady() || (preloaded.loadedAt && waited >= PRELOAD_MAX_WAIT_MS)) {
+            swapInPreloaded();
+            return;
+        }
+        // Still loading, or its artwork is still being checked: give it a
+        // little longer before giving up and reloading the page.
+        if (waited < PRELOAD_MAX_WAIT_MS) {
+            scheduleNextCycle(250);
+            return;
+        }
     }
     discardPreload();
     currentSongIndex = (currentSongIndex + 1) % sortedAppleMusic[currentArtistIndex].songs.length;
@@ -605,24 +662,35 @@ const END_BUFFER_MS = 10000; // slack for loading/buffering
 const COUNTDOWN_MS = 10000;    // notice shown this long before skipping
 const KEEP_PLAYING_MS = 60000; // "Keep playing" pushes the skip back this much
 
-const durationCache = new Map();
+const lookupCache = new Map(); // video id -> Apple lookup result (successes only)
 let advanceTimer;
 let preloadBeforeEndTimer;
 
-async function getDurationMs(src) {
+function videoIdOf(src) {
     const match = src.match(/\/(\d+)(?:[?#]|$)/);
-    if (!match) return null;
-    const id = match[1];
-    if (durationCache.has(id)) return durationCache.get(id);
+    return match ? match[1] : null;
+}
+
+// One Apple lookup per video, shared by the auto-next timer (duration) and
+// the artwork check. Failures aren't cached, so a later retry can succeed.
+async function lookupTrack(src) {
+    const id = videoIdOf(src);
+    if (!id) return null;
+    if (lookupCache.has(id)) return lookupCache.get(id);
     try {
         const res = await fetch(`https://itunes.apple.com/lookup?id=${id}&country=us`);
         const data = await res.json();
-        const ms = (data.results && data.results[0] && data.results[0].trackTimeMillis) || null;
-        durationCache.set(id, ms);
-        return ms;
+        const track = (data.results && data.results[0]) || null;
+        if (track) lookupCache.set(id, track);
+        return track;
     } catch {
-        return null; // lookup failed: just don't auto-advance this one
+        return null;
     }
+}
+
+async function getDurationMs(src) {
+    const track = await lookupTrack(src);
+    return (track && track.trackTimeMillis) || null; // null: just don't auto-advance this one
 }
 
 // Countdown notice: "Next video in 10s · Keep playing"
