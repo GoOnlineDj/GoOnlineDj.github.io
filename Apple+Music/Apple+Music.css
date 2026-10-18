@@ -179,3 +179,15 @@ button.lit-green { background-color: green !important; box-shadow: 0 0 12px gree
     pointer-events: none;
     z-index: -1;
 }
+
+/* Play acknowledgement: when the visitor clicks the player to start a song,
+   both arrows flash red, white, blue (0.5s each) twice, so they know the click
+   registered and the song is coming. The class is added in Apple+Music.js. */
+@keyframes play-ack {
+    0%,     33.32% { background-color: #e5201f; box-shadow: 0 0 12px #e5201f; }
+    33.33%, 66.65% { background-color: #ffffff; box-shadow: 0 0 12px #ffffff; }
+    66.66%, 100%   { background-color: #1e90ff; box-shadow: 0 0 12px #1e90ff; }
+}
+button.play-ack {
+    animation: play-ack 1.5s linear 2;
+}

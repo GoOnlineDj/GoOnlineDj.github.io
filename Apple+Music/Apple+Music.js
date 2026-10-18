@@ -449,7 +449,7 @@ function updateIframeSrc() {
 // finished loading. A fixed 3s setInterval stacked up embed reloads faster
 // than they could load, which froze the page.
 const CYCLE_DELAY = 5000;
-const PREFETCH_AT = 3000; // this far into the cycle, start fetching the next video in the background
+const PREFETCH_AT = 2000; // this far into each video, start fetching the next one in the background
 const LOAD_TIMEOUT = 15000; // move on if an embed never finishes loading
 
 function scheduleNextCycle(delay) {
@@ -513,10 +513,11 @@ function loadImage(url, ms) {
     });
 }
 
-// One attempt: true when the video's artwork loads.
+// One attempt: true when the video's artwork loads, false when the image
+// fails, null when the lookup itself failed (nothing to check against).
 async function artworkLoads(src) {
     const url = await getArtworkUrl(src);
-    return url ? loadImage(url, ARTWORK_LOAD_TIMEOUT_MS) : false;
+    return url ? loadImage(url, ARTWORK_LOAD_TIMEOUT_MS) : null;
 }
 
 // Arrival gate: the preview cycle doesn't start until the first video's
@@ -527,8 +528,11 @@ async function startCycleWhenArtworkReady(src) {
     const started = Date.now();
     let ok = false;
     while (!ok && Date.now() - started < ARTWORK_MAX_WAIT_MS) {
-        ok = await artworkLoads(src);
+        const result = await artworkLoads(src);
         if (!autoCycling || iframe !== activeIframe) return;
+        // null: the lookup failed, so there is nothing to verify against - move
+        // on rather than hold the page on one video for nothing.
+        ok = result !== false;
         if (!ok) await new Promise(resolve => setTimeout(resolve, ARTWORK_RETRY_MS));
     }
     if (!autoCycling || iframe !== activeIframe) return;
@@ -561,7 +565,7 @@ function preloadNext() {
     frame.tabIndex = -1;
     const entry = { track, frame, startedAt: Date.now(), loadedAt: 0, artworkOk: false };
     frame.addEventListener("load", () => { entry.loadedAt = Date.now(); });
-    artworkLoads(track.src).then(ok => { entry.artworkOk = ok; });
+    artworkLoads(track.src).then(result => { entry.artworkOk = result !== false; });
     preloaded = entry;
     Appleiframe.appendChild(frame);
 }
@@ -578,6 +582,7 @@ function swapInPreloaded() {
     currentUrl = song.src;
     updateCrownTooltip(song.src);
     swapsSinceReload++;
+    firstPress = 0; // we have moved past the first video: arrows go next/back from here
 
     const old = iframe;
     frame.classList.remove("preload");
@@ -673,19 +678,40 @@ function videoIdOf(src) {
 
 // One Apple lookup per video, shared by the auto-next timer (duration) and
 // the artwork check. Failures aren't cached, so a later retry can succeed.
+//
+// Apple's lookup API sends no Access-Control-Allow-Origin header for ordinary
+// sites (only localhost), so fetch() is blocked by CORS on the live site. The
+// API's JSONP form (&callback=) loads as a <script> instead, which CORS does
+// not apply to. The script comes from itunes.apple.com only.
+const LOOKUP_TIMEOUT_MS = 10000;
+let lookupSeq = 0;
+
+function lookupJsonp(id) {
+    return new Promise(resolve => {
+        const cb = `gdjLookup${Date.now()}_${lookupSeq++}`;
+        const script = document.createElement("script");
+        const done = data => {
+            clearTimeout(timer);
+            delete window[cb];
+            script.remove();
+            resolve(data);
+        };
+        const timer = setTimeout(() => done(null), LOOKUP_TIMEOUT_MS);
+        window[cb] = done;
+        script.onerror = () => done(null);
+        script.src = `https://itunes.apple.com/lookup?id=${encodeURIComponent(id)}&country=us&callback=${cb}`;
+        document.head.appendChild(script);
+    });
+}
+
 async function lookupTrack(src) {
     const id = videoIdOf(src);
     if (!id) return null;
     if (lookupCache.has(id)) return lookupCache.get(id);
-    try {
-        const res = await fetch(`https://itunes.apple.com/lookup?id=${id}&country=us`);
-        const data = await res.json();
-        const track = (data.results && data.results[0]) || null;
-        if (track) lookupCache.set(id, track);
-        return track;
-    } catch {
-        return null;
-    }
+    const data = await lookupJsonp(id);
+    const track = (data && data.results && data.results[0]) || null;
+    if (track) lookupCache.set(id, track);
+    return track;
 }
 
 async function getDurationMs(src) {
@@ -776,13 +802,28 @@ function reclaimFocus() {
     }
 }
 
-// Click on the video: (re)start the auto-advance timer. While the preview
-// cycle is still running, clicks on the video are ignored so it keeps cycling
-// until the user presses an arrow, a flower, or next/previous.
+// Acknowledge a click on the player: both arrows flash red, white, blue (0.5s
+// each) twice - see the play-ack animation in Apple+Music.css. A click during
+// the flash restarts it.
+function flashPlayAck() {
+    const arrows = document.querySelectorAll("._c_Apple-Music-forward, ._c_Apple-Music-back");
+    arrows.forEach(btn => {
+        btn.classList.remove("play-ack");
+        void btn.offsetWidth; // restart the animation if it is already running
+        btn.classList.add("play-ack");
+        btn.addEventListener("animationend", () => btn.classList.remove("play-ack"), { once: true });
+    });
+}
+
+// Click on the video: acknowledge it and (re)start the auto-advance timer.
+// While the preview cycle is running, clicks on the player are ignored: the
+// cycle keeps going until an arrow stops it, and only then is a click on
+// play acknowledged with the arrow flash.
 window.addEventListener("blur", () => {
     setTimeout(() => {
         if (document.activeElement !== iframe) return;
         if (autoCycling) return;
+        flashPlayAck();
         startAdvanceTimer();
         setTimeout(reclaimFocus, 1000);
     }, 0);

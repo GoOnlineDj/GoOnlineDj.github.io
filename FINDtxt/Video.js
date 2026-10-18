@@ -62,3 +62,39 @@ window.addEventListener("message", (event) => {
     }
     iframe.src = src;
 });
+
+
+// Acknowledge a click on the player: the arrow buttons flash red, white, blue
+// (0.5s each) twice - the play-ack animation in Apple+Music.css - so the visitor
+// knows the click registered and the song is coming. A click inside the
+// cross-origin player is only visible to this page as the window losing
+// focus to the iframe, so that is what is watched. Afterwards focus is taken
+// back by an invisible button so the next click on the player registers too.
+const focusCatcher = document.createElement("button");
+focusCatcher.type = "button";
+focusCatcher.tabIndex = -1;
+focusCatcher.style.cssText = "position:fixed;left:-9999px;width:1px;height:1px;opacity:0;";
+document.body.appendChild(focusCatcher);
+
+function flashPlayAck() {
+    const arrows = [...document.querySelectorAll("button")]
+        .filter(btn => /^[⏪⏩]$/.test(btn.textContent.trim()));
+    arrows.forEach(btn => {
+        btn.classList.remove("play-ack");
+        void btn.offsetWidth; // restart the animation if it is already running
+        btn.classList.add("play-ack");
+        btn.addEventListener("animationend", () => btn.classList.remove("play-ack"), { once: true });
+    });
+}
+
+window.addEventListener("blur", () => {
+    setTimeout(() => {
+        if (!iframe || document.activeElement !== iframe) return;
+        flashPlayAck();
+        setTimeout(() => {
+            if (document.activeElement === iframe && !document.fullscreenElement) {
+                focusCatcher.focus({ preventScroll: true });
+            }
+        }, 1000);
+    }, 0);
+});
