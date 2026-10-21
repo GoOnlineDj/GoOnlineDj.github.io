@@ -60,8 +60,91 @@ window.addEventListener("message", (event) => {
         iframe.classList.add("ready");
         document.getElementById("_id_iframe").appendChild(iframe);
     }
-    iframe.src = src;
+    loadPlayer(src);
 });
+
+
+// Poster retry. Apple's player fetches its poster image from Apple's image
+// CDN (is1-ssl.mzstatic.com). When that request drops mid-flight (Chrome logs
+// net::ERR_CONNECTION_CLOSED for it) the video still plays but the player
+// shows no picture, and nothing inside the cross-origin player retries it.
+// The page can't see the poster request, but it can fetch this video's
+// artwork from the same CDN (URL from Apple's lookup API) as a health check.
+// When that fails, the player is reloaded with a fresh session so it asks
+// for its poster again - unless the visitor has already clicked the player,
+// since a reload would cut off playback.
+const POSTER_LOOKUP_TIMEOUT_MS = 10000;
+const POSTER_LOAD_TIMEOUT_MS = 8000;
+const POSTER_MAX_RELOADS = 2;
+let playerLoadSeq = 0;
+let lookupSeq = 0;
+let playerClicked = false;
+
+function videoIdOf(src) {
+    const match = src.match(/\/(\d+)(?:[?#]|$)/);
+    return match ? match[1] : null;
+}
+
+// Apple's lookup API sends no CORS header for ordinary sites, so fetch() is
+// blocked; its JSONP form (&callback=) loads as a <script> instead.
+function lookupJsonp(id) {
+    return new Promise(resolve => {
+        const cb = `gdjLookup${Date.now()}_${lookupSeq++}`;
+        const script = document.createElement("script");
+        const done = data => {
+            clearTimeout(timer);
+            delete window[cb];
+            script.remove();
+            resolve(data);
+        };
+        const timer = setTimeout(() => done(null), POSTER_LOOKUP_TIMEOUT_MS);
+        window[cb] = done;
+        script.onerror = () => done(null);
+        script.src = `https://itunes.apple.com/lookup?id=${encodeURIComponent(id)}&entity=musicVideo&callback=${cb}`;
+        document.head.appendChild(script);
+    });
+}
+
+function loadImage(url, ms) {
+    return new Promise(resolve => {
+        const img = new Image();
+        const timer = setTimeout(() => { img.src = ""; resolve(false); }, ms);
+        img.onload = () => { clearTimeout(timer); resolve(true); };
+        img.onerror = () => { clearTimeout(timer); resolve(false); };
+        img.src = url;
+    });
+}
+
+// true when the video's artwork loads, false when the image fails, null when
+// there was nothing to check against (lookup failed or no id in the link).
+async function artworkLoads(src) {
+    const id = videoIdOf(src);
+    if (!id) return null;
+    const data = await lookupJsonp(id);
+    const hit = data && data.results && data.results[0];
+    const art = hit && hit.artworkUrl100;
+    if (!art) return null;
+    return loadImage(art.replace(/\d+x\d+bb/, "960x540bf"), POSTER_LOAD_TIMEOUT_MS);
+}
+
+function loadPlayer(src, attempt = 0) {
+    const seq = ++playerLoadSeq;
+    playerClicked = false;
+    const playerUrl = new URL(src);
+    playerUrl.searchParams.set("_playerSession", `${Date.now()}`);
+    iframe.addEventListener("load", async () => {
+        if (seq !== playerLoadSeq) return; // a newer video has been loaded since
+        const ok = await artworkLoads(src);
+        if (seq !== playerLoadSeq || ok !== false || playerClicked) return;
+        if (attempt >= POSTER_MAX_RELOADS) {
+            console.warn("Apple's image CDN is not delivering this video's artwork; giving up after " + attempt + " player reloads.");
+            return;
+        }
+        console.warn("Apple's image CDN did not deliver this video's artwork; reloading the player (attempt " + (attempt + 1) + ").");
+        loadPlayer(src, attempt + 1);
+    }, { once: true });
+    iframe.src = playerUrl.href;
+}
 
 
 // Acknowledge a click on the player: the arrow buttons flash red, white, blue
@@ -90,6 +173,7 @@ function flashPlayAck() {
 window.addEventListener("blur", () => {
     setTimeout(() => {
         if (!iframe || document.activeElement !== iframe) return;
+        playerClicked = true; // see loadPlayer(): no poster-retry reload once playing
         flashPlayAck();
         setTimeout(() => {
             if (document.activeElement === iframe && !document.fullscreenElement) {
