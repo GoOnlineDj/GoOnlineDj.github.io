@@ -5126,10 +5126,6 @@
                 src: "https://embed.music.apple.com/us/music-video/woman/1598227453"
             },
             {
-                title: "Stranger",
-                src: "https://embed.music.apple.com/us/music-video/stranger/1842871719"
-            },
-            {
                 title: "Gorgeous",
                 src: "https://embed.music.apple.com/us/music-video/gorgeous/1842452995"
             },
