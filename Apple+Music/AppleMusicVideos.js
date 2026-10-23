@@ -4392,10 +4392,6 @@
                 src: "https://embed.music.apple.com/us/music-video/sit-still-look-pretty/1155730687"
             },
             {
-                title: "Don't Call",
-                src: "https://embed.music.apple.com/us/music-video/dont-call/1754590524"
-            },
-            {
                 title: "Love You When You're Gone",
                 src: "https://embed.music.apple.com/us/music-video/love-you-when-youre-gone/1631209233"
             },
