@@ -15890,10 +15890,6 @@
                 title: "Man of the Year",
                 src: "https://embed.music.apple.com/us/music-video/man-of-the-year/1445118433"
             },
-            {
-                title: "THank god 4 me",
-                src: "https://embed.music.apple.com/us/music-video/thank-god-4-me/1769467100"
-            },
         ]
     },
     {
