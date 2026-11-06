@@ -16381,16 +16381,6 @@
         ]
     },
     {
-        artist: "Shyne",
-        birthday: [{ month: "November", day: 8, year: 1978 }],
-        songs: [
-            {
-                title: "That's Gangsta",
-                src: "https://embed.music.apple.com/us/music-video/thats-gangsta/596135687"
-            },
-        ]
-    },
-    {
         artist: "SICKOTOY, Inna & TAG",
         songs: [
             {
